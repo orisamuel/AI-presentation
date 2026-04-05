@@ -11,13 +11,13 @@ Reveal.initialize({
   minScale:     0.1,
   maxScale:     2.5,
 
-  // Navigation — rtl:false so right-arrow = next (intuitive)
+  // Navigation — rtl:true so LEFT arrow = next (Hebrew reading direction)
   hash:         true,
   history:      true,
   keyboard:     true,
   touch:        true,
   loop:         false,
-  rtl:          false,
+  rtl:          true,
 
   // Controls & display
   controls:         true,
