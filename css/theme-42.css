@@ -99,7 +99,7 @@ html, body {
   /* accent bar at top */
   border-top:    3px solid transparent;
   border-image:  var(--grad-accent) 1;
-  position:      relative;
+  /* DO NOT set position here — Reveal.js 5.x requires position:absolute on sections */
   overflow:      hidden;
   /* ensure pseudo-elements can't cover content */
   isolation:     isolate;

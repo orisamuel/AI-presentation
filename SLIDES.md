@@ -1,518 +1,835 @@
-<!-- ============================================================ -->
-<!-- SLIDES.md — AI Workshop | 42 Creative                       -->
-<!-- ============================================================ -->
-<!-- כיצד לערוך:                                                  -->
-<!--   • כל שקופית מופרדת ב-"---" (שורה ריקה, שלוש מקפים, שורה ריקה) -->
-<!--   • <!-- .slide: class="..." --> משנה את עיצוב השקופית      -->
-<!--   <!-- DEMO: path/to/file --> מציג placeholder אוטומטי        -->
-<!-- ============================================================ -->
+# מסמך תוכן — AI Workshop | 42 Creative
+## הוראות שימוש
+> כשתרצה לשנות משהו — ערוך כאן, ואז תגיד ל-Claude "עדכן את ה-HTML לפי SLIDES.md".
+> השינויים שאפשר לערוך: טקסטים, כותרות, תגיות, מספרי פרקים, טיפים.
+> שינויים מבניים (הוספת שקופית חדשה, שינוי פריסה) — ציין בהערה `<!-- TODO: ... -->`.
 
-<!-- .slide: class="slide-cover" -->
-
-# בינה מלאכותית<br>בעולם הפרסום
-
-## סדנה מעשית
-
-<div class="cover-tagline">42 Creative × AI</div>
+### סימונים:
+- `🎬 DEMO` — כאן צריך להיות סרטון/תמונת הדגמה
+- `[ חסר ]` — תוכן שצריך להחליט עליו
+- `⚠️` — שים לב, יש הערה
+- `<!-- TODO: ... -->` — שינוי מבני שצריך לבצע
 
 ---
 
-<!-- .slide: class="slide-agenda" -->
+## SLIDE 1 — Cover
+**סוג:** `slide-cover`
 
-## מה נלמד היום
-
-<div class="agenda-grid">
-  <div class="agenda-item">
-    <span class="agenda-icon">✍️</span>
-    <span>כתיבה עם AI</span>
-  </div>
-  <div class="agenda-item">
-    <span class="agenda-icon">🎨</span>
-    <span>עיצוב עם AI</span>
-  </div>
-  <div class="agenda-item">
-    <span class="agenda-icon">📊</span>
-    <span>דוחות וניתוח נתונים</span>
-  </div>
-  <div class="agenda-item">
-    <span class="agenda-icon">🎬</span>
-    <span>יצירת וידאו</span>
-  </div>
-  <div class="agenda-item">
-    <span class="agenda-icon">🎵</span>
-    <span>מוזיקה ואפקטים</span>
-  </div>
-  <div class="agenda-item">
-    <span class="agenda-icon">🛠️</span>
-    <span>Claude Code</span>
-  </div>
-  <div class="agenda-item agenda-bonus">
-    <span class="agenda-icon">🎁</span>
-    <span>בונוס: איך בנינו את זה</span>
-  </div>
-</div>
+- **שורה 1:** בינה מלאכותית
+- **שורה 2:** בעולם הפרסום
+- **כותרת משנה:** סדנה מעשית
+- **Tagline:** Gemini · Kling · Hedra · ElevenLabs · Suno · CapCut · ChatGPT
 
 ---
 
-<!-- .slide: class="slide-section" -->
+## SLIDE 2 — Agenda
+**סוג:** `slide-agenda`
 
-# ✍️ כתיבה עם AI
+| # | אייקון | טקסט | מזהה |
+|---|--------|-------|------|
+| 1 | 🔮 | Gemini — מדיה + חשיבה | section-gemini |
+| 2 | 🎬 | Kling — וידאו ופיזיקה | section-kling |
+| 3 | 🎭 | Hedra — אווטארים ומודלים | section-hedra |
+| 4 | 🎙️ | ElevenLabs — קול ועברית | section-elevenlabs |
+| 5 | 🎵 | Suno — מוזיקה ואולפן | section-suno |
+| 6 | ✂️ | CapCut — עריכה והרכבה | section-capcut |
+| 7 | 🧠 | ChatGPT — ניתוח ולוגיקה | section-chatgpt |
+| BONUS | 🎁 | בונוס: איך בנינו את זה עם Claude Code | section-claude |
 
-<div class="section-subtitle">Gemini Gems — העוזר שמכיר את המותג</div>
+---
+---
+
+# CHAPTER 01 — GEMINI
 
 ---
 
-## מה זה Gemini Gem?
+## SLIDE 3 — Section Break: Gemini
+**סוג:** `slide-section` | **מזהה:** `section-gemini`
 
-Gem הוא כמו **עמית מתמחה** שאתם מגדירים פעם אחת ומשתמשים בו שוב ושוב.
-
-<div class="feature-list">
-  <div class="feature-item">
-    <span class="feature-icon">🧠</span>
-    <div>
-      <strong>זיכרון מותג</strong><br>
-      <span>מכיר את קול המותג, הערכים, ה-tone of voice</span>
-    </div>
-  </div>
-  <div class="feature-item">
-    <span class="feature-icon">⚡</span>
-    <div>
-      <strong>מהיר ועקבי</strong><br>
-      <span>אותה איכות בכל פעם, ללא חימום מחדש</span>
-    </div>
-  </div>
-  <div class="feature-item">
-    <span class="feature-icon">🔄</span>
-    <div>
-      <strong>שיתוף פעולה</strong><br>
-      <span>אפשר לשתף Gem עם כל הצוות</span>
-    </div>
-  </div>
-</div>
+- **מספר:** 01
+- **אייקון:** 🔮
+- **כותרת:** Gemini
+- **תת-כותרת:** מנוע המדיה והחשיבה מבית Google
+- **תגיות:** `Veo 3` | `Nano Banana 2` | `Lyria 3` | `Gems` | `Live`
 
 ---
 
-## Gem לכתיבה — בפעולה
+## SLIDE 4 — מה זה Gemini?
+**כותרת:** לא עוד צ'אטבוט — מפעל מדיה שלם
 
-<!-- DEMO: assets/demos/writing/gem-screenshot.png -->
-
-<div class="demo-placeholder" data-file="assets/demos/writing/gem-screenshot.png" data-type="image" data-label="Screenshot — Gem כותב קופי למותג">
-  <div class="demo-icon">🖼️</div>
-  <div class="demo-filename">gem-screenshot.png</div>
-  <div class="demo-hint">Screenshot של שיחה עם Gem לכתיבת קופי</div>
-</div>
-
----
-
-## לפני ואחרי — כתיבה עם AI
-
-<div class="before-after">
-  <div class="before-col">
-    <div class="col-label">❌ בלי AI</div>
-    <div class="col-content">
-      <p>"מוצר איכותי במחיר משתלם. קנה עכשיו."</p>
-      <p class="col-note">30 דקות עבודה, תוצאה גנרית</p>
-    </div>
-  </div>
-  <div class="after-col">
-    <div class="col-label">✅ עם AI</div>
-    <div class="col-content">
-      <p>"כי מותרות זה לא מחיר — זה איך שמרגישים."</p>
-      <p class="col-note">30 שניות, 10 וריאציות לבחירה</p>
-    </div>
-  </div>
-</div>
-
-<!-- DEMO: assets/demos/writing/before-after-copy.png -->
+| אייקון | כותרת | תוכן |
+|--------|--------|-------|
+| 🎥 | Veo 3 — מודל הווידאו | הסטנדרט הגבוה ביותר כיום. יוצר סאונד מובנה ישירות מהווידאו — לא מודבק בדיעבד. כולל הארכת קטעים, רפרנס תמונות ו-First/Last Frames. |
+| 🎨 | Nano Banana 2 / Gemini 3 Flash Image — מודל התמונות | יצירה מאפס, עריכה מדויקת (Inpainting) ושילוב סגנונות. משתמשי Pro יכולים ללחוץ "Redo with Pro" לשדרוג מיידי. |
+| 🎵 | Lyria 3 — מודל המוזיקה (שרבים לא יודעים שקיים!) | יצירת אודיו באיכות אולפנית ישירות מ-Gemini. מקבל קלט של טקסט, תמונה *או וידאו* ומפיק רצועות מוזיקליות מלאות. |
 
 ---
 
-<!-- .slide: class="slide-section" -->
+## SLIDE 5 — Veo 3
+**כותרת:** Veo 3 — כשהווידאו מגיע עם נשמה
 
-# 🎨 עיצוב עם AI
+**עמודה שמאל — פיצ'רים:**
+| אייקון | פיצ'ר | תיאור |
+|--------|--------|-------|
+| 🔊 | Native Audio | הסאונד נוצר יחד עם הוידאו, לא בנפרד. תקבלו צלילי סביבה, שיחה ומוזיקה שמתאימים בדיוק לתמונה. |
+| 🖼️ | First & Last Frame | הגדירו את פריים הפתיחה ואת פריים הסיום — Veo ממלא את האנימציה באמצע. |
+| 📏 | הארכת קטעים | יצרתם סרטון 8 שניות? בקשו מ-Veo להאריך אותו — הוא ימשיך את הסיפור. |
 
-<div class="section-subtitle">מהתיאור לתמונה — ישירות</div>
+**עמודה ימין:**
+- ⚠️ Veo3 יוצר וידאו עם קול מובנה — אם מייצרים כמה קטעים עם אותה דמות, הקול *לא* יהיה זהה. הפתרון — בסעיף ElevenLabs ✨
+- מה Veo לא יעשה: חסום ליצירת תוכן שאינו בטוח. הוא לא "ינסה" — הוא פשוט יסרב בנימוס.
 
----
-
-## Gemini Gems לעיצוב
-
-Gem שיודע לתאר תמונות בשפת AI — כותב עבורכם את ה-prompt המושלם.
-
-<div class="feature-list">
-  <div class="feature-item">
-    <span class="feature-icon">📝</span>
-    <div>
-      <strong>בריף → Prompt</strong><br>
-      <span>מתרגם בריף שיווקי לשפה שה-AI מבין</span>
-    </div>
-  </div>
-  <div class="feature-item">
-    <span class="feature-icon">🎯</span>
-    <div>
-      <strong>עקביות ויזואלית</strong><br>
-      <span>שומר על שפה גרפית אחידה בין תמונות</span>
-    </div>
-  </div>
-  <div class="feature-item">
-    <span class="feature-icon">🔀</span>
-    <div>
-      <strong>וריאציות מהירות</strong><br>
-      <span>10 קונספטים שונים תוך דקות</span>
-    </div>
-  </div>
-</div>
+`🎬 DEMO` — `assets/demo-veo3.mp4` [ חסר ]
 
 ---
 
-## הסרת הכוכב — Watermark
+## SLIDE 6 — מודל התמונות
+**כותרת:** מודל התמונות — גם אמן, גם עורך
 
-תמונות שנוצרו ב-Gemini מגיעות עם watermark. הנה איך מסירים אותו.
+| כרטיס | תיאור |
+|-------|-------|
+| 🖌️ יצירה מאפס | תיארו את מה שאתם רוצים ותקבלו קומפוזיציה מושלמת. הוא מבין "אסתטיקה", "ויבס" ו"מינימליסטי" לא פחות מ"חתול על שולחן". |
+| ✏️ Inpainting (עריכה בתוך תמונה) | מסמנים אזור ספציפי בתמונה קיימת, מבקשים שינוי — הוא מחליף רק את מה שביקשתם מבלי לגעת בשאר. |
+| 🎨 שילוב סגנונות | מעלים שתי תמונות (למשל פוטוגרפיה + ציור שמן) ומבקשים לשלב. התוצאה: סגנון ייחודי שלא היה קיים לפני. |
+| ⬆️ Redo with Pro | משתמשי Plus/Pro/Ultra יכולים לקבל גרסה מוגברת של כל תמונה בלחיצת כפתור. הבדל משמעותי באיכות. |
 
-<!-- DEMO: assets/demos/design/watermark-remove.mp4 -->
-
-<div class="demo-placeholder" data-file="assets/demos/design/watermark-remove.mp4" data-type="video" data-label="הדגמה — הסרת watermark מתמונה שנוצרה ב-AI">
-  <div class="demo-icon">🎬</div>
-  <div class="demo-filename">watermark-remove.mp4</div>
-  <div class="demo-hint">סרטון הדגמה: תהליך הסרת ה-watermark</div>
-</div>
-
-<div class="tip-box">
-  💡 <strong>כלים:</strong> Adobe Photoshop AI &nbsp;|&nbsp; Adobe Firefly &nbsp;|&nbsp; Cleanup.pictures
-</div>
+**טיפ:** 💡 הסרת כוכב ה-Watermark: פתחו "תמונות" Windows ← Retouch ← לחצו על הכוכב. 10 שניות, נגמר.
 
 ---
 
-<!-- .slide: class="slide-section" -->
+## SLIDE 7 — Lyria 3
+**כותרת:** Lyria 3 — מוזיקה מובנית ב-Gemini 🤫
 
-# 📊 דוחות וניתוח נתונים
+**הקדמה (highlight-box):** רוב האנשים לא יודעים שזה קיים. Gemini מכיל מודל מוזיקה מלא — ללא צורך ב-Suno, ללא צורך בחשבון נוסף.
 
-<div class="section-subtitle">מ-Excel לתובנות — בשיחה אחת</div>
-
----
-
-## AI לניתוח קמפיינים
-
-מעלים קובץ נתונים → שואלים שאלות בעברית → מקבלים תובנות, גרפים, דוחות.
-
-<!-- DEMO: assets/demos/data/campaign-analysis-screenshot.png -->
-
-<div class="demo-placeholder" data-file="assets/demos/data/campaign-analysis-screenshot.png" data-type="image" data-label="Screenshot — ניתוח נתוני קמפיין עם AI">
-  <div class="demo-icon">📊</div>
-  <div class="demo-filename">campaign-analysis-screenshot.png</div>
-  <div class="demo-hint">Screenshot של ניתוח נתוני קמפיין באמצעות AI</div>
-</div>
-
-<div class="tools-row">
-  <span class="tool-badge">ChatGPT Data Analysis</span>
-  <span class="tool-badge">Gemini Advanced</span>
-  <span class="tool-badge">Claude</span>
-</div>
+| אייקון | פיצ'ר | תיאור |
+|--------|--------|-------|
+| 🎹 | מולטי-מודאלי — קלט מכל סוג | טקסט ("צור ג'אז מלנכולי"), תמונה ("צור מוזיקה שמתאימה לפוסטר הזה") *או וידאו* ("הוסף פסקול לקטע הזה"). |
+| 🎛️ | שליטה גרנולרית | טמפו, ז'אנר, מצב רוח, כלי נגינה, עוצמה — הכל עם תיאור בשפה טבעית. |
+| 🔒 | SynthID Watermark | כל רצועה כוללת סימן מים דיגיטלי בלתי נראה (SynthID) לזיהוי תוכן AI. לא נשמע, לא נראה — אבל שם. |
 
 ---
 
-## מה ניתן לבקש מה-AI
+## SLIDE 8 — Gems
+**כותרת:** Gems — העוזרים שמכירים את המותג
 
-<div class="prompt-examples">
-  <div class="prompt-item">
-    <span class="prompt-q">❓</span>
-    <span>"מה הקמפיין הכי אפקטיבי החודש?"</span>
-  </div>
-  <div class="prompt-item">
-    <span class="prompt-q">❓</span>
-    <span>"השווה את ביצועי הוידאו מול הסטטיק"</span>
-  </div>
-  <div class="prompt-item">
-    <span class="prompt-q">❓</span>
-    <span>"כתוב דוח executive summary להנהלה"</span>
-  </div>
-  <div class="prompt-item">
-    <span class="prompt-q">❓</span>
-    <span>"צור גרף עמודות של CPM לפי פלטפורמה"</span>
-  </div>
-</div>
+**כותרת עוזרת:** במקום לכתוב פרומפטים ארוכים בכל פעם — מגדירים Gem פעם אחת ומשתמשים בו שוב ושוב.
+
+**Gem קופירייטר / "גאגר"** (info-card שמאל):
+מזינים לו: ספר מותג + דוגמאות + הנחיות טון.
+"אתה קופירייטר ציני, חד ומשעשע. אתה כותב בעברית ישראלית עם אנרגיה."
+הוא שומר על הטון ה**זהה** בכל שיחה, לתמיד.
+
+**Gem ארט-דירקטור** (info-card ימין):
+מנתח סקיצות, מייצר פלטות צבעים (Hex codes), כותב חוקי CSS.
+ומה שהכי שימושי: **כותב פרומפטים מדויקים** למחוללי תמונות לשמירה על שפה ויזואלית אחידה.
+
+**הדגשה (highlight-box green):**
+💡 **טיפ חשוב:** אל תסמכו על כך שהמידע ב-Gemini נשמר. שיחות שלמות יכולות להיעלם. ה-*Gem* — הגדרותיו תמיד נשארות. שמרו את ה-System Prompt שם.
 
 ---
 
-<!-- .slide: class="slide-section" -->
+## SLIDE 9 — Gemini Live
+**כותרת:** Gemini Live — סיעור מוחות קולי
 
-# 🎬 יצירת וידאו עם AI
+| אייקון | פיצ'ר | תיאור |
+|--------|--------|-------|
+| 🎙️ | שיחה קולית זורמת | מצב Live באפליקציית Gemini בנייד — שיחה טבעית, אפשר לקטוע באמצע, אין צורך לסיים משפטים. |
+| 📱 | שיתוף מסך + מצלמה | שתפו את מסך הטלפון, או פתחו מצלמה וכוונו למסך המחשב. Gemini רואה מה אתם רואים. |
+| 💡 | שימוש ראלי: ביקורת שקופיות | "תסתכל על הקומפוזיציה של השקופית הזו — מה חסר פה?" Gemini מנתח ומגיב בזמן אמת. כמו לעבוד עם CD שמחכה לכם 24/7. |
 
-<div class="section-subtitle">5 טכניקות שישנו את העבודה שלכם</div>
-
----
-
-## 1. טכניקת Start & End Frame
-
-מגדירים **איפה הסרטון מתחיל** ו**איפה הוא מסתיים** — ה-AI ממלא את האמצע.
-
-<!-- DEMO: assets/demos/video/start-end-frame.mp4 -->
-
-<div class="demo-placeholder" data-file="assets/demos/video/start-end-frame.mp4" data-type="video" data-label="הדגמה — Start & End Frame">
-  <div class="demo-icon">▶️</div>
-  <div class="demo-filename">start-end-frame.mp4</div>
-  <div class="demo-hint">הדגמה: יצירת תנועה בין שתי תמונות</div>
-</div>
-
-<div class="tools-row">
-  <span class="tool-badge">Kling AI</span>
-  <span class="tool-badge">Runway Gen-3</span>
-  <span class="tool-badge">Veo 3</span>
-</div>
+**הדגשה (highlight-box amber):**
+**Use Case שווה במיוחד:** "אני עם לקוח בפגישה ונתקעתי — תציע לי 3 דרכים לפתח את הקונספט הזה" *(כוון מצלמה לשקיצה)*
 
 ---
 
-## 2. וידאו עם סאונד
+## SLIDE 10 — מעמיק vs. זריז
+**כותרת:** מעמיק vs. זריז — תמיד בחרו מעמיק
 
-יצירת סרטון שלם עם פסקול מותאם — בלחיצה אחת.
+**אזהרה (highlight-box red):** ⚠️ כלל ברזל: אף פעם אל תשתמשו ב-"זריז" (Flash) לעבודה רצינית.
 
-<!-- DEMO: assets/demos/video/video-with-sound.mp4 -->
+**עמודה שמאל (info-card, border אדום):**
+**⚡ זריז (Flash) — מה שלא כדאי**
+מהיר יותר, זול יותר — ופחות חכם.
+על מה מוותרים: הבנת הקשר עמוקה, יצירתיות, הבנת ניואנסים בשפה, תשובות ארוכות ומורכבות.
+מה שמרגישים: AI שנותן תשובות "מספיק טובות" — לא "מעולות".
 
-<div class="demo-placeholder" data-file="assets/demos/video/video-with-sound.mp4" data-type="video" data-label="הדגמה — וידאו עם סאונד">
-  <div class="demo-icon">🔊</div>
-  <div class="demo-filename">video-with-sound.mp4</div>
-  <div class="demo-hint">סרטון שנוצר עם פסקול אוטומטי</div>
-</div>
+**עמודה ימין (info-card, border ירוק):**
+**🧠 מעמיק (Pro/Ultra) — מה שצריך [תמיד]**
+לוקח עוד 3 שניות — ונותן עוד 300% איכות.
+מה שמקבלים: הבנה עמוקה של הבריף, יצירתיות אמיתית, ניואנסים בשפה, תוצאות שאפשר לשלוח ישירות ללקוח.
 
-<div class="tools-row">
-  <span class="tool-badge">Veo 3</span>
-  <span class="tool-badge">Kling</span>
-</div>
-
----
-
-## 3. Lipsync — סנכרון שפתיים
-
-תמונה של אדם + טקסט או אודיו → AI יוצר סרטון מדבר בדיוק מרשים.
-
-<!-- DEMO: assets/demos/video/lipsync-demo.mp4 -->
-
-<div class="demo-placeholder" data-file="assets/demos/video/lipsync-demo.mp4" data-type="video" data-label="הדגמה — Lipsync">
-  <div class="demo-icon">🎤</div>
-  <div class="demo-filename">lipsync-demo.mp4</div>
-  <div class="demo-hint">הדגמת Lipsync: תמונה + קול = דמות מדברת</div>
-</div>
-
-<div class="tools-row">
-  <span class="tool-badge">HeyGen</span>
-  <span class="tool-badge">Kling AI</span>
-  <span class="tool-badge">ElevenLabs + Runway</span>
-</div>
+**אנלוגיה (highlight-box amber):**
+💡 חשבו על זה ככה: היה לכם בחירה בין Senior Copywriter ל-Junior Copywriter — לאותו מחיר. תמיד תבחרו Senior. מעמיק = Senior.
 
 ---
 
-## 4. החלפת אלמנטים בוידאו
+## SLIDE 11 — Gemini Gold Tips ⭐
+**סוג:** `slide-gold-tip`
 
-לוקחים סרטון קיים ומחליפים בו אלמנט — רקע, אביזר, לבוש, פנים.
+| # | טיפ |
+|---|-----|
+| 01 | **תמיד מעמיק, אף פעם זריז:** Flash מהיר אבל שטחי. Pro/Ultra = AI ברמת Senior. 3 שניות נוספות של המתנה → תוצאה שאפשר לשלוח ללקוח ישירות. |
+| 02 | **הסרת כוכב הסימון:** "תמונות" של Windows ← Retouch ← לחץ על הכוכב. 10 שניות. בסרטון שיש בו כוכב — Scale ל-105% ב-CapCut או Mask+Blur. |
+| 03 | **זיכרון Gemini = לא בטוח:** שיחות שלמות נעלמות, גם ההיסטוריה יכולה פתאום להיעלם. שמרו System Prompts ב-Gem, לא בשיחה. |
+| 04 | **Lyria 3 = ספריית מוזיקה חינמית:** מייצרים 5 וריאציות לאותו ז'אנר ← בוחרים את הטובה ← משתמשים כ-background music לסרטון. ניצחון מוחלט. |
 
-<!-- DEMO: assets/demos/video/element-replace.mp4 -->
+---
+---
 
-<div class="demo-placeholder" data-file="assets/demos/video/element-replace.mp4" data-type="video" data-label="הדגמה — החלפת אלמנטים בוידאו">
-  <div class="demo-icon">🔄</div>
-  <div class="demo-filename">element-replace.mp4</div>
-  <div class="demo-hint">הדגמה: החלפת רקע / אביזר בסרטון קיים</div>
-</div>
+# CHAPTER 02 — KLING
 
 ---
 
-## 5. AI במקום After Effects
+## SLIDE 12 — Section Break: Kling
+**סוג:** `slide-section` | **מזהה:** `section-kling`
 
-אפקטים, מעברים, טיטלים — בלי timeline, בלי keyframes, בשפה טבעית.
-
-<!-- DEMO: assets/demos/video/ai-after-effects.mp4 -->
-
-<div class="demo-placeholder" data-file="assets/demos/video/ai-after-effects.mp4" data-type="video" data-label="הדגמה — AI במקום After Effects">
-  <div class="demo-icon">✨</div>
-  <div class="demo-filename">ai-after-effects.mp4</div>
-  <div class="demo-hint">אפקטים ומעברים שנוצרו ב-AI ללא After Effects</div>
-</div>
-
-<div class="tools-row">
-  <span class="tool-badge">Runway</span>
-  <span class="tool-badge">Pika</span>
-  <span class="tool-badge">CapCut AI</span>
-</div>
+- **מספר:** 02
+- **אייקון:** 🎬
+- **כותרת:** Kling AI
+- **תת-כותרת:** סימולטור פיזיקה ועידן ה-Omni
+- **תגיות:** `Start/End Frame` | `Motion Brush` | `Camera Control` | `Character Consistency`
 
 ---
 
-<!-- .slide: class="slide-section" -->
+## SLIDE 13 — Kling Omni
+**כותרת:** Kling Omni — לא רק "מחולל וידאו"
 
-# 🎵 מוזיקה ואפקטים קוליים
+| אייקון | פיצ'ר | תיאור |
+|--------|--------|-------|
+| 🏛️ | הבנת פיזיקה מרחבית | הוא לא מנחש — הוא *מבין*. נוזלים, עשן, בד, אש, זכוכית — Kling יודע איך כל חומר מתנהג. |
+| 🎭 | עקביות דמות (Character Consistency) | Kling Omni שומר על זהות הדמות לאורך עשרות שוטים. אותו פנים, אותה תלבושת — שוט אחרי שוט. |
+| 🖊️ | עריכה בטקסט חופשי | "החלף את העניבה לאדומה" — Kling עורך את הפרט הספציפי מבלי לגעת ברקע. כמו Photoshop אבל לסרטון. |
+| 📐 | Multi-Reference — עד 10 תמונות רפרנס | מעלים: תמונת הדמות + תמונת התאורה + תמונת המצלמה + תמונת הסגנון. Kling משלב את כולן לתמונה אחת. |
 
-<div class="section-subtitle">מסטודיו לפרויקט — בדקות</div>
-
----
-
-## יצירת שיר מלא עם AI
-
-מתארים ז'אנר + מצב רוח + מילים — מקבלים שיר מלא תוך שניות.
-
-<!-- DEMO: assets/demos/music/music-demo.mp3 -->
-
-<div class="demo-placeholder" data-file="assets/demos/music/music-demo.mp3" data-type="audio" data-label="שיר שנוצר ב-AI — לחצו לניגון">
-  <div class="demo-icon">🎧</div>
-  <div class="demo-filename">music-demo.mp3</div>
-  <div class="demo-hint">שיר שנוצר ב-AI עם Suno / Udio</div>
-</div>
-
-<div class="tools-row">
-  <span class="tool-badge">Suno AI</span>
-  <span class="tool-badge">Udio</span>
-</div>
+`🎬 DEMO` — `assets/demo-kling.mp4` [ חסר ]
 
 ---
 
-## אפקטים קוליים (SFX)
+## SLIDE 14 — Start Frame vs. Start & End Frame
+**כותרת:** Start Frame vs. Start & End Frame
+**כותרת עוזרת:** השאלה האמיתית: אתם יודעים לאן הסרטון מגיע?
 
-מתארים באנגלית מה אנחנו רוצים לשמוע — AI מייצר בדיוק את זה.
+*(גרפיקה של שתי שורות: רצף Start Only, ורצף Start+End)*
 
-<div class="prompt-examples">
-  <div class="prompt-item">
-    <span class="prompt-q">🔊</span>
-    <span>"crowd cheering in a stadium, rising energy"</span>
-  </div>
-  <div class="prompt-item">
-    <span class="prompt-q">🔊</span>
-    <span>"coffee shop ambiance, morning, light rain outside"</span>
-  </div>
-  <div class="prompt-item">
-    <span class="prompt-q">🔊</span>
-    <span>"cinematic product reveal with whoosh and impact"</span>
-  </div>
-</div>
-
-<!-- DEMO: assets/demos/sfx/sfx-demo.mp3 -->
-
-<div class="demo-placeholder" data-file="assets/demos/sfx/sfx-demo.mp3" data-type="audio" data-label="אפקטים קוליים שנוצרו ב-AI">
-  <div class="demo-icon">🎚️</div>
-  <div class="demo-filename">sfx-demo.mp3</div>
-  <div class="demo-hint">SFX שנוצרו עם ElevenLabs Sound Effects</div>
-</div>
-
-<div class="tools-row">
-  <span class="tool-badge">ElevenLabs Sound FX</span>
-  <span class="tool-badge">Adobe Firefly Audio</span>
-</div>
+**מתי להשתמש:**
+- **Start Frame בלבד:** תנועה פתוחה (ענן נע, דמות מסתובבת), לופ, אנימציה שאמורה להפתיע.
+- **Start + End Frame:** מעבר מוגדר, הפיכת עמוד, "AI כאפטר אפקטס", לולאות מדויקות.
 
 ---
 
-<!-- .slide: class="slide-section" -->
+## SLIDE 15 — Motion Brush + Camera Controls
+**כותרת:** Motion Brush + Camera Controls
 
-# 🛠️ Claude Code
+**Motion Brush (עמודה שמאל):**
+| אייקון | פיצ'ר | תיאור |
+|--------|--------|-------|
+| 🎯 | כלי חובה | מצביעים על אזור ספציפי בתמונה, מגדירים כיוון תנועה — רק *אותו* אזור יזוז, שאר הפריים קפוא. |
+| 🌊 | דוגמאות קלאסיות | המים בכוס זורמים אך הכוס עצמה עומדת. העשן מהסיגר עולה אך הדמות קפואה. |
 
-<div class="section-subtitle">AI שכותב קוד — ישירות בטרמינל</div>
+**Camera Controls (עמודה ימין):**
+| אייקון | פיצ'ר | תיאור |
+|--------|--------|-------|
+| 🚫 | אל תשאירו על "Auto"! | בקרת מצלמה אוטומטית נותנת תנועה לא ממוקדת. קחו שליטה. |
+| 🎬 | Pan / Tilt / Zoom | Pan (ימינה/שמאלה), Tilt (למעלה/למטה), Zoom-in/out. שלבו לשוטים קולנועיים אמיתיים. |
 
----
-
-## מה זה Claude Code?
-
-Claude Code הוא סוכן AI שפועל **ישירות בתוך הטרמינל** — הוא כותב קוד, מריץ פקודות, מנהל קבצים, ומבצע משימות מורכבות בעצמאות.
-
-<div class="feature-list">
-  <div class="feature-item">
-    <span class="feature-icon">📁</span>
-    <div>
-      <strong>גישה לקבצים</strong><br>
-      <span>קורא, כותב ועורך קבצים בפרויקט שלכם</span>
-    </div>
-  </div>
-  <div class="feature-item">
-    <span class="feature-icon">💻</span>
-    <div>
-      <strong>מריץ פקודות</strong><br>
-      <span>מפעיל terminal commands, מתקין חבילות, מריץ בדיקות</span>
-    </div>
-  </div>
-  <div class="feature-item">
-    <span class="feature-icon">🌐</span>
-    <div>
-      <strong>מתחבר לגיטהאב</strong><br>
-      <span>יוצר repos, commits, ו-pull requests</span>
-    </div>
-  </div>
-</div>
+**טיפ קולנועי:** 📽️ Zoom-in איטי + Pan קל = תחושת מסתורין. Zoom-out מהיר = חשיפה דרמטית.
 
 ---
 
-## מה הוא עשה בשבילנו
+## SLIDE 16 — סרטון רציף
+**כותרת:** סרטון רציף — מ-3 קטעים לנרטיב אחד
 
-<div class="making-list">
-  <div class="making-item">
-    <span class="making-num">01</span>
-    <span>בנה את <strong>כל הפרזנטציה הזו</strong> מאפס</span>
-  </div>
-  <div class="making-item">
-    <span class="making-num">02</span>
-    <span>כתב HTML, CSS, JavaScript — לפי עיצוב מלא</span>
-  </div>
-  <div class="making-item">
-    <span class="making-num">03</span>
-    <span>הגדיר <strong>GitHub Actions</strong> לדפלוי אוטומטי</span>
-  </div>
-  <div class="making-item">
-    <span class="making-num">04</span>
-    <span>עבד לפי הנחיות בעברית, <strong>ללא כתיבת קוד</strong> מצידנו</span>
-  </div>
-</div>
+**שלבים (process-steps):**
+1. יוצרים קטע ראשון (0–5 שניות)
+2. לוקחים את **הפריים האחרון** כ-Start Frame
+3. יוצרים קטע שני (5–10 שניות)
+4. חוזרים על התהליך לכל קטע נוסף
+
+**טיפ ירוק:** 🎯 Close-Up "מאפס" את העין ואפשר לקצוץ בין שני סרטונים ויזואלית שונים.
+**טיפ ניטרלי:** 💡 לולאה (Seamless Loop): העלו את *אותה* תמונה כ-Start וכ-End Frame + פרומפט להתרחשות באמצע.
+
+---
+
+## SLIDE 17 — AI כ-After Effects
+**כותרת:** AI כ-After Effects — בלי Timeline
+
+**שלבים:**
+1. עצבו "שקופית סופית" בפוטושופ / Canva עם כותרת + לוגו
+2. העלו אותה כ-**End Frame**
+3. Start Frame = תמונת עשן / ערפל / חלקיקים
+4. פרומפט: "העשן מתפזר ומתגבש לאותיות"
+
+**התוצאה (highlight-box green):** 🎬 אנימציית פתיחה שנגמרת בכותרת המותג שלכם. בלי keyframes, בלי motion graphics, בלי תקציב.
+
+`🎬 DEMO` — `assets/demo-kling-after.mp4` [ חסר ]
+
+---
+
+## SLIDE 18 — ⚠️ בעיית הקפיצה
+**כותרת:** ⚠️ בעיית הקפיצה בין פריימים
+
+**בעיה (highlight-box red):** כשמחברים קטע A לקטע B באמצעות Start/End Frame, לפעמים יש "קפיצה" ברגע החיבור.
+
+| הסיבה | הפתרון |
+|-------|--------|
+| יש פריים **כפול** בנקודת החיבור: הפריים האחרון של קטע A + הפריים הראשון של קטע B. שניהם זהים → וידאו "קופא" → נראה כמו קפיצה. | ב-CapCut: מחקו פריים אחד מ**סוף** קטע A, *או* מחקו פריים אחד מ**תחילת** קטע B. המעבר יהיה חלק כמו שוט אחד. |
+
+---
+
+## SLIDE 19 — Kling Gold Tips ⭐
+**סוג:** `slide-gold-tip`
+
+| # | טיפ |
+|---|-----|
+| 01 | **Camera Control = מקצועיות מיידית:** Pan איטי + Zoom-in מדויק יגרמו לסרטון שלכם להיראות כמו פרודקשן אמיתי. 30 שניות עבודה, 30× ערך. |
+| 02 | **AI כ-After Effects:** שקופית סופית כ-End Frame + פרומפט הנפשה = אנימציית פתיחה מרשימה. בלי CS, בלי keyframes, בלי תקציב. |
+| 03 | **Close-Up = גשר בין עולמות:** קאט בין שני generated videos שנראים שונה? הכניסו Close-Up באמצע. העין נאלצת להתמקד ו"שוכחת" מה היה לפני. |
+| 04 | **Multi-Reference = שפה ויזואלית עקבית:** שמרו "כרטיס דמות" (תמונה קבועה של הדמות שלכם) ← השתמשו בו כ-Reference בכל שוט ← קבלו דמות עקבית לאורך כל הקמפיין. |
+
+---
+---
+
+# CHAPTER 03 — HEDRA
+
+---
+
+## SLIDE 20 — Section Break: Hedra
+**סוג:** `slide-section` | **מזהה:** `section-hedra`
+
+- **מספר:** 03
+- **אייקון:** 🎭
+- **כותרת:** Hedra
+- **תת-כותרת:** מרכז ניהול מודלים ואולפן אנימציה
+- **תגיות:** `Hedra Omnia` | `Full-Body Avatars` | `Lip Sync` | `Multi-Model Hub`
+
+---
+
+## SLIDE 21 — Hedra כ-API Hub
+**כותרת:** Hedra — לא מודל, אלא תחנת עבודה
+**כותרת עוזרת:** הידרה ביטלה את "מגבלת המודל הבודד". פלטפורמה אחת שמאפשרת גישה לכל המודלים המובילים.
+
+| מודל | מקור | כוח | מתי לבחור? |
+|------|------|-----|------------|
+| Hedra Omnia ✅ **מומלץ** | Hedra (בית) | אווטארים בגוף מלא | קריין עם שפת גוף, מצגת, ספוקסמן |
+| Google Veo | Google | קולנועיות + סאונד מובנה | פרודקשן איכותי, פסקול אוטומטי |
+| Seedance / Hailuo | MiniMax | תנועה אנושית + אסתטיקה | דמויות נעות טבעית, תנועת ידיים |
+| Pixverse | Pixverse | שליטה ביחסי תמונה | פורמטים שאינם 16:9, קונטנט ייחודי |
+
+---
+
+## SLIDE 22 — Hedra Omnia
+**כותרת:** Hedra Omnia — מה שעוזר הדורות הקודמים לא יכל
+
+| אייקון | פיצ'ר | תיאור |
+|--------|--------|-------|
+| 🦾 | Full-Body (גוף מלא) | מודלי Character הישנים יצרו "ראשים מדברים". Omnia יוצר אווטארים עם תנועות ידיים, כתפיים, גוף שלם. |
+| 😮 | מיקרו-הבעות פנים | הרמת גבה, עקמת פה, חיוך חמוס — ה-AI מוסיף הבעות שלא הוגדרו, על סמך הניתוח של האודיו. |
+| 👄 | Lip Sync מדויק | סנכרון שפתיים ברמה שעוברת בדיקה גם בהאטה של x0.25. הדמות *ממש* אומרת את המילים. |
+
+**Use Case (highlight-box amber):**
+🎯 מעלים תמונה של איש הצוות + קובץ אודיו של מסר ← Hedra Omnia הופך אותו לסרטון מדבר עם שפת גוף מלאה. 2 דקות עבודה, 100× ערך תפיסתי.
+
+`🎬 DEMO` — `assets/demo-hedra.mp4` [ חסר ]
+
+---
+
+## SLIDE 23 — האודיו ה"מלוכלך"
+**כותרת:** הסוד: האודיו ה"מלוכלך" 🎤
+
+**בעיה (highlight-box red):** אנשים מכניסים TTS גנרי ומונוטוני → מקבלים אווטאר רובוטי שמזיז פה בלי נשמה.
+
+| אייקון | נקודה | תיאור |
+|--------|--------|-------|
+| 🔬 | מה Hedra *באמת* מנתח | המודל לא קורא טקסט — הוא מנתח *גלי קול*. אנרגיה, עוצמה, עליות וירידות בטון. |
+| 😤 | מה שיוצר תנועה אנושית אמיתית | נשימות כבדות, צחקוקים, הפסקות דרמטיות, שינויי עוצמה פתאומיים — Hedra "מתרגם" את האנרגיה לשפת גוף. |
+| ✅ | הפתרון | הקליטו את עצמכם (גם עם אוזניות) עם רגש, הפסקות ואנרגיה. *אחר כך* שנו את הקול ב-ElevenLabs. Hedra יקבל את האנרגיה ← ייצור תנועה חיה. |
+
+---
+
+## SLIDE 24 — Hedra Gold Tips ⭐
+**סוג:** `slide-gold-tip`
+
+| # | טיפ |
+|---|-----|
+| 01 | **Hedra Omnia + ElevenLabs = קריין מקצועי:** הקליטו את עצמכם עם רגש ← שנו קול ב-ElevenLabs ← הכניסו ל-Hedra Omnia ← קבלו אווטאר עם שפת גוף חיה. זה קומבו שעובד. |
+| 02 | **בחרו מודל לפי מטרה:** ספוקסמן עם גוף → Hedra Omnia. פרודקשן קולנועי → Google Veo. דמות זזה טבעית → Hailuo/Seedance. אל תבזבזו קרדיטים על המודל הלא נכון. |
+| 03 | **אודיו "מלוכלך" = תנועה חיה:** TTS מונוטוני ייצר רובוט. הקלטה טבעית עם נשימות ועליות-ירידות = אווטאר שנראה אנושי ממש. האנרגיה בקול = שפת הגוף של האווטאר. |
+| 04 | **Hedra כ-Pitch Tool:** רוצים לשכנע לקוח בקונספט? הכינו תמונת "מוצר" + טקסט שיווקי ← הפכו לסרטון עם ספוקסמן מדבר ← הלקוח יאמין שכבר צולמה פרסומת. לפני שכתבתם מילה. |
+
+---
+---
+
+# CHAPTER 04 — ELEVENLABS
+
+---
+
+## SLIDE 25 — Section Break: ElevenLabs
+**סוג:** `slide-section` | **מזהה:** `section-elevenlabs`
+
+- **מספר:** 04
+- **אייקון:** 🎙️
+- **כותרת:** ElevenLabs
+- **תת-כותרת:** מעבדת הקול — במיוחד לעברית
+- **תגיות:** `Voice Design` | `Speech-to-Speech` | `Multilingual v2` | `Voice Changer`
+
+---
+
+## SLIDE 26 — Voice Design
+**כותרת:** Voice Design — לתאר קול במילים
+
+**הרעיון (highlight-box):** כותבים באנגלית *איזה קול* אתם רוצים → ElevenLabs בונה את "כלי הנגינה". אחר כך מזינים בעברית — הקול מדבר עברית בקולו שתיאריתם.
+
+**דוגמאות לתיאורים (עמודה שמאל):**
+- "A raspy, middle-aged woman with a warm but authoritative voice"
+- "An enthusiastic 25-year-old Israeli guy, energetic and casual"
+- "A deep, cinematic narrator voice with gravitas"
+
+**פיצ'רים (עמודה ימין):**
+| פיצ'ר | תיאור |
+|--------|-------|
+| 🌍 הקסם הרב-לשוני | האנגלית היא רק תיאור "כלי הנגינה". אחרי שמירה — מזינים טקסט בעברית, והקול הזה מדבר עברית. |
+| 🔁 Generate כמה פעמים | כל Generate מייצר גרסה שונה מאותו תיאור. תייצרו 5 גרסאות ובחרו את הטובה. |
+
+---
+
+## SLIDE 27 — עברית ב-ElevenLabs
+**כותרת:** עברית ב-ElevenLabs — המודלים הנכונים
+
+**אזהרה (highlight-box red):** ⚠️ שגיאה נפוצה: בחירת מודל לא מתאים לעברית → הקול מפיק "ג'יבריש" או הגייה משובשת לחלוטין.
+
+| מודל | מצב | תמיכה בעברית | המלצה |
+|------|-----|--------------|-------|
+| Eleven Multilingual v2 ✅ **מומלץ** | TTS | מצוין | ברירת מחדל לכל TTS בעברית |
+| Eleven Turbo v2.5 ✅ **מומלץ** | TTS מהיר | טוב מאוד | כשצריך מהיר ובאיכות סבירה |
+| Eleven v1 / v1.5 | TTS ישן | חלקי / גרוע | להימנע לעברית |
+| Eleven Multilingual v2 (STS) | Speech-to-Speech | מצוין | לקריינות ו-Voice Cover |
+
+---
+
+## SLIDE 28 — Speech-to-Speech
+**כותרת:** Speech-to-Speech — הקאבר הקולי
+**כותרת עוזרת:** ElevenLabs שומר על ה*ביצוע* שלכם — ומחליף רק את זהות הקול.
+
+**שלבים (process-steps):**
+1. מקליטים את עצמכם (גם עם אוזניות)
+2. מעלים ל-ElevenLabs ← Speech-to-Speech
+3. בוחרים קול (שלכם או Voice Library)
+4. מקבלים: הביצוע שלכם + קול חדש
+
+- ✅ **מה נשמר:** אינטונציה, הדגשות, קצב, עליות-ירידות, רגש. הכל.
+- 🔁 **מה מוחלף:** רק "חותמת הקול" — צליל הקול הפיזי, גיל, מגדר, ניב.
+
+---
+
+## SLIDE 29 — קריינות עברית
+**כותרת:** קריינות עברית — הקלטה תמיד מנצחת
+
+| ❌ TTS מאפס | ✅ הקלטה + Voice Changer |
+|------------|------------------------|
+| הגייה נכונה אבל אינטונציה רובוטית. עברית שנשמעת "מתורגמת". | מקליטים עם רגש ← מכניסים ל-STS. AI לוקח את *הביצוע* שלכם, מחליף רק את הקול. |
+| "זה מוצר **מצוין** שיתאים לכם" ← ה-AI לא יודע אם "מצוין" זה שאלה, עקיצה, או שבח. | הקול החדש "יודע" מתי זו עקיצה כי **אתם** הכנסתם אותה לאודיו. |
+| ⏱️ מהיר, אך מפספס את הניואנסים | ⭐ דקה נוספת של עבודה, תוצאה מקצועית |
+
+---
+
+## SLIDE 30 — בעיית העקביות — Veo3 + ElevenLabs
+**כותרת:** בעיית העקביות — Veo3 + ElevenLabs
+
+**הבעיה (highlight-box red):** Veo3 מייצר וידאו עם סאונד מובנה — שמעולה. אבל כל קטע חדש = קול שונה לדמות. אין עקביות בין קטעים.
+
+**שלבים (process-steps):**
+1. מייצרים וידאו ב-Veo3 עם סאונד מובנה
+2. **מייצאים את קובץ הסאונד** בנפרד מהווידאו
+3. מכניסים ל-ElevenLabs STS + קול קבוע
+4. מחברים חזרה לוידאו ב-CapCut
+
+**הדגשה (highlight-box green):** ⭐ **הטיפ הזה שווה זהב:** כל הקטעים של אותה דמות יקבלו *בדיוק* אותו קול. לקוח לא יאמין שזה לא שחקן אחד שצולם כל הסרטונים.
+
+---
+
+## SLIDE 31 — ElevenLabs Gold Tips ⭐
+**סוג:** `slide-gold-tip`
+
+| # | טיפ |
+|---|-----|
+| 01 | **הקלטה > TTS לעברית:** תמיד. ה-AI לא מבין אירוניה עברית. אתם כן. הקליטו ← שנו קול ← תקבלו תוצאה שאי אפשר להבדיל ממקצוען אמיתי. |
+| 02 | **Veo3 + ElevenLabs = קול עקבי:** ייצאו את הסאונד מ-Veo3 ← שנו קול ב-ElevenLabs STS ← חברו חזרה ב-CapCut. כל הקטעים ← קול אחד. |
+| 03 | **Voice Library = ספריית כוכבים:** ב-ElevenLabs Voice Library יש קולות מסחריים שאפשר להשתמש בהם. בחרו מישהו שמתאים לברנד ← הכניסו אליו את הטקסט שלכם. |
+| 04 | **Voice Design = כלי נגינה ייחודי:** כתבו תיאור של קול שלא קיים בעולם ("קול של אנדרואיד שהפך לאנושי") ← ייצרו ← קבלו קול שאף מותג אחר לא יכול לחקות. |
+
+---
+---
+
+# CHAPTER 05 — SUNO
+
+---
+
+## SLIDE 32 — Section Break: Suno
+**סוג:** `slide-section` | **מזהה:** `section-suno`
+
+- **מספר:** 05
+- **אייקון:** 🎵
+- **כותרת:** Suno
+- **תת-כותרת:** מ-Jingle Generator לאולפן הפקה מלא
+- **תגיות:** `Studio Mode` | `Stem Editing` | `In-painting` | `Audio-to-Audio`
+
+---
+
+## SLIDE 33 — Suno V5.5
+**כותרת:** Suno V5.5 — אולפן הפקה בדפדפן
+
+**הקדמה:** עם V5.5 (אפריל 2026), Suno עברה ממחולל שירים פשוט ל-**Studio Mode** — סביבת הפקה מקצועית שמתחרה בתוכנות DAW.
+
+| כרטיס | תיאור |
+|-------|-------|
+| 🎼 Meta-Tags ומבנה | עוטפים חלקים ב-[Intro], [Verse], [Chorus], [Guitar Solo], [Drop] — המודל מבין מתי להעלות ולהוריד אנרגיה. |
+| 🎚️ Stem Editing | מפרידים את הרצועות: תופים, בס, ווקאל, מלודיה. מייצאים Acapella בלחיצה. |
+| ✏️ In-painting | סימנו רק את החלק שלא אהבתם (נגיד — הגיטרה בסיפוק שני) ← בקשו מה-AI לג'נרט אותו מחדש. שאר השיר לא נפגע. |
+| 🎤 Audio-to-Audio | העלו הקלטה משלכם ← בקשו עיבוד מוזיקלי. הפתרון לעברית (ראו הבא). |
+
+---
+
+## SLIDE 34 — Meta-Tags בפירוט
+**כותרת:** Meta-Tags — לדבר עם Suno בשפה שלו
+
+**Meta-Tags (עמודה שמאל):**
+| Tag | אנרגיה | שימוש |
+|-----|--------|-------|
+| [Intro] | נמוכה, בונה | פסנתר עדין, אין ווקאל, מרגיש כמו פתיחה |
+| [Verse] | בינונית | טקסט נרטיבי, קצב שומר |
+| [Chorus] | שיא — Hook | החלק שיישאר בראש. חזקות, חזרתי |
+| [Build] → [Drop] | עלייה ופיצוץ | הוסיפו אנרגיה מדויקת ב-EDM, Hip-Hop, Pop |
+
+**עמודה ימין:**
+- 💡 **טיפ:** כתבו את ה-Chorus קודם ← זה ה-Hook שגורם לאנשים לזכור. אחר כך כתבו את ה-Verse שמוביל אליו.
+- **מה לא לעשות:** לכתוב הכל בלי Meta-Tags → Suno יחליט בעצמו על הדינמיקה → לרוב יוצא שטוח ומונוטוני.
+
+---
+
+## SLIDE 35 — Audio-to-Audio לעברית
+**כותרת:** Audio-to-Audio — הפתרון לעברית 🇮🇱
+
+**בעיה (highlight-box red):** ⚠️ Suno מבין עברית — אבל ההגייה יוצאת לעיתים קרובות עם אקסנט לא ישראלי.
+
+**שלבים (process-steps):**
+1. מקליטים את עצמנו **שרים / מזמזמים** את המלודיה הרצויה
+2. מעלים ל-Suno דרך פיצ'ר **Cover**
+3. מגדירים סגנון: "Epic Synthwave", "Israeli Pop"
+4. Suno לוקח: ההגייה המדויקת + המלודיה שלכם ← הפקה ענקית
+
+**הדגשה (highlight-box green):** **גם אם אתם "מזייפים" — זה עובד!** Suno צריך רק את המלודיה הגסה ואת ההגייה. האיכות המוזיקלית הוא מוסיף בעצמו.
+
+---
+
+## SLIDE 36 — Suno Gold Tips ⭐
+**סוג:** `slide-gold-tip`
+
+| # | טיפ |
+|---|-----|
+| 01 | **זמזמו ← תקבלו Jingle:** לא יודעים לשיר? לא משנה. זמזמו את הלחן שדמיינתם, העלו כ-Cover, בקשו "Israeli commercial pop". ה-Jingle כבר מוכן. |
+| 02 | **In-painting = ניתוח בלי הרדמה:** לא אהבתם את הגיטרה? סמנו רק את הגיטרה ← כתבו "acoustic guitar, warmer" ← רק הגיטרה תשתנה. שאר ההפקה נשארת. |
+| 03 | **Stem Isolation + ElevenLabs:** ייצאו Acapella מ-Suno ← הכניסו ל-ElevenLabs STS ← החליפו את הזמר לקול שמתאים לברנד. פסקול מקצועי עם קריין ייחודי. |
+| 04 | **[Build] + [Drop] = וירלי:** בכל שיר לסושיאל — הוסיפו [Build] לפני ה-Hook. האנרגיה שעולה ופתאום פורצת גורמת לאנשים לחכות ולרצות לשמוע שוב. |
+
+---
+---
+
+# CHAPTER 06 — CAPCUT
+
+---
+
+## SLIDE 37 — Section Break: CapCut
+**סוג:** `slide-section` | **מזהה:** `section-capcut`
+
+- **מספר:** 06
+- **אייקון:** ✂️
+- **כותרת:** CapCut
+- **תת-כותרת:** תחנת ההרכבה הסופית
+- **תגיות:** `Auto Captions` | `Vocal Isolation` | `Smooth Slow-Mo` | `Auto Reframe`
+
+---
+
+## SLIDE 38 — CapCut כה-Hub
+**כותרת:** CapCut — כאן הכל מתחבר
+
+**Flow (process-steps):** 🔮 Gemini → 🎬 Kling → 🎙️ ElevenLabs → 🎵 Suno → **✂️ CapCut מחבר הכל**
+
+| פיצ'ר | תיאור |
+|--------|-------|
+| 🤖 AI מובנה | Auto Captions, Vocal Isolation, Smooth Slow-Mo, Auto Reframe, Background Removal — הכל בפנים, ללא פלאגינים. |
+| 📱 Desktop + Mobile | עריכה מלאה בדפדפן, בדסקטופ ובאפליקציה. |
+
+---
+
+## SLIDE 39 — Auto Captions
+**כותרת:** Auto Captions — עברית ב-2 שניות
+
+| פיצ'ר | תיאור |
+|--------|-------|
+| 🇮🇱 תמיכה בעברית | CapCut מזהה עברית בצורה פנומנלית. בחרו שפה → Generate → תיקון ידני קל לשגיאות. |
+| 🎨 Karaoke Effect | כתוביות דינמיות שמתאורות בהתאם לדיבור. פרמט מושלם ל-Reels ו-TikTok. |
+| ✏️ עיצוב מלא | פונט, צבע, גודל, צל, אנימציה — הכל ניתן לשינוי. הופכים כתוביות לאלמנט עיצובי. |
+
+**Workflow (highlight-box amber):**
+💡 מייצרים Voiceover ב-ElevenLabs ← מייבאים ל-CapCut ← Auto Captions ← Karaoke Effect ← Reels מוכן.
+**זמן כולל: 7 דקות.**
+
+---
+
+## SLIDE 40 — Vocal Isolation + Slow-Mo
+**כותרת:** Vocal Isolation + Smooth Slow-Mo
+
+**Vocal Isolation:** 🔇 הסרת רעשי רקע — הקלטה ממרחב ציבורי סואן? CapCut מבודד את הקול. תוצאה: קול צלול כאילו הוקלט בסטודיו.
+
+**Smooth Slow-Mo (Optical Flow):** ⚡ פריימים יש מאין — וידאו ב-30fps שרוצים להאט ל-10%? CapCut מייצר פריימים חסרים. התוצאה: Slow-Mo חלק כמו 120fps.
+
+**קומבו (highlight-box green):** צלמו 5 שניות של מוצר נע → Optical Flow Slow-Mo ב-20% → Vocal Isolation לקריינות → Auto Captions. תוצאה: פרסומת מוצר ברמה של 100K₪ פרודקשן.
+
+---
+
+## SLIDE 41 — הסרת סימני מים
+**כותרת:** הסרת סימני מים — שתי שיטות
+
+| שיטה | מה עושים | מתי מתאים |
+|------|----------|-----------|
+| ⬆️ שיטה 1: Scale (המהיר) | הגדילו את הוידאו ל-**105%** — הלוגו נחתך מחוץ לפריים. | לוגו בפינה, ללא תוכן חשוב בשולי הפריים. |
+| 🎭 שיטה 2: Mask + Blur (המדויק) | שכפלו שכבת וידאו → Mask קטן מעל הלוגו → Gaussian Blur. | לוגו באמצע הפריים, תוכן חשוב בשולי התמונה. |
+
+**טיפ (tip-box):** 💡 לתמונות Gemini: Retouch באפליקציית "תמונות" Windows. 10 שניות.
+
+---
+
+## SLIDE 42 — CapCut Gold Tips ⭐
+**סוג:** `slide-gold-tip`
+
+| # | טיפ |
+|---|-----|
+| 01 | **הסרת פריים כפול בחיבורי Kling:** מחברים שני קטעי Kling ב-CapCut ויש קפיצה? מחקו פריים אחד מסוף קטע A. חלק כמו שוט אחד. |
+| 02 | **Auto Reframe לפורמטים:** צרתם רילס 9:16? CapCut מייצר אוטומטית גרסת 1:1 לסטורי ו-16:9 לפיד — ה-AI עוקב אחרי הנושא הראשי ולא חותך אותו. |
+| 03 | **Vocal Isolation = ספריית Voiceovers:** הקליטו את עצמכם בכל מקום ← Vocal Isolation ← קול נקי לחלוטין. לא צריך עוד בוקינג לאולפן הקלטה לדברים קצרים. |
+| 04 | **Smooth Slow-Mo על Product Shots:** כל תמונה שוטה מהירה של מוצר (פתיחת קופסה, שפיכת נוזל, נגיסה) → Optical Flow 25% → תמונה קולנועית מיידית. |
+
+---
+---
+
+# CHAPTER 07 — CHATGPT
+
+---
+
+## SLIDE 43 — Section Break: ChatGPT
+**סוג:** `slide-section` | **מזהה:** `section-chatgpt`
+
+- **מספר:** 07
+- **אייקון:** 🧠
+- **כותרת:** ChatGPT
+- **תת-כותרת:** המוח האנליטי והארכיטקט
+- **תגיות:** `Data Analysis` | `Prompt Chaining` | `Executive Reports` | `Process Automation`
+
+---
+
+## SLIDE 44 — ChatGPT כמוח אנליטי
+**כותרת:** ChatGPT — כשצריך לוגיקה ולא מדיה
+**כותרת עוזרת:** ג'ימיני הוא אלוף המדיה. ChatGPT הוא כלי הלוגיקה, הניתוח, ותכנון הפעולות.
+
+| כרטיס | תיאור |
+|-------|-------|
+| 📊 Advanced Data Analysis | סביבת Python פנימית. מעלים קובץ נתונים, שואלים שאלות בעברית, מקבלים גרפים, דוחות ותובנות — בלי לדעת כתוב שורת קוד. |
+| 🎬 Prompt Chaining לוידאו | ChatGPT כותב עבורכם תסריט בימוי שלם: 3 פרומפטים ל-Kling, עם הנחיות מצלמה, שיתחברו לסרטון אחד רציף. |
+| 📝 תבניות ודוחות | דוח executive summary, מסמך creative brief, ניתוח מתחרים — ChatGPT כותב בפורמט מקצועי שמוכן לשיתוף עם הלקוח. |
+| 🔁 Process Automation | כותב פרומפטים ל-Gemini, ל-Kling, ל-ElevenLabs — מתפקד כ-"מנהל תהליך" שמחבר בין כלים. |
+
+---
+
+## SLIDE 45 — Data Analysis Demo
+**כותרת:** ניתוח קמפיין — שיחה אמיתית
+
+*(שיחה סימולציה — ChatGPT Advanced Data Analysis)*
+
+**שאלה:** העלאתי קובץ CSV עם נתוני קמפיין מרץ 2026 לפי פלטפורמה. מה ה-CPM הממוצע לפי פלטפורמה? ואם יש אנומליה בנתונים — ציין אותה.
+
+**תשובה + טבלה:**
+| פלטפורמה | CPM ממוצע | שינוי | חשיפות |
+|----------|-----------|-------|--------|
+| Meta (Facebook + IG) | ₪32.40 | +8% | 1,240,000 |
+| TikTok | ₪18.70 | +3% | 890,000 |
+| Google Display | ₪9.20 | -2% | 3,100,000 |
+| YouTube Shorts | **₪58.90** ⚠️ | +210% | 78,000 |
+
+**אנומליה:** YouTube Shorts הציג CPM של ₪58.90 — גבוה ב-210% מהממוצע ההיסטורי. מספר חשיפות נמוך ביחס לתקציב שהוקצה. ממליץ לבדוק את הגדרות הטרגוט.
+
+---
+
+## SLIDE 46 — Prompt Chaining
+**כותרת:** Prompt Chaining — ChatGPT כבמאי
+
+**הבעיה:** אתם רוצים סרטון של 15 שניות ב-Kling, אבל Kling עובד ב-5 שניות בכל פעם. איך כותבים 3 פרומפטים שיתחברו לסרטון *אחד* רציף ומגובש?
+
+**שאלה:** אני רוצה סרטון של 15 שניות בקלינג — איש עסקים שהופך לגיבור על. Kling עובד ב-5 שניות. כתוב לי 3 פרומפטים נפרדים (0-5, 5-10, 10-15) שממשיכים אחד את השני, כולל הנחיות תנועת מצלמה.
+
+**תשובה:**
+- **פרומפט 1 (0-5):** A businessman in a gray suit stands in a busy office, looking determined. Camera starts wide, slowly zooming in on his face. Cinematic lighting. His tie begins to loosen and flutter as if caught by wind.
+- **פרומפט 2 (5-10):** [Start Frame: close-up of businessman's face, wind intensifying] Sudden wind blast hits him. His suit tears away revealing a hero costume underneath. Camera tilts up dramatically. Epic lighting shift from cool to warm gold.
+- **פרומפט 3 (10-15):** [Start Frame: hero mid-costume-reveal, looking upward] Hero stands triumphant, cape billowing. Camera pulls back to reveal city skyline. Golden hour light. Slow zoom out with slight pan left.
+
+---
+
+## SLIDE 47 — ChatGPT Gold Tips ⭐
+**סוג:** `slide-gold-tip`
+
+| # | טיפ |
+|---|-----|
+| 01 | **אל תכתבו פרומפטים לוידאו לבד:** תמיד בקשו מ-ChatGPT לכתוב פרומפטים ל-Kling/Veo. הוא מבין רצף קולנועי, הנחיות מצלמה ורצף לוגי — אתם תעתיקו-תדביקו. |
+| 02 | **Data Analysis = חוקר קמפיינים:** העלו CSV של כל קמפיינים + שאלו "מה הקמפיין הכי אפקטיבי ולמה?" ← קבלו ניתוח שלוקח לאנליסט שבועות — ב-30 שניות. |
+| 03 | **ChatGPT כ-"מנהל AI":** "אני עובד עם Gemini, Kling ו-ElevenLabs. ספק לי Work Plan שלב-אחרי-שלב לייצור רילס של 30 שניות למותג X." הוא כותב תהליך, אתם מבצעים. |
+| 04 | **Executive Summary אוטומטי:** "קבל את הנתונים הבאים ← כתוב Executive Summary בעברית בסגנון מקצועי ל-C-Level, 3 bullet points, ללא מינוחים טכניים". לקוח מרוצה, אתם חסכתם שעה. |
+
+---
+---
+
+# CHAPTER 08 — כתיבה ועיצוב עם AI
+
+---
+
+## SLIDE 48 — Section Break: כתיבה ועיצוב
+**סוג:** `slide-section` | **מזהה:** `section-writing`
+
+- **מספר:** 08
+- **אייקון:** ✍️
+- **כותרת:** כתיבה ועיצוב עם AI
+- **תת-כותרת:** מבריף לקופי — ישירות
+- **תגיות:** `Gem קופירייטר` | `Gem ארט-דירקטור` | `Tone of Voice`
+
+---
+
+## SLIDE 49 — Gem קופירייטר
+**כותרת:** Gem קופירייטר — הכי קרוב לשכוב CD
+
+| ❌ בלי Gem | ✅ עם Gem |
+|-----------|----------|
+| "מוצר איכותי במחיר משתלם. קנה עכשיו." | "כי מותרות זה לא מחיר — זה מה שמרגישים בבוקר." |
+| 30 דקות עבודה, תוצאה גנרית שאפשר להחליף עם כל ברנד אחר. | 30 שניות, 10 וריאציות לבחירה — כולן בטון הנכון. |
+| כל פרומפט מאפס. אין זיכרון. אין טון. | Gem מכיר את ספר המותג ולא שוכח אותו. |
+
+**מה להכניס ל-Gem:**
+📋 ספר מותג (PDF/טקסט) + 10 דוגמאות של קופי טוב + הנחיות טון ("ציני", "חם", "דוחף") + מה *לא* לכתוב ("אל תכתוב מחיר, אל תבטיח הבטחות שאי אפשר לקיים").
+
+---
+
+## SLIDE 50 — Gem ארט-דירקטור
+**כותרת:** Gem ארט-דירקטור — שפה ויזואלית אחידה
+
+| אייקון | פיצ'ר | תיאור |
+|--------|--------|-------|
+| 🎨 | ניתוח סקיצות | מעלים סקיצה ← Gem מנתח קומפוזיציה, מציע שיפורים ומסביר למה בשפה מקצועית. כמו CD-watch. |
+| 🖌️ | פלטות צבעים ל-Hex | מתאר "רוצה משהו כמו שקיעה בים שקט" → Gem מייצר פלטה עם Hex codes מדויקים + CSS variables מוכנות לפיתוח. |
+| 🔮 | Prompt Writer למחוללי תמונות | מתאר בריף שיווקי → Gem כותב Prompt מדויק ל-Gemini/Midjourney שישמר על שפה ויזואלית עקבית בין כל תמונות הקמפיין. |
+
+**Hack (tip-box):** 💡 תנו ל-Gem ארט-דירקטור גישה ל-Google Drive עם כל תמונות המותג. הוא ילמד את השפה ויצור Prompts שתמיד "ישמעו" נכון.
+
+---
+---
+
+# BONUS — CLAUDE CODE
+
+---
+
+## SLIDE 51 — Section Break: Claude Code
+**סוג:** `slide-section slide-bonus` | **מזהה:** `section-claude`
+
+- **מספר:** ✦ (סמל, לא מספר)
+- **פרק:** BONUS
+- **אייקון:** 🎁
+- **כותרת:** Claude Code
+- **תת-כותרת:** AI שכותב קוד — ישירות בטרמינל
+- **תגיות:** `GitHub Integration` | `Full File Access` | `Auto Deploy`
+
+---
+
+## SLIDE 52 — מה זה Claude Code
+**כותרת:** Claude Code — AI ברמת סוכן
+
+| אייקון | פיצ'ר | תיאור |
+|--------|--------|-------|
+| 📁 | גישה מלאה לקבצים | קורא, כותב ועורך קבצים. מבין את הפרויקט כמו מפתח שעובד איתכם שנים. |
+| 💻 | מריץ פקודות | מתקין חבילות, מריץ בדיקות, מבנה פרויקטים — הכל מהטרמינל. הוא לא מציע, הוא עושה. |
+| 🌐 | GitHub Integration | יוצר repos, commits ו-pull requests. Deploys לאוויר עם GitHub Actions. מחבר לבין פיתוח לפרסום. |
+
+**Use Case (highlight-box amber):**
+🎯 "צור לנו Landing Page לקמפיין, קשר ל-Analytics, הגדר Google Tag Manager, Deploy ל-GitHub Pages." — בפחות משעה.
+
+---
+
+## SLIDE 53 — The Making Of
+**כותרת:** The Making Of — הפרזנטציה הזו 🤯
+
+| # | שלב |
+|---|-----|
+| 01 | **בריף בעברית** — תיארנו ל-Claude Code מה אנחנו רוצים. Design tokens, טון, כלים. |
+| 02 | **תכנון** — Claude הציע ארכיטקטורה מודולרית: Reveal.js + 56 שקופיות HTML + CSS tokens. |
+| 03 | **בנייה** — כתב HTML, CSS, JavaScript — 3 קבצים, ~3,000 שורות קוד. |
+| 04 | **דפלוי** — הגדיר GitHub Actions לפרסום אוטומטי בכל Push. |
+| 05 | **זמן כולל:** פחות משעה. **שורות קוד שכתבנו:** אפס. |
+
+**ציטוט:** "הכלי שנמצא בסדנה שלנו — בנה את הסדנה שלנו"
+
+---
+
+## SLIDE 54 — התקנה
+**כותרת:** איך מתקינים ומתחילים
 
 ```bash
-# מתקינים
+# שלב 1: התקנה (Node.js נדרש)
 npm install -g @anthropic-ai/claude-code
 
-# מפעילים בתוך התיקיית הפרויקט
+# שלב 2: הפעלה בתוך תיקיית הפרויקט שלכם
+cd my-project
 claude
+
+# Claude Code קורא את כל הפרויקט ומחכה להוראות בעברית
+# "צור component של Header עם לוגו ותפריט נוויגציה"
 ```
 
----
-
-<!-- .slide: class="slide-section slide-bonus" -->
-
-# 🎁 בונוס
-
-## איך הפרזנטציה הזו נבנתה
+| נתון | ערך |
+|------|-----|
+| $20 | מחיר חודשי (Max Plan) |
+| 0 | שורות קוד שצריך לדעת לכתוב |
+| ∞ | פרויקטים שאפשר לבנות |
 
 ---
 
-## The Making Of
+## SLIDE 55 — Mindset ⭐
+**סוג:** `slide-gold-tip`
 
-<div class="making-list">
-  <div class="making-item">
-    <span class="making-num">01</span>
-    <span><strong>בריף</strong> — תיארנו ל-Claude Code מה אנחנו רוצים, בעברית</span>
-  </div>
-  <div class="making-item">
-    <span class="making-num">02</span>
-    <span><strong>תכנון</strong> — Claude הציע ארכיטקטורה, שאל שאלות, תיאם</span>
-  </div>
-  <div class="making-item">
-    <span class="making-num">03</span>
-    <span><strong>בנייה</strong> — כתב HTML, CSS, JavaScript, SLIDES.md</span>
-  </div>
-  <div class="making-item">
-    <span class="making-num">04</span>
-    <span><strong>דפלוי</strong> — הגדיר GitHub Actions, פרסם לאוויר</span>
-  </div>
-  <div class="making-item">
-    <span class="making-num">05</span>
-    <span><strong>זמן כולל:</strong> פחות משעה</span>
-  </div>
-</div>
-
-<blockquote class="highlight-quote">
-  "הכלי שנמצא בסדנה שלנו — בנה את הסדנה שלנו"
-</blockquote>
+| # | טיפ |
+|---|-----|
+| 💡 | **תהיו סקרנים:** כל פיצ'ר שלא ניסיתם — נסו. כל כלי שנראה מוזר — פתחו. ה-AI מתפתח כל שבוע. מי שמנסה מוקדם לומד מוקדם. |
+| 🚀 | **אל תפחדו "לשבור":** ה-AI לא שוקע ים. אם הפרומפט יצא גרוע — כתבו שוב. אם הסרטון לא יצא — ג'נרטו שוב. עלות הניסוי = כמה שניות. עלות הפחד = שנים. |
+| 🎯 | **ה-Gap הולך ורחב:** בין מי שמשתמש ב-AI לבין מי שלא — יש כבר פער של שנות עבודה. לא של שבועות. הסדנה הזו היא צעד ראשון. הצעד השני — לפתוח ולנסות היום. |
+| 🔁 | **Iteration > Perfection:** פרומפט ראשון שטחי → שפרו → שפרו שוב → ועוד פעם. הסוד הוא לא לכתוב פרומפט מושלם בפעם הראשונה. הסוד הוא לא לוותר אחרי פעם ראשונה. |
 
 ---
 
-<!-- .slide: class="slide-cover slide-end" -->
+## SLIDE 56 — End
+**סוג:** `slide-cover slide-end`
 
-# תודה 🙏
+- **כותרת:** תודה 🙏
+- **כותרת משנה:** שאלות? ניסיונות? רעיונות מטורפים?
+- **חברה:** 42 Creative
+- **אתר:** 42creative.co.il
+- **Tagline:** AI × Creativity × 42
 
-## שאלות?
+---
+---
 
-<div class="contact-info">
-  <strong>42 Creative</strong>
-  <a href="https://42creative.co.il" target="_blank">42creative.co.il</a>
-</div>
+# Assets נדרשים
 
-<div class="cover-tagline">AI × Creativity × 42</div>
+| קובץ | לאיזה שקופית | סטטוס |
+|------|-------------|-------|
+| `assets/logo-42.png` | לוגו קבוע (כל השקופיות) | [ ] חסר |
+| `assets/demo-veo3.mp4` | SLIDE 5 — Veo 3 | [ ] חסר |
+| `assets/demo-kling.mp4` | SLIDE 13 — Kling Omni | [ ] חסר |
+| `assets/demo-kling-after.mp4` | SLIDE 17 — AI כ-After Effects | [ ] חסר |
+| `assets/demo-hedra.mp4` | SLIDE 22 — Hedra Omnia | [ ] חסר |
+
+> כשתוסיף קובץ: שים ב-`assets/`, תגיד ל-Claude "חבר את `assets/demo-veo3.mp4` לשקופית 5".
