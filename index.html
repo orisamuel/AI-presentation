@@ -5,37 +5,1613 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI בעולם הפרסום | 42 Creative</title>
 
-  <!-- Reveal.js core CSS -->
+  <!-- Reveal.js core CSS only — NO theme (our theme is self-contained) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
-  <!-- Black base theme -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
   <!-- Highlight.js for code blocks -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
 
-  <!-- Google Fonts: Heebo (Hebrew-first) -->
+  <!-- Google Fonts preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Custom 42 theme -->
+  <!-- Our complete theme (no external theme dependency) -->
   <link rel="stylesheet" href="css/theme-42.css">
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
-      <section
-        data-markdown="SLIDES.md"
-        data-separator="^\n---\n"
-        data-separator-vertical="^\n--\n"
-        data-separator-notes="^Note:"
-        data-charset="UTF-8">
+
+      <!-- =====================================================
+           SLIDE 1 — COVER
+           ===================================================== -->
+      <section class="slide-cover" data-auto-animate>
+        <div class="cover-eyebrow">42 Creative × AI</div>
+        <h1>בינה מלאכותית<br>בעולם הפרסום</h1>
+        <h2>סדנה מעשית</h2>
+        <div class="cover-tagline">Gemini &nbsp;·&nbsp; Kling &nbsp;·&nbsp; Hedra &nbsp;·&nbsp; ElevenLabs &nbsp;·&nbsp; Suno &nbsp;·&nbsp; CapCut &nbsp;·&nbsp; ChatGPT</div>
       </section>
-    </div>
-  </div>
+
+      <!-- =====================================================
+           SLIDE 2 — AGENDA
+           ===================================================== -->
+      <section class="slide-agenda" data-auto-animate>
+        <h2>מה נלמד היום</h2>
+        <div class="agenda-grid">
+          <div class="agenda-item" data-goto="section-gemini">
+            <span class="agenda-icon">🔮</span>
+            <span>Gemini — מדיה + חשיבה</span>
+          </div>
+          <div class="agenda-item" data-goto="section-kling">
+            <span class="agenda-icon">🎬</span>
+            <span>Kling — וידאו ופיזיקה</span>
+          </div>
+          <div class="agenda-item" data-goto="section-hedra">
+            <span class="agenda-icon">🎭</span>
+            <span>Hedra — אווטארים ומודלים</span>
+          </div>
+          <div class="agenda-item" data-goto="section-elevenlabs">
+            <span class="agenda-icon">🎙️</span>
+            <span>ElevenLabs — קול ועברית</span>
+          </div>
+          <div class="agenda-item" data-goto="section-suno">
+            <span class="agenda-icon">🎵</span>
+            <span>Suno — מוזיקה ואולפן</span>
+          </div>
+          <div class="agenda-item" data-goto="section-capcut">
+            <span class="agenda-icon">✂️</span>
+            <span>CapCut — עריכה והרכבה</span>
+          </div>
+          <div class="agenda-item" data-goto="section-chatgpt">
+            <span class="agenda-icon">🧠</span>
+            <span>ChatGPT — ניתוח ולוגיקה</span>
+          </div>
+          <div class="agenda-item agenda-bonus" data-goto="section-claude">
+            <span class="agenda-icon">🎁</span>
+            <span>בונוס: איך בנינו את זה עם Claude Code</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           SECTION: GEMINI
+           ===================================================== -->
+
+      <!-- SLIDE 3 — Gemini Section Break -->
+      <section class="slide-section" id="section-gemini" data-transition="zoom">
+        <div class="section-chapter">CHAPTER 01</div>
+        <h1>🔮 Gemini</h1>
+        <div class="section-subtitle">מנוע המדיה והחשיבה מבית Google</div>
+        <div class="section-desc">וידאו · תמונות · מוזיקה · Gems · שיחה קולית</div>
+      </section>
+
+      <!-- SLIDE 4 — מה זה Gemini? -->
+      <section data-auto-animate>
+        <h2>לא עוד צ'אטבוט — מפעל מדיה שלם</h2>
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="feature-icon">🎥</span>
+            <div>
+              <strong>Veo 3 — מודל הווידאו</strong>
+              <span>הסטנדרט הגבוה ביותר כיום. יוצר סאונד מובנה ישירות מהווידאו — לא מודבק בדיעבד. כולל הארכת קטעים, רפרנס תמונות ו-First/Last Frames.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🎨</span>
+            <div>
+              <strong>Nano Banana 2 / Gemini 3 Flash Image — מודל התמונות</strong>
+              <span>יצירה מאפס, עריכה מדויקת (Inpainting) ושילוב סגנונות. משתמשי Pro יכולים ללחוץ "Redo with Pro" לשדרוג מיידי.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🎵</span>
+            <div>
+              <strong>Lyria 3 — מודל המוזיקה (שרבים לא יודעים שקיים!)</strong>
+              <span>יצירת אודיו באיכות אולפנית ישירות מ-Gemini. מקבל קלט של טקסט, תמונה <em>או וידאו</em> ומפיק רצועות מוזיקליות מלאות.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5 — Veo 3 -->
+      <section data-auto-animate>
+        <h2>Veo 3 — כשהווידאו מגיע עם נשמה</h2>
+        <div class="two-col">
+          <div>
+            <div class="feature-list">
+              <div class="feature-item">
+                <span class="feature-icon">🔊</span>
+                <div>
+                  <strong>Native Audio</strong>
+                  <span>הסאונד נוצר יחד עם הוידאו, לא בנפרד. תקבלו צלילי סביבה, שיחה ומוזיקה שמתאימים בדיוק לתמונה.</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🖼️</span>
+                <div>
+                  <strong>First &amp; Last Frame</strong>
+                  <span>הגדירו את פריים הפתיחה ואת פריים הסיום — Veo ממלא את האנימציה באמצע.</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">📏</span>
+                <div>
+                  <strong>הארכת קטעים</strong>
+                  <span>יצרתם סרטון 8 שניות? בקשו מ-Veo להאריך אותו — הוא ימשיך את הסיפור.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="highlight-box amber">
+              <strong>⚠️ שימו לב</strong><br>
+              Veo3 יוצר וידאו עם קול מובנה — אם מייצרים כמה קטעים עם אותה דמות, הקול <em>לא</em> יהיה זהה. הפתרון — בסעיף ElevenLabs ✨
+            </div>
+            <div class="highlight-box" style="margin-top:12px">
+              <strong>מה Veo לא יעשה</strong><br>
+              חסום ליצירת תוכן שאינו בטוח (Unsafe content). הוא לא "ינסה" — הוא פשוט יסרב בנימוס.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6 — מודל התמונות -->
+      <section data-auto-animate>
+        <h2>מודל התמונות — גם אמן, גם עורך</h2>
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="card-title">🖌️ יצירה מאפס</div>
+            <div class="card-body">תיארו את מה שאתם רוצים ותקבלו קומפוזיציה מושלמת. הוא מבין "אסתטיקה", "ויבס" ו"מינימליסטי" לא פחות מ"חתול על שולחן".</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">✏️ Inpainting (עריכה בתוך תמונה)</div>
+            <div class="card-body">מסמנים אזור ספציפי בתמונה קיימת, מבקשים שינוי — הוא מחליף רק את מה שביקשתם מבלי לגעת בשאר.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">🎨 שילוב סגנונות</div>
+            <div class="card-body">מעלים שתי תמונות (למשל פוטוגרפיה + ציור שמן) ומבקשים לשלב. התוצאה: סגנון ייחודי שלא היה קיים לפני.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">⬆️ Redo with Pro</div>
+            <div class="card-body">משתמשי Plus/Pro/Ultra יכולים לקבל גרסה מוגברת של כל תמונה בלחיצת כפתור. הבדל משמעותי באיכות.</div>
+          </div>
+        </div>
+        <div class="tip-box">
+          💡 <strong>הסרת כוכב ה-Watermark:</strong> פתחו את התמונה באפליקציית "תמונות" המובנית ב-Windows ← כלי המחיקה (Retouch) ← לחצו על הכוכב. 10 שניות, נגמר.
+        </div>
+      </section>
+
+      <!-- SLIDE 7 — Lyria 3: יכולת הנסתרת -->
+      <section data-auto-animate>
+        <h2>Lyria 3 — מוזיקה מובנית ב-Gemini 🤫</h2>
+        <div class="highlight-box" style="margin-bottom:0.8em">
+          <strong>רוב האנשים לא יודעים שזה קיים.</strong> Gemini מכיל מודל מוזיקה מלא — ללא צורך ב-Suno, ללא צורך בחשבון נוסף.
+        </div>
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="feature-icon">🎹</span>
+            <div>
+              <strong>מולטי-מודאלי — קלט מכל סוג</strong>
+              <span>טקסט ("צור ג'אז מלנכולי"), תמונה ("צור מוזיקה שמתאימה לפוסטר הזה") <em>או וידאו</em> ("הוסף פסקול לקטע הזה").</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🎛️</span>
+            <div>
+              <strong>שליטה גרנולרית</strong>
+              <span>טמפו, ז'אנר, מצב רוח, כלי נגינה, עוצמה — הכל עם תיאור בשפה טבעית.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🔒</span>
+            <div>
+              <strong>SynthID Watermark</strong>
+              <span>כל רצועה כוללת סימן מים דיגיטלי בלתי נראה (SynthID) לזיהוי תוכן AI. לא נשמע, לא נראה — אבל שם.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 8 — Gems -->
+      <section data-auto-animate>
+        <h2>Gems — העוזרים שמכירים את המותג</h2>
+        <p style="font-size:0.75em;color:var(--c-text-2);margin-bottom:0.8em;">במקום לכתוב פרומפטים ארוכים בכל פעם — מגדירים Gem פעם אחת ומשתמשים בו שוב ושוב.</p>
+        <div class="two-col">
+          <div>
+            <div class="info-card">
+              <div class="card-title">✍️ Gem קופירייטר / "גאגר"</div>
+              <div class="card-body">
+                מזינים לו: ספר מותג + דוגמאות + הנחיות טון.<br><br>
+                "אתה קופירייטר ציני, חד ומשעשע. אתה כותב בעברית ישראלית עם אנרגיה."<br><br>
+                הוא שומר על הטון ה<strong>זהה</strong> בכל שיחה, לתמיד.
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="info-card">
+              <div class="card-title">🎨 Gem ארט-דירקטור</div>
+              <div class="card-body">
+                מנתח סקיצות, מייצר פלטות צבעים (Hex codes), כותב חוקי CSS.<br><br>
+                ומה שהכי שימושי: <strong>כותב פרומפטים מדויקים</strong> למחוללי תמונות כדי לשמור על שפה ויזואלית אחידה בין קמפיינים.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="highlight-box green" style="margin-top:14px">
+          <strong>💡 טיפ חשוב:</strong> אל תסמכו על כך שהמידע ב-Gemini נשמר. שיחות שלמות יכולות להיעלם. ה-<em>Gem</em> — הגדרותיו תמיד נשארות. שמרו את ה-System Prompt שם.
+        </div>
+      </section>
+
+      <!-- SLIDE 9 — Gemini Live -->
+      <section data-auto-animate>
+        <h2>Gemini Live — סיעור מוחות קולי</h2>
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="feature-icon">🎙️</span>
+            <div>
+              <strong>שיחה קולית זורמת</strong>
+              <span>מצב Live באפליקציית Gemini בנייד — שיחה טבעית, אפשר לקטוע באמצע, אין צורך לסיים משפטים.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">📱</span>
+            <div>
+              <strong>שיתוף מסך + מצלמה</strong>
+              <span>שתפו את מסך הטלפון, או פתחו מצלמה וכוונו למסך המחשב. Gemini רואה מה אתם רואים.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">💡</span>
+            <div>
+              <strong>שימוש ראלי: ביקורת שקופיות</strong>
+              <span>"תסתכל על הקומפוזיציה של השקופית הזו — מה חסר פה?" Gemini מנתח ומגיב בזמן אמת. כמו לעבוד עם CD שמחכה לכם 24/7.</span>
+            </div>
+          </div>
+        </div>
+        <div class="highlight-box amber">
+          <strong>Use Case שווה במיוחד:</strong> "אני עם לקוח בפגישה ונתקעתי — תציע לי 3 דרכים לפתח את הקונספט הזה" <em>(כוון מצלמה לשקיצה)</em>
+        </div>
+      </section>
+
+      <!-- SLIDE 10 — Gemini: מעמיק vs. זריז -->
+      <section data-auto-animate>
+        <h2>מעמיק vs. זריז — תמיד בחרו מעמיק</h2>
+        <div class="highlight-box red" style="margin-bottom:14px">
+          <strong>⚠️ כלל ברזל: אף פעם אל תשתמשו ב-"זריז" (Flash) לעבודה רצינית.</strong>
+        </div>
+        <div class="two-col">
+          <div class="info-card" style="border-color:rgba(239,68,68,0.3)">
+            <div class="card-title">⚡ זריז (Flash) — מה שלא כדאי</div>
+            <div class="card-body">
+              מהיר יותר, זול יותר — ופחות חכם.<br><br>
+              על מה מוותרים: הבנת הקשר עמוקה, יצירתיות, הבנת ניואנסים בשפה, תשובות ארוכות ומורכבות.<br><br>
+              <strong style="color:var(--c-red)">מה שמרגישים:</strong> AI שנותן תשובות "מספיק טובות" — לא "מעולות".
+            </div>
+          </div>
+          <div class="info-card" style="border-color:rgba(16,185,129,0.3)">
+            <div class="card-title">🧠 מעמיק (Pro/Ultra) — מה שצריך <span class="badge-recommended">תמיד</span></div>
+            <div class="card-body">
+              לוקח עוד 3 שניות — ונותן עוד 300% איכות.<br><br>
+              מה שמקבלים: הבנה עמוקה של הבריף, יצירתיות אמיתית, ניואנסים בשפה, תוצאות שאפשר לשלוח ישירות ללקוח.<br><br>
+              <strong style="color:var(--c-green)">המחיר:</strong> כמה שניות המתנה. השקעה שווה זאת.
+            </div>
+          </div>
+        </div>
+        <div class="highlight-box amber" style="margin-top:14px;font-size:0.65em">
+          <strong>💡 חשבו על זה ככה:</strong> היה לכם בחירה בין Senior Copywriter ל-Junior Copywriter — לאותו מחיר. תמיד תבחרו Senior. מעמיק = Senior.
+        </div>
+      </section>
+
+      <!-- SLIDE 11 — Gemini Gold Tips -->
+      <section class="slide-gold-tip">
+        <div class="gold-tip-header">
+          <span class="gold-star-icon">⭐</span>
+          <h2>טיפים זהב — Gemini</h2>
+        </div>
+        <div class="gold-tips-list">
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">01</span>
+            <div class="gold-tip-text"><strong>תמיד מעמיק, אף פעם זריז:</strong> Flash מהיר אבל שטחי. Pro/Ultra = AI ברמת Senior. 3 שניות נוספות של המתנה → תוצאה שאפשר לשלוח ללקוח ישירות.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">02</span>
+            <div class="gold-tip-text"><strong>הסרת כוכב הסימון:</strong> "תמונות" של Windows ← Retouch ← לחץ על הכוכב. 10 שניות. בסרטון שיש בו כוכב — Scale ל-105% ב-CapCut או Mask+Blur.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">03</span>
+            <div class="gold-tip-text"><strong>זיכרון Gemini = לא בטוח:</strong> שיחות שלמות נעלמות, גם ההיסטוריה יכולה פתאום להיעלם. שמרו System Prompts ב-Gem, לא בשיחה.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">04</span>
+            <div class="gold-tip-text"><strong>Lyria 3 = ספריית מוזיקה חינמית:</strong> מייצרים 5 וריאציות לאותו ז'אנר ← בוחרים את הטובה ← משתמשים כ-background music לסרטון. ניצחון מוחלט.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           SECTION: KLING
+           ===================================================== -->
+
+      <!-- SLIDE 11 — Kling Section Break -->
+      <section class="slide-section" id="section-kling" data-transition="zoom">
+        <div class="section-chapter">CHAPTER 02</div>
+        <h1>🎬 Kling AI</h1>
+        <div class="section-subtitle">סימולטור פיזיקה ועידן ה-Omni</div>
+        <div class="section-desc">Start/End Frame · Motion Brush · Camera Control · סרטון רציף</div>
+      </section>
+
+      <!-- SLIDE 12 — Kling Omni -->
+      <section data-auto-animate>
+        <h2>Kling Omni — לא רק "מחולל וידאו"</h2>
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="feature-icon">🏛️</span>
+            <div>
+              <strong>הבנת פיזיקה מרחבית</strong>
+              <span>הוא לא מנחש — הוא <em>מבין</em>. נוזלים, עשן, בד, אש, זכוכית — Kling יודע איך כל חומר מתנהג.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🎭</span>
+            <div>
+              <strong>עקביות דמות (Character Consistency)</strong>
+              <span>Kling Omni שומר על זהות הדמות לאורך עשרות שוטים. אותו פנים, אותה תלבושת — שוט אחרי שוט.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🖊️</span>
+            <div>
+              <strong>עריכה בטקסט חופשי</strong>
+              <span>"החלף את העניבה לאדומה" — Kling עורך את הפרט הספציפי מבלי לגעת ברקע. כמו Photoshop אבל לסרטון.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">📐</span>
+            <div>
+              <strong>Multi-Reference — עד 10 תמונות רפרנס</strong>
+              <span>מעלים: תמונת הדמות + תמונת התאורה + תמונת המצלמה + תמונת הסגנון. Kling משלב את כולן לתמונה אחת.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 13 — Start Frame vs Start+End Frame -->
+      <section data-auto-animate>
+        <h2>Start Frame vs. Start &amp; End Frame</h2>
+        <p style="font-size:0.72em;color:var(--c-text-2);margin-bottom:0.8em;">השאלה האמיתית: אתם יודעים לאן הסרטון מגיע?</p>
+        <div class="frame-demo">
+          <div class="frame-box start">
+            <div class="frame-label">Start Frame בלבד</div>
+            <div class="frame-sub">מנקודה ידועה לאי-ידוע</div>
+          </div>
+          <div class="frame-arrow">→</div>
+          <div class="frame-mid">
+            <div class="frame-label">AI ממלא</div>
+          </div>
+          <div class="frame-arrow">→</div>
+          <div class="frame-box" style="background:rgba(124,58,237,0.08);border-color:rgba(124,58,237,0.4);">
+            <div class="frame-label">? סיום פתוח</div>
+            <div class="frame-sub">AI יחליט</div>
+          </div>
+        </div>
+        <div class="frame-demo" style="margin-top:10px">
+          <div class="frame-box start">
+            <div class="frame-label">Start Frame</div>
+            <div class="frame-sub">נקודת פתיחה</div>
+          </div>
+          <div class="frame-arrow">→</div>
+          <div class="frame-mid">
+            <div class="frame-label">AI ממלא את המעבר</div>
+          </div>
+          <div class="frame-arrow">→</div>
+          <div class="frame-box end">
+            <div class="frame-label">End Frame</div>
+            <div class="frame-sub">יעד מוגדר</div>
+          </div>
+        </div>
+        <div class="two-col" style="margin-top:14px">
+          <div class="highlight-box green" style="font-size:0.62em">
+            <strong>Start Frame בלבד — מתי?</strong><br>
+            תנועה פתוחה (ענן נע, דמות מסתובבת), לופ, אנימציה שאמורה להפתיע.
+          </div>
+          <div class="highlight-box amber" style="font-size:0.62em">
+            <strong>Start + End Frame — מתי?</strong><br>
+            מעבר מוגדר, הפיכת עמוד, "AI כאפטר אפקטס", לולאות מדויקות.
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 14 — Motion Brush + Camera Controls -->
+      <section data-auto-animate>
+        <h2>Motion Brush + Camera Controls</h2>
+        <div class="two-col">
+          <div>
+            <h3>🖌️ Motion Brush</h3>
+            <div class="feature-list">
+              <div class="feature-item">
+                <span class="feature-icon">🎯</span>
+                <div>
+                  <strong>כלי חובה</strong>
+                  <span>מצביעים על אזור ספציפי בתמונה, מגדירים כיוון תנועה — רק <em>אותו</em> אזור יזוז, שאר הפריים קפוא.</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🌊</span>
+                <div>
+                  <strong>דוגמאות קלאסיות</strong>
+                  <span>המים בכוס זורמים אך הכוס עצמה עומדת. העשן מהסיגר עולה אך הדמות קפואה.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3>🎥 Camera Controls</h3>
+            <div class="feature-list">
+              <div class="feature-item">
+                <span class="feature-icon">🚫</span>
+                <div>
+                  <strong>אל תשאירו על "Auto"!</strong>
+                  <span>בקרת מצלמה אוטומטית נותנת תנועה לא ממוקדת. קחו שליטה.</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🎬</span>
+                <div>
+                  <strong>Pan / Tilt / Zoom</strong>
+                  <span>Pan (ימינה/שמאלה), Tilt (למעלה/למטה), Zoom-in/out. שלבו לשוטים קולנועיים אמיתיים.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="highlight-box" style="margin-top:14px;font-size:0.62em">
+          <strong>📽️ טיפ קולנועי:</strong> Zoom-in איטי + Pan קל = תחושת מסתורין. Zoom-out מהיר = חשיפה דרמטית. 30 שניות של עבודה, תוצאה של בית ספר לקולנוע.
+        </div>
+      </section>
+
+      <!-- SLIDE 15 — סרטון רציף -->
+      <section data-auto-animate>
+        <h2>סרטון רציף — מ-3 קטעים לנרטיב אחד</h2>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-num">01</span>
+            <span class="step-label">יוצרים קטע ראשון<br>(0–5 שניות)</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">02</span>
+            <span class="step-label">לוקחים את <strong>הפריים האחרון</strong> כ-Start Frame</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">03</span>
+            <span class="step-label">יוצרים קטע שני<br>(5–10 שניות)</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">04</span>
+            <span class="step-label">חוזרים על התהליך<br>לכל קטע נוסף</span>
+          </div>
+        </div>
+        <div class="two-col" style="margin-top:16px">
+          <div class="highlight-box amber" style="font-size:0.62em">
+            <strong>🎯 טריק Close-Up:</strong> קאט בין שני וידאואים מ-generated נשמע קצת אומנותי? שלבו Close-Up באמצע. קלוז-אפ "מאפס" את העין ואפשר לקצוץ בין שני סרטונים ויזואלית שונים.
+          </div>
+          <div class="highlight-box" style="font-size:0.62em">
+            <strong>💡 לולאה (Seamless Loop):</strong> העלו את <em>אותה</em> תמונה כ-Start וכ-End Frame + פרומפט להתרחשות באמצע. תקבלו לופ אינסופי חלק לרקע, אמביאנס, ריל.
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 16 — AI כ-After Effects -->
+      <section data-auto-animate>
+        <h2>AI כ-After Effects — בלי Timeline</h2>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-num">1</span>
+            <span class="step-label">עצבו "שקופית סופית" בפוטושופ / Canva עם כותרת + לוגו</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">2</span>
+            <span class="step-label">העלו אותה כ-<strong>End Frame</strong></span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">3</span>
+            <span class="step-label">Start Frame = תמונת עשן / ערפל / חלקיקים</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">4</span>
+            <span class="step-label">פרומפט: "העשן מתפזר ומתגבש לאותיות"</span>
+          </div>
+        </div>
+        <div class="highlight-box green" style="margin-top:16px">
+          <strong>🎬 התוצאה:</strong> אנימציית פתיחה שנגמרת בכותרת המותג שלכם. פריים עם לוגו, כתוביות, CTA — הכל כבר שם, ה-AI "מהנפש" אליו. בלי keyframes, בלי motion graphics, בלי תקציב.
+        </div>
+      </section>
+
+      <!-- SLIDE 17 — מניעת קפיצה -->
+      <section data-auto-animate>
+        <h2>⚠️ בעיית הקפיצה בין פריימים</h2>
+        <div class="highlight-box red" style="margin-bottom:16px">
+          <strong>הבעיה:</strong> כשמחברים קטע A לקטע B באמצעות Start/End Frame, לפעמים יש "קפיצה" ברגע החיבור. למה?
+        </div>
+        <div class="two-col">
+          <div class="info-card">
+            <div class="card-title">🔍 הסיבה</div>
+            <div class="card-body">
+              יש לכם פריים <strong>כפול</strong> בנקודת החיבור:<br>
+              — הפריים האחרון של קטע A<br>
+              — הפריים הראשון של קטע B<br><br>
+              שניהם זהים → הוידאו "קופא" לשבריר שניה → נראה כמו קפיצה.
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">✅ הפתרון</div>
+            <div class="card-body">
+              ב-CapCut או בעורך הוידאו שלכם:<br>
+              — מחקו פריים אחד מ<strong>סוף</strong> קטע A<br>
+              — <em>או</em> מחקו פריים אחד מ<strong>תחילת</strong> קטע B<br><br>
+              המעבר יהיה חלק כמו שוט אחד.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 18 — Kling Gold Tips -->
+      <section class="slide-gold-tip">
+        <div class="gold-tip-header">
+          <span class="gold-star-icon">⭐</span>
+          <h2>טיפים זהב — Kling</h2>
+        </div>
+        <div class="gold-tips-list">
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">01</span>
+            <div class="gold-tip-text"><strong>Camera Control = מקצועיות מיידית:</strong> Pan איטי + Zoom-in מדויק יגרמו לסרטון שלכם להיראות כמו פרודקשן אמיתי. 30 שניות עבודה, 30× ערך.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">02</span>
+            <div class="gold-tip-text"><strong>AI כ-After Effects:</strong> שקופית סופית כ-End Frame + פרומפט הנפשה = אנימציית פתיחה מרשימה. בלי CS, בלי keyframes, בלי תקציב.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">03</span>
+            <div class="gold-tip-text"><strong>Close-Up = גשר בין עולמות:</strong> קאט בין שני generated videos שנראים שונה? הכניסו Close-Up באמצע. העין נאלצת להתמקד ו"שוכחת" מה היה לפני.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">04</span>
+            <div class="gold-tip-text"><strong>Multi-Reference = שפה ויזואלית עקבית:</strong> שמרו "כרטיס דמות" (תמונה קבועה של הדמות שלכם) ← השתמשו בו כ-Reference בכל שוט ← קבלו דמות עקבית לאורך כל הקמפיין.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           SECTION: HEDRA
+           ===================================================== -->
+
+      <!-- SLIDE 19 — Hedra Section Break -->
+      <section class="slide-section" id="section-hedra" data-transition="zoom">
+        <div class="section-chapter">CHAPTER 03</div>
+        <h1>🎭 Hedra</h1>
+        <div class="section-subtitle">מרכז ניהול מודלים ואולפן אנימציה</div>
+        <div class="section-desc">API Hub · Veo · Hailuo · Hedra Omnia · Full-Body Avatars</div>
+      </section>
+
+      <!-- SLIDE 20 — Hedra כ-API Hub -->
+      <section data-auto-animate>
+        <h2>Hedra — לא מודל, אלא תחנת עבודה</h2>
+        <p style="font-size:0.72em;color:var(--c-text-2);margin-bottom:0.8em;">הידרה ביטלה את "מגבלת המודל הבודד". פלטפורמה אחת שמאפשרת גישה לכל המודלים המובילים.</p>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>מודל</th>
+                <th>מקור</th>
+                <th>כוח</th>
+                <th>מתי לבחור?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight-row">
+                <td class="model-name">Hedra Omnia <span class="badge-recommended">מומלץ</span></td>
+                <td>Hedra (בית)</td>
+                <td>אווטארים בגוף מלא</td>
+                <td>קריין עם שפת גוף, מצגת, ספוקסמן</td>
+              </tr>
+              <tr>
+                <td class="model-name">Google Veo</td>
+                <td>Google</td>
+                <td>קולנועיות + סאונד מובנה</td>
+                <td>פרודקשן איכותי, פסקול אוטומטי</td>
+              </tr>
+              <tr>
+                <td class="model-name">Seedance / Hailuo</td>
+                <td>MiniMax</td>
+                <td>תנועה אנושית + אסתטיקה</td>
+                <td>דמויות נעות טבעית, תנועת ידיים</td>
+              </tr>
+              <tr>
+                <td class="model-name">Pixverse</td>
+                <td>Pixverse</td>
+                <td>שליטה ביחסי תמונה</td>
+                <td>פורמטים שאינם 16:9, קונטנט ייחודי</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SLIDE 21 — Hedra Omnia -->
+      <section data-auto-animate>
+        <h2>Hedra Omnia — מה שעוזר הדורות הקודמים לא יכל</h2>
+        <div class="two-col">
+          <div>
+            <div class="feature-list">
+              <div class="feature-item">
+                <span class="feature-icon">🦾</span>
+                <div>
+                  <strong>Full-Body (גוף מלא)</strong>
+                  <span>מודלי Character הישנים יצרו "ראשים מדברים". Omnia יוצר אווטארים עם תנועות ידיים, כתפיים, גוף שלם.</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">😮</span>
+                <div>
+                  <strong>מיקרו-הבעות פנים</strong>
+                  <span>הרמת גבה, עקמת פה, חיוך חמוס — ה-AI מוסיף הבעות שלא הוגדרו, על סמך הניתוח של האודיו.</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">👄</span>
+                <div>
+                  <strong>Lip Sync מדויק</strong>
+                  <span>סנכרון שפתיים ברמה שעוברת בדיקה גם בהאטה של x0.25. הדמות <em>ממש</em> אומרת את המילים.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="highlight-box amber">
+              <strong>🎯 Use Case אחד שיהפוך כל מצגת:</strong><br><br>
+              מעלים תמונה של איש הצוות + קובץ אודיו של מסר ← Hedra Omnia הופך אותו לסרטון מדבר עם שפת גוף מלאה. 2 דקות עבודה, 100× ערך תפיסתי.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 22 — האודיו ה"מלוכלך" -->
+      <section data-auto-animate>
+        <h2>הסוד: האודיו ה"מלוכלך" 🎤</h2>
+        <div class="highlight-box red" style="margin-bottom:14px">
+          <strong>בעיה נפוצה:</strong> אנשים מכניסים TTS גנרי ומונוטוני → מקבלים אווטאר רובוטי שמזיז פה בלי נשמה.
+        </div>
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="feature-icon">🔬</span>
+            <div>
+              <strong>מה Hedra <em>באמת</em> מנתח</strong>
+              <span>המודל לא קורא טקסט — הוא מנתח <em>גלי קול</em>. אנרגיה, עוצמה, עליות וירידות בטון.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">😤</span>
+            <div>
+              <strong>מה שיוצר תנועה אנושית אמיתית</strong>
+              <span>נשימות כבדות, צחקוקים, הפסקות דרמטיות, שינויי עוצמה פתאומיים — Hedra "מתרגם" את האנרגיה לשפת גוף.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">✅</span>
+            <div>
+              <strong>הפתרון</strong>
+              <span>הקליטו את עצמכם (גם עם אוזניות של טלפון) עם רגש, הפסקות ואנרגיה. <em>אחר כך</em> שנו את הקול ב-ElevenLabs. Hedra יקבל את האנרגיה ← ייצור תנועה חיה.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 23 — Hedra Gold Tips -->
+      <section class="slide-gold-tip">
+        <div class="gold-tip-header">
+          <span class="gold-star-icon">⭐</span>
+          <h2>טיפים זהב — Hedra</h2>
+        </div>
+        <div class="gold-tips-list">
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">01</span>
+            <div class="gold-tip-text"><strong>Hedra Omnia + ElevenLabs = קריין מקצועי:</strong> הקליטו את עצמכם עם רגש ← שנו קול ב-ElevenLabs ← הכניסו ל-Hedra Omnia ← קבלו אווטאר עם שפת גוף חיה. זה קומבו שעובד.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">02</span>
+            <div class="gold-tip-text"><strong>בחרו מודל לפי מטרה:</strong> ספוקסמן עם גוף → Hedra Omnia. פרודקשן קולנועי → Google Veo. דמות זזה טבעית → Hailuo/Seedance. אל תבזבזו קרדיטים על המודל הלא נכון.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">03</span>
+            <div class="gold-tip-text"><strong>אודיו "מלוכלך" = תנועה חיה:</strong> TTS מונוטוני ייצר רובוט. הקלטה טבעית עם נשימות ועליות-ירידות = אווטאר שנראה אנושי ממש. האנרגיה בקול = שפת הגוף של האווטאר.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">04</span>
+            <div class="gold-tip-text"><strong>Hedra כ-Pitch Tool:</strong> רוצים לשכנע לקוח בקונספט? הכינו תמונת "מוצר" + טקסט שיווקי ← הפכו לסרטון עם ספוקסמן מדבר ← הלקוח יאמין שכבר צולמה פרסומת. לפני שכתבתם מילה.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           SECTION: ELEVENLABS
+           ===================================================== -->
+
+      <!-- SLIDE 24 — ElevenLabs Section Break -->
+      <section class="slide-section" id="section-elevenlabs" data-transition="zoom">
+        <div class="section-chapter">CHAPTER 04</div>
+        <h1>🎙️ ElevenLabs</h1>
+        <div class="section-subtitle">מעבדת הקול — במיוחד לעברית</div>
+        <div class="section-desc">Voice Design · Multilingual · Speech-to-Speech · Voice Changer</div>
+      </section>
+
+      <!-- SLIDE 25 — Voice Design -->
+      <section data-auto-animate>
+        <h2>Voice Design — לתאר קול במילים</h2>
+        <div class="highlight-box" style="margin-bottom:14px;font-size:0.72em">
+          <strong>הרעיון:</strong> כותבים באנגלית <em>איזה קול</em> אתם רוצים → ElevenLabs בונה את "כלי הנגינה". אחר כך מזינים בעברית — הקול מדבר עברית בקולו שתיאריתם.
+        </div>
+        <div class="two-col">
+          <div>
+            <div class="prompt-examples">
+              <div class="prompt-item">
+                <span class="prompt-q">📝</span>
+                <span>"A raspy, middle-aged woman with a warm but authoritative voice"</span>
+              </div>
+              <div class="prompt-item">
+                <span class="prompt-q">📝</span>
+                <span>"An enthusiastic 25-year-old Israeli guy, energetic and casual"</span>
+              </div>
+              <div class="prompt-item">
+                <span class="prompt-q">📝</span>
+                <span>"A deep, cinematic narrator voice with gravitas"</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="feature-list">
+              <div class="feature-item">
+                <span class="feature-icon">🌍</span>
+                <div>
+                  <strong>הקסם הרב-לשוני</strong>
+                  <span>האנגלית היא רק תיאור "כלי הנגינה". אחרי שמירה — מזינים טקסט בעברית, והקול הזה מדבר עברית.</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🔁</span>
+                <div>
+                  <strong>Generate כמה פעמים</strong>
+                  <span>כל Generate מייצר גרסה שונה מאותו תיאור. תייצרו 5 גרסאות ובחרו את הטובה.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 26 — עברית ב-ElevenLabs -->
+      <section data-auto-animate>
+        <h2>עברית ב-ElevenLabs — המודלים הנכונים</h2>
+        <div class="highlight-box red" style="margin-bottom:14px">
+          <strong>⚠️ שגיאה נפוצה:</strong> בחירת מודל לא מתאים לעברית → הקול מפיק "ג'יבריש" או הגייה משובשת לחלוטין.
+        </div>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>מודל</th>
+              <th>מצב</th>
+              <th>תמיכה בעברית</th>
+              <th>המלצה</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td class="model-name">Eleven Multilingual v2 <span class="badge-recommended">מומלץ</span></td>
+              <td>TTS</td>
+              <td>מצוין</td>
+              <td>ברירת מחדל לכל TTS בעברית</td>
+            </tr>
+            <tr class="highlight-row">
+              <td class="model-name">Eleven Turbo v2.5 <span class="badge-recommended">מומלץ</span></td>
+              <td>TTS מהיר</td>
+              <td>טוב מאוד</td>
+              <td>כשצריך מהיר ובאיכות סבירה</td>
+            </tr>
+            <tr>
+              <td class="model-name">Eleven v1 / v1.5</td>
+              <td>TTS ישן</td>
+              <td>חלקי / גרוע</td>
+              <td>להימנע לעברית</td>
+            </tr>
+            <tr>
+              <td class="model-name">Eleven Multilingual v2 (STS)</td>
+              <td>Speech-to-Speech</td>
+              <td>מצוין</td>
+              <td>לקריינות ו-Voice Cover</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- SLIDE 27 — Speech-to-Speech -->
+      <section data-auto-animate>
+        <h2>Speech-to-Speech — הקאבר הקולי</h2>
+        <p style="font-size:0.72em;color:var(--c-text-2);margin-bottom:0.8em;">ElevenLabs שומר על ה<em>ביצוע</em> שלכם — ומחליף רק את זהות הקול.</p>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-num">1</span>
+            <span class="step-label">מקליטים את עצמכם<br>(גם עם אוזניות)</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">2</span>
+            <span class="step-label">מעלים ל-ElevenLabs<br>← Speech-to-Speech</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">3</span>
+            <span class="step-label">בוחרים קול<br>(שלכם או Voice Library)</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">4</span>
+            <span class="step-label">מקבלים: הביצוע שלכם<br>+ קול חדש</span>
+          </div>
+        </div>
+        <div class="two-col" style="margin-top:14px">
+          <div class="highlight-box green" style="font-size:0.62em">
+            <strong>✅ מה נשמר:</strong> אינטונציה, הדגשות, קצב, עליות-ירידות, רגש. הכל.
+          </div>
+          <div class="highlight-box amber" style="font-size:0.62em">
+            <strong>🔁 מה מוחלף:</strong> רק "חותמת הקול" — צליל הקול הפיזי, גיל, מגדר, ניב.
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 28 — קריינות עברית -->
+      <section data-auto-animate>
+        <h2>קריינות עברית — הקלטה תמיד מנצחת</h2>
+        <div class="before-after">
+          <div class="before-col">
+            <div class="col-label">❌ TTS מאפס (Text-to-Speech)</div>
+            <div class="col-content">
+              <p>הגייה נכונה אבל אינטונציה רובוטית. עברית שנשמעת "מתורגמת".</p>
+              <p>"זה מוצר <strong>מצוין</strong> שיתאים לכם" ← ה-AI לא יודע אם "מצוין" זה שאלה, עקיצה, או שבח.</p>
+              <p class="col-note">⏱️ מהיר, אך מפספס את הניואנסים</p>
+            </div>
+          </div>
+          <div class="after-col">
+            <div class="col-label">✅ הקלטה + Voice Changer</div>
+            <div class="col-content">
+              <p>מקליטים עם רגש ← מכניסים ל-STS. AI לוקח את <em>הביצוע</em> שלכם, מחליף רק את הקול.</p>
+              <p>הקול החדש "יודע" מתי זו עקיצה כי <strong>אתם</strong> הכנסתם אותה לאודיו.</p>
+              <p class="col-note">⭐ דקה נוספת של עבודה, תוצאה מקצועית</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 29 — עקביות קול ב-Veo3 -->
+      <section data-auto-animate>
+        <h2>בעיית העקביות — Veo3 + ElevenLabs</h2>
+        <div class="highlight-box red" style="margin-bottom:14px">
+          <strong>הבעיה:</strong> Veo3 מייצר וידאו עם סאונד מובנה — שמעולה. אבל כל קטע חדש = קול שונה לדמות. אין עקביות בין קטעים.
+        </div>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-num">1</span>
+            <span class="step-label">מייצרים וידאו ב-Veo3<br>עם סאונד מובנה</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">2</span>
+            <span class="step-label"><strong>מייצאים את קובץ הסאונד</strong><br>בנפרד מהווידאו</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">3</span>
+            <span class="step-label">מכניסים ל-ElevenLabs<br>STS + קול קבוע</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">4</span>
+            <span class="step-label">מחברים חזרה לוידאו<br>ב-CapCut</span>
+          </div>
+        </div>
+        <div class="highlight-box green" style="margin-top:14px;font-size:0.65em">
+          <strong>⭐ הטיפ הזה שווה זהב:</strong> כל הקטעים של אותה דמות יקבלו <em>בדיוק</em> אותו קול. לקוח לא יאמין שזה לא שחקן אחד שצולם כל הסרטונים.
+        </div>
+      </section>
+
+      <!-- SLIDE 30 — ElevenLabs Gold Tips -->
+      <section class="slide-gold-tip">
+        <div class="gold-tip-header">
+          <span class="gold-star-icon">⭐</span>
+          <h2>טיפים זהב — ElevenLabs</h2>
+        </div>
+        <div class="gold-tips-list">
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">01</span>
+            <div class="gold-tip-text"><strong>הקלטה > TTS לעברית:</strong> תמיד. ה-AI לא מבין אירוניה עברית. אתם כן. הקליטו ← שנו קול ← תקבלו תוצאה שאי אפשר להבדיל ממקצוען אמיתי.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">02</span>
+            <div class="gold-tip-text"><strong>Veo3 + ElevenLabs = קול עקבי:</strong> ייצאו את הסאונד מ-Veo3 ← שנו קול ב-ElevenLabs STS ← חברו חזרה ב-CapCut. כל הקטעים ← קול אחד.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">03</span>
+            <div class="gold-tip-text"><strong>Voice Library = ספריית כוכבים:</strong> ב-ElevenLabs Voice Library יש קולות מסחריים שאפשר להשתמש בהם. בחרו מישהו שמתאים לברנד ← הכניסו אליו את הטקסט שלכם.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">04</span>
+            <div class="gold-tip-text"><strong>Voice Design = כלי נגינה ייחודי:</strong> כתבו תיאור של קול שלא קיים בעולם ("קול של אנדרואיד שהפך לאנושי") ← ייצרו ← קבלו קול שאף מותג אחר לא יכול לחקות.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           SECTION: SUNO
+           ===================================================== -->
+
+      <!-- SLIDE 31 — Suno Section Break -->
+      <section class="slide-section" id="section-suno" data-transition="zoom">
+        <div class="section-chapter">CHAPTER 05</div>
+        <h1>🎵 Suno</h1>
+        <div class="section-subtitle">מ-Jingle Generator לאולפן הפקה מלא</div>
+        <div class="section-desc">Studio Mode · Stems · In-painting · Audio-to-Audio · עברית</div>
+      </section>
+
+      <!-- SLIDE 32 — Suno V5.5 -->
+      <section data-auto-animate>
+        <h2>Suno V5.5 — אולפן הפקה בדפדפן</h2>
+        <div class="highlight-box" style="margin-bottom:14px;font-size:0.72em">
+          עם V5.5 (אפריל 2026), Suno עברה ממחולל שירים פשוט ל-<strong>Studio Mode</strong> — סביבת הפקה מקצועית שמתחרה בתוכנות DAW.
+        </div>
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="card-title">🎼 Meta-Tags ומבנה</div>
+            <div class="card-body">עוטפים חלקים ב-[Intro], [Verse], [Chorus], [Guitar Solo], [Drop] — המודל מבין מתי להעלות ולהוריד אנרגיה.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">🎚️ Stem Editing</div>
+            <div class="card-body">מפרידים את הרצועות: תופים, בס, ווקאל, מלודיה. מייצאים Acapella בלחיצה.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">✏️ In-painting</div>
+            <div class="card-body">סימנו רק את החלק שלא אהבתם (נגיד — הגיטרה בסיפוק שני) ← בקשו מה-AI לג'נרט אותו מחדש. שאר השיר לא נפגע.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">🎤 Audio-to-Audio</div>
+            <div class="card-body">העלו הקלטה משלכם ← בקשו עיבוד מוזיקלי. הפתרון לעברית (ראו הבא).</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 33 — Meta-Tags בפירוט -->
+      <section data-auto-animate>
+        <h2>Meta-Tags — לדבר עם Suno בשפה שלו</h2>
+        <div class="two-col-3-2">
+          <div>
+            <div class="prompt-examples">
+              <div class="prompt-item" style="flex-direction:column;align-items:flex-start;gap:4px">
+                <div style="font-size:0.85em;font-weight:700;color:var(--c-violet-light);font-style:normal">[Intro] — ברמת אנרגיה נמוכה, בונה</div>
+                <span>פסנתר עדין, אין ווקאל, מרגיש כמו פתיחה</span>
+              </div>
+              <div class="prompt-item" style="flex-direction:column;align-items:flex-start;gap:4px">
+                <div style="font-size:0.85em;font-weight:700;color:var(--c-violet-light);font-style:normal">[Verse] — סיפור, אנרגיה בינונית</div>
+                <span>טקסט נרטיבי, קצב שומר</span>
+              </div>
+              <div class="prompt-item" style="flex-direction:column;align-items:flex-start;gap:4px">
+                <div style="font-size:0.85em;font-weight:700;color:var(--c-violet-light);font-style:normal">[Chorus] — שיא האנרגיה, Hook</div>
+                <span>החלק שיישאר בראש. חזקות, חזרתי</span>
+              </div>
+              <div class="prompt-item" style="flex-direction:column;align-items:flex-start;gap:4px">
+                <div style="font-size:0.85em;font-weight:700;color:var(--c-violet-light);font-style:normal">[Build] → [Drop] — עלייה ופיצוץ</div>
+                <span>הוסיפו אנרגיה מדויקת ב-EDM, Hip-Hop, Pop</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="highlight-box amber">
+              <strong>💡 טיפ:</strong> כתבו את ה-Chorus קודם ← זה ה-Hook שגורם לאנשים לזכור. אחר כך כתבו את ה-Verse שמוביל אליו.
+            </div>
+            <div class="highlight-box" style="margin-top:12px">
+              <strong>מה לא לעשות:</strong><br>
+              לכתוב הכל בלי Meta-Tags → Suno יחליט בעצמו על הדינמיקה → לרוב יוצא שטוח ומונוטוני.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 34 — Audio-to-Audio לעברית -->
+      <section data-auto-animate>
+        <h2>Audio-to-Audio — הפתרון לעברית 🇮🇱</h2>
+        <div class="highlight-box red" style="margin-bottom:14px">
+          <strong>⚠️ הבעיה עם Prompt-to-Hebrew:</strong> Suno מבין עברית — אבל ההגייה יוצאת לעיתים קרובות עם אקסנט לא ישראלי. כאב ראש.
+        </div>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-num">1</span>
+            <span class="step-label">מקליטים את עצמנו<br><strong>שרים / מזמזמים</strong><br>את המלודיה הרצויה</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">2</span>
+            <span class="step-label">מעלים ל-Suno<br>דרך פיצ'ר <strong>Cover</strong></span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">3</span>
+            <span class="step-label">מגדירים סגנון:<br>"Epic Synthwave",<br>"Israeli Pop"</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">4</span>
+            <span class="step-label">Suno לוקח:<br>ההגייה המדויקת<br>+ המלודיה שלכם<br>← הפקה ענקית</span>
+          </div>
+        </div>
+        <div class="highlight-box green" style="margin-top:14px;font-size:0.65em">
+          <strong>גם אם אתם "מזייפים" — זה עובד!</strong> Suno צריך רק את המלודיה הגסה ואת ההגייה. האיכות המוזיקלית הוא מוסיף בעצמו.
+        </div>
+      </section>
+
+      <!-- SLIDE 35 — Suno Gold Tips -->
+      <section class="slide-gold-tip">
+        <div class="gold-tip-header">
+          <span class="gold-star-icon">⭐</span>
+          <h2>טיפים זהב — Suno</h2>
+        </div>
+        <div class="gold-tips-list">
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">01</span>
+            <div class="gold-tip-text"><strong>זמזמו ← תקבלו Jingle:</strong> לא יודעים לשיר? לא משנה. זמזמו את הלחן שדמיינתם, העלו כ-Cover, בקשו "Israeli commercial pop". ה-Jingle כבר מוכן.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">02</span>
+            <div class="gold-tip-text"><strong>In-painting = ניתוח בלי הרדמה:</strong> לא אהבתם את הגיטרה? לא צריך לייצר מחדש הכל. סמנו רק את הגיטרה ← כתבו "acoustic guitar, warmer" ← רק הגיטרה תשתנה. שאר הפקה נשארת.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">03</span>
+            <div class="gold-tip-text"><strong>Stem Isolation + ElevenLabs:</strong> ייצאו Acapella מ-Suno ← הכניסו ל-ElevenLabs STS ← החליפו את הזמר לקול שמתאים לברנד. פסקול מקצועי עם קריין ייחודי.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">04</span>
+            <div class="gold-tip-text"><strong>[Build] + [Drop] = וירלי:</strong> בכל שיר לסושיאל — הוסיפו [Build] לפני ה-Hook. האנרגיה שעולה ופתאום פורצת גורמת לאנשים לחכות ולרצות לשמוע שוב.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           SECTION: CAPCUT
+           ===================================================== -->
+
+      <!-- SLIDE 36 — CapCut Section Break -->
+      <section class="slide-section" id="section-capcut" data-transition="zoom">
+        <div class="section-chapter">CHAPTER 06</div>
+        <h1>✂️ CapCut</h1>
+        <div class="section-subtitle">תחנת ההרכבה הסופית</div>
+        <div class="section-desc">Auto Captions · Vocal Isolation · Slow-Mo · הסרת Watermarks</div>
+      </section>
+
+      <!-- SLIDE 37 — CapCut כה-Hub -->
+      <section data-auto-animate>
+        <h2>CapCut — כאן הכל מתחבר</h2>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-num">🔮</span>
+            <span class="step-label">תמונות<br>מ-Gemini</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">🎬</span>
+            <span class="step-label">וידאו<br>מ-Kling</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">🎙️</span>
+            <span class="step-label">קול<br>מ-ElevenLabs</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num">🎵</span>
+            <span class="step-label">מוזיקה<br>מ-Suno</span>
+          </div>
+          <div class="process-step">
+            <span class="step-num" style="-webkit-text-fill-color:var(--c-cyan)">✂️</span>
+            <span class="step-label"><strong>CapCut</strong><br>מחבר הכל</span>
+          </div>
+        </div>
+        <div class="feature-list" style="margin-top:16px">
+          <div class="feature-item">
+            <span class="feature-icon">🤖</span>
+            <div>
+              <strong>AI מובנה</strong>
+              <span>Auto Captions, Vocal Isolation, Smooth Slow-Mo, Auto Reframe, Background Removal — הכל בפנים, ללא צורך בפלאגינים.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">📱</span>
+            <div>
+              <strong>Desktop + Mobile</strong>
+              <span>עריכה מלאה בדפדפן, בדסקטופ ובאפליקציה. מאפשר עבודה מכל מקום.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 38 — Auto Captions -->
+      <section data-auto-animate>
+        <h2>Auto Captions — עברית ב-2 שניות</h2>
+        <div class="two-col">
+          <div>
+            <div class="feature-list">
+              <div class="feature-item">
+                <span class="feature-icon">🇮🇱</span>
+                <div>
+                  <strong>תמיכה בעברית</strong>
+                  <span>CapCut מזהה עברית בצורה פנומנלית. בחרו שפה → Generate → תיקון ידני קל לשגיאות.</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🎨</span>
+                <div>
+                  <strong>Karaoke Effect</strong>
+                  <span>כתוביות דינמיות שמתאורות בהתאם לדיבור. פרמט מושלם ל-Reels ו-TikTok.</span>
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✏️</span>
+                <div>
+                  <strong>עיצוב מלא</strong>
+                  <span>פונט, צבע, גודל, צל, אנימציה — הכל ניתן לשינוי. הופכים כתוביות לאלמנט עיצובי.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="highlight-box amber">
+              <strong>💡 Workflow מנצח:</strong><br><br>
+              מייצרים Voiceover ב-ElevenLabs ← מייבאים ל-CapCut ← Auto Captions ← Karaoke Effect ← Reels מוכן.
+              <br><br>
+              <strong>זמן כולל: 7 דקות.</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 39 — Vocal Isolation + Slow-Mo -->
+      <section data-auto-animate>
+        <h2>Vocal Isolation + Smooth Slow-Mo</h2>
+        <div class="two-col">
+          <div>
+            <h3>🎤 Vocal Isolation</h3>
+            <div class="feature-list">
+              <div class="feature-item">
+                <span class="feature-icon">🔇</span>
+                <div>
+                  <strong>הסרת רעשי רקע</strong>
+                  <span>הקלטה ממרחב ציבורי סואן? CapCut מבודד את הקול ומוחק את כל הרעש מסביב. תוצאה: קול צלול כאילו הוקלט בסטודיו.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3>🐌 Smooth Slow-Mo (Optical Flow)</h3>
+            <div class="feature-list">
+              <div class="feature-item">
+                <span class="feature-icon">⚡</span>
+                <div>
+                  <strong>פריימים יש מאין</strong>
+                  <span>וידאו ב-30fps שרוצים להאט ל-10%? CapCut מייצר פריימים חסרים על ידי ניבוי תנועה (Optical Flow). התוצאה: Slow-Mo חלק כמו 120fps.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="highlight-box green" style="margin-top:14px;font-size:0.62em">
+          <strong>קומבו:</strong> צלמו 5 שניות פשוטות של מוצר נע → Optical Flow Slow-Mo ב-20% → Vocal Isolation לקריינות → Auto Captions. תוצאה: פרסומת מוצר ברמה של 100K₪ פרודקשן.
+        </div>
+      </section>
+
+      <!-- SLIDE 40 — הסרת סימני מים -->
+      <section data-auto-animate>
+        <h2>הסרת סימני מים — שתי שיטות</h2>
+        <div class="two-col">
+          <div class="info-card">
+            <div class="card-title">⬆️ שיטה 1: Scale (המהיר)</div>
+            <div class="card-body">
+              <strong>מה עושים:</strong> הגדילו את הוידאו ל-<strong>105%</strong> (Zoom in קל).<br><br>
+              <strong>איך זה עובד:</strong> הלוגו שנמצא בפינה נחתך מחוץ לפריים. כל שאר התוכן נשאר זהה.<br><br>
+              <strong>מתי מתאים:</strong> לוגו בפינה, ללא תוכן חשוב בשולי הפריים.
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">🎭 שיטה 2: Mask + Blur (המדויק)</div>
+            <div class="card-body">
+              <strong>מה עושים:</strong><br>
+              1. שכפלו שכבת וידאו<br>
+              2. הוסיפו Mask קטן מעל הלוגו בלבד<br>
+              3. Gaussian Blur על האזור<br><br>
+              <strong>מתי מתאים:</strong> לוגו באמצע הפריים, תוכן חשוב בשולי התמונה.
+            </div>
+          </div>
+        </div>
+        <div class="tip-box" style="margin-top:16px">
+          💡 <strong>לתמונות Gemini:</strong> הכוכב הכי פשוט להסיר עם Retouch באפליקציית "תמונות" של Windows. 10 שניות, ספיציפי לנקודה.
+        </div>
+      </section>
+
+      <!-- SLIDE 41 — CapCut Gold Tips -->
+      <section class="slide-gold-tip">
+        <div class="gold-tip-header">
+          <span class="gold-star-icon">⭐</span>
+          <h2>טיפים זהב — CapCut</h2>
+        </div>
+        <div class="gold-tips-list">
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">01</span>
+            <div class="gold-tip-text"><strong>הסרת פריים כפול בחיבורי Kling:</strong> מחברים שני קטעי Kling ב-CapCut ויש קפיצה? מחקו פריים אחד מסוף קטע A. חלק כמו שוט אחד.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">02</span>
+            <div class="gold-tip-text"><strong>Auto Reframe לפורמטים:</strong> צרתם רילס 9:16? CapCut מייצר אוטומטית גרסת 1:1 לסטורי ו-16:9 לפיד — ה-AI עוקב אחרי הנושא הראשי ולא חותך אותו.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">03</span>
+            <div class="gold-tip-text"><strong>Vocal Isolation = ספריית Voiceovers:</strong> הקליטו את עצמכם בכל מקום ← Vocal Isolation ← קול נקי לחלוטין. לא צריך עוד בוקינג לאולפן הקלטה לדברים קצרים.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">04</span>
+            <div class="gold-tip-text"><strong>Smooth Slow-Mo על Product Shots:</strong> כל תמונה שוטה מהירה של מוצר (פתיחת קופסה, שפיכת נוזל, נגיסה) → Optical Flow 25% → תמונה קולנועית מיידית.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           SECTION: CHATGPT
+           ===================================================== -->
+
+      <!-- SLIDE 42 — ChatGPT Section Break -->
+      <section class="slide-section" id="section-chatgpt" data-transition="zoom">
+        <div class="section-chapter">CHAPTER 07</div>
+        <h1>🧠 ChatGPT</h1>
+        <div class="section-subtitle">המוח האנליטי והארכיטקט</div>
+        <div class="section-desc">Data Analysis · Prompt Chaining · דוחות · תבניות לוידאו</div>
+      </section>
+
+      <!-- SLIDE 43 — ChatGPT כמוח אנליטי -->
+      <section data-auto-animate>
+        <h2>ChatGPT — כשצריך לוגיקה ולא מדיה</h2>
+        <p style="font-size:0.72em;color:var(--c-text-2);margin-bottom:0.8em;">ג'ימיני הוא אלוף המדיה. ChatGPT הוא כלי הלוגיקה, הניתוח, ותכנון הפעולות.</p>
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="card-title">📊 Advanced Data Analysis</div>
+            <div class="card-body">סביבת Python פנימית. מעלים קובץ נתונים, שואלים שאלות בעברית, מקבלים גרפים, דוחות ותובנות — בלי לדעת כתוב שורת קוד.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">🎬 Prompt Chaining לוידאו</div>
+            <div class="card-body">ChatGPT כותב עבורכם תסריט בימוי שלם: 3 פרומפטים ל-Kling, עם הנחיות מצלמה, שיתחברו לסרטון אחד רציף.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">📝 תבניות ודוחות</div>
+            <div class="card-body">דוח executive summary, מסמך creative brief, ניתוח מתחרים — ChatGPT כותב בפורמט מקצועי שמוכן לשיתוף עם הלקוח.</div>
+          </div>
+          <div class="info-card">
+            <div class="card-title">🔁 Process Automation</div>
+            <div class="card-body">כותב פרומפטים ל-Gemini, ל-Kling, ל-ElevenLabs — מתפקד כ-"מנהל תהליך" שמחבר בין כלים.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 44 — Data Analysis Demo -->
+      <section data-auto-animate>
+        <h2>ניתוח קמפיין — שיחה אמיתית</h2>
+        <div class="chat-demo">
+          <div class="chat-demo-header">
+            🧠 ChatGPT — Advanced Data Analysis
+          </div>
+          <div class="chat-bubble user">
+            <div class="chat-role">אני</div>
+            <div class="chat-content">העלאתי קובץ CSV עם נתוני קמפיין מרץ 2026 לפי פלטפורמה. מה ה-CPM הממוצע לפי פלטפורמה? ואם יש אנומליה בנתונים — ציין אותה.</div>
+          </div>
+          <div class="chat-bubble assistant">
+            <div class="chat-role">ChatGPT</div>
+            <div class="chat-content">
+              ניתחתי את הנתונים. הנה ה-CPM הממוצע לפי פלטפורמה:
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>פלטפורמה</th>
+                    <th>CPM ממוצע</th>
+                    <th>שינוי מחודש קודם</th>
+                    <th>חשיפות</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Meta (Facebook + IG)</td>
+                    <td>₪32.40</td>
+                    <td class="value-up">+8%</td>
+                    <td>1,240,000</td>
+                  </tr>
+                  <tr>
+                    <td>TikTok</td>
+                    <td>₪18.70</td>
+                    <td class="value-up">+3%</td>
+                    <td>890,000</td>
+                  </tr>
+                  <tr>
+                    <td>Google Display</td>
+                    <td>₪9.20</td>
+                    <td class="value-down">-2%</td>
+                    <td>3,100,000</td>
+                  </tr>
+                  <tr style="background:rgba(239,68,68,0.08)">
+                    <td>YouTube Shorts</td>
+                    <td><strong style="color:var(--c-red)">₪58.90</strong></td>
+                    <td class="value-down">+210% ⚠️</td>
+                    <td>78,000</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br>
+              <strong style="color:var(--c-amber)">⚠️ אנומליה:</strong> YouTube Shorts הציג CPM של ₪58.90 — גבוה ב-210% מהממוצע ההיסטורי. מספר חשיפות נמוך ביחס לתקציב שהוקצה. ממליץ לבדוק את הגדרות הטרגוט.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 45 — Prompt Chaining -->
+      <section data-auto-animate>
+        <h2>Prompt Chaining — ChatGPT כבמאי</h2>
+        <div class="highlight-box" style="margin-bottom:14px;font-size:0.72em">
+          <strong>הבעיה:</strong> אתם רוצים סרטון של 15 שניות ב-Kling, אבל Kling עובד ב-5 שניות בכל פעם. איך כותבים 3 פרומפטים שיתחברו לסרטון <em>אחד</em> רציף ומגובש?
+        </div>
+        <div class="chat-demo">
+          <div class="chat-bubble user">
+            <div class="chat-role">אני</div>
+            <div class="chat-content">אני רוצה סרטון של 15 שניות בקלינג — איש עסקים שהופך לגיבור על. Kling עובד ב-5 שניות. כתוב לי 3 פרומפטים נפרדים (0-5, 5-10, 10-15) שממשיכים אחד את השני, כולל הנחיות תנועת מצלמה.</div>
+          </div>
+          <div class="chat-bubble assistant">
+            <div class="chat-role">ChatGPT</div>
+            <div class="chat-content">
+              <strong style="color:var(--c-cyan)">פרומפט 1 (0-5 שניות):</strong> A businessman in a gray suit stands in a busy office, looking determined. Camera starts wide, slowly zooming in on his face. Cinematic lighting. His tie begins to loosen and flutter as if caught by wind.<br><br>
+              <strong style="color:var(--c-cyan)">פרומפט 2 (5-10 שניות):</strong> [Start Frame: close-up of businessman's face, wind intensifying] Sudden wind blast hits him. His suit tears away revealing a hero costume underneath. Camera tilts up dramatically. Epic lighting shift from cool to warm gold.<br><br>
+              <strong style="color:var(--c-cyan)">פרומפט 3 (10-15 שניות):</strong> [Start Frame: hero mid-costume-reveal, looking upward] Hero stands triumphant, cape billowing. Camera pulls back to reveal city skyline. Golden hour light. Slow zoom out with slight pan left.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 46 — ChatGPT Gold Tips -->
+      <section class="slide-gold-tip">
+        <div class="gold-tip-header">
+          <span class="gold-star-icon">⭐</span>
+          <h2>טיפים זהב — ChatGPT</h2>
+        </div>
+        <div class="gold-tips-list">
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">01</span>
+            <div class="gold-tip-text"><strong>אל תכתבו פרומפטים לוידאו לבד:</strong> תמיד בקשו מ-ChatGPT לכתוב פרומפטים ל-Kling/Veo. הוא מבין רצף קולנועי, הנחיות מצלמה ורצף לוגי — אתם תעתיקו-תדביקו.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">02</span>
+            <div class="gold-tip-text"><strong>Data Analysis = חוקר קמפיינים:</strong> העלו CSV של כל קמפיינים + שאלו "מה הקמפיין הכי אפקטיבי ולמה?" ← קבלו ניתוח שלוקח לאנליסט שבועות — ב-30 שניות.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">03</span>
+            <div class="gold-tip-text"><strong>ChatGPT כ-"מנהל AI":</strong> "אני עובד עם Gemini, Kling ו-ElevenLabs. ספק לי Work Plan שלב-אחרי-שלב לייצור רילס של 30 שניות למותג X." הוא כותב תהליך, אתם מבצעים.</div>
+          </div>
+          <div class="gold-tip-item">
+            <span class="gold-tip-num">04</span>
+            <div class="gold-tip-text"><strong>Executive Summary אוטומטי:</strong> "קבל את הנתונים הבאים ←  כתוב Executive Summary בעברית בסגנון מקצועי ל-C-Level, 3 bullet points, ללא מינוחים טכניים". לקוח מרוצה, אתם חסכתם שעה.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           SECTION: כתיבה ועיצוב
+           ===================================================== -->
+
+      <!-- SLIDE 47 — Writing/Design Section Break -->
+      <section class="slide-section" id="section-writing" data-transition="zoom">
+        <div class="section-chapter">CHAPTER 08</div>
+        <h1>✍️ כתיבה ועיצוב עם AI</h1>
+        <div class="section-subtitle">מבריף לקופי — ישירות</div>
+        <div class="section-desc">Gems · Tone of Voice · לפני ואחרי</div>
+      </section>
+
+      <!-- SLIDE 48 — Gem קופירייטר -->
+      <section data-auto-animate>
+        <h2>Gem קופירייטר — הכי קרוב לשכוב CD</h2>
+        <div class="before-after">
+          <div class="before-col">
+            <div class="col-label">❌ בלי Gem</div>
+            <div class="col-content">
+              <p>"מוצר איכותי במחיר משתלם. קנה עכשיו."</p>
+              <p>30 דקות עבודה, תוצאה גנרית שאפשר להחליף עם כל ברנד אחר.</p>
+              <p class="col-note">כל פרומפט מאפס. אין זיכרון. אין טון.</p>
+            </div>
+          </div>
+          <div class="after-col">
+            <div class="col-label">✅ עם Gem</div>
+            <div class="col-content">
+              <p>"כי מותרות זה לא מחיר — זה מה שמרגישים בבוקר."</p>
+              <p>30 שניות, 10 וריאציות לבחירה — כולן בטון הנכון.</p>
+              <p class="col-note">Gem מכיר את ספר המותג ולא שוכח אותו.</p>
+            </div>
+          </div>
+        </div>
+        <div class="highlight-box" style="margin-top:14px;font-size:0.65em">
+          <strong>📋 מה להכניס ל-Gem:</strong> ספר מותג (PDF/טקסט) + 10 דוגמאות של קופי טוב + הנחיות טון ("ציני", "חם", "דוחף") + מה <em>לא</em> לכתוב ("אל תכתוב מחיר, אל תבטיח הבטחות שאי אפשר לקיים").
+        </div>
+      </section>
+
+      <!-- SLIDE 49 — Gem ארט-דירקטור -->
+      <section data-auto-animate>
+        <h2>Gem ארט-דירקטור — שפה ויזואלית אחידה</h2>
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="feature-icon">🎨</span>
+            <div>
+              <strong>ניתוח סקיצות</strong>
+              <span>מעלים סקיצה ← Gem מנתח קומפוזיציה, מציע שיפורים ומסביר למה בשפה מקצועית. כמו CD-watch.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🖌️</span>
+            <div>
+              <strong>פלטות צבעים ל-Hex</strong>
+              <span>מתאר "רוצה משהו כמו שקיעה בים שקט" → Gem מייצר פלטה עם Hex codes מדויקים + CSS variables מוכנות לפיתוח.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🔮</span>
+            <div>
+              <strong>Prompt Writer למחוללי תמונות</strong>
+              <span>מתאר בריף שיווקי → Gem כותב Prompt מדויק ל-Gemini/Midjourney שישמר על שפה ויזואלית עקבית בין כל תמונות הקמפיין.</span>
+            </div>
+          </div>
+        </div>
+        <div class="tip-box">
+          💡 <strong>Hack:</strong> תנו ל-Gem ארט-דירקטור גישה ל-Google Drive עם כל תמונות המותג. הוא ילמד את השפה ויצור Prompts שתמיד "ישמעו" נכון.
+        </div>
+      </section>
+
+      <!-- =====================================================
+           SECTION: CLAUDE CODE
+           ===================================================== -->
+
+      <!-- SLIDE 50 — Claude Code Section Break -->
+      <section class="slide-section slide-bonus" id="section-claude" data-transition="zoom">
+        <div class="section-chapter">BONUS</div>
+        <h1>🎁 Claude Code</h1>
+        <div class="section-subtitle">AI שכותב קוד — ישירות בטרמינל</div>
+        <div class="section-desc">כי מה שנמצא בסדנה שלנו — בנה את הסדנה שלנו</div>
+      </section>
+
+      <!-- SLIDE 51 — מה זה Claude Code -->
+      <section data-auto-animate>
+        <h2>Claude Code — AI ברמת סוכן</h2>
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="feature-icon">📁</span>
+            <div>
+              <strong>גישה מלאה לקבצים</strong>
+              <span>קורא, כותב ועורך קבצים. מבין את הפרויקט כמו מפתח שעובד איתכם שנים.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">💻</span>
+            <div>
+              <strong>מריץ פקודות</strong>
+              <span>מתקין חבילות, מריץ בדיקות, מבנה פרויקטים — הכל מהטרמינל. הוא לא מציע, הוא עושה.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🌐</span>
+            <div>
+              <strong>GitHub Integration</strong>
+              <span>יוצר repos, commits ו-pull requests. Deploys לאוויר עם GitHub Actions. מחבר לבין פיתוח לפרסום.</span>
+            </div>
+          </div>
+        </div>
+        <div class="highlight-box amber" style="margin-top:14px;font-size:0.65em">
+          <strong>🎯 Use Case לסוכנות:</strong> "צור לנו Landing Page לקמפיין, קשר ל-Analytics, הגדר Google Tag Manager, Deploy ל-GitHub Pages." — בפחות משעה.
+        </div>
+      </section>
+
+      <!-- SLIDE 52 — The Making Of -->
+      <section data-auto-animate>
+        <h2>The Making Of — הפרזנטציה הזו 🤯</h2>
+        <div class="making-list">
+          <div class="making-item">
+            <span class="making-num">01</span>
+            <span><strong>בריף בעברית</strong> — תיארנו ל-Claude Code מה אנחנו רוצים. Design tokens, טון, כלים.</span>
+          </div>
+          <div class="making-item">
+            <span class="making-num">02</span>
+            <span><strong>תכנון</strong> — Claude הציע ארכיטקטורה מודולרית: Reveal.js + 55 שקופיות HTML + CSS tokens.</span>
+          </div>
+          <div class="making-item">
+            <span class="making-num">03</span>
+            <span><strong>בנייה</strong> — כתב HTML, CSS, JavaScript — 3 קבצים, ~3,000 שורות קוד.</span>
+          </div>
+          <div class="making-item">
+            <span class="making-num">04</span>
+            <span><strong>דפלוי</strong> — הגדיר GitHub Actions לפרסום אוטומטי בכל Push.</span>
+          </div>
+          <div class="making-item">
+            <span class="making-num">05</span>
+            <span><strong>זמן כולל:</strong> פחות משעה. <strong>שורות קוד שכתבנו:</strong> אפס.</span>
+          </div>
+        </div>
+        <blockquote class="highlight-quote">
+          "הכלי שנמצא בסדנה שלנו — בנה את הסדנה שלנו"
+        </blockquote>
+      </section>
+
+      <!-- SLIDE 53 — Claude Code Installation -->
+      <section data-auto-animate>
+        <h2>איך מתקינים ומתחילים</h2>
+        <pre><code class="language-bash"># שלב 1: התקנה (Node.js נדרש)
+npm install -g @anthropic-ai/claude-code
+
+# שלב 2: הפעלה בתוך תיקיית הפרויקט שלכם
+cd my-project
+claude
+
+# Claude Code קורא את כל הפרויקט ומחכה להוראות בעברית
+# "צור component של Header עם לוגו ותפריט נוויגציה"</code></pre>
+        <div class="stat-row" style="margin-top:14px">
+          <div class="stat-card">
+            <span class="stat-num">$20</span>
+            <span class="stat-label">מחיר חודשי (Max Plan)</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">0</span>
+            <span class="stat-label">שורות קוד שצריך לדעת לכתוב</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">פרויקטים שאפשר לבנות</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           SLIDE 54 — MINDSET: סקרנות ואומץ
+           ===================================================== -->
+      <section class="slide-gold-tip" data-auto-animate>
+        <div class="gold-tip-header">
+          <span class="gold-star-icon">🧭</span>
+          <h2>הטיפ הכי חשוב שיש</h2>
+        </div>
+        <div class="gold-tips-list">
+          <div class="gold-tip-item" style="border-color:rgba(124,58,237,0.4);background:rgba(124,58,237,0.07)">
+            <span class="gold-tip-num" style="color:var(--c-violet-light)">💡</span>
+            <div class="gold-tip-text"><strong style="color:var(--c-violet-light)">תהיו סקרנים:</strong> כל פיצ'ר שלא ניסיתם — נסו. כל כלי שנראה מוזר — פתחו. ה-AI מתפתח כל שבוע. מי שמנסה מוקדם לומד מוקדם.</div>
+          </div>
+          <div class="gold-tip-item" style="border-color:rgba(124,58,237,0.4);background:rgba(124,58,237,0.07)">
+            <span class="gold-tip-num" style="color:var(--c-violet-light)">🚀</span>
+            <div class="gold-tip-text"><strong style="color:var(--c-violet-light)">אל תפחדו "לשבור":</strong> ה-AI לא שוקע ים. אם הפרומפט יצא גרוע — כתבו שוב. אם הסרטון לא יצא — ג'נרטו שוב. עלות הניסוי = כמה שניות. עלות הפחד = שנים.</div>
+          </div>
+          <div class="gold-tip-item" style="border-color:rgba(124,58,237,0.4);background:rgba(124,58,237,0.07)">
+            <span class="gold-tip-num" style="color:var(--c-violet-light)">🎯</span>
+            <div class="gold-tip-text"><strong style="color:var(--c-violet-light)">ה-Gap הולך ורחב:</strong> בין מי שמשתמש ב-AI לבין מי שלא — יש כבר פער של שנות עבודה. לא של שבועות. הסדנה הזו היא צעד ראשון. הצעד השני — לפתוח ולנסות היום.</div>
+          </div>
+          <div class="gold-tip-item" style="border-color:rgba(124,58,237,0.4);background:rgba(124,58,237,0.07)">
+            <span class="gold-tip-num" style="color:var(--c-violet-light)">🔁</span>
+            <div class="gold-tip-text"><strong style="color:var(--c-violet-light)">Iteration > Perfection:</strong> פרומפט ראשון שטחי → שפרו → שפרו שוב → ועוד פעם. הסוד הוא לא לכתוב פרומפט מושלם בפעם הראשונה. הסוד הוא לא לוותר אחרי פעם ראשונה.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           SLIDE 55 — END SLIDE
+           ===================================================== -->
+      <section class="slide-cover slide-end" data-auto-animate>
+        <h1>תודה 🙏</h1>
+        <h2>שאלות? ניסיונות? רעיונות מטורפים?</h2>
+        <div class="contact-info">
+          <strong>42 Creative</strong>
+          <a href="https://42creative.co.il" target="_blank">42creative.co.il</a>
+        </div>
+        <div class="cover-tagline">AI × Creativity × 42</div>
+      </section>
+
+    </div><!-- /slides -->
+  </div><!-- /reveal -->
 
   <!-- Persistent 42 logo watermark -->
   <div class="logo-42" id="logo42">
-    <img src="assets/logo-42.png" alt="42 Creative" onerror="this.parentElement.innerHTML='<span class=\'logo-text\'>42</span>'">
+    <img src="assets/logo-42.png" alt="42 Creative" onerror="this.parentElement.innerHTML='<span class=&quot;logo-text&quot;>42</span>'">
   </div>
 
   <!-- Reveal.js core -->
