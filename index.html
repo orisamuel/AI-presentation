@@ -981,7 +981,7 @@
           <div class="s-text-blocks">
             <div class="tblock" style="animation-delay:.05s">
               <span class="lbl">Imagen 3 / Gemini Flash Image</span>
-              <p>יצירת תמונה מאפס מפרומפט. <strong>עריכה מדויקת (Inpainting)</strong> — בחרו אזור, תארו מה שרוצים, Gemini מחליף בלי לגעת בשאר.</p>
+              <p>יצירת תמונה מאפס מפרומפט. <strong>Inpainting</strong> — בחרו אזור בתמונה קיימת, תארו מה שרוצים במקומו, Gemini מחליף בדיוק שם בלי לגעת בשאר.</p>
             </div>
             <div class="tblock c" style="animation-delay:.12s">
               <span class="lbl">Redo with Pro</span>
@@ -1101,25 +1101,317 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           [ שקופיות המשך — שלב ב' ]
-           21: 🎬 הדגמה — Kling Image-to-Video
-           22: Kling Omni — החלפת אלמנטים
-           23: 🎬 הדגמה — Kling Omni
-           24: Veo 3 (Gemini) — סאונד מובנה
-           25: 🎬 הדגמה — Veo 3
-           26: טיפ זהב — פריים כפול + Sound-to-Sound
+           21 — 🎬 DEMO: Kling Image-to-Video
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-video" data-transition="fade">
+        <div class="s-split-content" style="padding:80px 50px 80px 100px">
+          <div class="chip cyan" style="margin-bottom:1em">🎬 &nbsp; הדגמה חיה</div>
+          <span class="eyebrow">Kling · Image-to-Video</span>
+          <h2>מה לחפש<br>בהדגמה</h2>
+          <ul style="margin-top:.9em">
+            <li><span class="dot"></span>תמונת מוצר / פורטרט סטטי כקלט</li>
+            <li><span class="dot"></span>תנועת מצלמה שהוגדרה מראש</li>
+            <li><span class="dot"></span>פיזיקה ריאלית — אור, צל, עומק</li>
+            <li><span class="dot"></span>8 שניות · 4K · ללא צילום אמיתי</li>
+          </ul>
+        </div>
+        <div class="s-video-pane">
+          <div class="bg bg-grid" style="opacity:.3"></div>
+          <div class="s-video-scanline"></div>
+          <!-- 🎬 להחליף: <iframe src="KLING_I2V_DEMO" allowfullscreen></iframe> -->
+          <div class="s-video-thumb">
+            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(6,182,212,.7))">🎬</div>
+            <div class="s-video-play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="s-video-tag">Kling 2.0 · Image-to-Video</div>
+            <div class="s-video-label">⬆️ להחליף בסרטון הדגמה אמיתי</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           22 — Kling Omni: החלפת אלמנטים
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-text" data-transition="slide">
+        <div class="s-text-accent-col" style="background:linear-gradient(180deg,#a855f7,#06b6d4)"></div>
+        <div class="s-text-main z1">
+          <div class="hdr">
+            <div class="chip" style="margin-bottom:.8em;background:rgba(168,85,247,.15);border-color:rgba(168,85,247,.3);color:var(--v-hi)">⚡ Kling Omni</div>
+            <h2>יש לכם קליפ — ועכשיו אפשר לשנות אותו</h2>
+          </div>
+          <div class="s-text-blocks">
+            <div class="tblock c" style="animation-delay:.05s">
+              <span class="lbl">מה זה Kling Omni?</span>
+              <p>כלי עריכה שמאפשר <strong>להחליף אלמנטים בתוך וידאו קיים</strong> — בלי לצלם מחדש. בחרתם אזור, תיארתם מה שרוצים, Kling מחליף.</p>
+            </div>
+            <div class="tblock" style="animation-delay:.12s">
+              <span class="lbl">מה אפשר להחליף?</span>
+              <p><strong>רקע</strong> — מהמשרד לחוף הים. <strong>מוצר</strong> — בקבוק אחד במקום אחר. <strong>בגד / צבע</strong> — אדום במקום כחול. הכל, בלי גרין-סקרין.</p>
+            </div>
+            <div class="tblock c" style="animation-delay:.19s">
+              <span class="lbl">למה זה מהפכני?</span>
+              <p>לקוח ביקש לשנות משהו בסרטון? <strong>במקום צילום מחדש</strong> — פרומפט אחד + כמה דקות. עריכה שלקחה יום — לוקחת 5 דקות.</p>
+            </div>
+            <div class="tblock" style="animation-delay:.26s">
+              <span class="lbl">Inpainting לוידאו</span>
+              <p>אותו עקרון כמו Inpainting בתמונות — רק שפה זה <strong>עובד על כל פריים</strong> בצורה עקבית לאורך כל הקליפ. לא רק תמונה בודדת.</p>
+            </div>
+          </div>
+        </div>
+        <div class="s-text-ghost">Omni</div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           23 — 🎬 DEMO: Kling Omni — לפני / אחרי
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-compare" data-transition="concave">
+        <div class="bg bg-dots" style="opacity:.2"></div>
+        <div class="s-compare-vs" style="font-size:.55em;width:70px;height:70px">לפני<br>אחרי</div>
+        <!-- BEFORE -->
+        <div class="s-compare-col" style="padding:0;overflow:hidden;position:relative">
+          <div style="position:absolute;inset:0;background:linear-gradient(145deg,#0a001a,#001020);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px">
+            <div class="orb" style="width:350px;height:350px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.3"></div>
+            <div style="position:relative;z-index:1;text-align:center">
+              <div style="font-size:3em;filter:drop-shadow(0 0 20px rgba(244,63,94,.5));margin-bottom:12px">🎥</div>
+              <div style="font-size:.45em;color:var(--rose);font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">לפני</div>
+              <div style="font-size:.4em;color:var(--muted)">קליפ מקורי — רקע משרד</div>
+              <!-- 🎬 להחליף: video/img element -->
+            </div>
+          </div>
+          <div style="position:absolute;bottom:24px;left:0;right:0;text-align:center;font-size:.36em;color:var(--dim)">⬆️ להחליף בקליפ מקורי</div>
+        </div>
+        <!-- AFTER -->
+        <div class="s-compare-col" style="padding:0;overflow:hidden;position:relative">
+          <div style="position:absolute;inset:0;background:linear-gradient(145deg,#001a10,#001525);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px">
+            <div class="orb cyan" style="width:350px;height:350px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.3"></div>
+            <div style="position:relative;z-index:1;text-align:center">
+              <div style="font-size:3em;filter:drop-shadow(0 0 20px rgba(16,185,129,.5));margin-bottom:12px">✨</div>
+              <div style="font-size:.45em;color:var(--emerald);font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">אחרי Kling Omni</div>
+              <div style="font-size:.4em;color:var(--muted)">רקע מוחלף — חוף הים</div>
+              <!-- 🎬 להחליף: video/img element -->
+            </div>
+          </div>
+          <div style="position:absolute;bottom:24px;left:0;right:0;text-align:center;font-size:.36em;color:var(--dim)">⬆️ להחליף בקליפ ערוך</div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           24 — Veo 3: סאונד מובנה
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-text" data-transition="slide">
+        <div class="s-text-accent-col" style="background:linear-gradient(180deg,#22d3ee,#7c3aed)"></div>
+        <div class="s-text-main z1">
+          <div class="hdr">
+            <div class="chip cyan" style="margin-bottom:.8em">🔮 Veo 3 · Gemini</div>
+            <h2>וידאו שמגיע עם נשמה — סאונד מובנה</h2>
+          </div>
+          <div class="s-text-blocks">
+            <div class="tblock c" style="animation-delay:.05s">
+              <span class="lbl">Native Audio</span>
+              <p>הסאונד <strong>נוצר יחד עם הוידאו</strong>, לא מודבק אחרי. צלילי סביבה, קולות דמויות, מוזיקה — הכל מסונכרן בדיוק לתמונה.</p>
+            </div>
+            <div class="tblock" style="animation-delay:.12s">
+              <span class="lbl">First & Last Frame</span>
+              <p>קבעו <strong>פריים פתיחה + פריים סיום</strong> — Veo ממלא את האנימציה באמצע. מושלם לסרטוני מוצר עם תנועה מוגדרת.</p>
+            </div>
+            <div class="tblock c" style="animation-delay:.19s">
+              <span class="lbl">הארכת קטעים</span>
+              <p>יצרתם קליפ 8 שניות? <strong>בקשו מ-Veo להאריך</strong> — הוא ימשיך את הסיפור הלאה, עם אותה דמות ואותו רקע.</p>
+            </div>
+            <div class="tblock" style="animation-delay:.26s;border-color:rgba(244,63,94,.4)">
+              <span class="lbl" style="color:var(--rose)">⚠️ חשוב לדעת</span>
+              <p>אם מייצרים <strong>כמה קטעים עם אותה דמות</strong> — הקול לא יהיה זהה בין קליפ לקליפ. הפתרון: ElevenLabs STS לדיבוב אחיד. נגיע לזה בפרק הסאונד.</p>
+            </div>
+          </div>
+        </div>
+        <div class="s-text-ghost">Veo</div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           25 — 🎬 DEMO: Veo 3
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-video" data-transition="fade">
+        <div class="s-split-content" style="padding:80px 50px 80px 100px">
+          <div class="chip cyan" style="margin-bottom:1em">🎬 &nbsp; הדגמה חיה</div>
+          <span class="eyebrow">Veo 3 · Gemini</span>
+          <h2>מה לחפש<br>בהדגמה</h2>
+          <ul style="margin-top:.9em">
+            <li><span class="dot"></span>הסאונד נוצר יחד עם הוידאו — לא מודבק</li>
+            <li><span class="dot"></span>צלילי סביבה מתאימים לסצנה</li>
+            <li><span class="dot"></span>איכות 1080p ומעלה</li>
+            <li><span class="dot"></span>הכל מפרומפט אחד בעברית</li>
+          </ul>
+          <p style="margin-top:1.2em;font-size:.65em;color:var(--rose)">⚠️ שימו לב: הסאונד הנוצר לא יהיה עקבי בין קטעים שונים</p>
+        </div>
+        <div class="s-video-pane">
+          <div class="bg bg-grid" style="opacity:.3"></div>
+          <div class="s-video-scanline"></div>
+          <!-- 🎬 להחליף: <iframe src="VEO3_DEMO" allowfullscreen></iframe> -->
+          <div class="s-video-thumb">
+            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(6,182,212,.7))">🔮</div>
+            <div class="s-video-play-btn" style="background:linear-gradient(135deg,#06b6d4,#7c3aed)">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="s-video-tag" style="color:var(--c-hi)">Veo 3 · Native Audio</div>
+            <div class="s-video-label">⬆️ להחליף בסרטון הדגמה אמיתי</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           26 — GOLD TIP: פריים כפול + Kling Sound
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-gold" data-transition="convex" data-transition-speed="fast">
+        <div class="s-gold-glow-bg"></div>
+        <div class="s-gold-frame"></div>
+        <div class="spark" style="top:16%;right:10%;color:#fcd34d;animation-delay:0s;font-size:1.8em">✦</div>
+        <div class="spark" style="bottom:20%;left:8%;color:#fcd34d;animation-delay:-2s;font-size:2em">✦</div>
+        <div class="spark" style="top:30%;left:15%;color:#f59e0b;animation-delay:-4s">✧</div>
+        <div class="spark" style="bottom:28%;right:14%;color:#fcd34d;animation-delay:-1.5s">✧</div>
+        <div class="s-gold-inner" style="max-width:85%">
+          <div class="s-gold-badge">✦ &nbsp; שני טיפי זהב · וידאו</div>
+          <h2>פריים כפול + סאונד לוידאו</h2>
+          <p>
+            <strong>1. מחיקת פריים כפול בחיבורים:</strong><br>
+            כשמחברים שני קטעים שנוצרו עם Start/End Frame — נוצר פריים כפול בנקודת החיבור שגורם לקפיצה. מחיקת פריים אחד ב-CapCut בנקודת החיבור פותרת את זה.<br><br>
+            <strong>2. Kling Sound-to-Video:</strong><br>
+            Kling יכול לייצר סאונד אמביינט מותאם לוידאו שלכם — מנתח את הסצנה ומוסיף צלילים שמתאימים לתמונה אוטומטית.
+          </p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH04 — SECTION: להיות אפטריסט
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast">
+        <div class="bg bg-grid"></div>
+        <div class="orb amber" style="width:650px;height:650px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:7s"></div>
+        <div class="orb" style="width:300px;height:300px;top:75%;left:20%;transform:translate(-50%,-50%);opacity:.3;animation-duration:5s;animation-delay:-2s"></div>
+        <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%);border-color:rgba(245,158,11,.12)"></div>
+        <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%);border-color:rgba(245,158,11,.05)"></div>
+        <div class="s-section-ghost">04</div>
+        <div class="s-section-inner z1">
+          <span class="s-section-icon">⚡</span>
+          <span class="s-section-num">04 / 08</span>
+          <h2>להיות אפטריסט</h2>
+          <p class="s-section-desc">Kling Effects · Motion · שדרוג תוכן קיים<br>כשאין תקציב לAE — יש AI שעושה את זה בשניות</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH04 — KLING EFFECTS: הוספת תנועה לסטילס
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-split s-split-tr" data-transition="slide">
+        <div class="s-split-content">
+          <span class="eyebrow amber">Kling · Effects</span>
+          <h2>After Effects<br>בלי After Effects</h2>
+          <p>Kling Effects מוסיף <strong>תנועה, חיים ואפקטים סינמטיים</strong> לתמונות סטטיות קיימות — ללא ידע טכני, ללא השקעת זמן.</p>
+          <ul>
+            <li><span class="dot" style="background:var(--grad-gold)"></span>שיער מתנופף, בד זורם, עשן עולה</li>
+            <li><span class="dot" style="background:var(--grad-gold)"></span>אפקט "Ken Burns" — zoom פאן סינמטי</li>
+            <li><span class="dot" style="background:var(--grad-gold)"></span>Parallax — עומק תלת-מימדי מסטיל</li>
+            <li><span class="dot" style="background:var(--grad-gold)"></span>אנימציית מוצרים: ניצוצות, זוהר, חיים</li>
+            <li><span class="dot" style="background:var(--grad-gold)"></span>שדרוג ריילס / טיקטוק קיימים</li>
+          </ul>
+        </div>
+        <div class="s-split-img">
+          <div style="width:100%;height:100%;background:linear-gradient(145deg,#1a0a00,#080018);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;gap:24px">
+            <div class="orb amber" style="width:350px;height:350px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:5s;opacity:.4"></div>
+            <div style="position:relative;z-index:1;text-align:center">
+              <div style="font-size:5em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(245,158,11,.6))">⚡</div>
+              <div style="font-size:.5em;color:var(--a-hi);font-weight:700;margin-top:8px">Kling Effects</div>
+              <div style="font-size:.42em;color:var(--muted);margin-top:6px">סטיל → קליפ חי</div>
+            </div>
+          </div>
+          <span class="img-label" style="background:rgba(245,158,11,.15);border-color:rgba(245,158,11,.3);color:var(--a-hi)">⚡ Kling Effects</span>
+          <div class="img-cap">תמונת מוצר → קליפ עם חיים</div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH04 — 🎬 DEMO: Kling Effects
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-video" data-transition="fade">
+        <div class="s-split-content" style="padding:80px 50px 80px 100px">
+          <div class="chip amber" style="margin-bottom:1em">🎬 &nbsp; הדגמה חיה</div>
+          <span class="eyebrow amber">Kling Effects · Motion</span>
+          <h2>מה לחפש<br>בהדגמה</h2>
+          <ul style="margin-top:.9em">
+            <li><span class="dot" style="background:var(--grad-gold)"></span>תמונת מוצר / סטיל סטטי כקלט</li>
+            <li><span class="dot" style="background:var(--grad-gold)"></span>האפקט שנבחר (שיער / ניצוצות / זוהר)</li>
+            <li><span class="dot" style="background:var(--grad-gold)"></span>שדרוג מיידי — לא יצירת וידאו חדש</li>
+            <li><span class="dot" style="background:var(--grad-gold)"></span>תוצאה: ריל שנראה כמו צילום מקצועי</li>
+          </ul>
+        </div>
+        <div class="s-video-pane">
+          <div class="bg bg-grid" style="opacity:.3"></div>
+          <div class="s-video-scanline"></div>
+          <!-- 🎬 להחליף: <iframe src="KLING_EFFECTS_DEMO" allowfullscreen></iframe> -->
+          <div class="s-video-thumb">
+            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(245,158,11,.7))">⚡</div>
+            <div class="s-video-play-btn" style="background:var(--grad-gold)">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="s-video-tag" style="color:var(--a-hi)">Kling Effects · Motion</div>
+            <div class="s-video-label">⬆️ להחליף בסרטון הדגמה אמיתי</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH04 — GOLD TIP: אפטריסט
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-gold" data-transition="convex" data-transition-speed="fast">
+        <div class="s-gold-glow-bg" style="background:radial-gradient(ellipse 70% 50% at 50% 60%,rgba(245,158,11,.15) 0%,transparent 70%)"></div>
+        <div class="s-gold-frame"></div>
+        <div class="spark" style="top:16%;right:10%;color:#fcd34d;animation-delay:0s;font-size:2em">⚡</div>
+        <div class="spark" style="bottom:20%;left:8%;color:#fcd34d;animation-delay:-2s;font-size:1.8em">✦</div>
+        <div class="spark" style="top:28%;left:16%;color:#f59e0b;animation-delay:-4s">✧</div>
+        <div class="spark" style="bottom:30%;right:12%;color:#fcd34d;animation-delay:-1s">✧</div>
+        <div class="s-gold-inner">
+          <div class="s-gold-badge">✦ &nbsp; טיפ זהב · אפטריסט</div>
+          <h2>מתי Kling Effects עדיף על צילום אמיתי</h2>
+          <p>
+            כשצריך: <strong>מזג אוויר שאין לכם</strong> (שלג, גשם), <strong>location שלא נסעתם אליו</strong>, <strong>סטיילינג שלא ביצעתם</strong>, או <strong>פריים לילה מתמונת יום</strong>.<br>
+            Kling Effects לא יוצר — הוא <strong>מחיה תוכן קיים.</strong><br>
+            צילמתם? מצוין. עכשיו תנו לו לנשום.
+          </p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           [ שקופיות המשך — שלב ג' ]
+           31: Section — CH05 ליצור סאונד
+           32: ElevenLabs — קול, SFX, Multi לעברית
+           33: 🎬 הדגמה ElevenLabs Voice Changer
+           34: השוואה TTS vs STS לעברית
+           35: Suno — מוזיקה ו-Audio-to-Audio
+           36: 🎬 הדגמה Suno
+           37: טיפ זהב — Audio-to-Audio עברית
            ──
-           CH04 — להיות אפטריסט (חלק בפני עצמו!)
-           27: Section — להיות אפטריסט
-           28: Kling Effects — הוספת תנועה לסטילס
-           29: 🎬 הדגמה — Kling Effects
-           30: טיפ זהב — אפטריסט
+           38: Section — CH06 לחבר וידאו+סאונד
+           39: Hedra — דמות מדברת + dirty audio
+           40: 🎬 הדגמה Hedra
+           41: מודלים ב-Hedra (compare)
+           42: פתרון סאונד לא עקבי מ-Veo (ElevenLabs על Veo video)
+           43: CapCut AI tools + watermark
+           44: טיפ זהב — watermark fix
            ──
-           CH05: ליצור סאונד (slides 31–36)
-           CH06: לחבר וידאו+סאונד (slides 37–42)
-           CH07: לנתח נתונים (slides 43–45)
-           הפתעה (slides 46–47)
-           Outro (slide 48)
+           45: Section — CH07 AI יודע לביים
+           46: ChatGPT כבמאי — shot list, storyboard, direction
+           47: 🎬 הדגמה — ChatGPT director prompt
+           ──
+           48: Section — CH08 לנתח נתונים
+           49: ChatGPT Data Analysis
+           50: 🎬 הדגמה Data
+           ──
+           51: Section — CH09 AI יכול לעשות הכל (practically anything)
+           52: "תניחו שה-AI יודע"
+           ──
+           53: Section — הפתעה [user decides]
+           ──
+           54: Outro
       ══════════════════════════════════════════════════════ -->
 
     </div><!-- /slides -->
