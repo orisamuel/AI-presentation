@@ -37,12 +37,17 @@
   .reveal-viewport { background:transparent !important; }
   .reveal { font-family:var(--font) !important; font-size:42px; background:transparent !important; }
   .reveal .slides { direction:rtl; text-align:right; }
-  /* backgrounds layer = per-chapter dark tint overlay above the global canvas */
+  /* Full-viewport tint — covers the entire screen including letterbox areas */
+  #bg-tint {
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background: rgba(8,6,22,0.78);
+    transition: background-color 1.4s ease;
+  }
+  /* backgrounds layer is now transparent — #bg-tint handles the tint globally */
   .reveal .backgrounds {
     position:absolute !important; top:0 !important; left:0 !important;
     width:100% !important; height:100% !important;
-    background: rgba(8,6,22,0.78);
-    transition: background-color 1.4s ease;
+    background: transparent !important;
   }
   .reveal .backgrounds .slide-background { background:transparent !important; }
   /* Sections are transparent — backgrounds layer shows through everywhere, no letterbox */
@@ -339,7 +344,7 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      06 — TEXT + IMAGE
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .s-split { display:grid !important; height:100%; background:var(--bg) !important; position:relative !important; overflow:hidden !important; }
+  .s-split { display:grid !important; height:100%; background:var(--bg) !important; position:relative; overflow:hidden !important; }
   .s-split-tr { grid-template-columns:55% 45%; }
   .s-split-tl { grid-template-columns:45% 55%; grid-template-areas:"img content" !important; }
   .s-split-tl .s-split-img  { grid-area:img; }
@@ -365,7 +370,7 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      07 — TEXT + VIDEO
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .s-video { display:grid !important; grid-template-columns:55% 45%; height:100%; background:var(--bg) !important; position:relative !important; overflow:hidden !important; }
+  .s-video { display:grid !important; grid-template-columns:55% 45%; height:100%; background:var(--bg) !important; position:relative; overflow:hidden !important; }
   .s-video-pane { position:relative; overflow:hidden; background:#000; display:flex; align-items:center; justify-content:center; animation:fade-in .8s .15s ease forwards; }
   .s-video-pane iframe { width:100%; height:100%; border:none; }
   .s-video-thumb { width:100%; height:100%; background:linear-gradient(145deg,#080018,#001525); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; position:relative; }
@@ -415,7 +420,7 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      10 — STEPS / PROCESS
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .s-steps { display:grid !important; grid-template-rows:auto 1fr; height:100%; background:var(--bg) !important; position:relative !important; overflow:hidden !important; }
+  .s-steps { display:grid !important; grid-template-rows:auto 1fr; height:100%; background:var(--bg) !important; position:relative; overflow:hidden !important; }
   .s-steps-hdr { padding:70px 100px 0; animation:fade-up .6s ease both; }
   .s-steps-hdr h2 { font-size:2em !important; color:var(--white) !important; }
   .s-steps-track { display:flex; align-items:flex-start; padding:44px 100px 80px; gap:0; }
@@ -430,7 +435,7 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      11 — GALLERY
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .s-gallery { display:grid !important; grid-template-rows:auto 1fr; height:100%; background:var(--bg) !important; position:relative !important; overflow:hidden !important; }
+  .s-gallery { display:grid !important; grid-template-rows:auto 1fr; height:100%; background:var(--bg) !important; position:relative; overflow:hidden !important; }
   .s-gallery-hdr { padding:60px 100px 26px; animation:fade-up .6s ease both; }
   .s-gallery-hdr h2 { font-size:2em !important; color:var(--white) !important; }
   .s-gallery-hdr p  { font-size:.6em; margin-top:.3em; }
@@ -672,6 +677,9 @@
       </linearGradient>
     </defs>
   </svg>
+
+  <!-- Full-viewport tint — covers everything including letterbox, chapter-color transitions -->
+  <div id="bg-tint"></div>
 
   <!-- Global animated background — fills full viewport including letterbox areas -->
   <canvas id="bg-canvas"></canvas>
@@ -2377,8 +2385,9 @@
   function applyChapterBg(key) {
     if (key === _currentChapterKey) return;
     _currentChapterKey = key;
-    const bg = document.querySelector('.reveal .backgrounds');
-    if (bg) bg.style.background = CHAPTER_BG[key] || CHAPTER_BG.default;
+    /* Apply tint to the full-viewport overlay (covers letterbox too) */
+    const tint = document.getElementById('bg-tint');
+    if (tint) tint.style.background = CHAPTER_BG[key] || CHAPTER_BG.default;
     /* Sync body class for CSS-driven per-chapter orb tints */
     document.body.className = document.body.className.replace(/\s*\bch-\w+/g, '');
     document.body.classList.add('ch-' + key);
