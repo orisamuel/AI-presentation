@@ -32,7 +32,7 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      REVEAL RESET — FULL-BLEED CANVAS
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  html,body { background:#05050e !important; margin:0; padding:0; }
+  html,body { background:transparent !important; margin:0; padding:0; }
   /* reveal-viewport transparent so the fixed global canvas shows through letterbox areas */
   .reveal-viewport { background:transparent !important; }
   .reveal { font-family:var(--font) !important; font-size:42px; background:transparent !important; }
@@ -346,16 +346,16 @@
   .s-split-tl .s-split-content { grid-area:content; }
   .s-split-content {
     display:flex; flex-direction:column; justify-content:center;
-    padding:80px 56px 80px 100px; animation:slide-r .7s ease both;
+    padding:80px 56px 80px 100px; animation:slide-r .7s ease forwards;
   }
-  .s-split-tl .s-split-content { padding:80px 100px 80px 56px; animation:slide-l .7s ease both; }
+  .s-split-tl .s-split-content { padding:80px 100px 80px 56px; animation:slide-l .7s ease forwards; }
   .s-split-content h2 { font-size:2.1em !important; line-height:1.1 !important; color:var(--white) !important; margin-bottom:.8em !important; }
   .s-split-content p  { margin-bottom:.6em; }
   .s-split-content ul { list-style:none; padding:0; margin:.9em 0 0; }
   .s-split-content ul li { font-size:.75em; color:var(--muted); padding:7px 0; border-bottom:1px solid rgba(255,255,255,.04); display:flex; align-items:center; gap:12px; }
   .s-split-content ul li::before { display:none !important; }
   .s-split-content ul li .dot { width:7px; height:7px; border-radius:50%; background:var(--grad); flex-shrink:0; }
-  .s-split-img { position:relative; overflow:hidden; animation:fade-in .9s .15s ease both; }
+  .s-split-img { position:relative; overflow:hidden; animation:fade-in .9s .15s ease forwards; }
   .s-split-img .img-art { width:100%; height:100%; display:block; }
   .s-split-img .img-label { position:absolute; top:18px; right:18px; background:rgba(0,0,0,.65); border:1px solid rgba(255,255,255,.1); backdrop-filter:blur(10px); font-size:.4em; font-weight:600; color:var(--white); padding:6px 14px; border-radius:20px; }
   .s-split-img .img-cap { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,.78)); padding:40px 22px 18px; font-size:.4em; color:var(--muted); direction:rtl; text-align:right; }
@@ -366,7 +366,7 @@
      07 — TEXT + VIDEO
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
   .s-video { display:grid !important; grid-template-columns:55% 45%; height:100%; background:var(--bg) !important; position:relative !important; overflow:hidden !important; }
-  .s-video-pane { position:relative; overflow:hidden; background:#000; display:flex; align-items:center; justify-content:center; animation:fade-in .8s .15s ease both; }
+  .s-video-pane { position:relative; overflow:hidden; background:#000; display:flex; align-items:center; justify-content:center; animation:fade-in .8s .15s ease forwards; }
   .s-video-pane iframe { width:100%; height:100%; border:none; }
   .s-video-thumb { width:100%; height:100%; background:linear-gradient(145deg,#080018,#001525); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; position:relative; }
   .s-video-thumb::after { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(6,182,212,.06) 0%,transparent 70%); pointer-events:none; }
@@ -2253,7 +2253,7 @@
             <strong style="color:var(--white)">האינסטינקט לחקור — לעולם לא.</strong>
           </div>
           <div class="s-outro-logo" style="animation:fade-up .7s .35s ease both">
-            <img src="assets/white-small.gif" alt="42 Creative" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <img src="assets/logo-42.png" alt="42 Creative" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
             <span style="display:none;font-size:2.5em;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent">42</span>
           </div>
         </div>
@@ -2263,7 +2263,7 @@
   </div><!-- /reveal -->
 
   <div class="logo-42" id="logo42">
-    <img src="assets/white-small.gif" alt="42 Creative" onerror="this.parentElement.innerHTML='<span class=&quot;logo-text&quot;>42</span>'">
+    <img src="assets/logo-42.png" alt="42 Creative" onerror="this.parentElement.innerHTML='<span class=&quot;logo-text&quot;>42</span>'">
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
@@ -2468,7 +2468,8 @@
 
       if (palT < 1) palT = Math.min(1, palT + .012);
 
-      CX.clearRect(0, 0, W, H);
+      CX.fillStyle = '#05050e';
+      CX.fillRect(0, 0, W, H);
 
       /* connecting lines between nearby dots */
       for (let i = 0; i < dots.length; i++) {
