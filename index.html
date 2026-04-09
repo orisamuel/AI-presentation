@@ -39,8 +39,10 @@
   .reveal .slides { direction:rtl; text-align:right; }
   /* backgrounds layer is the true full-screen canvas — gradient set via JS per chapter */
   .reveal .backgrounds {
-    background: linear-gradient(165deg,#100028 0%,#05050e 50%,#001525 100%);
-    transition: background 1.2s ease;
+    position:absolute !important; top:0 !important; left:0 !important;
+    width:100% !important; height:100% !important;
+    background: linear-gradient(160deg,#0e0028 0%,#05050e 45%,#001828 100%);
+    transition: background 1.4s ease;
   }
   .reveal .backgrounds .slide-background { background:transparent !important; }
   /* Sections are transparent — backgrounds layer shows through everywhere, no letterbox */
@@ -52,17 +54,23 @@
     overflow:hidden !important; isolation:isolate;
     width:100% !important; height:100% !important;
   }
-  /* Slide counter — JS will position it between the nav arrows */
+  /* Slide counter — fixed center-bottom */
   .reveal .slide-number {
     font-family:var(--mono) !important;
     font-size:11px !important;
-    background:rgba(5,5,14,.8) !important;
-    border:1px solid rgba(255,255,255,.12) !important;
-    border-radius:4px !important;
-    padding:3px 8px !important;
-    color:rgba(255,255,255,.55) !important;
+    background:rgba(5,5,14,.85) !important;
+    border:1px solid rgba(255,255,255,.14) !important;
+    border-radius:6px !important;
+    padding:4px 10px !important;
+    color:rgba(255,255,255,.5) !important;
     pointer-events:none !important;
     z-index:35 !important;
+    position:fixed !important;
+    bottom:18px !important;
+    left:50% !important;
+    right:auto !important;
+    top:auto !important;
+    transform:translateX(-50%) !important;
   }
   .reveal .slides > section::before,
   .reveal .slides > section::after { content:none !important; display:none !important; }
@@ -331,7 +339,7 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      06 — TEXT + IMAGE
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .s-split { display:grid !important; height:100%; background:var(--bg) !important; }
+  .s-split { display:grid !important; height:100%; background:var(--bg) !important; position:relative !important; overflow:hidden !important; }
   .s-split-tr { grid-template-columns:55% 45%; }
   .s-split-tl { grid-template-columns:45% 55%; grid-template-areas:"img content" !important; }
   .s-split-tl .s-split-img  { grid-area:img; }
@@ -357,7 +365,7 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      07 — TEXT + VIDEO
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .s-video { display:grid !important; grid-template-columns:55% 45%; height:100%; background:var(--bg) !important; }
+  .s-video { display:grid !important; grid-template-columns:55% 45%; height:100%; background:var(--bg) !important; position:relative !important; overflow:hidden !important; }
   .s-video-pane { position:relative; overflow:hidden; background:#000; display:flex; align-items:center; justify-content:center; animation:fade-in .8s .15s ease both; }
   .s-video-pane iframe { width:100%; height:100%; border:none; }
   .s-video-thumb { width:100%; height:100%; background:linear-gradient(145deg,#080018,#001525); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; position:relative; }
@@ -407,7 +415,7 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      10 — STEPS / PROCESS
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .s-steps { display:grid !important; grid-template-rows:auto 1fr; height:100%; background:var(--bg) !important; }
+  .s-steps { display:grid !important; grid-template-rows:auto 1fr; height:100%; background:var(--bg) !important; position:relative !important; overflow:hidden !important; }
   .s-steps-hdr { padding:70px 100px 0; animation:fade-up .6s ease both; }
   .s-steps-hdr h2 { font-size:2em !important; color:var(--white) !important; }
   .s-steps-track { display:flex; align-items:flex-start; padding:44px 100px 80px; gap:0; }
@@ -422,7 +430,7 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      11 — GALLERY
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .s-gallery { display:grid !important; grid-template-rows:auto 1fr; height:100%; background:var(--bg) !important; }
+  .s-gallery { display:grid !important; grid-template-rows:auto 1fr; height:100%; background:var(--bg) !important; position:relative !important; overflow:hidden !important; }
   .s-gallery-hdr { padding:60px 100px 26px; animation:fade-up .6s ease both; }
   .s-gallery-hdr h2 { font-size:2em !important; color:var(--white) !important; }
   .s-gallery-hdr p  { font-size:.6em; margin-top:.3em; }
@@ -437,6 +445,56 @@
   .gcard-body { padding:16px 18px 18px; flex:1; }
   .gcard-body .ct { font-size:.6em; font-weight:700; color:var(--white); margin-bottom:4px; }
   .gcard-body .cs { font-size:.52em; color:var(--muted); line-height:1.4; }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     AMBIENT SLIDE ORBS — fills edges for all content slides
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  .s-text::before,.s-split::before,.s-video::before,
+  .s-compare::before,.s-steps::before,.s-gallery::before {
+    content:''; position:absolute; border-radius:50%; pointer-events:none; z-index:0;
+    width:1000px; height:1000px;
+    background:radial-gradient(circle,rgba(124,58,237,.13) 0%,transparent 65%);
+    top:-25%; right:-12%;
+    animation:breathe 10s ease-in-out infinite alternate;
+  }
+  .s-text::after,.s-split::after,.s-video::after,
+  .s-compare::after,.s-steps::after,.s-gallery::after {
+    content:''; position:absolute; border-radius:50%; pointer-events:none; z-index:0;
+    width:800px; height:800px;
+    background:radial-gradient(circle,rgba(6,182,212,.09) 0%,transparent 65%);
+    bottom:-20%; left:-8%;
+    animation:breathe 8s ease-in-out infinite alternate;
+    animation-delay:-4s;
+  }
+
+  /* Per-chapter orb tints — driven by body class set in JS */
+  .ch-images .s-text::before,.ch-images .s-split::before,.ch-images .s-video::before,
+  .ch-images .s-compare::before { background:radial-gradient(circle,rgba(244,63,94,.14) 0%,transparent 65%); }
+  .ch-images .s-text::after,.ch-images .s-split::after,.ch-images .s-video::after,
+  .ch-images .s-compare::after  { background:radial-gradient(circle,rgba(245,158,11,.09) 0%,transparent 65%); }
+
+  .ch-video .s-text::before,.ch-video .s-split::before,.ch-video .s-video::before,
+  .ch-video .s-compare::before  { background:radial-gradient(circle,rgba(6,182,212,.16) 0%,transparent 65%); }
+  .ch-video .s-text::after,.ch-video .s-split::after,.ch-video .s-video::after,
+  .ch-video .s-compare::after   { background:radial-gradient(circle,rgba(124,58,237,.09) 0%,transparent 65%); }
+
+  .ch-effects .s-text::before,.ch-effects .s-split::before,.ch-effects .s-video::before { background:radial-gradient(circle,rgba(245,158,11,.14) 0%,transparent 65%); }
+  .ch-effects .s-text::after,.ch-effects .s-split::after,.ch-effects .s-video::after   { background:radial-gradient(circle,rgba(124,58,237,.08) 0%,transparent 65%); }
+
+  .ch-sound .s-text::before,.ch-sound .s-split::before,.ch-sound .s-video::before { background:radial-gradient(circle,rgba(139,92,246,.15) 0%,transparent 65%); }
+  .ch-sound .s-text::after,.ch-sound .s-split::after,.ch-sound .s-video::after   { background:radial-gradient(circle,rgba(16,185,129,.09) 0%,transparent 65%); }
+
+  .ch-connect .s-text::before,.ch-connect .s-split::before,.ch-connect .s-video::before,.ch-connect .s-compare::before { background:radial-gradient(circle,rgba(244,63,94,.14) 0%,transparent 65%); }
+  .ch-connect .s-text::after,.ch-connect .s-split::after,.ch-connect .s-video::after,.ch-connect .s-compare::after   { background:radial-gradient(circle,rgba(6,182,212,.08) 0%,transparent 65%); }
+
+  .ch-direct .s-text::before,.ch-direct .s-split::before,.ch-direct .s-video::before { background:radial-gradient(circle,rgba(6,182,212,.15) 0%,transparent 65%); }
+  .ch-direct .s-text::after,.ch-direct .s-split::after,.ch-direct .s-video::after   { background:radial-gradient(circle,rgba(16,185,129,.09) 0%,transparent 65%); }
+
+  .ch-data .s-text::before,.ch-data .s-split::before,.ch-data .s-video::before { background:radial-gradient(circle,rgba(16,185,129,.15) 0%,transparent 65%); }
+  .ch-data .s-text::after,.ch-data .s-split::after,.ch-data .s-video::after   { background:radial-gradient(circle,rgba(6,182,212,.09) 0%,transparent 65%); }
+
+  .ch-surprise .s-text::before,.ch-surprise .s-split::before { background:radial-gradient(circle,rgba(244,63,94,.14) 0%,transparent 65%); }
+  .ch-surprise .s-text::after,.ch-surprise .s-split::after   { background:radial-gradient(circle,rgba(245,158,11,.10) 0%,transparent 65%); }
 
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      12 — OUTRO
@@ -1135,10 +1193,10 @@
           <span class="eyebrow">Gemini 2.5 Pro · Gems</span>
           <h2>מה לחפש<br>בהדגמה</h2>
           <ul style="margin-top:.9em">
-            <li><span class="dot"></span>בחירת Gem ספציפי ללקוח</li>
-            <li><span class="dot"></span>העלאת תדבריף + קובץ כתיבה</li>
-            <li><span class="dot"></span>פרומפט אחד ← תוכן מוכן לפרסום</li>
-            <li><span class="dot"></span>שימו לב לבטון — כמה "שלהם" זה נשמע</li>
+            <li class="fragment"><span class="dot"></span>בחירת Gem ספציפי ללקוח</li>
+            <li class="fragment"><span class="dot"></span>העלאת תדבריף + קובץ כתיבה</li>
+            <li class="fragment"><span class="dot"></span>פרומפט אחד ← תוכן מוכן לפרסום</li>
+            <li class="fragment"><span class="dot"></span>שימו לב לבטון — כמה "שלהם" זה נשמע</li>
           </ul>
         </div>
         <div class="s-video-pane">
@@ -1335,10 +1393,10 @@
           <span class="eyebrow">Kling · Image-to-Video</span>
           <h2>מה לחפש<br>בהדגמה</h2>
           <ul style="margin-top:.9em">
-            <li><span class="dot"></span>תמונת מוצר / פורטרט סטטי כקלט</li>
-            <li><span class="dot"></span>תנועת מצלמה שהוגדרה מראש</li>
-            <li><span class="dot"></span>פיזיקה ריאלית — אור, צל, עומק</li>
-            <li><span class="dot"></span>8 שניות · 4K · ללא צילום אמיתי</li>
+            <li class="fragment"><span class="dot"></span>תמונת מוצר / פורטרט סטטי כקלט</li>
+            <li class="fragment"><span class="dot"></span>תנועת מצלמה שהוגדרה מראש</li>
+            <li class="fragment"><span class="dot"></span>פיזיקה ריאלית — אור, צל, עומק</li>
+            <li class="fragment"><span class="dot"></span>8 שניות · 4K · ללא צילום אמיתי</li>
           </ul>
         </div>
         <div class="s-video-pane">
@@ -1389,36 +1447,62 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           23 — 🎬 DEMO: Kling Omni — לפני / אחרי
+           23a — 🎬 DEMO: Kling Omni — שלב 1: לפני
       ══════════════════════════════════════════════════════ -->
-      <section class="s-compare" data-transition="concave">
-        <div class="bg bg-dots" style="opacity:.2"></div>
-        <div class="s-compare-vs" style="font-size:.55em;width:70px;height:70px">לפני<br>אחרי</div>
-        <!-- BEFORE -->
-        <div class="s-compare-col" style="padding:0;overflow:hidden;position:relative">
-          <div style="position:absolute;inset:0;background:linear-gradient(145deg,#0a001a,#001020);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px">
-            <div class="orb" style="width:350px;height:350px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.3"></div>
-            <div style="position:relative;z-index:1;text-align:center">
-              <div style="font-size:3em;filter:drop-shadow(0 0 20px rgba(244,63,94,.5));margin-bottom:12px">🎥</div>
-              <div style="font-size:.45em;color:var(--rose);font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">לפני</div>
-              <div style="font-size:.4em;color:var(--muted)">קליפ מקורי — רקע משרד</div>
-              <!-- 🎬 להחליף: video/img element -->
-            </div>
-          </div>
-          <div style="position:absolute;bottom:24px;left:0;right:0;text-align:center;font-size:.36em;color:var(--dim)">⬆️ להחליף בקליפ מקורי</div>
+      <section class="s-video" data-transition="slide">
+        <div class="s-split-content" style="padding:80px 50px 80px 100px">
+          <div class="chip" style="margin-bottom:1em;background:rgba(244,63,94,.12);border-color:rgba(244,63,94,.3);color:#f87171">🎬 שלב 1 / 2</div>
+          <span class="eyebrow" style="color:var(--rose)">Kling Omni · לפני</span>
+          <h2>הקליפ המקורי —<br>רקע משרד</h2>
+          <p>זהו הקליפ שנוצר — <strong>לפני</strong> כל עריכה עם Kling Omni. שימו לב לרקע ולתחושה הכללית.</p>
+          <ul style="margin-top:.9em">
+            <li><span class="dot" style="background:var(--grad-fire)"></span>קליפ מקורי — כפי שיצא מ-Kling</li>
+            <li><span class="dot" style="background:var(--grad-fire)"></span>רקע: משרד / סביבה פנימית</li>
+            <li><span class="dot" style="background:var(--grad-fire)"></span>ללא שינויים — גרסת הקלט</li>
+          </ul>
         </div>
-        <!-- AFTER -->
-        <div class="s-compare-col" style="padding:0;overflow:hidden;position:relative">
-          <div style="position:absolute;inset:0;background:linear-gradient(145deg,#001a10,#001525);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px">
-            <div class="orb cyan" style="width:350px;height:350px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.3"></div>
-            <div style="position:relative;z-index:1;text-align:center">
-              <div style="font-size:3em;filter:drop-shadow(0 0 20px rgba(16,185,129,.5));margin-bottom:12px">✨</div>
-              <div style="font-size:.45em;color:var(--emerald);font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">אחרי Kling Omni</div>
-              <div style="font-size:.4em;color:var(--muted)">רקע מוחלף — חוף הים</div>
-              <!-- 🎬 להחליף: video/img element -->
+        <div class="s-video-pane">
+          <div class="bg bg-grid" style="opacity:.3"></div>
+          <div class="s-video-scanline"></div>
+          <!-- 🎬 להחליף: <video src="assets/demos/kling-omni-before.mp4" controls></video> -->
+          <div class="s-video-thumb">
+            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(244,63,94,.6))">🎥</div>
+            <div class="s-video-play-btn" style="background:var(--grad-fire)">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
+            <div class="s-video-tag" style="color:#f87171">לפני — Kling Omni</div>
+            <div class="s-video-label">⬆️ להחליף בקליפ המקורי</div>
           </div>
-          <div style="position:absolute;bottom:24px;left:0;right:0;text-align:center;font-size:.36em;color:var(--dim)">⬆️ להחליף בקליפ ערוך</div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           23b — 🎬 DEMO: Kling Omni — שלב 2: אחרי
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-video" data-transition="slide">
+        <div class="s-split-content" style="padding:80px 50px 80px 100px">
+          <div class="chip" style="margin-bottom:1em;background:rgba(16,185,129,.12);border-color:rgba(16,185,129,.3);color:#34d399">✨ שלב 2 / 2</div>
+          <span class="eyebrow" style="color:var(--emerald)">Kling Omni · אחרי</span>
+          <h2>הקליפ הערוך —<br>רקע חוף הים</h2>
+          <p>אותו קליפ בדיוק — אחרי פרומפט אחד ב-Kling Omni. <strong>אפס צילום מחדש.</strong></p>
+          <ul style="margin-top:.9em">
+            <li><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>הרקע הוחלף — חוף הים</li>
+            <li><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>הדמות נשארה זהה</li>
+            <li><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>5 דקות עבודה · ‎0 שעות צילום</li>
+          </ul>
+        </div>
+        <div class="s-video-pane">
+          <div class="bg bg-grid" style="opacity:.3"></div>
+          <div class="s-video-scanline"></div>
+          <!-- 🎬 להחליף: <video src="assets/demos/kling-omni-after.mp4" controls></video> -->
+          <div class="s-video-thumb">
+            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(16,185,129,.6))">✨</div>
+            <div class="s-video-play-btn" style="background:linear-gradient(135deg,#10b981,#06b6d4)">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="s-video-tag" style="color:#34d399">אחרי — Kling Omni</div>
+            <div class="s-video-label">⬆️ להחליף בקליפ הערוך</div>
+          </div>
         </div>
       </section>
 
@@ -1463,10 +1547,10 @@
           <span class="eyebrow">Veo 3 · Gemini</span>
           <h2>מה לחפש<br>בהדגמה</h2>
           <ul style="margin-top:.9em">
-            <li><span class="dot"></span>הסאונד נוצר יחד עם הוידאו — לא מודבק</li>
-            <li><span class="dot"></span>צלילי סביבה מתאימים לסצנה</li>
-            <li><span class="dot"></span>איכות 1080p ומעלה</li>
-            <li><span class="dot"></span>הכל מפרומפט אחד בעברית</li>
+            <li class="fragment"><span class="dot"></span>הסאונד נוצר יחד עם הוידאו — לא מודבק</li>
+            <li class="fragment"><span class="dot"></span>צלילי סביבה מתאימים לסצנה</li>
+            <li class="fragment"><span class="dot"></span>איכות 1080p ומעלה</li>
+            <li class="fragment"><span class="dot"></span>הכל מפרומפט אחד בעברית</li>
           </ul>
           <p style="margin-top:1.2em;font-size:.65em;color:var(--rose)">⚠️ שימו לב: הסאונד הנוצר לא יהיה עקבי בין קטעים שונים</p>
         </div>
@@ -1564,10 +1648,10 @@
           <span class="eyebrow amber">Kling Effects · Motion</span>
           <h2>מה לחפש<br>בהדגמה</h2>
           <ul style="margin-top:.9em">
-            <li><span class="dot" style="background:var(--grad-gold)"></span>תמונת מוצר / סטיל סטטי כקלט</li>
-            <li><span class="dot" style="background:var(--grad-gold)"></span>האפקט שנבחר (שיער / ניצוצות / זוהר)</li>
-            <li><span class="dot" style="background:var(--grad-gold)"></span>שדרוג מיידי — לא יצירת וידאו חדש</li>
-            <li><span class="dot" style="background:var(--grad-gold)"></span>תוצאה: ריל שנראה כמו צילום מקצועי</li>
+            <li class="fragment"><span class="dot" style="background:var(--grad-gold)"></span>תמונת מוצר / סטיל סטטי כקלט</li>
+            <li class="fragment"><span class="dot" style="background:var(--grad-gold)"></span>האפקט שנבחר (שיער / ניצוצות / זוהר)</li>
+            <li class="fragment"><span class="dot" style="background:var(--grad-gold)"></span>שדרוג מיידי — לא יצירת וידאו חדש</li>
+            <li class="fragment"><span class="dot" style="background:var(--grad-gold)"></span>תוצאה: ריל שנראה כמו צילום מקצועי</li>
           </ul>
         </div>
         <div class="s-video-pane">
@@ -1663,10 +1747,10 @@
           <span class="eyebrow">ElevenLabs · Voice Changer</span>
           <h2>הקול שלך —<br>בגרסה אחרת</h2>
           <ul style="margin-top:.9em">
-            <li><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#10b981)"></span>הקלטה קצרה בקול שלכם</li>
-            <li><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#10b981)"></span>ElevenLabs ממיר לקול שנבחר</li>
-            <li><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#10b981)"></span>האינטונציה שלכם — נשמרת</li>
-            <li><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#10b981)"></span>מושלם לסינכרון על Veo/Kling</li>
+            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#10b981)"></span>הקלטה קצרה בקול שלכם</li>
+            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#10b981)"></span>ElevenLabs ממיר לקול שנבחר</li>
+            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#10b981)"></span>האינטונציה שלכם — נשמרת</li>
+            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#10b981)"></span>מושלם לסינכרון על Veo/Kling</li>
           </ul>
         </div>
         <div class="s-video-pane">
@@ -1752,10 +1836,10 @@
           <span class="eyebrow amber">Suno · Audio-to-Audio</span>
           <h2>תוכן ישן →<br>גרסה חדשה</h2>
           <ul style="margin-top:.9em">
-            <li><span class="dot" style="background:var(--grad-gold)"></span>קליפ אודיו קיים כקלט</li>
-            <li><span class="dot" style="background:var(--grad-gold)"></span>הוראה: "שנה לז'אנר X, הוסף Y"</li>
-            <li><span class="dot" style="background:var(--grad-gold)"></span>Suno מחדש את הסאונד לגמרי</li>
-            <li><span class="dot" style="background:var(--grad-gold)"></span>שימוש: ריל בר-מצווה → אלבום</li>
+            <li class="fragment"><span class="dot" style="background:var(--grad-gold)"></span>קליפ אודיו קיים כקלט</li>
+            <li class="fragment"><span class="dot" style="background:var(--grad-gold)"></span>הוראה: "שנה לז'אנר X, הוסף Y"</li>
+            <li class="fragment"><span class="dot" style="background:var(--grad-gold)"></span>Suno מחדש את הסאונד לגמרי</li>
+            <li class="fragment"><span class="dot" style="background:var(--grad-gold)"></span>שימוש: ריל בר-מצווה → אלבום</li>
           </ul>
         </div>
         <div class="s-video-pane">
@@ -1846,10 +1930,10 @@
           <span class="eyebrow" style="color:#f87171">Hedra · Talking Head</span>
           <h2>מה לחפש<br>בהדגמה</h2>
           <ul style="margin-top:.9em">
-            <li><span class="dot" style="background:linear-gradient(90deg,#f43f5e,#7c3aed)"></span>תמונה סטטית כקלט</li>
-            <li><span class="dot" style="background:linear-gradient(90deg,#f43f5e,#7c3aed)"></span>קובץ אודיו ElevenLabs STS</li>
-            <li><span class="dot" style="background:linear-gradient(90deg,#f43f5e,#7c3aed)"></span>תנועת פה + שפת גוף</li>
-            <li><span class="dot" style="background:linear-gradient(90deg,#f43f5e,#7c3aed)"></span>שימו לב להבדל בין המודלים</li>
+            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#f43f5e,#7c3aed)"></span>תמונה סטטית כקלט</li>
+            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#f43f5e,#7c3aed)"></span>קובץ אודיו ElevenLabs STS</li>
+            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#f43f5e,#7c3aed)"></span>תנועת פה + שפת גוף</li>
+            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#f43f5e,#7c3aed)"></span>שימו לב להבדל בין המודלים</li>
           </ul>
         </div>
         <div class="s-video-pane">
@@ -2011,10 +2095,10 @@
           <span class="eyebrow">ChatGPT · Shot List</span>
           <h2>מפרסומת → קולנוע<br>בפרומפט</h2>
           <ul style="margin-top:.9em">
-            <li><span class="dot"></span>רעיון מוצר + סגנון כקלט</li>
-            <li><span class="dot"></span>ChatGPT מחזיר shot list מלא</li>
-            <li><span class="dot"></span>כל shot → פרומפט ל-Kling</li>
-            <li><span class="dot"></span>תוצאה: פרסומת קולנועית ב-30 דקות</li>
+            <li class="fragment"><span class="dot"></span>רעיון מוצר + סגנון כקלט</li>
+            <li class="fragment"><span class="dot"></span>ChatGPT מחזיר shot list מלא</li>
+            <li class="fragment"><span class="dot"></span>כל shot → פרומפט ל-Kling</li>
+            <li class="fragment"><span class="dot"></span>תוצאה: פרסומת קולנועית ב-30 דקות</li>
           </ul>
         </div>
         <div class="s-video-pane">
@@ -2088,10 +2172,10 @@
           <span class="eyebrow">ChatGPT · Data Analysis</span>
           <h2>Excel → תובנות<br>בשפה שלנו</h2>
           <ul style="margin-top:.9em">
-            <li><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>קובץ גיליון אמיתי כקלט</li>
-            <li><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>שאלה בעברית פשוטה</li>
-            <li><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>גרף + תובנות + המלצה</li>
-            <li><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>מה שלקח שעה — לוקח שניות</li>
+            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>קובץ גיליון אמיתי כקלט</li>
+            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>שאלה בעברית פשוטה</li>
+            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>גרף + תובנות + המלצה</li>
+            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>מה שלקח שעה — לוקח שניות</li>
           </ul>
         </div>
         <div class="s-video-pane">
@@ -2291,45 +2375,31 @@
     document.querySelector(sel)?.classList.add('active-btn');
   }
 
-  /* ── AUTO-INJECT animated bg elements into slides that lack them ── */
+  /* ── AUTO-INJECT bg-dots into slides that lack any bg layer ── */
   function enhanceSlideBackgrounds() {
-    const COLORS = [
-      { cls:'orb',       dur:'12s', delay:'0s',   op:'.10', pos:'top:50%;right:-80px;transform:translateY(-50%)' },
-      { cls:'orb cyan',  dur:'9s',  delay:'-4s',  op:'.07', pos:'top:25%;left:-60px;transform:translateY(-50%)' },
-    ];
     document.querySelectorAll('.reveal .slides > section').forEach(sec => {
-      /* bg-dots on slides with no bg child */
       if (!sec.querySelector('.bg')) {
         const d = document.createElement('div');
-        d.className = 'bg bg-dots'; d.style.opacity = '.18';
+        d.className = 'bg bg-dots'; d.style.opacity = '.14';
         sec.insertBefore(d, sec.firstChild);
-      }
-      /* ambient orbs on slides without any orb */
-      if (!sec.querySelector('.orb')) {
-        COLORS.forEach(({ cls, dur, delay, op, pos }) => {
-          const o = document.createElement('div');
-          o.className = cls;
-          o.style.cssText = `width:500px;height:500px;${pos};opacity:${op};animation-duration:${dur};animation-delay:${delay};position:absolute;pointer-events:none;z-index:0`;
-          sec.insertBefore(o, sec.firstChild);
-        });
       }
     });
   }
 
   /* ── CHAPTER BACKGROUNDS: per-chapter color system ── */
   const CHAPTER_BG = {
-    default:    'linear-gradient(165deg,#100028 0%,#05050e 50%,#001525 100%)',
-    write:      'linear-gradient(165deg,#120022 0%,#05050e 50%,#000e1a 100%)',
-    images:     'linear-gradient(165deg,#1a0018 0%,#05050e 50%,#000a22 100%)',
-    video:      'linear-gradient(165deg,#001a24 0%,#05050e 50%,#08001a 100%)',
-    effects:    'linear-gradient(165deg,#1a0a00 0%,#05050e 50%,#001018 100%)',
-    sound:      'linear-gradient(165deg,#0c0025 0%,#05050e 50%,#001022 100%)',
-    connect:    'linear-gradient(165deg,#1a0012 0%,#05050e 50%,#00101a 100%)',
-    direct:     'linear-gradient(165deg,#001c1a 0%,#05050e 50%,#001022 100%)',
-    data:       'linear-gradient(165deg,#001c10 0%,#05050e 50%,#000c22 100%)',
-    everything: 'linear-gradient(165deg,#100028 0%,#05050e 50%,#001525 100%)',
-    surprise:   'linear-gradient(165deg,#1c0800 0%,#05050e 50%,#100012 100%)',
-    outro:      'linear-gradient(165deg,#100028 0%,#05050e 50%,#001525 100%)',
+    default:    'linear-gradient(160deg,#0e0028 0%,#05050e 45%,#001828 100%)',
+    write:      'linear-gradient(160deg,#10001e 0%,#04040c 45%,#001428 100%)',
+    images:     'linear-gradient(160deg,#200410 0%,#05050e 48%,#0c0014 100%)',
+    video:      'linear-gradient(160deg,#001820 0%,#04050e 45%,#080018 100%)',
+    effects:    'linear-gradient(160deg,#1c0a00 0%,#05050e 45%,#001018 100%)',
+    sound:      'linear-gradient(160deg,#0e001e 0%,#04040c 48%,#001220 100%)',
+    connect:    'linear-gradient(160deg,#1e0510 0%,#05050e 45%,#000e20 100%)',
+    direct:     'linear-gradient(160deg,#001e1a 0%,#04050e 45%,#00100e 100%)',
+    data:       'linear-gradient(160deg,#001c14 0%,#04050e 45%,#000a1c 100%)',
+    everything: 'linear-gradient(160deg,#0e0028 0%,#05050e 45%,#001828 100%)',
+    surprise:   'linear-gradient(160deg,#200a00 0%,#050508 48%,#0a000c 100%)',
+    outro:      'linear-gradient(160deg,#0e0028 0%,#04050e 45%,#001828 100%)',
   };
 
   let _currentChapterKey = 'default';
@@ -2353,6 +2423,9 @@
     _currentChapterKey = key;
     const bg = document.querySelector('.reveal .backgrounds');
     if (bg) bg.style.background = CHAPTER_BG[key] || CHAPTER_BG.default;
+    /* Sync body class for CSS-driven per-chapter orb tints */
+    document.body.className = document.body.className.replace(/\s*\bch-\w+/g, '');
+    document.body.classList.add('ch-' + key);
   }
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -2362,25 +2435,8 @@
     document.querySelector('.ai-gender-btn.male')?.classList.add('active-btn');
   });
 
-  /* Position slide counter between the nav arrows */
   Reveal.on('ready', () => {
-    requestAnimationFrame(() => {
-      const controls = document.querySelector('.reveal .controls');
-      const numEl    = document.querySelector('.reveal .slide-number');
-      if (controls && numEl) {
-        const r = controls.getBoundingClientRect();
-        const cx = r.left + r.width  / 2;
-        const cy = r.top  + r.height / 2;
-        numEl.style.setProperty('position', 'fixed', 'important');
-        numEl.style.setProperty('right',    'auto',   'important');
-        numEl.style.setProperty('bottom',   'auto',   'important');
-        numEl.style.setProperty('left',     cx + 'px','important');
-        numEl.style.setProperty('top',      cy + 'px','important');
-        numEl.style.setProperty('transform','translate(-50%,-50%)','important');
-      }
-      /* initial chapter bg */
-      applyChapterBg('default');
-    });
+    applyChapterBg('default');
     processDemoPlaceholders();
     setupAgendaNav();
     fixCodeBlocks();
