@@ -33,16 +33,16 @@
      REVEAL RESET — FULL-BLEED CANVAS
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
   html,body { background:#05050e !important; margin:0; padding:0; }
-  /* Reveal.js backgrounds container — fills 100vw×100vh including letterbox areas */
-  .reveal-viewport { background:#05050e !important; }
+  /* reveal-viewport transparent so the fixed global canvas shows through letterbox areas */
+  .reveal-viewport { background:transparent !important; }
   .reveal { font-family:var(--font) !important; font-size:42px; background:transparent !important; }
   .reveal .slides { direction:rtl; text-align:right; }
-  /* backgrounds layer is the true full-screen canvas — gradient set via JS per chapter */
+  /* backgrounds layer = per-chapter dark tint overlay above the global canvas */
   .reveal .backgrounds {
     position:absolute !important; top:0 !important; left:0 !important;
     width:100% !important; height:100% !important;
-    background: linear-gradient(160deg,#0e0028 0%,#05050e 45%,#001828 100%);
-    transition: background 1.4s ease;
+    background: rgba(8,6,22,0.78);
+    transition: background-color 1.4s ease;
   }
   .reveal .backgrounds .slide-background { background:transparent !important; }
   /* Sections are transparent — backgrounds layer shows through everywhere, no letterbox */
@@ -446,55 +446,8 @@
   .gcard-body .ct { font-size:.6em; font-weight:700; color:var(--white); margin-bottom:4px; }
   .gcard-body .cs { font-size:.52em; color:var(--muted); line-height:1.4; }
 
-  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     AMBIENT SLIDE ORBS — fills edges for all content slides
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .s-text::before,.s-split::before,.s-video::before,
-  .s-compare::before,.s-steps::before,.s-gallery::before {
-    content:''; position:absolute; border-radius:50%; pointer-events:none; z-index:0;
-    width:1000px; height:1000px;
-    background:radial-gradient(circle,rgba(124,58,237,.13) 0%,transparent 65%);
-    top:-25%; right:-12%;
-    animation:breathe 10s ease-in-out infinite alternate;
-  }
-  .s-text::after,.s-split::after,.s-video::after,
-  .s-compare::after,.s-steps::after,.s-gallery::after {
-    content:''; position:absolute; border-radius:50%; pointer-events:none; z-index:0;
-    width:800px; height:800px;
-    background:radial-gradient(circle,rgba(6,182,212,.09) 0%,transparent 65%);
-    bottom:-20%; left:-8%;
-    animation:breathe 8s ease-in-out infinite alternate;
-    animation-delay:-4s;
-  }
-
-  /* Per-chapter orb tints — driven by body class set in JS */
-  .ch-images .s-text::before,.ch-images .s-split::before,.ch-images .s-video::before,
-  .ch-images .s-compare::before { background:radial-gradient(circle,rgba(244,63,94,.14) 0%,transparent 65%); }
-  .ch-images .s-text::after,.ch-images .s-split::after,.ch-images .s-video::after,
-  .ch-images .s-compare::after  { background:radial-gradient(circle,rgba(245,158,11,.09) 0%,transparent 65%); }
-
-  .ch-video .s-text::before,.ch-video .s-split::before,.ch-video .s-video::before,
-  .ch-video .s-compare::before  { background:radial-gradient(circle,rgba(6,182,212,.16) 0%,transparent 65%); }
-  .ch-video .s-text::after,.ch-video .s-split::after,.ch-video .s-video::after,
-  .ch-video .s-compare::after   { background:radial-gradient(circle,rgba(124,58,237,.09) 0%,transparent 65%); }
-
-  .ch-effects .s-text::before,.ch-effects .s-split::before,.ch-effects .s-video::before { background:radial-gradient(circle,rgba(245,158,11,.14) 0%,transparent 65%); }
-  .ch-effects .s-text::after,.ch-effects .s-split::after,.ch-effects .s-video::after   { background:radial-gradient(circle,rgba(124,58,237,.08) 0%,transparent 65%); }
-
-  .ch-sound .s-text::before,.ch-sound .s-split::before,.ch-sound .s-video::before { background:radial-gradient(circle,rgba(139,92,246,.15) 0%,transparent 65%); }
-  .ch-sound .s-text::after,.ch-sound .s-split::after,.ch-sound .s-video::after   { background:radial-gradient(circle,rgba(16,185,129,.09) 0%,transparent 65%); }
-
-  .ch-connect .s-text::before,.ch-connect .s-split::before,.ch-connect .s-video::before,.ch-connect .s-compare::before { background:radial-gradient(circle,rgba(244,63,94,.14) 0%,transparent 65%); }
-  .ch-connect .s-text::after,.ch-connect .s-split::after,.ch-connect .s-video::after,.ch-connect .s-compare::after   { background:radial-gradient(circle,rgba(6,182,212,.08) 0%,transparent 65%); }
-
-  .ch-direct .s-text::before,.ch-direct .s-split::before,.ch-direct .s-video::before { background:radial-gradient(circle,rgba(6,182,212,.15) 0%,transparent 65%); }
-  .ch-direct .s-text::after,.ch-direct .s-split::after,.ch-direct .s-video::after   { background:radial-gradient(circle,rgba(16,185,129,.09) 0%,transparent 65%); }
-
-  .ch-data .s-text::before,.ch-data .s-split::before,.ch-data .s-video::before { background:radial-gradient(circle,rgba(16,185,129,.15) 0%,transparent 65%); }
-  .ch-data .s-text::after,.ch-data .s-split::after,.ch-data .s-video::after   { background:radial-gradient(circle,rgba(6,182,212,.09) 0%,transparent 65%); }
-
-  .ch-surprise .s-text::before,.ch-surprise .s-split::before { background:radial-gradient(circle,rgba(244,63,94,.14) 0%,transparent 65%); }
-  .ch-surprise .s-text::after,.ch-surprise .s-split::after   { background:radial-gradient(circle,rgba(245,158,11,.10) 0%,transparent 65%); }
+  /* Global background canvas — see JS section */
+  #bg-canvas { position:fixed; inset:0; width:100%; height:100%; z-index:-1; pointer-events:none; }
 
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      12 — OUTRO
@@ -719,6 +672,9 @@
       </linearGradient>
     </defs>
   </svg>
+
+  <!-- Global animated background — fills full viewport including letterbox areas -->
+  <canvas id="bg-canvas"></canvas>
 
   <div class="reveal">
     <div class="slides">
@@ -2297,7 +2253,7 @@
             <strong style="color:var(--white)">האינסטינקט לחקור — לעולם לא.</strong>
           </div>
           <div class="s-outro-logo" style="animation:fade-up .7s .35s ease both">
-            <img src="assets/logo-42.png" alt="42 Creative" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <img src="assets/white-small.gif" alt="42 Creative" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
             <span style="display:none;font-size:2.5em;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent">42</span>
           </div>
         </div>
@@ -2307,7 +2263,7 @@
   </div><!-- /reveal -->
 
   <div class="logo-42" id="logo42">
-    <img src="assets/logo-42.png" alt="42 Creative" onerror="this.parentElement.innerHTML='<span class=&quot;logo-text&quot;>42</span>'">
+    <img src="assets/white-small.gif" alt="42 Creative" onerror="this.parentElement.innerHTML='<span class=&quot;logo-text&quot;>42</span>'">
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
@@ -2386,20 +2342,20 @@
     });
   }
 
-  /* ── CHAPTER BACKGROUNDS: per-chapter color system ── */
+  /* ── CHAPTER BACKGROUNDS: dark tint overlay (rgba transitions smoothly) ── */
   const CHAPTER_BG = {
-    default:    'linear-gradient(160deg,#0e0028 0%,#05050e 45%,#001828 100%)',
-    write:      'linear-gradient(160deg,#10001e 0%,#04040c 45%,#001428 100%)',
-    images:     'linear-gradient(160deg,#200410 0%,#05050e 48%,#0c0014 100%)',
-    video:      'linear-gradient(160deg,#001820 0%,#04050e 45%,#080018 100%)',
-    effects:    'linear-gradient(160deg,#1c0a00 0%,#05050e 45%,#001018 100%)',
-    sound:      'linear-gradient(160deg,#0e001e 0%,#04040c 48%,#001220 100%)',
-    connect:    'linear-gradient(160deg,#1e0510 0%,#05050e 45%,#000e20 100%)',
-    direct:     'linear-gradient(160deg,#001e1a 0%,#04050e 45%,#00100e 100%)',
-    data:       'linear-gradient(160deg,#001c14 0%,#04050e 45%,#000a1c 100%)',
-    everything: 'linear-gradient(160deg,#0e0028 0%,#05050e 45%,#001828 100%)',
-    surprise:   'linear-gradient(160deg,#200a00 0%,#050508 48%,#0a000c 100%)',
-    outro:      'linear-gradient(160deg,#0e0028 0%,#04050e 45%,#001828 100%)',
+    default:    'rgba(8,6,22,0.78)',
+    write:      'rgba(9,4,24,0.78)',
+    images:     'rgba(20,4,8,0.78)',
+    video:      'rgba(4,10,22,0.78)',
+    effects:    'rgba(20,9,2,0.78)',
+    sound:      'rgba(10,4,22,0.78)',
+    connect:    'rgba(18,4,12,0.78)',
+    direct:     'rgba(4,14,14,0.78)',
+    data:       'rgba(4,14,10,0.78)',
+    everything: 'rgba(8,6,22,0.78)',
+    surprise:   'rgba(20,6,2,0.78)',
+    outro:      'rgba(8,6,22,0.78)',
   };
 
   let _currentChapterKey = 'default';
@@ -2426,7 +2382,154 @@
     /* Sync body class for CSS-driven per-chapter orb tints */
     document.body.className = document.body.className.replace(/\s*\bch-\w+/g, '');
     document.body.classList.add('ch-' + key);
+    if (typeof window.setBgPalette === 'function') window.setBgPalette(key);
   }
+
+  /* ─── GLOBAL BG CANVAS: particles + geometry, chapter-aware colors ─── */
+  (function bgCanvas() {
+    const CV = document.getElementById('bg-canvas');
+    if (!CV) return;
+    const CX = CV.getContext('2d');
+
+    const PALETTES = {
+      default:    [[124,58,237],[6,182,212]],
+      write:      [[124,58,237],[168,85,247]],
+      images:     [[244,63,94],[245,158,11]],
+      video:      [[6,182,212],[124,58,237]],
+      effects:    [[245,158,11],[16,185,129]],
+      sound:      [[139,92,246],[6,182,212]],
+      connect:    [[244,63,94],[124,58,237]],
+      direct:     [[6,182,212],[16,185,129]],
+      data:       [[16,185,129],[6,182,212]],
+      everything: [[124,58,237],[6,182,212]],
+      surprise:   [[244,63,94],[245,158,11]],
+      outro:      [[124,58,237],[6,182,212]],
+    };
+
+    let W, H, dots, geos;
+    let pal = PALETTES.default.map(c=>[...c]);
+    let target = PALETTES.default.map(c=>[...c]);
+    let palT = 1;
+
+    function resize() {
+      W = CV.width  = window.innerWidth;
+      H = CV.height = window.innerHeight;
+      const n = Math.min(65, Math.ceil(W * H / 22000));
+      dots = Array.from({length: n}, () => ({
+        x: Math.random()*W, y: Math.random()*H,
+        vx: (Math.random()-.5)*.45, vy: (Math.random()-.5)*.45
+      }));
+      geos = Array.from({length: 7}, () => ({
+        x: Math.random()*W, y: Math.random()*H,
+        r: 35 + Math.random()*70,
+        rot: Math.random()*Math.PI*2,
+        rs: (Math.random()-.5)*.005,
+        vx: (Math.random()-.5)*.18, vy: (Math.random()-.5)*.18,
+        sides: [3,4,6][Math.floor(Math.random()*3)],
+        ci: Math.floor(Math.random()*2)
+      }));
+    }
+
+    function lerpC(a, b, t) {
+      return [
+        Math.round(a[0] + (b[0]-a[0])*t),
+        Math.round(a[1] + (b[1]-a[1])*t),
+        Math.round(a[2] + (b[2]-a[2])*t)
+      ];
+    }
+
+    function getC(ci) {
+      const c = palT < 1
+        ? lerpC(pal[ci] || pal[0], target[ci] || target[0], palT)
+        : (target[ci] || target[0]);
+      return c;
+    }
+
+    function rgba(ci, a) {
+      const c = getC(ci);
+      return `rgba(${c[0]},${c[1]},${c[2]},${a})`;
+    }
+
+    function poly(x, y, r, n, angle) {
+      CX.beginPath();
+      for (let i = 0; i < n; i++) {
+        const a = angle + (i/n)*Math.PI*2;
+        i === 0 ? CX.moveTo(x+r*Math.cos(a), y+r*Math.sin(a))
+                : CX.lineTo(x+r*Math.cos(a), y+r*Math.sin(a));
+      }
+      CX.closePath();
+    }
+
+    let last = 0;
+    function tick(ts) {
+      requestAnimationFrame(tick);
+      if (ts - last < 33) return;
+      last = ts;
+
+      if (palT < 1) palT = Math.min(1, palT + .012);
+
+      CX.clearRect(0, 0, W, H);
+
+      /* connecting lines between nearby dots */
+      for (let i = 0; i < dots.length; i++) {
+        for (let j = i+1; j < dots.length; j++) {
+          const dx = dots[i].x - dots[j].x;
+          const dy = dots[i].y - dots[j].y;
+          const d2 = dx*dx + dy*dy;
+          if (d2 < 25600) {
+            const alpha = 0.055 * (1 - Math.sqrt(d2)/160);
+            CX.beginPath();
+            CX.strokeStyle = rgba(0, alpha);
+            CX.lineWidth = .7;
+            CX.moveTo(dots[i].x, dots[i].y);
+            CX.lineTo(dots[j].x, dots[j].y);
+            CX.stroke();
+          }
+        }
+      }
+
+      /* dots */
+      dots.forEach(p => {
+        CX.beginPath();
+        CX.arc(p.x, p.y, 1.4, 0, Math.PI*2);
+        CX.fillStyle = rgba(0, .30);
+        CX.fill();
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+        if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+      });
+
+      /* rotating geometric shapes */
+      geos.forEach(g => {
+        g.rot += g.rs;
+        g.x += g.vx; g.y += g.vy;
+        if (g.x < -160) g.x = W+160; if (g.x > W+160) g.x = -160;
+        if (g.y < -160) g.y = H+160; if (g.y > H+160) g.y = -160;
+
+        /* outer shape */
+        CX.strokeStyle = rgba(g.ci, .07);
+        CX.lineWidth = 1;
+        poly(g.x, g.y, g.r, g.sides, g.rot);
+        CX.stroke();
+
+        /* inner counter-rotating shape */
+        CX.strokeStyle = rgba(1 - g.ci, .04);
+        poly(g.x, g.y, g.r * .55, g.sides, -g.rot * 1.4);
+        CX.stroke();
+      });
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+    requestAnimationFrame(tick);
+
+    window.setBgPalette = function(key) {
+      const p = PALETTES[key] || PALETTES.default;
+      pal = target.map(c => [...c]);
+      target = p.map(c => [...c]);
+      palT = 0;
+    };
+  })();
 
   document.addEventListener('DOMContentLoaded', () => {
     initParticles('canvas-cover');
