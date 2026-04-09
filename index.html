@@ -32,10 +32,14 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      REVEAL RESET — FULL-BLEED CANVAS
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  html,body { background:#05050e !important; margin:0; padding:0; }
-  .reveal-viewport { background:#05050e !important; }
-  .reveal { font-family:var(--font) !important; font-size:42px; background:#05050e !important; }
-  .reveal .slides { direction:rtl; text-align:right; background:#05050e !important; }
+  html,body {
+    background:linear-gradient(165deg,#100028 0%,#05050e 50%,#001525 100%) !important;
+    background-attachment:fixed !important;
+    margin:0; padding:0;
+  }
+  .reveal-viewport { background:transparent !important; }
+  .reveal { font-family:var(--font) !important; font-size:42px; background:transparent !important; }
+  .reveal .slides { direction:rtl; text-align:right; background:transparent !important; }
   .reveal .slides > section {
     padding:0 !important; margin:0 !important;
     background:var(--bg) !important; background-image:none !important;
@@ -160,7 +164,7 @@
     -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
     animation:shimmer 3s linear infinite;
   }
-  .logo-42 { position:fixed; bottom:22px; right:28px; z-index:100; opacity:.4; pointer-events:none; }
+  .logo-42 { position:fixed; bottom:22px; left:28px; z-index:5; opacity:.45; pointer-events:none; }
   .logo-42 img { height:32px; }
   .logo-42 .logo-text { font-family:var(--font); font-size:22px; font-weight:900; color:var(--white); letter-spacing:-.02em; }
 
@@ -597,6 +601,10 @@
     border-left:2px solid rgba(245,158,11,.22);
   }
 
+  /* ── FRAGMENTS: tblocks appear one-per-click ── */
+  .tblock.fragment { animation:none !important; }
+  .tblock.fragment.visible { animation:fade-up .45s ease both !important; }
+
   /* ── DEMO SLIDES: clean placeholder, no decoration ── */
   .demo-placeholder {
     width:100%; height:100%;
@@ -711,19 +719,19 @@
             <h2>מה הAI עושה? בינתיים — מפשט</h2>
           </div>
           <div class="s-text-blocks">
-            <div class="tblock" style="animation-delay:.05s">
+            <div class="tblock fragment" style="animation-delay:.05s">
               <span class="lbl">בינתיים</span>
               <p>הAI <strong>לא ממציא דברים חדשים</strong> — הוא מפשט דברים שפעם היה מורכב מאוד לעשות אותם, או שהיה צריך בשבילם להיות מומחה גדול.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.12s">
+            <div class="tblock c fragment" style="animation-delay:.12s">
               <span class="lbl">לכן</span>
               <p>אם מישהו הוא <strong>"מומחה גדול" בתחום מסובך</strong> — הAI רודף אחריו בצעדי ענק. הוא הפך את המורכבות שנו לנגישה לכולם.</p>
             </div>
-            <div class="tblock" style="animation-delay:.19s">
+            <div class="tblock fragment" style="animation-delay:.19s">
               <span class="lbl">המשמעות</span>
               <p>מה שלפני שנתיים דרש <strong>3 כלים, שעות עבודה וידע טכני עמוק</strong> — היום נעשה בפרומפט אחד, בעברית, בפחות מדקה.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.26s">
+            <div class="tblock c fragment" style="animation-delay:.26s">
               <span class="lbl">המציאות</span>
               <p>מי שממשיך לעשות דברים <strong>כמו שתמיד עשה</strong> — מוצא את עצמו מתחרה עם מישהו שמשתמש ב-AI. זה לא הוגן. זה המציאות.</p>
             </div>
@@ -852,19 +860,19 @@
             <h2>מה יש לנו בשבילכם</h2>
           </div>
           <div class="s-text-blocks">
-            <div class="tblock" style="animation-delay:.05s">
+            <div class="tblock fragment" style="animation-delay:.05s">
               <span class="lbl">💡 יכולות</span>
               <p>הרבה דברים שה-AI <strong>יודע לעשות (בינתיים)</strong> — כדי שנדע לחשוב עליהם כשמייצרים תכנים, מעלים רעיונות ומציעים הצעות ללקוחות.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.12s">
+            <div class="tblock c fragment" style="animation-delay:.12s">
               <span class="lbl">🎬 הדגמות</span>
               <p>לא רק מסבירים — <strong>מראים.</strong> כל יכולת עם הדגמה חיה. אתם מוזמנים לשאול "ואיך עושים את זה בדיוק?" לאורך כל הדרך.</p>
             </div>
-            <div class="tblock" style="animation-delay:.19s">
+            <div class="tblock fragment" style="animation-delay:.19s">
               <span class="lbl">✦ טיפי זהב</span>
               <p>הדרך הקצרה בין "ניסיתי ויצא רע" ל-"ניסיתי ויצא מרשים". <strong>טיפים שלמדנו על בשרנו</strong> בחודשים האחרונים — בשבילכם.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.26s">
+            <div class="tblock c fragment" style="animation-delay:.26s">
               <span class="lbl">🎁 הפתעה</span>
               <p>יש פה <strong>משהו שלא ציפיתם</strong> לו. לא נגלה עכשיו. נגיע אליו בסוף. רמז: קשור למצגת הזו עצמה.</p>
             </div>
@@ -1079,19 +1087,19 @@
             <h2>תדבריף + 3 דוגמאות = הסגנון שלהם</h2>
           </div>
           <div class="s-text-blocks">
-            <div class="tblock" style="animation-delay:.05s">
+            <div class="tblock fragment" style="animation-delay:.05s">
               <span class="lbl">מה להעלות</span>
               <p>תדבריף + <strong>3 דוגמאות כתיבה של הלקוח.</strong> לא צריך להסביר את השפה — פשוט מראים אותה. Gemini מבין מה רואה.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.12s">
+            <div class="tblock c fragment" style="animation-delay:.12s">
               <span class="lbl">מה יוצא</span>
               <p>Gemini <strong>כותב בדיוק בסגנון שלו</strong> — לא בסגנון "AI מובהק". התוצר נשמע כמו שהלקוח היה כותב אם היה כותב טוב יותר.</p>
             </div>
-            <div class="tblock" style="animation-delay:.19s">
+            <div class="tblock fragment" style="animation-delay:.19s">
               <span class="lbl">שפה אחידה אוטומטית</span>
               <p>Gem + קבצים = <strong>אחידות בכל פלטפורמה.</strong> אינסטגרם, מייל, מצגת, לינקדאין — אותו קול, בלי מאמץ.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.26s">
+            <div class="tblock c fragment" style="animation-delay:.26s">
               <span class="lbl">טיפ — PDF מ-ספר מותג</span>
               <p>יש ללקוח "ספר מותג" ב-PDF? <strong>העלו ישירות לGem.</strong> Gemini קורא הכל — טקסט, פלטות צבע, ערכים — ומפנים לתוך כל פרומפט.</p>
             </div>
@@ -1179,19 +1187,19 @@
             <h2>ממחשבה לוויז — בלי פוטושופ</h2>
           </div>
           <div class="s-text-blocks">
-            <div class="tblock" style="animation-delay:.05s">
+            <div class="tblock fragment" style="animation-delay:.05s">
               <span class="lbl">Imagen 3 / Gemini Flash Image</span>
               <p>יצירת תמונה מאפס מפרומפט. <strong>Inpainting</strong> — בחרו אזור בתמונה קיימת, תארו מה שרוצים במקומו, Gemini מחליף בדיוק שם בלי לגעת בשאר.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.12s">
+            <div class="tblock c fragment" style="animation-delay:.12s">
               <span class="lbl">Redo with Pro</span>
               <p>יצרתם תמונה ב-Flash ויצאה טוב אבל לא מושלמת? לחצו <strong>"Redo with Pro"</strong> — שדרוג מיידי לאיכות גבוהה יותר, ללא פרומפט חדש.</p>
             </div>
-            <div class="tblock" style="animation-delay:.19s">
+            <div class="tblock fragment" style="animation-delay:.19s">
               <span class="lbl">Upload + Edit</span>
               <p>מעלים תמונה קיימת + נותנים הנחיה = <strong>עריכה לפי הוראה.</strong> "הסר את הרקע", "שנה את הצבע", "הוסף אדם מימין" — עובד.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.26s">
+            <div class="tblock c fragment" style="animation-delay:.26s">
               <span class="lbl">Gems לוויז</span>
               <p>אותו Gem שנבנה לכתיבה — עובד גם לתמונות. <strong>סגנון ויזואלי, פלטת צבעים, תחושה</strong> — מוגדרים פעם אחת, קבועים לתמיד.</p>
             </div>
@@ -1279,19 +1287,19 @@
             <h2>הפיזיקה שנראתה לפני כן רק בקולנוע</h2>
           </div>
           <div class="s-text-blocks">
-            <div class="tblock c" style="animation-delay:.05s">
+            <div class="tblock c fragment" style="animation-delay:.05s">
               <span class="lbl">Text-to-Video</span>
               <p>תיאור טקסטואלי ← קליפ 5–10 שניות עם <strong>פיזיקה ריאלית.</strong> מים זורמים, שיער מתנפנף, בד מתנועע — הכל עם הגיון פיזיקלי אמיתי.</p>
             </div>
-            <div class="tblock" style="animation-delay:.12s">
+            <div class="tblock fragment" style="animation-delay:.12s">
               <span class="lbl">Image-to-Video</span>
               <p>תמונת מוצר / פורטרט / רפרנס ← <strong>קליפ מותגי.</strong> הדמות בתמונה מתחילה לנוע, הרקע מתעורר — אפס צילום.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.19s">
+            <div class="tblock c fragment" style="animation-delay:.19s">
               <span class="lbl">Camera Control</span>
               <p><strong>שליטה מלאה בתנועת המצלמה.</strong> Dolly in, pan, orbit, crane — אותן תנועות שמצלמן מקצועי לוקח שעות לתכנן, פה זה dropdown.</p>
             </div>
-            <div class="tblock" style="animation-delay:.26s">
+            <div class="tblock fragment" style="animation-delay:.26s">
               <span class="lbl">Start + End Frames</span>
               <p>קבעו <strong>פריים פתיחה ופריים סיום</strong> — Kling ממלא את האנימציה באמצע. זה הכלי להדגמות מוצר מרהיבות.</p>
             </div>
@@ -1341,19 +1349,19 @@
             <h2>יש לכם קליפ — ועכשיו אפשר לשנות אותו</h2>
           </div>
           <div class="s-text-blocks">
-            <div class="tblock c" style="animation-delay:.05s">
+            <div class="tblock c fragment" style="animation-delay:.05s">
               <span class="lbl">מה זה Kling Omni?</span>
               <p>כלי עריכה שמאפשר <strong>להחליף אלמנטים בתוך וידאו קיים</strong> — בלי לצלם מחדש. בחרתם אזור, תיארתם מה שרוצים, Kling מחליף.</p>
             </div>
-            <div class="tblock" style="animation-delay:.12s">
+            <div class="tblock fragment" style="animation-delay:.12s">
               <span class="lbl">מה אפשר להחליף?</span>
               <p><strong>רקע</strong> — מהמשרד לחוף הים. <strong>מוצר</strong> — בקבוק אחד במקום אחר. <strong>בגד / צבע</strong> — אדום במקום כחול. הכל, בלי גרין-סקרין.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.19s">
+            <div class="tblock c fragment" style="animation-delay:.19s">
               <span class="lbl">למה זה מהפכני?</span>
               <p>לקוח ביקש לשנות משהו בסרטון? <strong>במקום צילום מחדש</strong> — פרומפט אחד + כמה דקות. עריכה שלקחה יום — לוקחת 5 דקות.</p>
             </div>
-            <div class="tblock" style="animation-delay:.26s">
+            <div class="tblock fragment" style="animation-delay:.26s">
               <span class="lbl">Inpainting לוידאו</span>
               <p>אותו עקרון כמו Inpainting בתמונות — רק שפה זה <strong>עובד על כל פריים</strong> בצורה עקבית לאורך כל הקליפ. לא רק תמונה בודדת.</p>
             </div>
@@ -1407,19 +1415,19 @@
             <h2>וידאו שמגיע עם נשמה — סאונד מובנה</h2>
           </div>
           <div class="s-text-blocks">
-            <div class="tblock c" style="animation-delay:.05s">
+            <div class="tblock c fragment" style="animation-delay:.05s">
               <span class="lbl">Native Audio</span>
               <p>הסאונד <strong>נוצר יחד עם הוידאו</strong>, לא מודבק אחרי. צלילי סביבה, קולות דמויות, מוזיקה — הכל מסונכרן בדיוק לתמונה.</p>
             </div>
-            <div class="tblock" style="animation-delay:.12s">
+            <div class="tblock fragment" style="animation-delay:.12s">
               <span class="lbl">First & Last Frame</span>
               <p>קבעו <strong>פריים פתיחה + פריים סיום</strong> — Veo ממלא את האנימציה באמצע. מושלם לסרטוני מוצר עם תנועה מוגדרת.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.19s">
+            <div class="tblock c fragment" style="animation-delay:.19s">
               <span class="lbl">הארכת קטעים</span>
               <p>יצרתם קליפ 8 שניות? <strong>בקשו מ-Veo להאריך</strong> — הוא ימשיך את הסיפור הלאה, עם אותה דמות ואותו רקע.</p>
             </div>
-            <div class="tblock" style="animation-delay:.26s;border-color:rgba(244,63,94,.4)">
+            <div class="tblock fragment" style="animation-delay:.26s;border-color:rgba(244,63,94,.4)">
               <span class="lbl" style="color:var(--rose)">⚠️ חשוב לדעת</span>
               <p>אם מייצרים <strong>כמה קטעים עם אותה דמות</strong> — הקול לא יהיה זהה בין קליפ לקליפ. הפתרון: ElevenLabs STS לדיבוב אחיד. נגיע לזה בפרק הסאונד.</p>
             </div>
@@ -1607,19 +1615,19 @@
             <h2>קול שלא נשמע כמו AI</h2>
           </div>
           <div class="s-text-blocks">
-            <div class="tblock" style="animation-delay:.05s">
+            <div class="tblock fragment" style="animation-delay:.05s">
               <span class="lbl">Text-to-Speech (TTS)</span>
               <p>כותבים טקסט ← מקבלים קריינות. <strong>בעברית.</strong> בוחרים קול, גיל, אינטונציה. 2 שניות לסקריפט שלם.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.12s">
+            <div class="tblock c fragment" style="animation-delay:.12s">
               <span class="lbl">Voice Changer (STS)</span>
               <p>מקליטים את עצמכם → ElevenLabs <strong>ממיר לקול אחר</strong> — בלי לכתוב מחדש. מושלם לדיבוב וידאו Veo/Kling בקול אחיד.</p>
             </div>
-            <div class="tblock" style="animation-delay:.19s">
+            <div class="tblock fragment" style="animation-delay:.19s">
               <span class="lbl">עברית — עובד באמת</span>
               <p>ElevenLabs <strong>מבין עברית</strong> כולל ניקוד, ניואנסים ואינטונציה. מה שאחרים מייצרים בגנגנה — כאן נשמע אנושי.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.26s">
+            <div class="tblock c fragment" style="animation-delay:.26s">
               <span class="lbl">Sound Effects</span>
               <p>תיאור בטקסט → אפקט סאונד מותאם. "חיית ים מוזרה קורסת על רצפה מתכתית" — <strong>פשוט כתבו מה שאתם שומעים בראש.</strong></p>
             </div>
@@ -1696,19 +1704,19 @@
             <h2>שיר שלם מפרומפט — כולל מילים</h2>
           </div>
           <div class="s-text-blocks">
-            <div class="tblock" style="animation-delay:.05s">
+            <div class="tblock fragment" style="animation-delay:.05s">
               <span class="lbl">Text-to-Music</span>
               <p>מתיאור טקסטואלי → שיר מלא עם <strong>מוזיקה + שירה + מילים.</strong> "פופ עברי, אנרגטי, על קיץ בתל אביב" — 30 שניות ← שיר שלם.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.12s">
+            <div class="tblock c fragment" style="animation-delay:.12s">
               <span class="lbl">Audio-to-Audio</span>
               <p>מעלים אודיו קיים → Suno <strong>מחדש, מסגנן, מוסיף שכבות.</strong> קליפ ישן ← גרסה חדשה לגמרי. מבלי לאבד את הרגש המקורי.</p>
             </div>
-            <div class="tblock" style="animation-delay:.19s">
+            <div class="tblock fragment" style="animation-delay:.19s">
               <span class="lbl">Covers ואינסטרומנטל</span>
               <p>קאברים לשירים ידועים, גרסאות אינסטרומנטל, <strong>סאונדטרקים לוידאו</strong> — כל מה שדרש פרודיוסר ואולפן.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.26s">
+            <div class="tblock c fragment" style="animation-delay:.26s">
               <span class="lbl">⚠️ עברית — עדיין לא מושלם</span>
               <p>עברית ב-Suno עובדת, <strong>אבל עם מבטא זר.</strong> הטריק: כתבו מילים עם ניקוד + בקשו "Israeli Hebrew accent". תשמעו הבדל.</p>
             </div>
@@ -1879,19 +1887,19 @@
             <h2>עריכה בלי לדעת עריכה</h2>
           </div>
           <div class="s-text-blocks">
-            <div class="tblock" style="animation-delay:.05s">
+            <div class="tblock fragment" style="animation-delay:.05s">
               <span class="lbl">Auto Captions</span>
               <p>כתוביות אוטומטיות, מסונכרנות, עם <strong>עיצוב מותאם.</strong> עברית — כן. 30 שניות לסרטון שלם.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.12s">
+            <div class="tblock c fragment" style="animation-delay:.12s">
               <span class="lbl">Auto Cut + BGM</span>
               <p>CapCut <strong>חותך לרגעי הפסגה</strong> בסרטון, מוסיף מוזיקת רקע מסונכרנת, מייצר Reel אוטומטי. אתם מוסרים חומר, הוא עורך.</p>
             </div>
-            <div class="tblock" style="animation-delay:.19s">
+            <div class="tblock fragment" style="animation-delay:.19s">
               <span class="lbl">Remove Watermark</span>
               <p>סרטונים שיובאו מ-TikTok, Instagram, כלי AI — CapCut <strong>מוחק watermark</strong> אוטומטית. לא צריך להסביר איך.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.26s">
+            <div class="tblock c fragment" style="animation-delay:.26s">
               <span class="lbl">AI Effects מובנים</span>
               <p>Reframe, background change, sky replacement — <strong>הכל ב-app אחד.</strong> CapCut הוא Premiere + After Effects למשתמש הרגיל.</p>
             </div>
@@ -2032,19 +2040,19 @@
             <h2>גיליון אקסל → תובנות קריאטיביות</h2>
           </div>
           <div class="s-text-blocks">
-            <div class="tblock" style="animation-delay:.05s">
+            <div class="tblock fragment" style="animation-delay:.05s">
               <span class="lbl">מעלים קובץ — מקבלים תובנות</span>
               <p>Excel / CSV / PDF ← ChatGPT <strong>מנתח, מסכם, מסביר</strong> בשפה שלכם. מספיק לשאול "מה מעניין כאן?"</p>
             </div>
-            <div class="tblock c" style="animation-delay:.12s">
+            <div class="tblock c fragment" style="animation-delay:.12s">
               <span class="lbl">גרפים וויז אוטומטיים</span>
               <p>בקשו "צור גרף" — ChatGPT <strong>מייצר גרפים קריאים,</strong> בוחר את הדרך הנכונה להציג כל נתון. לא Canva, לא Excel מסובך.</p>
             </div>
-            <div class="tblock" style="animation-delay:.19s">
+            <div class="tblock fragment" style="animation-delay:.19s">
               <span class="lbl">שאלות בשפה טבעית</span>
               <p>"מה הלקוח שהכי פחות קנה? מה ההוצאה הגדולה?" — <strong>שאלות בעברית פשוטה</strong> על גיליון עם אלפי שורות. תשובה ב-3 שניות.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.26s">
+            <div class="tblock c fragment" style="animation-delay:.26s">
               <span class="lbl">דוח לקוח — כתוב מאליו</span>
               <p>ChatGPT יכול <strong>לכתוב את הדוח</strong> בשבילכם — נתון X עלה ב-Y%, מגמה, המלצה לחודש הבא. מExcel לPDF מוצג — 10 דקות.</p>
             </div>
@@ -2148,19 +2156,19 @@
             <h2>המצגת הזו — AI עשה אותה</h2>
           </div>
           <div class="s-text-blocks">
-            <div class="tblock" style="animation-delay:.05s">
+            <div class="tblock fragment" style="animation-delay:.05s">
               <span class="lbl">מה שראיתם</span>
               <p>כל העיצוב, כל הטקסטים, כל המבנה הנרטיבי — <strong>Claude + ChatGPT</strong> עשו את רוב העבודה. הכלים שדיברנו עליהם — בפועל.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.12s">
+            <div class="tblock c fragment" style="animation-delay:.12s">
               <span class="lbl">כמה זמן לקח</span>
               <p>כמה שעות עבודה → מצגת מלאה. לא "דמו" — <strong>התוצר הסופי שאתם קיבלתם עכשיו.</strong> זה מה שאפשרי היום.</p>
             </div>
-            <div class="tblock" style="animation-delay:.19s">
+            <div class="tblock fragment" style="animation-delay:.19s">
               <span class="lbl">הלקח</span>
               <p>ה-AI לא החליף את המחשבה. הוא <strong>הגביר את היכולת.</strong> האסטרטגיה — שלנו. הביצוע — AI. כולם מרוויחים.</p>
             </div>
-            <div class="tblock c" style="animation-delay:.26s">
+            <div class="tblock c fragment" style="animation-delay:.26s">
               <span class="lbl">מה עכשיו?</span>
               <p><strong>לחקור. לנסות. לא לחכות.</strong> הכלים מוכנים. השאלה היא — אתם?</p>
             </div>
@@ -2265,9 +2273,35 @@
     document.querySelector(sel)?.classList.add('active-btn');
   }
 
+  /* ── AUTO-INJECT animated bg elements into slides that lack them ── */
+  function enhanceSlideBackgrounds() {
+    const COLORS = [
+      { cls:'orb',       dur:'12s', delay:'0s',   op:'.10', pos:'top:50%;right:-80px;transform:translateY(-50%)' },
+      { cls:'orb cyan',  dur:'9s',  delay:'-4s',  op:'.07', pos:'top:25%;left:-60px;transform:translateY(-50%)' },
+    ];
+    document.querySelectorAll('.reveal .slides > section').forEach(sec => {
+      /* bg-dots on slides with no bg child */
+      if (!sec.querySelector('.bg')) {
+        const d = document.createElement('div');
+        d.className = 'bg bg-dots'; d.style.opacity = '.18';
+        sec.insertBefore(d, sec.firstChild);
+      }
+      /* ambient orbs on slides without any orb */
+      if (!sec.querySelector('.orb')) {
+        COLORS.forEach(({ cls, dur, delay, op, pos }) => {
+          const o = document.createElement('div');
+          o.className = cls;
+          o.style.cssText = `width:500px;height:500px;${pos};opacity:${op};animation-duration:${dur};animation-delay:${delay};position:absolute;pointer-events:none;z-index:0`;
+          sec.insertBefore(o, sec.firstChild);
+        });
+      }
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     initParticles('canvas-cover');
     initParticles('canvas-outro');
+    enhanceSlideBackgrounds();
     // Mark default gender button as active
     document.querySelector('.ai-gender-btn.male')?.classList.add('active-btn');
   });
