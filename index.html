@@ -193,8 +193,8 @@
     -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
     animation:shimmer 3s linear infinite;
   }
-  .logo-42 { position:fixed; bottom:22px; left:28px; z-index:5; opacity:.45; pointer-events:none; }
-  .logo-42 img { height:32px; }
+  .logo-42 { position:fixed; bottom:22px; left:28px; z-index:5; opacity:.68; pointer-events:none; }
+  .logo-42 img { height:46px; }
   .logo-42 .logo-text { font-family:var(--font); font-size:22px; font-weight:900; color:var(--white); letter-spacing:-.02em; }
 
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -294,22 +294,22 @@
   .s-statement {
     display:flex !important; align-items:center; justify-content:center;
     height:100%; text-align:center;
-    background:linear-gradient(165deg,#0e0028 0%,#050510 50%,#001222 100%) !important;
+    background:transparent !important;
     overflow:hidden !important; position:relative;
   }
   .s-statement-inner { position:relative; z-index:2; max-width:90%; }
   .s-statement-conic {
     position:absolute; inset:-60%; border-radius:50%;
     background:conic-gradient(from 0deg at 50% 50%,
-      transparent 0deg, rgba(124,58,237,.07) 55deg,
-      transparent 110deg, rgba(6,182,212,.05) 180deg,
-      transparent 240deg, rgba(124,58,237,.06) 310deg,
+      transparent 0deg, rgba(124,58,237,.22) 55deg,
+      transparent 110deg, rgba(6,182,212,.16) 180deg,
+      transparent 240deg, rgba(168,85,247,.20) 310deg,
       transparent 360deg);
     animation:spin 35s linear infinite; pointer-events:none;
   }
   .s-statement-conic2 {
     position:absolute; inset:-40%;
-    background:conic-gradient(from 180deg at 50% 50%,transparent 0deg,rgba(168,85,247,.06) 80deg,transparent 160deg);
+    background:conic-gradient(from 180deg at 50% 50%,transparent 0deg,rgba(168,85,247,.18) 80deg,transparent 160deg);
     animation:spin-r 22s linear infinite; pointer-events:none;
   }
   .s-statement-word {
@@ -402,11 +402,11 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      09 — COMPARE
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .s-compare { display:grid !important; height:100%; grid-template-columns:1fr 1fr; background:var(--bg) !important; position:relative; }
+  .s-compare { display:grid !important; height:100%; grid-template-columns:1fr 1fr; background:transparent !important; position:relative; }
   .s-compare-vs { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:60px; height:60px; border-radius:50%; background:var(--grad); display:flex; align-items:center; justify-content:center; font-size:.55em; font-weight:900; color:white; z-index:10; box-shadow:0 0 30px rgba(124,58,237,.5); animation:float 4s ease-in-out infinite; }
   .s-compare-col { display:flex; flex-direction:column; padding:70px 60px; animation:fade-up .6s ease both; }
-  .s-compare-col:first-child { background:linear-gradient(to left,rgba(124,58,237,.06) 0%,transparent 100%); border-left:1px solid rgba(255,255,255,.05); }
-  .s-compare-col:last-child  { background:linear-gradient(to right,rgba(6,182,212,.06) 0%,transparent 100%); border-right:1px solid rgba(255,255,255,.05); }
+  .s-compare-col:first-child { background:linear-gradient(to left,rgba(124,58,237,.14) 0%,transparent 70%); border-left:1px solid rgba(124,58,237,.12); }
+  .s-compare-col:last-child  { background:linear-gradient(to right,rgba(6,182,212,.14) 0%,transparent 70%); border-right:1px solid rgba(6,182,212,.12); }
   .s-compare-col .col-title { font-size:.5em; font-weight:700; letter-spacing:.15em; text-transform:uppercase; margin-bottom:1.2em; display:flex; align-items:center; gap:10px; }
   .s-compare-col .col-title.v { color:var(--v-hi); }
   .s-compare-col .col-title.c { color:var(--c-hi); }
@@ -658,6 +658,31 @@
     font-size:.36em; color:rgba(255,255,255,.25);
     direction:rtl; text-align:center; max-width:260px; line-height:1.5;
   }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     TRANSPARENT BACKGROUNDS — eliminate box/margin effect
+     High-specificity overrides so global canvas shows through
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  .reveal .slides > section.s-text,
+  .reveal .slides > section.s-video,
+  .reveal .slides > section.s-split,
+  .reveal .slides > section.s-transition,
+  .reveal .slides > section.s-steps,
+  .reveal .slides > section.s-gallery,
+  .reveal .slides > section.s-caps,
+  .reveal .slides > section.s-gold,
+  .reveal .slides > section.s-section,
+  .reveal .slides > section.s-cover,
+  .reveal .slides > section.s-outro {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     OUTRO LOGO — constrain to a reasonable size
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  .s-outro-logo { margin-top: 2.2em; }
+  .s-outro-logo img { height: 50px !important; max-height: 50px !important; width: auto !important; }
   </style>
 </head>
 
@@ -2339,31 +2364,54 @@
     document.querySelector(sel)?.classList.add('active-btn');
   }
 
-  /* ── AUTO-INJECT bg-dots into slides that lack any bg layer ── */
+  /* ── AUTO-INJECT bg-dots + animated orbs into slides lacking visual layers ── */
   function enhanceSlideBackgrounds() {
-    document.querySelectorAll('.reveal .slides > section').forEach(sec => {
+    const orbCfgs = [
+      ['width:540px;height:540px;top:-90px;right:-110px;opacity:.15;animation-duration:9s;position:absolute',
+       'width:360px;height:360px;bottom:-60px;left:6%;opacity:.11;animation-duration:7s;animation-delay:-4s;position:absolute'],
+      ['width:500px;height:500px;top:50%;left:-130px;transform:translateY(-50%);opacity:.13;animation-duration:11s;position:absolute',
+       'width:310px;height:310px;bottom:-55px;right:10%;opacity:.11;animation-duration:8s;animation-delay:-3s;position:absolute'],
+      ['width:460px;height:460px;bottom:-115px;left:-95px;opacity:.14;animation-duration:10s;position:absolute',
+       'width:290px;height:290px;top:-65px;right:16%;opacity:.10;animation-duration:9s;animation-delay:-5s;position:absolute'],
+    ];
+    document.querySelectorAll('.reveal .slides > section').forEach((sec, i) => {
       if (!sec.querySelector('.bg')) {
         const d = document.createElement('div');
-        d.className = 'bg bg-dots'; d.style.opacity = '.14';
+        d.className = 'bg bg-dots'; d.style.opacity = '.18';
         sec.insertBefore(d, sec.firstChild);
+      }
+      /* Add orbs to slides that have no existing visual background element */
+      if (!sec.querySelector('.orb') &&
+          !sec.querySelector('.particle-canvas') &&
+          !sec.querySelector('.s-statement-conic') &&
+          !sec.querySelector('.s-gold-glow-bg') &&
+          !sec.querySelector('.s-video-thumb') &&
+          !sec.querySelector('.outro-glow')) {
+        const cfg = orbCfgs[i % 3];
+        const o1 = document.createElement('div');
+        o1.className = 'orb'; o1.style.cssText = cfg[0];
+        const o2 = document.createElement('div');
+        o2.className = 'orb cyan'; o2.style.cssText = cfg[1];
+        sec.insertBefore(o2, sec.firstChild);
+        sec.insertBefore(o1, sec.firstChild);
       }
     });
   }
 
   /* ── CHAPTER BACKGROUNDS: dark tint overlay (rgba transitions smoothly) ── */
   const CHAPTER_BG = {
-    default:    'rgba(8,6,22,0.78)',
-    write:      'rgba(9,4,24,0.78)',
-    images:     'rgba(20,4,8,0.78)',
-    video:      'rgba(4,10,22,0.78)',
-    effects:    'rgba(20,9,2,0.78)',
-    sound:      'rgba(10,4,22,0.78)',
-    connect:    'rgba(18,4,12,0.78)',
-    direct:     'rgba(4,14,14,0.78)',
-    data:       'rgba(4,14,10,0.78)',
-    everything: 'rgba(8,6,22,0.78)',
-    surprise:   'rgba(20,6,2,0.78)',
-    outro:      'rgba(8,6,22,0.78)',
+    default:    'rgba(8,6,22,0.62)',
+    write:      'rgba(9,4,24,0.62)',
+    images:     'rgba(20,4,8,0.62)',
+    video:      'rgba(4,10,22,0.62)',
+    effects:    'rgba(20,9,2,0.62)',
+    sound:      'rgba(10,4,22,0.62)',
+    connect:    'rgba(18,4,12,0.62)',
+    direct:     'rgba(4,14,14,0.62)',
+    data:       'rgba(4,14,10,0.62)',
+    everything: 'rgba(8,6,22,0.62)',
+    surprise:   'rgba(20,6,2,0.62)',
+    outro:      'rgba(8,6,22,0.62)',
   };
 
   let _currentChapterKey = 'default';
@@ -2415,7 +2463,7 @@
       outro:      [[124,58,237],[6,182,212]],
     };
 
-    let W, H, dots, geos;
+    let W, H, dots, geos, nebulae;
     let pal = PALETTES.default.map(c=>[...c]);
     let target = PALETTES.default.map(c=>[...c]);
     let palT = 1;
@@ -2423,19 +2471,26 @@
     function resize() {
       W = CV.width  = window.innerWidth;
       H = CV.height = window.innerHeight;
-      const n = Math.min(65, Math.ceil(W * H / 22000));
+      const n = Math.min(90, Math.ceil(W * H / 16000));
       dots = Array.from({length: n}, () => ({
         x: Math.random()*W, y: Math.random()*H,
         vx: (Math.random()-.5)*.45, vy: (Math.random()-.5)*.45
       }));
-      geos = Array.from({length: 7}, () => ({
+      geos = Array.from({length: 10}, () => ({
         x: Math.random()*W, y: Math.random()*H,
-        r: 35 + Math.random()*70,
+        r: 35 + Math.random()*80,
         rot: Math.random()*Math.PI*2,
-        rs: (Math.random()-.5)*.005,
+        rs: (Math.random()-.5)*.006,
         vx: (Math.random()-.5)*.18, vy: (Math.random()-.5)*.18,
         sides: [3,4,6][Math.floor(Math.random()*3)],
         ci: Math.floor(Math.random()*2)
+      }));
+      nebulae = Array.from({length: 6}, () => ({
+        x: Math.random()*W, y: Math.random()*H,
+        r: 260 + Math.random()*340,
+        vx: (Math.random()-.5)*.055, vy: (Math.random()-.5)*.055,
+        ci: Math.floor(Math.random()*2),
+        ph: Math.random()*Math.PI*2
       }));
     }
 
@@ -2480,6 +2535,21 @@
       CX.fillStyle = '#05050e';
       CX.fillRect(0, 0, W, H);
 
+      /* drifting nebula glows */
+      nebulae.forEach(n => {
+        n.ph += .007; n.x += n.vx; n.y += n.vy;
+        if (n.x < -n.r) n.x = W+n.r; if (n.x > W+n.r) n.x = -n.r;
+        if (n.y < -n.r) n.y = H+n.r; if (n.y > H+n.r) n.y = -n.r;
+        const alpha = .065 + .035*Math.sin(n.ph);
+        const c = getC(n.ci);
+        const g = CX.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r);
+        g.addColorStop(0,   `rgba(${c[0]},${c[1]},${c[2]},${alpha})`);
+        g.addColorStop(.45, `rgba(${c[0]},${c[1]},${c[2]},${(alpha*.35).toFixed(3)})`);
+        g.addColorStop(1,   'rgba(0,0,0,0)');
+        CX.fillStyle = g;
+        CX.beginPath(); CX.arc(n.x, n.y, n.r, 0, Math.PI*2); CX.fill();
+      });
+
       /* connecting lines between nearby dots */
       for (let i = 0; i < dots.length; i++) {
         for (let j = i+1; j < dots.length; j++) {
@@ -2487,10 +2557,10 @@
           const dy = dots[i].y - dots[j].y;
           const d2 = dx*dx + dy*dy;
           if (d2 < 25600) {
-            const alpha = 0.055 * (1 - Math.sqrt(d2)/160);
+            const alpha = 0.13 * (1 - Math.sqrt(d2)/160);
             CX.beginPath();
             CX.strokeStyle = rgba(0, alpha);
-            CX.lineWidth = .7;
+            CX.lineWidth = .8;
             CX.moveTo(dots[i].x, dots[i].y);
             CX.lineTo(dots[j].x, dots[j].y);
             CX.stroke();
@@ -2501,8 +2571,8 @@
       /* dots */
       dots.forEach(p => {
         CX.beginPath();
-        CX.arc(p.x, p.y, 1.4, 0, Math.PI*2);
-        CX.fillStyle = rgba(0, .30);
+        CX.arc(p.x, p.y, 2.2, 0, Math.PI*2);
+        CX.fillStyle = rgba(0, .52);
         CX.fill();
         p.x += p.vx; p.y += p.vy;
         if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
@@ -2517,13 +2587,13 @@
         if (g.y < -160) g.y = H+160; if (g.y > H+160) g.y = -160;
 
         /* outer shape */
-        CX.strokeStyle = rgba(g.ci, .07);
-        CX.lineWidth = 1;
+        CX.strokeStyle = rgba(g.ci, .18);
+        CX.lineWidth = 1.2;
         poly(g.x, g.y, g.r, g.sides, g.rot);
         CX.stroke();
 
         /* inner counter-rotating shape */
-        CX.strokeStyle = rgba(1 - g.ci, .04);
+        CX.strokeStyle = rgba(1 - g.ci, .10);
         poly(g.x, g.y, g.r * .55, g.sides, -g.rot * 1.4);
         CX.stroke();
       });
