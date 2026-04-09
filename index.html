@@ -2285,10 +2285,6 @@
             מה שלמדתם היום יתיישן.<br>
             <strong style="color:var(--white)">האינסטינקט לחקור — לעולם לא.</strong>
           </div>
-          <div class="s-outro-logo" style="animation:fade-up .7s .35s ease both">
-            <img src="assets/logo-42.png" alt="42 Creative" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-            <span style="display:none;font-size:2.5em;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent">42</span>
-          </div>
         </div>
       </section>
 
@@ -2364,36 +2360,19 @@
     document.querySelector(sel)?.classList.add('active-btn');
   }
 
-  /* ── AUTO-INJECT bg-dots + animated orbs into slides lacking visual layers ── */
+  /* ── AUTO-INJECT bg-dots into slides lacking a bg layer ──
+     NOTE: Orbs are intentionally NOT injected here.
+     Per-slide orbs positioned at slide edges get clipped by overflow:hidden
+     at the section boundary, creating a visible rectangular cut.
+     All ambient glow is handled by the global #bg-canvas nebulae,
+     which cover the full viewport (including letterbox areas) with no clipping.
+  ── */
   function enhanceSlideBackgrounds() {
-    const orbCfgs = [
-      ['width:540px;height:540px;top:-90px;right:-110px;opacity:.15;animation-duration:9s;position:absolute',
-       'width:360px;height:360px;bottom:-60px;left:6%;opacity:.11;animation-duration:7s;animation-delay:-4s;position:absolute'],
-      ['width:500px;height:500px;top:50%;left:-130px;transform:translateY(-50%);opacity:.13;animation-duration:11s;position:absolute',
-       'width:310px;height:310px;bottom:-55px;right:10%;opacity:.11;animation-duration:8s;animation-delay:-3s;position:absolute'],
-      ['width:460px;height:460px;bottom:-115px;left:-95px;opacity:.14;animation-duration:10s;position:absolute',
-       'width:290px;height:290px;top:-65px;right:16%;opacity:.10;animation-duration:9s;animation-delay:-5s;position:absolute'],
-    ];
-    document.querySelectorAll('.reveal .slides > section').forEach((sec, i) => {
+    document.querySelectorAll('.reveal .slides > section').forEach(sec => {
       if (!sec.querySelector('.bg')) {
         const d = document.createElement('div');
         d.className = 'bg bg-dots'; d.style.opacity = '.18';
         sec.insertBefore(d, sec.firstChild);
-      }
-      /* Add orbs to slides that have no existing visual background element */
-      if (!sec.querySelector('.orb') &&
-          !sec.querySelector('.particle-canvas') &&
-          !sec.querySelector('.s-statement-conic') &&
-          !sec.querySelector('.s-gold-glow-bg') &&
-          !sec.querySelector('.s-video-thumb') &&
-          !sec.querySelector('.outro-glow')) {
-        const cfg = orbCfgs[i % 3];
-        const o1 = document.createElement('div');
-        o1.className = 'orb'; o1.style.cssText = cfg[0];
-        const o2 = document.createElement('div');
-        o2.className = 'orb cyan'; o2.style.cssText = cfg[1];
-        sec.insertBefore(o2, sec.firstChild);
-        sec.insertBefore(o1, sec.firstChild);
       }
     });
   }
@@ -2485,9 +2464,9 @@
         sides: [3,4,6][Math.floor(Math.random()*3)],
         ci: Math.floor(Math.random()*2)
       }));
-      nebulae = Array.from({length: 6}, () => ({
+      nebulae = Array.from({length: 9}, () => ({
         x: Math.random()*W, y: Math.random()*H,
-        r: 260 + Math.random()*340,
+        r: 280 + Math.random()*380,
         vx: (Math.random()-.5)*.055, vy: (Math.random()-.5)*.055,
         ci: Math.floor(Math.random()*2),
         ph: Math.random()*Math.PI*2
@@ -2540,7 +2519,7 @@
         n.ph += .007; n.x += n.vx; n.y += n.vy;
         if (n.x < -n.r) n.x = W+n.r; if (n.x > W+n.r) n.x = -n.r;
         if (n.y < -n.r) n.y = H+n.r; if (n.y > H+n.r) n.y = -n.r;
-        const alpha = .065 + .035*Math.sin(n.ph);
+        const alpha = .085 + .045*Math.sin(n.ph);
         const c = getC(n.ci);
         const g = CX.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r);
         g.addColorStop(0,   `rgba(${c[0]},${c[1]},${c[2]},${alpha})`);
