@@ -7,7 +7,7 @@ Reveal.initialize({
   // Layout
   width:        1920,
   height:       1080,
-  margin:       0.05,
+  margin:       0,
   minScale:     0.1,
   maxScale:     2.5,
 
