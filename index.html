@@ -32,16 +32,17 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      REVEAL RESET — FULL-BLEED CANVAS
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  html,body { background:#05050e !important; margin:0; }
-  .reveal { font-family:var(--font) !important; font-size:42px; background:var(--bg); }
-  .reveal .slides { direction:rtl; text-align:right; }
+  html,body { background:#05050e !important; margin:0; padding:0; }
+  .reveal-viewport { background:#05050e !important; }
+  .reveal { font-family:var(--font) !important; font-size:42px; background:#05050e !important; }
+  .reveal .slides { direction:rtl; text-align:right; background:#05050e !important; }
   .reveal .slides > section {
     padding:0 !important; margin:0 !important;
     background:var(--bg) !important; background-image:none !important;
     border:none !important; border-top:none !important; border-image:none !important;
     border-radius:0 !important; box-shadow:none !important;
     overflow:hidden !important; isolation:isolate;
-    width:100%; height:100%;
+    width:100% !important; height:100% !important;
   }
   .reveal .slides > section::before,
   .reveal .slides > section::after { content:none !important; display:none !important; }
@@ -541,8 +542,8 @@
     text-align:right;
   }
   .s-section h2 {
-    font-size:7.5em !important;
-    line-height:.88 !important;
+    font-size:4.5em !important;
+    line-height:1.0 !important;
     margin-bottom:.2em !important;
     animation:fade-up .7s .05s ease both !important;
   }
@@ -803,7 +804,7 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           07 — KEY MESSAGE: NOT A HOW-TO GUIDE
+           07 — KEY MESSAGE: NOT A HOW-TO GUIDE (A)
       ══════════════════════════════════════════════════════ -->
       <section class="s-statement" data-transition="zoom" data-transition-speed="slow">
         <div class="s-statement-conic"></div>
@@ -811,17 +812,32 @@
         <div class="ring ring-1"></div>
         <div class="ring ring-2"></div>
         <div class="ring ring-3"></div>
-        <div class="s-statement-float" style="top:15%;right:10%;animation-delay:0s;font-size:2.5em">🧭</div>
-        <div class="s-statement-float" style="bottom:15%;left:8%;animation-delay:-3s;font-size:2.5em">🔍</div>
-        <div class="s-statement-float" style="top:18%;left:12%;animation-delay:-5s;font-size:2em">⚡</div>
+        <div class="s-accent-h top"></div>
+        <div class="s-accent-h bottom"></div>
         <div class="s-statement-inner">
-          <span class="eyebrow" style="animation:fade-up .7s ease both">אז מה אנחנו לא עושים כאן?</span>
+          <span class="eyebrow" style="animation:fade-up .7s ease both;letter-spacing:.35em">אז מה אנחנו לא עושים כאן?</span>
           <span class="s-statement-word outline" style="animation-delay:.05s">לא מדריך</span>
           <span class="s-statement-word g" style="animation-delay:.12s">מ-0 ל-100</span>
-          <p class="s-statement-sub" style="font-size:.78em;color:rgba(240,240,248,.75);max-width:760px;line-height:1.65;margin-top:1.2em">
-            כי מה שהכי חשוב זה <strong>להיות סקרנים, לחקור, ולהיות עם האצבע על הדופק.</strong><br>
-            מה שאתם לומדים היום — יתיישן. האינסטינקט לחקור — לעולם לא.
-          </p>
+          <span class="s-statement-word outline" style="font-size:4em !important;animation-delay:.2s;color:var(--muted);-webkit-text-fill-color:transparent">לכל כלי</span>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           07b — KEY MESSAGE: INSTINCT
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-statement" data-transition="zoom" data-transition-speed="fast">
+        <div class="s-statement-conic" style="animation-direction:reverse"></div>
+        <div class="ring ring-1" style="border-color:rgba(6,182,212,.1)"></div>
+        <div class="ring ring-2"></div>
+        <div class="s-accent-h top"></div>
+        <div class="s-accent-h bottom"></div>
+        <div class="s-statement-inner">
+          <span class="eyebrow" style="animation:fade-up .6s ease both">כי מה שחשוב —</span>
+          <span class="s-statement-word g" style="animation-delay:.05s">להיות</span>
+          <span class="s-statement-word outline" style="animation-delay:.12s">סקרנים</span>
+          <span class="s-statement-word" style="font-size:3.5em !important;animation-delay:.2s;color:var(--muted)">מה שלמדתם יתיישן.<br>
+            <span style="color:var(--white)">האינסטינקט — לא.</span>
+          </span>
         </div>
       </section>
 
@@ -988,41 +1004,129 @@
         <div class="s-section-inner z1">
           <span class="s-section-icon">✍️</span>
           <span class="s-section-num">01 / 07</span>
-          <h2>לכתוב</h2>
+          <h2>AI יודע לכתוב</h2>
           <p class="s-section-desc">Gemini · Gems · ChatGPT<br>שפה אחידה, תוכן חכם, הסגנון שלכם — אוטומטי</p>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH01 — GEMINI + GEMS: WRITING
+           CH01-A — מודל נכון: Pro vs Flash
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-compare" data-transition="slide">
+        <div class="bg bg-dots" style="opacity:.2"></div>
+        <div class="s-compare-vs" style="font-size:.48em;width:60px;height:60px">Pro<br>vs<br>Flash</div>
+        <div class="s-compare-col">
+          <div class="col-title v" style="color:var(--muted)">⚡ Flash / Lite — מהיר</div>
+          <ul>
+            <li><span class="rdot v"></span>תגובה מהירה — שניות</li>
+            <li><span class="rdot v"></span>זול / חינמי לרוב</li>
+            <li><span class="rdot v"></span><strong style="color:var(--white)">שטחי — לא מבין ניואנסים</strong></li>
+            <li><span class="rdot v"></span>פספוס הקשר ובטון מותג</li>
+            <li><span class="rdot v"></span>מתאים לתרגומים פשוטים בלבד</li>
+          </ul>
+        </div>
+        <div class="s-compare-col">
+          <div class="col-title c">✅ Gemini 2.5 Pro — תמיד</div>
+          <ul>
+            <li><span class="rdot c"></span>חושב לעומק לפני שכותב</li>
+            <li><span class="rdot c"></span><strong style="color:var(--white)">מבין בטון, ניואנס, אירוניה</strong></li>
+            <li><span class="rdot c"></span>שומר על קול המותג לאורך כל הטקסט</li>
+            <li><span class="rdot c"></span>מתמודד עם תדבריפים ארוכים</li>
+            <li><span class="rdot c"></span>ברירת המחדל שלכם — תמיד Pro</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH01-B — Gems: הזיכרון שלא מתאפס
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-split s-split-tl" data-transition="slide">
+        <div class="s-split-img">
+          <div style="width:100%;height:100%;background:linear-gradient(145deg,#0a001a,#001020);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:50px;position:relative">
+            <div class="orb" style="width:400px;height:400px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.28"></div>
+            <div style="position:relative;z-index:1;width:100%;direction:rtl;max-width:420px">
+              <div style="background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.25);border-radius:12px;padding:20px 24px;margin-bottom:14px">
+                <div style="font-size:.4em;color:var(--v-hi);font-weight:700;margin-bottom:8px">⚙️ Gem: לקוח ABC</div>
+                <div style="font-size:.42em;color:var(--white);line-height:1.7">סגנון: כיף ומקצועי<br>קהל: 25–40 עירוני<br>טון: אישי, לא מתייהר<br>להימנע: ז'רגון, אנגלית מיותרת</div>
+              </div>
+              <div style="background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.2);border-radius:10px;padding:14px 20px;font-size:.4em;color:var(--c-hi)">✓ נשמר · זמין בכל שיחה עתידית · לא מתאפס</div>
+            </div>
+          </div>
+          <span class="img-label">🔮 Gemini Gems</span>
+          <div class="img-cap">מגדירים פעם אחת — קול קבוע לתמיד</div>
+        </div>
+        <div class="s-split-content">
+          <span class="eyebrow">Gemini · Gems</span>
+          <h2>הזיכרון שלא<br>מתאפס</h2>
+          <p><strong>Gems</strong> = פרסונה של לקוח שנשמרת. מגדירים פעם אחת: סגנון, קהל, בטון — ומשם כל שיחה יודעת הכל, גם אחרי חודש.</p>
+          <ul>
+            <li><span class="dot"></span>בנו Gem אחד לכל לקוח</li>
+            <li><span class="dot"></span>שיחה חדשה = אותו קול, אפס הסבר</li>
+            <li><span class="dot"></span>עובד גם לוויז, לא רק כתיבה</li>
+            <li><span class="dot"></span>Gem + קבצים = שפה מושלמת</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH01-C — העלאת קבצים + סגנון הלקוח
       ══════════════════════════════════════════════════════ -->
       <section class="s-text" data-transition="slide">
         <div class="s-text-accent-col"></div>
         <div class="s-text-main z1">
           <div class="hdr">
-            <div class="chip" style="margin-bottom:.8em">🔮 Gemini + Gems</div>
-            <h2>ה-AI שכותב בסגנון שלכם</h2>
+            <div class="chip" style="margin-bottom:.8em">📎 העלאת קבצים</div>
+            <h2>תדבריף + 3 דוגמאות = הסגנון שלהם</h2>
           </div>
           <div class="s-text-blocks">
             <div class="tblock" style="animation-delay:.05s">
-              <span class="lbl">מודל נכון</span>
-              <p>תמיד <strong>Gemini 2.5 Pro</strong> — לא Flash, לא Lite. ה-Pro חושב לעומק ומבין ניואנסים. Flash מהיר, אבל שטחי כמו פיד אינסטגרם.</p>
+              <span class="lbl">מה להעלות</span>
+              <p>תדבריף + <strong>3 דוגמאות כתיבה של הלקוח.</strong> לא צריך להסביר את השפה — פשוט מראים אותה. Gemini מבין מה רואה.</p>
             </div>
             <div class="tblock c" style="animation-delay:.12s">
-              <span class="lbl">Gems — הזיכרון שלא מתאפס</span>
-              <p><strong>Gems</strong> = פרסונות שנשמרות. מגדירים פעם אחת: סגנון כתיבה, קהל יעד, אופי מותג — ומשם כל שיחה כבר יודעת הכל, גם אחרי חודש.</p>
+              <span class="lbl">מה יוצא</span>
+              <p>Gemini <strong>כותב בדיוק בסגנון שלו</strong> — לא בסגנון "AI מובהק". התוצר נשמע כמו שהלקוח היה כותב אם היה כותב טוב יותר.</p>
             </div>
             <div class="tblock" style="animation-delay:.19s">
-              <span class="lbl">העלאת קבצים</span>
-              <p>תדבריף + 3 דוגמאות כתיבה של הלקוח = Gemini <strong>כותב בדיוק בסגנון שלו.</strong> לא צריך להסביר את השפה — פשוט מראים אותה.</p>
+              <span class="lbl">שפה אחידה אוטומטית</span>
+              <p>Gem + קבצים = <strong>אחידות בכל פלטפורמה.</strong> אינסטגרם, מייל, מצגת, לינקדאין — אותו קול, בלי מאמץ.</p>
             </div>
             <div class="tblock c" style="animation-delay:.26s">
-              <span class="lbl">שפה אחידה אוטומטית</span>
-              <p>Gem מוגדר לבrand = <strong>אחידות בכל פלטפורמה.</strong> אינסטגרם, מייל, מצגת, פוסט לינקדאין — אותו קול, בלי מאמץ נוסף.</p>
+              <span class="lbl">טיפ — PDF מ-ספר מותג</span>
+              <p>יש ללקוח "ספר מותג" ב-PDF? <strong>העלו ישירות לGem.</strong> Gemini קורא הכל — טקסט, פלטות צבע, ערכים — ומפנים לתוך כל פרומפט.</p>
             </div>
           </div>
         </div>
         <div class="s-text-ghost">G</div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH01-D — הדגמה חיה: כתיבה עם Gemini
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-video" data-transition="fade">
+        <div class="s-split-content" style="padding:80px 50px 80px 100px">
+          <div class="chip" style="margin-bottom:1em">🎬 &nbsp; הדגמה חיה</div>
+          <span class="eyebrow">Gemini 2.5 Pro · Gems</span>
+          <h2>מה לחפש<br>בהדגמה</h2>
+          <ul style="margin-top:.9em">
+            <li><span class="dot"></span>בחירת Gem ספציפי ללקוח</li>
+            <li><span class="dot"></span>העלאת תדבריף + קובץ כתיבה</li>
+            <li><span class="dot"></span>פרומפט אחד ← תוכן מוכן לפרסום</li>
+            <li><span class="dot"></span>שימו לב לבטון — כמה "שלהם" זה נשמע</li>
+          </ul>
+        </div>
+        <div class="s-video-pane">
+          <div class="bg bg-grid" style="opacity:.3"></div>
+          <div class="s-video-scanline"></div>
+          <div class="s-video-thumb">
+            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(124,58,237,.7))">✍️</div>
+            <div class="s-video-play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="s-video-tag">Gemini 2.5 Pro · כתיבה</div>
+            <div class="s-video-label">⬆️ להחליף בהדגמה אמיתית</div>
+          </div>
+        </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
@@ -1059,7 +1163,7 @@
         <div class="s-section-inner z1">
           <span class="s-section-icon">🎨</span>
           <span class="s-section-num">02 / 07</span>
-          <h2>לעצב תמונות</h2>
+          <h2>AI יודע לעצב תמונות</h2>
           <p class="s-section-desc">Gemini Imagen · עריכה חכמה · עקביות ויזואלית<br>מיצירה מאפס עד הסרת כוכב מביכה</p>
         </div>
       </section>
@@ -1159,7 +1263,7 @@
         <div class="s-section-inner z1">
           <span class="s-section-icon">🎬</span>
           <span class="s-section-num">03 / 07</span>
-          <h2>ליצור וידאו</h2>
+          <h2>AI יודע ליצור וידאו</h2>
           <p class="s-section-desc">Kling · Veo 3 · תנועה, פיזיקה ואור אמיתיים<br>מתמונה סטטית לקליפ קולנועי — בלחיצה</p>
         </div>
       </section>
@@ -1390,7 +1494,7 @@
         <div class="s-section-inner z1">
           <span class="s-section-icon">⚡</span>
           <span class="s-section-num">04 / 08</span>
-          <h2>להיות אפטריסט</h2>
+          <h2>AI יודע להיות אפטריסט</h2>
           <p class="s-section-desc">Kling Effects · Motion · שדרוג תוכן קיים<br>כשאין תקציב לAE — יש AI שעושה את זה בשניות</p>
         </div>
       </section>
@@ -1477,38 +1581,617 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           [ שקופיות המשך — שלב ג' ]
-           31: Section — CH05 ליצור סאונד
-           32: ElevenLabs — קול, SFX, Multi לעברית
-           33: 🎬 הדגמה ElevenLabs Voice Changer
-           34: השוואה TTS vs STS לעברית
-           35: Suno — מוזיקה ו-Audio-to-Audio
-           36: 🎬 הדגמה Suno
-           37: טיפ זהב — Audio-to-Audio עברית
-           ──
-           38: Section — CH06 לחבר וידאו+סאונד
-           39: Hedra — דמות מדברת + dirty audio
-           40: 🎬 הדגמה Hedra
-           41: מודלים ב-Hedra (compare)
-           42: פתרון סאונד לא עקבי מ-Veo (ElevenLabs על Veo video)
-           43: CapCut AI tools + watermark
-           44: טיפ זהב — watermark fix
-           ──
-           45: Section — CH07 AI יודע לביים
-           46: ChatGPT כבמאי — shot list, storyboard, direction
-           47: 🎬 הדגמה — ChatGPT director prompt
-           ──
-           48: Section — CH08 לנתח נתונים
-           49: ChatGPT Data Analysis
-           50: 🎬 הדגמה Data
-           ──
-           51: Section — CH09 AI יכול לעשות הכל (practically anything)
-           52: "תניחו שה-AI יודע"
-           ──
-           53: Section — הפתעה [user decides]
-           ──
-           54: Outro
+           CH05 — SECTION: AI יודע ליצור סאונד
       ══════════════════════════════════════════════════════ -->
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch05-sound">
+        <div class="bg bg-grid"></div>
+        <div class="orb" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(139,92,246,.45) 0%,rgba(16,185,129,.2) 45%,transparent 72%);animation-duration:7s"></div>
+        <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%);border-color:rgba(139,92,246,.12)"></div>
+        <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%)"></div>
+        <div class="s-section-ghost">05</div>
+        <div class="s-section-inner z1">
+          <span class="s-section-num">05 / 09</span>
+          <h2>AI יודע ליצור סאונד</h2>
+          <p class="s-section-desc">ElevenLabs · Suno · קול, מוזיקה ואפקטים<br>מדיבוב מקצועי עד שיר שלם — מפרומפט</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH05 — ElevenLabs: קול שלא נשמע כמו AI
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-text" data-transition="slide">
+        <div class="s-text-accent-col" style="background:linear-gradient(180deg,#8b5cf6,#10b981)"></div>
+        <div class="s-text-main z1">
+          <div class="hdr">
+            <div class="chip" style="margin-bottom:.8em;background:rgba(139,92,246,.15);border-color:rgba(139,92,246,.3);color:#a78bfa">🎙️ ElevenLabs</div>
+            <h2>קול שלא נשמע כמו AI</h2>
+          </div>
+          <div class="s-text-blocks">
+            <div class="tblock" style="animation-delay:.05s">
+              <span class="lbl">Text-to-Speech (TTS)</span>
+              <p>כותבים טקסט ← מקבלים קריינות. <strong>בעברית.</strong> בוחרים קול, גיל, אינטונציה. 2 שניות לסקריפט שלם.</p>
+            </div>
+            <div class="tblock c" style="animation-delay:.12s">
+              <span class="lbl">Voice Changer (STS)</span>
+              <p>מקליטים את עצמכם → ElevenLabs <strong>ממיר לקול אחר</strong> — בלי לכתוב מחדש. מושלם לדיבוב וידאו Veo/Kling בקול אחיד.</p>
+            </div>
+            <div class="tblock" style="animation-delay:.19s">
+              <span class="lbl">עברית — עובד באמת</span>
+              <p>ElevenLabs <strong>מבין עברית</strong> כולל ניקוד, ניואנסים ואינטונציה. מה שאחרים מייצרים בגנגנה — כאן נשמע אנושי.</p>
+            </div>
+            <div class="tblock c" style="animation-delay:.26s">
+              <span class="lbl">Sound Effects</span>
+              <p>תיאור בטקסט → אפקט סאונד מותאם. "חיית ים מוזרה קורסת על רצפה מתכתית" — <strong>פשוט כתבו מה שאתם שומעים בראש.</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="s-text-ghost">11</div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH05 — 🎬 DEMO: ElevenLabs Voice Changer
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-video" data-transition="fade">
+        <div class="s-split-content" style="padding:80px 50px 80px 100px">
+          <div class="chip" style="margin-bottom:1em;background:rgba(139,92,246,.15);border-color:rgba(139,92,246,.3);color:#a78bfa">🎬 &nbsp; הדגמה חיה</div>
+          <span class="eyebrow">ElevenLabs · Voice Changer</span>
+          <h2>הקול שלך —<br>בגרסה אחרת</h2>
+          <ul style="margin-top:.9em">
+            <li><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#10b981)"></span>הקלטה קצרה בקול שלכם</li>
+            <li><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#10b981)"></span>ElevenLabs ממיר לקול שנבחר</li>
+            <li><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#10b981)"></span>האינטונציה שלכם — נשמרת</li>
+            <li><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#10b981)"></span>מושלם לסינכרון על Veo/Kling</li>
+          </ul>
+        </div>
+        <div class="s-video-pane">
+          <div class="bg bg-grid" style="opacity:.3"></div>
+          <div class="s-video-scanline"></div>
+          <div class="s-video-thumb">
+            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(139,92,246,.7))">🎙️</div>
+            <div class="s-video-play-btn" style="background:linear-gradient(135deg,#8b5cf6,#10b981)">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="s-video-tag" style="color:#a78bfa">ElevenLabs · STS · עברית</div>
+            <div class="s-video-label">⬆️ להחליף בהדגמת Voice Changer</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH05 — TTS vs STS: השוואה לעברית
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-compare" data-transition="concave">
+        <div class="bg bg-dots" style="opacity:.2"></div>
+        <div class="s-compare-vs">VS</div>
+        <div class="s-compare-col">
+          <div class="col-title v">📝 TTS — כתיבה לקול</div>
+          <ul>
+            <li><span class="rdot v"></span>כותבים טקסט מלא</li>
+            <li><span class="rdot v"></span>בוחרים קול + סגנון</li>
+            <li><span class="rdot v"></span>מהיר מאוד — 2 שניות</li>
+            <li><span class="rdot v"></span><strong style="color:var(--white)">עברית — לפעמים מבטא מוזר</strong></li>
+            <li><span class="rdot v"></span>מספיק לרוב השימושים</li>
+          </ul>
+        </div>
+        <div class="s-compare-col">
+          <div class="col-title c">🎤 STS — קול לקול</div>
+          <ul>
+            <li><span class="rdot c"></span>מקליטים בקול שלכם</li>
+            <li><span class="rdot c"></span>ElevenLabs ממיר לקול אחר</li>
+            <li><span class="rdot c"></span><strong style="color:var(--white)">האינטונציה שלכם — נשמרת</strong></li>
+            <li><span class="rdot c"></span>עברית מושלמת — כי אתם דוברים</li>
+            <li><span class="rdot c"></span>הפתרון לדיבוב Veo/Kling</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH05 — Suno: מוזיקה + Audio-to-Audio
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-text" data-transition="slide">
+        <div class="s-text-accent-col" style="background:linear-gradient(180deg,#f59e0b,#10b981)"></div>
+        <div class="s-text-main z1">
+          <div class="hdr">
+            <div class="chip amber" style="margin-bottom:.8em">🎵 Suno</div>
+            <h2>שיר שלם מפרומפט — כולל מילים</h2>
+          </div>
+          <div class="s-text-blocks">
+            <div class="tblock" style="animation-delay:.05s">
+              <span class="lbl">Text-to-Music</span>
+              <p>מתיאור טקסטואלי → שיר מלא עם <strong>מוזיקה + שירה + מילים.</strong> "פופ עברי, אנרגטי, על קיץ בתל אביב" — 30 שניות ← שיר שלם.</p>
+            </div>
+            <div class="tblock c" style="animation-delay:.12s">
+              <span class="lbl">Audio-to-Audio</span>
+              <p>מעלים אודיו קיים → Suno <strong>מחדש, מסגנן, מוסיף שכבות.</strong> קליפ ישן ← גרסה חדשה לגמרי. מבלי לאבד את הרגש המקורי.</p>
+            </div>
+            <div class="tblock" style="animation-delay:.19s">
+              <span class="lbl">Covers ואינסטרומנטל</span>
+              <p>קאברים לשירים ידועים, גרסאות אינסטרומנטל, <strong>סאונדטרקים לוידאו</strong> — כל מה שדרש פרודיוסר ואולפן.</p>
+            </div>
+            <div class="tblock c" style="animation-delay:.26s">
+              <span class="lbl">⚠️ עברית — עדיין לא מושלם</span>
+              <p>עברית ב-Suno עובדת, <strong>אבל עם מבטא זר.</strong> הטריק: כתבו מילים עם ניקוד + בקשו "Israeli Hebrew accent". תשמעו הבדל.</p>
+            </div>
+          </div>
+        </div>
+        <div class="s-text-ghost">♪</div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH05 — 🎬 DEMO: Suno Audio-to-Audio
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-video" data-transition="fade">
+        <div class="s-split-content" style="padding:80px 50px 80px 100px">
+          <div class="chip amber" style="margin-bottom:1em">🎬 &nbsp; הדגמה חיה</div>
+          <span class="eyebrow amber">Suno · Audio-to-Audio</span>
+          <h2>תוכן ישן →<br>גרסה חדשה</h2>
+          <ul style="margin-top:.9em">
+            <li><span class="dot" style="background:var(--grad-gold)"></span>קליפ אודיו קיים כקלט</li>
+            <li><span class="dot" style="background:var(--grad-gold)"></span>הוראה: "שנה לז'אנר X, הוסף Y"</li>
+            <li><span class="dot" style="background:var(--grad-gold)"></span>Suno מחדש את הסאונד לגמרי</li>
+            <li><span class="dot" style="background:var(--grad-gold)"></span>שימוש: ריל בר-מצווה → אלבום</li>
+          </ul>
+        </div>
+        <div class="s-video-pane">
+          <div class="bg bg-grid" style="opacity:.3"></div>
+          <div class="s-video-scanline"></div>
+          <div class="s-video-thumb">
+            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(245,158,11,.7))">🎵</div>
+            <div class="s-video-play-btn" style="background:var(--grad-gold)">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="s-video-tag" style="color:var(--a-hi)">Suno · Audio-to-Audio</div>
+            <div class="s-video-label">⬆️ להחליף בהדגמת Suno</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH05 — GOLD TIP: STS על Veo = קול אחיד
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-gold" data-transition="convex" data-transition-speed="fast">
+        <div class="s-gold-glow-bg"></div>
+        <div class="s-gold-frame"></div>
+        <div class="s-gold-corner tl"></div>
+        <div class="s-gold-corner br"></div>
+        <div class="s-gold-inner">
+          <div class="s-gold-badge">✦ &nbsp; טיפ זהב · סאונד</div>
+          <h2>STS של ElevenLabs על Veo = קול אחיד</h2>
+          <p>
+            הבעיה: Veo 3 מייצר קול שונה בכל קליפ — אי אפשר לצרף קטעים עם אותה דמות מדברת.<br>
+            הפתרון: <strong>הקליטו פעם אחת</strong> את הדמות שלכם עם STS ב-ElevenLabs → מעכשיו כל הקטעים מדובבים באותו קול.<br>
+            תוצאה: <strong>5 קטעי Veo + דיבוב אחיד = פרסומת שלמה.</strong>
+          </p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH06 — SECTION: AI יודע לחבר
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch06-connect">
+        <div class="bg bg-grid"></div>
+        <div class="orb rose" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:8s"></div>
+        <div class="orb" style="width:350px;height:350px;top:25%;left:72%;transform:translate(-50%,-50%);opacity:.3;animation-duration:5s;animation-delay:-3s"></div>
+        <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%);border-color:rgba(244,63,94,.1)"></div>
+        <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%)"></div>
+        <div class="s-section-ghost">06</div>
+        <div class="s-section-inner z1">
+          <span class="s-section-num">06 / 09</span>
+          <h2>AI יודע לחבר</h2>
+          <p class="s-section-desc">Hedra · CapCut · שפת גוף, דיבוב, עריכה<br>מוידאו לפרסומת מוגמרת — בלי סטודיו</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH06 — Hedra: כל תמונה יכולה לדבר
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-split s-split-tl" data-transition="slide">
+        <div class="s-split-img">
+          <div style="width:100%;height:100%;background:linear-gradient(145deg,#1a0010,#0a001a);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative">
+            <div class="orb rose" style="width:320px;height:320px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.35"></div>
+            <div style="position:relative;z-index:1;text-align:center">
+              <div style="font-size:5em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(244,63,94,.5))">🎭</div>
+              <div style="font-size:.5em;color:#f87171;font-weight:700;margin-top:10px">Hedra</div>
+              <div style="font-size:.4em;color:var(--muted);margin-top:6px">תמונה + קול → דמות מדברת</div>
+            </div>
+          </div>
+          <span class="img-label" style="background:rgba(244,63,94,.12);border-color:rgba(244,63,94,.3);color:#f87171">🎭 Hedra</span>
+          <div class="img-cap">פורטרט → דמות מדברת</div>
+        </div>
+        <div class="s-split-content">
+          <span class="eyebrow" style="color:#f87171">Hedra</span>
+          <h2>כל תמונה —<br>יכולה לדבר</h2>
+          <p>Hedra לוקח <strong>תמונה סטטית + אודיו</strong> ומייצר דמות מדברת עם שפת גוף ריאלית. בלי שחקן, בלי מצלמה, בלי גרין-סקרין.</p>
+          <ul>
+            <li><span class="dot" style="background:linear-gradient(90deg,#f43f5e,#7c3aed)"></span>פורטרטים, דמויות מצוירות, לוגואים</li>
+            <li><span class="dot" style="background:linear-gradient(90deg,#f43f5e,#7c3aed)"></span>שפת גוף אמינה — לא "מתחרפנת"</li>
+            <li><span class="dot" style="background:linear-gradient(90deg,#f43f5e,#7c3aed)"></span>Dirty audio — אפשרי ומוציא טוב</li>
+            <li><span class="dot" style="background:linear-gradient(90deg,#f43f5e,#7c3aed)"></span>מושלם לדוברים, ספוקסמן, מסרים</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH06 — 🎬 DEMO: Hedra
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-video" data-transition="fade">
+        <div class="s-split-content" style="padding:80px 50px 80px 100px">
+          <div class="chip" style="margin-bottom:1em;background:rgba(244,63,94,.12);border-color:rgba(244,63,94,.3);color:#f87171">🎬 &nbsp; הדגמה חיה</div>
+          <span class="eyebrow" style="color:#f87171">Hedra · Talking Head</span>
+          <h2>מה לחפש<br>בהדגמה</h2>
+          <ul style="margin-top:.9em">
+            <li><span class="dot" style="background:linear-gradient(90deg,#f43f5e,#7c3aed)"></span>תמונה סטטית כקלט</li>
+            <li><span class="dot" style="background:linear-gradient(90deg,#f43f5e,#7c3aed)"></span>קובץ אודיו ElevenLabs STS</li>
+            <li><span class="dot" style="background:linear-gradient(90deg,#f43f5e,#7c3aed)"></span>תנועת פה + שפת גוף</li>
+            <li><span class="dot" style="background:linear-gradient(90deg,#f43f5e,#7c3aed)"></span>שימו לב להבדל בין המודלים</li>
+          </ul>
+        </div>
+        <div class="s-video-pane">
+          <div class="bg bg-grid" style="opacity:.3"></div>
+          <div class="s-video-scanline"></div>
+          <div class="s-video-thumb">
+            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(244,63,94,.7))">🎭</div>
+            <div class="s-video-play-btn" style="background:linear-gradient(135deg,#f43f5e,#7c3aed)">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="s-video-tag" style="color:#f87171">Hedra · Talking Head</div>
+            <div class="s-video-label">⬆️ להחליף בהדגמת Hedra</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH06 — Hedra מודלים: compare
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-compare" data-transition="concave">
+        <div class="bg bg-dots" style="opacity:.2"></div>
+        <div class="s-compare-vs" style="font-size:.48em;width:65px;height:65px">Hedra<br>1 vs 2</div>
+        <div class="s-compare-col">
+          <div class="col-title v" style="color:var(--muted)">⚡ Hedra 1 — מהיר</div>
+          <ul>
+            <li><span class="rdot c"></span>עיבוד תוך דקות</li>
+            <li><span class="rdot c"></span>מספיק לרשתות חברתיות</li>
+            <li><span class="rdot v"></span><strong style="color:var(--white)">קצת "פלסטיקי" בתנועות</strong></li>
+            <li><span class="rdot c"></span>חינמי / זול יותר</li>
+            <li><span class="rdot c"></span>מתאים לתוכן שוטף מהיר</li>
+          </ul>
+        </div>
+        <div class="s-compare-col">
+          <div class="col-title c">✨ Hedra 2 — מקצועי</div>
+          <ul>
+            <li><span class="rdot c"></span>עיבוד ארוך — 10–15 דקות</li>
+            <li><span class="rdot c"></span><strong style="color:var(--white)">תנועות אנושיות מאוד</strong></li>
+            <li><span class="rdot c"></span>מיקרו-הבעות פנים</li>
+            <li><span class="rdot c"></span>מתאים לקמפיינים מקצועיים</li>
+            <li><span class="rdot c"></span>השקיעו כאן כשחשוב</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH06 — CapCut: עריכה בלי לדעת עריכה
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-text" data-transition="slide">
+        <div class="s-text-accent-col" style="background:linear-gradient(180deg,#06b6d4,#f43f5e)"></div>
+        <div class="s-text-main z1">
+          <div class="hdr">
+            <div class="chip cyan" style="margin-bottom:.8em">✂️ CapCut</div>
+            <h2>עריכה בלי לדעת עריכה</h2>
+          </div>
+          <div class="s-text-blocks">
+            <div class="tblock" style="animation-delay:.05s">
+              <span class="lbl">Auto Captions</span>
+              <p>כתוביות אוטומטיות, מסונכרנות, עם <strong>עיצוב מותאם.</strong> עברית — כן. 30 שניות לסרטון שלם.</p>
+            </div>
+            <div class="tblock c" style="animation-delay:.12s">
+              <span class="lbl">Auto Cut + BGM</span>
+              <p>CapCut <strong>חותך לרגעי הפסגה</strong> בסרטון, מוסיף מוזיקת רקע מסונכרנת, מייצר Reel אוטומטי. אתם מוסרים חומר, הוא עורך.</p>
+            </div>
+            <div class="tblock" style="animation-delay:.19s">
+              <span class="lbl">Remove Watermark</span>
+              <p>סרטונים שיובאו מ-TikTok, Instagram, כלי AI — CapCut <strong>מוחק watermark</strong> אוטומטית. לא צריך להסביר איך.</p>
+            </div>
+            <div class="tblock c" style="animation-delay:.26s">
+              <span class="lbl">AI Effects מובנים</span>
+              <p>Reframe, background change, sky replacement — <strong>הכל ב-app אחד.</strong> CapCut הוא Premiere + After Effects למשתמש הרגיל.</p>
+            </div>
+          </div>
+        </div>
+        <div class="s-text-ghost">✂</div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH06 — GOLD TIP: Watermark + פריים כפול
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-gold" data-transition="convex" data-transition-speed="fast">
+        <div class="s-gold-glow-bg" style="background:radial-gradient(ellipse 70% 50% at 50% 60%,rgba(6,182,212,.15) 0%,transparent 70%)"></div>
+        <div class="s-gold-frame"></div>
+        <div class="s-gold-corner tl"></div>
+        <div class="s-gold-corner br"></div>
+        <div class="s-gold-inner">
+          <div class="s-gold-badge">✦ &nbsp; טיפ זהב · CapCut</div>
+          <h2>Watermark + פריים כפול — שתי שורות</h2>
+          <p>
+            <strong>Watermark מ-AI:</strong> שמרו את הסרטון מ-CapCut כ-MP4 — ה-Watermark נעלם. לחלופין: לחצו "Remove Watermark" מתחת לכלי AI.<br><br>
+            <strong>פריים כפול בחיבורים:</strong> כשמחברים קטעי Start/End Frame מ-Kling/Veo — מחקו פריים אחד בנקודת החיבור.<br>
+            קפיצה נעלמת. הסרטון זורם חלק.
+          </p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH07 — SECTION: AI יודע לביים
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch07-direct">
+        <div class="bg bg-grid"></div>
+        <div class="orb cyan" style="width:600px;height:600px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:8s"></div>
+        <div class="orb amber" style="width:300px;height:300px;top:25%;left:72%;transform:translate(-50%,-50%);opacity:.25;animation-duration:6s;animation-delay:-3s"></div>
+        <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%);border-color:rgba(6,182,212,.1)"></div>
+        <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%)"></div>
+        <div class="s-section-ghost">07</div>
+        <div class="s-section-inner z1">
+          <span class="s-section-num">07 / 09</span>
+          <h2>AI יודע לביים</h2>
+          <p class="s-section-desc">ChatGPT כבמאי · Shot list · Storyboard<br>מרעיון לתסריט קולנועי — בפרומפט אחד</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH07 — ChatGPT: הבמאי שלכם
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-split s-split-tl" data-transition="slide">
+        <div class="s-split-img">
+          <div style="width:100%;height:100%;background:linear-gradient(145deg,#001520,#0a1500);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;padding:40px">
+            <div class="orb cyan" style="width:300px;height:300px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.28"></div>
+            <div style="position:relative;z-index:1;width:100%;direction:rtl">
+              <div style="background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);border-radius:12px;padding:16px 20px;margin-bottom:12px;font-size:.42em">
+                <div style="color:var(--c-hi);font-weight:700;margin-bottom:6px">🎬 פרומפט במאי</div>
+                <div style="color:var(--white);line-height:1.6">אני מפרסמת בורית קפה. תן לי shot list ל-4 קטעי Kling, סגנון Wes Anderson, רוח חמה ונוסטלגית, כל shot עם camera movement</div>
+              </div>
+              <div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.2);border-radius:12px;padding:16px 20px;font-size:.36em">
+                <div style="color:var(--emerald);font-weight:700;margin-bottom:8px">✅ ChatGPT מחזיר:</div>
+                <div style="color:var(--white);line-height:1.85">
+                  Shot 1: Close-up על כוס קפה. Slow dolly in. אור בוקר רך.<br>
+                  Shot 2: ידיים עוטפות כוס חמה. Top-down. Slight rotation.<br>
+                  Shot 3: אדים עולים. Pull back reveal — חנות רטרו.<br>
+                  Shot 4: מבט מבחוץ → Pan to interior warmth.
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="img-label" style="background:rgba(6,182,212,.1);border-color:rgba(6,182,212,.25);color:var(--c-hi)">🎬 ChatGPT Director</span>
+          <div class="img-cap">פרומפט אחד → shot list קולנועי</div>
+        </div>
+        <div class="s-split-content">
+          <span class="eyebrow">ChatGPT · במאי AI</span>
+          <h2>ChatGPT —<br>הבמאי שלכם</h2>
+          <p>ChatGPT יודע <strong>שפת קולנוע.</strong> תנו לו רעיון + סגנון ויחזיר shot list מוכן לKling/Veo, עם camera movement, תאורה ואווירה.</p>
+          <ul>
+            <li><span class="dot"></span>Shot list לכל כלי וידאו</li>
+            <li><span class="dot"></span>סגנות: Wes Anderson, Kubrick, Nolan</li>
+            <li><span class="dot"></span>Storyboard טקסטואלי + ויז</li>
+            <li><span class="dot"></span>Direction לשחקנים ולפרומפטים</li>
+            <li><span class="dot"></span>מתאים ל-Hedra, Kling, Veo</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH07 — 🎬 DEMO: ChatGPT Director
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-video" data-transition="fade">
+        <div class="s-split-content" style="padding:80px 50px 80px 100px">
+          <div class="chip cyan" style="margin-bottom:1em">🎬 &nbsp; הדגמה חיה</div>
+          <span class="eyebrow">ChatGPT · Shot List</span>
+          <h2>מפרסומת → קולנוע<br>בפרומפט</h2>
+          <ul style="margin-top:.9em">
+            <li><span class="dot"></span>רעיון מוצר + סגנון כקלט</li>
+            <li><span class="dot"></span>ChatGPT מחזיר shot list מלא</li>
+            <li><span class="dot"></span>כל shot → פרומפט ל-Kling</li>
+            <li><span class="dot"></span>תוצאה: פרסומת קולנועית ב-30 דקות</li>
+          </ul>
+        </div>
+        <div class="s-video-pane">
+          <div class="bg bg-grid" style="opacity:.3"></div>
+          <div class="s-video-scanline"></div>
+          <div class="s-video-thumb">
+            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(6,182,212,.7))">🎬</div>
+            <div class="s-video-play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="s-video-tag">ChatGPT + Kling · Director Mode</div>
+            <div class="s-video-label">⬆️ להחליף בהדגמה</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH08 — SECTION: AI יודע לנתח נתונים
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch08-data">
+        <div class="bg bg-grid"></div>
+        <div class="orb" style="width:650px;height:650px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(16,185,129,.45) 0%,rgba(6,182,212,.2) 45%,transparent 72%);animation-duration:7s"></div>
+        <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%);border-color:rgba(16,185,129,.12)"></div>
+        <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%)"></div>
+        <div class="s-section-ghost">08</div>
+        <div class="s-section-inner z1">
+          <span class="s-section-num">08 / 09</span>
+          <h2>AI יודע לנתח נתונים</h2>
+          <p class="s-section-desc">ChatGPT · Gemini · גיליון אקסל → תובנות<br>מדוח ידני לניתוח שכולם מבינים — בשניות</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH08 — Data Analysis Overview
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-text" data-transition="slide">
+        <div class="s-text-accent-col" style="background:linear-gradient(180deg,#10b981,#06b6d4)"></div>
+        <div class="s-text-main z1">
+          <div class="hdr">
+            <div class="chip" style="margin-bottom:.8em;background:rgba(16,185,129,.14);border-color:rgba(16,185,129,.3);color:#34d399">📊 ChatGPT · Data</div>
+            <h2>גיליון אקסל → תובנות קריאטיביות</h2>
+          </div>
+          <div class="s-text-blocks">
+            <div class="tblock" style="animation-delay:.05s">
+              <span class="lbl">מעלים קובץ — מקבלים תובנות</span>
+              <p>Excel / CSV / PDF ← ChatGPT <strong>מנתח, מסכם, מסביר</strong> בשפה שלכם. מספיק לשאול "מה מעניין כאן?"</p>
+            </div>
+            <div class="tblock c" style="animation-delay:.12s">
+              <span class="lbl">גרפים וויז אוטומטיים</span>
+              <p>בקשו "צור גרף" — ChatGPT <strong>מייצר גרפים קריאים,</strong> בוחר את הדרך הנכונה להציג כל נתון. לא Canva, לא Excel מסובך.</p>
+            </div>
+            <div class="tblock" style="animation-delay:.19s">
+              <span class="lbl">שאלות בשפה טבעית</span>
+              <p>"מה הלקוח שהכי פחות קנה? מה ההוצאה הגדולה?" — <strong>שאלות בעברית פשוטה</strong> על גיליון עם אלפי שורות. תשובה ב-3 שניות.</p>
+            </div>
+            <div class="tblock c" style="animation-delay:.26s">
+              <span class="lbl">דוח לקוח — כתוב מאליו</span>
+              <p>ChatGPT יכול <strong>לכתוב את הדוח</strong> בשבילכם — נתון X עלה ב-Y%, מגמה, המלצה לחודש הבא. מExcel לPDF מוצג — 10 דקות.</p>
+            </div>
+          </div>
+        </div>
+        <div class="s-text-ghost">📊</div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH08 — 🎬 DEMO: Data Analysis
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-video" data-transition="fade">
+        <div class="s-split-content" style="padding:80px 50px 80px 100px">
+          <div class="chip" style="margin-bottom:1em;background:rgba(16,185,129,.14);border-color:rgba(16,185,129,.3);color:#34d399">🎬 &nbsp; הדגמה חיה</div>
+          <span class="eyebrow">ChatGPT · Data Analysis</span>
+          <h2>Excel → תובנות<br>בשפה שלנו</h2>
+          <ul style="margin-top:.9em">
+            <li><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>קובץ גיליון אמיתי כקלט</li>
+            <li><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>שאלה בעברית פשוטה</li>
+            <li><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>גרף + תובנות + המלצה</li>
+            <li><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>מה שלקח שעה — לוקח שניות</li>
+          </ul>
+        </div>
+        <div class="s-video-pane">
+          <div class="bg bg-grid" style="opacity:.3"></div>
+          <div class="s-video-scanline"></div>
+          <div class="s-video-thumb">
+            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(16,185,129,.7))">📊</div>
+            <div class="s-video-play-btn" style="background:linear-gradient(135deg,#10b981,#06b6d4)">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="s-video-tag" style="color:#34d399">ChatGPT · Data Analysis</div>
+            <div class="s-video-label">⬆️ להחליף בהדגמת ניתוח נתונים</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH09 — SECTION: AI יכול לעשות הכל
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch09-everything">
+        <div class="bg bg-grid"></div>
+        <div class="orb" style="width:800px;height:800px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:5s;opacity:.32"></div>
+        <div class="orb cyan" style="width:400px;height:400px;top:28%;left:72%;transform:translate(-50%,-50%);animation-duration:7s;animation-delay:-3s;opacity:.28"></div>
+        <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%)"></div>
+        <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%)"></div>
+        <div class="s-section-ghost">09</div>
+        <div class="s-section-inner z1">
+          <span class="s-section-num">09 / 09</span>
+          <h2>AI יכול לעשות הכל</h2>
+          <p class="s-section-desc">תניחו שה-AI יודע · עצרו להניח<br>הכלי הכי חזק — ההנחה שאפשרי</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH09 — "תניחו שה-AI יודע"
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-statement" data-transition="zoom" data-transition-speed="slow">
+        <div class="s-statement-conic"></div>
+        <div class="s-statement-conic2"></div>
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+        <div class="s-accent-h top"></div>
+        <div class="s-accent-h bottom"></div>
+        <div class="s-statement-inner">
+          <span class="eyebrow amber" style="animation:fade-up .6s ease both;font-size:.52em">לפני שאתם שואלים "האם AI יכול..."</span>
+          <span class="s-statement-word outline" style="font-size:4.5em !important;animation-delay:.05s">תניחו</span>
+          <span class="s-statement-word g" style="font-size:4.5em !important;animation-delay:.12s">שהתשובה כן</span>
+          <span class="s-statement-word" style="font-size:2.8em !important;animation-delay:.2s;color:rgba(240,240,248,.65)">
+            90% מהפעמים — כן, כבר.<br>
+            <strong style="color:var(--white)">חפשו איך. לא אם.</strong>
+          </span>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           SURPRISE — SECTION: הפתעה
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-section" data-transition="zoom" data-transition-speed="slow" id="ch-surprise">
+        <div class="bg bg-grid"></div>
+        <div class="orb" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(244,63,94,.45) 0%,rgba(245,158,11,.25) 45%,transparent 72%);animation-duration:6s"></div>
+        <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%);border-color:rgba(244,63,94,.1)"></div>
+        <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%)"></div>
+        <div class="s-section-ghost" style="-webkit-text-stroke-color:rgba(245,158,11,.08)">?</div>
+        <div class="s-section-inner z1">
+          <span class="s-section-num">הפתעה</span>
+          <h2>AI יודע להכין מצגת</h2>
+          <p class="s-section-desc">הפתעה שהבטחנו · מה שאתם רואים עכשיו<br>זה מה שה-AI עשה בשבילנו</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           SURPRISE — המצגת הזו
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-text" data-transition="slide">
+        <div class="s-text-accent-col" style="background:var(--grad-fire)"></div>
+        <div class="s-text-main z1">
+          <div class="hdr">
+            <div class="chip" style="margin-bottom:.8em;background:rgba(244,63,94,.14);border-color:rgba(244,63,94,.3);color:#f87171">🎁 ההפתעה</div>
+            <h2>המצגת הזו — AI עשה אותה</h2>
+          </div>
+          <div class="s-text-blocks">
+            <div class="tblock" style="animation-delay:.05s">
+              <span class="lbl">מה שראיתם</span>
+              <p>כל העיצוב, כל הטקסטים, כל המבנה הנרטיבי — <strong>Claude + ChatGPT</strong> עשו את רוב העבודה. הכלים שדיברנו עליהם — בפועל.</p>
+            </div>
+            <div class="tblock c" style="animation-delay:.12s">
+              <span class="lbl">כמה זמן לקח</span>
+              <p>כמה שעות עבודה → מצגת מלאה. לא "דמו" — <strong>התוצר הסופי שאתם קיבלתם עכשיו.</strong> זה מה שאפשרי היום.</p>
+            </div>
+            <div class="tblock" style="animation-delay:.19s">
+              <span class="lbl">הלקח</span>
+              <p>ה-AI לא החליף את המחשבה. הוא <strong>הגביר את היכולת.</strong> האסטרטגיה — שלנו. הביצוע — AI. כולם מרוויחים.</p>
+            </div>
+            <div class="tblock c" style="animation-delay:.26s">
+              <span class="lbl">מה עכשיו?</span>
+              <p><strong>לחקור. לנסות. לא לחכות.</strong> הכלים מוכנים. השאלה היא — אתם?</p>
+            </div>
+          </div>
+        </div>
+        <div class="s-text-ghost">!</div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           OUTRO
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-outro" data-transition="fade" data-transition-speed="slow">
+        <canvas class="particle-canvas" id="canvas-outro"></canvas>
+        <div class="bg bg-dots" style="opacity:.3"></div>
+        <div class="orb" style="width:600px;height:600px;top:45%;left:35%;transform:translate(-50%,-50%);animation-duration:8s;opacity:.5"></div>
+        <div class="orb cyan" style="width:450px;height:450px;top:55%;left:68%;transform:translate(-50%,-50%);animation-duration:6s;animation-delay:-3s;opacity:.4"></div>
+        <div class="ring ring-1" style="width:400px;height:400px"></div>
+        <div class="ring ring-2" style="width:700px;height:700px"></div>
+        <div class="s-outro-inner z1">
+          <span class="chip" style="margin-bottom:1.2em;animation:fade-up .7s ease both">42 Creative × AI Workshop</span>
+          <h1 style="animation:fade-up .7s .1s ease both">stay curious.</h1>
+          <div style="font-size:.55em;color:var(--muted);margin-top:.8em;animation:fade-up .7s .2s ease both;line-height:1.7">
+            מה שלמדתם היום יתיישן.<br>
+            <strong style="color:var(--white)">האינסטינקט לחקור — לעולם לא.</strong>
+          </div>
+          <div class="s-outro-logo" style="animation:fade-up .7s .35s ease both">
+            <img src="assets/logo-42.png" alt="42 Creative" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <span style="display:none;font-size:2.5em;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent">42</span>
+          </div>
+        </div>
+      </section>
 
     </div><!-- /slides -->
   </div><!-- /reveal -->
@@ -1584,6 +2267,7 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     initParticles('canvas-cover');
+    initParticles('canvas-outro');
     // Mark default gender button as active
     document.querySelector('.ai-gender-btn.male')?.classList.add('active-btn');
   });
