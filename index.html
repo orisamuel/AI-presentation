@@ -32,21 +32,37 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      REVEAL RESET — FULL-BLEED CANVAS
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  html,body {
-    background:linear-gradient(165deg,#100028 0%,#05050e 50%,#001525 100%) !important;
-    background-attachment:fixed !important;
-    margin:0; padding:0;
-  }
-  .reveal-viewport { background:transparent !important; }
+  html,body { background:#05050e !important; margin:0; padding:0; }
+  /* Reveal.js backgrounds container — fills 100vw×100vh including letterbox areas */
+  .reveal-viewport { background:#05050e !important; }
   .reveal { font-family:var(--font) !important; font-size:42px; background:transparent !important; }
-  .reveal .slides { direction:rtl; text-align:right; background:transparent !important; }
+  .reveal .slides { direction:rtl; text-align:right; }
+  /* backgrounds layer is the true full-screen canvas — gradient set via JS per chapter */
+  .reveal .backgrounds {
+    background: linear-gradient(165deg,#100028 0%,#05050e 50%,#001525 100%);
+    transition: background 1.2s ease;
+  }
+  .reveal .backgrounds .slide-background { background:transparent !important; }
+  /* Sections are transparent — backgrounds layer shows through everywhere, no letterbox */
   .reveal .slides > section {
     padding:0 !important; margin:0 !important;
-    background:var(--bg) !important; background-image:none !important;
+    background:transparent !important; background-image:none !important;
     border:none !important; border-top:none !important; border-image:none !important;
     border-radius:0 !important; box-shadow:none !important;
     overflow:hidden !important; isolation:isolate;
     width:100% !important; height:100% !important;
+  }
+  /* Slide counter — JS will position it between the nav arrows */
+  .reveal .slide-number {
+    font-family:var(--mono) !important;
+    font-size:11px !important;
+    background:rgba(5,5,14,.8) !important;
+    border:1px solid rgba(255,255,255,.12) !important;
+    border-radius:4px !important;
+    padding:3px 8px !important;
+    color:rgba(255,255,255,.55) !important;
+    pointer-events:none !important;
+    z-index:35 !important;
   }
   .reveal .slides > section::before,
   .reveal .slides > section::after { content:none !important; display:none !important; }
@@ -515,10 +531,12 @@
     gap:16px; padding:32px 20px;
     border:1px solid rgba(255,255,255,.04); border-radius:16px; margin:6px;
     background:rgba(255,255,255,.02);
-    animation:fade-up .6s ease both;
+    animation:fade-up .6s ease both; position:relative;
     transition:all .3s ease; cursor:default;
   }
-  .cap-item:hover { border-color:rgba(124,58,237,.3); background:rgba(124,58,237,.06); transform:translateY(-4px); }
+  .cap-item:hover { border-color:rgba(124,58,237,.5); background:rgba(124,58,237,.12); transform:translateY(-6px); box-shadow:0 0 24px rgba(124,58,237,.18); }
+  .cap-item[data-goto]::after { content:'→'; position:absolute; bottom:8px; left:50%; transform:translateX(-50%); font-size:.32em; color:rgba(124,58,237,.4); opacity:0; transition:opacity .2s; }
+  .cap-item[data-goto]:hover::after { opacity:1; }
   .cap-item .ci { font-size:2.2em; filter:drop-shadow(0 0 12px rgba(124,58,237,.4)); }
   .cap-item .ct { font-size:.52em; font-weight:700; color:var(--white); text-align:center; line-height:1.3; }
   .cap-item .cs { font-size:.42em; color:var(--muted); text-align:center; line-height:1.4; }
@@ -947,52 +965,52 @@
           <h2>אז מה ה-AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> לעשות?</h2>
         </div>
         <div class="s-caps-grid z1">
-          <div class="cap-item highlight" style="animation-delay:.00s">
+          <div class="cap-item highlight" style="animation-delay:.00s;cursor:pointer" data-goto="ch01-write" data-no-advance="true">
             <div class="ci">✍️</div>
             <div class="ct">לכתוב</div>
             <div class="cs">Gemini · Gems · ChatGPT</div>
           </div>
-          <div class="cap-item" style="animation-delay:.06s">
+          <div class="cap-item" style="animation-delay:.06s;cursor:pointer" data-goto="ch02-images" data-no-advance="true">
             <div class="ci">🎨</div>
             <div class="ct">לעצב תמונות</div>
             <div class="cs">Imagen · Gemini Flash</div>
           </div>
-          <div class="cap-item" style="animation-delay:.12s">
+          <div class="cap-item" style="animation-delay:.12s;cursor:pointer" data-goto="ch03-video" data-no-advance="true">
             <div class="ci">🎬</div>
             <div class="ct">ליצור וידאו</div>
             <div class="cs">Kling · Veo 3</div>
           </div>
-          <div class="cap-item" style="animation-delay:.18s">
+          <div class="cap-item" style="animation-delay:.18s;cursor:pointer" data-goto="ch04-effects" data-no-advance="true">
             <div class="ci">⚡</div>
             <div class="ct">להיות אפטריסט</div>
             <div class="cs">Kling Effects · Motion</div>
           </div>
-          <div class="cap-item" style="animation-delay:.24s">
+          <div class="cap-item" style="animation-delay:.24s;cursor:pointer" data-goto="ch05-sound" data-no-advance="true">
             <div class="ci">🎙️</div>
             <div class="ct">ליצור סאונד</div>
             <div class="cs">ElevenLabs · Gemini</div>
           </div>
-          <div class="cap-item" style="animation-delay:.30s">
+          <div class="cap-item" style="animation-delay:.30s;cursor:pointer" data-goto="ch05-sound" data-no-advance="true">
             <div class="ci">🎵</div>
             <div class="ct">לשיר</div>
             <div class="cs">Suno · Lyria 3</div>
           </div>
-          <div class="cap-item" style="animation-delay:.36s">
+          <div class="cap-item" style="animation-delay:.36s;cursor:pointer" data-goto="ch06-connect" data-no-advance="true">
             <div class="ci">🔗</div>
             <div class="ct">לחבר וידאו + סאונד</div>
             <div class="cs">Hedra · CapCut</div>
           </div>
-          <div class="cap-item" style="animation-delay:.42s">
+          <div class="cap-item" style="animation-delay:.42s;cursor:pointer" data-goto="ch08-data" data-no-advance="true">
             <div class="ci">📊</div>
             <div class="ct">לנתח נתונים</div>
             <div class="cs">ChatGPT · Gemini</div>
           </div>
-          <div class="cap-item" style="animation-delay:.48s">
+          <div class="cap-item" style="animation-delay:.48s;cursor:pointer" data-goto="ch09-everything" data-no-advance="true">
             <div class="ci">💻</div>
             <div class="ct">לתכנת</div>
             <div class="cs">Claude · Copilot</div>
           </div>
-          <div class="cap-item" style="animation-delay:.54s;border-color:rgba(124,58,237,.25);background:rgba(124,58,237,.06)">
+          <div class="cap-item" style="animation-delay:.54s;border-color:rgba(124,58,237,.25);background:rgba(124,58,237,.06);cursor:pointer" data-goto="ch-surprise" data-no-advance="true">
             <div class="ci">🪄</div>
             <div class="ct">להכין את המצגת הזו</div>
             <div class="cs">← מה שאתם רואים עכשיו</div>
@@ -1003,7 +1021,7 @@
       <!-- ══════════════════════════════════════════════════════
            CH01 — SECTION: לכתוב
       ══════════════════════════════════════════════════════ -->
-      <section class="s-section" data-transition="zoom" data-transition-speed="fast">
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch01-write" data-chapter-key="write">
         <div class="bg bg-grid"></div>
         <div class="orb" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:6s"></div>
         <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%)"></div>
@@ -1161,7 +1179,7 @@
       <!-- ══════════════════════════════════════════════════════
            CH02 — SECTION: לעצב תמונות
       ══════════════════════════════════════════════════════ -->
-      <section class="s-section" data-transition="zoom" data-transition-speed="fast">
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch02-images" data-chapter-key="images">
         <div class="bg bg-grid"></div>
         <div class="orb rose" style="width:650px;height:650px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:7s"></div>
         <div class="orb" style="width:400px;height:400px;top:25%;left:70%;transform:translate(-50%,-50%);opacity:.4;animation-duration:5s;animation-delay:-3s"></div>
@@ -1261,7 +1279,7 @@
       <!-- ══════════════════════════════════════════════════════
            CH03 — SECTION: ליצור וידאו
       ══════════════════════════════════════════════════════ -->
-      <section class="s-section" data-transition="zoom" data-transition-speed="fast">
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch03-video" data-chapter-key="video">
         <div class="bg bg-grid"></div>
         <div class="orb cyan" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:6s"></div>
         <div class="orb" style="width:350px;height:350px;top:20%;left:25%;transform:translate(-50%,-50%);opacity:.35;animation-duration:5s;animation-delay:-2s"></div>
@@ -1492,7 +1510,7 @@
       <!-- ══════════════════════════════════════════════════════
            CH04 — SECTION: להיות אפטריסט
       ══════════════════════════════════════════════════════ -->
-      <section class="s-section" data-transition="zoom" data-transition-speed="fast">
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch04-effects" data-chapter-key="effects">
         <div class="bg bg-grid"></div>
         <div class="orb amber" style="width:650px;height:650px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:7s"></div>
         <div class="orb" style="width:300px;height:300px;top:75%;left:20%;transform:translate(-50%,-50%);opacity:.3;animation-duration:5s;animation-delay:-2s"></div>
@@ -1591,7 +1609,7 @@
       <!-- ══════════════════════════════════════════════════════
            CH05 — SECTION: AI יודע ליצור סאונד
       ══════════════════════════════════════════════════════ -->
-      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch05-sound">
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch05-sound" data-chapter-key="sound">
         <div class="bg bg-grid"></div>
         <div class="orb" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(139,92,246,.45) 0%,rgba(16,185,129,.2) 45%,transparent 72%);animation-duration:7s"></div>
         <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%);border-color:rgba(139,92,246,.12)"></div>
@@ -1776,7 +1794,7 @@
       <!-- ══════════════════════════════════════════════════════
            CH06 — SECTION: AI יודע לחבר
       ══════════════════════════════════════════════════════ -->
-      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch06-connect">
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch06-connect" data-chapter-key="connect">
         <div class="bg bg-grid"></div>
         <div class="orb rose" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:8s"></div>
         <div class="orb" style="width:350px;height:350px;top:25%;left:72%;transform:translate(-50%,-50%);opacity:.3;animation-duration:5s;animation-delay:-3s"></div>
@@ -1930,7 +1948,7 @@
       <!-- ══════════════════════════════════════════════════════
            CH07 — SECTION: AI יודע לביים
       ══════════════════════════════════════════════════════ -->
-      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch07-direct">
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch07-direct" data-chapter-key="direct">
         <div class="bg bg-grid"></div>
         <div class="orb cyan" style="width:600px;height:600px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:8s"></div>
         <div class="orb amber" style="width:300px;height:300px;top:25%;left:72%;transform:translate(-50%,-50%);opacity:.25;animation-duration:6s;animation-delay:-3s"></div>
@@ -2016,7 +2034,7 @@
       <!-- ══════════════════════════════════════════════════════
            CH08 — SECTION: AI יודע לנתח נתונים
       ══════════════════════════════════════════════════════ -->
-      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch08-data">
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch08-data" data-chapter-key="data">
         <div class="bg bg-grid"></div>
         <div class="orb" style="width:650px;height:650px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(16,185,129,.45) 0%,rgba(6,182,212,.2) 45%,transparent 72%);animation-duration:7s"></div>
         <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%);border-color:rgba(16,185,129,.12)"></div>
@@ -2093,7 +2111,7 @@
       <!-- ══════════════════════════════════════════════════════
            CH09 — SECTION: AI יכול לעשות הכל
       ══════════════════════════════════════════════════════ -->
-      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch09-everything">
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch09-everything" data-chapter-key="everything">
         <div class="bg bg-grid"></div>
         <div class="orb" style="width:800px;height:800px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:5s;opacity:.32"></div>
         <div class="orb cyan" style="width:400px;height:400px;top:28%;left:72%;transform:translate(-50%,-50%);animation-duration:7s;animation-delay:-3s;opacity:.28"></div>
@@ -2132,7 +2150,7 @@
       <!-- ══════════════════════════════════════════════════════
            SURPRISE — SECTION: הפתעה
       ══════════════════════════════════════════════════════ -->
-      <section class="s-section" data-transition="zoom" data-transition-speed="slow" id="ch-surprise">
+      <section class="s-section" data-transition="zoom" data-transition-speed="slow" id="ch-surprise" data-chapter-key="surprise">
         <div class="bg bg-grid"></div>
         <div class="orb" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(244,63,94,.45) 0%,rgba(245,158,11,.25) 45%,transparent 72%);animation-duration:6s"></div>
         <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%);border-color:rgba(244,63,94,.1)"></div>
@@ -2298,12 +2316,79 @@
     });
   }
 
+  /* ── CHAPTER BACKGROUNDS: per-chapter color system ── */
+  const CHAPTER_BG = {
+    default:    'linear-gradient(165deg,#100028 0%,#05050e 50%,#001525 100%)',
+    write:      'linear-gradient(165deg,#120022 0%,#05050e 50%,#000e1a 100%)',
+    images:     'linear-gradient(165deg,#1a0018 0%,#05050e 50%,#000a22 100%)',
+    video:      'linear-gradient(165deg,#001a24 0%,#05050e 50%,#08001a 100%)',
+    effects:    'linear-gradient(165deg,#1a0a00 0%,#05050e 50%,#001018 100%)',
+    sound:      'linear-gradient(165deg,#0c0025 0%,#05050e 50%,#001022 100%)',
+    connect:    'linear-gradient(165deg,#1a0012 0%,#05050e 50%,#00101a 100%)',
+    direct:     'linear-gradient(165deg,#001c1a 0%,#05050e 50%,#001022 100%)',
+    data:       'linear-gradient(165deg,#001c10 0%,#05050e 50%,#000c22 100%)',
+    everything: 'linear-gradient(165deg,#100028 0%,#05050e 50%,#001525 100%)',
+    surprise:   'linear-gradient(165deg,#1c0800 0%,#05050e 50%,#100012 100%)',
+    outro:      'linear-gradient(165deg,#100028 0%,#05050e 50%,#001525 100%)',
+  };
+
+  let _currentChapterKey = 'default';
+
+  function getSlideChapterKey(slide) {
+    let el = slide;
+    while (el) {
+      if (el.classList && el.classList.contains('s-section')) {
+        return el.getAttribute('data-chapter-key') || 'default';
+      }
+      if (el.classList && (el.classList.contains('s-cover') || el.classList.contains('s-outro'))) {
+        return el.classList.contains('s-outro') ? 'outro' : 'default';
+      }
+      el = el.previousElementSibling;
+    }
+    return 'default';
+  }
+
+  function applyChapterBg(key) {
+    if (key === _currentChapterKey) return;
+    _currentChapterKey = key;
+    const bg = document.querySelector('.reveal .backgrounds');
+    if (bg) bg.style.background = CHAPTER_BG[key] || CHAPTER_BG.default;
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     initParticles('canvas-cover');
     initParticles('canvas-outro');
     enhanceSlideBackgrounds();
-    // Mark default gender button as active
     document.querySelector('.ai-gender-btn.male')?.classList.add('active-btn');
+  });
+
+  /* Position slide counter between the nav arrows */
+  Reveal.on('ready', () => {
+    requestAnimationFrame(() => {
+      const controls = document.querySelector('.reveal .controls');
+      const numEl    = document.querySelector('.reveal .slide-number');
+      if (controls && numEl) {
+        const r = controls.getBoundingClientRect();
+        const cx = r.left + r.width  / 2;
+        const cy = r.top  + r.height / 2;
+        numEl.style.setProperty('position', 'fixed', 'important');
+        numEl.style.setProperty('right',    'auto',   'important');
+        numEl.style.setProperty('bottom',   'auto',   'important');
+        numEl.style.setProperty('left',     cx + 'px','important');
+        numEl.style.setProperty('top',      cy + 'px','important');
+        numEl.style.setProperty('transform','translate(-50%,-50%)','important');
+      }
+      /* initial chapter bg */
+      applyChapterBg('default');
+    });
+    processDemoPlaceholders();
+    setupAgendaNav();
+    fixCodeBlocks();
+  });
+
+  Reveal.on('slidechanged', (event) => {
+    handleSlideMedia(event.currentSlide, event.previousSlide);
+    applyChapterBg(getSlideChapterKey(event.currentSlide));
   });
   </script>
 </body>
