@@ -724,8 +724,8 @@
         <div class="s-cover-ring-spin r3"></div>
         <div class="s-cover-inner z1">
           <span class="s-cover-eyebrow">42 Creative × AI Workshop</span>
-          <h1>AI שלנו</h1>
-          <div class="s-cover-sub">כי לדעת לעבוד עם AI זה כוח, לא בחירה</div>
+          <h1>חכמה בינה ודעת</h1>
+          <div class="s-cover-sub">הרבה דברים חכמים שחשוב לדעת על בינה מלאכותית</div>
           <div class="s-cover-tagline">לכתוב &nbsp;·&nbsp; לעצב &nbsp;·&nbsp; לצלם &nbsp;·&nbsp; לנגן &nbsp;·&nbsp; לערוך &nbsp;·&nbsp; לנתח &nbsp;·&nbsp; להפתיע</div>
         </div>
         <div class="marquee-strip">
@@ -768,7 +768,7 @@
           <span class="eyebrow amber" style="animation:fade-up .6s ease both;font-size:.6em">נכון מאוד!</span>
           <span class="s-statement-word outline" style="font-size:5em;animation-delay:.05s">מומחי</span>
           <span class="s-statement-word fire" style="font-size:5em;animation-delay:.12s">AI</span>
-          <p class="s-statement-sub" style="font-size:.72em;color:rgba(240,240,248,.6);margin-top:1.2em">מי שהכי בטוח שהוא מבין את הטכנולוגיה הזו — הוא הראשון שהיא עוקפת.</p>
+          <p class="s-statement-sub" style="font-size:.72em;color:rgba(240,240,248,.6);margin-top:1.2em">ככה זה כשכל המטרה של הטכנולוגיה היא לייתר את הצורך במומחים</p>
         </div>
       </section>
 
@@ -779,10 +779,9 @@
         <div class="s-text-accent-col"></div>
         <div class="s-text-main z1">
           <div class="hdr">
-            <div class="chip" style="margin-bottom:.8em">🤖 הסבר קצר</div>
-            <h2>מה הAI עושה? בינתיים — מפשט</h2>
+            <h2>מה הAI עושה?</h2>
           </div>
-          <div class="s-text-blocks">
+          <div class="s-text-blocks" style="grid-template-columns:1fr 1fr;gap:28px 60px">
             <div class="tblock fragment" style="animation-delay:.05s">
               <span class="lbl">בינתיים</span>
               <p>הAI <strong>לא ממציא דברים חדשים</strong> — הוא מפשט דברים שפעם היה מורכב מאוד לעשות אותם, או שהיה צריך בשבילם להיות מומחה גדול.</p>
@@ -791,45 +790,66 @@
               <span class="lbl">לכן</span>
               <p>אם מישהו הוא <strong>"מומחה גדול" בתחום מסובך</strong> — הAI רודף אחריו בצעדי ענק. הוא הפך את המורכבות שנו לנגישה לכולם.</p>
             </div>
-            <div class="tblock fragment" style="animation-delay:.19s">
-              <span class="lbl">המשמעות</span>
+            <div class="tblock fragment" style="animation-delay:.19s;grid-column:span 2">
               <p>מה שלפני שנתיים דרש <strong>3 כלים, שעות עבודה וידע טכני עמוק</strong> — היום נעשה בפרומפט אחד, בעברית, בפחות מדקה.</p>
-            </div>
-            <div class="tblock c fragment" style="animation-delay:.26s">
-              <span class="lbl">המציאות</span>
-              <p>מי שממשיך לעשות דברים <strong>כמו שתמיד עשה</strong> — מוצא את עצמו מתחרה עם מישהו שמשתמש ב-AI. זה לא הוגן. זה המציאות.</p>
             </div>
           </div>
         </div>
-        <div class="s-text-ghost">AI</div>
+        <!-- AI Simplification graphic -->
+        <div style="position:absolute;left:60px;bottom:55px;pointer-events:none;z-index:1;animation:float 6s ease-in-out infinite;opacity:.75">
+          <svg width="270" height="175" viewBox="0 0 270 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="aiCore" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(124,58,237,.95)"/>
+                <stop offset="100%" stop-color="rgba(6,182,212,.65)"/>
+              </radialGradient>
+            </defs>
+            <!-- Input complexity nodes -->
+            <circle cx="28" cy="38" r="9" fill="rgba(244,63,94,.35)" stroke="rgba(244,63,94,.6)" stroke-width="1.2"/>
+            <circle cx="28" cy="75" r="9" fill="rgba(245,158,11,.35)" stroke="rgba(245,158,11,.6)" stroke-width="1.2"/>
+            <circle cx="28" cy="112" r="9" fill="rgba(168,85,247,.35)" stroke="rgba(168,85,247,.6)" stroke-width="1.2"/>
+            <circle cx="28" cy="149" r="9" fill="rgba(16,185,129,.35)" stroke="rgba(16,185,129,.6)" stroke-width="1.2"/>
+            <!-- Connector lines to AI -->
+            <line x1="37" y1="38"  x2="112" y2="90" stroke="rgba(255,255,255,.1)" stroke-width="1" stroke-dasharray="4 3"/>
+            <line x1="37" y1="75"  x2="112" y2="90" stroke="rgba(255,255,255,.1)" stroke-width="1" stroke-dasharray="4 3"/>
+            <line x1="37" y1="112" x2="112" y2="90" stroke="rgba(255,255,255,.1)" stroke-width="1" stroke-dasharray="4 3"/>
+            <line x1="37" y1="149" x2="112" y2="90" stroke="rgba(255,255,255,.1)" stroke-width="1" stroke-dasharray="4 3"/>
+            <!-- AI central node -->
+            <circle cx="130" cy="90" r="32" fill="url(#aiCore)"/>
+            <circle cx="130" cy="90" r="38" stroke="rgba(124,58,237,.2)" stroke-width="1" fill="none"/>
+            <text x="130" y="96" text-anchor="middle" font-family="Arial" font-weight="900" font-size="15" fill="white" letter-spacing="-.5">AI</text>
+            <!-- Output line -->
+            <line x1="162" y1="90" x2="228" y2="90" stroke="rgba(6,182,212,.55)" stroke-width="2"/>
+            <polygon points="228,85 238,90 228,95" fill="rgba(6,182,212,.7)"/>
+            <!-- Output node -->
+            <circle cx="248" cy="90" r="15" fill="rgba(6,182,212,.15)" stroke="rgba(6,182,212,.7)" stroke-width="1.5"/>
+            <text x="248" y="95" text-anchor="middle" font-family="Arial" font-size="13" fill="rgba(34,211,238,.95)">✓</text>
+          </svg>
+        </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
            05 — BEFORE: 2023 EXPERT VIDEO
       ══════════════════════════════════════════════════════ -->
-      <section class="s-video" data-transition="slide" data-transition-speed="fast">
-        <div class="s-split-content" style="padding:80px 50px 80px 100px">
+      <section class="s-video" data-transition="slide" data-transition-speed="fast" style="grid-template-columns:32% 68%">
+        <div class="s-split-content" style="padding:80px 40px 80px 80px;justify-content:center">
           <span class="eyebrow amber">יוני 2023 — לפני שנתיים</span>
           <h2>כך הסביר מומחה AI<br>ייצור וידאו</h2>
-          <p>Deforum + ControlNet + Stable Diffusion + ComfyUI + Python scripts + שעות של קולוריזציה ידנית + קובצי JSON...</p>
-          <ul style="margin-top:.9em">
-            <li><span class="dot" style="background:var(--grad-fire)"></span>5–7 כלים שונים שצריך להתקין</li>
-            <li><span class="dot" style="background:var(--grad-fire)"></span>ידע טכני עמוק בכל אחד מהם</li>
-            <li><span class="dot" style="background:var(--grad-fire)"></span>ימים עד שבוע לסרטון אחד</li>
-            <li><span class="dot" style="background:var(--grad-fire)"></span>GPU ביתי חזק — דרישת מינימום</li>
-          </ul>
         </div>
-        <div class="s-video-pane">
-          <div class="bg bg-grid" style="opacity:.3"></div>
-          <!-- 🎬 להחליף ב: <iframe src="YOUTUBE_EMBED_URL?autoplay=0" allowfullscreen></iframe> -->
+        <div class="s-video-pane" style="background:#000;position:relative;overflow:hidden">
+          <!--
+            📁 שים את הסרטון כאן:
+               assets/demos/slide05-expert-2023.mp4
+            ואז החלף את ה-div הזה ב:
+            <video src="assets/demos/slide05-expert-2023.mp4" controls style="width:100%;height:100%;object-fit:contain"></video>
+          -->
           <div class="s-video-scanline"></div>
           <div class="s-video-thumb">
-            <div style="font-size:3.5em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(245,158,11,.5))">🎬</div>
             <div class="s-video-play-btn" style="background:var(--grad-fire)">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
-            <div class="s-video-tag" style="color:var(--a-hi)">⚠️ סרטון הדגמה — 2023</div>
-            <div class="s-video-label">כך עשינו וידאו בAI לפני שנתיים</div>
+            <div class="s-video-tag" style="color:var(--a-hi)">סרטון הדגמה — 2023</div>
+            <div class="s-video-label" style="font-family:var(--mono);direction:ltr;text-align:center">assets/demos/slide05-expert-2023.mp4</div>
           </div>
         </div>
       </section>
@@ -837,41 +857,29 @@
       <!-- ══════════════════════════════════════════════════════
            06 — AFTER: TODAY, ONE PROMPT
       ══════════════════════════════════════════════════════ -->
-      <section class="s-split s-split-tl" data-transition="slide" data-transition-speed="fast">
-        <div class="s-split-img">
-          <!-- Mocked Gemini chat interface -->
-          <div style="width:100%;height:100%;background:linear-gradient(145deg,#0a001a,#001a30);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px;gap:18px;position:relative">
-            <div class="orb cyan" style="width:400px;height:400px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:6s;opacity:.35"></div>
-            <div style="position:relative;z-index:1;width:100%;max-width:440px;direction:rtl">
-              <!-- User message -->
-              <div style="background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.28);border-radius:16px 16px 4px 16px;padding:18px 22px;margin-bottom:14px">
-                <div style="font-size:.4em;color:var(--v-hi);font-weight:700;margin-bottom:8px;letter-spacing:.1em">✏️ אתם כותבים</div>
-                <div style="font-size:.52em;color:var(--white);line-height:1.65">צור סרטון של אישה הולכת ברחוב תל אביב בערב, אורות ניאון, קולנועי, 4K</div>
-              </div>
-              <!-- AI response -->
-              <div style="background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.22);border-radius:16px 16px 16px 4px;padding:18px 22px">
-                <div style="font-size:.4em;color:var(--c-hi);font-weight:700;margin-bottom:8px;letter-spacing:.1em">✅ Gemini + Veo 3</div>
-                <div style="font-size:.48em;color:var(--white);line-height:1.6;margin-bottom:12px">יוצר וידאו עם סאונד מובנה...<br><span style="color:var(--muted)">זמן עיבוד: ~45 שניות</span></div>
-                <div style="display:flex;align-items:center;gap:10px;background:rgba(16,185,129,.12);border-radius:8px;padding:10px 14px">
-                  <span style="font-size:.8em">✓</span>
-                  <span style="font-size:.42em;color:var(--emerald);font-weight:700">מוכן להורדה — 1080p + Audio</span>
-                </div>
-              </div>
+      <section class="s-split s-split-tl" data-transition="slide" data-transition-speed="fast" style="grid-template-columns:65% 35%">
+        <div class="s-split-img" style="position:relative;overflow:hidden;background:#000">
+          <!--
+            📁 שים את הסרטון כאן:
+               assets/demos/slide06-today-veo3.mp4
+            ואז החלף את ה-div הזה ב:
+            <video src="assets/demos/slide06-today-veo3.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover"></video>
+          -->
+          <div class="s-video-scanline"></div>
+          <div class="s-video-thumb" style="height:100%">
+            <div class="orb cyan" style="width:400px;height:400px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.25;animation-duration:7s"></div>
+            <div class="s-video-play-btn" style="position:relative;z-index:1">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
+            <div class="s-video-tag" style="position:relative;z-index:1">Gemini + Veo 3 · 2025</div>
+            <div class="s-video-label" style="font-family:var(--mono);direction:ltr;text-align:center;position:relative;z-index:1">assets/demos/slide06-today-veo3.mp4</div>
           </div>
-          <span class="img-label">🔮 Gemini + Veo 3 · 2025</span>
           <div class="img-cap">אותה תוצאה. פרומפט אחד. 45 שניות.</div>
         </div>
-        <div class="s-split-content">
+        <div class="s-split-content" style="padding:80px 80px 80px 40px">
           <span class="eyebrow">היום — 2025</span>
           <h2>ואיך עושים<br>את זה עכשיו</h2>
           <p>אותה תוצאה — פרומפט אחד, בעברית, ב-Gemini. <strong>אפס התקנות. אפס ידע טכני.</strong></p>
-          <ul>
-            <li><span class="dot"></span>כלי אחד, פרומפט אחד</li>
-            <li><span class="dot"></span>עברית — פשוט כותבים מה שרוצים</li>
-            <li><span class="dot"></span>45 שניות מהרעיון לוידאו עם סאונד</li>
-            <li><span class="dot"></span>בחינם — עם חשבון Google רגיל</li>
-          </ul>
         </div>
       </section>
 
@@ -946,50 +954,47 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           09 — TRANSITION: WHAT CAN AI DO?
+           10 — SECTION: מה ה-AI יודע לעשות?
       ══════════════════════════════════════════════════════ -->
-      <section class="s-transition" data-transition="convex" data-transition-speed="fast">
-        <div class="bg bg-grid" style="opacity:.5"></div>
-        <div class="orb" style="width:500px;height:500px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.25"></div>
-        <div class="s-transition-inner">
-          <span class="s-transition-num">?</span>
-          <div class="chip cyan" style="margin-bottom:1em">🤖 &nbsp; שאלה חשובה לפני</div>
-          <h2>אז מה ה-AI<br>
-            <span class="g-m">יודע</span><span class="g-f">יודעת</span>
-            לעשות?
-          </h2>
-          <p class="s-transition-sub">רגע — לפני שנמשיך יש החלטה קריטית שצריך לקבל</p>
-          <div class="s-transition-dots">
-            <div class="s-transition-dot active"></div>
-            <div class="s-transition-dot"></div>
-            <div class="s-transition-dot"></div>
-            <div class="s-transition-dot"></div>
-            <div class="s-transition-dot"></div>
-            <div class="s-transition-dot"></div>
-            <div class="s-transition-dot"></div>
-          </div>
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast">
+        <div class="bg bg-grid" style="opacity:.4"></div>
+        <div class="orb" style="width:800px;height:800px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:8s;opacity:.18"></div>
+        <div class="orb cyan" style="width:500px;height:500px;top:30%;left:20%;transform:translate(-50%,-50%);animation-duration:10s;animation-delay:-4s;opacity:.12"></div>
+        <div class="s-section-ring r1" style="width:700px;height:700px;transform:translate(-50%,-50%)"></div>
+        <div class="s-section-ring r2" style="width:1100px;height:1100px;transform:translate(-50%,-50%)"></div>
+        <div class="s-section-ghost">?</div>
+        <div class="s-section-inner z1">
+          <span class="s-section-bar"></span>
+          <h2>אז מה ה-AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> לעשות?</h2>
         </div>
+        <div class="s-section-hline top"></div>
+        <div class="s-section-hline bottom"></div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           10 — GENDER QUESTION (INTERACTIVE)
+           11 — GENDER QUESTION (INTERACTIVE FLASH CARD)
       ══════════════════════════════════════════════════════ -->
       <section class="s-statement" data-transition="zoom" data-transition-speed="fast">
-        <div class="s-statement-conic"></div>
-        <div class="s-statement-conic2"></div>
-        <div class="ring ring-1" style="border-color:rgba(168,85,247,.1)"></div>
-        <div class="ring ring-2"></div>
-        <div class="s-statement-float" style="top:10%;right:10%;animation-delay:0s;font-size:3.5em">🤷</div>
-        <div class="s-statement-float" style="bottom:10%;left:10%;animation-delay:-2s;font-size:3em">💬</div>
-        <div class="s-statement-inner">
-          <span class="eyebrow" style="animation:fade-up .7s ease both;font-size:.5em">רגע, דחוף —</span>
-          <span class="s-statement-word" style="font-size:4.5em;animation-delay:.05s">AI</span>
-          <span class="s-statement-word outline" style="font-size:4.5em;animation-delay:.12s">זכר או נקבה?</span>
-          <p class="s-statement-sub" style="font-size:.72em;color:rgba(240,240,248,.65);margin-top:.8em;margin-bottom:.4em;line-height:1.6">
-            "בינה מלאכותית" זה בוודאות נקבה... אבל "ה-AI יודעת" נשמע מוזר.<br>
-            בואו נחליט — ההחלטה שלכם תשנה את כל המצגת מעכשיו.
+        <div class="s-statement-conic" style="opacity:.4;animation-duration:40s"></div>
+        <div class="ring ring-2" style="border-color:rgba(168,85,247,.08)"></div>
+        <div class="ring ring-3" style="border-color:rgba(6,182,212,.05)"></div>
+        <!-- Flash popup card -->
+        <div style="position:relative;z-index:2;background:rgba(6,4,18,.88);border:1px solid rgba(124,58,237,.32);border-radius:28px;padding:54px 72px 48px;max-width:850px;width:90%;backdrop-filter:blur(24px);box-shadow:0 0 100px rgba(124,58,237,.2),0 0 40px rgba(6,182,212,.08),0 40px 80px rgba(0,0,0,.7);animation:fade-up .7s cubic-bezier(.34,1.56,.64,1) both">
+          <!-- Top gradient accent -->
+          <div style="position:absolute;top:0;left:12%;right:12%;height:2px;background:var(--grad);border-radius:0 0 3px 3px;opacity:.8"></div>
+          <!-- Corner dots -->
+          <div style="position:absolute;top:20px;right:24px;width:8px;height:8px;border-radius:50%;background:rgba(124,58,237,.4)"></div>
+          <div style="position:absolute;top:20px;left:24px;width:8px;height:8px;border-radius:50%;background:rgba(6,182,212,.3)"></div>
+
+          <div class="chip" style="margin-bottom:1.1em;font-size:.38em;display:inline-flex">⚠️ &nbsp; שאלה חשובה לפני שממשיכים</div>
+          <h2 style="font-size:2.5em !important;color:var(--white) !important;line-height:1.05 !important;margin-bottom:.55em !important;animation:fade-up .55s .05s ease both">AI זה זכר או נקבה?</h2>
+          <p style="font-size:.65em;color:rgba(240,240,248,.65);line-height:1.75;margin-bottom:.5em;animation:fade-up .55s .12s ease both">
+            "בינה מלאכותית" זה בוודאות נקבה... אבל "ה-AI יודעת" נשמע מוזר.
           </p>
-          <div class="ai-gender-btns z1">
+          <p style="font-size:.65em;color:var(--a-hi);font-weight:700;line-height:1.5;animation:fade-up .55s .18s ease both">
+            בואו נחליט — זו החלטה גורלית כי זה ישנה את כל המשך המצגת!
+          </p>
+          <div class="ai-gender-btns z1" style="margin-top:1.6em;animation:fade-up .55s .26s ease both">
             <button class="ai-gender-btn male active-btn" onclick="event.stopPropagation(); setAIGender('m')">
               👨 &nbsp; AI זכר
             </button>
@@ -1076,7 +1081,7 @@
         <div class="s-section-inner z1">
           <span class="s-section-icon">✍️</span>
           <span class="s-section-num">01 / 07</span>
-          <h2>AI יודע לכתוב</h2>
+          <h2>AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> לכתוב</h2>
           <p class="s-section-desc">Gemini · Gems · ChatGPT<br>שפה אחידה, תוכן חכם, הסגנון שלכם — אוטומטי</p>
         </div>
       </section>
@@ -1235,7 +1240,7 @@
         <div class="s-section-inner z1">
           <span class="s-section-icon">🎨</span>
           <span class="s-section-num">02 / 07</span>
-          <h2>AI יודע לעצב תמונות</h2>
+          <h2>AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> לעצב תמונות</h2>
           <p class="s-section-desc">Gemini Imagen · עריכה חכמה · עקביות ויזואלית<br>מיצירה מאפס עד הסרת כוכב מביכה</p>
         </div>
       </section>
@@ -1335,7 +1340,7 @@
         <div class="s-section-inner z1">
           <span class="s-section-icon">🎬</span>
           <span class="s-section-num">03 / 07</span>
-          <h2>AI יודע ליצור וידאו</h2>
+          <h2>AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> ליצור וידאו</h2>
           <p class="s-section-desc">Kling · Veo 3 · תנועה, פיזיקה ואור אמיתיים<br>מתמונה סטטית לקליפ קולנועי — בלחיצה</p>
         </div>
       </section>
@@ -1592,7 +1597,7 @@
         <div class="s-section-inner z1">
           <span class="s-section-icon">⚡</span>
           <span class="s-section-num">04 / 08</span>
-          <h2>AI יודע להיות אפטריסט</h2>
+          <h2>AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> להיות אפטריסט</h2>
           <p class="s-section-desc">Kling Effects · Motion · שדרוג תוכן קיים<br>כשאין תקציב לAE — יש AI שעושה את זה בשניות</p>
         </div>
       </section>
@@ -1689,7 +1694,7 @@
         <div class="s-section-ghost">05</div>
         <div class="s-section-inner z1">
           <span class="s-section-num">05 / 09</span>
-          <h2>AI יודע ליצור סאונד</h2>
+          <h2>AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> ליצור סאונד</h2>
           <p class="s-section-desc">ElevenLabs · Suno · קול, מוזיקה ואפקטים<br>מדיבוב מקצועי עד שיר שלם — מפרומפט</p>
         </div>
       </section>
@@ -1875,7 +1880,7 @@
         <div class="s-section-ghost">06</div>
         <div class="s-section-inner z1">
           <span class="s-section-num">06 / 09</span>
-          <h2>AI יודע לחבר</h2>
+          <h2>AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> לחבר</h2>
           <p class="s-section-desc">Hedra · CapCut · שפת גוף, דיבוב, עריכה<br>מוידאו לפרסומת מוגמרת — בלי סטודיו</p>
         </div>
       </section>
@@ -2029,7 +2034,7 @@
         <div class="s-section-ghost">07</div>
         <div class="s-section-inner z1">
           <span class="s-section-num">07 / 09</span>
-          <h2>AI יודע לביים</h2>
+          <h2>AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> לביים</h2>
           <p class="s-section-desc">ChatGPT כבמאי · Shot list · Storyboard<br>מרעיון לתסריט קולנועי — בפרומפט אחד</p>
         </div>
       </section>
@@ -2114,7 +2119,7 @@
         <div class="s-section-ghost">08</div>
         <div class="s-section-inner z1">
           <span class="s-section-num">08 / 09</span>
-          <h2>AI יודע לנתח נתונים</h2>
+          <h2>AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> לנתח נתונים</h2>
           <p class="s-section-desc">ChatGPT · Gemini · גיליון אקסל → תובנות<br>מדוח ידני לניתוח שכולם מבינים — בשניות</p>
         </div>
       </section>
@@ -2230,7 +2235,7 @@
         <div class="s-section-ghost" style="-webkit-text-stroke-color:rgba(245,158,11,.08)">?</div>
         <div class="s-section-inner z1">
           <span class="s-section-num">הפתעה</span>
-          <h2>AI יודע להכין מצגת</h2>
+          <h2>AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> להכין מצגת</h2>
           <p class="s-section-desc">הפתעה שהבטחנו · מה שאתם רואים עכשיו<br>זה מה שה-AI עשה בשבילנו</p>
         </div>
       </section>
