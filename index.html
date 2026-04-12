@@ -834,7 +834,7 @@
       <section class="s-video" data-transition="slide" data-transition-speed="fast" style="grid-template-columns:32% 68%">
         <div class="s-split-content" style="padding:80px 40px 80px 80px;justify-content:center">
           <span class="eyebrow amber">יוני 2023 — לפני שנתיים</span>
-          <h2>כך הסביר מומחה AI<br>ייצור וידאו</h2>
+          <h2>כך הסביר "מומחה AI" על יצירת וידאו לפני כשנתיים לערך:</h2>
           <!-- YouTube-style title -->
           <div style="margin-top:1.4em;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:14px 18px;direction:ltr;text-align:left">
             <div style="font-size:.3em;color:rgba(255,255,255,.35);font-family:var(--mono);margin-bottom:6px;letter-spacing:.05em">▶ YouTube · 2023</div>
@@ -850,15 +850,18 @@
       <!-- ══════════════════════════════════════════════════════
            06 — AFTER: TODAY, ONE PROMPT
       ══════════════════════════════════════════════════════ -->
-      <section class="s-split s-split-tl" data-transition="slide" data-transition-speed="fast" style="grid-template-columns:65% 35%">
-        <div class="s-split-img" style="position:relative;overflow:hidden;background:#000">
-          <video src="assets/demos/slide06-today-veo3.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:contain"></video>
-          <div class="img-cap">אותה תוצאה. פרומפט אחד. 45 שניות.</div>
-        </div>
-        <div class="s-split-content" style="padding:80px 80px 80px 40px">
+      <section data-transition="slide" data-transition-speed="fast" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
+        <!-- Full-bleed video — no cropping -->
+        <video src="assets/demos/slide06-today-veo3.mp4" autoplay muted loop playsinline
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:0"></video>
+        <!-- Dark gradient overlay on right side for text readability -->
+        <div style="position:absolute;inset:0;background:linear-gradient(to left, rgba(5,5,14,.92) 30%, rgba(5,5,14,.55) 60%, transparent 100%);z-index:1;pointer-events:none"></div>
+        <!-- Text panel — right side overlay -->
+        <div style="position:absolute;top:0;right:0;width:38%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:80px 80px 80px 40px;z-index:2;direction:rtl;text-align:right">
           <span class="eyebrow">היום — 2025</span>
-          <h2>ואיך עושים<br>את זה עכשיו</h2>
-          <p>אותה תוצאה — פרומפט אחד, בעברית, ב-Gemini. <strong>אפס התקנות. אפס ידע טכני.</strong></p>
+          <h2 style="font-size:2em !important;color:var(--white) !important;line-height:1.15 !important;margin-bottom:.8em !important">ואיך עושים<br>את זה עכשיו</h2>
+          <p style="font-size:.72em;color:rgba(240,240,248,.8);line-height:1.7">אותה תוצאה — פרומפט אחד, בעברית, ב-Gemini. <strong style="color:var(--white)">אפס התקנות. אפס ידע טכני.</strong></p>
+          <div style="margin-top:1.2em;font-size:.5em;color:var(--c-hi);font-weight:700;letter-spacing:.1em">אותה תוצאה · פרומפט אחד · 45 שניות</div>
         </div>
       </section>
 
