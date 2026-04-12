@@ -204,7 +204,7 @@
     display:flex !important; flex-direction:column;
     align-items:center; justify-content:center;
     height:100%; text-align:center;
-    background:linear-gradient(160deg,#130030 0%,#05050e 46%,#002035 100%) !important;
+    background:transparent !important;
     position:relative;
   }
   .s-cover-inner { position:relative; z-index:2; }
@@ -246,7 +246,7 @@
     display:flex !important; flex-direction:column;
     align-items:center; justify-content:center;
     height:100%; text-align:center;
-    background:linear-gradient(160deg,#0c0022 0%,#060610 100%) !important;
+    background:transparent !important;
     overflow:hidden !important; position:relative;
   }
   .s-section-inner { position:relative; z-index:2; }
@@ -273,7 +273,7 @@
   .s-transition {
     display:flex !important; align-items:center; justify-content:center;
     height:100%; text-align:center;
-    background:var(--bg) !important; position:relative; overflow:hidden !important;
+    background:transparent !important; position:relative; overflow:hidden !important;
   }
   .s-transition-inner { position:relative; z-index:2; }
   .s-transition-num {
@@ -327,7 +327,7 @@
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
   .s-text {
     display:grid !important; grid-template-columns:auto 1fr;
-    height:100%; background:var(--bg) !important; position:relative;
+    height:100%; background:transparent !important; position:relative;
   }
   .s-text-accent-col { width:6px; background:var(--grad); animation:fade-in .4s ease both; }
   .s-text-main { padding:70px 100px 70px 70px; display:flex; flex-direction:column; gap:0; }
@@ -344,7 +344,7 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      06 — TEXT + IMAGE
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .s-split { display:grid !important; height:100%; background:var(--bg) !important; position:relative; overflow:hidden !important; }
+  .s-split { display:grid !important; height:100%; background:transparent !important; position:relative; overflow:hidden !important; }
   .s-split-tr { grid-template-columns:55% 45%; }
   .s-split-tl { grid-template-columns:45% 55%; grid-template-areas:"img content" !important; }
   .s-split-tl .s-split-img  { grid-area:img; }
@@ -370,7 +370,7 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      07 — TEXT + VIDEO
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .s-video { display:grid !important; grid-template-columns:55% 45%; height:100%; background:var(--bg) !important; position:relative; overflow:hidden !important; }
+  .s-video { display:grid !important; grid-template-columns:55% 45%; height:100%; background:transparent !important; position:relative; overflow:hidden !important; }
   .s-video-pane { position:relative; overflow:hidden; background:#000; display:flex; align-items:center; justify-content:center; animation:fade-in .8s .15s ease forwards; }
   .s-video-pane iframe { width:100%; height:100%; border:none; }
   .s-video-thumb { width:100%; height:100%; background:linear-gradient(145deg,#080018,#001525); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; position:relative; }
@@ -388,7 +388,7 @@
     display:flex !important; flex-direction:column;
     align-items:center; justify-content:center;
     height:100%; text-align:center;
-    background:linear-gradient(165deg,#1e0e00 0%,#0e0800 55%,#07060f 100%) !important;
+    background:transparent !important;
     overflow:hidden !important; position:relative;
   }
   .s-gold-glow-bg { position:absolute; inset:0; background:radial-gradient(ellipse 70% 50% at 50% 60%,rgba(245,158,11,.12) 0%,transparent 70%); animation:breathe 7s ease-in-out infinite alternate; }
@@ -420,7 +420,7 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      10 — STEPS / PROCESS
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .s-steps { display:grid !important; grid-template-rows:auto 1fr; height:100%; background:var(--bg) !important; position:relative; overflow:hidden !important; }
+  .s-steps { display:grid !important; grid-template-rows:auto 1fr; height:100%; background:transparent !important; position:relative; overflow:hidden !important; }
   .s-steps-hdr { padding:70px 100px 0; animation:fade-up .6s ease both; }
   .s-steps-hdr h2 { font-size:2em !important; color:var(--white) !important; }
   .s-steps-track { display:flex; align-items:flex-start; padding:44px 100px 80px; gap:0; }
@@ -435,7 +435,7 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      11 — GALLERY
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .s-gallery { display:grid !important; grid-template-rows:auto 1fr; height:100%; background:var(--bg) !important; position:relative; overflow:hidden !important; }
+  .s-gallery { display:grid !important; grid-template-rows:auto 1fr; height:100%; background:transparent !important; position:relative; overflow:hidden !important; }
   .s-gallery-hdr { padding:60px 100px 26px; animation:fade-up .6s ease both; }
   .s-gallery-hdr h2 { font-size:2em !important; color:var(--white) !important; }
   .s-gallery-hdr p  { font-size:.6em; margin-top:.3em; }
@@ -457,7 +457,7 @@
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      12 — OUTRO
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  .s-outro { display:flex !important; flex-direction:column; align-items:center; justify-content:center; height:100%; text-align:center; background:linear-gradient(165deg,#001520 0%,#05050e 50%,#100022 100%) !important; overflow:hidden !important; position:relative; }
+  .s-outro { display:flex !important; flex-direction:column; align-items:center; justify-content:center; height:100%; text-align:center; background:transparent !important; overflow:hidden !important; position:relative; }
   .outro-ring { position:absolute; border-radius:50%; border:1px solid transparent; pointer-events:none; top:50%; left:50%; }
   .outro-ring.a { width:500px;height:500px; border-top-color:rgba(124,58,237,.4); border-right-color:rgba(124,58,237,.1); transform:translate(-50%,-50%); animation:spin-xy 18s linear infinite; }
   .outro-ring.b { width:750px;height:750px; border-top-color:rgba(6,182,212,.3); border-left-color:rgba(6,182,212,.08); transform:translate(-50%,-50%); animation:spin-xy-r 25s linear infinite; }
@@ -532,7 +532,7 @@
   .s-caps {
     display:grid !important; grid-template-rows:auto 1fr;
     height:100%;
-    background:linear-gradient(160deg,#0c0022 0%,#05050e 55%,#001020 100%) !important;
+    background:transparent !important;
     position:relative; overflow:hidden !important;
   }
   .s-caps-hdr { padding:60px 100px 0; z-index:2; position:relative; animation:fade-up .6s ease both; }
@@ -2450,24 +2450,25 @@
     function resize() {
       W = CV.width  = window.innerWidth;
       H = CV.height = window.innerHeight;
-      const n = Math.min(90, Math.ceil(W * H / 16000));
+      const n = Math.min(140, Math.ceil(W * H / 11000));
       dots = Array.from({length: n}, () => ({
         x: Math.random()*W, y: Math.random()*H,
-        vx: (Math.random()-.5)*.45, vy: (Math.random()-.5)*.45
+        vx: (Math.random()-.5)*.55, vy: (Math.random()-.5)*.55,
+        r: .8 + Math.random()*2.2
       }));
-      geos = Array.from({length: 10}, () => ({
+      geos = Array.from({length: 16}, () => ({
         x: Math.random()*W, y: Math.random()*H,
-        r: 35 + Math.random()*80,
+        r: 28 + Math.random()*100,
         rot: Math.random()*Math.PI*2,
-        rs: (Math.random()-.5)*.006,
-        vx: (Math.random()-.5)*.18, vy: (Math.random()-.5)*.18,
+        rs: (Math.random()-.5)*.009,
+        vx: (Math.random()-.5)*.22, vy: (Math.random()-.5)*.22,
         sides: [3,4,6][Math.floor(Math.random()*3)],
         ci: Math.floor(Math.random()*2)
       }));
-      nebulae = Array.from({length: 9}, () => ({
+      nebulae = Array.from({length: 14}, () => ({
         x: Math.random()*W, y: Math.random()*H,
-        r: 280 + Math.random()*380,
-        vx: (Math.random()-.5)*.055, vy: (Math.random()-.5)*.055,
+        r: 240 + Math.random()*480,
+        vx: (Math.random()-.5)*.07, vy: (Math.random()-.5)*.07,
         ci: Math.floor(Math.random()*2),
         ph: Math.random()*Math.PI*2
       }));
@@ -2519,11 +2520,11 @@
         n.ph += .007; n.x += n.vx; n.y += n.vy;
         if (n.x < -n.r) n.x = W+n.r; if (n.x > W+n.r) n.x = -n.r;
         if (n.y < -n.r) n.y = H+n.r; if (n.y > H+n.r) n.y = -n.r;
-        const alpha = .085 + .045*Math.sin(n.ph);
+        const alpha = .14 + .07*Math.sin(n.ph);
         const c = getC(n.ci);
         const g = CX.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r);
         g.addColorStop(0,   `rgba(${c[0]},${c[1]},${c[2]},${alpha})`);
-        g.addColorStop(.45, `rgba(${c[0]},${c[1]},${c[2]},${(alpha*.35).toFixed(3)})`);
+        g.addColorStop(.4,  `rgba(${c[0]},${c[1]},${c[2]},${(alpha*.5).toFixed(3)})`);
         g.addColorStop(1,   'rgba(0,0,0,0)');
         CX.fillStyle = g;
         CX.beginPath(); CX.arc(n.x, n.y, n.r, 0, Math.PI*2); CX.fill();
@@ -2535,11 +2536,11 @@
           const dx = dots[i].x - dots[j].x;
           const dy = dots[i].y - dots[j].y;
           const d2 = dx*dx + dy*dy;
-          if (d2 < 25600) {
-            const alpha = 0.13 * (1 - Math.sqrt(d2)/160);
+          if (d2 < 32400) {
+            const alpha = 0.22 * (1 - Math.sqrt(d2)/180);
             CX.beginPath();
             CX.strokeStyle = rgba(0, alpha);
-            CX.lineWidth = .8;
+            CX.lineWidth = .9;
             CX.moveTo(dots[i].x, dots[i].y);
             CX.lineTo(dots[j].x, dots[j].y);
             CX.stroke();
@@ -2550,8 +2551,8 @@
       /* dots */
       dots.forEach(p => {
         CX.beginPath();
-        CX.arc(p.x, p.y, 2.2, 0, Math.PI*2);
-        CX.fillStyle = rgba(0, .52);
+        CX.arc(p.x, p.y, p.r, 0, Math.PI*2);
+        CX.fillStyle = rgba(0, .65);
         CX.fill();
         p.x += p.vx; p.y += p.vy;
         if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
@@ -2566,15 +2567,22 @@
         if (g.y < -160) g.y = H+160; if (g.y > H+160) g.y = -160;
 
         /* outer shape */
-        CX.strokeStyle = rgba(g.ci, .18);
-        CX.lineWidth = 1.2;
+        CX.strokeStyle = rgba(g.ci, .28);
+        CX.lineWidth = 1.4;
         poly(g.x, g.y, g.r, g.sides, g.rot);
         CX.stroke();
 
         /* inner counter-rotating shape */
-        CX.strokeStyle = rgba(1 - g.ci, .10);
+        CX.strokeStyle = rgba(1 - g.ci, .16);
+        CX.lineWidth = 1.0;
         poly(g.x, g.y, g.r * .55, g.sides, -g.rot * 1.4);
         CX.stroke();
+
+        /* tiny glow dot at center */
+        CX.beginPath();
+        CX.arc(g.x, g.y, 2.5, 0, Math.PI*2);
+        CX.fillStyle = rgba(g.ci, .35);
+        CX.fill();
       });
     }
 
