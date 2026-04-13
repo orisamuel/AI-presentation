@@ -857,7 +857,7 @@
         <!-- Dark gradient overlay on right side for text readability -->
         <div style="position:absolute;inset:0;background:linear-gradient(to left, rgba(5,5,14,.92) 30%, rgba(5,5,14,.55) 60%, transparent 100%);z-index:1;pointer-events:none"></div>
         <!-- Text panel — right side overlay -->
-        <div style="position:absolute;top:0;right:0;width:38%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:80px 80px 80px 40px;z-index:2;direction:rtl;text-align:right">
+        <div style="position:absolute;top:0;right:0;width:40%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:80px 80px 80px 40px;z-index:2;direction:rtl;text-align:right;background:linear-gradient(to left,rgba(5,5,14,.98) 0%,rgba(5,5,14,.95) 60%,transparent 100%)">
           <span class="eyebrow">היום — 2025</span>
           <h2 style="font-size:2em !important;color:var(--white) !important;line-height:1.15 !important;margin-bottom:.8em !important">ואיך עושים<br>את זה עכשיו</h2>
           <p style="font-size:.72em;color:rgba(240,240,248,.8);line-height:1.7">אותה תוצאה — פרומפט אחד, בעברית, ב-Gemini. <strong style="color:var(--white)">אפס התקנות. אפס ידע טכני.</strong></p>
@@ -938,19 +938,65 @@
       <!-- ══════════════════════════════════════════════════════
            10 — SECTION: מה ה-AI יודע לעשות?
       ══════════════════════════════════════════════════════ -->
-      <section class="s-section" data-transition="zoom" data-transition-speed="fast">
-        <div class="bg bg-grid" style="opacity:.4"></div>
-        <div class="orb" style="width:800px;height:800px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:8s;opacity:.18"></div>
-        <div class="orb cyan" style="width:500px;height:500px;top:30%;left:20%;transform:translate(-50%,-50%);animation-duration:10s;animation-delay:-4s;opacity:.12"></div>
-        <div class="s-section-ring r1" style="width:700px;height:700px;transform:translate(-50%,-50%)"></div>
-        <div class="s-section-ring r2" style="width:1100px;height:1100px;transform:translate(-50%,-50%)"></div>
-        <div class="s-section-ghost">?</div>
-        <div class="s-section-inner z1">
-          <span class="s-section-bar"></span>
-          <h2>אז מה ה-AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> לעשות?</h2>
+      <section class="s-caps" data-transition="zoom" data-transition-speed="fast">
+        <div class="bg bg-dots" style="opacity:.3"></div>
+        <div class="orb" style="width:900px;height:900px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.1;animation-duration:12s"></div>
+        <div class="s-caps-hdr z1">
+          <div class="chip" style="margin-bottom:.7em">🤖 מה ה-AI יודע לעשות?</div>
+          <h2>עוד מעט נגלה...</h2>
         </div>
-        <div class="s-section-hline top"></div>
-        <div class="s-section-hline bottom"></div>
+        <div class="s-caps-grid z1" style="filter:blur(8px) brightness(0.4);pointer-events:none;user-select:none">
+          <div class="cap-item highlight" style="animation-delay:.00s">
+            <div class="ci">✍️</div>
+            <div class="ct">לכתוב</div>
+            <div class="cs">Gemini · Gems · ChatGPT</div>
+          </div>
+          <div class="cap-item" style="animation-delay:.06s">
+            <div class="ci">🎨</div>
+            <div class="ct">לעצב תמונות</div>
+            <div class="cs">Imagen · Gemini Flash</div>
+          </div>
+          <div class="cap-item" style="animation-delay:.12s">
+            <div class="ci">🎬</div>
+            <div class="ct">ליצור וידאו</div>
+            <div class="cs">Kling · Veo 3</div>
+          </div>
+          <div class="cap-item" style="animation-delay:.18s">
+            <div class="ci">⚡</div>
+            <div class="ct">להיות אפטריסט</div>
+            <div class="cs">Kling Effects · Motion</div>
+          </div>
+          <div class="cap-item" style="animation-delay:.24s">
+            <div class="ci">🎙️</div>
+            <div class="ct">ליצור סאונד</div>
+            <div class="cs">ElevenLabs · Gemini</div>
+          </div>
+          <div class="cap-item" style="animation-delay:.30s">
+            <div class="ci">🎵</div>
+            <div class="ct">לשיר</div>
+            <div class="cs">Suno · Lyria 3</div>
+          </div>
+          <div class="cap-item" style="animation-delay:.36s">
+            <div class="ci">🔗</div>
+            <div class="ct">לחבר וידאו + סאונד</div>
+            <div class="cs">Hedra · CapCut</div>
+          </div>
+          <div class="cap-item" style="animation-delay:.42s">
+            <div class="ci">📊</div>
+            <div class="ct">לנתח נתונים</div>
+            <div class="cs">ChatGPT · Gemini</div>
+          </div>
+          <div class="cap-item" style="animation-delay:.48s">
+            <div class="ci">💻</div>
+            <div class="ct">לתכנת</div>
+            <div class="cs">Claude · Copilot</div>
+          </div>
+          <div class="cap-item" style="animation-delay:.54s;border-color:rgba(124,58,237,.25);background:rgba(124,58,237,.06)">
+            <div class="ci">🪄</div>
+            <div class="ct">להכין את המצגת הזו</div>
+            <div class="cs">← מה שאתם רואים עכשיו</div>
+          </div>
+        </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
@@ -1069,34 +1115,6 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH01-A — מודל נכון: Pro vs Flash
-      ══════════════════════════════════════════════════════ -->
-      <section class="s-compare" data-transition="slide">
-        <div class="bg bg-dots" style="opacity:.2"></div>
-        <div class="s-compare-vs" style="font-size:.48em;width:60px;height:60px">Pro<br>vs<br>Flash</div>
-        <div class="s-compare-col">
-          <div class="col-title v" style="color:var(--muted)">⚡ Flash / Lite — מהיר</div>
-          <ul>
-            <li><span class="rdot v"></span>תגובה מהירה — שניות</li>
-            <li><span class="rdot v"></span>זול / חינמי לרוב</li>
-            <li><span class="rdot v"></span><strong style="color:var(--white)">שטחי — לא מבין ניואנסים</strong></li>
-            <li><span class="rdot v"></span>פספוס הקשר ובטון מותג</li>
-            <li><span class="rdot v"></span>מתאים לתרגומים פשוטים בלבד</li>
-          </ul>
-        </div>
-        <div class="s-compare-col">
-          <div class="col-title c">✅ Gemini 2.5 Pro — תמיד</div>
-          <ul>
-            <li><span class="rdot c"></span>חושב לעומק לפני שכותב</li>
-            <li><span class="rdot c"></span><strong style="color:var(--white)">מבין בטון, ניואנס, אירוניה</strong></li>
-            <li><span class="rdot c"></span>שומר על קול המותג לאורך כל הטקסט</li>
-            <li><span class="rdot c"></span>מתמודד עם תדבריפים ארוכים</li>
-            <li><span class="rdot c"></span>ברירת המחדל שלכם — תמיד Pro</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ══════════════════════════════════════════════════════
            CH01-B — Gems: הזיכרון שלא מתאפס
       ══════════════════════════════════════════════════════ -->
       <section class="s-split s-split-tl" data-transition="slide">
@@ -1117,42 +1135,37 @@
         <div class="s-split-content">
           <span class="eyebrow">Gemini · Gems</span>
           <h2>הזיכרון שלא<br>מתאפס</h2>
-          <p><strong>Gems</strong> = פרסונה של לקוח שנשמרת. מגדירים פעם אחת: סגנון, קהל, בטון — ומשם כל שיחה יודעת הכל, גם אחרי חודש.</p>
+          <p><strong>Gems = פרסונה של לקוח שנשמרת.</strong> תחשבו על השקופית במצגת שבה הגדרתם איך הלקוח מדבר — עכשיו הצ'אט יודע את זה.</p>
           <ul>
             <li><span class="dot"></span>בנו Gem אחד לכל לקוח</li>
-            <li><span class="dot"></span>שיחה חדשה = אותו קול, אפס הסבר</li>
-            <li><span class="dot"></span>עובד גם לוויז, לא רק כתיבה</li>
+            <li><span class="dot"></span>שיחה חדשה = לא צריך להסביר כלום</li>
             <li><span class="dot"></span>Gem + קבצים = שפה מושלמת</li>
           </ul>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH01-C — העלאת קבצים + סגנון הלקוח
+           CH01-C — מה להעלות לGem?
       ══════════════════════════════════════════════════════ -->
       <section class="s-text" data-transition="slide">
         <div class="s-text-accent-col"></div>
         <div class="s-text-main z1">
           <div class="hdr">
-            <div class="chip" style="margin-bottom:.8em">📎 העלאת קבצים</div>
-            <h2>תדבריף + 3 דוגמאות = הסגנון שלהם</h2>
+            <div class="chip" style="margin-bottom:.8em">📎 מה להעלות לGem?</div>
+            <h2>מה להעלות לGem?</h2>
           </div>
-          <div class="s-text-blocks">
+          <div class="s-text-blocks" style="grid-template-columns:1fr;gap:28px">
             <div class="tblock fragment" style="animation-delay:.05s">
-              <span class="lbl">מה להעלות</span>
-              <p>תדבריף + <strong>3 דוגמאות כתיבה של הלקוח.</strong> לא צריך להסביר את השפה — פשוט מראים אותה. Gemini מבין מה רואה.</p>
+              <span class="lbl">📖 יש ספר מותג?</span>
+              <p><strong>תעלו אותו.</strong> Gemini קורא הכל — טקסט, פלטות צבע, ערכים — ומפנים לתוך כל פרומפט.</p>
             </div>
             <div class="tblock c fragment" style="animation-delay:.12s">
-              <span class="lbl">מה יוצא</span>
-              <p>Gemini <strong>כותב בדיוק בסגנון שלו</strong> — לא בסגנון "AI מובהק". התוצר נשמע כמו שהלקוח היה כותב אם היה כותב טוב יותר.</p>
+              <span class="lbl">📱 לקוח קיים עם תוכן שעובד?</span>
+              <p>תבחרו <strong>10 פוסטים שלו שמאוד אהבתם</strong>, שימו אותם על מסמך Google Slides ותעלו. Gemini מבין מה רואה.</p>
             </div>
             <div class="tblock fragment" style="animation-delay:.19s">
-              <span class="lbl">שפה אחידה אוטומטית</span>
-              <p>Gem + קבצים = <strong>אחידות בכל פלטפורמה.</strong> אינסטגרם, מייל, מצגת, לינקדאין — אותו קול, בלי מאמץ.</p>
-            </div>
-            <div class="tblock c fragment" style="animation-delay:.26s">
-              <span class="lbl">טיפ — PDF מ-ספר מותג</span>
-              <p>יש ללקוח "ספר מותג" ב-PDF? <strong>העלו ישירות לGem.</strong> Gemini קורא הכל — טקסט, פלטות צבע, ערכים — ומפנים לתוך כל פרומפט.</p>
+              <span class="lbl">✅ מה נשאר עכשיו?</span>
+              <p><strong>רק לתת בריף.</strong> הסגנון כבר שם — לא צריך להסביר כלום בכל שיחה.</p>
             </div>
           </div>
         </div>
@@ -1160,30 +1173,22 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH01-D — הדגמה חיה: כתיבה עם Gemini
+           CH01-D — הדגמה: בואו נראה איך זה עובד
       ══════════════════════════════════════════════════════ -->
-      <section class="s-video" data-transition="fade">
-        <div class="s-split-content" style="padding:80px 50px 80px 100px">
-          <div class="chip" style="margin-bottom:1em">🎬 &nbsp; הדגמה חיה</div>
+      <section data-transition="fade" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
+        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
+        <!-- Top title bar -->
+        <div style="position:absolute;top:0;right:0;left:0;padding:36px 80px 28px;z-index:3;direction:rtl;text-align:right;background:linear-gradient(to bottom,rgba(5,5,14,.95) 60%,transparent 100%)">
+          <div class="chip" style="margin-bottom:.6em">🎬 &nbsp; הדגמה</div>
           <span class="eyebrow">Gemini 2.5 Pro · Gems</span>
-          <h2>מה לחפש<br>בהדגמה</h2>
-          <ul style="margin-top:.9em">
-            <li class="fragment"><span class="dot"></span>בחירת Gem ספציפי ללקוח</li>
-            <li class="fragment"><span class="dot"></span>העלאת תדבריף + קובץ כתיבה</li>
-            <li class="fragment"><span class="dot"></span>פרומפט אחד ← תוכן מוכן לפרסום</li>
-            <li class="fragment"><span class="dot"></span>שימו לב לבטון — כמה "שלהם" זה נשמע</li>
-          </ul>
+          <h2 style="font-size:1.6em !important;color:var(--white) !important;line-height:1.2 !important">בואו נראה איך זה עובד</h2>
         </div>
-        <div class="s-video-pane">
-          <div class="bg bg-grid" style="opacity:.3"></div>
-          <div class="s-video-scanline"></div>
-          <div class="s-video-thumb">
-            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(124,58,237,.7))">✍️</div>
-            <div class="s-video-play-btn">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <div class="s-video-tag">Gemini 2.5 Pro · כתיבה</div>
-            <div class="s-video-label">⬆️ להחליף בהדגמה אמיתית</div>
+        <!-- Full video -->
+        <div style="position:absolute;inset:0;width:100%;height:100%">
+          <div class="bg bg-grid" style="opacity:.2;z-index:0"></div>
+          <div class="s-video-scanline" style="z-index:1"></div>
+          <div class="s-video-thumb" style="position:absolute;inset:0;z-index:2">
+            <video src="assets/demos/s-17.mp4" controls style="width:100%;height:100%;object-fit:contain"></video>
           </div>
         </div>
       </section>
@@ -1228,31 +1233,27 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH02 — GEMINI IMAGES
+           CH02-GEM-A — מה להעלות לGem ויזואלי?
       ══════════════════════════════════════════════════════ -->
       <section class="s-text" data-transition="slide">
         <div class="s-text-accent-col" style="background:linear-gradient(180deg,#f43f5e,#f59e0b)"></div>
         <div class="s-text-main z1">
           <div class="hdr">
-            <div class="chip" style="margin-bottom:.8em;background:var(--r-dim);border-color:rgba(244,63,94,.3);color:#f87171">🎨 Gemini · יצירה ועריכה</div>
-            <h2>ממחשבה לוויז — בלי פוטושופ</h2>
+            <div class="chip" style="margin-bottom:.8em;background:var(--r-dim);border-color:rgba(244,63,94,.3);color:#f87171">🎨 Gem ויזואלי</div>
+            <h2>עכשיו נלמד אותו גם לדבר ויזואלית</h2>
           </div>
-          <div class="s-text-blocks">
+          <div class="s-text-blocks" style="grid-template-columns:1fr;gap:28px">
             <div class="tblock fragment" style="animation-delay:.05s">
-              <span class="lbl">Imagen 3 / Gemini Flash Image</span>
-              <p>יצירת תמונה מאפס מפרומפט. <strong>Inpainting</strong> — בחרו אזור בתמונה קיימת, תארו מה שרוצים במקומו, Gemini מחליף בדיוק שם בלי לגעת בשאר.</p>
+              <span class="lbl">📖 יש ספר מותג ויזואלי?</span>
+              <p><strong>תעלו אותו.</strong> פלטת צבעים, פונטים, סגנון תמונות — Gemini מבין הכל ומיישם בכל פרומפט ויזואלי.</p>
             </div>
             <div class="tblock c fragment" style="animation-delay:.12s">
-              <span class="lbl">Redo with Pro</span>
-              <p>יצרתם תמונה ב-Flash ויצאה טוב אבל לא מושלמת? לחצו <strong>"Redo with Pro"</strong> — שדרוג מיידי לאיכות גבוהה יותר, ללא פרומפט חדש.</p>
+              <span class="lbl">📱 יש תמונות שאהבתם?</span>
+              <p>תבחרו <strong>8–10 תמונות שמייצגות את השפה הויזואלית של הלקוח</strong>, שימו ב-Google Slides ותעלו לGem.</p>
             </div>
             <div class="tblock fragment" style="animation-delay:.19s">
-              <span class="lbl">Upload + Edit</span>
-              <p>מעלים תמונה קיימת + נותנים הנחיה = <strong>עריכה לפי הוראה.</strong> "הסר את הרקע", "שנה את הצבע", "הוסף אדם מימין" — עובד.</p>
-            </div>
-            <div class="tblock c fragment" style="animation-delay:.26s">
-              <span class="lbl">Gems לוויז</span>
-              <p>אותו Gem שנבנה לכתיבה — עובד גם לתמונות. <strong>סגנון ויזואלי, פלטת צבעים, תחושה</strong> — מוגדרים פעם אחת, קבועים לתמיד.</p>
+              <span class="lbl">✅ מה נשאר?</span>
+              <p><strong>רק לתת בריף ויזואלי.</strong> הסגנון כבר שם — כל תמונה שתייצרו תדבר את השפה של הלקוח.</p>
             </div>
           </div>
         </div>
@@ -1260,10 +1261,60 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
+           CH02-GEM-B — הדגמה: Gem ויזואלי
+      ══════════════════════════════════════════════════════ -->
+      <section data-transition="fade" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
+        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
+        <div style="position:absolute;top:0;right:0;left:0;padding:36px 80px 28px;z-index:3;direction:rtl;text-align:right;background:linear-gradient(to bottom,rgba(5,5,14,.95) 60%,transparent 100%)">
+          <div class="chip" style="margin-bottom:.6em;background:var(--r-dim);border-color:rgba(244,63,94,.3);color:#f87171">🎬 &nbsp; הדגמה</div>
+          <span class="eyebrow" style="color:#f87171">Gemini · Gem ויזואלי</span>
+          <h2 style="font-size:1.6em !important;color:var(--white) !important;line-height:1.2 !important">בואו נראה איך זה עובד</h2>
+        </div>
+        <div style="position:absolute;inset:0;width:100%;height:100%">
+          <div class="bg bg-grid" style="opacity:.2;z-index:0"></div>
+          <div class="s-video-scanline" style="z-index:1"></div>
+          <div class="s-video-thumb" style="position:absolute;inset:0;z-index:2">
+            <video src="assets/demos/s-19b.mp4" controls style="width:100%;height:100%;object-fit:contain"></video>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH02 — 3 טיפים לעבוד עם ג'ימיני
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-text" data-transition="slide">
+        <div class="s-text-accent-col" style="background:linear-gradient(180deg,#f43f5e,#f59e0b)"></div>
+        <div class="s-text-main z1">
+          <div class="hdr">
+            <div class="chip" style="margin-bottom:.8em;background:var(--r-dim);border-color:rgba(244,63,94,.3);color:#f87171">🎨 3 טיפים · Gemini</div>
+            <h2>3 טיפים מעניינים שיעזרו לכם לעבוד עם ג'ימיני</h2>
+          </div>
+          <div class="s-text-blocks" style="grid-template-columns:1fr;gap:24px">
+            <div class="tblock fragment" style="animation-delay:.05s">
+              <span class="lbl">1 · סמנו על התמונה</span>
+              <p>סמנו ישירות לג'ימיני על התמונה <strong>מה אתם רוצים בדיוק לשנות ואיך</strong> — זה יעזור לו לדייק את הפרומפט משמעותית.</p>
+            </div>
+            <div class="tblock c fragment" style="animation-delay:.12s">
+              <span class="lbl">2 · פאנל לעקביות ויזואלית</span>
+              <p>כשרוצים עקביות — בקשו <strong>תמונה אחת עם 4–6 ווריאציות בפריים אחד</strong> (פאנל). אחר כך Upscale כל וריאציה בנפרד. <strong>כולן מאותה מחשבה ויזואלית.</strong></p>
+            </div>
+            <div class="tblock fragment" style="animation-delay:.19s">
+              <span class="lbl">3 · תורידו את הכוכב המביך הזה</span>
+              <p>תמונות Gemini מגיעות עם <strong>כוכב סימן מים</strong> — פוגע במראה מקצועי. <strong>תורידו אותו!</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="s-text-ghost">G</div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
            CH02 — REMOVE STAR (COMPARE)
       ══════════════════════════════════════════════════════ -->
       <section class="s-compare" data-transition="concave">
         <div class="bg bg-dots" style="opacity:.2"></div>
+        <div style="position:absolute;top:36px;right:0;left:0;text-align:center;z-index:2;direction:rtl">
+          <h2 style="font-size:1.3em !important;color:var(--white) !important">אז איך מורידים את הכוכב? פשוט מאוד</h2>
+        </div>
         <div class="s-compare-vs" style="font-size:.6em">⭐</div>
         <div class="s-compare-col">
           <div class="col-title v">🚨 הבעיה</div>
@@ -1288,6 +1339,28 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
+           CH02 — הדגמה: הסרת כוכב + כלים חיצוניים
+      ══════════════════════════════════════════════════════ -->
+      <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
+        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
+        <!-- Video top 78% -->
+        <div style="position:absolute;top:0;right:0;left:0;height:78%">
+          <div class="bg bg-grid" style="opacity:.2;z-index:0"></div>
+          <div class="s-video-scanline" style="z-index:1"></div>
+          <video src="assets/demos/s-21b.mp4" controls style="width:100%;height:100%;object-fit:contain;z-index:2;display:block"></video>
+        </div>
+        <!-- Text below video -->
+        <div style="position:absolute;bottom:0;right:0;left:0;height:24%;background:linear-gradient(to top,rgba(5,5,14,.98) 80%,transparent 100%);padding:16px 80px 20px;direction:rtl;z-index:3;display:flex;align-items:center">
+          <p style="font-size:.5em;color:rgba(240,240,248,.75);line-height:1.75;margin:0">
+            לחלופין, ניתן להשתמש בכלים חיצוניים כדי לייצר תמונות באמצעות <strong style="color:var(--white)">ננו בננה</strong>, ולמעשה זה עדיף בהרבה מקרים כי:
+            <strong style="color:var(--c-hi)"> 1. יוצא בלי כוכב</strong> &nbsp;·&nbsp;
+            <strong style="color:var(--c-hi)">2. שליטה משמעותית יותר על ההגדרות (רזולוציה, גודל וכו')</strong> &nbsp;·&nbsp;
+            <strong style="color:var(--c-hi)">3. איזה כלים? hedra, flow, runway, היגספילד</strong>
+          </p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
            CH02 — GOLD TIP: PANEL + UPSCALE
       ══════════════════════════════════════════════════════ -->
       <section class="s-gold" data-transition="convex" data-transition-speed="fast">
@@ -1298,13 +1371,13 @@
         <div class="spark" style="top:28%;left:14%;color:#f59e0b;animation-delay:-4s">✧</div>
         <div class="spark" style="bottom:32%;right:12%;color:#fcd34d;animation-delay:-1.5s">✧</div>
         <div class="s-gold-inner">
-          <div class="s-gold-badge">✦ &nbsp; טיפ זהב · עקביות ויזואלית</div>
-          <h2>יוצרים פאנל — לא תמונות בודדות</h2>
+          <div class="s-gold-badge">✦ &nbsp; טיפ זהב · PNG בלי רקע</div>
+          <h2>רוצים PNG בלי רקע? GPT עושה את זה לבד</h2>
           <p>
-            כשרוצים עקביות ויזואלית בין כמה תמונות —<br>
-            בקשו מ-Gemini <strong>תמונה אחת עם 4–6 ווריאציות בפריים אחד</strong> (פאנל).<br>
-            אחר כך בקשו לUpscale כל וריאציה בנפרד.<br>
-            <strong>כולן יצאו מאותה "מחשבה ויזואלית" — אחידות מושלמת.</strong>
+            רוצים תמונה בלי רקע בשביל אלמנט גרפי כלשהו?<br>
+            אפשר כמובן לייצר עם ג'מיני ולהסיר את הרקע — אבל<br>
+            <strong>GPT ממש יודע לייצר לבד תמונות PNG בלי רקע.</strong><br>
+            פשוט בקשו: "create a PNG image with transparent background of..."
           </p>
         </div>
       </section>
@@ -1328,224 +1401,117 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH03 — KLING OVERVIEW
+           CH03-24 — 4 דרכים עיקריות ליצור וידאו
       ══════════════════════════════════════════════════════ -->
-      <section class="s-text" data-transition="slide">
-        <div class="s-text-accent-col" style="background:linear-gradient(180deg,#06b6d4,#7c3aed)"></div>
-        <div class="s-text-main z1">
-          <div class="hdr">
-            <div class="chip cyan" style="margin-bottom:.8em">🎬 Kling AI</div>
-            <h2>הפיזיקה שנראתה לפני כן רק בקולנוע</h2>
+      <section class="s-caps" data-transition="zoom" data-transition-speed="fast">
+        <div class="bg bg-dots" style="opacity:.25"></div>
+        <div class="orb cyan" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.12;animation-duration:10s"></div>
+        <div class="s-caps-hdr z1">
+          <div class="chip cyan" style="margin-bottom:.7em">🎬 Kling · Veo 3 · וידאו</div>
+          <h2>4 דרכים עיקריות ליצור וידאו עם AI</h2>
+        </div>
+        <div class="s-caps-grid z1" style="grid-template-columns:repeat(4,1fr);max-width:1200px;margin:0 auto">
+          <div class="cap-item highlight" style="animation-delay:.00s;cursor:default;padding:36px 22px">
+            <div class="ci" style="font-size:2em">📝</div>
+            <div class="ct">TEXT TO VIDEO</div>
+            <div class="cs" style="margin-top:8px;font-size:.78em">תיאור בטקסט ← קליפ. כשלא חשוב מה בדיוק יופיע — הכי פשוט.</div>
           </div>
-          <div class="s-text-blocks">
-            <div class="tblock c fragment" style="animation-delay:.05s">
-              <span class="lbl">Text-to-Video</span>
-              <p>תיאור טקסטואלי ← קליפ 5–10 שניות עם <strong>פיזיקה ריאלית.</strong> מים זורמים, שיער מתנפנף, בד מתנועע — הכל עם הגיון פיזיקלי אמיתי.</p>
-            </div>
-            <div class="tblock fragment" style="animation-delay:.12s">
-              <span class="lbl">Image-to-Video</span>
-              <p>תמונת מוצר / פורטרט / רפרנס ← <strong>קליפ מותגי.</strong> הדמות בתמונה מתחילה לנוע, הרקע מתעורר — אפס צילום.</p>
-            </div>
-            <div class="tblock c fragment" style="animation-delay:.19s">
-              <span class="lbl">Camera Control</span>
-              <p><strong>שליטה מלאה בתנועת המצלמה.</strong> Dolly in, pan, orbit, crane — אותן תנועות שמצלמן מקצועי לוקח שעות לתכנן, פה זה dropdown.</p>
-            </div>
-            <div class="tblock fragment" style="animation-delay:.26s">
-              <span class="lbl">Start + End Frames</span>
-              <p>קבעו <strong>פריים פתיחה ופריים סיום</strong> — Kling ממלא את האנימציה באמצע. זה הכלי להדגמות מוצר מרהיבות.</p>
-            </div>
+          <div class="cap-item" style="animation-delay:.08s;cursor:default;padding:36px 22px">
+            <div class="ci" style="font-size:2em">🖼️</div>
+            <div class="ct">IMAGE TO VIDEO</div>
+            <div class="cs" style="margin-top:8px;font-size:.78em">תמונה קיימת ← קליפ. כשחשובה הדמות, המוצר, הפריים המדויק.</div>
+          </div>
+          <div class="cap-item" style="animation-delay:.16s;cursor:default;padding:36px 22px">
+            <div class="ci" style="font-size:2em">🎞️</div>
+            <div class="ct">VIDEO TO VIDEO</div>
+            <div class="cs" style="margin-top:8px;font-size:.78em">וידאו קיים ← עריכה ושינוי. להחליף רקע, דמות, סגנון — בפרומפט.</div>
+          </div>
+          <div class="cap-item" style="animation-delay:.24s;cursor:default;padding:36px 22px">
+            <div class="ci" style="font-size:2em">🎬</div>
+            <div class="ct">START+END FRAME</div>
+            <div class="cs" style="margin-top:8px;font-size:.78em">פריים פתיחה + סיום → AI ממלא את האנימציה. לסצנות מורכבות ומעברים.</div>
           </div>
         </div>
-        <div class="s-text-ghost">K</div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           21 — 🎬 DEMO: Kling Image-to-Video
+           CH03-25 — TEXT TO VIDEO + הדגמה
       ══════════════════════════════════════════════════════ -->
-      <section class="s-video" data-transition="fade">
-        <div class="s-split-content" style="padding:80px 50px 80px 100px">
-          <div class="chip cyan" style="margin-bottom:1em">🎬 &nbsp; הדגמה חיה</div>
-          <span class="eyebrow">Kling · Image-to-Video</span>
-          <h2>מה לחפש<br>בהדגמה</h2>
-          <ul style="margin-top:.9em">
-            <li class="fragment"><span class="dot"></span>תמונת מוצר / פורטרט סטטי כקלט</li>
-            <li class="fragment"><span class="dot"></span>תנועת מצלמה שהוגדרה מראש</li>
-            <li class="fragment"><span class="dot"></span>פיזיקה ריאלית — אור, צל, עומק</li>
-            <li class="fragment"><span class="dot"></span>8 שניות · 4K · ללא צילום אמיתי</li>
+      <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
+        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
+        <div style="position:absolute;top:0;right:0;left:0;padding:36px 80px 28px;z-index:3;direction:rtl;text-align:right;background:linear-gradient(to bottom,rgba(5,5,14,.95) 60%,transparent 100%)">
+          <div class="chip cyan" style="margin-bottom:.6em">📝 Text to Video</div>
+          <h2 style="font-size:1.7em !important;color:var(--white) !important;line-height:1.2 !important;max-width:70%">אם לא חשוב לכם הפרטים הספציפיים — פשוט תגידו מה אתם רוצים</h2>
+          <p style="font-size:.58em;color:rgba(240,240,248,.65);margin-top:.5em">הי הנה וידאו של חתול נוסע על אופניים ורוקד! 🐱🚲</p>
+        </div>
+        <div style="position:absolute;inset:0;width:100%;height:100%">
+          <div class="bg bg-grid" style="opacity:.2;z-index:0"></div>
+          <div class="s-video-scanline" style="z-index:1"></div>
+          <div class="s-video-thumb" style="position:absolute;inset:0;z-index:2">
+            <video src="assets/demos/s-25.mp4" controls style="width:100%;height:100%;object-fit:contain"></video>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-26 — GOLD TIP: מחיר קרדיטים
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-gold" data-transition="convex" data-transition-speed="fast">
+        <div class="s-gold-glow-bg"></div>
+        <div class="s-gold-frame"></div>
+        <div class="spark" style="top:18%;right:12%;color:#fcd34d;animation-delay:0s">✦</div>
+        <div class="spark" style="bottom:22%;left:10%;color:#fcd34d;animation-delay:-2s;font-size:2em">✦</div>
+        <div class="spark" style="top:25%;left:18%;color:#f59e0b;animation-delay:-4s">✧</div>
+        <div class="spark" style="bottom:28%;right:16%;color:#fcd34d;animation-delay:-1s">✧</div>
+        <div class="s-gold-inner">
+          <div class="s-gold-badge">✦ &nbsp; טיפ זהב · קרדיטים</div>
+          <h2>שימו לב למחיר בקרדיטים של כל מודל</h2>
+          <p>
+            לדוג' כשמשתמשים ב-Hedra ורוצים רק להנפיש תמונה שיהיה בה קצת תנועה וחיים —<br>
+            <strong>Grok כנראה יהיה הכי זול.</strong><br>
+            לא כל מודל שווה — בחרו לפי המשימה, לא לפי ההרגל.
+          </p>
+          <div style="margin-top:1.4em;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:10px;padding:14px 24px;font-size:.44em;color:var(--a-hi);text-align:center">
+            📸 תמונת צילום מסך מהידרה עם היכולת לבחור בין מודלים — <em>assets/demos/s-26.png</em>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-27 — IMAGE TO VIDEO
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-split s-split-tl" data-transition="slide">
+        <div class="s-split-img">
+          <div style="width:100%;height:100%;background:linear-gradient(145deg,#001525,#001015);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;padding:40px">
+            <div class="orb cyan" style="width:350px;height:350px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.25"></div>
+            <div style="position:relative;z-index:1;text-align:center">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:300px">
+                <div style="background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);border-radius:8px;padding:18px;font-size:1.8em">🖼️</div>
+                <div style="background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);border-radius:8px;padding:18px;font-size:1.8em">🖼️</div>
+                <div style="background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);border-radius:8px;padding:18px;font-size:1.8em">🖼️</div>
+                <div style="background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.25);border-radius:8px;padding:18px;font-size:1.8em">▶️</div>
+              </div>
+              <div style="font-size:.4em;color:var(--c-hi);margin-top:12px;font-weight:700">סטוריבורד → וידאו</div>
+            </div>
+          </div>
+          <span class="img-label" style="background:rgba(6,182,212,.1);border-color:rgba(6,182,212,.25);color:var(--c-hi)">🖼️ Image to Video</span>
+          <div class="img-cap">פאנל פריימים → קליפ קולנועי</div>
+        </div>
+        <div class="s-split-content">
+          <span class="eyebrow">Image to Video</span>
+          <h2>כמו בהפקה<br>אמיתית</h2>
+          <p>תבחרו קודם כל את הפריים, את הדמויות, תייצרו "סטוריבורד" — ורק אז תתחילו "לצלם" את הוידאו.</p>
+          <ul>
+            <li><span class="dot"></span>זוכרים את פאנל התמונות? אחלה הזדמנות!</li>
+            <li><span class="dot"></span>קבעו את השחקנים לפני שמצלמים</li>
+            <li><span class="dot"></span>עקביות ויזואלית בין קטעים</li>
+            <li><span class="dot"></span>מוצר, פורטרט, סצנה — הכל עם תמונה</li>
           </ul>
         </div>
-        <div class="s-video-pane">
-          <div class="bg bg-grid" style="opacity:.3"></div>
-          <div class="s-video-scanline"></div>
-          <!-- 🎬 להחליף: <iframe src="KLING_I2V_DEMO" allowfullscreen></iframe> -->
-          <div class="s-video-thumb">
-            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(6,182,212,.7))">🎬</div>
-            <div class="s-video-play-btn">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <div class="s-video-tag">Kling 2.0 · Image-to-Video</div>
-            <div class="s-video-label">⬆️ להחליף בסרטון הדגמה אמיתי</div>
-          </div>
-        </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           22 — Kling Omni: החלפת אלמנטים
-      ══════════════════════════════════════════════════════ -->
-      <section class="s-text" data-transition="slide">
-        <div class="s-text-accent-col" style="background:linear-gradient(180deg,#a855f7,#06b6d4)"></div>
-        <div class="s-text-main z1">
-          <div class="hdr">
-            <div class="chip" style="margin-bottom:.8em;background:rgba(168,85,247,.15);border-color:rgba(168,85,247,.3);color:var(--v-hi)">⚡ Kling Omni</div>
-            <h2>יש לכם קליפ — ועכשיו אפשר לשנות אותו</h2>
-          </div>
-          <div class="s-text-blocks">
-            <div class="tblock c fragment" style="animation-delay:.05s">
-              <span class="lbl">מה זה Kling Omni?</span>
-              <p>כלי עריכה שמאפשר <strong>להחליף אלמנטים בתוך וידאו קיים</strong> — בלי לצלם מחדש. בחרתם אזור, תיארתם מה שרוצים, Kling מחליף.</p>
-            </div>
-            <div class="tblock fragment" style="animation-delay:.12s">
-              <span class="lbl">מה אפשר להחליף?</span>
-              <p><strong>רקע</strong> — מהמשרד לחוף הים. <strong>מוצר</strong> — בקבוק אחד במקום אחר. <strong>בגד / צבע</strong> — אדום במקום כחול. הכל, בלי גרין-סקרין.</p>
-            </div>
-            <div class="tblock c fragment" style="animation-delay:.19s">
-              <span class="lbl">למה זה מהפכני?</span>
-              <p>לקוח ביקש לשנות משהו בסרטון? <strong>במקום צילום מחדש</strong> — פרומפט אחד + כמה דקות. עריכה שלקחה יום — לוקחת 5 דקות.</p>
-            </div>
-            <div class="tblock fragment" style="animation-delay:.26s">
-              <span class="lbl">Inpainting לוידאו</span>
-              <p>אותו עקרון כמו Inpainting בתמונות — רק שפה זה <strong>עובד על כל פריים</strong> בצורה עקבית לאורך כל הקליפ. לא רק תמונה בודדת.</p>
-            </div>
-          </div>
-        </div>
-        <div class="s-text-ghost">Omni</div>
-      </section>
-
-      <!-- ══════════════════════════════════════════════════════
-           23a — 🎬 DEMO: Kling Omni — שלב 1: לפני
-      ══════════════════════════════════════════════════════ -->
-      <section class="s-video" data-transition="slide">
-        <div class="s-split-content" style="padding:80px 50px 80px 100px">
-          <div class="chip" style="margin-bottom:1em;background:rgba(244,63,94,.12);border-color:rgba(244,63,94,.3);color:#f87171">🎬 שלב 1 / 2</div>
-          <span class="eyebrow" style="color:var(--rose)">Kling Omni · לפני</span>
-          <h2>הקליפ המקורי —<br>רקע משרד</h2>
-          <p>זהו הקליפ שנוצר — <strong>לפני</strong> כל עריכה עם Kling Omni. שימו לב לרקע ולתחושה הכללית.</p>
-          <ul style="margin-top:.9em">
-            <li><span class="dot" style="background:var(--grad-fire)"></span>קליפ מקורי — כפי שיצא מ-Kling</li>
-            <li><span class="dot" style="background:var(--grad-fire)"></span>רקע: משרד / סביבה פנימית</li>
-            <li><span class="dot" style="background:var(--grad-fire)"></span>ללא שינויים — גרסת הקלט</li>
-          </ul>
-        </div>
-        <div class="s-video-pane">
-          <div class="bg bg-grid" style="opacity:.3"></div>
-          <div class="s-video-scanline"></div>
-          <!-- 🎬 להחליף: <video src="assets/demos/kling-omni-before.mp4" controls></video> -->
-          <div class="s-video-thumb">
-            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(244,63,94,.6))">🎥</div>
-            <div class="s-video-play-btn" style="background:var(--grad-fire)">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <div class="s-video-tag" style="color:#f87171">לפני — Kling Omni</div>
-            <div class="s-video-label">⬆️ להחליף בקליפ המקורי</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ══════════════════════════════════════════════════════
-           23b — 🎬 DEMO: Kling Omni — שלב 2: אחרי
-      ══════════════════════════════════════════════════════ -->
-      <section class="s-video" data-transition="slide">
-        <div class="s-split-content" style="padding:80px 50px 80px 100px">
-          <div class="chip" style="margin-bottom:1em;background:rgba(16,185,129,.12);border-color:rgba(16,185,129,.3);color:#34d399">✨ שלב 2 / 2</div>
-          <span class="eyebrow" style="color:var(--emerald)">Kling Omni · אחרי</span>
-          <h2>הקליפ הערוך —<br>רקע חוף הים</h2>
-          <p>אותו קליפ בדיוק — אחרי פרומפט אחד ב-Kling Omni. <strong>אפס צילום מחדש.</strong></p>
-          <ul style="margin-top:.9em">
-            <li><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>הרקע הוחלף — חוף הים</li>
-            <li><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>הדמות נשארה זהה</li>
-            <li><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>5 דקות עבודה · ‎0 שעות צילום</li>
-          </ul>
-        </div>
-        <div class="s-video-pane">
-          <div class="bg bg-grid" style="opacity:.3"></div>
-          <div class="s-video-scanline"></div>
-          <!-- 🎬 להחליף: <video src="assets/demos/kling-omni-after.mp4" controls></video> -->
-          <div class="s-video-thumb">
-            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(16,185,129,.6))">✨</div>
-            <div class="s-video-play-btn" style="background:linear-gradient(135deg,#10b981,#06b6d4)">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <div class="s-video-tag" style="color:#34d399">אחרי — Kling Omni</div>
-            <div class="s-video-label">⬆️ להחליף בקליפ הערוך</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ══════════════════════════════════════════════════════
-           24 — Veo 3: סאונד מובנה
-      ══════════════════════════════════════════════════════ -->
-      <section class="s-text" data-transition="slide">
-        <div class="s-text-accent-col" style="background:linear-gradient(180deg,#22d3ee,#7c3aed)"></div>
-        <div class="s-text-main z1">
-          <div class="hdr">
-            <div class="chip cyan" style="margin-bottom:.8em">🔮 Veo 3 · Gemini</div>
-            <h2>וידאו שמגיע עם נשמה — סאונד מובנה</h2>
-          </div>
-          <div class="s-text-blocks">
-            <div class="tblock c fragment" style="animation-delay:.05s">
-              <span class="lbl">Native Audio</span>
-              <p>הסאונד <strong>נוצר יחד עם הוידאו</strong>, לא מודבק אחרי. צלילי סביבה, קולות דמויות, מוזיקה — הכל מסונכרן בדיוק לתמונה.</p>
-            </div>
-            <div class="tblock fragment" style="animation-delay:.12s">
-              <span class="lbl">First & Last Frame</span>
-              <p>קבעו <strong>פריים פתיחה + פריים סיום</strong> — Veo ממלא את האנימציה באמצע. מושלם לסרטוני מוצר עם תנועה מוגדרת.</p>
-            </div>
-            <div class="tblock c fragment" style="animation-delay:.19s">
-              <span class="lbl">הארכת קטעים</span>
-              <p>יצרתם קליפ 8 שניות? <strong>בקשו מ-Veo להאריך</strong> — הוא ימשיך את הסיפור הלאה, עם אותה דמות ואותו רקע.</p>
-            </div>
-            <div class="tblock fragment" style="animation-delay:.26s;border-color:rgba(244,63,94,.4)">
-              <span class="lbl" style="color:var(--rose)">⚠️ חשוב לדעת</span>
-              <p>אם מייצרים <strong>כמה קטעים עם אותה דמות</strong> — הקול לא יהיה זהה בין קליפ לקליפ. הפתרון: ElevenLabs STS לדיבוב אחיד. נגיע לזה בפרק הסאונד.</p>
-            </div>
-          </div>
-        </div>
-        <div class="s-text-ghost">Veo</div>
-      </section>
-
-      <!-- ══════════════════════════════════════════════════════
-           25 — 🎬 DEMO: Veo 3
-      ══════════════════════════════════════════════════════ -->
-      <section class="s-video" data-transition="fade">
-        <div class="s-split-content" style="padding:80px 50px 80px 100px">
-          <div class="chip cyan" style="margin-bottom:1em">🎬 &nbsp; הדגמה חיה</div>
-          <span class="eyebrow">Veo 3 · Gemini</span>
-          <h2>מה לחפש<br>בהדגמה</h2>
-          <ul style="margin-top:.9em">
-            <li class="fragment"><span class="dot"></span>הסאונד נוצר יחד עם הוידאו — לא מודבק</li>
-            <li class="fragment"><span class="dot"></span>צלילי סביבה מתאימים לסצנה</li>
-            <li class="fragment"><span class="dot"></span>איכות 1080p ומעלה</li>
-            <li class="fragment"><span class="dot"></span>הכל מפרומפט אחד בעברית</li>
-          </ul>
-          <p style="margin-top:1.2em;font-size:.65em;color:var(--rose)">⚠️ שימו לב: הסאונד הנוצר לא יהיה עקבי בין קטעים שונים</p>
-        </div>
-        <div class="s-video-pane">
-          <div class="bg bg-grid" style="opacity:.3"></div>
-          <div class="s-video-scanline"></div>
-          <!-- 🎬 להחליף: <iframe src="VEO3_DEMO" allowfullscreen></iframe> -->
-          <div class="s-video-thumb">
-            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(6,182,212,.7))">🔮</div>
-            <div class="s-video-play-btn" style="background:linear-gradient(135deg,#06b6d4,#7c3aed)">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <div class="s-video-tag" style="color:var(--c-hi)">Veo 3 · Native Audio</div>
-            <div class="s-video-label">⬆️ להחליף בסרטון הדגמה אמיתי</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ══════════════════════════════════════════════════════
-           26 — GOLD TIP: פריים כפול + Kling Sound
+           CH03-28 — GOLD TIP: 2 זוויות
       ══════════════════════════════════════════════════════ -->
       <section class="s-gold" data-transition="convex" data-transition-speed="fast">
         <div class="s-gold-glow-bg"></div>
@@ -1553,16 +1519,245 @@
         <div class="spark" style="top:16%;right:10%;color:#fcd34d;animation-delay:0s;font-size:1.8em">✦</div>
         <div class="spark" style="bottom:20%;left:8%;color:#fcd34d;animation-delay:-2s;font-size:2em">✦</div>
         <div class="spark" style="top:30%;left:15%;color:#f59e0b;animation-delay:-4s">✧</div>
-        <div class="spark" style="bottom:28%;right:14%;color:#fcd34d;animation-delay:-1.5s">✧</div>
-        <div class="s-gold-inner" style="max-width:85%">
-          <div class="s-gold-badge">✦ &nbsp; שני טיפי זהב · וידאו</div>
-          <h2>פריים כפול + סאונד לוידאו</h2>
+        <div class="s-gold-inner" style="max-width:90%">
+          <div class="s-gold-badge">✦ &nbsp; טיפ זהב · קאטים</div>
+          <h2>תייצרו אותה סצנה מ-2 זוויות</h2>
           <p>
-            <strong>1. מחיקת פריים כפול בחיבורים:</strong><br>
-            כשמחברים שני קטעים שנוצרו עם Start/End Frame — נוצר פריים כפול בנקודת החיבור שגורם לקפיצה. מחיקת פריים אחד ב-CapCut בנקודת החיבור פותרת את זה.<br><br>
-            <strong>2. Kling Sound-to-Video:</strong><br>
-            Kling יכול לייצר סאונד אמביינט מותאם לוידאו שלכם — מנתח את הסצנה ומוסיף צלילים שמתאימים לתמונה אוטומטית.
+            כך תוכלו <strong>לחתוך ולייצר קאטים מעניינים</strong> — בדיוק כמו צילום אמיתי עם שתי מצלמות.<br>
+            תוצר: וידאו שנראה מקצועי, דינמי, ולא "AI מדי".
           </p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:1.4em;max-width:700px">
+            <div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:10px;padding:20px;text-align:center;font-size:.43em;color:var(--a-hi)">
+              📹 סרטון זווית א' — <em>s-28a.mp4</em>
+            </div>
+            <div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:10px;padding:20px;text-align:center;font-size:.43em;color:var(--a-hi)">
+              📹 סרטון זווית ב' — <em>s-28b.mp4</em>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-29 — GOLD TIP: תנועה עדינה בפוסט סטטי
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-gold" data-transition="convex" data-transition-speed="fast">
+        <div class="s-gold-glow-bg" style="background:radial-gradient(ellipse 70% 50% at 50% 60%,rgba(124,58,237,.15) 0%,transparent 70%)"></div>
+        <div class="s-gold-frame"></div>
+        <div class="spark" style="top:16%;right:10%;color:#fcd34d;animation-delay:0s;font-size:1.8em">✦</div>
+        <div class="spark" style="bottom:22%;left:8%;color:#fcd34d;animation-delay:-3s;font-size:1.5em">✦</div>
+        <div class="s-gold-inner" style="max-width:90%">
+          <div class="s-gold-badge">✦ &nbsp; טיפ זהב · פוסט סטטי</div>
+          <h2>תנועה עדינה = וידאו שהאלגוריתם מעדיף</h2>
+          <p>
+            ככה תייצרו <strong>תנועה עדינה בפוסט סטטי</strong> ותהפכו אותו לוידאו שמערכת הקידום מעדיפה לעיתים.<br>
+            מפרומפט לתוצר — ראו בהדגמה:
+          </p>
+          <div style="margin-top:1.2em;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);border-radius:10px;padding:18px 28px;font-size:.44em;color:var(--v-hi);text-align:center">
+            🎬 הדגמה: פרומפט → תוצר · <em>assets/demos/s-29.mp4</em>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-30 — START+END FRAME
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-split s-split-tl" data-transition="slide">
+        <div class="s-split-img">
+          <div style="width:100%;height:100%;background:linear-gradient(145deg,#001520,#0a0020);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;padding:30px;gap:14px">
+            <div class="orb" style="width:300px;height:300px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.2;animation-duration:8s"></div>
+            <div style="position:relative;z-index:1;width:100%">
+              <div style="background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:8px;padding:12px 16px;font-size:.36em;color:var(--v-hi);margin-bottom:10px;text-align:center">
+                📸 צילום מסך: פרומפט עם Start Frame + End Frame — <em>s-30a.png</em>
+              </div>
+              <div style="background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.2);border-radius:8px;padding:12px 16px;font-size:.36em;color:var(--c-hi);text-align:center">
+                🎬 סרטון התוצר · <em>s-30b.mp4</em>
+              </div>
+            </div>
+          </div>
+          <span class="img-label">🎬 Start+End Frame</span>
+          <div class="img-cap">מיקום ← AI ממלא את הביניים</div>
+        </div>
+        <div class="s-split-content">
+          <span class="eyebrow">Start + End Frame</span>
+          <h2>האח הפדנטי<br>של Image to Video</h2>
+          <p>עוזר לשמור על עקביות + לייצר סצנות מורכבות. נגיד — <strong>מעבר מלוקיישן ספציפי ללוקיישן ספציפי.</strong></p>
+          <ul>
+            <li><span class="dot"></span>שליטה מלאה על פריים הפתיחה</li>
+            <li><span class="dot"></span>שליטה מלאה על פריים הסיום</li>
+            <li><span class="dot"></span>AI ממלא את האנימציה באמצע</li>
+            <li><span class="dot"></span>מושלם למעברים ולסצנות מורכבות</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-31 — ציטוט פתגם סיני
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-statement" data-transition="zoom" data-transition-speed="slow">
+        <div class="s-statement-conic" style="opacity:.5;animation-duration:35s"></div>
+        <div class="ring ring-1" style="border-color:rgba(6,182,212,.1)"></div>
+        <div class="ring ring-2"></div>
+        <div class="s-accent-h top"></div>
+        <div class="s-accent-h bottom"></div>
+        <div class="s-statement-inner">
+          <span class="eyebrow" style="animation:fade-up .7s ease both;letter-spacing:.3em;font-size:.5em">— פתגם סיני עתיק —</span>
+          <span class="s-statement-word outline" style="font-size:3.2em !important;animation-delay:.05s">"ה-End Frame</span>
+          <span class="s-statement-word g" style="font-size:3.2em !important;animation-delay:.1s">של סצנה אחת</span>
+          <span class="s-statement-word outline" style="font-size:3.2em !important;animation-delay:.15s">הוא ה-Start Frame</span>
+          <span class="s-statement-word fire" style="font-size:3.2em !important;animation-delay:.2s">של הסצנה הבאה"</span>
+          <div style="margin-top:1.4em;background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.2);border-radius:10px;padding:12px 24px;font-size:.37em;color:var(--c-hi);text-align:center;animation:fade-up .7s .3s ease both">
+            🎬 הדגמה: החלפת Start ↔ End פריים בקלינג · <em>assets/demos/s-31.mp4</em>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-32 — GOLD TIP: End Frame בקאפקאט
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-gold" data-transition="convex" data-transition-speed="fast">
+        <div class="s-gold-glow-bg"></div>
+        <div class="s-gold-frame"></div>
+        <div class="spark" style="top:18%;right:12%;color:#fcd34d;animation-delay:0s">✦</div>
+        <div class="spark" style="bottom:22%;left:10%;color:#fcd34d;animation-delay:-2s;font-size:2em">✦</div>
+        <div class="spark" style="top:25%;left:18%;color:#f59e0b;animation-delay:-4s">✧</div>
+        <div class="s-gold-inner">
+          <div class="s-gold-badge">✦ &nbsp; טיפ זהב · End Frame</div>
+          <h2>אין לכם End Frame? ככה מייצרים אותו בקאפקאט</h2>
+          <p>
+            לא תמיד יש לכם את הפריים המדויק שרוצים כסיום.<br>
+            <strong>CapCut מאפשר להקפיא פריים מהוידאו</strong> ולשמור אותו כתמונה —<br>
+            זה בדיוק ה-End Frame שלכם. קל, מהיר, חינמי.
+          </p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-33 — MULTI-SHOT + הדגמה פרומפט
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-video" data-transition="slide">
+        <div class="s-split-content" style="padding:80px 50px 80px 100px">
+          <div class="chip cyan" style="margin-bottom:1em">🎬 Multi-Shot</div>
+          <span class="eyebrow">Kling · Multi-Shot</span>
+          <h2>כמה שוטים —<br>וידאו אחד</h2>
+          <p style="margin-bottom:.8em">כלי יחסית חדש שיוצר מראש <strong>סרטון שמורכב מכמה שוטים</strong> — לא צריך לחתוך, לחבר, לתכנן.</p>
+          <p>תנו פרומפט + תמונה — ומקבלים וידאו מקצועי עם כמה זוויות.</p>
+        </div>
+        <div class="s-video-pane">
+          <div class="bg bg-grid" style="opacity:.3"></div>
+          <div class="s-video-scanline"></div>
+          <video src="assets/demos/s-33.mp4" controls style="width:100%;height:100%;object-fit:contain">
+            <div class="s-video-thumb">
+              <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(6,182,212,.7))">🎬</div>
+              <div class="s-video-play-btn" style="background:linear-gradient(135deg,#06b6d4,#7c3aed)">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <div class="s-video-tag" style="color:var(--c-hi)">Multi-Shot · פרומפט + תמונה</div>
+            </div>
+          </video>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-34 — הדגמה: Multi-Shot תוצר
+      ══════════════════════════════════════════════════════ -->
+      <section data-transition="fade" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
+        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
+        <div style="position:absolute;inset:0">
+          <div class="bg bg-grid" style="opacity:.2;z-index:0"></div>
+          <div class="s-video-scanline" style="z-index:1"></div>
+          <div class="s-video-thumb" style="position:absolute;inset:0;z-index:2">
+            <video src="assets/demos/s-34.mp4" controls style="width:100%;height:100%;object-fit:contain"></video>
+          </div>
+        </div>
+        <div style="position:absolute;bottom:24px;right:0;left:0;text-align:center;z-index:3">
+          <div class="chip cyan">Multi-Shot · התוצר הסופי</div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-35 — VIDEO TO VIDEO: הוידאו המקורי
+      ══════════════════════════════════════════════════════ -->
+      <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
+        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
+        <div style="position:absolute;top:0;right:0;left:0;padding:36px 80px 28px;z-index:3;direction:rtl;text-align:right;background:linear-gradient(to bottom,rgba(5,5,14,.95) 60%,transparent 100%)">
+          <div class="chip" style="margin-bottom:.6em;background:rgba(244,63,94,.12);border-color:rgba(244,63,94,.3);color:#f87171">🎞️ Video to Video</div>
+          <h2 style="font-size:1.7em !important;color:var(--white) !important;line-height:1.2 !important;max-width:75%">אפשר לייצר וידאו שלכם — מעפן ככל שיהיה — שבו אתם "מדגימים את התנועה"</h2>
+        </div>
+        <div style="position:absolute;inset:0;width:100%;height:100%">
+          <div class="bg bg-grid" style="opacity:.2;z-index:0"></div>
+          <div class="s-video-scanline" style="z-index:1"></div>
+          <div class="s-video-thumb" style="position:absolute;inset:0;z-index:2">
+            <video src="assets/demos/s-35.mp4" controls style="width:100%;height:100%;object-fit:contain"></video>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-36 — VIDEO TO VIDEO: התוצר המוחלף
+      ══════════════════════════════════════════════════════ -->
+      <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
+        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
+        <div style="position:absolute;top:0;right:0;left:0;padding:36px 80px 28px;z-index:3;direction:rtl;text-align:right;background:linear-gradient(to bottom,rgba(5,5,14,.95) 60%,transparent 100%)">
+          <div class="chip" style="margin-bottom:.6em;background:rgba(16,185,129,.12);border-color:rgba(16,185,129,.3);color:#34d399">✨ Video to Video · תוצר</div>
+          <h2 style="font-size:1.7em !important;color:var(--white) !important;line-height:1.2 !important;max-width:75%">ואז להנחות את המודל איך זה צריך להיראות</h2>
+        </div>
+        <div style="position:absolute;inset:0;width:100%;height:100%">
+          <div class="bg bg-grid" style="opacity:.2;z-index:0"></div>
+          <div class="s-video-scanline" style="z-index:1"></div>
+          <div class="s-video-thumb" style="position:absolute;inset:0;z-index:2">
+            <video src="assets/demos/s-36.mp4" controls style="width:100%;height:100%;object-fit:contain"></video>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-37 — ובעצם אפשר להחליף כמעט כל דבר
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-statement" data-transition="zoom" data-transition-speed="fast">
+        <div class="s-statement-conic" style="animation-direction:reverse;animation-duration:20s"></div>
+        <div class="ring ring-1" style="border-color:rgba(16,185,129,.1)"></div>
+        <div class="ring ring-2"></div>
+        <div class="s-accent-h top"></div>
+        <div class="s-accent-h bottom"></div>
+        <div class="s-statement-inner">
+          <span class="eyebrow" style="animation:fade-up .6s ease both">ובעצם —</span>
+          <span class="s-statement-word outline" style="font-size:3.8em !important;animation-delay:.05s">אפשר להחליף</span>
+          <span class="s-statement-word g" style="font-size:3.8em !important;animation-delay:.12s">כמעט כל דבר</span>
+          <span class="s-statement-word" style="font-size:2.5em !important;animation-delay:.2s;color:rgba(240,240,248,.65)">בוידאו שכבר יצרתם</span>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-38 — אריאה לפני
+      ══════════════════════════════════════════════════════ -->
+      <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
+        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
+        <div style="position:absolute;top:0;right:0;left:0;padding:36px 80px 28px;z-index:3;direction:rtl;text-align:right;background:linear-gradient(to bottom,rgba(5,5,14,.95) 60%,transparent 100%)">
+          <h2 style="font-size:1.7em !important;color:var(--white) !important;line-height:1.2 !important">אם נגיד יש לכם וידאו עם שחקנים שנראים לא טוב</h2>
+        </div>
+        <div style="position:absolute;inset:0;width:100%;height:100%">
+          <div class="bg bg-grid" style="opacity:.2;z-index:0"></div>
+          <div class="s-video-scanline" style="z-index:1"></div>
+          <div class="s-video-thumb" style="position:absolute;inset:0;z-index:2">
+            <video src="assets/demos/s-38.mp4" controls style="width:100%;height:100%;object-fit:contain"></video>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-39 — אריאה אחרי
+      ══════════════════════════════════════════════════════ -->
+      <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
+        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
+        <div style="position:absolute;top:0;right:0;left:0;padding:36px 80px 28px;z-index:3;direction:rtl;text-align:right;background:linear-gradient(to bottom,rgba(5,5,14,.95) 60%,transparent 100%)">
+          <h2 style="font-size:1.7em !important;color:var(--white) !important;line-height:1.2 !important">אפשר להפוך אותם להרבה יותר יפים</h2>
+        </div>
+        <div style="position:absolute;inset:0;width:100%;height:100%">
+          <div class="bg bg-grid" style="opacity:.2;z-index:0"></div>
+          <div class="s-video-scanline" style="z-index:1"></div>
+          <div class="s-video-thumb" style="position:absolute;inset:0;z-index:2">
+            <video src="assets/demos/s-39.mp4" controls style="width:100%;height:100%;object-fit:contain"></video>
+          </div>
         </div>
       </section>
 
@@ -1995,11 +2190,10 @@
         <div class="s-gold-corner br"></div>
         <div class="s-gold-inner">
           <div class="s-gold-badge">✦ &nbsp; טיפ זהב · CapCut</div>
-          <h2>Watermark + פריים כפול — שתי שורות</h2>
+          <h2>Watermark מ-AI — שורה אחת</h2>
           <p>
-            <strong>Watermark מ-AI:</strong> שמרו את הסרטון מ-CapCut כ-MP4 — ה-Watermark נעלם. לחלופין: לחצו "Remove Watermark" מתחת לכלי AI.<br><br>
-            <strong>פריים כפול בחיבורים:</strong> כשמחברים קטעי Start/End Frame מ-Kling/Veo — מחקו פריים אחד בנקודת החיבור.<br>
-            קפיצה נעלמת. הסרטון זורם חלק.
+            שמרו את הסרטון מ-CapCut כ-MP4 — <strong>ה-Watermark נעלם.</strong><br>
+            לחלופין: לחצו "Remove Watermark" מתחת לכלי AI.
           </p>
         </div>
       </section>
