@@ -210,16 +210,16 @@
   .s-cover-inner { position:relative; z-index:2; }
   .s-cover-eyebrow {
     display:block; font-size:.38em; font-weight:700;
-    letter-spacing:.4em; text-transform:uppercase; color:var(--dim); margin-bottom:1.8em;
+    letter-spacing:.4em; text-transform:uppercase; color:rgba(255,255,255,.55); margin-bottom:1.8em;
     animation:fade-up 1s ease both;
   }
   .s-cover h1 { font-size:5.5em !important; line-height:.9 !important; margin-bottom:.2em !important; animation:fade-up 1s .12s ease both; }
   .s-cover-sub { font-size:.78em; font-weight:300; color:var(--muted); line-height:1.5; animation:fade-up 1s .26s ease both; }
   .s-cover-tagline {
     display:inline-block; margin-top:2.2em;
-    font-size:.4em; font-weight:500; color:var(--dim);
+    font-size:.4em; font-weight:500; color:rgba(255,255,255,.7);
     letter-spacing:.18em; padding:9px 24px;
-    border:1px solid rgba(124,58,237,.22); border-radius:100px;
+    border:1px solid rgba(124,58,237,.45); border-radius:100px;
     animation:fade-up 1s .4s ease both;
   }
   .s-cover-ring-spin {
@@ -1111,10 +1111,10 @@
       <!-- ══════════════════════════════════════════════════════
            CH01-C-PRE — ככה זה נראה בלי gem
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="slide" style="display:grid !important;grid-template-columns:38% 62%;height:100%;background:transparent !important;overflow:hidden">
+      <section data-transition="slide" style="display:grid !important;grid-template-columns:55% 45%;height:100%;background:transparent !important;overflow:hidden">
         <!-- Left: title panel -->
-        <div style="display:flex;flex-direction:column;justify-content:center;padding:80px 50px 80px 80px;direction:rtl;text-align:right;position:relative">
-          <div style="position:absolute;inset:0;background:linear-gradient(to left,transparent,rgba(5,5,14,.5));pointer-events:none"></div>
+        <div style="display:flex;flex-direction:column;justify-content:center;padding:80px 60px 80px 80px;direction:rtl;text-align:right;position:relative">
+          <div style="position:absolute;inset:0;background:linear-gradient(to left,transparent,rgba(5,5,14,.4));pointer-events:none"></div>
           <div class="orb" style="width:500px;height:500px;top:50%;left:0;transform:translateY(-50%);opacity:.1;animation-duration:9s"></div>
           <div style="position:relative;z-index:1">
             <span class="eyebrow amber" style="margin-bottom:.8em;display:block">🤖 Gemini — בלי Gem</span>
@@ -1125,68 +1125,10 @@
             </div>
           </div>
         </div>
-        <!-- Right: Gemini UI mockup -->
-        <div style="position:relative;display:flex;align-items:center;justify-content:center;padding:24px 40px 24px 20px;overflow:hidden">
-          <!-- browser chrome wrapper -->
-          <div style="width:100%;max-height:calc(100vh - 80px);border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 80px rgba(0,0,0,.7);display:flex;flex-direction:column">
-            <!-- browser bar -->
-            <div style="background:#1c1c2e;padding:10px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0;border-bottom:1px solid rgba(255,255,255,.06)">
-              <div style="display:flex;gap:6px">
-                <div style="width:11px;height:11px;border-radius:50%;background:#ff5f57"></div>
-                <div style="width:11px;height:11px;border-radius:50%;background:#febc2e"></div>
-                <div style="width:11px;height:11px;border-radius:50%;background:#28c840"></div>
-              </div>
-              <div style="flex:1;background:rgba(255,255,255,.07);border-radius:6px;padding:5px 12px;font-size:.28em;font-family:var(--mono);color:rgba(255,255,255,.4);direction:ltr">gemini.google.com/app</div>
-            </div>
-            <!-- Gemini content area -->
-            <div style="background:#f8f9fa;overflow-y:auto;flex:1;max-height:520px">
-              <!-- Gemini top bar -->
-              <div style="background:#fff;padding:12px 20px;border-bottom:1px solid #e8eaed;display:flex;align-items:center;gap:10px">
-                <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#4285f4,#9c27b0,#ea4335);flex-shrink:0"></div>
-                <span style="font-family:sans-serif;font-size:.35em;color:#3c4043;font-weight:500">Gemini</span>
-                <span style="font-family:sans-serif;font-size:.3em;color:#80868b;margin-right:auto;margin-left:0;direction:rtl">2.5 Flash</span>
-              </div>
-              <!-- Chat messages area -->
-              <div style="padding:16px 20px;display:flex;flex-direction:column;gap:12px;direction:rtl">
-                <!-- User bubble -->
-                <div style="display:flex;justify-content:flex-start;gap:8px">
-                  <div style="width:26px;height:26px;border-radius:50%;background:#e8eaed;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.3em">👤</div>
-                  <div style="background:#e8f4fd;border-radius:0 12px 12px 12px;padding:10px 14px;font-family:sans-serif;font-size:.32em;color:#3c4043;direction:rtl;text-align:right;line-height:1.6">
-                    תעשה לי פוסט לחסלט על מרתון ירושלים
-                  </div>
-                </div>
-                <!-- Gemini response -->
-                <div style="display:flex;gap:8px;align-items:flex-start">
-                  <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#4285f4,#9c27b0);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.22em;color:white;font-weight:900">G</div>
-                  <div style="flex:1;font-family:sans-serif;font-size:.3em;color:#3c4043;direction:rtl;text-align:right;line-height:1.7">
-                    <div style="margin-bottom:8px">הנה כמה אפשרויות לפוסטים עבור <strong>חסלט</strong> לרגל מרתון ירושלים, בסגנונות שונים שמתאימים לקהל היעד:</div>
-                    <div style="background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:10px 12px;margin-bottom:8px">
-                      <div style="font-weight:700;color:#1a73e8;margin-bottom:4px">אפשרות 1: המנגב (פוקוס על בריאות)</div>
-                      <div style="font-weight:600;margin-bottom:4px">🌿🏃 רצים בעליות של ירושלים? תנו לעצמכם דחיפה ירוקה!</div>
-                      <div style="color:#5f6368">העליות של העיר הקדושה הן לא קלות, וכדי לצלוח אותן הגוף שלכם צריך דלק איכותי ובריא. חסלט מסייע לכם לרוץ עם הסים ובריאים.</div>
-                    </div>
-                    <div style="background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:10px 12px;margin-bottom:8px">
-                      <div style="font-weight:700;color:#1a73e8;margin-bottom:4px">אפשרות 2: המוריסוטי/שנון (דיוק והבדיקה)</div>
-                      <div style="font-weight:600;margin-bottom:4px">🏃😄 במרתון ירושלים בודקים דופק, אצלנו בודקים כל עלה!</div>
-                      <div style="color:#5f6368">יש דברים שלא מתפשרים עליהם: לא על נעלי הריצה שלכם, ולא על הניקיון של האוכל שלכם...</div>
-                    </div>
-                    <div style="background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:10px 12px">
-                      <div style="font-weight:700;color:#1a73e8;margin-bottom:4px">אפשרות 3: קצר וקולע (אינסטגרם)</div>
-                      <div style="font-weight:600;margin-bottom:4px">🏃✨ האנרגיה שלכם למרתון? כאן!</div>
-                      <div style="color:#5f6368">ירושלים יצא לדרך, ואנחנו פה כדי להזכיר שהניצחון האמיתי הוא לשמור על חיים בריאים.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Input bar -->
-              <div style="background:#fff;border-top:1px solid #e8eaed;padding:10px 16px;display:flex;align-items:center;gap:8px;position:sticky;bottom:0">
-                <div style="flex:1;background:#f1f3f4;border-radius:20px;padding:8px 14px;font-family:sans-serif;font-size:.28em;color:#80868b;direction:rtl">כאן מזינים הנחיות ל-Gemini</div>
-                <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#4285f4,#9c27b0);display:flex;align-items:center;justify-content:center">
-                  <div style="width:10px;height:10px;border-right:2px solid white;border-bottom:2px solid white;transform:rotate(-45deg);margin-top:2px"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Right: actual screenshot — vertical image, centered with shadow -->
+        <div style="display:flex;align-items:center;justify-content:center;padding:30px 50px 30px 20px;overflow:hidden">
+          <img src="assets/demos/slide-nogem-screenshot.png"
+               style="max-height:880px;width:auto;max-width:100%;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.07);object-fit:contain;animation:fade-in .8s .3s ease both">
         </div>
       </section>
 
