@@ -774,104 +774,13 @@
       <!-- ══════════════════════════════════════════════════════
            04 — WHY: WHAT DOES AI DO?
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="slide" style="display:flex !important;position:relative;width:100%;height:100%;overflow:hidden">
-        <!-- Visual side — left 42% -->
-        <div style="flex:0 0 42%;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden">
-          <!-- background glow -->
-          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(124,58,237,.18) 0%,transparent 70%);pointer-events:none"></div>
-          <!-- Before vs After diagram -->
-          <svg width="420" height="480" viewBox="0 0 420 480" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:relative;z-index:1;animation:float 7s ease-in-out infinite">
-            <defs>
-              <radialGradient id="sl4core" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#a855f7"/>
-                <stop offset="100%" stop-color="#06b6d4"/>
-              </radialGradient>
-              <filter id="sl4glow">
-                <feGaussianBlur stdDeviation="6" result="blur"/>
-                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
-            </defs>
-            <!-- BEFORE label -->
-            <text x="80" y="30" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="rgba(244,63,94,.7)" letter-spacing="3">לפני</text>
-            <!-- AFTER label -->
-            <text x="340" y="30" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="rgba(6,182,212,.8)" letter-spacing="3">אחרי</text>
-            <!-- Before: messy complexity cloud -->
-            <!-- Tool nodes -->
-            <circle cx="30" cy="80" r="18" fill="rgba(244,63,94,.12)" stroke="rgba(244,63,94,.5)" stroke-width="1.5"/>
-            <text x="30" y="86" text-anchor="middle" font-size="13">🛠</text>
-            <circle cx="80" cy="55" r="18" fill="rgba(245,158,11,.12)" stroke="rgba(245,158,11,.5)" stroke-width="1.5"/>
-            <text x="80" y="61" text-anchor="middle" font-size="13">📚</text>
-            <circle cx="130" cy="80" r="18" fill="rgba(168,85,247,.12)" stroke="rgba(168,85,247,.5)" stroke-width="1.5"/>
-            <text x="130" y="86" text-anchor="middle" font-size="13">⚙️</text>
-            <circle cx="40" cy="130" r="18" fill="rgba(16,185,129,.12)" stroke="rgba(16,185,129,.5)" stroke-width="1.5"/>
-            <text x="40" y="136" text-anchor="middle" font-size="13">🔬</text>
-            <circle cx="100" cy="135" r="18" fill="rgba(244,63,94,.12)" stroke="rgba(244,63,94,.4)" stroke-width="1.5"/>
-            <text x="100" y="141" text-anchor="middle" font-size="13">💻</text>
-            <circle cx="140" cy="130" r="18" fill="rgba(245,158,11,.12)" stroke="rgba(245,158,11,.4)" stroke-width="1.5"/>
-            <text x="140" y="136" text-anchor="middle" font-size="13">📝</text>
-            <!-- chaotic connector lines -->
-            <line x1="30" y1="80" x2="80" y2="55" stroke="rgba(255,255,255,.08)" stroke-width="1" stroke-dasharray="3 3"/>
-            <line x1="80" y1="55" x2="130" y2="80" stroke="rgba(255,255,255,.08)" stroke-width="1" stroke-dasharray="3 3"/>
-            <line x1="30" y1="80" x2="40" y2="130" stroke="rgba(255,255,255,.06)" stroke-width="1" stroke-dasharray="3 3"/>
-            <line x1="130" y1="80" x2="100" y2="135" stroke="rgba(255,255,255,.06)" stroke-width="1" stroke-dasharray="3 3"/>
-            <line x1="80" y1="55" x2="100" y2="135" stroke="rgba(255,255,255,.05)" stroke-width="1" stroke-dasharray="3 3"/>
-            <!-- Time label under "before" -->
-            <text x="80" y="178" text-anchor="middle" font-family="Heebo,sans-serif" font-size="11" fill="rgba(244,63,94,.65)">שעות · 3 כלים · מומחיות</text>
-            <!-- DIVIDER arrow + AI box -->
-            <!-- Arrow from before to AI -->
-            <line x1="165" y1="108" x2="200" y2="108" stroke="rgba(255,255,255,.18)" stroke-width="1.5" marker-end="url(#arr)"/>
-            <!-- AI central box -->
-            <rect x="197" y="76" width="30" height="64" rx="8" fill="url(#sl4core)" opacity=".9" filter="url(#sl4glow)"/>
-            <text x="212" y="113" text-anchor="middle" font-family="Arial" font-weight="900" font-size="10" fill="white">AI</text>
-            <!-- Arrow from AI to after -->
-            <line x1="227" y1="108" x2="265" y2="108" stroke="rgba(6,182,212,.5)" stroke-width="1.5" marker-end="url(#arr2)"/>
-            <defs>
-              <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-                <path d="M0,0 L6,3 L0,6 Z" fill="rgba(255,255,255,.25)"/>
-              </marker>
-              <marker id="arr2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-                <path d="M0,0 L6,3 L0,6 Z" fill="rgba(6,182,212,.7)"/>
-              </marker>
-            </defs>
-            <!-- After: single clean result -->
-            <circle cx="320" cy="108" r="38" fill="rgba(6,182,212,.08)" stroke="rgba(6,182,212,.55)" stroke-width="1.5"/>
-            <circle cx="320" cy="108" r="28" fill="rgba(6,182,212,.1)" stroke="rgba(6,182,212,.3)" stroke-width="1"/>
-            <text x="320" y="103" text-anchor="middle" font-size="20">✨</text>
-            <text x="320" y="124" text-anchor="middle" font-family="Heebo,sans-serif" font-size="10" fill="rgba(34,211,238,.9)">פרומפט</text>
-            <!-- Time label under "after" -->
-            <text x="320" y="178" text-anchor="middle" font-family="Heebo,sans-serif" font-size="11" fill="rgba(6,182,212,.7)">דקה אחת · עברית · אפס ידע</text>
-            <!-- separator line -->
-            <line x1="210" y1="200" x2="210" y2="460" stroke="rgba(255,255,255,.06)" stroke-width="1" stroke-dasharray="4 4"/>
-            <!-- Bottom stats row -->
-            <rect x="20" y="220" width="168" height="52" rx="10" fill="rgba(244,63,94,.06)" stroke="rgba(244,63,94,.2)" stroke-width="1"/>
-            <text x="104" y="241" text-anchor="middle" font-family="Heebo,sans-serif" font-size="10" fill="rgba(255,255,255,.4)">קודם</text>
-            <text x="104" y="261" text-anchor="middle" font-family="Heebo,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,.75)">שעות · מומחה · כסף</text>
-            <rect x="232" y="220" width="168" height="52" rx="10" fill="rgba(6,182,212,.06)" stroke="rgba(6,182,212,.2)" stroke-width="1"/>
-            <text x="316" y="241" text-anchor="middle" font-family="Heebo,sans-serif" font-size="10" fill="rgba(255,255,255,.4)">עכשיו</text>
-            <text x="316" y="261" text-anchor="middle" font-family="Heebo,sans-serif" font-size="13" font-weight="700" fill="rgba(34,211,238,.85)">פרומפט אחד · דקה</text>
-            <!-- Complexity score bars -->
-            <text x="104" y="310" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="rgba(255,255,255,.3)">COMPLEXITY</text>
-            <rect x="30" y="318" width="148" height="8" rx="4" fill="rgba(244,63,94,.15)" stroke="rgba(244,63,94,.3)" stroke-width="1"/>
-            <rect x="30" y="318" width="148" height="8" rx="4" fill="rgba(244,63,94,.6)"/>
-            <text x="316" y="310" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="rgba(255,255,255,.3)">COMPLEXITY</text>
-            <rect x="242" y="318" width="148" height="8" rx="4" fill="rgba(6,182,212,.1)" stroke="rgba(6,182,212,.2)" stroke-width="1"/>
-            <rect x="242" y="318" width="22" height="8" rx="4" fill="rgba(6,182,212,.7)"/>
-            <!-- Accessibility bars -->
-            <text x="104" y="348" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="rgba(255,255,255,.3)">ACCESSIBILITY</text>
-            <rect x="30" y="356" width="148" height="8" rx="4" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
-            <rect x="30" y="356" width="25" height="8" rx="4" fill="rgba(168,85,247,.5)"/>
-            <text x="316" y="348" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="rgba(255,255,255,.3)">ACCESSIBILITY</text>
-            <rect x="242" y="356" width="148" height="8" rx="4" fill="rgba(6,182,212,.1)" stroke="rgba(6,182,212,.2)" stroke-width="1"/>
-            <rect x="242" y="356" width="148" height="8" rx="4" fill="rgba(6,182,212,.6)"/>
-          </svg>
+      <section class="s-split s-split-tl" data-transition="slide">
+        <div class="s-split-img">
+          <img src="assets/demos/slide04-visual.png" class="img-art" style="object-fit:cover;object-position:center;width:100%;height:100%">
         </div>
-        <!-- Text side — right 58%, RTL -->
-        <div style="flex:0 0 58%;display:flex;flex-direction:column;justify-content:center;padding:80px 80px 80px 40px;direction:rtl;text-align:right;position:relative">
-          <div style="position:absolute;inset:0;background:linear-gradient(to left,rgba(5,5,14,.7) 0%,transparent 100%);pointer-events:none"></div>
-          <div class="hdr" style="position:relative;z-index:1;margin-bottom:1.8em">
-            <h2 style="font-size:2.4em !important">מה הAI עושה?</h2>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:28px;position:relative;z-index:1">
+        <div class="s-split-content">
+          <h2>מה הAI עושה?</h2>
+          <div style="display:flex;flex-direction:column;gap:22px;margin-top:.4em">
             <div class="tblock fragment" style="animation-delay:.05s">
               <span class="lbl">בינתיים</span>
               <p>הAI <strong>לא ממציא דברים חדשים</strong> — הוא מפשט דברים שפעם היה מורכב מאוד לעשות אותם, או שהיה צריך בשבילם להיות מומחה גדול.</p>
@@ -962,54 +871,29 @@
       <!-- ══════════════════════════════════════════════════════
            08 — WHAT'S IN THIS PRESENTATION
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="slide" style="display:flex !important;position:relative;width:100%;height:100%;overflow:hidden">
-        <!-- Visual side — left 38% -->
-        <div style="flex:0 0 38%;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden">
-          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(245,158,11,.12) 0%,transparent 70%);pointer-events:none"></div>
-          <!-- 4 floating icon cards in a 2x2 grid -->
-          <div style="position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:20px">
-            <div class="fragment" style="animation-delay:.05s;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);border-radius:20px;padding:28px 20px;display:flex;flex-direction:column;align-items:center;gap:12px;animation:float 6s ease-in-out infinite;backdrop-filter:blur(8px)">
-              <span style="font-size:2.4em;line-height:1">💡</span>
-              <span style="font-family:var(--font);font-size:.65em;color:rgba(252,211,77,.9);font-weight:700;text-align:center">יכולות</span>
-            </div>
-            <div class="fragment" style="animation-delay:.12s;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.3);border-radius:20px;padding:28px 20px;display:flex;flex-direction:column;align-items:center;gap:12px;animation:float 7s ease-in-out infinite;animation-delay:-2s;backdrop-filter:blur(8px)">
-              <span style="font-size:2.4em;line-height:1">🎬</span>
-              <span style="font-family:var(--font);font-size:.65em;color:rgba(168,85,247,.9);font-weight:700;text-align:center">הדגמות</span>
-            </div>
-            <div class="fragment" style="animation-delay:.19s;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);border-radius:20px;padding:28px 20px;display:flex;flex-direction:column;align-items:center;gap:12px;animation:float 8s ease-in-out infinite;animation-delay:-4s;backdrop-filter:blur(8px)">
-              <span style="font-size:2.4em;line-height:1">✦</span>
-              <span style="font-family:var(--font);font-size:.65em;color:rgba(252,211,77,.9);font-weight:700;text-align:center">טיפי זהב</span>
-            </div>
-            <div class="fragment" style="animation-delay:.26s;background:rgba(244,63,94,.07);border:1px solid rgba(244,63,94,.25);border-radius:20px;padding:28px 20px;display:flex;flex-direction:column;align-items:center;gap:12px;animation:float 6.5s ease-in-out infinite;animation-delay:-1s;backdrop-filter:blur(8px)">
-              <span style="font-size:2.4em;line-height:1">🎁</span>
-              <span style="font-family:var(--font);font-size:.65em;color:rgba(251,113,133,.9);font-weight:700;text-align:center">הפתעה</span>
-            </div>
-          </div>
-          <!-- accent col -->
-          <div style="position:absolute;top:0;right:0;bottom:0;width:3px;background:linear-gradient(to bottom,transparent,rgba(245,158,11,.5),transparent)"></div>
+      <section class="s-split s-split-tl" data-transition="slide">
+        <div class="s-split-img">
+          <img src="assets/demos/slide09-visual.png" class="img-art" style="object-fit:cover;object-position:center;width:100%;height:100%">
         </div>
-        <!-- Text side — right 62%, RTL -->
-        <div style="flex:0 0 62%;display:flex;flex-direction:column;justify-content:center;padding:80px 80px 80px 50px;direction:rtl;text-align:right;position:relative">
-          <div class="hdr" style="margin-bottom:1.4em">
-            <div class="chip amber" style="margin-bottom:.8em">🎁 אז מה כן יש כאן?</div>
-            <h2>מה יש לנו בשבילכם</h2>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px 40px">
+        <div class="s-split-content">
+          <div class="chip amber" style="margin-bottom:.8em">🎁 אז מה כן יש כאן?</div>
+          <h2>מה יש לנו<br>בשבילכם</h2>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px 32px;margin-top:.8em">
             <div class="tblock fragment" style="animation-delay:.05s">
               <span class="lbl">💡 יכולות</span>
-              <p>הרבה דברים שה-AI <strong>יודע לעשות (בינתיים)</strong> — כדי שנדע לחשוב עליהם כשמייצרים תכנים, מעלים רעיונות ומציעים הצעות ללקוחות.</p>
+              <p>הרבה דברים שה-AI <strong>יודע לעשות (בינתיים)</strong> — כדי שנדע לחשוב עליהם.</p>
             </div>
             <div class="tblock c fragment" style="animation-delay:.12s">
               <span class="lbl">🎬 הדגמות</span>
-              <p>נכון היכולות?<strong>אז נדגים אותן.</strong> אתם מוזמנים לשאול "ואיך עושים את זה בדיוק?" לאורך כל הדרך.</p>
+              <p>נכון היכולות?<strong>אז נדגים אותן.</strong> שאלו "איך עושים?" לאורך כל הדרך.</p>
             </div>
             <div class="tblock fragment" style="animation-delay:.19s">
               <span class="lbl">✦ טיפי זהב</span>
-              <p>הדרך הקצרה בין "ניסיתי ויצא רע" ל-"ניסיתי ויצא מרשים". <strong>טיפים שלמדתי על בשרי</strong> בחודשים האחרונים.</p>
+              <p>מ-"ניסיתי ויצא רע" ל-"ניסיתי ויצא מרשים". <strong>טיפים שלמדתי על בשרי.</strong></p>
             </div>
             <div class="tblock c fragment" style="animation-delay:.26s">
               <span class="lbl">🎁 הפתעה</span>
-              <p>(אם נגלה עכשיו מה זה זה לא יהיה הפתעה, לא ככה?)</p>
+              <p>(אם נגלה עכשיו מה זה — זה לא יהיה הפתעה.)</p>
             </div>
           </div>
         </div>
