@@ -746,7 +746,6 @@
         <div class="s-statement-float" style="bottom:15%;left:8%;animation-delay:-2.5s;font-size:2.5em">💭</div>
         <div class="s-statement-float" style="top:20%;left:12%;animation-delay:-5s;font-size:2em">❓</div>
         <div class="s-statement-inner">
-          <span class="eyebrow" style="animation:fade-up .7s ease both;letter-spacing:.4em">— חידה —</span>
           <span class="s-statement-word outline" style="font-size:4em;animation-delay:.05s">מי הראשונים</span>
           <span class="s-statement-word g" style="font-size:4em;animation-delay:.12s">שה-AI</span>
           <span class="s-statement-word outline" style="font-size:4em;animation-delay:.19s">יקח להם</span>
@@ -775,13 +774,104 @@
       <!-- ══════════════════════════════════════════════════════
            04 — WHY: WHAT DOES AI DO?
       ══════════════════════════════════════════════════════ -->
-      <section class="s-text" data-transition="slide">
-        <div class="s-text-accent-col"></div>
-        <div class="s-text-main z1">
-          <div class="hdr">
-            <h2>מה הAI עושה?</h2>
+      <section data-transition="slide" style="display:flex !important;position:relative;width:100%;height:100%;overflow:hidden">
+        <!-- Visual side — left 42% -->
+        <div style="flex:0 0 42%;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden">
+          <!-- background glow -->
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(124,58,237,.18) 0%,transparent 70%);pointer-events:none"></div>
+          <!-- Before vs After diagram -->
+          <svg width="420" height="480" viewBox="0 0 420 480" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:relative;z-index:1;animation:float 7s ease-in-out infinite">
+            <defs>
+              <radialGradient id="sl4core" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#a855f7"/>
+                <stop offset="100%" stop-color="#06b6d4"/>
+              </radialGradient>
+              <filter id="sl4glow">
+                <feGaussianBlur stdDeviation="6" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <!-- BEFORE label -->
+            <text x="80" y="30" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="rgba(244,63,94,.7)" letter-spacing="3">לפני</text>
+            <!-- AFTER label -->
+            <text x="340" y="30" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="rgba(6,182,212,.8)" letter-spacing="3">אחרי</text>
+            <!-- Before: messy complexity cloud -->
+            <!-- Tool nodes -->
+            <circle cx="30" cy="80" r="18" fill="rgba(244,63,94,.12)" stroke="rgba(244,63,94,.5)" stroke-width="1.5"/>
+            <text x="30" y="86" text-anchor="middle" font-size="13">🛠</text>
+            <circle cx="80" cy="55" r="18" fill="rgba(245,158,11,.12)" stroke="rgba(245,158,11,.5)" stroke-width="1.5"/>
+            <text x="80" y="61" text-anchor="middle" font-size="13">📚</text>
+            <circle cx="130" cy="80" r="18" fill="rgba(168,85,247,.12)" stroke="rgba(168,85,247,.5)" stroke-width="1.5"/>
+            <text x="130" y="86" text-anchor="middle" font-size="13">⚙️</text>
+            <circle cx="40" cy="130" r="18" fill="rgba(16,185,129,.12)" stroke="rgba(16,185,129,.5)" stroke-width="1.5"/>
+            <text x="40" y="136" text-anchor="middle" font-size="13">🔬</text>
+            <circle cx="100" cy="135" r="18" fill="rgba(244,63,94,.12)" stroke="rgba(244,63,94,.4)" stroke-width="1.5"/>
+            <text x="100" y="141" text-anchor="middle" font-size="13">💻</text>
+            <circle cx="140" cy="130" r="18" fill="rgba(245,158,11,.12)" stroke="rgba(245,158,11,.4)" stroke-width="1.5"/>
+            <text x="140" y="136" text-anchor="middle" font-size="13">📝</text>
+            <!-- chaotic connector lines -->
+            <line x1="30" y1="80" x2="80" y2="55" stroke="rgba(255,255,255,.08)" stroke-width="1" stroke-dasharray="3 3"/>
+            <line x1="80" y1="55" x2="130" y2="80" stroke="rgba(255,255,255,.08)" stroke-width="1" stroke-dasharray="3 3"/>
+            <line x1="30" y1="80" x2="40" y2="130" stroke="rgba(255,255,255,.06)" stroke-width="1" stroke-dasharray="3 3"/>
+            <line x1="130" y1="80" x2="100" y2="135" stroke="rgba(255,255,255,.06)" stroke-width="1" stroke-dasharray="3 3"/>
+            <line x1="80" y1="55" x2="100" y2="135" stroke="rgba(255,255,255,.05)" stroke-width="1" stroke-dasharray="3 3"/>
+            <!-- Time label under "before" -->
+            <text x="80" y="178" text-anchor="middle" font-family="Heebo,sans-serif" font-size="11" fill="rgba(244,63,94,.65)">שעות · 3 כלים · מומחיות</text>
+            <!-- DIVIDER arrow + AI box -->
+            <!-- Arrow from before to AI -->
+            <line x1="165" y1="108" x2="200" y2="108" stroke="rgba(255,255,255,.18)" stroke-width="1.5" marker-end="url(#arr)"/>
+            <!-- AI central box -->
+            <rect x="197" y="76" width="30" height="64" rx="8" fill="url(#sl4core)" opacity=".9" filter="url(#sl4glow)"/>
+            <text x="212" y="113" text-anchor="middle" font-family="Arial" font-weight="900" font-size="10" fill="white">AI</text>
+            <!-- Arrow from AI to after -->
+            <line x1="227" y1="108" x2="265" y2="108" stroke="rgba(6,182,212,.5)" stroke-width="1.5" marker-end="url(#arr2)"/>
+            <defs>
+              <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                <path d="M0,0 L6,3 L0,6 Z" fill="rgba(255,255,255,.25)"/>
+              </marker>
+              <marker id="arr2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                <path d="M0,0 L6,3 L0,6 Z" fill="rgba(6,182,212,.7)"/>
+              </marker>
+            </defs>
+            <!-- After: single clean result -->
+            <circle cx="320" cy="108" r="38" fill="rgba(6,182,212,.08)" stroke="rgba(6,182,212,.55)" stroke-width="1.5"/>
+            <circle cx="320" cy="108" r="28" fill="rgba(6,182,212,.1)" stroke="rgba(6,182,212,.3)" stroke-width="1"/>
+            <text x="320" y="103" text-anchor="middle" font-size="20">✨</text>
+            <text x="320" y="124" text-anchor="middle" font-family="Heebo,sans-serif" font-size="10" fill="rgba(34,211,238,.9)">פרומפט</text>
+            <!-- Time label under "after" -->
+            <text x="320" y="178" text-anchor="middle" font-family="Heebo,sans-serif" font-size="11" fill="rgba(6,182,212,.7)">דקה אחת · עברית · אפס ידע</text>
+            <!-- separator line -->
+            <line x1="210" y1="200" x2="210" y2="460" stroke="rgba(255,255,255,.06)" stroke-width="1" stroke-dasharray="4 4"/>
+            <!-- Bottom stats row -->
+            <rect x="20" y="220" width="168" height="52" rx="10" fill="rgba(244,63,94,.06)" stroke="rgba(244,63,94,.2)" stroke-width="1"/>
+            <text x="104" y="241" text-anchor="middle" font-family="Heebo,sans-serif" font-size="10" fill="rgba(255,255,255,.4)">קודם</text>
+            <text x="104" y="261" text-anchor="middle" font-family="Heebo,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,.75)">שעות · מומחה · כסף</text>
+            <rect x="232" y="220" width="168" height="52" rx="10" fill="rgba(6,182,212,.06)" stroke="rgba(6,182,212,.2)" stroke-width="1"/>
+            <text x="316" y="241" text-anchor="middle" font-family="Heebo,sans-serif" font-size="10" fill="rgba(255,255,255,.4)">עכשיו</text>
+            <text x="316" y="261" text-anchor="middle" font-family="Heebo,sans-serif" font-size="13" font-weight="700" fill="rgba(34,211,238,.85)">פרומפט אחד · דקה</text>
+            <!-- Complexity score bars -->
+            <text x="104" y="310" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="rgba(255,255,255,.3)">COMPLEXITY</text>
+            <rect x="30" y="318" width="148" height="8" rx="4" fill="rgba(244,63,94,.15)" stroke="rgba(244,63,94,.3)" stroke-width="1"/>
+            <rect x="30" y="318" width="148" height="8" rx="4" fill="rgba(244,63,94,.6)"/>
+            <text x="316" y="310" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="rgba(255,255,255,.3)">COMPLEXITY</text>
+            <rect x="242" y="318" width="148" height="8" rx="4" fill="rgba(6,182,212,.1)" stroke="rgba(6,182,212,.2)" stroke-width="1"/>
+            <rect x="242" y="318" width="22" height="8" rx="4" fill="rgba(6,182,212,.7)"/>
+            <!-- Accessibility bars -->
+            <text x="104" y="348" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="rgba(255,255,255,.3)">ACCESSIBILITY</text>
+            <rect x="30" y="356" width="148" height="8" rx="4" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+            <rect x="30" y="356" width="25" height="8" rx="4" fill="rgba(168,85,247,.5)"/>
+            <text x="316" y="348" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="rgba(255,255,255,.3)">ACCESSIBILITY</text>
+            <rect x="242" y="356" width="148" height="8" rx="4" fill="rgba(6,182,212,.1)" stroke="rgba(6,182,212,.2)" stroke-width="1"/>
+            <rect x="242" y="356" width="148" height="8" rx="4" fill="rgba(6,182,212,.6)"/>
+          </svg>
+        </div>
+        <!-- Text side — right 58%, RTL -->
+        <div style="flex:0 0 58%;display:flex;flex-direction:column;justify-content:center;padding:80px 80px 80px 40px;direction:rtl;text-align:right;position:relative">
+          <div style="position:absolute;inset:0;background:linear-gradient(to left,rgba(5,5,14,.7) 0%,transparent 100%);pointer-events:none"></div>
+          <div class="hdr" style="position:relative;z-index:1;margin-bottom:1.8em">
+            <h2 style="font-size:2.4em !important">מה הAI עושה?</h2>
           </div>
-          <div class="s-text-blocks" style="grid-template-columns:1fr 1fr;gap:28px 60px">
+          <div style="display:flex;flex-direction:column;gap:28px;position:relative;z-index:1">
             <div class="tblock fragment" style="animation-delay:.05s">
               <span class="lbl">בינתיים</span>
               <p>הAI <strong>לא ממציא דברים חדשים</strong> — הוא מפשט דברים שפעם היה מורכב מאוד לעשות אותם, או שהיה צריך בשבילם להיות מומחה גדול.</p>
@@ -790,41 +880,10 @@
               <span class="lbl">לכן</span>
               <p>אם מישהו הוא <strong>"מומחה גדול" בתחום מסובך</strong> — הAI רודף אחריו בצעדי ענק. הוא הפך את המורכבות שלו לנגישה לכולם.</p>
             </div>
-            <div class="tblock fragment" style="animation-delay:.19s;grid-column:span 2">
+            <div class="tblock fragment" style="animation-delay:.19s">
               <p>מה שלפני שנתיים דרש <strong>3 כלים, שעות עבודה וידע טכני עמוק</strong> — היום נעשה בפרומפט אחד, בעברית, בפחות מדקה.</p>
             </div>
           </div>
-        </div>
-        <!-- AI Simplification graphic -->
-        <div style="position:absolute;left:60px;bottom:55px;pointer-events:none;z-index:1;animation:float 6s ease-in-out infinite;opacity:.75">
-          <svg width="270" height="175" viewBox="0 0 270 175" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient id="aiCore" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="rgba(124,58,237,.95)"/>
-                <stop offset="100%" stop-color="rgba(6,182,212,.65)"/>
-              </radialGradient>
-            </defs>
-            <!-- Input complexity nodes -->
-            <circle cx="28" cy="38" r="9" fill="rgba(244,63,94,.35)" stroke="rgba(244,63,94,.6)" stroke-width="1.2"/>
-            <circle cx="28" cy="75" r="9" fill="rgba(245,158,11,.35)" stroke="rgba(245,158,11,.6)" stroke-width="1.2"/>
-            <circle cx="28" cy="112" r="9" fill="rgba(168,85,247,.35)" stroke="rgba(168,85,247,.6)" stroke-width="1.2"/>
-            <circle cx="28" cy="149" r="9" fill="rgba(16,185,129,.35)" stroke="rgba(16,185,129,.6)" stroke-width="1.2"/>
-            <!-- Connector lines to AI -->
-            <line x1="37" y1="38"  x2="112" y2="90" stroke="rgba(255,255,255,.1)" stroke-width="1" stroke-dasharray="4 3"/>
-            <line x1="37" y1="75"  x2="112" y2="90" stroke="rgba(255,255,255,.1)" stroke-width="1" stroke-dasharray="4 3"/>
-            <line x1="37" y1="112" x2="112" y2="90" stroke="rgba(255,255,255,.1)" stroke-width="1" stroke-dasharray="4 3"/>
-            <line x1="37" y1="149" x2="112" y2="90" stroke="rgba(255,255,255,.1)" stroke-width="1" stroke-dasharray="4 3"/>
-            <!-- AI central node -->
-            <circle cx="130" cy="90" r="32" fill="url(#aiCore)"/>
-            <circle cx="130" cy="90" r="38" stroke="rgba(124,58,237,.2)" stroke-width="1" fill="none"/>
-            <text x="130" y="96" text-anchor="middle" font-family="Arial" font-weight="900" font-size="15" fill="white" letter-spacing="-.5">AI</text>
-            <!-- Output line -->
-            <line x1="162" y1="90" x2="228" y2="90" stroke="rgba(6,182,212,.55)" stroke-width="2"/>
-            <polygon points="228,85 238,90 228,95" fill="rgba(6,182,212,.7)"/>
-            <!-- Output node -->
-            <circle cx="248" cy="90" r="15" fill="rgba(6,182,212,.15)" stroke="rgba(6,182,212,.7)" stroke-width="1.5"/>
-            <text x="248" y="95" text-anchor="middle" font-family="Arial" font-size="13" fill="rgba(34,211,238,.95)">✓</text>
-          </svg>
         </div>
       </section>
 
@@ -850,23 +909,15 @@
       <!-- ══════════════════════════════════════════════════════
            06 — AFTER: TODAY, ONE PROMPT
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="slide" data-transition-speed="fast" style="display:flex !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
-        <!-- Video — left 60% -->
-        <div style="flex:0 0 60%;position:relative;overflow:hidden">
-          <video src="assets/demos/slide06-today-veo3.mp4" autoplay muted loop playsinline
-                 style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain"></video>
-          <!-- Fade edge toward text panel -->
-          <div style="position:absolute;top:0;left:0;bottom:0;width:80px;background:linear-gradient(to right,rgba(5,5,14,.95),transparent);pointer-events:none"></div>
+      <section class="s-video" data-transition="slide" data-transition-speed="fast" style="grid-template-columns:32% 68%">
+        <div class="s-split-content" style="padding:80px 40px 80px 80px;justify-content:center">
+          <span class="eyebrow">היום — 2025</span>
+          <h2>ואיך עושים<br>את זה עכשיו</h2>
+          <p style="font-size:.72em;color:rgba(240,240,248,.8);line-height:1.7;margin-top:.8em">אותה תוצאה — פרומפט אחד, בעברית, ב-Gemini. <strong style="color:var(--white)">אפס התקנות. אפס ידע טכני.</strong></p>
+          <div style="margin-top:1.2em;font-size:.55em;color:var(--c-hi);font-weight:700;letter-spacing:.1em">אותה תוצאה · פרומפט אחד · 45 שניות</div>
         </div>
-        <!-- Text panel — right 40%, solid background -->
-        <div style="flex:0 0 40%;background:#05050e;display:flex;flex-direction:column;justify-content:center;padding:60px 70px 60px 40px;direction:rtl;text-align:right;position:relative;z-index:2">
-          <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
-            <div class="orb" style="width:400px;height:400px;top:50%;right:-100px;transform:translateY(-50%);opacity:.12;animation-duration:8s"></div>
-          </div>
-          <span class="eyebrow" style="position:relative;z-index:1">היום — 2025</span>
-          <h2 style="font-size:2em !important;color:var(--white) !important;line-height:1.15 !important;margin-bottom:.8em !important;position:relative;z-index:1">ואיך עושים<br>את זה עכשיו</h2>
-          <p style="font-size:.72em;color:rgba(240,240,248,.8);line-height:1.7;position:relative;z-index:1">אותה תוצאה — פרומפט אחד, בעברית, ב-Gemini. <strong style="color:var(--white)">אפס התקנות. אפס ידע טכני.</strong></p>
-          <div style="margin-top:1.2em;font-size:.55em;color:var(--c-hi);font-weight:700;letter-spacing:.1em;position:relative;z-index:1">אותה תוצאה · פרומפט אחד · 45 שניות</div>
+        <div class="s-video-pane" style="background:#000;position:relative;overflow:hidden">
+          <video src="assets/demos/slide06-today-veo3.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:contain"></video>
         </div>
       </section>
 
@@ -882,10 +933,10 @@
         <div class="s-accent-h top"></div>
         <div class="s-accent-h bottom"></div>
         <div class="s-statement-inner">
-          <span class="eyebrow" style="animation:fade-up .7s ease both;letter-spacing:.35em">לכן - </span>
-          <span class="s-statement-word outline" style="animation-delay:.05s">אין כאן מדריך</span>
-          <span class="s-statement-word g" style="animation-delay:.12s">מ-0 ל-100</span>
-          <span class="s-statement-word outline" style="font-size:4em !important;animation-delay:.2s;color:var(--muted);-webkit-text-fill-color:transparent">לכל כלי</span>
+          <span class="s-statement-word fire" style="font-size:7em !important;animation-delay:0s;line-height:1">לכן</span>
+          <span class="s-statement-word outline" style="animation-delay:.08s">אין כאן מדריך</span>
+          <span class="s-statement-word g" style="animation-delay:.15s">מ-0 ל-100</span>
+          <span class="s-statement-word outline" style="font-size:4em !important;animation-delay:.22s;color:var(--muted);-webkit-text-fill-color:transparent">לכל כלי</span>
         </div>
       </section>
 
@@ -911,21 +962,46 @@
       <!-- ══════════════════════════════════════════════════════
            08 — WHAT'S IN THIS PRESENTATION
       ══════════════════════════════════════════════════════ -->
-      <section class="s-text" data-transition="slide">
-        <div class="s-text-accent-col" style="background:var(--grad-gold)"></div>
-        <div class="s-text-main z1">
-          <div class="hdr">
+      <section data-transition="slide" style="display:flex !important;position:relative;width:100%;height:100%;overflow:hidden">
+        <!-- Visual side — left 38% -->
+        <div style="flex:0 0 38%;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden">
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(245,158,11,.12) 0%,transparent 70%);pointer-events:none"></div>
+          <!-- 4 floating icon cards in a 2x2 grid -->
+          <div style="position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:20px">
+            <div class="fragment" style="animation-delay:.05s;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);border-radius:20px;padding:28px 20px;display:flex;flex-direction:column;align-items:center;gap:12px;animation:float 6s ease-in-out infinite;backdrop-filter:blur(8px)">
+              <span style="font-size:2.4em;line-height:1">💡</span>
+              <span style="font-family:var(--font);font-size:.65em;color:rgba(252,211,77,.9);font-weight:700;text-align:center">יכולות</span>
+            </div>
+            <div class="fragment" style="animation-delay:.12s;background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.3);border-radius:20px;padding:28px 20px;display:flex;flex-direction:column;align-items:center;gap:12px;animation:float 7s ease-in-out infinite;animation-delay:-2s;backdrop-filter:blur(8px)">
+              <span style="font-size:2.4em;line-height:1">🎬</span>
+              <span style="font-family:var(--font);font-size:.65em;color:rgba(168,85,247,.9);font-weight:700;text-align:center">הדגמות</span>
+            </div>
+            <div class="fragment" style="animation-delay:.19s;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);border-radius:20px;padding:28px 20px;display:flex;flex-direction:column;align-items:center;gap:12px;animation:float 8s ease-in-out infinite;animation-delay:-4s;backdrop-filter:blur(8px)">
+              <span style="font-size:2.4em;line-height:1">✦</span>
+              <span style="font-family:var(--font);font-size:.65em;color:rgba(252,211,77,.9);font-weight:700;text-align:center">טיפי זהב</span>
+            </div>
+            <div class="fragment" style="animation-delay:.26s;background:rgba(244,63,94,.07);border:1px solid rgba(244,63,94,.25);border-radius:20px;padding:28px 20px;display:flex;flex-direction:column;align-items:center;gap:12px;animation:float 6.5s ease-in-out infinite;animation-delay:-1s;backdrop-filter:blur(8px)">
+              <span style="font-size:2.4em;line-height:1">🎁</span>
+              <span style="font-family:var(--font);font-size:.65em;color:rgba(251,113,133,.9);font-weight:700;text-align:center">הפתעה</span>
+            </div>
+          </div>
+          <!-- accent col -->
+          <div style="position:absolute;top:0;right:0;bottom:0;width:3px;background:linear-gradient(to bottom,transparent,rgba(245,158,11,.5),transparent)"></div>
+        </div>
+        <!-- Text side — right 62%, RTL -->
+        <div style="flex:0 0 62%;display:flex;flex-direction:column;justify-content:center;padding:80px 80px 80px 50px;direction:rtl;text-align:right;position:relative">
+          <div class="hdr" style="margin-bottom:1.4em">
             <div class="chip amber" style="margin-bottom:.8em">🎁 אז מה כן יש כאן?</div>
             <h2>מה יש לנו בשבילכם</h2>
           </div>
-          <div class="s-text-blocks">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px 40px">
             <div class="tblock fragment" style="animation-delay:.05s">
               <span class="lbl">💡 יכולות</span>
               <p>הרבה דברים שה-AI <strong>יודע לעשות (בינתיים)</strong> — כדי שנדע לחשוב עליהם כשמייצרים תכנים, מעלים רעיונות ומציעים הצעות ללקוחות.</p>
             </div>
             <div class="tblock c fragment" style="animation-delay:.12s">
               <span class="lbl">🎬 הדגמות</span>
-              <p>נכון היכולות?<strong>אז נדגים אותן </strong>אתם מוזמנים לשאול "ואיך עושים את זה בדיוק?" לאורך כל הדרך.</p>
+              <p>נכון היכולות?<strong>אז נדגים אותן.</strong> אתם מוזמנים לשאול "ואיך עושים את זה בדיוק?" לאורך כל הדרך.</p>
             </div>
             <div class="tblock fragment" style="animation-delay:.19s">
               <span class="lbl">✦ טיפי זהב</span>
@@ -937,7 +1013,6 @@
             </div>
           </div>
         </div>
-        <div class="s-text-ghost">?</div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
@@ -947,8 +1022,8 @@
         <div class="bg bg-dots" style="opacity:.3"></div>
         <div class="orb" style="width:900px;height:900px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.1;animation-duration:12s"></div>
         <div class="s-caps-hdr z1">
-          <div class="chip" style="margin-bottom:.7em">🤖 מה ה-AI יודע לעשות?</div>
-          <h2>עוד מעט נגלה...</h2>
+          <div class="chip cyan" style="margin-bottom:.7em">🤖 הרשימה המלאה</div>
+          <h2>אז מה ה-AI יודע לעשות?</h2>
         </div>
         <div class="s-caps-grid z1" style="filter:blur(8px) brightness(0.4);pointer-events:none;user-select:none">
           <div class="cap-item highlight" style="animation-delay:.00s">
