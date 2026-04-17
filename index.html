@@ -1125,10 +1125,10 @@
             </div>
           </div>
         </div>
-        <!-- Right: actual screenshot — vertical image, centered with shadow -->
-        <div style="display:flex;align-items:center;justify-content:center;padding:20px 40px 20px 10px;overflow:hidden;min-height:0;height:100%">
-          <img src="assets/demos/slide-nogem-screenshot.png"
-               style="height:calc(100vh - 80px);max-height:100%;width:auto;max-width:100%;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.07);object-fit:contain;animation:fade-in .8s .3s ease both">
+        <!-- Right: actual screenshot — vertical image -->
+        <div style="overflow:hidden;display:flex;align-items:center;justify-content:center;padding:16px 50px 16px 10px">
+          <img src="assets/demos/s-15.png"
+               style="max-height:90vh;width:auto;max-width:100%;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.07);object-fit:contain;animation:fade-in .8s .3s ease both">
         </div>
       </section>
 
@@ -1257,53 +1257,33 @@
           <span class="eyebrow" style="color:#f87171">Gemini · Gem ויזואלי</span>
           <h2 style="font-size:1.6em !important;color:var(--white) !important;line-height:1.2 !important">בואו נראה איך זה עובד</h2>
         </div>
-        <div style="position:absolute;inset:0;width:100%;height:100%">
-          <div class="bg bg-grid" style="opacity:.2;z-index:0"></div>
-          <div class="s-video-scanline" style="z-index:1"></div>
-          <div class="s-video-thumb" style="position:absolute;inset:0;z-index:2">
-            <video src="assets/demos/s-21.mp4" controls style="width:100%;height:100%;object-fit:contain"></video>
-          </div>
-        </div>
+        <video src="assets/demos/s-21.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:1"></video>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
            CH02 — 3 טיפים לעבוד עם ג'ימיני
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
-        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
-        <div class="orb" style="width:500px;height:500px;top:50%;left:-80px;transform:translateY(-50%);opacity:.1;animation-duration:9s;position:absolute;z-index:1"></div>
-        <!-- Fixed title at top -->
-        <div style="position:absolute;top:0;right:0;left:0;padding:38px 80px 22px;z-index:5;direction:rtl;background:linear-gradient(to bottom,rgba(5,5,14,.95) 65%,transparent 100%)">
+      <section data-transition="slide" style="display:flex !important;flex-direction:column;height:100%;background:#000 !important;overflow:hidden;position:relative">
+        <div class="bg bg-dots" style="opacity:.15;position:absolute;inset:0;pointer-events:none"></div>
+        <div class="orb" style="width:500px;height:500px;top:50%;left:-80px;transform:translateY(-50%);opacity:.1;animation-duration:9s;pointer-events:none"></div>
+        <!-- Title -->
+        <div style="flex-shrink:0;padding:38px 80px 18px;direction:rtl;position:relative;z-index:2">
           <div class="chip" style="margin-bottom:.6em;background:rgba(244,63,94,.12);border-color:rgba(244,63,94,.3);color:#f87171">🎨 3 טיפים · Gemini</div>
           <h2 style="font-size:1.45em !important;color:var(--white) !important;line-height:1.2 !important">3 טיפים שיעזרו לכם לעבוד עם ג'ימיני</h2>
         </div>
-        <!-- TIP 1 — visible by default -->
-        <div style="position:absolute;top:170px;right:0;left:0;bottom:0;z-index:2;display:flex;align-items:center;direction:rtl;padding:0 80px;gap:48px">
-          <div style="flex:1">
-            <span style="font-size:.72em;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--v-hi);display:block;margin-bottom:.7em">1 · סמנו על התמונה</span>
-            <p style="font-size:.82em;color:rgba(240,240,248,.85);line-height:1.75">סמנו ישירות לג'ימיני על התמונה <strong style="color:var(--white)">מה אתם רוצים בדיוק לשנות ואיך</strong> — זה יעזור לו לדייק את הפרומפט משמעותית.</p>
+        <!-- Tips -->
+        <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:22px;padding:0 80px 40px;direction:rtl;position:relative;z-index:2">
+          <div style="background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.2);border-radius:14px;padding:22px 28px">
+            <span style="font-size:.68em;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--v-hi);display:block;margin-bottom:.5em">1 · סמנו על התמונה</span>
+            <p style="font-size:.76em;color:rgba(240,240,248,.85);line-height:1.7;margin:0">סמנו ישירות לג'ימיני על התמונה <strong style="color:var(--white)">מה אתם רוצים בדיוק לשנות ואיך</strong> — זה יעזור לו לדייק את הפרומפט משמעותית.</p>
           </div>
-          <div style="flex:0 0 200px;height:360px;background:rgba(124,58,237,.07);border:2px dashed rgba(124,58,237,.28);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px">
-            <div style="font-size:3em;opacity:.35">📸</div>
-            <div style="font-size:.35em;color:var(--muted);text-align:center;direction:rtl">הדגמה<br><span style="font-family:var(--mono);opacity:.7">s-21a.mp4</span></div>
+          <div style="background:rgba(6,182,212,.05);border:1px solid rgba(6,182,212,.2);border-radius:14px;padding:22px 28px">
+            <span style="font-size:.68em;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--c-hi);display:block;margin-bottom:.5em">2 · פאנל לעקביות ויזואלית</span>
+            <p style="font-size:.76em;color:rgba(240,240,248,.85);line-height:1.7;margin:0">כשרוצים עקביות — בקשו <strong style="color:var(--white)">תמונה אחת עם 4–6 ווריאציות בפריים אחד</strong> (פאנל). אחר כך Upscale כל וריאציה בנפרד. כולן מאותה מחשבה ויזואלית.</p>
           </div>
-        </div>
-        <!-- TIP 2 fragment -->
-        <div class="fragment fade-in-then-out" style="position:absolute;top:170px;right:0;left:0;bottom:0;z-index:3;display:flex;align-items:center;direction:rtl;padding:0 80px;gap:48px;background:rgba(5,5,14,.93)">
-          <div style="flex:1">
-            <span style="font-size:.72em;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--c-hi);display:block;margin-bottom:.7em">2 · פאנל לעקביות ויזואלית</span>
-            <p style="font-size:.82em;color:rgba(240,240,248,.85);line-height:1.75">כשרוצים עקביות — בקשו <strong style="color:var(--white)">תמונה אחת עם 4–6 ווריאציות בפריים אחד</strong> (פאנל). אחר כך Upscale כל וריאציה בנפרד. כולן מאותה מחשבה ויזואלית.</p>
-          </div>
-          <div style="flex:0 0 200px;height:360px;background:rgba(6,182,212,.06);border:2px dashed rgba(6,182,212,.25);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px">
-            <div style="font-size:3em;opacity:.35">🖼️</div>
-            <div style="font-size:.35em;color:var(--muted);text-align:center;direction:rtl">הדגמה<br><span style="font-family:var(--mono);opacity:.7">s-21b.png</span></div>
-          </div>
-        </div>
-        <!-- TIP 3 fragment — just a big headline -->
-        <div class="fragment" style="position:absolute;inset:0;z-index:4;display:flex;align-items:center;justify-content:center;background:rgba(5,5,14,.96);direction:rtl">
-          <div style="text-align:center;max-width:82%;direction:rtl">
-            <h2 style="font-size:2em !important;color:var(--white) !important;line-height:1.3 !important">תורידו את הכוכב המביך הזההההההההה</h2>
-            <p style="font-size:.7em;color:rgba(240,240,248,.45);margin-top:.8em">(אלא אם כן זה תמונה בשביל אסטרל כמובן)</p>
+          <div style="background:rgba(244,63,94,.05);border:1px solid rgba(244,63,94,.18);border-radius:14px;padding:22px 28px">
+            <span style="font-size:.68em;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#f87171;display:block;margin-bottom:.5em">3 · תורידו את הכוכב המביך</span>
+            <p style="font-size:.76em;color:rgba(240,240,248,.85);line-height:1.7;margin:0">תורידו את הכוכב המביך הזההההההה — אלא אם כן זה תמונה בשביל אסטרל כמובן.</p>
           </div>
         </div>
       </section>
@@ -1327,17 +1307,16 @@
       <!-- ══════════════════════════════════════════════════════
            CH02 — הדגמה: הסרת כוכב + כלים חיצוניים
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
-        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
-        <!-- Video top 76% -->
-        <div style="position:absolute;top:0;right:0;left:0;height:76%;z-index:2;overflow:hidden">
+      <section data-transition="slide" style="display:flex !important;flex-direction:column;height:100%;background:#000 !important;overflow:hidden;position:relative">
+        <div class="bg bg-dots" style="opacity:.15;position:absolute;inset:0;pointer-events:none"></div>
+        <!-- Video: flex:1 fills all available space -->
+        <div style="flex:1;min-height:0;position:relative">
           <div class="bg bg-grid" style="opacity:.2;position:absolute;inset:0"></div>
-          <div class="s-video-scanline" style="position:absolute;inset:0;z-index:1"></div>
-          <video src="assets/demos/s-24.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:2"></video>
+          <video src="assets/demos/s-24.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:1"></video>
         </div>
         <!-- Text below video -->
-        <div style="position:absolute;bottom:0;right:0;left:0;height:26%;background:linear-gradient(to top,rgba(5,5,14,.99) 85%,transparent 100%);padding:18px 80px 22px;direction:rtl;z-index:5;display:flex;align-items:center">
-          <p style="font-size:.5em;color:rgba(240,240,248,.75);line-height:1.75;margin:0">
+        <div style="flex-shrink:0;padding:16px 80px 20px;background:rgba(5,5,14,.97);direction:rtl;position:relative;z-index:2">
+          <p style="font-size:.52em;color:rgba(240,240,248,.8);line-height:1.8;margin:0">
             לחלופין, ניתן להשתמש בכלים חיצוניים כדי לייצר תמונות באמצעות <strong style="color:var(--white)">ננו בננה</strong>, ולמעשה זה עדיף בהרבה מקרים כי:
             <strong style="color:var(--c-hi)"> 1. יוצא בלי כוכב</strong> &nbsp;·&nbsp;
             <strong style="color:var(--c-hi)">2. שליטה משמעותית יותר על ההגדרות (רזולוציה, גודל וכו')</strong> &nbsp;·&nbsp;
@@ -1423,19 +1402,20 @@
       <!-- ══════════════════════════════════════════════════════
            CH03-25 — TEXT TO VIDEO + הדגמה
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="slide" style="display:grid !important;grid-template-columns:42% 58%;height:100%;background:#000 !important;overflow:hidden">
-        <div class="bg bg-dots" style="opacity:.15;z-index:1;position:absolute;inset:0"></div>
-        <!-- Left: text -->
-        <div style="position:relative;z-index:3;display:flex;flex-direction:column;justify-content:center;padding:60px 50px 60px 80px;direction:rtl;text-align:right;background:linear-gradient(to left,transparent,rgba(5,5,14,.7))">
-          <div class="chip cyan" style="margin-bottom:.8em;align-self:flex-start">📝 Text to Video</div>
-          <h2 style="font-size:1.45em !important;color:var(--white) !important;line-height:1.3 !important">אם לא חשוב לכם הפרטים הספציפיים שיופיעו בוידאו, אלא רק התוכן ברמה הכללית, הכי פשוט. רק להגיד מה אתם רוצים ולקבל</h2>
-          <p style="font-size:.6em;color:rgba(240,240,248,.65);margin-top:.8em;line-height:1.6">הי הנה וידאו של חתול נוסע על אופניים ורוקד!</p>
+      <section data-transition="slide" style="display:grid !important;grid-template-columns:48% 52%;height:100%;background:#000 !important;overflow:hidden;position:relative">
+        <div class="bg bg-dots" style="opacity:.15;position:absolute;inset:0;pointer-events:none"></div>
+        <div class="orb cyan" style="width:600px;height:600px;top:50%;right:-100px;transform:translateY(-50%);opacity:.06;animation-duration:10s;pointer-events:none"></div>
+        <!-- Left: text content -->
+        <div style="display:flex;flex-direction:column;justify-content:center;padding:60px 40px 60px 90px;direction:rtl;text-align:right;position:relative;z-index:2">
+          <div class="chip cyan" style="margin-bottom:.9em;align-self:flex-start">📝 Text to Video</div>
+          <h2 style="font-size:1.5em !important;color:var(--white) !important;line-height:1.35 !important;margin-bottom:.7em !important">אם לא חשוב לכם הפרטים הספציפיים שיופיעו בוידאו, אלא רק התוכן ברמה הכללית, הכי פשוט. רק להגיד מה אתם רוצים ולקבל</h2>
+          <p style="font-size:.62em;color:rgba(240,240,248,.6);line-height:1.65">הי הנה וידאו של חתול נוסע על אופניים ורוקד!</p>
+          <div style="margin-top:1.4em;padding:10px 18px;background:rgba(6,182,212,.06);border:1px solid rgba(6,182,212,.18);border-radius:8px;font-size:.48em;color:var(--c-hi);text-align:right">+הדגמה ←</div>
         </div>
-        <!-- Right: vertical video -->
-        <div style="position:relative;z-index:2;display:flex;align-items:center;justify-content:center;padding:24px 50px 24px 20px;overflow:hidden">
-          <div class="bg bg-grid" style="opacity:.2;position:absolute;inset:0"></div>
-          <div class="s-video-scanline" style="position:absolute;inset:0;z-index:1"></div>
-          <video src="assets/demos/s-25.mp4" controls style="position:relative;z-index:2;height:calc(100vh - 60px);max-height:100%;width:auto;object-fit:contain;border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,.6)"></video>
+        <!-- Right: vertical video fills full column height -->
+        <div style="display:flex;align-items:center;justify-content:center;height:100%;overflow:hidden;position:relative;z-index:2;background:rgba(0,0,0,.3)">
+          <div class="bg bg-grid" style="opacity:.15;position:absolute;inset:0"></div>
+          <video src="assets/demos/s-25.mp4" controls style="height:100%;width:auto;object-fit:contain;position:relative;z-index:1;display:block"></video>
         </div>
       </section>
 
@@ -1457,8 +1437,8 @@
             <strong>Grok כנראה יהיה הכי זול.</strong><br>
             לא כל מודל שווה — בחרו לפי המשימה, לא לפי ההרגל.
           </p>
-          <div style="margin-top:1.4em;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:10px;padding:14px 24px;font-size:.44em;color:var(--a-hi);text-align:center">
-            📸 תמונת צילום מסך מהידרה עם היכולת לבחור בין מודלים — <em>assets/demos/s-26.png</em>
+          <div style="margin-top:1.4em;display:flex;justify-content:center">
+            <video src="assets/demos/s-29.mp4" autoplay muted loop playsinline style="width:500px;height:500px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.25)"></video>
           </div>
         </div>
       </section>
