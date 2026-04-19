@@ -1163,14 +1163,15 @@
       <!-- ══════════════════════════════════════════════════════
            CH01-D — הדגמה: בואו נראה איך זה עובד
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="fade" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
-        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
-        <div style="position:absolute;top:0;right:0;left:0;padding:36px 80px 28px;z-index:3;direction:rtl;text-align:right;background:linear-gradient(to bottom,rgba(5,5,14,.95) 60%,transparent 100%)">
-          <div class="chip" style="margin-bottom:.6em">🎬 &nbsp; הדגמה</div>
+      <section class="s-video" data-transition="slide" data-transition-speed="fast" style="grid-template-columns:32% 68%">
+        <div class="s-split-content" style="padding:80px 40px 80px 80px;justify-content:center">
           <span class="eyebrow">Gemini 2.5 Pro · Gems</span>
-          <h2 style="font-size:1.6em !important;color:var(--white) !important;line-height:1.2 !important">בואו נראה איך זה עובד</h2>
+          <h2>בואו נראה<br>איך זה עובד</h2>
+          <div style="margin-top:1.2em;font-size:.55em;color:var(--v-hi);font-weight:700;letter-spacing:.08em">🎬 &nbsp; הדגמה חיה</div>
         </div>
-        <video src="assets/demos/s-17.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:1"></video>
+        <div class="s-video-pane" style="background:#000;position:relative;overflow:hidden">
+          <video src="assets/demos/s-17.mp4" controls style="width:100%;height:100%;object-fit:contain"></video>
+        </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
@@ -1511,20 +1512,27 @@
         <div class="spark" style="top:16%;right:10%;color:#fcd34d;animation-delay:0s;font-size:1.8em">✦</div>
         <div class="spark" style="bottom:20%;left:8%;color:#fcd34d;animation-delay:-2s;font-size:2em">✦</div>
         <div class="spark" style="top:30%;left:15%;color:#f59e0b;animation-delay:-4s">✧</div>
-        <div class="s-gold-inner" style="max-width:90%">
-          <div class="s-gold-badge">✦ &nbsp; טיפ זהב · קאטים</div>
-          <h2>תייצרו אותה סצנה מ-2 זוויות</h2>
-          <p>
-            כך תוכלו <strong>לחתוך ולייצר קאטים מעניינים</strong> — בדיוק כמו צילום אמיתי עם שתי מצלמות.<br>
-            תוצר: וידאו שנראה מקצועי, דינמי, ולא "AI מדי".
-          </p>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:1.4em;max-width:700px">
-            <div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:10px;padding:20px;text-align:center;font-size:.43em;color:var(--a-hi)">
-              📹 סרטון זווית א' — <em>s-28a.mp4</em>
-            </div>
-            <div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:10px;padding:20px;text-align:center;font-size:.43em;color:var(--a-hi)">
-              📹 סרטון זווית ב' — <em>s-28b.mp4</em>
-            </div>
+        <!-- Layout: vertical video right · content middle · vertical video left -->
+        <div style="position:absolute;top:50%;right:0;left:0;transform:translateY(-50%);display:grid;grid-template-columns:auto 1fr auto;gap:48px;align-items:center;padding:0 60px;direction:rtl;z-index:2">
+          <!-- Right vertical video -->
+          <div style="flex-shrink:0">
+            <video src="assets/demos/s-33a.mp4" data-autoplay autoplay muted loop playsinline style="width:300px;height:540px;object-fit:cover;border-radius:18px;background:#000;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
+            <div style="text-align:center;margin-top:12px;font-size:.42em;color:var(--a-hi);font-family:var(--mono);letter-spacing:.05em">📹 זווית א'</div>
+          </div>
+          <!-- Center content -->
+          <div style="text-align:center;padding:0 20px">
+            <div class="s-gold-badge" style="margin:0 auto 1em">✦ &nbsp; טיפ זהב · קאטים</div>
+            <h2 style="margin-bottom:.6em">תייצרו אותה סצנה<br>מ-2 זוויות</h2>
+            <p style="font-size:.62em;line-height:1.7">
+              כך תוכלו <strong>לחתוך ולייצר קאטים מעניינים</strong><br>
+              — בדיוק כמו צילום אמיתי עם שתי מצלמות.<br>
+              <span style="color:var(--a-hi)">וידאו שנראה מקצועי, דינמי, ולא "AI מדי".</span>
+            </p>
+          </div>
+          <!-- Left vertical video -->
+          <div style="flex-shrink:0">
+            <video src="assets/demos/s-33b.mp4" data-autoplay autoplay muted loop playsinline style="width:300px;height:540px;object-fit:cover;border-radius:18px;background:#000;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
+            <div style="text-align:center;margin-top:12px;font-size:.42em;color:var(--a-hi);font-family:var(--mono);letter-spacing:.05em">📹 זווית ב'</div>
           </div>
         </div>
       </section>
