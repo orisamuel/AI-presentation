@@ -1172,13 +1172,9 @@
           <h2 style="font-size:1.6em !important;color:var(--white) !important;line-height:1.2 !important">בואו נראה איך זה עובד</h2>
         </div>
         <!-- Full video -->
-        <div style="position:absolute;inset:0;width:100%;height:100%">
-          <div class="bg bg-grid" style="opacity:.2;z-index:0"></div>
-          <div class="s-video-scanline" style="z-index:1"></div>
-          <div class="s-video-thumb" style="position:absolute;inset:0;z-index:2">
-            <video src="assets/demos/s-17.mp4" controls style="width:100%;height:100%;object-fit:contain"></video>
-          </div>
-        </div>
+        <div class="bg bg-grid" style="opacity:.2;z-index:0;position:absolute;inset:0"></div>
+        <div class="s-video-scanline" style="z-index:1;position:absolute;inset:0"></div>
+        <video src="assets/demos/s-17.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:2"></video>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
