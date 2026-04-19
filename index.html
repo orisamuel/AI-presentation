@@ -820,7 +820,7 @@
   }
   .feat-card::before {
     content:''; position:absolute; top:0; left:0; right:0; height:2px;
-    background:var(--grad);
+    background:var(--feat-top, var(--grad));
   }
   .feat-card.c::before { background:linear-gradient(90deg,var(--cyan),var(--emerald)); }
   .feat-card.a::before { background:var(--grad-gold); }
@@ -1058,7 +1058,7 @@
       <!-- ══════════════════════════════════════════════════════
            05 — BEFORE: 2023 EXPERT VIDEO
       ══════════════════════════════════════════════════════ -->
-      <section class="s-video" data-transition="slide" data-transition-speed="fast" style="grid-template-columns:32% 68%">
+      <section class="s-video" data-transition="slide" data-transition-speed="fast" style="--v-cols:32% 68%">
         <div class="s-split-content" style="padding:80px 40px 80px 80px;justify-content:center">
           <span class="eyebrow amber">יוני 2023 — לפני שנתיים</span>
           <h2>כך הסביר "מומחה AI" על יצירת וידאו לפני כשנתיים לערך:</h2>
@@ -1069,23 +1069,23 @@
             <div style="font-size:.28em;color:rgba(255,255,255,.25);margin-top:8px;font-family:var(--mono)">847,203 views · 58:42</div>
           </div>
         </div>
-        <div class="s-video-pane" style="background:#000;position:relative;overflow:hidden">
-          <video src="assets/demos/slide05-expert-2023.mp4" controls style="width:100%;height:100%;object-fit:contain"></video>
+        <div class="s-video-pane">
+          <video class="v-169" src="assets/demos/slide05-expert-2023.mp4" controls></video>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
            06 — AFTER: TODAY, ONE PROMPT
       ══════════════════════════════════════════════════════ -->
-      <section class="s-video" data-transition="slide" data-transition-speed="fast" style="grid-template-columns:32% 68%">
+      <section class="s-video" data-transition="slide" data-transition-speed="fast" style="--v-cols:32% 68%">
         <div class="s-split-content" style="padding:80px 40px 80px 80px;justify-content:center">
           <span class="eyebrow">היום — 2025</span>
           <h2>ואיך עושים<br>את זה עכשיו</h2>
           <p style="font-size:.72em;color:rgba(240,240,248,.8);line-height:1.7;margin-top:.8em">אותה תוצאה — פרומפט אחד, בעברית, ב-Gemini. <strong style="color:var(--white)">אפס התקנות. אפס ידע טכני.</strong></p>
           <div style="margin-top:1.2em;font-size:.55em;color:var(--c-hi);font-weight:700;letter-spacing:.1em">אותה תוצאה · פרומפט אחד · 45 שניות</div>
         </div>
-        <div class="s-video-pane" style="background:#000;position:relative;overflow:hidden">
-          <video src="assets/demos/slide06-today-veo3.mp4" controls style="width:100%;height:100%;object-fit:contain"></video>
+        <div class="s-video-pane">
+          <video class="v-169" src="assets/demos/slide06-today-veo3.mp4" controls></video>
         </div>
       </section>
 
@@ -1137,22 +1137,26 @@
         <div class="s-split-content">
           <div class="chip amber" style="margin-bottom:.8em">🎁 אז מה כן יש כאן?</div>
           <h2>מה יש לנו<br>בשבילכם</h2>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px 32px;margin-top:.8em">
-            <div class="tblock fragment" style="animation-delay:.05s">
-              <span class="lbl">💡 יכולות</span>
-              <p>הרבה דברים שה-AI <strong>יודע לעשות (בינתיים)</strong> — כדי שנדע לחשוב עליהם.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:.8em">
+            <div class="feat-card fragment" style="animation-delay:.05s;padding:18px 16px">
+              <span class="fc-icon">💡</span>
+              <div class="fc-title">יכולות</div>
+              <div class="fc-desc">הרבה דברים שה-AI <strong>יודע לעשות (בינתיים)</strong> — כדי שנדע לחשוב עליהם.</div>
             </div>
-            <div class="tblock c fragment" style="animation-delay:.12s">
-              <span class="lbl">🎬 הדגמות</span>
-              <p>נכון היכולות?<strong>אז נדגים אותן.</strong> שאלו "איך עושים?" לאורך כל הדרך.</p>
+            <div class="feat-card c fragment" style="animation-delay:.12s;padding:18px 16px">
+              <span class="fc-icon">🎬</span>
+              <div class="fc-title">הדגמות</div>
+              <div class="fc-desc">נכון היכולות? <strong>אז נדגים אותן.</strong> שאלו "איך עושים?" לאורך כל הדרך.</div>
             </div>
-            <div class="tblock fragment" style="animation-delay:.19s">
-              <span class="lbl">✦ טיפי זהב</span>
-              <p>מ-"ניסיתי ויצא רע" ל-"ניסיתי ויצא מרשים". <strong>טיפים שלמדתי על בשרי.</strong></p>
+            <div class="feat-card a fragment" style="animation-delay:.19s;padding:18px 16px">
+              <span class="fc-icon">✦</span>
+              <div class="fc-title">טיפי זהב</div>
+              <div class="fc-desc">מ-"ניסיתי ויצא רע" ל-"ניסיתי ויצא מרשים". <strong>טיפים שלמדתי על בשרי.</strong></div>
             </div>
-            <div class="tblock c fragment" style="animation-delay:.26s">
-              <span class="lbl">🎁 הפתעה</span>
-              <p>(אם נגלה עכשיו מה זה — זה לא יהיה הפתעה.)</p>
+            <div class="feat-card c fragment" style="animation-delay:.26s;padding:18px 16px">
+              <span class="fc-icon">🎁</span>
+              <div class="fc-title">הפתעה</div>
+              <div class="fc-desc">(אם נגלה עכשיו מה זה — זה לא יהיה הפתעה.)</div>
             </div>
           </div>
         </div>
@@ -1422,14 +1426,14 @@
       <!-- ══════════════════════════════════════════════════════
            CH01-D — הדגמה: בואו נראה איך זה עובד
       ══════════════════════════════════════════════════════ -->
-      <section class="s-video" data-transition="slide" data-transition-speed="fast" style="grid-template-columns:32% 68%">
+      <section class="s-video" data-transition="slide" data-transition-speed="fast" style="--v-cols:32% 68%">
         <div class="s-split-content" style="padding:80px 40px 80px 80px;justify-content:center">
           <span class="eyebrow">Gemini 2.5 Pro · Gems</span>
           <h2>בואו נראה<br>איך זה עובד</h2>
           <div style="margin-top:1.2em;font-size:.55em;color:var(--v-hi);font-weight:700;letter-spacing:.08em">🎬 &nbsp; הדגמה חיה</div>
         </div>
-        <div class="s-video-pane" style="background:#000;position:relative;overflow:hidden">
-          <video src="assets/demos/s-17.mp4" controls style="width:100%;height:100%;object-fit:contain"></video>
+        <div class="s-video-pane">
+          <video class="v-169" src="assets/demos/s-17.mp4" controls></video>
         </div>
       </section>
 
@@ -1502,14 +1506,16 @@
       <!-- ══════════════════════════════════════════════════════
            CH02-GEM-B — הדגמה: Gem ויזואלי
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="fade" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
-        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
-        <div style="position:absolute;top:0;right:0;left:0;padding:36px 80px 28px;z-index:3;direction:rtl;text-align:right;background:linear-gradient(to bottom,rgba(5,5,14,.95) 60%,transparent 100%)">
+      <section class="s-fullbleed" data-transition="fade">
+        <div class="s-fb-media">
+          <video class="v-169" src="assets/demos/s-21.mp4" controls style="width:100%;height:100%;object-fit:cover"></video>
+        </div>
+        <div class="s-fb-overlay" style="background:linear-gradient(to bottom,rgba(5,5,14,.9) 0%,rgba(5,5,14,.3) 40%,transparent 65%)"></div>
+        <div style="position:absolute;top:0;right:0;left:0;padding:36px 80px 28px;z-index:2;direction:rtl;text-align:right">
           <div class="chip" style="margin-bottom:.6em;background:var(--r-dim);border-color:rgba(244,63,94,.3);color:#f87171">🎬 &nbsp; הדגמה</div>
           <span class="eyebrow" style="color:#f87171">Gemini · Gem ויזואלי</span>
           <h2 style="font-size:1.6em !important;color:var(--white) !important;line-height:1.2 !important">בואו נראה איך זה עובד</h2>
         </div>
-        <video src="assets/demos/s-21.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:1"></video>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
@@ -1588,12 +1594,12 @@
       <!-- ══════════════════════════════════════════════════════
            CH02 — הסרת כוכב (s-video)
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
+      <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;overflow:hidden">
         <div class="bg bg-dots" style="opacity:.12;z-index:1"></div>
         <!-- Video: right side, 65% width -->
-        <div style="position:absolute;top:0;right:0;width:65%;height:100%;z-index:2;background:#000;overflow:hidden">
+        <div style="position:absolute;top:0;right:0;width:65%;height:100%;z-index:2;overflow:hidden;display:flex;align-items:center;justify-content:center">
           <div class="s-video-scanline" style="position:absolute;inset:0;z-index:1"></div>
-          <video src="assets/demos/s-26.mp4" controls style="width:100%;height:100%;object-fit:contain;display:block;position:relative;z-index:2"></video>
+          <video class="v-169" src="assets/demos/s-26.mp4" controls style="position:relative;z-index:2"></video>
         </div>
         <!-- Gradient separator -->
         <div style="position:absolute;top:0;right:65%;width:120px;height:100%;background:linear-gradient(to left,rgba(5,5,14,0),rgba(5,5,14,.9));z-index:3;pointer-events:none"></div>
@@ -2192,22 +2198,31 @@
             <div class="chip" style="margin-bottom:.8em;background:rgba(139,92,246,.15);border-color:rgba(139,92,246,.3);color:#a78bfa">🎙️ ElevenLabs</div>
             <h2>קול שלא נשמע כמו AI</h2>
           </div>
+          <div class="waveform-wrap" style="margin:-.4em 0 1.2em">
+            <svg viewBox="0 0 400 48" preserveAspectRatio="none">
+              <polyline points="0,24 20,10 35,36 50,14 65,30 80,8 95,38 110,20 125,32 140,12 155,28 170,6 185,40 200,18 215,34 230,10 245,28 260,16 275,36 290,8 305,30 320,14 335,36 350,20 365,10 380,30 400,24"/>
+            </svg>
+          </div>
           <div class="s-text-blocks">
-            <div class="tblock fragment" style="animation-delay:.05s">
-              <span class="lbl">Text-to-Speech (TTS)</span>
-              <p>כותבים טקסט ← מקבלים קריינות. <strong>בעברית.</strong> בוחרים קול, גיל, אינטונציה. 2 שניות לסקריפט שלם.</p>
+            <div class="feat-card fragment" style="animation-delay:.05s">
+              <span class="fc-icon">🎙️</span>
+              <div class="fc-title">Text-to-Speech (TTS)</div>
+              <div class="fc-desc">כותבים טקסט ← מקבלים קריינות. <strong>בעברית.</strong> בוחרים קול, גיל, אינטונציה. 2 שניות לסקריפט שלם.</div>
             </div>
-            <div class="tblock c fragment" style="animation-delay:.12s">
-              <span class="lbl">Voice Changer (STS)</span>
-              <p>מקליטים את עצמכם → ElevenLabs <strong>ממיר לקול אחר</strong> — בלי לכתוב מחדש. מושלם לדיבוב וידאו Veo/Kling בקול אחיד.</p>
+            <div class="feat-card c fragment" style="animation-delay:.12s">
+              <span class="fc-icon">🎤</span>
+              <div class="fc-title">Voice Changer (STS)</div>
+              <div class="fc-desc">מקליטים את עצמכם → ElevenLabs <strong>ממיר לקול אחר</strong> — בלי לכתוב מחדש. מושלם לדיבוב וידאו Veo/Kling בקול אחיד.</div>
             </div>
-            <div class="tblock fragment" style="animation-delay:.19s">
-              <span class="lbl">עברית — עובד באמת</span>
-              <p>ElevenLabs <strong>מבין עברית</strong> כולל ניקוד, ניואנסים ואינטונציה. מה שאחרים מייצרים בגנגנה — כאן נשמע אנושי.</p>
+            <div class="feat-card fragment" style="animation-delay:.19s">
+              <span class="fc-icon">🇮🇱</span>
+              <div class="fc-title">עברית — עובד באמת</div>
+              <div class="fc-desc">ElevenLabs <strong>מבין עברית</strong> כולל ניקוד, ניואנסים ואינטונציה. מה שאחרים מייצרים בגנגנה — כאן נשמע אנושי.</div>
             </div>
-            <div class="tblock c fragment" style="animation-delay:.26s">
-              <span class="lbl">Sound Effects</span>
-              <p>תיאור בטקסט → אפקט סאונד מותאם. "חיית ים מוזרה קורסת על רצפה מתכתית" — <strong>פשוט כתבו מה שאתם שומעים בראש.</strong></p>
+            <div class="feat-card c fragment" style="animation-delay:.26s">
+              <span class="fc-icon">🔊</span>
+              <div class="fc-title">Sound Effects</div>
+              <div class="fc-desc">תיאור בטקסט → אפקט סאונד מותאם. "חיית ים מוזרה קורסת על רצפה מתכתית" — <strong>פשוט כתבו מה שאתם שומעים בראש.</strong></div>
             </div>
           </div>
         </div>
@@ -2281,22 +2296,31 @@
             <div class="chip amber" style="margin-bottom:.8em">🎵 Suno</div>
             <h2>שיר שלם מפרומפט — כולל מילים</h2>
           </div>
+          <div class="waveform-wrap amber" style="margin:-.4em 0 1.2em">
+            <svg viewBox="0 0 400 48" preserveAspectRatio="none">
+              <polyline points="0,24 15,8 28,38 42,16 56,32 70,6 84,42 98,18 112,30 126,10 140,36 154,14 168,28 182,4 196,44 210,22 224,36 238,12 252,30 266,8 280,40 294,20 308,34 322,10 336,28 350,16 364,38 378,12 400,24"/>
+            </svg>
+          </div>
           <div class="s-text-blocks">
-            <div class="tblock fragment" style="animation-delay:.05s">
-              <span class="lbl">Text-to-Music</span>
-              <p>מתיאור טקסטואלי → שיר מלא עם <strong>מוזיקה + שירה + מילים.</strong> "פופ עברי, אנרגטי, על קיץ בתל אביב" — 30 שניות ← שיר שלם.</p>
+            <div class="feat-card a fragment" style="animation-delay:.05s">
+              <span class="fc-icon">🎵</span>
+              <div class="fc-title">Text-to-Music</div>
+              <div class="fc-desc">מתיאור טקסטואלי → שיר מלא עם <strong>מוזיקה + שירה + מילים.</strong> "פופ עברי, אנרגטי, על קיץ בתל אביב" — 30 שניות ← שיר שלם.</div>
             </div>
-            <div class="tblock c fragment" style="animation-delay:.12s">
-              <span class="lbl">Audio-to-Audio</span>
-              <p>מעלים אודיו קיים → Suno <strong>מחדש, מסגנן, מוסיף שכבות.</strong> קליפ ישן ← גרסה חדשה לגמרי. מבלי לאבד את הרגש המקורי.</p>
+            <div class="feat-card c fragment" style="animation-delay:.12s">
+              <span class="fc-icon">🔀</span>
+              <div class="fc-title">Audio-to-Audio</div>
+              <div class="fc-desc">מעלים אודיו קיים → Suno <strong>מחדש, מסגנן, מוסיף שכבות.</strong> קליפ ישן ← גרסה חדשה לגמרי. מבלי לאבד את הרגש המקורי.</div>
             </div>
-            <div class="tblock fragment" style="animation-delay:.19s">
-              <span class="lbl">Covers ואינסטרומנטל</span>
-              <p>קאברים לשירים ידועים, גרסאות אינסטרומנטל, <strong>סאונדטרקים לוידאו</strong> — כל מה שדרש פרודיוסר ואולפן.</p>
+            <div class="feat-card a fragment" style="animation-delay:.19s">
+              <span class="fc-icon">🎼</span>
+              <div class="fc-title">Covers ואינסטרומנטל</div>
+              <div class="fc-desc">קאברים לשירים ידועים, גרסאות אינסטרומנטל, <strong>סאונדטרקים לוידאו</strong> — כל מה שדרש פרודיוסר ואולפן.</div>
             </div>
-            <div class="tblock c fragment" style="animation-delay:.26s">
-              <span class="lbl">⚠️ עברית — עדיין לא מושלם</span>
-              <p>עברית ב-Suno עובדת, <strong>אבל עם מבטא זר.</strong> הטריק: כתבו מילים עם ניקוד + בקשו "Israeli Hebrew accent". תשמעו הבדל.</p>
+            <div class="feat-card fragment" style="animation-delay:.26s;border-color:rgba(245,158,11,.2)">
+              <span class="fc-icon">⚠️</span>
+              <div class="fc-title">עברית — עדיין לא מושלם</div>
+              <div class="fc-desc">עברית ב-Suno עובדת, <strong>אבל עם מבטא זר.</strong> הטריק: כתבו מילים עם ניקוד + בקשו "Israeli Hebrew accent". תשמעו הבדל.</div>
             </div>
           </div>
         </div>
@@ -2465,21 +2489,25 @@
             <h2>עריכה בלי לדעת עריכה</h2>
           </div>
           <div class="s-text-blocks">
-            <div class="tblock fragment" style="animation-delay:.05s">
-              <span class="lbl">Auto Captions</span>
-              <p>כתוביות אוטומטיות, מסונכרנות, עם <strong>עיצוב מותאם.</strong> עברית — כן. 30 שניות לסרטון שלם.</p>
+            <div class="feat-card c fragment" style="animation-delay:.05s">
+              <span class="fc-icon">💬</span>
+              <div class="fc-title">Auto Captions</div>
+              <div class="fc-desc">כתוביות אוטומטיות, מסונכרנות, עם <strong>עיצוב מותאם.</strong> עברית — כן. 30 שניות לסרטון שלם.</div>
             </div>
-            <div class="tblock c fragment" style="animation-delay:.12s">
-              <span class="lbl">Auto Cut + BGM</span>
-              <p>CapCut <strong>חותך לרגעי הפסגה</strong> בסרטון, מוסיף מוזיקת רקע מסונכרנת, מייצר Reel אוטומטי. אתם מוסרים חומר, הוא עורך.</p>
+            <div class="feat-card fragment" style="animation-delay:.12s">
+              <span class="fc-icon">✂️</span>
+              <div class="fc-title">Auto Cut + BGM</div>
+              <div class="fc-desc">CapCut <strong>חותך לרגעי הפסגה</strong> בסרטון, מוסיף מוזיקת רקע מסונכרנת, מייצר Reel אוטומטי. אתם מוסרים חומר, הוא עורך.</div>
             </div>
-            <div class="tblock fragment" style="animation-delay:.19s">
-              <span class="lbl">Remove Watermark</span>
-              <p>סרטונים שיובאו מ-TikTok, Instagram, כלי AI — CapCut <strong>מוחק watermark</strong> אוטומטית. לא צריך להסביר איך.</p>
+            <div class="feat-card c fragment" style="animation-delay:.19s">
+              <span class="fc-icon">🚫</span>
+              <div class="fc-title">Remove Watermark</div>
+              <div class="fc-desc">סרטונים שיובאו מ-TikTok, Instagram, כלי AI — CapCut <strong>מוחק watermark</strong> אוטומטית. לא צריך להסביר איך.</div>
             </div>
-            <div class="tblock c fragment" style="animation-delay:.26s">
-              <span class="lbl">AI Effects מובנים</span>
-              <p>Reframe, background change, sky replacement — <strong>הכל ב-app אחד.</strong> CapCut הוא Premiere + After Effects למשתמש הרגיל.</p>
+            <div class="feat-card fragment" style="animation-delay:.26s">
+              <span class="fc-icon">✨</span>
+              <div class="fc-title">AI Effects מובנים</div>
+              <div class="fc-desc">Reframe, background change, sky replacement — <strong>הכל ב-app אחד.</strong> CapCut הוא Premiere + After Effects למשתמש הרגיל.</div>
             </div>
           </div>
         </div>
@@ -2617,21 +2645,25 @@
             <h2>גיליון אקסל → תובנות קריאטיביות</h2>
           </div>
           <div class="s-text-blocks">
-            <div class="tblock fragment" style="animation-delay:.05s">
-              <span class="lbl">מעלים קובץ — מקבלים תובנות</span>
-              <p>Excel / CSV / PDF ← ChatGPT <strong>מנתח, מסכם, מסביר</strong> בשפה שלכם. מספיק לשאול "מה מעניין כאן?"</p>
+            <div class="feat-card fragment" style="animation-delay:.05s;--feat-top:linear-gradient(90deg,#10b981,#06b6d4)">
+              <span class="fc-icon">📂</span>
+              <div class="fc-title">מעלים קובץ — מקבלים תובנות</div>
+              <div class="fc-desc">Excel / CSV / PDF ← ChatGPT <strong>מנתח, מסכם, מסביר</strong> בשפה שלכם. מספיק לשאול "מה מעניין כאן?"</div>
             </div>
-            <div class="tblock c fragment" style="animation-delay:.12s">
-              <span class="lbl">גרפים וויז אוטומטיים</span>
-              <p>בקשו "צור גרף" — ChatGPT <strong>מייצר גרפים קריאים,</strong> בוחר את הדרך הנכונה להציג כל נתון. לא Canva, לא Excel מסובך.</p>
+            <div class="feat-card c fragment" style="animation-delay:.12s">
+              <span class="fc-icon">📈</span>
+              <div class="fc-title">גרפים וויז אוטומטיים</div>
+              <div class="fc-desc">בקשו "צור גרף" — ChatGPT <strong>מייצר גרפים קריאים,</strong> בוחר את הדרך הנכונה להציג כל נתון. לא Canva, לא Excel מסובך.</div>
             </div>
-            <div class="tblock fragment" style="animation-delay:.19s">
-              <span class="lbl">שאלות בשפה טבעית</span>
-              <p>"מה הלקוח שהכי פחות קנה? מה ההוצאה הגדולה?" — <strong>שאלות בעברית פשוטה</strong> על גיליון עם אלפי שורות. תשובה ב-3 שניות.</p>
+            <div class="feat-card fragment" style="animation-delay:.19s;--feat-top:linear-gradient(90deg,#10b981,#06b6d4)">
+              <span class="fc-icon">💬</span>
+              <div class="fc-title">שאלות בשפה טבעית</div>
+              <div class="fc-desc">"מה הלקוח שהכי פחות קנה? מה ההוצאה הגדולה?" — <strong>שאלות בעברית פשוטה</strong> על גיליון עם אלפי שורות. תשובה ב-3 שניות.</div>
             </div>
-            <div class="tblock c fragment" style="animation-delay:.26s">
-              <span class="lbl">דוח לקוח — כתוב מאליו</span>
-              <p>ChatGPT יכול <strong>לכתוב את הדוח</strong> בשבילכם — נתון X עלה ב-Y%, מגמה, המלצה לחודש הבא. מExcel לPDF מוצג — 10 דקות.</p>
+            <div class="feat-card c fragment" style="animation-delay:.26s">
+              <span class="fc-icon">📋</span>
+              <div class="fc-title">דוח לקוח — כתוב מאליו</div>
+              <div class="fc-desc">ChatGPT יכול <strong>לכתוב את הדוח</strong> בשבילכם — נתון X עלה ב-Y%, מגמה, המלצה לחודש הבא. מExcel לPDF מוצג — 10 דקות.</div>
             </div>
           </div>
         </div>
@@ -2733,21 +2765,25 @@
             <h2>המצגת הזו — AI עשה אותה</h2>
           </div>
           <div class="s-text-blocks">
-            <div class="tblock fragment" style="animation-delay:.05s">
-              <span class="lbl">מה שראיתם</span>
-              <p>כל העיצוב, כל הטקסטים, כל המבנה הנרטיבי — <strong>Claude + ChatGPT</strong> עשו את רוב העבודה. הכלים שדיברנו עליהם — בפועל.</p>
+            <div class="feat-card r fragment" style="animation-delay:.05s">
+              <span class="fc-icon">👁️</span>
+              <div class="fc-title">מה שראיתם</div>
+              <div class="fc-desc">כל העיצוב, כל הטקסטים, כל המבנה הנרטיבי — <strong>Claude + ChatGPT</strong> עשו את רוב העבודה. הכלים שדיברנו עליהם — בפועל.</div>
             </div>
-            <div class="tblock c fragment" style="animation-delay:.12s">
-              <span class="lbl">כמה זמן לקח</span>
-              <p>כמה שעות עבודה → מצגת מלאה. לא "דמו" — <strong>התוצר הסופי שאתם קיבלתם עכשיו.</strong> זה מה שאפשרי היום.</p>
+            <div class="feat-card c fragment" style="animation-delay:.12s">
+              <span class="fc-icon">⏱️</span>
+              <div class="fc-title">כמה זמן לקח</div>
+              <div class="fc-desc">כמה שעות עבודה → מצגת מלאה. לא "דמו" — <strong>התוצר הסופי שאתם קיבלתם עכשיו.</strong> זה מה שאפשרי היום.</div>
             </div>
-            <div class="tblock fragment" style="animation-delay:.19s">
-              <span class="lbl">הלקח</span>
-              <p>ה-AI לא החליף את המחשבה. הוא <strong>הגביר את היכולת.</strong> האסטרטגיה — שלנו. הביצוע — AI. כולם מרוויחים.</p>
+            <div class="feat-card r fragment" style="animation-delay:.19s">
+              <span class="fc-icon">🧠</span>
+              <div class="fc-title">הלקח</div>
+              <div class="fc-desc">ה-AI לא החליף את המחשבה. הוא <strong>הגביר את היכולת.</strong> האסטרטגיה — שלנו. הביצוע — AI. כולם מרוויחים.</div>
             </div>
-            <div class="tblock c fragment" style="animation-delay:.26s">
-              <span class="lbl">מה עכשיו?</span>
-              <p><strong>לחקור. לנסות. לא לחכות.</strong> הכלים מוכנים. השאלה היא — אתם?</p>
+            <div class="feat-card c fragment" style="animation-delay:.26s">
+              <span class="fc-icon">🚀</span>
+              <div class="fc-title">מה עכשיו?</div>
+              <div class="fc-desc"><strong>לחקור. לנסות. לא לחכות.</strong> הכלים מוכנים. השאלה היא — אתם?</div>
             </div>
           </div>
         </div>
