@@ -1111,8 +1111,8 @@
       <!-- ══════════════════════════════════════════════════════
            CH01-C-PRE — ככה זה נראה בלי gem
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="slide" style="display:grid !important;grid-template-columns:44% 56%;height:100%;background:transparent !important;overflow:hidden">
-        <!-- Left: title panel -->
+      <section data-transition="slide" style="display:grid !important;grid-template-columns:63% 37%;height:100%;background:transparent !important;overflow:hidden">
+        <!-- Text panel -->
         <div style="display:flex;flex-direction:column;justify-content:center;padding:60px 40px 60px 80px;direction:rtl;text-align:right;position:relative">
           <div style="position:absolute;inset:0;background:linear-gradient(to left,transparent,rgba(5,5,14,.4));pointer-events:none"></div>
           <div class="orb" style="width:500px;height:500px;top:50%;left:0;transform:translateY(-50%);opacity:.1;animation-duration:9s"></div>
@@ -1125,10 +1125,10 @@
             </div>
           </div>
         </div>
-        <!-- Right: vertical screenshot — fills full column height -->
-        <div style="display:flex;align-items:stretch;justify-content:center;padding:20px 50px 20px 0;overflow:hidden">
+        <!-- Vertical screenshot — narrow column, portrait-friendly -->
+        <div style="display:flex;align-items:center;justify-content:center;padding:16px 24px 16px 8px;overflow:hidden;background:rgba(0,0,0,.25)">
           <img src="assets/demos/s-15.png"
-               style="width:auto;height:100%;max-width:100%;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.07);object-fit:contain;animation:fade-in .8s .3s ease both">
+               style="width:auto;height:calc(100% - 32px);max-width:100%;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.07);object-fit:contain;animation:fade-in .8s .3s ease both">
         </div>
       </section>
 
@@ -1313,7 +1313,7 @@
         <div class="s-split-content">
           <span class="eyebrow" style="color:#f87171">טיפ 3 מתוך 3</span>
           <h2>3 טיפים שיעזרו לכם לעבוד עם ג'ימיני</h2>
-          <p>אלא אם כן זה תמונה בשביל אסטרל כמובן.</p>
+          <p>תורידו כבר את הכוכב המביך הזהההההההה<br><span style="color:rgba(240,240,248,.5);font-size:.85em">(אלא אם כן זה בשביל אסטרל כמובן)</span></p>
         </div>
       </section>
 
@@ -1336,17 +1336,17 @@
       <!-- ══════════════════════════════════════════════════════
            CH02 — הסרת כוכב (s-video)
       ══════════════════════════════════════════════════════ -->
-      <section class="s-video" data-transition="slide" style="grid-template-columns:40% 60%">
-        <div class="s-video-pane" style="background:#000;position:relative;overflow:hidden">
-          <video src="assets/demos/s-24.mp4" controls style="width:100%;height:100%;object-fit:contain"></video>
+      <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
+        <div class="bg bg-dots" style="opacity:.15;z-index:1;position:absolute;inset:0;pointer-events:none"></div>
+        <!-- Horizontal video: top 72% -->
+        <div style="position:absolute;top:0;right:0;left:0;height:72%;z-index:2;background:#000">
+          <div class="bg bg-grid" style="opacity:.2;position:absolute;inset:0"></div>
+          <div class="s-video-scanline" style="position:absolute;inset:0;z-index:1"></div>
+          <video src="assets/demos/s-26.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:2"></video>
         </div>
-        <div class="s-split-content" style="padding:80px 80px 80px 40px;justify-content:center">
-          <p style="font-size:.72em;color:rgba(240,240,248,.8);line-height:1.7">ניתן להשתמש בכלים חיצוניים כדי לייצר תמונות באמצעות <strong style="color:var(--white)">ננו בננה</strong>, ולמעשה זה עדיף בהרבה מקרים:</p>
-          <ul style="margin-top:1em">
-            <li><span class="dot"></span><strong style="color:var(--c-hi)">יוצא בלי כוכב</strong></li>
-            <li><span class="dot"></span><strong style="color:var(--c-hi)">שליטה משמעותית יותר על ההגדרות</strong> (רזולוציה, גודל וכו')</li>
-            <li><span class="dot"></span><strong style="color:var(--c-hi)">כלים: hedra, flow, runway, היגספילד</strong></li>
-          </ul>
+        <!-- Text: bottom 28% -->
+        <div style="position:absolute;bottom:0;right:0;left:0;height:30%;background:linear-gradient(to top,rgba(5,5,14,.99) 80%,transparent 100%);padding:16px 80px 20px;direction:rtl;z-index:5;display:flex;align-items:center">
+          <p style="font-size:.5em;color:rgba(240,240,248,.8);line-height:1.85;margin:0">ניתן להשתמש בכלים חיצוניים כדי לייצר תמונות באמצעות <strong style="color:var(--white)">ננו בננה</strong>, ולמעשה זה עדיף בהרבה מקרים: &nbsp;<strong style="color:var(--c-hi)">1. יוצא בלי כוכב</strong> &nbsp;·&nbsp; <strong style="color:var(--c-hi)">2. שליטה משמעותית יותר על ההגדרות</strong> (רזולוציה, גודל וכו') &nbsp;·&nbsp; <strong style="color:var(--c-hi)">3. כלים: hedra, flow, runway, היגספילד</strong></p>
         </div>
       </section>
 
@@ -1438,7 +1438,7 @@
         </div>
         <!-- Right: vertical video — object-fit:cover fills column edge-to-edge -->
         <div style="position:relative;z-index:2;overflow:hidden">
-          <video src="assets/demos/s-25.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></video>
+          <video src="assets/demos/s-30.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></video>
         </div>
       </section>
 
@@ -1452,16 +1452,18 @@
         <div class="spark" style="bottom:22%;left:10%;color:#fcd34d;animation-delay:-2s;font-size:2em">✦</div>
         <div class="spark" style="top:25%;left:18%;color:#f59e0b;animation-delay:-4s">✧</div>
         <div class="spark" style="bottom:28%;right:16%;color:#fcd34d;animation-delay:-1s">✧</div>
-        <div class="s-gold-inner">
-          <div class="s-gold-badge">✦ &nbsp; טיפ זהב · קרדיטים</div>
-          <h2>שימו לב למחיר בקרדיטים של כל מודל</h2>
-          <p>
-            לדוג' כשמשתמשים ב-Hedra ורוצים רק להנפיש תמונה שיהיה בה קצת תנועה וחיים —<br>
-            <strong>Grok כנראה יהיה הכי זול.</strong><br>
-            לא כל מודל שווה — בחרו לפי המשימה, לא לפי ההרגל.
-          </p>
-          <div style="margin-top:1.4em;display:flex;justify-content:center">
-            <video src="assets/demos/s-29.mp4" autoplay muted loop playsinline style="width:500px;height:500px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.25)"></video>
+        <div class="s-gold-inner" style="max-width:95%;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;direction:rtl">
+          <div>
+            <div class="s-gold-badge">✦ &nbsp; טיפ זהב · קרדיטים</div>
+            <h2>שימו לב למחיר בקרדיטים של כל מודל</h2>
+            <p>
+              לדוג' כשמשתמשים ב-Hedra ורוצים רק להנפיש תמונה שיהיה בה קצת תנועה וחיים —<br>
+              <strong>Grok כנראה יהיה הכי זול.</strong><br>
+              לא כל מודל שווה — בחרו לפי המשימה, לא לפי ההרגל.
+            </p>
+          </div>
+          <div style="flex-shrink:0">
+            <video src="assets/demos/s-31.mp4" autoplay muted loop playsinline style="width:600px;height:600px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.25)"></video>
           </div>
         </div>
       </section>
@@ -1471,7 +1473,8 @@
       ══════════════════════════════════════════════════════ -->
       <section class="s-split s-split-tl" data-transition="slide">
         <div class="s-split-img">
-          <div style="width:100%;height:100%;background:linear-gradient(145deg,#001525,#001015);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;padding:40px">
+          <div class="demo-placeholder" data-file="assets/demos/s-32.mp4" data-type="video" data-label="Image to Video demo"
+               style="width:100%;height:100%;background:linear-gradient(145deg,#001525,#001015);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;padding:40px">
             <div class="orb cyan" style="width:350px;height:350px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.25"></div>
             <div style="position:relative;z-index:1;text-align:center">
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:300px">
@@ -1544,7 +1547,7 @@
             </p>
           </div>
           <div style="flex-shrink:0">
-            <video src="assets/demos/s-29.mp4" autoplay muted loop playsinline style="width:700px;height:700px;object-fit:cover;border-radius:16px;box-shadow:0 12px 50px rgba(0,0,0,.6),0 0 0 1px rgba(245,158,11,.25)"></video>
+            <video src="assets/demos/s-31.mp4" autoplay muted loop playsinline style="width:700px;height:700px;object-fit:cover;border-radius:16px;box-shadow:0 12px 50px rgba(0,0,0,.6),0 0 0 1px rgba(245,158,11,.25)"></video>
           </div>
         </div>
       </section>
@@ -1636,7 +1639,7 @@
         <div class="s-video-pane">
           <div class="bg bg-grid" style="opacity:.3"></div>
           <div class="s-video-scanline"></div>
-          <video src="assets/demos/s-33.mp4" controls style="width:100%;height:100%;object-fit:contain">
+          <video src="assets/demos/s-38.mp4" controls style="width:100%;height:100%;object-fit:contain">
             <div class="s-video-thumb">
               <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(6,182,212,.7))">🎬</div>
               <div class="s-video-play-btn" style="background:linear-gradient(135deg,#06b6d4,#7c3aed)">
@@ -1660,9 +1663,9 @@
             <div style="width:80px;height:80px;border-radius:50%;background:rgba(6,182,212,.15);border:2px solid rgba(6,182,212,.3);display:flex;align-items:center;justify-content:center">
               <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#22d3ee"><path d="M8 5v14l11-7z"/></svg>
             </div>
-            <div style="font-size:.4em;color:rgba(255,255,255,.3);font-family:var(--mono)">assets/demos/s-34.mp4</div>
+            <div style="font-size:.4em;color:rgba(255,255,255,.3);font-family:var(--mono)">assets/demos/s-39.mp4</div>
           </div>
-          <video src="assets/demos/s-34.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3"></video>
+          <video src="assets/demos/s-39.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3"></video>
         </div>
         <div style="position:absolute;bottom:24px;right:0;left:0;text-align:center;z-index:3">
           <div class="chip cyan">Multi-Shot · התוצר הסופי</div>
@@ -1686,9 +1689,9 @@
             <div style="width:80px;height:80px;border-radius:50%;background:rgba(244,63,94,.15);border:2px solid rgba(244,63,94,.3);display:flex;align-items:center;justify-content:center">
               <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#f87171"><path d="M8 5v14l11-7z"/></svg>
             </div>
-            <div style="font-size:.4em;color:rgba(255,255,255,.3);font-family:var(--mono)">assets/demos/s-35.mp4</div>
+            <div style="font-size:.4em;color:rgba(255,255,255,.3);font-family:var(--mono)">assets/demos/s-40.mp4</div>
           </div>
-          <video src="assets/demos/s-35.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3"></video>
+          <video src="assets/demos/s-40.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3"></video>
         </div>
       </section>
 
@@ -1709,9 +1712,9 @@
             <div style="width:80px;height:80px;border-radius:50%;background:rgba(16,185,129,.15);border:2px solid rgba(16,185,129,.3);display:flex;align-items:center;justify-content:center">
               <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#34d399"><path d="M8 5v14l11-7z"/></svg>
             </div>
-            <div style="font-size:.4em;color:rgba(255,255,255,.3);font-family:var(--mono)">assets/demos/s-36.mp4</div>
+            <div style="font-size:.4em;color:rgba(255,255,255,.3);font-family:var(--mono)">assets/demos/s-41.mp4</div>
           </div>
-          <video src="assets/demos/s-36.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3"></video>
+          <video src="assets/demos/s-41.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3"></video>
         </div>
       </section>
 
@@ -1733,7 +1736,7 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH03-38 — אריאה לפני
+           CH03-43 — אריאה לפני
       ══════════════════════════════════════════════════════ -->
       <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
         <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
@@ -1748,14 +1751,14 @@
             <div style="width:80px;height:80px;border-radius:50%;background:rgba(124,58,237,.15);border:2px solid rgba(124,58,237,.3);display:flex;align-items:center;justify-content:center">
               <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#a855f7"><path d="M8 5v14l11-7z"/></svg>
             </div>
-            <div style="font-size:.4em;color:rgba(255,255,255,.3);font-family:var(--mono)">assets/demos/s-38.mp4</div>
+            <div style="font-size:.4em;color:rgba(255,255,255,.3);font-family:var(--mono)">assets/demos/s-43.mp4</div>
           </div>
-          <video src="assets/demos/s-38.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3"></video>
+          <video src="assets/demos/s-43.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3"></video>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH03-39 — אריאה אחרי
+           CH03-44 — אריאה אחרי
       ══════════════════════════════════════════════════════ -->
       <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
         <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
@@ -1770,9 +1773,9 @@
             <div style="width:80px;height:80px;border-radius:50%;background:rgba(16,185,129,.15);border:2px solid rgba(16,185,129,.3);display:flex;align-items:center;justify-content:center">
               <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#34d399"><path d="M8 5v14l11-7z"/></svg>
             </div>
-            <div style="font-size:.4em;color:rgba(255,255,255,.3);font-family:var(--mono)">assets/demos/s-39.mp4</div>
+            <div style="font-size:.4em;color:rgba(255,255,255,.3);font-family:var(--mono)">assets/demos/s-44.mp4</div>
           </div>
-          <video src="assets/demos/s-39.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3"></video>
+          <video src="assets/demos/s-44.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3"></video>
         </div>
       </section>
 
