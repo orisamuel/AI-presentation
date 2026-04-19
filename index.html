@@ -1163,14 +1163,16 @@
       <!-- ══════════════════════════════════════════════════════
            CH01-D — הדגמה: בואו נראה איך זה עובד
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="fade" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
+      <section data-transition="fade" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important">
         <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
         <div style="position:absolute;top:0;right:0;left:0;padding:36px 80px 28px;z-index:3;direction:rtl;text-align:right;background:linear-gradient(to bottom,rgba(5,5,14,.95) 60%,transparent 100%)">
           <div class="chip" style="margin-bottom:.6em">🎬 &nbsp; הדגמה</div>
           <span class="eyebrow">Gemini 2.5 Pro · Gems</span>
           <h2 style="font-size:1.6em !important;color:var(--white) !important;line-height:1.2 !important">בואו נראה איך זה עובד</h2>
         </div>
-        <video src="assets/demos/s-17.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:1"></video>
+        <div style="position:absolute;top:0;right:0;bottom:0;left:0;z-index:2">
+          <video src="assets/demos/s-17.mp4" controls style="width:100%;height:100%;object-fit:contain;display:block"></video>
+        </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
@@ -1329,16 +1331,24 @@
            CH02 — הסרת כוכב (s-video)
       ══════════════════════════════════════════════════════ -->
       <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
-        <div class="bg bg-dots" style="opacity:.15;z-index:1;position:absolute;inset:0;pointer-events:none"></div>
-        <!-- Horizontal video: top 72% -->
-        <div style="position:absolute;top:0;right:0;left:0;height:72%;z-index:2;background:#000">
-          <div class="bg bg-grid" style="opacity:.2;position:absolute;inset:0"></div>
+        <div class="bg bg-dots" style="opacity:.12;z-index:1"></div>
+        <!-- Video: right side, 65% width -->
+        <div style="position:absolute;top:0;right:0;width:65%;height:100%;z-index:2;background:#000;overflow:hidden">
           <div class="s-video-scanline" style="position:absolute;inset:0;z-index:1"></div>
-          <video src="assets/demos/s-26.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:2"></video>
+          <video src="assets/demos/s-26.mp4" controls style="width:100%;height:100%;object-fit:contain;display:block;position:relative;z-index:2"></video>
         </div>
-        <!-- Text: bottom 28% -->
-        <div style="position:absolute;bottom:0;right:0;left:0;height:30%;background:linear-gradient(to top,rgba(5,5,14,.99) 80%,transparent 100%);padding:16px 80px 20px;direction:rtl;z-index:5;display:flex;align-items:center">
-          <p style="font-size:.5em;color:rgba(240,240,248,.8);line-height:1.85;margin:0">ניתן להשתמש בכלים חיצוניים כדי לייצר תמונות באמצעות <strong style="color:var(--white)">ננו בננה</strong>, ולמעשה זה עדיף בהרבה מקרים: &nbsp;<strong style="color:var(--c-hi)">1. יוצא בלי כוכב</strong> &nbsp;·&nbsp; <strong style="color:var(--c-hi)">2. שליטה משמעותית יותר על ההגדרות</strong> (רזולוציה, גודל וכו') &nbsp;·&nbsp; <strong style="color:var(--c-hi)">3. כלים: hedra, flow, runway, היגספילד</strong></p>
+        <!-- Gradient separator -->
+        <div style="position:absolute;top:0;right:65%;width:120px;height:100%;background:linear-gradient(to left,rgba(5,5,14,0),rgba(5,5,14,.9));z-index:3;pointer-events:none"></div>
+        <!-- Text: left side, 35% width -->
+        <div style="position:absolute;top:0;left:0;width:34%;height:100%;z-index:4;display:flex;align-items:center;padding:60px 30px 60px 60px;direction:rtl">
+          <div>
+            <p style="font-size:.6em;color:rgba(240,240,248,.85);line-height:1.85;margin-bottom:1em">ניתן להשתמש בכלים חיצוניים כדי לייצר תמונות באמצעות <strong style="color:var(--white)">ננו בננה</strong>, ולמעשה זה עדיף בהרבה מקרים:</p>
+            <ul style="list-style:none;padding:0;margin:0">
+              <li style="font-size:.55em;color:var(--c-hi);padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:center;gap:10px"><span style="width:6px;height:6px;border-radius:50%;background:var(--grad);flex-shrink:0;display:inline-block"></span><strong>יוצא בלי כוכב</strong></li>
+              <li style="font-size:.55em;color:var(--c-hi);padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:center;gap:10px"><span style="width:6px;height:6px;border-radius:50%;background:var(--grad);flex-shrink:0;display:inline-block"></span><strong>שליטה מלאה על ההגדרות</strong></li>
+              <li style="font-size:.55em;color:var(--c-hi);padding:6px 0;display:flex;align-items:center;gap:10px"><span style="width:6px;height:6px;border-radius:50%;background:var(--grad);flex-shrink:0;display:inline-block"></span><strong>hedra · flow · runway · היגספילד</strong></li>
+            </ul>
+          </div>
         </div>
       </section>
 
