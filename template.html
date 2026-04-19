@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════╗
+  ║  TEMPLATE.HTML — AI PRESENTATION SLIDE LIBRARY          ║
+  ║  העתק-הדבק כל <section> ל-index.html                   ║
+  ║  שנה רק את התוכן (טקסט, src, צבעים)                   ║
+  ╚══════════════════════════════════════════════════════════╝
+
+  ── מבנה גמישות 3 רמות ──────────────────────────────────
+  רמה 1: Template class בלבד (80% מהשקופיות)
+  רמה 2: modifier class + CSS var inline (15%)
+          דוגמה: style="--v-cols:30% 70%"
+  רמה 3: bespoke — תמיד שמור class בסיסי + position:absolute custom layout (5%)
+
+  ── Aspect-ratio classes (על <video>/<img>) ─────────────
+  .v-169  = 16:9 landscape   (וידאו רוחבי רגיל)
+  .v-916  = 9:16 portrait    (stories / reels / kling אנכי)
+  .v-11   = 1:1  square
+  .v-43   = 4:3  classic
+  .v-219  = 21:9 ultra-wide
+
+  ── SVG Icons (stroke style) ─────────────────────────────
+  <svg class="vi w [c|a]"><use href="#ic-NAME"/></svg>
+  צבעים: ברירת מחדל=violet, .c=cyan, .a=amber
+  אייקונים: camera / mic / music / scissors / brain /
+            sparkle / wand / gem / person / play / star
+
+  ── Visual components ────────────────────────────────────
+  .feat-card [.c|.a|.r|.e]  — glassmorphism card
+    .fc-icon .fc-title .fc-desc
+
+  .stat-block — big animated number
+    .stat-num [.v|.c]  .stat-label  .stat-sub
+
+  .waveform-wrap [.amber] — SVG audio waveform
+    <svg><polyline points="..."/></svg>
+
+  .timeline → .tl-item → .tl-dot [.c|.a] + .tl-content
+    .tl-title .tl-desc
+
+-->
+<html lang="he" dir="rtl">
+<head><meta charset="UTF-8"><title>Template — AI Presentation</title></head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════
+     01  COVER — שקופית פתיחה
+════════════════════════════════════════════════════════════ -->
+<section class="s-cover" data-transition="fade" data-transition-speed="slow">
+  <div class="bg bg-dots" style="opacity:.4"></div>
+  <div class="orb" style="width:700px;height:700px;top:50%;left:30%;transform:translate(-50%,-50%);animation-duration:9s"></div>
+  <div class="orb cyan" style="width:500px;height:500px;top:55%;left:72%;transform:translate(-50%,-50%);animation-duration:7s;animation-delay:-3s"></div>
+  <div class="s-cover-ring-spin r1"></div>
+  <div class="s-cover-ring-spin r2"></div>
+  <div class="s-cover-ring-spin r3"></div>
+  <div class="s-cover-inner z1">
+    <span class="s-cover-eyebrow">42 Creative × AI Workshop</span>
+    <h1>כותרת ראשית</h1>
+    <div class="s-cover-sub">תת-כותרת או תיאור קצר</div>
+    <div class="s-cover-tagline">מילה א׳ &nbsp;·&nbsp; מילה ב׳ &nbsp;·&nbsp; מילה ג׳</div>
+  </div>
+  <div class="marquee-strip">
+    <span class="marquee-inner">ARTIFICIAL INTELLIGENCE &nbsp;·&nbsp; 42 CREATIVE &nbsp;·&nbsp; AI WORKSHOP &nbsp;·&nbsp; ARTIFICIAL INTELLIGENCE &nbsp;·&nbsp; 42 CREATIVE &nbsp;·&nbsp; AI WORKSHOP &nbsp;·&nbsp;</span>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     02  SECTION — כותרת פרק
+════════════════════════════════════════════════════════════ -->
+<section class="s-section" data-transition="fade" data-transition-speed="slow">
+  <div class="bg bg-dots" style="opacity:.25"></div>
+  <div class="orb" style="width:1000px;height:1000px;top:40%;left:50%;transform:translate(-50%,-50%);animation-duration:12s;opacity:.6"></div>
+  <div class="s-section-ring" style="width:600px;height:600px;transform:translate(-50%,-50%)"></div>
+  <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%)"></div>
+  <div class="s-section-hline top"></div>
+  <div class="s-section-hline bottom"></div>
+  <div class="s-section-ghost">G</div>  <!-- אות ראשית של שם הכלי -->
+  <div class="s-section-inner z1">
+    <div class="s-section-bar"></div>
+    <span class="s-section-num">01 / 07</span>
+    <h2>שם הפרק</h2>
+    <p class="s-section-desc">תיאור קצר של מה הפרק עוסק בו</p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     03  STATEMENT — משפט מרכזי / חידה
+════════════════════════════════════════════════════════════ -->
+<section class="s-statement" data-transition="zoom" data-transition-speed="slow">
+  <div class="s-accent-h top"></div>
+  <div class="s-accent-h bottom"></div>
+  <div class="s-statement-conic"></div>
+  <div class="s-statement-conic2"></div>
+  <div class="ring ring-1"></div>
+  <div class="ring ring-2"></div>
+  <div class="ring ring-3"></div>
+  <div class="s-statement-inner z1">
+    <span class="eyebrow amber" style="animation:fade-up .6s ease both;font-size:.6em">eyebrow אופציונלי</span>
+    <span class="s-statement-word outline" style="animation-delay:.05s">שורה ראשונה</span>
+    <span class="s-statement-word g" style="animation-delay:.12s">שורה שנייה</span>
+    <span class="s-statement-word fire" style="animation-delay:.19s">שורה שלישית</span>
+    <p class="s-statement-sub">הסבר קצר אם צריך</p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     04  TEXT — שקופית טקסט עם 2 עמודות
+════════════════════════════════════════════════════════════ -->
+<section class="s-text" data-transition="slide">
+  <div class="s-text-accent-col"></div>
+  <div class="s-text-main z1">
+    <div class="hdr">
+      <span class="chip" style="margin-bottom:.8em">🔖 תגית</span>
+      <h2>כותרת השקופית</h2>
+    </div>
+    <div class="s-text-blocks">
+      <div class="tblock fragment" style="animation-delay:.05s">
+        <span class="lbl">תווית א׳</span>
+        <p>תוכן הבלוק הראשון. ניתן להשתמש ב-<strong>bold</strong> ו-<em>emphasis</em>.</p>
+      </div>
+      <div class="tblock c fragment" style="animation-delay:.12s">
+        <span class="lbl">תווית ב׳</span>
+        <p>תוכן הבלוק השני. `.tblock.c` מוסיף הדגשה בצבע cyan.</p>
+      </div>
+      <div class="tblock fragment" style="animation-delay:.19s">
+        <span class="lbl">תווית ג׳</span>
+        <p>בלוק שלישי.</p>
+      </div>
+      <div class="tblock c fragment" style="animation-delay:.26s">
+        <span class="lbl">תווית ד׳</span>
+        <p>בלוק רביעי.</p>
+      </div>
+    </div>
+  </div>
+  <div class="s-text-ghost">T</div>
+</section>
+
+<!-- TEXT — גרסה עם feat-cards (עדיף מ-tblocks לרשימות יכולות) -->
+<section class="s-text" data-transition="slide">
+  <div class="s-text-accent-col"></div>
+  <div class="s-text-main z1">
+    <div class="hdr" style="margin-bottom:32px">
+      <h2>יכולות הכלי</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div class="feat-card fragment" style="animation-delay:.05s">
+        <svg class="vi w" style="width:1.4em;height:1.4em"><use href="#ic-camera"/></svg>
+        <span class="fc-title">יצירת וידאו</span>
+        <span class="fc-desc">טקסט קצר שמסביר את הפיצ׳ר בשורה אחת.</span>
+      </div>
+      <div class="feat-card c fragment" style="animation-delay:.12s">
+        <svg class="vi w c" style="width:1.4em;height:1.4em"><use href="#ic-mic"/></svg>
+        <span class="fc-title">קלט קולי</span>
+        <span class="fc-desc">טקסט קצר.</span>
+      </div>
+      <div class="feat-card a fragment" style="animation-delay:.19s">
+        <svg class="vi w a" style="width:1.4em;height:1.4em"><use href="#ic-sparkle"/></svg>
+        <span class="fc-title">טיפ</span>
+        <span class="fc-desc">טקסט קצר.</span>
+      </div>
+      <div class="feat-card fragment" style="animation-delay:.26s">
+        <svg class="vi w" style="width:1.4em;height:1.4em"><use href="#ic-wand"/></svg>
+        <span class="fc-title">אוטומציה</span>
+        <span class="fc-desc">טקסט קצר.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     05a  SPLIT — טקסט + תמונה (תמונה בשמאל)
+════════════════════════════════════════════════════════════ -->
+<section class="s-split s-split-tl" data-transition="slide">
+  <div class="s-split-img">
+    <!-- תמונה רוחבית (16:9 / 4:3) — object-fit:cover מלא -->
+    <img src="assets/demos/image.png" class="img-art" style="object-fit:cover;width:100%;height:100%">
+    <!-- אופציונלי: label על התמונה -->
+    <div class="img-label">כיתוב תמונה</div>
+  </div>
+  <div class="s-split-content">
+    <span class="eyebrow">תגית / eyebrow</span>
+    <h2>כותרת</h2>
+    <p>פסקה ראשונה של תוכן.</p>
+    <div class="tblock" style="margin-top:1.2em">
+      <span class="lbl">נקודה חשובה</span>
+      <p>פירוט נוסף.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 05b  SPLIT — תמונה בימין (ברירת מחדל RTL) -->
+<section class="s-split s-split-tr" data-transition="slide">
+  <div class="s-split-content">
+    <span class="eyebrow cyan">eyebrow</span>
+    <h2>כותרת</h2>
+    <p>תוכן.</p>
+  </div>
+  <div class="s-split-img">
+    <img src="assets/demos/image.png" class="img-art" style="object-fit:cover;width:100%;height:100%">
+  </div>
+</section>
+
+<!-- 05c  SPLIT — עמודות מותאמות אישית (רמה 2) -->
+<section class="s-split s-split-tl" data-transition="slide" style="--s-cols:35% 65%">
+  <!-- תמונה לוקחת 65% מהמסך (יותר גדולה) -->
+  <div class="s-split-img">
+    <img src="assets/demos/image.png" class="img-art" style="object-fit:cover;width:100%;height:100%">
+  </div>
+  <div class="s-split-content">
+    <h2>כותרת</h2>
+    <p>תוכן. התמונה לוקחת 65% מהמסך.</p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     06a  VIDEO — טקסט + וידאו רוחבי (16:9)
+     ברירת מחדל: טקסט 55%, וידאו 45%
+════════════════════════════════════════════════════════════ -->
+<section class="s-video" data-transition="slide">
+  <div class="s-split-content" style="padding:70px 40px 70px 80px">
+    <span class="eyebrow">eyebrow</span>
+    <h2>כותרת</h2>
+    <p>תיאור מה רואים בוידאו.</p>
+  </div>
+  <div class="s-video-pane">
+    <video class="v-169" src="assets/demos/video.mp4" autoplay muted loop playsinline></video>
+  </div>
+</section>
+
+<!-- 06b  VIDEO — וידאו גדול (רמה 2: wide modifier) -->
+<section class="s-video video-wide" data-transition="slide">
+  <!-- טקסט 28%, וידאו 72% -->
+  <div class="s-split-content" style="padding:70px 30px 70px 60px">
+    <span class="eyebrow">שם הכלי</span>
+    <h2>שם הפיצ׳ר</h2>
+    <p>תיאור קצר.</p>
+  </div>
+  <div class="s-video-pane">
+    <video class="v-169" src="assets/demos/video.mp4" autoplay muted loop playsinline></video>
+  </div>
+</section>
+
+<!-- 06c  VIDEO — וידאו אנכי (9:16 / stories / kling) -->
+<section class="s-video video-portrait" data-transition="slide">
+  <!-- טקסט 62%, וידאו 38% -->
+  <div class="s-split-content" style="padding:80px 56px 80px 100px">
+    <span class="eyebrow">סטוריז / Reels</span>
+    <h2>וידאו אנכי</h2>
+    <p>הוידאו הוא 9:16 (פורמט טלפון). התוכן לוקח יותר מקום.</p>
+  </div>
+  <div class="s-video-pane">
+    <video class="v-916" src="assets/demos/vertical.mp4" autoplay muted loop playsinline
+           style="height:100%;max-height:90%;"></video>
+  </div>
+</section>
+
+<!-- 06d  VIDEO — override column ratio באמצעות CSS var -->
+<section class="s-video" data-transition="slide" style="--v-cols:32% 68%">
+  <div class="s-split-content" style="padding:60px 30px 60px 70px">
+    <h2>כותרת</h2>
+    <p>הוידאו לוקח 68% מהמסך.</p>
+  </div>
+  <div class="s-video-pane">
+    <video class="v-169" src="assets/demos/video.mp4" autoplay muted loop playsinline></video>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     07  VIDEO-2 — טקסט + 2 וידאוים זה לצד זה
+════════════════════════════════════════════════════════════ -->
+
+<!-- 07a  VIDEO-2 — 2 וידאוים רוחביים (16:9) -->
+<section class="s-video-2" data-transition="slide">
+  <div class="s-split-content" style="padding:80px 40px 80px 80px">
+    <span class="eyebrow">השוואה</span>
+    <h2>לפני ואחרי</h2>
+    <p>שני וידאוים זה לצד זה להשוואה.</p>
+  </div>
+  <div class="s-video-2-panes">
+    <div class="s-video-pane">
+      <video class="v-169" src="assets/demos/before.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="s-video-pane">
+      <video class="v-169" src="assets/demos/after.mp4" autoplay muted loop playsinline></video>
+    </div>
+  </div>
+</section>
+
+<!-- 07b  VIDEO-2 — 2 וידאוים אנכיים -->
+<section class="s-video-2 video-portrait" data-transition="slide">
+  <div class="s-split-content" style="padding:80px 40px 80px 80px">
+    <span class="eyebrow">השוואה</span>
+    <h2>שתי זוויות</h2>
+    <p>אותה סצנה מ-2 זוויות שונות.</p>
+  </div>
+  <div class="s-video-2-panes">
+    <div class="s-video-pane">
+      <video class="v-916" src="assets/demos/angle-a.mp4" autoplay muted loop playsinline
+             style="height:85%;"></video>
+    </div>
+    <div class="s-video-pane">
+      <video class="v-916" src="assets/demos/angle-b.mp4" autoplay muted loop playsinline
+             style="height:85%;"></video>
+    </div>
+  </div>
+</section>
+
+<!-- 07c  BESPOKE — 2 וידאוים אנכיים + תוכן מרכזי (WOW slide) -->
+<section class="s-gold" data-transition="convex" data-transition-speed="fast">
+  <div class="s-gold-glow-bg"></div>
+  <div class="s-gold-corner tl"></div>
+  <div class="s-gold-corner br"></div>
+  <div style="position:absolute;inset:0;display:grid;grid-template-columns:auto 1fr auto;
+              gap:48px;align-items:center;padding:0 60px;direction:rtl;z-index:2">
+    <div class="s-media-wrap">
+      <video class="v-916" src="assets/demos/angle-a.mp4" autoplay muted loop playsinline
+             style="height:520px;border-radius:18px;" class="media-shadow"></video>
+      <div style="text-align:center;margin-top:10px;font-size:.38em;color:var(--a-hi);font-family:var(--mono)">📹 זווית א׳</div>
+    </div>
+    <div style="text-align:center;padding:0 20px">
+      <div class="s-gold-badge">✦ &nbsp; טיפ זהב</div>
+      <h2>כותרת הטיפ</h2>
+      <p>הסבר הטיפ — ניתן להשתמש ב-<strong>bold</strong>.</p>
+    </div>
+    <div class="s-media-wrap">
+      <video class="v-916" src="assets/demos/angle-b.mp4" autoplay muted loop playsinline
+             style="height:520px;border-radius:18px;" class="media-shadow"></video>
+      <div style="text-align:center;margin-top:10px;font-size:.38em;color:var(--a-hi);font-family:var(--mono)">📹 זווית ב׳</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     08  SPLIT-2IMG — טקסט + 2 תמונות (מוערמות)
+════════════════════════════════════════════════════════════ -->
+<section class="s-split-2img" data-transition="slide">
+  <div class="s-split-content">
+    <span class="eyebrow">תגית</span>
+    <h2>כותרת</h2>
+    <p>שתי תמונות מוצגות זו מתחת לזו בצד ימין.</p>
+  </div>
+  <div class="s-2img-panes">
+    <img src="assets/demos/image-1.png" alt="">
+    <img src="assets/demos/image-2.png" alt="">
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     09  FULLBLEED — מדיה מלאה + overlay טקסט
+════════════════════════════════════════════════════════════ -->
+
+<!-- 09a  FULLBLEED — וידאו ברקע, טקסט תחתון-ימין -->
+<section class="s-fullbleed" data-transition="fade">
+  <div class="s-fb-media">
+    <video class="v-169" src="assets/demos/video.mp4" autoplay muted loop playsinline
+           style="width:100%;height:100%;object-fit:cover"></video>
+  </div>
+  <div class="s-fb-overlay"></div>
+  <div class="s-fb-content">
+    <span class="eyebrow">טיפ</span>
+    <h2>כותרת על גבי הוידאו</h2>
+    <p>תיאור קצר.</p>
+  </div>
+</section>
+
+<!-- 09b  FULLBLEED — תמונה ברקע, טקסט מרכזי-תחתון -->
+<section class="s-fullbleed" data-transition="fade">
+  <div class="s-fb-media">
+    <img src="assets/demos/ch-gemini-bg.png" alt="">
+  </div>
+  <div class="s-fb-overlay"></div>
+  <div class="s-fb-content-center">
+    <h2>כותרת מרכזית</h2>
+    <p>תיאור על גבי תמונת רקע.</p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     10  GOLD TIP — שקופית טיפ זהב
+════════════════════════════════════════════════════════════ -->
+<section class="s-gold" data-transition="convex" data-transition-speed="fast">
+  <div class="s-gold-glow-bg"></div>
+  <div class="s-gold-corner tl"></div>
+  <div class="s-gold-corner br"></div>
+  <div class="s-gold-inner z1">
+    <div class="s-gold-badge">
+      <svg class="vi w a" style="width:1.1em;height:1.1em;vertical-align:middle"><use href="#ic-sparkle"/></svg>
+      &nbsp; טיפ זהב · שם הכלי
+    </div>
+    <h2>כותרת הטיפ</h2>
+    <p>הסבר הטיפ באורך של 1-3 משפטים.</p>
+  </div>
+</section>
+
+<!-- GOLD — עם feat-cards -->
+<section class="s-gold" data-transition="convex">
+  <div class="s-gold-glow-bg"></div>
+  <div class="s-gold-corner tl"></div>
+  <div class="s-gold-corner br"></div>
+  <div class="s-gold-inner z1" style="max-width:90%">
+    <div class="s-gold-badge">
+      <svg class="vi w a" style="width:1.1em;height:1.1em;vertical-align:middle"><use href="#ic-sparkle"/></svg>
+      &nbsp; 3 טיפים חשובים
+    </div>
+    <h2>כותרת</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:1.2em">
+      <div class="feat-card a" style="animation-delay:.1s">
+        <span class="fc-icon">💡</span>
+        <span class="fc-title">טיפ א׳</span>
+        <span class="fc-desc">הסבר קצר.</span>
+      </div>
+      <div class="feat-card a" style="animation-delay:.2s">
+        <span class="fc-icon">🎯</span>
+        <span class="fc-title">טיפ ב׳</span>
+        <span class="fc-desc">הסבר קצר.</span>
+      </div>
+      <div class="feat-card a" style="animation-delay:.3s">
+        <span class="fc-icon">✨</span>
+        <span class="fc-title">טיפ ג׳</span>
+        <span class="fc-desc">הסבר קצר.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     11  STATS — מספרים גדולים (סטטיסטיקות / מפרט)
+════════════════════════════════════════════════════════════ -->
+<section class="s-stats" data-transition="slide">
+  <div class="bg bg-dots" style="opacity:.3"></div>
+  <div class="orb" style="width:800px;height:800px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.08;animation-duration:12s"></div>
+  <div class="s-stats-hdr z1">
+    <span class="eyebrow">מפרט הכלי</span>
+    <h2>מה הכלי יודע לעשות</h2>
+  </div>
+  <div class="s-stats-grid z1">
+    <div class="stat-block" style="animation-delay:.05s">
+      <span class="stat-num">4K</span>
+      <span class="stat-label">רזולוציה מקסימלית</span>
+    </div>
+    <div class="stat-block" style="animation-delay:.12s">
+      <span class="stat-num v">120</span>
+      <span class="stat-label">שניות מקסימום</span>
+    </div>
+    <div class="stat-block" style="animation-delay:.19s">
+      <span class="stat-num">32+</span>
+      <span class="stat-label">סגנונות זמינים</span>
+    </div>
+    <div class="stat-block" style="animation-delay:.26s">
+      <span class="stat-num c">∞</span>
+      <span class="stat-label">גרסאות לשנות</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS — 3 עמודות -->
+<section class="s-stats" data-transition="slide">
+  <div class="s-stats-hdr z1">
+    <h2>כותרת</h2>
+  </div>
+  <div class="s-stats-grid cols-3 z1">
+    <div class="stat-block"><span class="stat-num">100+</span><span class="stat-label">שפות</span></div>
+    <div class="stat-block"><span class="stat-num v">8h</span><span class="stat-label">אודיו ביום</span></div>
+    <div class="stat-block"><span class="stat-num c">99%</span><span class="stat-label">דיוק</span></div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     12  COMPARE — השוואה שתי עמודות
+════════════════════════════════════════════════════════════ -->
+<section class="s-compare" data-transition="slide">
+  <div class="s-compare-vs">VS</div>
+  <div class="s-compare-col">
+    <div class="col-title v">
+      <svg class="vi w" style="width:1em;height:1em"><use href="#ic-sparkle"/></svg>
+      עם AI
+    </div>
+    <ul>
+      <li><span class="rdot v"></span>יתרון א׳</li>
+      <li><span class="rdot v"></span>יתרון ב׳</li>
+      <li><span class="rdot v"></span>יתרון ג׳</li>
+    </ul>
+  </div>
+  <div class="s-compare-col">
+    <div class="col-title c">בלי AI</div>
+    <ul>
+      <li><span class="rdot c"></span>חיסרון א׳</li>
+      <li><span class="rdot c"></span>חיסרון ב׳</li>
+      <li><span class="rdot c"></span>חיסרון ג׳</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     13  STEPS — שלבים בתהליך
+════════════════════════════════════════════════════════════ -->
+<section class="s-steps" data-transition="slide">
+  <div class="bg bg-grid" style="opacity:.4"></div>
+  <div class="s-steps-hdr z1">
+    <span class="eyebrow">תהליך</span>
+    <h2>איך עובדים עם הכלי</h2>
+  </div>
+  <div class="s-steps-track z1">
+    <div class="step" style="animation-delay:.05s">
+      <div class="step-node">1</div>
+      <div class="step-title">שלב ראשון</div>
+      <div class="step-desc">תיאור קצר של השלב הראשון.</div>
+    </div>
+    <div class="step" style="animation-delay:.12s">
+      <div class="step-node">2</div>
+      <div class="step-title">שלב שני</div>
+      <div class="step-desc">תיאור קצר של השלב השני.</div>
+    </div>
+    <div class="step" style="animation-delay:.19s">
+      <div class="step-node">3</div>
+      <div class="step-title">שלב שלישי</div>
+      <div class="step-desc">תיאור קצר של השלב השלישי.</div>
+    </div>
+    <div class="step" style="animation-delay:.26s">
+      <div class="step-node">4</div>
+      <div class="step-title">תוצאה</div>
+      <div class="step-desc">מה מקבלים בסוף.</div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS — עם timeline (לנרטיב כרונולוגי) -->
+<section class="s-text" data-transition="slide">
+  <div class="s-text-accent-col"></div>
+  <div class="s-text-main z1">
+    <div class="hdr" style="margin-bottom:28px">
+      <h2>ציר הזמן</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot">01</div>
+        <div class="tl-content">
+          <div class="tl-title">אירוע ראשון — 2022</div>
+          <div class="tl-desc">תיאור קצר של מה קרה.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot c">02</div>
+        <div class="tl-content">
+          <div class="tl-title">אירוע שני — 2023</div>
+          <div class="tl-desc">תיאור קצר.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot a">03</div>
+        <div class="tl-content">
+          <div class="tl-title">אירוע שלישי — 2024</div>
+          <div class="tl-desc">תיאור קצר.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     14  GALLERY — גלריית כרטיסים אופקית
+════════════════════════════════════════════════════════════ -->
+<section class="s-gallery" data-transition="slide">
+  <div class="s-gallery-hdr z1">
+    <span class="eyebrow">גלריה</span>
+    <h2>דוגמאות</h2>
+    <p>גלול ימינה לראות עוד</p>
+  </div>
+  <div class="s-gallery-strip z1">
+    <div class="gcard" style="animation-delay:.05s">
+      <div class="gcard-img gc1">
+        <span class="badge badge-v" style="position:absolute;top:12px;right:12px">NEW</span>
+      </div>
+      <div class="gcard-body">
+        <div class="ct">כותרת הכרטיס</div>
+        <div class="cs">תיאור קצר של הכרטיס.</div>
+      </div>
+    </div>
+    <div class="gcard" style="animation-delay:.1s">
+      <div class="gcard-img gc2"></div>
+      <div class="gcard-body">
+        <div class="ct">כרטיס שני</div>
+        <div class="cs">תיאור.</div>
+      </div>
+    </div>
+    <div class="gcard" style="animation-delay:.15s">
+      <div class="gcard-img gc3"></div>
+      <div class="gcard-body">
+        <div class="ct">כרטיס שלישי</div>
+        <div class="cs">תיאור.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     15  3COL — שלוש עמודות שוות
+════════════════════════════════════════════════════════════ -->
+<section class="s-3col" data-transition="slide">
+  <div class="s-3col-hdr z1">
+    <span class="eyebrow">השוואה / תכונות</span>
+    <h2>כותרת</h2>
+  </div>
+  <div class="s-3col-body z1">
+    <div class="s-3col-col" style="animation-delay:.05s">
+      <svg class="vi w" style="width:2em;height:2em"><use href="#ic-gem"/></svg>
+      <strong style="color:var(--white);font-size:.8em">עמודה א׳</strong>
+      <div class="feat-card">
+        <span class="fc-title">פיצ׳ר 1</span>
+        <span class="fc-desc">תיאור.</span>
+      </div>
+      <div class="feat-card">
+        <span class="fc-title">פיצ׳ר 2</span>
+        <span class="fc-desc">תיאור.</span>
+      </div>
+    </div>
+    <div class="s-3col-col" style="animation-delay:.12s">
+      <svg class="vi w c" style="width:2em;height:2em"><use href="#ic-camera"/></svg>
+      <strong style="color:var(--white);font-size:.8em">עמודה ב׳</strong>
+      <div class="feat-card c">
+        <span class="fc-title">פיצ׳ר 1</span>
+        <span class="fc-desc">תיאור.</span>
+      </div>
+    </div>
+    <div class="s-3col-col" style="animation-delay:.19s">
+      <svg class="vi w a" style="width:2em;height:2em"><use href="#ic-sparkle"/></svg>
+      <strong style="color:var(--white);font-size:.8em">עמודה ג׳</strong>
+      <div class="feat-card a">
+        <span class="fc-title">פיצ׳ר 1</span>
+        <span class="fc-desc">תיאור.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     16  WAVEFORM — שקופית עם waveform SVG (ElevenLabs / Suno)
+════════════════════════════════════════════════════════════ -->
+<section class="s-video" data-transition="slide">
+  <div class="s-split-content" style="padding:70px 40px 70px 80px">
+    <span class="eyebrow cyan">ElevenLabs · קול</span>
+    <h2>Voice Design</h2>
+    <!-- waveform כאלמנט דקורטיבי בתוך תוכן -->
+    <div class="waveform-wrap" style="margin:1.2em 0">
+      <svg viewBox="0 0 300 48" preserveAspectRatio="none">
+        <polyline points="0,24 8,8 16,38 24,12 32,36 40,16 48,40 56,6 64,42 72,20 80,30 88,4 96,44 104,14 112,34 120,8 128,40 136,18 144,32 152,10 160,38 168,22 176,36 184,6 192,42 200,16 208,28 216,8 224,38 232,20 240,32 248,12 256,40 264,24 272,36 280,10 288,30 296,18 300,24"/>
+      </svg>
+    </div>
+    <p>תיאור הפיצ׳ר.</p>
+  </div>
+  <div class="s-video-pane">
+    <video class="v-169" src="assets/demos/voice-demo.mp4" autoplay muted loop playsinline></video>
+  </div>
+</section>
+
+<!-- WAVEFORM — amber variant (Suno) -->
+<section class="s-text" data-transition="slide">
+  <div class="s-text-accent-col" style="background:var(--grad-gold)"></div>
+  <div class="s-text-main z1">
+    <div class="hdr">
+      <h2>Suno — מוזיקה</h2>
+    </div>
+    <div class="waveform-wrap amber" style="margin-bottom:1.5em">
+      <svg viewBox="0 0 300 48" preserveAspectRatio="none">
+        <polyline points="0,24 6,10 12,38 18,14 24,34 30,8 36,42 42,16 48,36 54,10 60,40 66,20 72,28 78,6 84,44 90,18 96,32 102,12 108,40 114,22 120,36 126,8 132,42 138,18 144,30 150,10 156,38 162,22 168,34 174,8 180,40 186,16 192,28 198,6 204,42 210,20 216,30 222,12 228,40 234,18 240,28 246,8 252,38 258,20 264,32 270,10 276,36 282,16 288,28 294,8 300,24"/>
+      </svg>
+    </div>
+    <div class="s-text-blocks" style="grid-template-columns:1fr;gap:20px">
+      <div class="tblock">
+        <span class="lbl">פיצ׳ר</span>
+        <p>תוכן.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     17  CAPS — גריד יכולות (ניווט לפרקים)
+════════════════════════════════════════════════════════════ -->
+<section class="s-caps" data-transition="zoom" data-transition-speed="fast">
+  <div class="bg bg-dots" style="opacity:.3"></div>
+  <div class="orb" style="width:900px;height:900px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.1;animation-duration:12s"></div>
+  <div class="s-caps-hdr z1">
+    <span class="chip cyan" style="margin-bottom:.7em">🤖 יכולות AI</span>
+    <h2>מה ה-AI יודע לעשות?</h2>
+  </div>
+  <div class="s-caps-grid z1">
+    <div class="cap-item highlight" data-goto="section-id" data-no-advance="true" style="animation-delay:.00s;cursor:pointer">
+      <svg class="vi w" style="width:2em;height:2em"><use href="#ic-camera"/></svg>
+      <div class="ct">יכולת א׳</div>
+      <div class="cs">כלי · כלי</div>
+    </div>
+    <div class="cap-item" data-goto="section-id-2" data-no-advance="true" style="animation-delay:.05s;cursor:pointer">
+      <svg class="vi w c" style="width:2em;height:2em"><use href="#ic-mic"/></svg>
+      <div class="ct">יכולת ב׳</div>
+      <div class="cs">כלי</div>
+    </div>
+    <!-- המשך cap-items... -->
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     18  BASE — escape hatch לשקופית bespoke
+════════════════════════════════════════════════════════════ -->
+<section class="s-base" data-transition="zoom">
+  <div class="bg bg-dots" style="opacity:.3"></div>
+  <div class="orb" style="width:700px;height:700px;top:50%;left:30%;transform:translate(-50%,-50%)"></div>
+  <div class="orb cyan" style="width:500px;height:500px;top:40%;left:70%;transform:translate(-50%,-50%);animation-delay:-3s"></div>
+  <!-- כאן כל layout שרוצים — ב-position:absolute -->
+  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2">
+    <div style="text-align:center">
+      <h2>Layout חופשי</h2>
+      <p>כאן אפשר לבנות כל דבר מ-scratch עם atmosphere של s-base.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     19  OUTRO — שקופית סיום
+════════════════════════════════════════════════════════════ -->
+<section class="s-outro" data-transition="zoom" data-transition-speed="slow">
+  <div class="outro-glow"></div>
+  <div class="outro-ring a"></div>
+  <div class="outro-ring b"></div>
+  <div class="outro-ring c"></div>
+  <div class="outro-ring d"></div>
+  <div class="s-outro-inner">
+    <h1>תודה!</h1>
+    <div class="outro-line"></div>
+    <p>מה שאלות? בואו נדבר.</p>
+    <div class="outro-contact">ori@42creative.co.il</div>
+    <div class="s-outro-logo">
+      <img src="assets/logo-42.png" alt="42 Creative">
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>

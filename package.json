@@ -1,0 +1,12 @@
+{
+  "name": "ai-presentation-gen",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "fal.ai asset generator for AI Presentation",
+  "scripts": {
+    "gen": "node --env-file=.env generate-images.js"
+  },
+  "dependencies": {
+    "@fal-ai/client": "^1.0.0"
+  }
+}

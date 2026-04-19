@@ -683,12 +683,229 @@
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
   .s-outro-logo { margin-top: 2.2em; }
   .s-outro-logo img { height: 50px !important; max-height: 50px !important; width: auto !important; }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     ADAPTIVE MEDIA — aspect-ratio classes (no black bars)
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  /* Apply these directly on <video> or <img> elements */
+  .v-169 { aspect-ratio:16/9; width:100%; height:auto; max-height:100%; object-fit:cover; display:block; }
+  .v-916 { aspect-ratio:9/16; height:100%; width:auto; max-width:100%; object-fit:cover; display:block; }
+  .v-11  { aspect-ratio:1/1;  height:80%; width:auto; max-width:80%; object-fit:cover; display:block; }
+  .v-43  { aspect-ratio:4/3;  width:100%; height:auto; max-height:100%; object-fit:cover; display:block; }
+  .v-219 { aspect-ratio:21/9; width:100%; height:auto; object-fit:cover; display:block; }
+
+  /* Media wrapper — flex-center, no black bg */
+  .s-media-wrap {
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden; background:transparent;
+  }
+
+  /* Override existing s-video-pane: remove black bg, use flex-center */
+  .s-video-pane {
+    background:transparent !important;
+    display:flex !important; align-items:center !important; justify-content:center !important;
+  }
+
+  /* s-video: CSS-variable columns for easy inline override */
+  .s-video { grid-template-columns:var(--v-cols,55% 45%) !important; }
+
+  /* Layout modifiers by video aspect ratio */
+  .s-video.video-portrait { --v-cols:62% 38%; }
+  .s-video.video-wide     { --v-cols:28% 72%; }
+  .s-video.video-square   { --v-cols:50% 50%; }
+
+  /* s-split: CSS-variable columns */
+  .s-split-tr { grid-template-columns:var(--s-cols,55% 45%) !important; }
+  .s-split-tl { grid-template-columns:var(--s-cols,45% 55%) !important; }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     NEW LAYOUTS
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  /* TEXT + 2 VIDEOS side by side */
+  .s-video-2 {
+    display:grid !important; height:100%;
+    grid-template-columns:var(--v2-cols,38% 62%);
+    background:transparent !important; position:relative; overflow:hidden !important;
+  }
+  .s-video-2.video-portrait { --v2-cols:55% 45%; }
+  .s-video-2-panes {
+    display:grid; grid-template-columns:1fr 1fr; gap:6px;
+    overflow:hidden; align-items:center; justify-items:center;
+  }
+
+  /* TEXT + 2 IMAGES stacked vertically */
+  .s-split-2img {
+    display:grid !important; height:100%;
+    grid-template-columns:var(--si-cols,42% 58%);
+    background:transparent !important; position:relative; overflow:hidden !important;
+  }
+  .s-2img-panes {
+    display:grid; grid-template-rows:1fr 1fr; gap:8px;
+    padding:32px 32px 32px 0; overflow:hidden;
+  }
+  .s-2img-panes img, .s-2img-panes video {
+    width:100%; height:100%; object-fit:cover; border-radius:12px; display:block;
+  }
+
+  /* FULLBLEED — media fills entire slide, gradient overlay, text at bottom */
+  .s-fullbleed {
+    position:relative !important; overflow:hidden !important;
+    height:100%; background:transparent !important;
+  }
+  .s-fb-media { position:absolute; inset:0; z-index:0; }
+  .s-fb-media video, .s-fb-media img { width:100%; height:100%; object-fit:cover; display:block; }
+  .s-fb-overlay {
+    position:absolute; inset:0; z-index:1;
+    background:linear-gradient(to top, rgba(5,5,14,.92) 30%, rgba(5,5,14,.35) 65%, transparent 100%);
+  }
+  .s-fb-content { position:absolute; bottom:80px; right:80px; z-index:2; max-width:55%; }
+  .s-fb-content-center {
+    position:absolute; bottom:80px; left:50%; transform:translateX(-50%);
+    z-index:2; width:70%; text-align:center;
+  }
+
+  /* STATS GRID — big animated numbers */
+  .s-stats {
+    display:grid !important; grid-template-rows:auto 1fr;
+    height:100%; background:transparent !important; position:relative; overflow:hidden !important;
+  }
+  .s-stats-hdr { padding:60px 80px 20px; position:relative; z-index:1; animation:fade-up .6s ease both; }
+  .s-stats-hdr h2 { font-size:2.1em !important; color:var(--white) !important; }
+  .s-stats-grid {
+    display:grid; grid-template-columns:repeat(4,1fr); gap:20px;
+    align-items:center; padding:20px 80px 60px; position:relative; z-index:1;
+  }
+  .s-stats-grid.cols-3 { grid-template-columns:repeat(3,1fr); }
+  .s-stats-grid.cols-2 { grid-template-columns:repeat(2,1fr); }
+
+  /* BASE — no layout, only background atmosphere for bespoke slides */
+  .s-base {
+    display:flex !important; height:100%; overflow:hidden !important;
+    position:relative; background:transparent !important;
+  }
+
+  /* 3-COLUMN layout */
+  .s-3col {
+    display:grid !important; grid-template-rows:auto 1fr;
+    height:100%; background:transparent !important; position:relative; overflow:hidden !important;
+  }
+  .s-3col-hdr { grid-column:1/-1; padding:55px 80px 16px; animation:fade-up .6s ease both; }
+  .s-3col-hdr h2 { font-size:2em !important; color:var(--white) !important; }
+  .s-3col-body { display:grid; grid-template-columns:1fr 1fr 1fr; }
+  .s-3col-col { padding:20px 44px 55px; display:flex; flex-direction:column; gap:18px; animation:fade-up .6s ease both; }
+  .s-3col-col:not(:last-child) { border-left:1px solid rgba(255,255,255,.05); }
+
+  /* Transparent bg for new layouts */
+  .reveal .slides > section.s-video-2,
+  .reveal .slides > section.s-split-2img,
+  .reveal .slides > section.s-fullbleed,
+  .reveal .slides > section.s-stats,
+  .reveal .slides > section.s-base,
+  .reveal .slides > section.s-3col {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     VISUAL COMPONENTS
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  /* GLASSMORPHISM FEATURE CARDS */
+  .feat-card {
+    background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.09);
+    border-radius:16px; padding:26px 22px; backdrop-filter:blur(12px);
+    position:relative; overflow:hidden; animation:fade-up .6s ease both;
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .feat-card::before {
+    content:''; position:absolute; top:0; left:0; right:0; height:2px;
+    background:var(--grad);
+  }
+  .feat-card.c::before { background:linear-gradient(90deg,var(--cyan),var(--emerald)); }
+  .feat-card.a::before { background:var(--grad-gold); }
+  .feat-card.r::before { background:var(--grad-fire); }
+  .feat-card.e::before { background:linear-gradient(90deg,var(--emerald),var(--cyan)); }
+  .fc-icon { font-size:1.5em; display:block; line-height:1; }
+  .fc-title { font-weight:700; color:var(--white); font-size:.85em; line-height:1.3; }
+  .fc-desc  { color:var(--muted); font-size:.72em; line-height:1.55; }
+
+  /* STAT BLOCKS — big animated numbers */
+  .stat-block {
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+    padding:30px 20px; border:1px solid rgba(255,255,255,.06); border-radius:16px;
+    animation:scale-in .5s ease both; background:rgba(255,255,255,.02);
+  }
+  .stat-num {
+    font-size:3.8em; font-weight:900; font-family:var(--mono); line-height:1;
+    background:var(--grad-gold); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+    animation:glow-amber 3s ease-in-out infinite;
+  }
+  .stat-num.v { background:var(--grad); animation:glow-num 3s ease-in-out infinite; }
+  .stat-num.c { background:linear-gradient(135deg,var(--cyan),var(--c-hi)); -webkit-background-clip:text; background-clip:text; }
+  .stat-label {
+    font-size:.52em; color:var(--muted); letter-spacing:.1em;
+    text-transform:uppercase; text-align:center; line-height:1.4;
+  }
+  .stat-sub { font-size:.6em; color:rgba(255,255,255,.35); text-align:center; }
+
+  /* SVG WAVEFORM (for ElevenLabs / Suno slides) */
+  .waveform-wrap {
+    width:100%; overflow:hidden;
+    animation:breathe 4s ease-in-out infinite alternate;
+  }
+  .waveform-wrap svg { width:100%; height:48px; display:block; }
+  .waveform-wrap polyline { stroke:url(#rg-c); stroke-width:2; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+  .waveform-wrap.amber polyline { stroke:url(#rg-a); }
+
+  /* TIMELINE */
+  .timeline { display:flex; flex-direction:column; }
+  .tl-item {
+    display:grid; grid-template-columns:52px 1fr; gap:18px;
+    padding-bottom:26px; position:relative;
+  }
+  .tl-item:not(:last-child)::before {
+    content:''; position:absolute; left:25px; top:52px;
+    width:2px; height:calc(100% - 26px);
+    background:linear-gradient(to bottom,rgba(124,58,237,.5),transparent);
+  }
+  .tl-dot {
+    width:52px; height:52px; border-radius:50%; flex-shrink:0;
+    border:2px solid var(--violet); background:var(--v-dim);
+    display:flex; align-items:center; justify-content:center;
+    font-weight:700; color:var(--v-hi); font-size:.9em; font-family:var(--mono);
+  }
+  .tl-dot.c { border-color:var(--cyan); background:var(--c-dim); color:var(--c-hi); }
+  .tl-dot.a { border-color:var(--amber); background:var(--a-dim); color:var(--a-hi); }
+  .tl-content { padding-top:12px; }
+  .tl-title { font-weight:700; color:var(--white); font-size:.8em; margin-bottom:4px; }
+  .tl-desc  { color:var(--muted); font-size:.72em; line-height:1.55; }
+
+  /* SVG ICONS — .vi element using <use href="#ic-*"> */
+  .vi {
+    display:inline-block; flex-shrink:0;
+    width:1.8em; height:1.8em; overflow:visible;
+  }
+  .vi use { fill:url(#rg-v); }
+  .vi.c use { fill:url(#rg-c); }
+  .vi.a use { fill:url(#rg-a); }
+  .vi.w { fill:none !important; }
+  .vi.w use {
+    fill:none !important; stroke:url(#rg-v);
+    stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round;
+  }
+  .vi.w.c use { stroke:url(#rg-c); }
+  .vi.w.a use { stroke:url(#rg-a); }
+
+  /* MEDIA border-radius & shadow helpers */
+  .media-rounded { border-radius:14px; overflow:hidden; }
+  .media-shadow  { box-shadow:0 20px 60px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.06); }
   </style>
 </head>
 
 <body data-ai-g="m">
 
-  <!-- SVG gradient defs for stat rings -->
+  <!-- SVG gradient defs + icon library -->
   <svg width="0" height="0" style="position:absolute">
     <defs>
       <linearGradient id="rg-v" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -700,6 +917,48 @@
       <linearGradient id="rg-a" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#fcd34d"/>
       </linearGradient>
+      <!-- Icon symbols — use with <svg class="vi [c|a|w]"><use href="#ic-NAME"/></svg> -->
+      <symbol id="ic-camera" viewBox="0 0 24 24">
+        <path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+      </symbol>
+      <symbol id="ic-mic" viewBox="0 0 24 24">
+        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>
+      </symbol>
+      <symbol id="ic-music" viewBox="0 0 24 24">
+        <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+      </symbol>
+      <symbol id="ic-scissors" viewBox="0 0 24 24">
+        <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+        <line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/>
+        <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+      </symbol>
+      <symbol id="ic-brain" viewBox="0 0 24 24">
+        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+        <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+      </symbol>
+      <symbol id="ic-sparkle" viewBox="0 0 24 24">
+        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17 5.8 21.3l2.4-7.4L2 9.4h7.6z"/>
+      </symbol>
+      <symbol id="ic-wand" viewBox="0 0 24 24">
+        <line x1="3" y1="21" x2="12" y2="12"/><path d="M15 4V2M15 16v-2M8 9h2M20 9h2M17.8 11.8 19 13M17.8 6.2 19 5M12.2 6.2 11 5M12.2 11.8 11 13"/>
+      </symbol>
+      <symbol id="ic-gem" viewBox="0 0 24 24">
+        <polygon points="6 3 18 3 22 9 12 22 2 9"/>
+        <polyline points="2 9 12 13 22 9"/>
+        <line x1="12" y1="22" x2="12" y2="13"/>
+        <line x1="6" y1="3" x2="12" y2="13"/>
+        <line x1="18" y1="3" x2="12" y2="13"/>
+      </symbol>
+      <symbol id="ic-person" viewBox="0 0 24 24">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+      </symbol>
+      <symbol id="ic-play" viewBox="0 0 24 24">
+        <polygon points="5 3 19 12 5 21 5 3"/>
+      </symbol>
+      <symbol id="ic-star" viewBox="0 0 24 24">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </symbol>
     </defs>
   </svg>
 
