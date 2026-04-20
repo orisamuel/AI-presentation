@@ -1130,7 +1130,7 @@
       <!-- ══════════════════════════════════════════════════════
            08 — WHAT'S IN THIS PRESENTATION
       ══════════════════════════════════════════════════════ -->
-      <section class="s-split s-split-tl" data-transition="slide">
+      <section class="s-split s-split-tl" data-transition="slide" style="--s-cols:30% 70%">
         <div class="s-split-img">
           <img src="assets/demos/slide09-visual.png" class="img-art" style="object-fit:cover;object-position:center;width:100%;height:100%">
         </div>
@@ -1138,25 +1138,25 @@
           <div class="chip amber" style="margin-bottom:.8em">🎁 אז מה כן יש כאן?</div>
           <h2>מה יש לנו<br>בשבילכם</h2>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:.8em">
-            <div class="feat-card fragment" style="animation-delay:.05s;padding:18px 16px">
+            <div class="feat-card fragment" style="animation-delay:.05s;padding:20px 18px">
               <span class="fc-icon">💡</span>
               <div class="fc-title">יכולות</div>
-              <div class="fc-desc">הרבה דברים שה-AI <strong>יודע לעשות (בינתיים)</strong> — כדי שנדע לחשוב עליהם.</div>
+              <div class="fc-desc">הרבה דברים שה-AI <strong>יודע לעשות (בינתיים)</strong> — כדי שנדע לחשוב עליהם כשאנחנו מייצרים תוכן, כשאנחנו מציעים דברים ללקוחות וכו'.</div>
             </div>
-            <div class="feat-card c fragment" style="animation-delay:.12s;padding:18px 16px">
+            <div class="feat-card c fragment" style="animation-delay:.12s;padding:20px 18px">
               <span class="fc-icon">🎬</span>
               <div class="fc-title">הדגמות</div>
-              <div class="fc-desc">נכון היכולות? <strong>אז נדגים אותן.</strong> שאלו "איך עושים?" לאורך כל הדרך.</div>
+              <div class="fc-desc">נכון היכולות? אז נדגים אותן. אומנם אין כאן מדריכים מפורטים לכל דבר, אבל ממש אפשר לשאול <strong>"אבל איך בדיוק עושים את זה?"</strong>.</div>
             </div>
-            <div class="feat-card a fragment" style="animation-delay:.19s;padding:18px 16px">
+            <div class="feat-card a fragment" style="animation-delay:.19s;padding:20px 18px">
               <span class="fc-icon">✦</span>
               <div class="fc-title">טיפי זהב</div>
-              <div class="fc-desc">מ-"ניסיתי ויצא רע" ל-"ניסיתי ויצא מרשים". <strong>טיפים שלמדתי על בשרי.</strong></div>
+              <div class="fc-desc">מ-"ניסיתי ויצא רע" ל-"ניסיתי ויצא מרשים". <strong>טיפים שלמדתי על בשרי ב42 שנות הנסיון שלי.</strong></div>
             </div>
-            <div class="feat-card c fragment" style="animation-delay:.26s;padding:18px 16px">
+            <div class="feat-card c fragment" style="animation-delay:.26s;padding:20px 18px">
               <span class="fc-icon">🎁</span>
               <div class="fc-title">הפתעה</div>
-              <div class="fc-desc">(אם נגלה עכשיו מה זה — זה לא יהיה הפתעה.)</div>
+              <div class="fc-desc">(אם נגלה עכשיו מה זה — זה לא יהיה הפתעה, לא ככה?)</div>
             </div>
           </div>
         </div>
@@ -1506,34 +1506,29 @@
       <!-- ══════════════════════════════════════════════════════
            CH02-GEM-B — הדגמה: Gem ויזואלי
       ══════════════════════════════════════════════════════ -->
-      <section class="s-fullbleed" data-transition="fade">
-        <div class="s-fb-media">
-          <video class="v-169" src="assets/demos/s-21.mp4" controls style="width:100%;height:100%;object-fit:cover"></video>
-        </div>
-        <div class="s-fb-overlay" style="background:linear-gradient(to bottom,rgba(5,5,14,.9) 0%,rgba(5,5,14,.3) 40%,transparent 65%)"></div>
-        <div style="position:absolute;top:0;right:0;left:0;padding:36px 80px 28px;z-index:2;direction:rtl;text-align:right">
+      <section class="s-video" data-transition="fade" data-transition-speed="fast" style="--v-cols:32% 68%">
+        <div class="s-split-content" style="padding:80px 40px 80px 80px;justify-content:center">
           <div class="chip" style="margin-bottom:.6em;background:var(--r-dim);border-color:rgba(244,63,94,.3);color:#f87171">🎬 &nbsp; הדגמה</div>
           <span class="eyebrow" style="color:#f87171">Gemini · Gem ויזואלי</span>
-          <h2 style="font-size:1.6em !important;color:var(--white) !important;line-height:1.2 !important">בואו נראה איך זה עובד</h2>
+          <h2>בואו נראה<br>איך זה עובד</h2>
+        </div>
+        <div class="s-video-pane">
+          <video class="v-169" src="assets/demos/s-21.mp4" controls></video>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
            CH02 — טיפ 1: סמנו על התמונה
       ══════════════════════════════════════════════════════ -->
-      <section class="s-split s-split-tl" data-transition="slide">
-        <div class="s-split-img">
-          <div class="demo-placeholder" data-file="assets/demos/s-22a.mp4" data-type="video" data-label="סמנו על התמונה"
-               style="width:100%;height:100%;background:linear-gradient(145deg,#0a001a,#001020);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
-            <div style="font-size:3em;opacity:.3">📸</div>
-            <div style="font-size:.38em;color:var(--muted);font-family:var(--mono);text-align:center">s-22a.mp4</div>
-          </div>
-          <span class="img-label" style="background:rgba(124,58,237,.12);border-color:rgba(124,58,237,.3);color:var(--v-hi)">🎨 הדגמה</span>
-        </div>
+      <section class="s-split-2img" data-transition="slide">
         <div class="s-split-content">
           <span class="eyebrow" style="color:var(--v-hi)">טיפ 1 מתוך 3</span>
           <h2>3 טיפים שיעזרו לכם לעבוד עם ג'ימיני</h2>
-          <p>סמנו ישירות לג'ימיני על התמונה <strong>מה אתם רוצים בדיוק לשנות ואיך</strong> — זה יעזור לו לדייק את הפרומפט משמעותית.</p>
+          <p>סמנו ישירות לג'ימיני על התמונה <strong>מה אתם רוצים בדיוק לשנות ואיך</strong>, או צרו עבורו "ראף" של התמונה שאתם רוצים — זה יעזור לו לדייק את הפרומפט משמעותית.</p>
+        </div>
+        <div class="s-2img-panes">
+          <img src="assets/demos/s-22a.png" alt="סמנו על התמונה">
+          <img src="assets/demos/s-22b.png" alt="ראף של התמונה">
         </div>
       </section>
 
@@ -1542,11 +1537,7 @@
       ══════════════════════════════════════════════════════ -->
       <section class="s-split s-split-tl" data-transition="slide">
         <div class="s-split-img">
-          <div class="demo-placeholder" data-file="assets/demos/s-22b.png" data-type="image" data-label="פאנל ווריאציות"
-               style="width:100%;height:100%;background:linear-gradient(145deg,#001525,#000a1a);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
-            <div style="font-size:3em;opacity:.3">🖼️</div>
-            <div style="font-size:.38em;color:var(--muted);font-family:var(--mono);text-align:center">s-22b.png</div>
-          </div>
+          <img src="assets/demos/s-23.png" class="img-art" style="object-fit:cover;width:100%;height:100%">
           <span class="img-label" style="background:rgba(6,182,212,.1);border-color:rgba(6,182,212,.25);color:var(--c-hi)">🖼️ הדגמה</span>
         </div>
         <div class="s-split-content">
@@ -1561,11 +1552,7 @@
       ══════════════════════════════════════════════════════ -->
       <section class="s-split s-split-tl" data-transition="slide">
         <div class="s-split-img">
-          <div class="demo-placeholder" data-file="assets/demos/s-22c.mp4" data-type="video" data-label="הסרת כוכב"
-               style="width:100%;height:100%;background:linear-gradient(145deg,#1a0005,#0a0010);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
-            <div style="font-size:3em;opacity:.3">⭐</div>
-            <div style="font-size:.38em;color:var(--muted);font-family:var(--mono);text-align:center">s-22c.mp4</div>
-          </div>
+          <img src="assets/demos/s-24.png" class="img-art" style="object-fit:cover;width:100%;height:100%">
           <span class="img-label" style="background:rgba(244,63,94,.1);border-color:rgba(244,63,94,.25);color:#f87171">🎬 הדגמה</span>
         </div>
         <div class="s-split-content">
@@ -1628,7 +1615,7 @@
         <div class="spark" style="bottom:32%;right:12%;color:#fcd34d;animation-delay:-1.5s">✧</div>
         <div class="s-gold-inner">
           <div class="s-gold-badge">✦ &nbsp; טיפ זהב · PNG בלי רקע</div>
-          <h2>רוצים PNG בלי רקע? GPT עושה את זה לבד</h2>
+          <h2>רוצים PNG בלי רקע?<br>GPT עושה את זה לבד</h2>
           <p>
             רוצים תמונה בלי רקע בשביל אלמנט גרפי כלשהו?<br>
             אפשר כמובן לייצר עם ג'מיני ולהסיר את הרקע — אבל<br>
@@ -1693,18 +1680,14 @@
       <!-- ══════════════════════════════════════════════════════
            CH03-25 — TEXT TO VIDEO + הדגמה
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="slide" style="display:grid !important;grid-template-columns:52% 48%;height:100%;background:#000 !important;overflow:hidden;position:relative">
-        <div class="bg bg-dots" style="opacity:.15;position:absolute;inset:0;pointer-events:none;z-index:1"></div>
-        <div class="orb cyan" style="width:500px;height:500px;top:50%;left:20%;transform:translate(-50%,-50%);opacity:.08;animation-duration:10s;pointer-events:none"></div>
-        <!-- Left: text -->
-        <div style="display:flex;flex-direction:column;justify-content:center;padding:60px 40px 60px 90px;direction:rtl;text-align:right;position:relative;z-index:2">
+      <section class="s-video video-portrait" data-transition="slide">
+        <div class="s-split-content" style="padding:80px 100px 80px 56px;justify-content:center">
           <div class="chip cyan" style="margin-bottom:.9em;align-self:flex-start">📝 Text to Video</div>
-          <h2 style="font-size:1.85em !important;color:var(--white) !important;line-height:1.3 !important;margin-bottom:.7em !important">אם לא חשוב לכם הפרטים הספציפיים שיופיעו בוידאו, אלא רק התוכן ברמה הכללית, הכי פשוט. רק להגיד מה אתם רוצים ולקבל</h2>
-          <p style="font-size:.62em;color:rgba(240,240,248,.6);line-height:1.65">הי הנה וידאו של חתול נוסע על אופניים ורוקד!</p>
+          <h2 style="font-size:1.75em !important">אם לא חשוב לכם הפרטים הספציפיים שיופיעו בוידאו, אלא רק התוכן ברמה הכללית, הכי פשוט. רק להגיד מה אתם רוצים ולקבל</h2>
+          <p style="font-size:.65em;color:rgba(240,240,248,.6)">הי הנה וידאו של חתול נוסע על אופניים ורוקד!</p>
         </div>
-        <!-- Right: vertical video — object-fit:cover fills column edge-to-edge -->
-        <div style="position:relative;z-index:2;overflow:hidden">
-          <video src="assets/demos/s-30.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></video>
+        <div class="s-video-pane">
+          <video class="v-916" src="assets/demos/s-30.mp4" controls></video>
         </div>
       </section>
 
@@ -1737,24 +1720,7 @@
       <!-- ══════════════════════════════════════════════════════
            CH03-27 — IMAGE TO VIDEO
       ══════════════════════════════════════════════════════ -->
-      <section class="s-split s-split-tl" data-transition="slide">
-        <div class="s-split-img">
-          <div class="demo-placeholder" data-file="assets/demos/s-32.mp4" data-type="video" data-label="Image to Video demo"
-               style="width:100%;height:100%;background:linear-gradient(145deg,#001525,#001015);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;padding:40px">
-            <div class="orb cyan" style="width:350px;height:350px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.25"></div>
-            <div style="position:relative;z-index:1;text-align:center">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:300px">
-                <div style="background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);border-radius:8px;padding:18px;font-size:1.8em">🖼️</div>
-                <div style="background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);border-radius:8px;padding:18px;font-size:1.8em">🖼️</div>
-                <div style="background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);border-radius:8px;padding:18px;font-size:1.8em">🖼️</div>
-                <div style="background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.25);border-radius:8px;padding:18px;font-size:1.8em">▶️</div>
-              </div>
-              <div style="font-size:.4em;color:var(--c-hi);margin-top:12px;font-weight:700">סטוריבורד → וידאו</div>
-            </div>
-          </div>
-          <span class="img-label" style="background:rgba(6,182,212,.1);border-color:rgba(6,182,212,.25);color:var(--c-hi)">🖼️ Image to Video</span>
-          <div class="img-cap">פאנל פריימים → קליפ קולנועי</div>
-        </div>
+      <section class="s-split-2img" data-transition="slide">
         <div class="s-split-content">
           <span class="eyebrow">Image to Video</span>
           <h2>כמו בהפקה<br>אמיתית</h2>
@@ -1765,6 +1731,10 @@
             <li><span class="dot"></span>עקביות ויזואלית בין קטעים</li>
             <li><span class="dot"></span>מוצר, פורטרט, סצנה — הכל עם תמונה</li>
           </ul>
+        </div>
+        <div class="s-2img-panes">
+          <img src="assets/demos/s-32.png" alt="Image to Video — סטוריבורד">
+          <video src="assets/demos/s-32.mp4" controls></video>
         </div>
       </section>
 
@@ -1781,7 +1751,7 @@
         <div style="position:absolute;top:50%;right:0;left:0;transform:translateY(-50%);display:grid;grid-template-columns:auto 1fr auto;gap:48px;align-items:center;padding:0 60px;direction:rtl;z-index:2">
           <!-- Right vertical video -->
           <div style="flex-shrink:0">
-            <video src="assets/demos/s-33a.mp4" data-autoplay autoplay muted loop playsinline style="width:300px;height:540px;object-fit:cover;border-radius:18px;background:#000;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
+            <video src="assets/demos/s-33a.mp4" data-autoplay autoplay muted loop playsinline style="width:420px;height:750px;object-fit:cover;border-radius:18px;background:#000;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
             <div style="text-align:center;margin-top:12px;font-size:.42em;color:var(--a-hi);font-family:var(--mono);letter-spacing:.05em">📹 זווית א'</div>
           </div>
           <!-- Center content -->
@@ -1796,7 +1766,7 @@
           </div>
           <!-- Left vertical video -->
           <div style="flex-shrink:0">
-            <video src="assets/demos/s-33b.mp4" data-autoplay autoplay muted loop playsinline style="width:300px;height:540px;object-fit:cover;border-radius:18px;background:#000;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
+            <video src="assets/demos/s-33b.mp4" data-autoplay autoplay muted loop playsinline style="width:420px;height:750px;object-fit:cover;border-radius:18px;background:#000;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
             <div style="text-align:center;margin-top:12px;font-size:.42em;color:var(--a-hi);font-family:var(--mono);letter-spacing:.05em">📹 זווית ב'</div>
           </div>
         </div>
@@ -1820,7 +1790,7 @@
             </p>
           </div>
           <div style="flex-shrink:0">
-            <video src="assets/demos/s-31.mp4" autoplay muted loop playsinline style="width:700px;height:700px;object-fit:cover;border-radius:16px;box-shadow:0 12px 50px rgba(0,0,0,.6),0 0 0 1px rgba(245,158,11,.25)"></video>
+            <video src="assets/demos/s-34.mp4" data-autoplay autoplay muted loop playsinline style="width:820px;height:462px;object-fit:cover;border-radius:16px;box-shadow:0 12px 50px rgba(0,0,0,.6),0 0 0 1px rgba(245,158,11,.25)"></video>
           </div>
         </div>
       </section>

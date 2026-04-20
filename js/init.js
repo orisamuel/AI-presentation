@@ -86,6 +86,9 @@ Reveal.on('ready', () => {
 
   // Fix code block direction
   fixCodeBlocks();
+
+  // Prevent demo videos with controls from stealing keyboard focus (arrows seek video instead of advancing slide)
+  revealEl.querySelectorAll('video[controls]').forEach(v => v.setAttribute('tabindex', '-1'));
 });
 
 Reveal.on('slidechanged', (event) => {
