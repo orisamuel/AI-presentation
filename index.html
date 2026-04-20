@@ -121,6 +121,7 @@
   @keyframes shimmer   { 0%{background-position:200% center} 100%{background-position:-200% center} }
   @keyframes bg-shift  { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
   @keyframes btn-glow  { 0%,100%{box-shadow:0 0 30px rgba(124,58,237,.3)} 50%{box-shadow:0 0 60px rgba(124,58,237,.6),0 0 100px rgba(6,182,212,.2)} }
+  @keyframes s32-zoom  { 0%{transform:scale(1)} 100%{transform:scale(2.4)} }
 
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      SHARED BACKGROUND LAYERS
@@ -1526,7 +1527,7 @@
           <h2>3 טיפים שיעזרו לכם לעבוד עם ג'ימיני</h2>
           <p>סמנו ישירות לג'ימיני על התמונה <strong>מה אתם רוצים בדיוק לשנות ואיך</strong>, או צרו עבורו "ראף" של התמונה שאתם רוצים — זה יעזור לו לדייק את הפרומפט משמעותית.</p>
         </div>
-        <div class="s-2img-panes">
+        <div class="s-2img-panes" style="height:100%">
           <img src="assets/demos/s-22a.png" alt="סמנו על התמונה">
           <img src="assets/demos/s-22b.png" alt="ראף של התמונה">
         </div>
@@ -1551,8 +1552,8 @@
            CH02 — טיפ 3: תורידו את הכוכב
       ══════════════════════════════════════════════════════ -->
       <section class="s-split s-split-tl" data-transition="slide">
-        <div class="s-split-img">
-          <img src="assets/demos/s-24.png" class="img-art" style="object-fit:cover;width:100%;height:100%">
+        <div class="s-split-img" style="display:flex;align-items:center;justify-content:center">
+          <img src="assets/demos/s-24.png" style="max-width:100%;max-height:92%;object-fit:contain;display:block">
           <span class="img-label" style="background:rgba(244,63,94,.1);border-color:rgba(244,63,94,.25);color:#f87171">🎬 הדגמה</span>
         </div>
         <div class="s-split-content">
@@ -1687,7 +1688,7 @@
           <p style="font-size:.65em;color:rgba(240,240,248,.6)">הי הנה וידאו של חתול נוסע על אופניים ורוקד!</p>
         </div>
         <div class="s-video-pane">
-          <video class="v-916" src="assets/demos/s-30.mp4" controls></video>
+          <video class="v-916" src="assets/demos/s-30.mp4" data-autoplay autoplay muted loop playsinline></video>
         </div>
       </section>
 
@@ -1720,7 +1721,13 @@
       <!-- ══════════════════════════════════════════════════════
            CH03-27 — IMAGE TO VIDEO
       ══════════════════════════════════════════════════════ -->
-      <section class="s-split-2img" data-transition="slide">
+      <section class="s-split s-split-tl" data-transition="slide">
+        <div class="s-split-img" style="overflow:hidden;position:relative">
+          <!-- Image: zoom into upper-left on slide entry -->
+          <img src="assets/demos/s-32.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform-origin:top left;animation:s32-zoom 4s .4s ease-out forwards">
+          <!-- Video: click-to-play fragment, plays once with sound -->
+          <video src="assets/demos/s-32.mp4" class="fragment s32-vid-frag" data-fragment-index="1" preload="auto" playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+        </div>
         <div class="s-split-content">
           <span class="eyebrow">Image to Video</span>
           <h2>כמו בהפקה<br>אמיתית</h2>
@@ -1731,10 +1738,6 @@
             <li><span class="dot"></span>עקביות ויזואלית בין קטעים</li>
             <li><span class="dot"></span>מוצר, פורטרט, סצנה — הכל עם תמונה</li>
           </ul>
-        </div>
-        <div class="s-2img-panes">
-          <img src="assets/demos/s-32.png" alt="Image to Video — סטוריבורד">
-          <video src="assets/demos/s-32.mp4" controls></video>
         </div>
       </section>
 
@@ -1790,7 +1793,7 @@
             </p>
           </div>
           <div style="flex-shrink:0">
-            <video src="assets/demos/s-34.mp4" data-autoplay autoplay muted loop playsinline style="width:820px;height:462px;object-fit:cover;border-radius:16px;box-shadow:0 12px 50px rgba(0,0,0,.6),0 0 0 1px rgba(245,158,11,.25)"></video>
+            <video src="assets/demos/s-34.mp4" controls playsinline style="width:940px;height:529px;object-fit:cover;border-radius:16px;box-shadow:0 12px 50px rgba(0,0,0,.6),0 0 0 1px rgba(245,158,11,.25)"></video>
           </div>
         </div>
       </section>

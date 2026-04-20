@@ -95,6 +95,21 @@ Reveal.on('slidechanged', (event) => {
   handleSlideMedia(event.currentSlide, event.previousSlide);
 });
 
+// Play fragment videos (e.g. slide 32 zoom-to-video interaction)
+Reveal.on('fragmentshown', (event) => {
+  if (event.fragment.classList.contains('s32-vid-frag')) {
+    event.fragment.currentTime = 0;
+    event.fragment.play().catch(() => {});
+  }
+});
+
+Reveal.on('fragmenthidden', (event) => {
+  if (event.fragment.classList.contains('s32-vid-frag')) {
+    event.fragment.pause();
+    event.fragment.currentTime = 0;
+  }
+});
+
 // ============================================================
 // setupAgendaNav()
 // Agenda items with data-goto="section-id" jump to that slide
