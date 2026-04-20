@@ -1527,8 +1527,8 @@
       <section class="s-base" data-transition="slide">
         <div style="position:absolute;inset:0;display:flex;direction:rtl;align-items:stretch;overflow:hidden">
           <!-- RIGHT image (first in RTL flex = rightmost) -->
-          <div style="flex:0 0 32%;overflow:hidden">
-            <img src="assets/demos/s-22a.png" style="width:100%;height:100%;object-fit:cover;display:block">
+          <div style="flex:0 0 32%;display:flex;align-items:center;justify-content:center;overflow:hidden">
+            <img src="assets/demos/s-22a.png" style="width:100%;height:100%;object-fit:contain;display:block">
           </div>
           <!-- CENTER text -->
           <div class="s-split-content" style="flex:1;padding:60px 56px;justify-content:center">
@@ -1537,8 +1537,8 @@
             <p>סמנו ישירות לג'ימיני על התמונה <strong>מה אתם רוצים בדיוק לשנות ואיך</strong>, או צרו עבורו "ראף" של התמונה שאתם רוצים — זה יעזור לו לדייק את הפרומפט משמעותית.</p>
           </div>
           <!-- LEFT image (last in RTL flex = leftmost) -->
-          <div style="flex:0 0 32%;overflow:hidden">
-            <img src="assets/demos/s-22b.png" style="width:100%;height:100%;object-fit:cover;display:block">
+          <div style="flex:0 0 32%;display:flex;align-items:center;justify-content:center;overflow:hidden">
+            <img src="assets/demos/s-22b.png" style="width:100%;height:100%;object-fit:contain;display:block">
           </div>
         </div>
       </section>
@@ -1562,8 +1562,8 @@
            CH02 — טיפ 3: תורידו את הכוכב
       ══════════════════════════════════════════════════════ -->
       <section class="s-split s-split-tl" data-transition="slide">
-        <div class="s-split-img" style="display:flex;align-items:center;justify-content:center">
-          <img src="assets/demos/s-24.png" style="max-width:100%;max-height:100%;object-fit:contain;display:block">
+        <div class="s-split-img" style="display:flex;align-items:center;justify-content:center;overflow:hidden">
+          <img src="assets/demos/s-24.png" style="max-width:100%;max-height:100%;object-fit:contain;display:block;transform:scale(1.8);transform-origin:center bottom">
           <span class="img-label" style="background:rgba(244,63,94,.1);border-color:rgba(244,63,94,.25);color:#f87171">🎬 הדגמה</span>
         </div>
         <div class="s-split-content">
@@ -1731,20 +1731,21 @@
       <!-- ══════════════════════════════════════════════════════
            CH03-27 — IMAGE TO VIDEO
       ══════════════════════════════════════════════════════ -->
-      <section class="s-base" data-transition="slide">
-        <div class="orb" style="width:600px;height:600px;top:50%;right:25%;transform:translate(50%,-50%);opacity:.06;animation-duration:11s"></div>
-        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;padding:80px 120px;direction:rtl">
-          <div class="s-split-content" style="max-width:820px;padding:0">
-            <span class="eyebrow">Image to Video</span>
-            <h2>כמו בהפקה<br>אמיתית</h2>
-            <p>תבחרו קודם כל את הפריים, את הדמויות, תייצרו "סטוריבורד" — ורק אז תתחילו "לצלם" את הוידאו.</p>
-            <ul>
-              <li><span class="dot"></span>זוכרים את פאנל התמונות? אחלה הזדמנות!</li>
-              <li><span class="dot"></span>קבעו את השחקנים לפני שמצלמים</li>
-              <li><span class="dot"></span>עקביות ויזואלית בין קטעים</li>
-              <li><span class="dot"></span>מוצר, פורטרט, סצנה — הכל עם תמונה</li>
-            </ul>
-          </div>
+      <section class="s-split s-split-tl" data-transition="slide">
+        <div class="s-split-img">
+          <img src="assets/demos/s-32.png" style="width:100%;height:100%;object-fit:cover;filter:blur(6px) brightness(.3);display:block">
+          <div style="position:absolute;inset:0;background:linear-gradient(to left,transparent 40%,rgba(5,5,14,.6))"></div>
+        </div>
+        <div class="s-split-content">
+          <span class="eyebrow">Image to Video</span>
+          <h2>כמו בהפקה<br>אמיתית</h2>
+          <p>תבחרו קודם כל את הפריים, את הדמויות, תייצרו "סטוריבורד" — ורק אז תתחילו "לצלם" את הוידאו.</p>
+          <ul>
+            <li><span class="dot"></span>זוכרים את פאנל התמונות? אחלה הזדמנות!</li>
+            <li><span class="dot"></span>קבעו את השחקנים לפני שמצלמים</li>
+            <li><span class="dot"></span>עקביות ויזואלית בין קטעים</li>
+            <li><span class="dot"></span>מוצר, פורטרט, סצנה — הכל עם תמונה</li>
+          </ul>
         </div>
       </section>
 
@@ -1767,10 +1768,10 @@
             <div style="font-size:2.2em;color:var(--c-hi);padding:0 22px;text-shadow:0 0 20px rgba(6,182,212,.55);flex-shrink:0">←</div>
             <!-- zoomed image + prompt stacked -->
             <div style="display:flex;flex-direction:column;align-items:center;gap:14px;flex-shrink:0">
-              <div style="width:430px;height:280px;overflow:hidden;border-radius:12px;border:1.5px solid rgba(6,182,212,.4);box-shadow:0 4px 28px rgba(0,0,0,.45);direction:ltr">
+              <div style="width:480px;height:314px;overflow:hidden;border-radius:12px;border:1.5px solid rgba(6,182,212,.4);box-shadow:0 4px 28px rgba(0,0,0,.45);direction:ltr">
                 <img src="assets/demos/s-32.png" style="width:200%;display:block">
               </div>
-              <div style="direction:ltr;text-align:left;background:rgba(5,5,14,.88);border:1px solid rgba(6,182,212,.28);border-radius:8px;padding:13px 16px;font-family:var(--mono);font-size:.37em;color:var(--c-hi);line-height:1.65;width:430px;box-shadow:0 2px 16px rgba(0,0,0,.35)">
+              <div style="direction:ltr;text-align:left;background:rgba(5,5,14,.88);border:1px solid rgba(6,182,212,.28);border-radius:8px;padding:13px 16px;font-family:var(--mono);font-size:.37em;color:var(--c-hi);line-height:1.65;width:480px;box-shadow:0 2px 16px rgba(0,0,0,.35)">
                 <span style="color:rgba(6,182,212,.4)">prompt › </span>the man says "The first people AI will take jobs from are AI experts themselves. Isn't that right, guys?"
               </div>
             </div>
@@ -1780,7 +1781,7 @@
           <div class="fragment s32-frag" data-fragment-index="2" style="flex:0 0 auto;align-items:center;gap:0">
             <!-- arrow pointing left (violet) -->
             <div style="font-size:2.2em;color:var(--v-hi);padding:0 22px;text-shadow:0 0 20px rgba(124,58,237,.55);flex-shrink:0">←</div>
-            <video src="assets/demos/s-32.mp4" class="s32-vid-frag" preload="auto" playsinline style="width:430px;border-radius:14px;display:block;box-shadow:0 8px 40px rgba(0,0,0,.55),0 0 0 1px rgba(124,58,237,.22);flex-shrink:0"></video>
+            <video src="assets/demos/s-32.mp4" class="s32-vid-frag" preload="auto" playsinline style="width:580px;border-radius:14px;display:block;box-shadow:0 8px 40px rgba(0,0,0,.55),0 0 0 1px rgba(124,58,237,.22);flex-shrink:0"></video>
           </div>
 
         </div>

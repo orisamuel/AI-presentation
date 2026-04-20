@@ -95,19 +95,19 @@ Reveal.on('slidechanged', (event) => {
   handleSlideMedia(event.currentSlide, event.previousSlide);
 });
 
-// Play fragment videos (e.g. slide 32 zoom-to-video interaction)
+// Play fragment videos — checks both the fragment element itself and children
 Reveal.on('fragmentshown', (event) => {
-  if (event.fragment.classList.contains('s32-vid-frag')) {
-    event.fragment.currentTime = 0;
-    event.fragment.play().catch(() => {});
-  }
+  const vid = event.fragment.classList.contains('s32-vid-frag')
+    ? event.fragment
+    : event.fragment.querySelector('.s32-vid-frag');
+  if (vid) { vid.currentTime = 0; vid.play().catch(() => {}); }
 });
 
 Reveal.on('fragmenthidden', (event) => {
-  if (event.fragment.classList.contains('s32-vid-frag')) {
-    event.fragment.pause();
-    event.fragment.currentTime = 0;
-  }
+  const vid = event.fragment.classList.contains('s32-vid-frag')
+    ? event.fragment
+    : event.fragment.querySelector('.s32-vid-frag');
+  if (vid) { vid.pause(); vid.currentTime = 0; }
 });
 
 // ============================================================
