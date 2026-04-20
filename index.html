@@ -122,6 +122,9 @@
   @keyframes bg-shift  { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
   @keyframes btn-glow  { 0%,100%{box-shadow:0 0 30px rgba(124,58,237,.3)} 50%{box-shadow:0 0 60px rgba(124,58,237,.6),0 0 100px rgba(6,182,212,.2)} }
   @keyframes s32-zoom  { 0%{transform:scale(1)} 100%{transform:scale(2.4)} }
+  /* Flow slide fragments: no layout space when hidden */
+  .reveal .slides section .s32-frag { display:none !important; }
+  .reveal .slides section .s32-frag.visible { display:flex !important; }
 
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      SHARED BACKGROUND LAYERS
@@ -1521,15 +1524,22 @@
       <!-- ══════════════════════════════════════════════════════
            CH02 — טיפ 1: סמנו על התמונה
       ══════════════════════════════════════════════════════ -->
-      <section class="s-split-2img" data-transition="slide">
-        <div class="s-split-content">
-          <span class="eyebrow" style="color:var(--v-hi)">טיפ 1 מתוך 3</span>
-          <h2>3 טיפים שיעזרו לכם לעבוד עם ג'ימיני</h2>
-          <p>סמנו ישירות לג'ימיני על התמונה <strong>מה אתם רוצים בדיוק לשנות ואיך</strong>, או צרו עבורו "ראף" של התמונה שאתם רוצים — זה יעזור לו לדייק את הפרומפט משמעותית.</p>
-        </div>
-        <div class="s-2img-panes" style="height:100%">
-          <img src="assets/demos/s-22a.png" alt="סמנו על התמונה">
-          <img src="assets/demos/s-22b.png" alt="ראף של התמונה">
+      <section class="s-base" data-transition="slide">
+        <div style="position:absolute;inset:0;display:flex;direction:rtl;align-items:stretch;overflow:hidden">
+          <!-- RIGHT image (first in RTL flex = rightmost) -->
+          <div style="flex:0 0 32%;overflow:hidden">
+            <img src="assets/demos/s-22a.png" style="width:100%;height:100%;object-fit:cover;display:block">
+          </div>
+          <!-- CENTER text -->
+          <div class="s-split-content" style="flex:1;padding:60px 56px;justify-content:center">
+            <span class="eyebrow" style="color:var(--v-hi)">טיפ 1 מתוך 3</span>
+            <h2>3 טיפים שיעזרו לכם לעבוד עם ג'ימיני</h2>
+            <p>סמנו ישירות לג'ימיני על התמונה <strong>מה אתם רוצים בדיוק לשנות ואיך</strong>, או צרו עבורו "ראף" של התמונה שאתם רוצים — זה יעזור לו לדייק את הפרומפט משמעותית.</p>
+          </div>
+          <!-- LEFT image (last in RTL flex = leftmost) -->
+          <div style="flex:0 0 32%;overflow:hidden">
+            <img src="assets/demos/s-22b.png" style="width:100%;height:100%;object-fit:cover;display:block">
+          </div>
         </div>
       </section>
 
@@ -1553,7 +1563,7 @@
       ══════════════════════════════════════════════════════ -->
       <section class="s-split s-split-tl" data-transition="slide">
         <div class="s-split-img" style="display:flex;align-items:center;justify-content:center">
-          <img src="assets/demos/s-24.png" style="max-width:100%;max-height:92%;object-fit:contain;display:block">
+          <img src="assets/demos/s-24.png" style="max-width:100%;max-height:100%;object-fit:contain;display:block">
           <span class="img-label" style="background:rgba(244,63,94,.1);border-color:rgba(244,63,94,.25);color:#f87171">🎬 הדגמה</span>
         </div>
         <div class="s-split-content">
@@ -1685,7 +1695,7 @@
         <div class="s-split-content" style="padding:80px 100px 80px 56px;justify-content:center">
           <div class="chip cyan" style="margin-bottom:.9em;align-self:flex-start">📝 Text to Video</div>
           <h2 style="font-size:1.75em !important">אם לא חשוב לכם הפרטים הספציפיים שיופיעו בוידאו, אלא רק התוכן ברמה הכללית, הכי פשוט. רק להגיד מה אתם רוצים ולקבל</h2>
-          <p style="font-size:.65em;color:rgba(240,240,248,.6)">הי הנה וידאו של חתול נוסע על אופניים ורוקד!</p>
+          <p style="font-size:.65em;color:rgba(240,240,248,.6)">הי הנה וידאו של חתול נוסע על אופניים!</p>
         </div>
         <div class="s-video-pane">
           <video class="v-916" src="assets/demos/s-30.mp4" data-autoplay autoplay muted loop playsinline></video>
@@ -1721,23 +1731,58 @@
       <!-- ══════════════════════════════════════════════════════
            CH03-27 — IMAGE TO VIDEO
       ══════════════════════════════════════════════════════ -->
-      <section class="s-split s-split-tl" data-transition="slide">
-        <div class="s-split-img" style="overflow:hidden;position:relative">
-          <!-- Image: zoom into upper-left on slide entry -->
-          <img src="assets/demos/s-32.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform-origin:top left;animation:s32-zoom 4s .4s ease-out forwards">
-          <!-- Video: click-to-play fragment, plays once with sound -->
-          <video src="assets/demos/s-32.mp4" class="fragment s32-vid-frag" data-fragment-index="1" preload="auto" playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+      <section class="s-base" data-transition="slide">
+        <div class="orb" style="width:600px;height:600px;top:50%;right:25%;transform:translate(50%,-50%);opacity:.06;animation-duration:11s"></div>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;padding:80px 120px;direction:rtl">
+          <div class="s-split-content" style="max-width:820px;padding:0">
+            <span class="eyebrow">Image to Video</span>
+            <h2>כמו בהפקה<br>אמיתית</h2>
+            <p>תבחרו קודם כל את הפריים, את הדמויות, תייצרו "סטוריבורד" — ורק אז תתחילו "לצלם" את הוידאו.</p>
+            <ul>
+              <li><span class="dot"></span>זוכרים את פאנל התמונות? אחלה הזדמנות!</li>
+              <li><span class="dot"></span>קבעו את השחקנים לפני שמצלמים</li>
+              <li><span class="dot"></span>עקביות ויזואלית בין קטעים</li>
+              <li><span class="dot"></span>מוצר, פורטרט, סצנה — הכל עם תמונה</li>
+            </ul>
+          </div>
         </div>
-        <div class="s-split-content">
-          <span class="eyebrow">Image to Video</span>
-          <h2>כמו בהפקה<br>אמיתית</h2>
-          <p>תבחרו קודם כל את הפריים, את הדמויות, תייצרו "סטוריבורד" — ורק אז תתחילו "לצלם" את הוידאו.</p>
-          <ul>
-            <li><span class="dot"></span>זוכרים את פאנל התמונות? אחלה הזדמנות!</li>
-            <li><span class="dot"></span>קבעו את השחקנים לפני שמצלמים</li>
-            <li><span class="dot"></span>עקביות ויזואלית בין קטעים</li>
-            <li><span class="dot"></span>מוצר, פורטרט, סצנה — הכל עם תמונה</li>
-          </ul>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-27b — IMAGE→ZOOM→VIDEO FLOW
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-base" data-transition="slide">
+        <div class="bg bg-dots" style="opacity:.1"></div>
+        <div class="orb" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.05;animation-duration:14s"></div>
+        <div style="position:absolute;inset:0;display:flex;direction:rtl;align-items:center;justify-content:flex-start;padding:70px 80px;gap:0;overflow:hidden">
+
+          <!-- RIGHT: full image — always visible -->
+          <div style="flex:0 0 auto">
+            <img src="assets/demos/s-32.png" style="width:500px;border-radius:14px;display:block;box-shadow:0 8px 40px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.07)">
+          </div>
+
+          <!-- Fragment 1: arrow ← + zoomed upper-left + prompt text -->
+          <div class="fragment s32-frag" data-fragment-index="1" style="flex:0 0 auto;align-items:center;gap:0">
+            <!-- arrow pointing left (cyan) -->
+            <div style="font-size:2.2em;color:var(--c-hi);padding:0 22px;text-shadow:0 0 20px rgba(6,182,212,.55);flex-shrink:0">←</div>
+            <!-- zoomed image + prompt stacked -->
+            <div style="display:flex;flex-direction:column;align-items:center;gap:14px;flex-shrink:0">
+              <div style="width:430px;height:280px;overflow:hidden;border-radius:12px;border:1.5px solid rgba(6,182,212,.4);box-shadow:0 4px 28px rgba(0,0,0,.45);direction:ltr">
+                <img src="assets/demos/s-32.png" style="width:200%;display:block">
+              </div>
+              <div style="direction:ltr;text-align:left;background:rgba(5,5,14,.88);border:1px solid rgba(6,182,212,.28);border-radius:8px;padding:13px 16px;font-family:var(--mono);font-size:.37em;color:var(--c-hi);line-height:1.65;width:430px;box-shadow:0 2px 16px rgba(0,0,0,.35)">
+                <span style="color:rgba(6,182,212,.4)">prompt › </span>the man says "The first people AI will take jobs from are AI experts themselves. Isn't that right, guys?"
+              </div>
+            </div>
+          </div>
+
+          <!-- Fragment 2: arrow ← + video -->
+          <div class="fragment s32-frag" data-fragment-index="2" style="flex:0 0 auto;align-items:center;gap:0">
+            <!-- arrow pointing left (violet) -->
+            <div style="font-size:2.2em;color:var(--v-hi);padding:0 22px;text-shadow:0 0 20px rgba(124,58,237,.55);flex-shrink:0">←</div>
+            <video src="assets/demos/s-32.mp4" class="s32-vid-frag" preload="auto" playsinline style="width:430px;border-radius:14px;display:block;box-shadow:0 8px 40px rgba(0,0,0,.55),0 0 0 1px rgba(124,58,237,.22);flex-shrink:0"></video>
+          </div>
+
         </div>
       </section>
 
