@@ -1592,21 +1592,14 @@
       <!-- ══════════════════════════════════════════════════════
            CH02 — הסרת כוכב (s-video)
       ══════════════════════════════════════════════════════ -->
-      <section class="s-base" data-transition="slide" style="overflow:hidden">
-        <div class="bg bg-dots" style="opacity:.08"></div>
-        <div class="orb cyan" style="width:500px;height:500px;top:50%;left:25%;transform:translate(-50%,-50%);opacity:.12;animation-duration:12s"></div>
-        <!-- Video: full-screen, click to play -->
-        <video src="assets/demos/s-26.mp4" controls playsinline data-no-advance style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1"></video>
-        <!-- Cinematic gradient: left side darkened so text is legible without opaque box -->
-        <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(5,5,14,.92) 0%,rgba(5,5,14,.88) 28%,rgba(5,5,14,.45) 50%,rgba(5,5,14,0) 66%);z-index:2;pointer-events:none"></div>
-        <!-- Text: left 44%, fragment -->
-        <div class="fragment fade-in" style="position:absolute;top:0;left:0;width:44%;height:100%;z-index:3;display:flex;align-items:center;padding:60px 50px 60px 72px;direction:rtl;pointer-events:none">
-          <div>
-            <h2 style="font-size:1.55em !important;margin-bottom:.6em;line-height:1.25">או שפשוט תעבדו יותר כמו מקצוענים</h2>
-            <p style="font-size:.55em;color:rgba(240,240,248,.85);line-height:1.8">
-              כדי להשתמש בשלוף לתמונה פה ושם, הצ'אט הוא אחלה. בטח אם משתמשים ב-GEM, אבל שימוש בכלי הייעודיים של גוגל ליצירת תמונות (<strong style="color:var(--c-hi)">Flow, AI Studio</strong>) או אפילו בכלים חיצוניים (<strong style="color:var(--c-hi)">Hedra, Runway, היגספילד</strong>) יאפשר לכם גם שליטה יותר טובה על הפרמטרים (גודל, רזולוציה, כמות תוצרים) והכי חשוב — יוציא לכם <strong style="color:var(--a-hi)">תמונות בלי כוכב!</strong>
-            </p>
-          </div>
+      <!-- video-pane FIRST so it appears on the RIGHT in RTL flex; text-pane second = LEFT -->
+      <section class="s-video" data-transition="fade" data-transition-speed="fast" style="--v-cols:65% 35%">
+        <div class="s-video-pane">
+          <video class="v-169" src="assets/demos/s-26.mp4" controls playsinline data-no-advance></video>
+        </div>
+        <div class="s-split-content fragment fade-in" style="padding:80px 80px 80px 50px;justify-content:center">
+          <h2>או שפשוט תעבדו יותר כמו מקצוענים</h2>
+          <p>כדי להשתמש בשלוף לתמונה פה ושם, הצ'אט הוא אחלה. בטח אם משתמשים ב-GEM, אבל שימוש בכלי הייעודיים של גוגל ליצירת תמונות (<strong style="color:var(--c-hi)">Flow, AI Studio</strong>) או אפילו בכלים חיצוניים (<strong style="color:var(--c-hi)">Hedra, Runway, היגספילד</strong>) יאפשר לכם גם שליטה יותר טובה על הפרמטרים (גודל, רזולוציה, כמות תוצרים) והכי חשוב — יוציא לכם <strong style="color:var(--a-hi)">תמונות בלי כוכב!</strong></p>
         </div>
       </section>
 
