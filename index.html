@@ -1592,24 +1592,22 @@
       <!-- ══════════════════════════════════════════════════════
            CH02 — הסרת כוכב (s-video)
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;overflow:hidden">
-        <div class="bg bg-dots" style="opacity:.12;z-index:1"></div>
-        <!-- Video: right side, 65% width -->
-        <div style="position:absolute;top:0;right:0;width:65%;height:100%;z-index:2;overflow:hidden;display:flex;align-items:center;justify-content:center">
-          <div class="s-video-scanline" style="position:absolute;inset:0;z-index:1"></div>
-          <video class="v-169" src="assets/demos/s-26.mp4" controls style="position:relative;z-index:2"></video>
+      <section class="s-base" data-transition="slide" style="overflow:hidden">
+        <div class="bg bg-dots" style="opacity:.15"></div>
+        <div class="orb cyan" style="width:600px;height:600px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.08;animation-duration:12s"></div>
+        <!-- Video: takes upper 58% of screen, centered, always visible -->
+        <div style="position:absolute;top:0;left:0;right:0;height:58%;overflow:hidden;display:flex;align-items:center;justify-content:center">
+          <div class="s-video-scanline" style="position:absolute;inset:0;z-index:1;pointer-events:none"></div>
+          <video class="v-169" src="assets/demos/s-26.mp4" data-autoplay autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;position:relative;z-index:2"></video>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to bottom,transparent,rgba(5,5,14,1));z-index:3;pointer-events:none"></div>
         </div>
-        <!-- Gradient separator -->
-        <div style="position:absolute;top:0;right:65%;width:120px;height:100%;background:linear-gradient(to left,rgba(5,5,14,0),rgba(5,5,14,.9));z-index:3;pointer-events:none"></div>
-        <!-- Text: left side, 35% width -->
-        <div style="position:absolute;top:0;left:0;width:34%;height:100%;z-index:4;display:flex;align-items:center;padding:60px 30px 60px 60px;direction:rtl">
-          <div>
-            <p style="font-size:.6em;color:rgba(240,240,248,.85);line-height:1.85;margin-bottom:1em">ניתן להשתמש בכלים חיצוניים כדי לייצר תמונות באמצעות <strong style="color:var(--white)">ננו בננה</strong>, ולמעשה זה עדיף בהרבה מקרים:</p>
-            <ul style="list-style:none;padding:0;margin:0">
-              <li style="font-size:.55em;color:var(--c-hi);padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:center;gap:10px"><span style="width:6px;height:6px;border-radius:50%;background:var(--grad);flex-shrink:0;display:inline-block"></span><strong>יוצא בלי כוכב</strong></li>
-              <li style="font-size:.55em;color:var(--c-hi);padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:center;gap:10px"><span style="width:6px;height:6px;border-radius:50%;background:var(--grad);flex-shrink:0;display:inline-block"></span><strong>שליטה מלאה על ההגדרות</strong></li>
-              <li style="font-size:.55em;color:var(--c-hi);padding:6px 0;display:flex;align-items:center;gap:10px"><span style="width:6px;height:6px;border-radius:50%;background:var(--grad);flex-shrink:0;display:inline-block"></span><strong>hedra · flow · runway · היגספילד</strong></li>
-            </ul>
+        <!-- Text block: bottom 42%, fragment (appears on click) -->
+        <div class="fragment fade-up" style="position:absolute;bottom:0;left:0;right:0;height:44%;z-index:4;display:flex;align-items:center;padding:0 80px;direction:rtl">
+          <div style="width:100%">
+            <h2 style="font-size:1.6em !important;margin-bottom:.5em;line-height:1.2">או שפשוט תעבדו יותר כמו מקצוענים</h2>
+            <p style="font-size:.58em;color:rgba(240,240,248,.82);line-height:1.75;max-width:1100px">
+              כדי להשתמש בשלוף לתמונה פה ושם, הצ'אט הוא אחלה. בטח אם משתמשים ב-GEM, אבל שימוש בכלי הייעודיים של גוגל ליצירת תמונות (<strong style="color:var(--c-hi)">Flow, AI Studio</strong>) או אפילו בכלים חיצוניים (<strong style="color:var(--c-hi)">Hedra, Runway, היגספילד</strong>) יאפשר לכם גם שליטה יותר טובה על הפרמטרים (גודל, רזולוציה, כמות תוצרים) והכי חשוב — יוציא לכם <strong style="color:var(--a-hi)">תמונות בלי כוכב!</strong>
+            </p>
           </div>
         </div>
       </section>
@@ -1800,7 +1798,7 @@
         <div style="position:absolute;top:50%;right:0;left:0;transform:translateY(-50%);display:grid;grid-template-columns:auto 1fr auto;gap:48px;align-items:center;padding:0 60px;direction:rtl;z-index:2">
           <!-- Right vertical video -->
           <div style="flex-shrink:0">
-            <video src="assets/demos/s-33a.mp4" data-autoplay autoplay muted loop playsinline style="width:420px;height:750px;object-fit:cover;border-radius:18px;background:#000;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
+            <video src="assets/demos/s-34a.mp4" data-autoplay autoplay muted loop playsinline style="width:420px;height:750px;object-fit:cover;border-radius:18px;background:#000;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
             <div style="text-align:center;margin-top:12px;font-size:.42em;color:var(--a-hi);font-family:var(--mono);letter-spacing:.05em">📹 זווית א'</div>
           </div>
           <!-- Center content -->
@@ -1815,7 +1813,7 @@
           </div>
           <!-- Left vertical video -->
           <div style="flex-shrink:0">
-            <video src="assets/demos/s-33b.mp4" data-autoplay autoplay muted loop playsinline style="width:420px;height:750px;object-fit:cover;border-radius:18px;background:#000;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
+            <video src="assets/demos/s-34b.mp4" data-autoplay autoplay muted loop playsinline style="width:420px;height:750px;object-fit:cover;border-radius:18px;background:#000;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
             <div style="text-align:center;margin-top:12px;font-size:.42em;color:var(--a-hi);font-family:var(--mono);letter-spacing:.05em">📹 זווית ב'</div>
           </div>
         </div>
@@ -1835,7 +1833,7 @@
             <h2>תנועה עדינה = וידאו שהאלגוריתם מעדיף</h2>
             <p>
               ככה תייצרו <strong>תנועה עדינה בפוסט סטטי</strong> ותהפכו אותו לוידאו שמערכת הקידום מעדיפה לעיתים.<br>
-              מפרומפט לתוצר — ראו בהדגמה:
+              מפרומפט לתוצר:
             </p>
           </div>
           <div style="flex-shrink:0">
@@ -1845,60 +1843,65 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH03-30 — START+END FRAME
+           CH03-30 — START+END FRAME (3-col)
       ══════════════════════════════════════════════════════ -->
-      <section class="s-split s-split-tl" data-transition="slide">
-        <div class="s-split-img">
-          <div style="width:100%;height:100%;background:linear-gradient(145deg,#001520,#0a0020);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;padding:30px;gap:14px">
-            <div class="orb" style="width:300px;height:300px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.2;animation-duration:8s"></div>
-            <div style="position:relative;z-index:1;width:100%">
-              <div style="background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);border-radius:8px;padding:12px 16px;font-size:.36em;color:var(--v-hi);margin-bottom:10px;text-align:center">
-                📸 צילום מסך: פרומפט עם Start Frame + End Frame — <em>s-30a.png</em>
-              </div>
-              <div style="background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.2);border-radius:8px;padding:12px 16px;font-size:.36em;color:var(--c-hi);text-align:center">
-                🎬 סרטון התוצר · <em>s-30b.mp4</em>
-              </div>
-            </div>
+      <section class="s-gold" data-transition="slide">
+        <div class="s-gold-glow-bg" style="background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(124,58,237,.12) 0%,transparent 70%)"></div>
+        <div class="s-gold-frame"></div>
+        <div class="spark" style="top:14%;right:8%;color:#fcd34d;animation-delay:0s;font-size:1.6em">✦</div>
+        <div class="spark" style="bottom:18%;left:6%;color:#fcd34d;animation-delay:-2s;font-size:1.8em">✦</div>
+        <div style="position:absolute;top:50%;right:0;left:0;transform:translateY(-50%);display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;padding:0 60px;direction:rtl;z-index:2">
+          <!-- Right: portrait image -->
+          <div style="flex-shrink:0">
+            <img src="assets/demos/s-36.png" style="width:380px;height:680px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(124,58,237,.3)" alt="Start Frame">
+            <div style="text-align:center;margin-top:10px;font-size:.4em;color:var(--v-hi);font-family:var(--mono)">📸 Start Frame</div>
           </div>
-          <span class="img-label">🎬 Start+End Frame</span>
-          <div class="img-cap">מיקום ← AI ממלא את הביניים</div>
-        </div>
-        <div class="s-split-content">
-          <span class="eyebrow">Start + End Frame</span>
-          <h2>האח הפדנטי<br>של Image to Video</h2>
-          <p>עוזר לשמור על עקביות + לייצר סצנות מורכבות. נגיד — <strong>מעבר מלוקיישן ספציפי ללוקיישן ספציפי.</strong></p>
-          <ul>
-            <li><span class="dot"></span>שליטה מלאה על פריים הפתיחה</li>
-            <li><span class="dot"></span>שליטה מלאה על פריים הסיום</li>
-            <li><span class="dot"></span>AI ממלא את האנימציה באמצע</li>
-            <li><span class="dot"></span>מושלם למעברים ולסצנות מורכבות</li>
-          </ul>
+          <!-- Center: text -->
+          <div style="text-align:center;padding:0 24px">
+            <div class="s-gold-badge" style="margin:0 auto 1em;background:rgba(124,58,237,.15);border-color:rgba(124,58,237,.35);color:var(--v-hi)">🎬 &nbsp; Start + End Frame</div>
+            <h2 style="margin-bottom:.6em">האח הפדנטי<br>של Image to Video</h2>
+            <p style="font-size:.6em;line-height:1.75">
+              עוזר לשמור על עקביות + לייצר סצנות מורכבות.<br>
+              נגיד — <strong>מעבר מלוקיישן ספציפי ללוקיישן ספציפי.</strong><br>
+              <span style="color:var(--c-hi)">פריים פתיחה + סיום → AI ממלא את הביניים</span>
+            </p>
+          </div>
+          <!-- Left: portrait video -->
+          <div style="flex-shrink:0">
+            <video src="assets/demos/s-36.mp4" data-autoplay autoplay muted loop playsinline style="width:380px;height:680px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(6,182,212,.3)"></video>
+            <div style="text-align:center;margin-top:10px;font-size:.4em;color:var(--c-hi);font-family:var(--mono)">🎬 התוצר</div>
+          </div>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH03-31 — ציטוט פתגם סיני
+           CH03-31 — ציטוט פתגם סיני + square video
       ══════════════════════════════════════════════════════ -->
-      <section class="s-statement" data-transition="zoom" data-transition-speed="slow">
-        <div class="s-statement-conic" style="opacity:.5;animation-duration:35s"></div>
+      <section class="s-base" data-transition="zoom" data-transition-speed="slow" style="overflow:hidden">
+        <div class="s-statement-conic" style="opacity:.45;animation-duration:35s"></div>
         <div class="ring ring-1" style="border-color:rgba(6,182,212,.1)"></div>
         <div class="ring ring-2"></div>
         <div class="s-accent-h top"></div>
         <div class="s-accent-h bottom"></div>
-        <div class="s-statement-inner">
-          <span class="eyebrow" style="animation:fade-up .7s ease both;letter-spacing:.3em;font-size:.5em">— פתגם סיני עתיק —</span>
-          <span class="s-statement-word outline" style="font-size:3.2em !important;animation-delay:.05s">"ה-End Frame</span>
-          <span class="s-statement-word g" style="font-size:3.2em !important;animation-delay:.1s">של סצנה אחת</span>
-          <span class="s-statement-word outline" style="font-size:3.2em !important;animation-delay:.15s">הוא ה-Start Frame</span>
-          <span class="s-statement-word fire" style="font-size:3.2em !important;animation-delay:.2s">של הסצנה הבאה"</span>
-          <div style="margin-top:1.4em;background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.2);border-radius:10px;padding:12px 24px;font-size:.37em;color:var(--c-hi);text-align:center;animation:fade-up .7s .3s ease both">
-            🎬 הדגמה: החלפת Start ↔ End פריים בקלינג · <em>assets/demos/s-31.mp4</em>
+        <!-- Two-column: quote left, square video right -->
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:60px;padding:0 80px;direction:rtl">
+          <!-- Quote -->
+          <div class="s-statement-inner" style="position:relative;flex:1;text-align:right">
+            <span class="eyebrow" style="animation:fade-up .7s ease both;letter-spacing:.3em;font-size:.5em">— פתגם סיני עתיק —</span>
+            <span class="s-statement-word outline" style="font-size:2.8em !important;animation-delay:.05s">"ה-End Frame</span>
+            <span class="s-statement-word g" style="font-size:2.8em !important;animation-delay:.1s">של סצנה אחת</span>
+            <span class="s-statement-word outline" style="font-size:2.8em !important;animation-delay:.15s">הוא ה-Start Frame</span>
+            <span class="s-statement-word fire" style="font-size:2.8em !important;animation-delay:.2s">של הסצנה הבאה"</span>
+          </div>
+          <!-- Square looping video -->
+          <div style="flex-shrink:0;animation:fade-up .8s .25s ease both">
+            <video src="assets/demos/s-37.mp4" data-autoplay autoplay muted loop playsinline style="width:480px;height:480px;object-fit:cover;border-radius:20px;box-shadow:0 20px 70px rgba(0,0,0,.7),0 0 0 1px rgba(6,182,212,.25)"></video>
           </div>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH03-32 — GOLD TIP: End Frame בקאפקאט
+           CH03-32 — GOLD TIP: Start Frame בקאפקאט + landscape video
       ══════════════════════════════════════════════════════ -->
       <section class="s-gold" data-transition="convex" data-transition-speed="fast">
         <div class="s-gold-glow-bg"></div>
@@ -1906,107 +1909,94 @@
         <div class="spark" style="top:18%;right:12%;color:#fcd34d;animation-delay:0s">✦</div>
         <div class="spark" style="bottom:22%;left:10%;color:#fcd34d;animation-delay:-2s;font-size:2em">✦</div>
         <div class="spark" style="top:25%;left:18%;color:#f59e0b;animation-delay:-4s">✧</div>
-        <div class="s-gold-inner">
-          <div class="s-gold-badge">✦ &nbsp; טיפ זהב · End Frame</div>
-          <h2>אין לכם End Frame? ככה מייצרים אותו בקאפקאט</h2>
-          <p>
-            לא תמיד יש לכם את הפריים המדויק שרוצים כסיום.<br>
-            <strong>CapCut מאפשר להקפיא פריים מהוידאו</strong> ולשמור אותו כתמונה —<br>
-            זה בדיוק ה-End Frame שלכם. קל, מהיר, חינמי.
-          </p>
+        <!-- Layout: text top, landscape video bottom -->
+        <div style="position:absolute;top:50%;left:0;right:0;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:36px;padding:0 80px;z-index:2;direction:rtl">
+          <div style="text-align:center;width:100%">
+            <div class="s-gold-badge" style="margin:0 auto .8em">✦ &nbsp; טיפ זהב · CapCut</div>
+            <h2 style="margin-bottom:.5em">ככה תייצרו את ה-Start Frame של הסצנה הבאה</h2>
+            <p style="font-size:.6em;line-height:1.75;max-width:900px;margin:0 auto">
+              לא תמיד יש לכם את הפריים של סוף הסצנה הקודמת כדי להתחיל איתו את הסצנה הבאה.<br>
+              במקום להשתמש בצילום מסך לא איכותי — <strong>ככה מייצאים פריים סטטי ב-CapCut</strong>
+            </p>
+          </div>
+          <div style="width:100%;max-width:1100px;flex-shrink:0;position:relative;border-radius:14px;overflow:hidden;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.25)">
+            <div class="s-video-scanline" style="position:absolute;inset:0;z-index:1;pointer-events:none"></div>
+            <video src="assets/demos/s-38.mp4" data-autoplay autoplay muted loop playsinline style="width:100%;display:block;position:relative;z-index:2"></video>
+          </div>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH03-33 — MULTI-SHOT + הדגמה פרומפט
+           CH03-33 — MULTI-SHOT (3-col portrait)
       ══════════════════════════════════════════════════════ -->
-      <section class="s-video" data-transition="slide">
-        <div class="s-split-content" style="padding:80px 50px 80px 100px">
-          <div class="chip cyan" style="margin-bottom:1em">🎬 Multi-Shot</div>
-          <span class="eyebrow">Kling · Multi-Shot</span>
-          <h2>כמה שוטים —<br>וידאו אחד</h2>
-          <p style="margin-bottom:.8em">כלי יחסית חדש שיוצר מראש <strong>סרטון שמורכב מכמה שוטים</strong> — לא צריך לחתוך, לחבר, לתכנן.</p>
-          <p>תנו פרומפט + תמונה — ומקבלים וידאו מקצועי עם כמה זוויות.</p>
+      <section class="s-gold" data-transition="slide">
+        <div class="s-gold-glow-bg" style="background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(6,182,212,.1) 0%,transparent 70%)"></div>
+        <div class="s-gold-frame" style="border-color:rgba(6,182,212,.15)"></div>
+        <div class="spark" style="top:14%;right:8%;color:#22d3ee;animation-delay:0s;font-size:1.4em">✦</div>
+        <div class="spark" style="bottom:18%;left:6%;color:#06b6d4;animation-delay:-2.5s;font-size:1.6em">✦</div>
+        <div style="position:absolute;top:50%;right:0;left:0;transform:translateY(-50%);display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;padding:0 60px;direction:rtl;z-index:2">
+          <!-- Right: portrait image placeholder (use first frame of multi-shot demo) -->
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center">
+            <div style="width:380px;height:680px;border-radius:18px;background:rgba(6,182,212,.06);border:1px solid rgba(6,182,212,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;box-shadow:0 16px 60px rgba(0,0,0,.5)">
+              <div style="font-size:3em;filter:drop-shadow(0 0 20px rgba(6,182,212,.5))">📸</div>
+              <div style="font-size:.38em;color:var(--c-hi);font-family:var(--mono);text-align:center;padding:0 20px">תמונת הפרומפט<br>+ הנחיית סגנון</div>
+            </div>
+            <div style="text-align:center;margin-top:10px;font-size:.4em;color:var(--c-hi);font-family:var(--mono)">📸 Input</div>
+          </div>
+          <!-- Center: text -->
+          <div style="text-align:center;padding:0 24px">
+            <div class="chip cyan" style="margin:0 auto 1em;display:inline-flex">🎬 Multi-Shot</div>
+            <h2 style="margin-bottom:.6em">כמה שוטים —<br>וידאו אחד</h2>
+            <p style="font-size:.6em;line-height:1.75">
+              כלי יחסית חדש שיוצר מראש <strong>סרטון שמורכב מכמה שוטים</strong> — לא צריך לחתוך, לחבר, לתכנן.<br>
+              <span style="color:var(--c-hi)">תנו פרומפט + תמונה — ומקבלים וידאו מקצועי עם כמה זוויות.</span>
+            </p>
+          </div>
+          <!-- Left: portrait video -->
+          <div style="flex-shrink:0">
+            <video src="assets/demos/s-38.mp4" data-autoplay autoplay muted loop playsinline style="width:380px;height:680px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(6,182,212,.3)"></video>
+            <div style="text-align:center;margin-top:10px;font-size:.4em;color:var(--c-hi);font-family:var(--mono)">🎬 Multi-Shot Output</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-35 — VIDEO TO VIDEO: לפני
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-video" data-transition="slide" style="--v-cols:38% 62%">
+        <div class="s-split-content" style="padding:80px 50px 80px 80px">
+          <div class="chip" style="margin-bottom:1em;background:rgba(244,63,94,.12);border-color:rgba(244,63,94,.3);color:#f87171">🎞️ Video to Video · לפני</div>
+          <span class="eyebrow" style="color:#f87171">Kling · Video to Video</span>
+          <h2>תצלמו אתם<br>את "התנועה"</h2>
+          <p>אפשר לייצר וידאו שלכם — <strong>מעפן ככל שיהיה</strong> — שבו אתם מדגימים את התנועה, ואז לתת ל-AI לעשות את השאר.</p>
+          <ul>
+            <li><span class="dot" style="background:#f43f5e"></span>הצניחה, הריצה, הסיבוב — הכל בהנחיה שלכם</li>
+            <li><span class="dot" style="background:#f43f5e"></span>AI מחליף את הנראות, לא את התנועה</li>
+          </ul>
         </div>
         <div class="s-video-pane">
-          <div class="bg bg-grid" style="opacity:.3"></div>
+          <div class="bg bg-dots" style="opacity:.2"></div>
           <div class="s-video-scanline"></div>
-          <video src="assets/demos/s-38.mp4" controls style="width:100%;height:100%;object-fit:contain">
-            <div class="s-video-thumb">
-              <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(6,182,212,.7))">🎬</div>
-              <div class="s-video-play-btn" style="background:linear-gradient(135deg,#06b6d4,#7c3aed)">
-                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-              <div class="s-video-tag" style="color:var(--c-hi)">Multi-Shot · פרומפט + תמונה</div>
-            </div>
+          <video src="assets/demos/s-40.mp4" controls class="v-169" style="position:relative;z-index:2">
           </video>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH03-34 — הדגמה: Multi-Shot תוצר
+           CH03-36 — VIDEO TO VIDEO: אחרי
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="fade" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
-        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
-        <div style="position:absolute;inset:0">
-          <div class="bg bg-grid" style="opacity:.2;z-index:0"></div>
-          <div class="s-video-scanline" style="z-index:1"></div>
-          <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
-            <div style="width:80px;height:80px;border-radius:50%;background:rgba(6,182,212,.15);border:2px solid rgba(6,182,212,.3);display:flex;align-items:center;justify-content:center">
-              <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#22d3ee"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <div style="font-size:.4em;color:rgba(255,255,255,.3);font-family:var(--mono)">assets/demos/s-39.mp4</div>
-          </div>
-          <video src="assets/demos/s-39.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3"></video>
+      <section class="s-video" data-transition="slide" style="--v-cols:38% 62%">
+        <div class="s-split-content" style="padding:80px 50px 80px 80px">
+          <div class="chip" style="margin-bottom:1em;background:rgba(16,185,129,.12);border-color:rgba(16,185,129,.3);color:#34d399">✨ Video to Video · אחרי</div>
+          <span class="eyebrow" style="color:#34d399">Kling · Video to Video</span>
+          <h2>ואז להנחות<br>את המודל</h2>
+          <p>תארו לו <strong>איך זה צריך להיראות</strong> — סגנון, עולם, אווירה. האנימציה נשמרת, הנראות מתחלפת לחלוטין.</p>
         </div>
-        <div style="position:absolute;bottom:24px;right:0;left:0;text-align:center;z-index:3">
-          <div class="chip cyan">Multi-Shot · התוצר הסופי</div>
-        </div>
-      </section>
-
-      <!-- ══════════════════════════════════════════════════════
-           CH03-35 — VIDEO TO VIDEO: הוידאו המקורי
-      ══════════════════════════════════════════════════════ -->
-      <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
-        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
-        <div style="position:absolute;top:0;right:0;left:0;padding:36px 80px 28px;z-index:3;direction:rtl;text-align:right;background:linear-gradient(to bottom,rgba(5,5,14,.95) 60%,transparent 100%)">
-          <div class="chip" style="margin-bottom:.6em;background:rgba(244,63,94,.12);border-color:rgba(244,63,94,.3);color:#f87171">🎞️ Video to Video</div>
-          <h2 style="font-size:1.7em !important;color:var(--white) !important;line-height:1.2 !important;max-width:75%">אפשר לייצר וידאו שלכם — מעפן ככל שיהיה — שבו אתם "מדגימים את התנועה"</h2>
-        </div>
-        <div style="position:absolute;inset:0;width:100%;height:100%">
-          <div class="bg bg-grid" style="opacity:.2;z-index:0"></div>
-          <div class="s-video-scanline" style="z-index:1"></div>
-          <!-- Placeholder always visible -->
-          <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
-            <div style="width:80px;height:80px;border-radius:50%;background:rgba(244,63,94,.15);border:2px solid rgba(244,63,94,.3);display:flex;align-items:center;justify-content:center">
-              <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#f87171"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <div style="font-size:.4em;color:rgba(255,255,255,.3);font-family:var(--mono)">assets/demos/s-40.mp4</div>
-          </div>
-          <video src="assets/demos/s-40.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3"></video>
-        </div>
-      </section>
-
-      <!-- ══════════════════════════════════════════════════════
-           CH03-36 — VIDEO TO VIDEO: התוצר המוחלף
-      ══════════════════════════════════════════════════════ -->
-      <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
-        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
-        <div style="position:absolute;top:0;right:0;left:0;padding:36px 80px 28px;z-index:3;direction:rtl;text-align:right;background:linear-gradient(to bottom,rgba(5,5,14,.95) 60%,transparent 100%)">
-          <div class="chip" style="margin-bottom:.6em;background:rgba(16,185,129,.12);border-color:rgba(16,185,129,.3);color:#34d399">✨ Video to Video · תוצר</div>
-          <h2 style="font-size:1.7em !important;color:var(--white) !important;line-height:1.2 !important;max-width:75%">ואז להנחות את המודל איך זה צריך להיראות</h2>
-        </div>
-        <div style="position:absolute;inset:0;width:100%;height:100%">
-          <div class="bg bg-grid" style="opacity:.2;z-index:0"></div>
-          <div class="s-video-scanline" style="z-index:1"></div>
-          <!-- Placeholder always visible -->
-          <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
-            <div style="width:80px;height:80px;border-radius:50%;background:rgba(16,185,129,.15);border:2px solid rgba(16,185,129,.3);display:flex;align-items:center;justify-content:center">
-              <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#34d399"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <div style="font-size:.4em;color:rgba(255,255,255,.3);font-family:var(--mono)">assets/demos/s-41.mp4</div>
-          </div>
-          <video src="assets/demos/s-41.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3"></video>
+        <div class="s-video-pane">
+          <div class="bg bg-dots" style="opacity:.2"></div>
+          <div class="s-video-scanline"></div>
+          <video src="assets/demos/s-41.mp4" controls class="v-169" style="position:relative;z-index:2">
+          </video>
         </div>
       </section>
 
@@ -2030,44 +2020,36 @@
       <!-- ══════════════════════════════════════════════════════
            CH03-43 — אריאה לפני
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
-        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
-        <div style="position:absolute;top:0;right:0;left:0;padding:36px 80px 28px;z-index:3;direction:rtl;text-align:right;background:linear-gradient(to bottom,rgba(5,5,14,.95) 60%,transparent 100%)">
-          <h2 style="font-size:1.7em !important;color:var(--white) !important;line-height:1.2 !important">אם נגיד יש לכם וידאו עם שחקנים שנראים לא טוב</h2>
+      <section class="s-video" data-transition="slide" style="--v-cols:38% 62%">
+        <div class="s-split-content" style="padding:80px 50px 80px 80px">
+          <div class="chip" style="margin-bottom:1em;background:rgba(124,58,237,.12);border-color:rgba(124,58,237,.3);color:var(--v-hi)">🎭 Video to Video · לפני</div>
+          <span class="eyebrow">דוגמה מעשית</span>
+          <h2>יש לכם וידאו<br>עם שחקנים שנראים לא טוב</h2>
+          <p>קורה. <strong>לא חייבים לצלם מחדש.</strong> תנו ל-AI לשדרג את הנראות תוך שמירה על כל התנועה המקורית.</p>
         </div>
-        <div style="position:absolute;inset:0;width:100%;height:100%">
-          <div class="bg bg-grid" style="opacity:.2;z-index:0"></div>
-          <div class="s-video-scanline" style="z-index:1"></div>
-          <!-- Placeholder always visible -->
-          <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
-            <div style="width:80px;height:80px;border-radius:50%;background:rgba(124,58,237,.15);border:2px solid rgba(124,58,237,.3);display:flex;align-items:center;justify-content:center">
-              <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#a855f7"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <div style="font-size:.4em;color:rgba(255,255,255,.3);font-family:var(--mono)">assets/demos/s-43.mp4</div>
-          </div>
-          <video src="assets/demos/s-43.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3"></video>
+        <div class="s-video-pane">
+          <div class="bg bg-dots" style="opacity:.2"></div>
+          <div class="s-video-scanline"></div>
+          <video src="assets/demos/s-43.mp4" controls class="v-169" style="position:relative;z-index:2">
+          </video>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
            CH03-44 — אריאה אחרי
       ══════════════════════════════════════════════════════ -->
-      <section data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:#000 !important;overflow:hidden">
-        <div class="bg bg-dots" style="opacity:.15;z-index:1"></div>
-        <div style="position:absolute;top:0;right:0;left:0;padding:36px 80px 28px;z-index:3;direction:rtl;text-align:right;background:linear-gradient(to bottom,rgba(5,5,14,.95) 60%,transparent 100%)">
-          <h2 style="font-size:1.7em !important;color:var(--white) !important;line-height:1.2 !important">אפשר להפוך אותם להרבה יותר יפים</h2>
+      <section class="s-video" data-transition="slide" style="--v-cols:38% 62%">
+        <div class="s-split-content" style="padding:80px 50px 80px 80px">
+          <div class="chip" style="margin-bottom:1em;background:rgba(16,185,129,.12);border-color:rgba(16,185,129,.3);color:#34d399">✨ Video to Video · אחרי</div>
+          <span class="eyebrow" style="color:#34d399">התוצר</span>
+          <h2>אפשר להפוך אותם<br>להרבה יותר יפים</h2>
+          <p>אותה תנועה, <strong>נראות חדשה לגמרי.</strong> בלי סטודיו, בלי תאורה, בלי מייקאפ.</p>
         </div>
-        <div style="position:absolute;inset:0;width:100%;height:100%">
-          <div class="bg bg-grid" style="opacity:.2;z-index:0"></div>
-          <div class="s-video-scanline" style="z-index:1"></div>
-          <!-- Placeholder always visible -->
-          <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
-            <div style="width:80px;height:80px;border-radius:50%;background:rgba(16,185,129,.15);border:2px solid rgba(16,185,129,.3);display:flex;align-items:center;justify-content:center">
-              <svg viewBox="0 0 24 24" style="width:36px;height:36px;fill:#34d399"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <div style="font-size:.4em;color:rgba(255,255,255,.3);font-family:var(--mono)">assets/demos/s-44.mp4</div>
-          </div>
-          <video src="assets/demos/s-44.mp4" controls style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3"></video>
+        <div class="s-video-pane">
+          <div class="bg bg-dots" style="opacity:.2"></div>
+          <div class="s-video-scanline"></div>
+          <video src="assets/demos/s-44.mp4" controls class="v-169" style="position:relative;z-index:2">
+          </video>
         </div>
       </section>
 
