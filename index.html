@@ -1593,24 +1593,19 @@
            CH02 — הסרת כוכב (s-video)
       ══════════════════════════════════════════════════════ -->
       <section class="s-base" data-transition="slide" style="overflow:hidden">
-        <div class="bg bg-dots" style="opacity:.15"></div>
-        <div class="orb cyan" style="width:600px;height:600px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.08;animation-duration:12s"></div>
-        <!-- Two-column flex: text left | video right. Flex ensures zero overlap. -->
-        <div style="position:absolute;inset:0;display:flex;align-items:stretch">
-          <!-- Text pane: 38%, always dark, content is fragment -->
-          <div style="flex:0 0 38%;position:relative;display:flex;align-items:center;background:rgba(5,5,14,1)">
-            <div style="position:absolute;top:0;right:0;width:100px;height:100%;background:linear-gradient(to right,rgba(5,5,14,1),rgba(5,5,14,0));z-index:1;pointer-events:none"></div>
-            <div class="fragment fade-in" style="padding:60px 60px 60px 70px;direction:rtl;position:relative;z-index:2;width:100%">
-              <h2 style="font-size:1.55em !important;margin-bottom:.6em;line-height:1.25">או שפשוט תעבדו יותר כמו מקצוענים</h2>
-              <p style="font-size:.55em;color:rgba(240,240,248,.82);line-height:1.8">
-                כדי להשתמש בשלוף לתמונה פה ושם, הצ'אט הוא אחלה. בטח אם משתמשים ב-GEM, אבל שימוש בכלי הייעודיים של גוגל ליצירת תמונות (<strong style="color:var(--c-hi)">Flow, AI Studio</strong>) או אפילו בכלים חיצוניים (<strong style="color:var(--c-hi)">Hedra, Runway, היגספילד</strong>) יאפשר לכם גם שליטה יותר טובה על הפרמטרים (גודל, רזולוציה, כמות תוצרים) והכי חשוב — יוציא לכם <strong style="color:var(--a-hi)">תמונות בלי כוכב!</strong>
-              </p>
-            </div>
-          </div>
-          <!-- Video pane: remaining 62%, video sized by its natural 16:9 ratio, click to play -->
-          <div style="flex:1;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden">
-            <div class="s-video-scanline" style="position:absolute;inset:0;pointer-events:none;z-index:1"></div>
-            <video class="v-169" src="assets/demos/s-26.mp4" controls playsinline data-no-advance style="position:relative;z-index:2;width:100%"></video>
+        <div class="bg bg-dots" style="opacity:.08"></div>
+        <div class="orb cyan" style="width:500px;height:500px;top:50%;left:25%;transform:translate(-50%,-50%);opacity:.12;animation-duration:12s"></div>
+        <!-- Video: full-screen, click to play -->
+        <video src="assets/demos/s-26.mp4" controls playsinline data-no-advance style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1"></video>
+        <!-- Cinematic gradient: left side darkened so text is legible without opaque box -->
+        <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(5,5,14,.92) 0%,rgba(5,5,14,.88) 28%,rgba(5,5,14,.45) 50%,rgba(5,5,14,0) 66%);z-index:2;pointer-events:none"></div>
+        <!-- Text: left 44%, fragment -->
+        <div class="fragment fade-in" style="position:absolute;top:0;left:0;width:44%;height:100%;z-index:3;display:flex;align-items:center;padding:60px 50px 60px 72px;direction:rtl;pointer-events:none">
+          <div>
+            <h2 style="font-size:1.55em !important;margin-bottom:.6em;line-height:1.25">או שפשוט תעבדו יותר כמו מקצוענים</h2>
+            <p style="font-size:.55em;color:rgba(240,240,248,.85);line-height:1.8">
+              כדי להשתמש בשלוף לתמונה פה ושם, הצ'אט הוא אחלה. בטח אם משתמשים ב-GEM, אבל שימוש בכלי הייעודיים של גוגל ליצירת תמונות (<strong style="color:var(--c-hi)">Flow, AI Studio</strong>) או אפילו בכלים חיצוניים (<strong style="color:var(--c-hi)">Hedra, Runway, היגספילד</strong>) יאפשר לכם גם שליטה יותר טובה על הפרמטרים (גודל, רזולוציה, כמות תוצרים) והכי חשוב — יוציא לכם <strong style="color:var(--a-hi)">תמונות בלי כוכב!</strong>
+            </p>
           </div>
         </div>
       </section>
@@ -2036,10 +2031,17 @@
         </div>
         <div class="s-video-pane">
           <div class="bg bg-dots" style="opacity:.2"></div>
-          <div class="s-video-scanline"></div>
-          <video src="assets/demos/s-44.mp4" controls class="v-169" style="position:relative;z-index:2">
-          </video>
+          <img src="assets/demos/s-44.png" style="width:100%;height:100%;object-fit:cover;position:relative;z-index:2;display:block">
         </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-44b — וידאו רוחבי: s-45
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-base" data-transition="fade" style="overflow:hidden">
+        <div class="bg bg-dots" style="opacity:.08"></div>
+        <div class="s-video-scanline" style="position:absolute;inset:0;z-index:2;pointer-events:none"></div>
+        <video src="assets/demos/s-45.mp4" controls playsinline data-no-advance style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1"></video>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
@@ -2048,18 +2050,30 @@
       <section class="s-gold" data-transition="convex" data-transition-speed="fast">
         <div class="s-gold-glow-bg"></div>
         <div class="s-gold-frame"></div>
-        <div class="spark" style="top:16%;right:10%;color:#fcd34d;animation-delay:0s;font-size:1.8em">✦</div>
-        <div class="spark" style="bottom:20%;left:8%;color:#fcd34d;animation-delay:-2.5s;font-size:2em">✦</div>
-        <div class="spark" style="top:28%;left:14%;color:#f59e0b;animation-delay:-4s">✧</div>
-        <div class="spark" style="bottom:32%;right:12%;color:#fcd34d;animation-delay:-1.5s">✧</div>
-        <div class="s-gold-inner">
-          <div class="s-gold-badge">✦ &nbsp; טיפ זהב · CapCut</div>
-          <h2>פריים כפול בנקודת החיבור — כך מתקנים</h2>
-          <p>
-            כשמחברים שני קטעים שנוצרו עם Start/End Frame —<br>
-            <strong>נוצר פריים כפול בנקודת החיבור שגורם לקפיצה.</strong><br>
-            מחיקת פריים אחד ב-CapCut בנקודת החיבור פותרת את זה.
-          </p>
+        <div class="spark" style="top:16%;right:8%;color:#fcd34d;animation-delay:0s;font-size:1.6em">✦</div>
+        <div class="spark" style="bottom:20%;left:6%;color:#fcd34d;animation-delay:-2.5s;font-size:1.8em">✦</div>
+        <div class="spark" style="top:28%;left:12%;color:#f59e0b;animation-delay:-4s">✧</div>
+        <div style="position:absolute;top:50%;right:0;left:0;transform:translateY(-50%);display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;padding:0 56px;direction:rtl;z-index:2">
+          <!-- Right: portrait video "לפני" -->
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center">
+            <video src="assets/demos/s-45a.mp4" data-autoplay autoplay muted loop playsinline style="width:360px;height:640px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
+            <div style="text-align:center;margin-top:10px;font-size:.42em;color:var(--a-hi);font-family:var(--mono)">לפני</div>
+          </div>
+          <!-- Center: text -->
+          <div style="text-align:center;padding:0 20px">
+            <div class="s-gold-badge" style="margin:0 auto .8em">✦ &nbsp; טיפ זהב · CapCut</div>
+            <h2 style="margin-bottom:.6em">פריים כפול בנקודת החיבור —<br>כך מתקנים</h2>
+            <p style="font-size:.6em;line-height:1.8">
+              כשמחברים שני קטעים שנוצרו עם Start/End Frame —<br>
+              <strong>נוצר פריים כפול בנקודת החיבור שגורם לקפיצה.</strong><br>
+              מחיקת פריים אחד ב-CapCut בנקודת החיבור פותרת את זה.
+            </p>
+          </div>
+          <!-- Left: portrait video "אחרי" -->
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center">
+            <video src="assets/demos/s-45b.mp4" data-autoplay autoplay muted loop playsinline style="width:360px;height:640px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
+            <div style="text-align:center;margin-top:10px;font-size:.42em;color:var(--a-hi);font-family:var(--mono)">אחרי</div>
+          </div>
         </div>
       </section>
 
