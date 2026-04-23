@@ -101,6 +101,12 @@ Reveal.on('fragmentshown', (event) => {
     ? event.fragment
     : event.fragment.querySelector('.s32-vid-frag');
   if (vid) { vid.currentTime = 0; vid.play().catch(() => {}); }
+
+  // Generic play-trigger: <div class="fragment vid-play-frag" data-vid-id="some-id">
+  if (event.fragment.classList.contains('vid-play-frag')) {
+    const target = document.getElementById(event.fragment.getAttribute('data-vid-id'));
+    if (target) { target.currentTime = 0; target.play().catch(() => {}); }
+  }
 });
 
 Reveal.on('fragmenthidden', (event) => {
@@ -108,6 +114,12 @@ Reveal.on('fragmenthidden', (event) => {
     ? event.fragment
     : event.fragment.querySelector('.s32-vid-frag');
   if (vid) { vid.pause(); vid.currentTime = 0; }
+
+  // Generic play-trigger: pause when stepping back
+  if (event.fragment.classList.contains('vid-play-frag')) {
+    const target = document.getElementById(event.fragment.getAttribute('data-vid-id'));
+    if (target) { target.pause(); target.currentTime = 0; }
+  }
 });
 
 // ============================================================

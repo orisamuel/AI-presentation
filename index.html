@@ -1926,15 +1926,13 @@
         <div class="spark" style="top:14%;right:8%;color:#22d3ee;animation-delay:0s;font-size:1.4em">✦</div>
         <div class="spark" style="bottom:18%;left:6%;color:#06b6d4;animation-delay:-2.5s;font-size:1.6em">✦</div>
         <div style="position:absolute;top:50%;right:0;left:0;transform:translateY(-50%);display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;padding:0 60px;direction:rtl;z-index:2">
-          <!-- Right: portrait image placeholder (use first frame of multi-shot demo) -->
-          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center">
-            <div style="width:380px;height:680px;border-radius:18px;background:rgba(6,182,212,.06);border:1px solid rgba(6,182,212,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;box-shadow:0 16px 60px rgba(0,0,0,.5)">
-              <div style="font-size:3em;filter:drop-shadow(0 0 20px rgba(6,182,212,.5))">📸</div>
-              <div style="font-size:.38em;color:var(--c-hi);font-family:var(--mono);text-align:center;padding:0 20px">תמונת הפרומפט<br>+ הנחיית סגנון</div>
-            </div>
-            <div style="text-align:center;margin-top:10px;font-size:.4em;color:var(--c-hi);font-family:var(--mono)">📸 Input</div>
+          <!-- Right: video 39a — appears on click 1, plays on click 2 -->
+          <div class="fragment fade-in" data-fragment-index="0" style="flex-shrink:0;display:flex;flex-direction:column;align-items:center">
+            <video id="vid-39a" src="assets/demos/s-39a.mp4" muted loop playsinline
+                   style="width:420px;height:747px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(6,182,212,.3)"></video>
+            <div style="text-align:center;margin-top:10px;font-size:.4em;color:var(--c-hi);font-family:var(--mono)">🎬 דמו א׳</div>
           </div>
-          <!-- Center: text -->
+          <!-- Center: text (always visible) -->
           <div style="text-align:center;padding:0 24px">
             <div class="chip cyan" style="margin:0 auto 1em;display:inline-flex">🎬 Multi-Shot</div>
             <h2 style="margin-bottom:.6em">כמה שוטים —<br>וידאו אחד</h2>
@@ -1943,12 +1941,16 @@
               <span style="color:var(--c-hi)">תנו פרומפט + תמונה — ומקבלים וידאו מקצועי עם כמה זוויות.</span>
             </p>
           </div>
-          <!-- Left: portrait video -->
-          <div style="flex-shrink:0">
-            <video src="assets/demos/s-38.mp4" data-autoplay autoplay muted loop playsinline style="width:380px;height:680px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(6,182,212,.3)"></video>
-            <div style="text-align:center;margin-top:10px;font-size:.4em;color:var(--c-hi);font-family:var(--mono)">🎬 Multi-Shot Output</div>
+          <!-- Left: video 39b — appears on click 3, plays on click 4 -->
+          <div class="fragment fade-in" data-fragment-index="2" style="flex-shrink:0;display:flex;flex-direction:column;align-items:center">
+            <video id="vid-39b" src="assets/demos/s-39b.mp4" muted loop playsinline
+                   style="width:420px;height:747px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(6,182,212,.3)"></video>
+            <div style="text-align:center;margin-top:10px;font-size:.4em;color:var(--c-hi);font-family:var(--mono)">🎬 דמו ב׳</div>
           </div>
         </div>
+        <!-- Invisible play-trigger fragments (outside grid) -->
+        <div class="fragment vid-play-frag" data-fragment-index="1" data-vid-id="vid-39a" style="position:absolute;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none"></div>
+        <div class="fragment vid-play-frag" data-fragment-index="3" data-vid-id="vid-39b" style="position:absolute;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none"></div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
