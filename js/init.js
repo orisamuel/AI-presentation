@@ -87,8 +87,14 @@ Reveal.on('ready', () => {
   // Fix code block direction
   fixCodeBlocks();
 
-  // Prevent demo videos with controls from stealing keyboard focus (arrows seek video instead of advancing slide)
-  revealEl.querySelectorAll('video[controls]').forEach(v => v.setAttribute('tabindex', '-1'));
+  // A. Background preload all videos after first slide renders
+  setTimeout(prefetchAllVideos, 600);
+
+  // B. Hover-only controls + click-to-play for all videos
+  setupVideoInteractions();
+
+  // C. Left-arrow triggers play on unstarted demo videos
+  setupDemoVideoArrowPlay();
 });
 
 Reveal.on('slidechanged', (event) => {
@@ -121,6 +127,111 @@ Reveal.on('fragmenthidden', (event) => {
     if (target) { target.pause(); target.currentTime = 0; }
   }
 });
+
+// ============================================================
+// A. prefetchAllVideos()
+// After first slide loads, set preload=auto on all videos and
+// inject <link rel="prefetch"> for each unique src so the
+// browser downloads them in the background while the presenter
+// is still on the early slides.
+// ============================================================
+
+function prefetchAllVideos() {
+  const seen = new Set();
+  document.querySelectorAll('.reveal video[src]').forEach(video => {
+    const src = video.getAttribute('src');
+    if (!src) return;
+
+    // Ensure each video element itself tries to buffer
+    if (video.preload !== 'auto') video.preload = 'auto';
+
+    // One prefetch link per unique URL
+    if (seen.has(src)) return;
+    seen.add(src);
+
+    const link = document.createElement('link');
+    link.rel  = 'prefetch';
+    link.as   = 'video';
+    link.href = src;
+    document.head.appendChild(link);
+  });
+}
+
+// ============================================================
+// B. setupVideoInteractions()
+// - All videos: show native controls only on mouse-hover
+// - Non-loop demo videos: click the video body plays/pauses
+// ============================================================
+
+function setupVideoInteractions() {
+  document.querySelectorAll('.reveal .slides video').forEach(video => {
+    // Videos with data-no-advance keep controls always visible (full-bleed demo)
+    if (video.closest('[data-no-advance]') || video.getAttribute('data-no-advance') !== null) return;
+
+    // Remove controls — hidden by default
+    video.removeAttribute('controls');
+    video.setAttribute('tabindex', '-1');
+
+    // Reveal controls on hover
+    video.addEventListener('mouseenter', () => video.setAttribute('controls', ''));
+    video.addEventListener('mouseleave', () => video.removeAttribute('controls'));
+
+    // Click plays/pauses — only for non-autoplay (demo) videos
+    const isLoop = video.hasAttribute('autoplay') || video.hasAttribute('data-autoplay');
+    if (!isLoop) {
+      video.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (video.paused) video.play().catch(() => {});
+        else video.pause();
+      });
+    }
+  });
+}
+
+// ============================================================
+// C. setupDemoVideoArrowPlay()
+// In RTL mode, ArrowLeft = Reveal.next(). Intercept in capture
+// phase: if the current slide has a visible, unstarted demo
+// video, play it instead of advancing — same UX as slide 39.
+// Slides using the vid-play-frag fragment system are excluded
+// so their own fragment logic runs uninterrupted.
+// ============================================================
+
+function setupDemoVideoArrowPlay() {
+  document.addEventListener('keydown', (e) => {
+    // ArrowLeft = next in RTL
+    if (e.key !== 'ArrowLeft') return;
+
+    const currentSlide = Reveal.getCurrentSlide();
+    if (!currentSlide) return;
+
+    // Slides that use vid-play-frag handle their own playback via fragments
+    if (currentSlide.querySelector('.vid-play-frag')) return;
+
+    // Find the first visible, unstarted, non-loop demo video
+    const videos = currentSlide.querySelectorAll(
+      'video:not([autoplay]):not([data-autoplay])'
+    );
+
+    for (const v of videos) {
+      // Skip videos without metadata (broken src, not yet loaded)
+      if (v.readyState < 1) continue;
+      // Skip already-started videos
+      if (!v.paused || v.currentTime > 0) continue;
+      // Skip if hidden inside an unrevealed fragment
+      const frag = v.closest('.fragment');
+      if (frag && !frag.classList.contains('visible') && !frag.classList.contains('current-fragment')) continue;
+
+      // Play the video and consume the arrow keypress
+      e.stopPropagation();
+      e.preventDefault();
+      v.play().catch(() => {});
+      return;
+    }
+
+    // No unstarted video found — Reveal handles navigation as normal
+  }, true /* capture phase */);
+}
 
 // ============================================================
 // setupAgendaNav()
@@ -182,10 +293,18 @@ function tryLoadVideo(container, src, label) {
       if (!res.ok) return;
       const video = document.createElement('video');
       video.src = src;
-      video.controls = true;
-      video.preload = 'metadata';
+      video.preload = 'auto';
       video.style.maxHeight = '52vh';
       video.setAttribute('aria-label', label);
+      video.setAttribute('tabindex', '-1');
+      // Hover controls for placeholder-loaded videos
+      video.addEventListener('mouseenter', () => video.setAttribute('controls', ''));
+      video.addEventListener('mouseleave', () => video.removeAttribute('controls'));
+      video.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (video.paused) video.play().catch(() => {});
+        else video.pause();
+      });
       container.classList.add('has-media');
       container.innerHTML = '';
       container.appendChild(video);
