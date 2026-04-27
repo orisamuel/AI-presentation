@@ -1654,26 +1654,43 @@
           <h2>4 דרכים עיקריות ליצור וידאו עם AI</h2>
         </div>
         <div class="s-caps-grid z1" style="grid-template-columns:repeat(4,1fr);max-width:1200px;margin:0 auto">
-          <div class="cap-item highlight" style="animation-delay:.00s;cursor:default;padding:36px 22px">
+          <div class="cap-item highlight" style="animation-delay:.00s;cursor:pointer;padding:36px 22px" data-goto="ch03-text-to-video" data-no-advance="true">
             <div class="ci" style="font-size:2em">📝</div>
             <div class="ct">TEXT TO VIDEO</div>
             <div class="cs" style="margin-top:8px;font-size:.78em">תיאור בטקסט ← קליפ. כשלא חשוב מה בדיוק יופיע — הכי פשוט.</div>
           </div>
-          <div class="cap-item" style="animation-delay:.08s;cursor:default;padding:36px 22px">
+          <div class="cap-item" style="animation-delay:.08s;cursor:pointer;padding:36px 22px" data-goto="ch03-image-to-video" data-no-advance="true">
             <div class="ci" style="font-size:2em">🖼️</div>
             <div class="ct">IMAGE TO VIDEO</div>
             <div class="cs" style="margin-top:8px;font-size:.78em">תמונה קיימת ← קליפ. כשחשובה הדמות, המוצר, הפריים המדויק.</div>
           </div>
-          <div class="cap-item" style="animation-delay:.16s;cursor:default;padding:36px 22px">
-            <div class="ci" style="font-size:2em">🎞️</div>
-            <div class="ct">VIDEO TO VIDEO</div>
-            <div class="cs" style="margin-top:8px;font-size:.78em">וידאו קיים ← עריכה ושינוי. להחליף רקע, דמות, סגנון — בפרומפט.</div>
-          </div>
-          <div class="cap-item" style="animation-delay:.24s;cursor:default;padding:36px 22px">
+          <div class="cap-item" style="animation-delay:.16s;cursor:pointer;padding:36px 22px" data-goto="ch03-start-end" data-no-advance="true">
             <div class="ci" style="font-size:2em">🎬</div>
             <div class="ct">START+END FRAME</div>
             <div class="cs" style="margin-top:8px;font-size:.78em">פריים פתיחה + סיום → AI ממלא את האנימציה. לסצנות מורכבות ומעברים.</div>
           </div>
+          <div class="cap-item" style="animation-delay:.24s;cursor:pointer;padding:36px 22px" data-goto="ch03-video-to-video" data-no-advance="true">
+            <div class="ci" style="font-size:2em">🎞️</div>
+            <div class="ct">VIDEO TO VIDEO</div>
+            <div class="cs" style="margin-top:8px;font-size:.78em">וידאו קיים ← עריכה ושינוי. להחליף רקע, דמות, סגנון — בפרומפט.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03 SUB-SECTION: TEXT TO VIDEO
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-base" data-transition="zoom" data-transition-speed="fast" id="ch03-text-to-video">
+        <div class="s-statement-conic" style="opacity:.4;animation-duration:30s"></div>
+        <div class="ring ring-1" style="border-color:rgba(6,182,212,.1)"></div>
+        <div class="ring ring-2"></div>
+        <div class="s-accent-h top"></div>
+        <div class="s-accent-h bottom"></div>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;z-index:2">
+          <div style="font-size:.5em;letter-spacing:.35em;text-transform:uppercase;color:var(--c-hi);font-family:var(--mono);animation:fade-up .6s ease both">01 / 04</div>
+          <div style="font-size:7em;animation:float 4s ease-in-out infinite;filter:drop-shadow(0 0 40px rgba(6,182,212,.5))">📝</div>
+          <h2 style="font-size:4em !important;font-weight:900 !important;text-align:center;animation:scale-out .7s .1s ease both;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent">TEXT TO VIDEO</h2>
+          <p style="font-size:.65em;color:rgba(240,240,248,.5);text-align:center;animation:fade-up .7s .25s ease both">תיאור בטקסט ← קליפ. הדרך הכי פשוטה.</p>
         </div>
       </section>
 
@@ -1714,6 +1731,23 @@
           <div style="flex-shrink:0">
             <video src="assets/demos/s-31.mp4" data-autoplay autoplay muted loop playsinline style="width:600px;height:600px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.25)"></video>
           </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03 SUB-SECTION: IMAGE TO VIDEO
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-base" data-transition="zoom" data-transition-speed="fast" id="ch03-image-to-video">
+        <div class="s-statement-conic" style="opacity:.4;animation-duration:28s;animation-direction:reverse"></div>
+        <div class="ring ring-1" style="border-color:rgba(244,63,94,.1)"></div>
+        <div class="ring ring-2"></div>
+        <div class="s-accent-h top"></div>
+        <div class="s-accent-h bottom"></div>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;z-index:2">
+          <div style="font-size:.5em;letter-spacing:.35em;text-transform:uppercase;color:var(--a-hi);font-family:var(--mono);animation:fade-up .6s ease both">02 / 04</div>
+          <div style="font-size:7em;animation:float 4s ease-in-out infinite;filter:drop-shadow(0 0 40px rgba(244,63,94,.5))">🖼️</div>
+          <h2 style="font-size:4em !important;font-weight:900 !important;text-align:center;animation:scale-out .7s .1s ease both;background:var(--grad-fire);-webkit-background-clip:text;-webkit-text-fill-color:transparent">IMAGE TO VIDEO</h2>
+          <p style="font-size:.65em;color:rgba(240,240,248,.5);text-align:center;animation:fade-up .7s .25s ease both">תמונה קיימת ← קליפ. כשהפרטים חשובים.</p>
         </div>
       </section>
 
@@ -1834,6 +1868,55 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
+           CH03-33 — MULTI-SHOT (3-col portrait) — חלק מ-IMAGE TO VIDEO
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-gold" data-transition="slide">
+        <div class="s-gold-glow-bg" style="background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(6,182,212,.1) 0%,transparent 70%)"></div>
+        <div class="s-gold-frame" style="border-color:rgba(6,182,212,.15)"></div>
+        <div class="spark" style="top:14%;right:8%;color:#22d3ee;animation-delay:0s;font-size:1.4em">✦</div>
+        <div class="spark" style="bottom:18%;left:6%;color:#06b6d4;animation-delay:-2.5s;font-size:1.6em">✦</div>
+        <!-- Center text: always visible -->
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;width:800px;z-index:2">
+          <div class="chip cyan" style="margin:0 auto 1em;display:inline-flex">🎬 Multi-Shot</div>
+          <h2 style="margin-bottom:.6em">כמה שוטים —<br>וידאו אחד</h2>
+          <p style="font-size:.6em;line-height:1.75">
+            כלי יחסית חדש שיוצר מראש <strong>סרטון שמורכב מכמה שוטים</strong> — לא צריך לחתוך, לחבר, לתכנן.<br>
+            <span style="color:var(--c-hi)">תנו פרומפט + תמונה — ומקבלים וידאו מקצועי עם כמה זוויות.</span>
+          </p>
+        </div>
+        <!-- Right video (39a): 692x850 natural → 460x565 at display width -->
+        <div class="fragment" data-fragment-index="0" style="position:absolute;top:calc(50% - 283px);right:60px;width:460px;height:565px;z-index:2">
+          <video id="vid-39a" src="assets/demos/s-39a.mp4" muted loop playsinline
+                 style="width:100%;height:100%;object-fit:cover;display:block;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(6,182,212,.3)"></video>
+        </div>
+        <!-- Left video (39b): 1076x1924 natural → 460x822 at display width -->
+        <div class="fragment" data-fragment-index="2" style="position:absolute;top:calc(50% - 411px);left:60px;width:460px;height:822px;z-index:2">
+          <video id="vid-39b" src="assets/demos/s-39b.mp4" muted loop playsinline
+                 style="width:100%;height:100%;object-fit:cover;display:block;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(6,182,212,.3)"></video>
+        </div>
+        <!-- Play-trigger fragments (invisible) -->
+        <div class="fragment vid-play-frag" data-fragment-index="1" data-vid-id="vid-39a" style="position:absolute;top:-1px;left:-1px;width:1px;height:1px;overflow:hidden;pointer-events:none"></div>
+        <div class="fragment vid-play-frag" data-fragment-index="3" data-vid-id="vid-39b" style="position:absolute;top:-1px;left:-1px;width:1px;height:1px;overflow:hidden;pointer-events:none"></div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03 SUB-SECTION: START+END FRAME
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-base" data-transition="zoom" data-transition-speed="fast" id="ch03-start-end">
+        <div class="s-statement-conic" style="opacity:.4;animation-duration:32s"></div>
+        <div class="ring ring-1" style="border-color:rgba(124,58,237,.12)"></div>
+        <div class="ring ring-2"></div>
+        <div class="s-accent-h top"></div>
+        <div class="s-accent-h bottom"></div>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;z-index:2">
+          <div style="font-size:.5em;letter-spacing:.35em;text-transform:uppercase;color:var(--v-hi);font-family:var(--mono);animation:fade-up .6s ease both">03 / 04</div>
+          <div style="font-size:7em;animation:float 4s ease-in-out infinite;filter:drop-shadow(0 0 40px rgba(124,58,237,.5))">🎬</div>
+          <h2 style="font-size:3.6em !important;font-weight:900 !important;text-align:center;animation:scale-out .7s .1s ease both;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent">START+END FRAME</h2>
+          <p style="font-size:.65em;color:rgba(240,240,248,.5);text-align:center;animation:fade-up .7s .25s ease both">פריים פתיחה + סיום → AI ממלא את הביניים.</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
            CH03-30 — START+END FRAME (3-col)
       ══════════════════════════════════════════════════════ -->
       <section class="s-gold" data-transition="slide">
@@ -1918,35 +2001,20 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH03-33 — MULTI-SHOT (3-col portrait)
+           CH03 SUB-SECTION: VIDEO TO VIDEO
       ══════════════════════════════════════════════════════ -->
-      <section class="s-gold" data-transition="slide">
-        <div class="s-gold-glow-bg" style="background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(6,182,212,.1) 0%,transparent 70%)"></div>
-        <div class="s-gold-frame" style="border-color:rgba(6,182,212,.15)"></div>
-        <div class="spark" style="top:14%;right:8%;color:#22d3ee;animation-delay:0s;font-size:1.4em">✦</div>
-        <div class="spark" style="bottom:18%;left:6%;color:#06b6d4;animation-delay:-2.5s;font-size:1.6em">✦</div>
-        <!-- Center text: always visible -->
-        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;width:800px;z-index:2">
-          <div class="chip cyan" style="margin:0 auto 1em;display:inline-flex">🎬 Multi-Shot</div>
-          <h2 style="margin-bottom:.6em">כמה שוטים —<br>וידאו אחד</h2>
-          <p style="font-size:.6em;line-height:1.75">
-            כלי יחסית חדש שיוצר מראש <strong>סרטון שמורכב מכמה שוטים</strong> — לא צריך לחתוך, לחבר, לתכנן.<br>
-            <span style="color:var(--c-hi)">תנו פרומפט + תמונה — ומקבלים וידאו מקצועי עם כמה זוויות.</span>
-          </p>
+      <section class="s-base" data-transition="zoom" data-transition-speed="fast" id="ch03-video-to-video">
+        <div class="s-statement-conic" style="opacity:.4;animation-duration:25s;animation-direction:reverse"></div>
+        <div class="ring ring-1" style="border-color:rgba(16,185,129,.1)"></div>
+        <div class="ring ring-2"></div>
+        <div class="s-accent-h top"></div>
+        <div class="s-accent-h bottom"></div>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;z-index:2">
+          <div style="font-size:.5em;letter-spacing:.35em;text-transform:uppercase;color:#34d399;font-family:var(--mono);animation:fade-up .6s ease both">04 / 04</div>
+          <div style="font-size:7em;animation:float 4s ease-in-out infinite;filter:drop-shadow(0 0 40px rgba(16,185,129,.5))">🎞️</div>
+          <h2 style="font-size:4em !important;font-weight:900 !important;text-align:center;animation:scale-out .7s .1s ease both;background:linear-gradient(90deg,#10b981,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent">VIDEO TO VIDEO</h2>
+          <p style="font-size:.65em;color:rgba(240,240,248,.5);text-align:center;animation:fade-up .7s .25s ease both">וידאו קיים ← שינוי סגנון, רקע, דמות.</p>
         </div>
-        <!-- Right video (39a): 692x850 natural → 460x565 at display width -->
-        <div class="fragment" data-fragment-index="0" style="position:absolute;top:calc(50% - 283px);right:60px;width:460px;height:565px;z-index:2">
-          <video id="vid-39a" src="assets/demos/s-39a.mp4" muted loop playsinline
-                 style="width:100%;height:100%;object-fit:cover;display:block;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(6,182,212,.3)"></video>
-        </div>
-        <!-- Left video (39b): 1076x1924 natural → 460x822 at display width -->
-        <div class="fragment" data-fragment-index="2" style="position:absolute;top:calc(50% - 411px);left:60px;width:460px;height:822px;z-index:2">
-          <video id="vid-39b" src="assets/demos/s-39b.mp4" muted loop playsinline
-                 style="width:100%;height:100%;object-fit:cover;display:block;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(6,182,212,.3)"></video>
-        </div>
-        <!-- Play-trigger fragments (invisible) -->
-        <div class="fragment vid-play-frag" data-fragment-index="1" data-vid-id="vid-39a" style="position:absolute;top:-1px;left:-1px;width:1px;height:1px;overflow:hidden;pointer-events:none"></div>
-        <div class="fragment vid-play-frag" data-fragment-index="3" data-vid-id="vid-39b" style="position:absolute;top:-1px;left:-1px;width:1px;height:1px;overflow:hidden;pointer-events:none"></div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
@@ -1976,6 +2044,29 @@
           <div class="bg bg-dots" style="opacity:.2"></div>
           <div class="s-video-scanline"></div>
           <video src="assets/demos/s-41.mp4" controls class="v-916" style="position:relative;z-index:2"></video>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH03-36b — VIDEO TO VIDEO: לפני ואחרי זה לצד זה
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-base" data-transition="slide">
+        <div class="bg bg-dots" style="opacity:.1"></div>
+        <div class="orb" style="width:600px;height:600px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.06;animation-duration:12s"></div>
+        <div class="s-video-scanline" style="position:absolute;inset:0;z-index:3;pointer-events:none"></div>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:40px;padding:60px 100px;direction:rtl;z-index:2">
+          <!-- Right: "before" portrait video -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;flex:0 0 auto">
+            <video src="assets/demos/s-40.mp4" autoplay muted loop playsinline style="height:760px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(6,182,212,.25)"></video>
+            <div style="font-size:.42em;color:var(--muted);font-family:var(--mono)">לפני — הצילום שלכם</div>
+          </div>
+          <!-- Center arrow -->
+          <div style="font-size:3em;color:var(--v-hi);text-shadow:0 0 24px rgba(124,58,237,.6);flex-shrink:0">→</div>
+          <!-- Left: "after" portrait video -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;flex:0 0 auto">
+            <video src="assets/demos/s-41.mp4" autoplay muted loop playsinline style="height:760px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(124,58,237,.25)"></video>
+            <div style="font-size:.42em;color:var(--v-hi);font-family:var(--mono)">אחרי — AI שינה הכל</div>
+          </div>
         </div>
       </section>
 
@@ -2044,26 +2135,18 @@
         <div class="spark" style="top:16%;right:8%;color:#fcd34d;animation-delay:0s;font-size:1.6em">✦</div>
         <div class="spark" style="bottom:20%;left:6%;color:#fcd34d;animation-delay:-2.5s;font-size:1.8em">✦</div>
         <div class="spark" style="top:28%;left:12%;color:#f59e0b;animation-delay:-4s">✧</div>
-        <div style="position:absolute;top:50%;right:0;left:0;transform:translateY(-50%);display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;padding:0 56px;direction:rtl;z-index:2">
-          <!-- Right: portrait video "לפני" -->
-          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center">
-            <video src="assets/demos/s-45a.mp4" data-autoplay autoplay muted loop playsinline style="width:360px;height:640px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
-            <div style="text-align:center;margin-top:10px;font-size:.42em;color:var(--a-hi);font-family:var(--mono)">לפני</div>
-          </div>
-          <!-- Center: text -->
-          <div style="text-align:center;padding:0 20px">
-            <div class="s-gold-badge" style="margin:0 auto .8em">✦ &nbsp; טיפ זהב · CapCut</div>
+        <div class="s-gold-inner" style="max-width:95%;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;direction:rtl">
+          <div>
+            <div class="s-gold-badge" style="margin-bottom:.7em">✦ &nbsp; טיפ זהב · CapCut</div>
             <h2 style="margin-bottom:.6em">פריים כפול בנקודת החיבור —<br>כך מתקנים</h2>
-            <p style="font-size:.6em;line-height:1.8">
+            <p style="font-size:.62em;line-height:1.8">
               כשמחברים שני קטעים שנוצרו עם Start/End Frame —<br>
               <strong>נוצר פריים כפול בנקודת החיבור שגורם לקפיצה.</strong><br>
               מחיקת פריים אחד ב-CapCut בנקודת החיבור פותרת את זה.
             </p>
           </div>
-          <!-- Left: portrait video "אחרי" -->
-          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center">
-            <video src="assets/demos/s-45b.mp4" data-autoplay autoplay muted loop playsinline style="width:360px;height:640px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
-            <div style="text-align:center;margin-top:10px;font-size:.42em;color:var(--a-hi);font-family:var(--mono)">אחרי</div>
+          <div style="flex-shrink:0">
+            <video src="assets/demos/s-46a.mp4" data-autoplay autoplay muted loop playsinline style="width:420px;height:747px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
           </div>
         </div>
       </section>
@@ -2087,61 +2170,67 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH04 — KLING EFFECTS: הוספת תנועה לסטילס
+           CH04 — KLING EFFECTS: After Effects בלי After Effects
       ══════════════════════════════════════════════════════ -->
-      <section class="s-split s-split-tr" data-transition="slide">
-        <div class="s-split-content">
-          <span class="eyebrow amber">Kling · Effects</span>
-          <h2>After Effects<br>בלי After Effects</h2>
-          <p>Kling Effects מוסיף <strong>תנועה, חיים ואפקטים סינמטיים</strong> לתמונות סטטיות קיימות — ללא ידע טכני, ללא השקעת זמן.</p>
-          <ul>
-            <li><span class="dot" style="background:var(--grad-gold)"></span>שיער מתנופף, בד זורם, עשן עולה</li>
-            <li><span class="dot" style="background:var(--grad-gold)"></span>אפקט "Ken Burns" — zoom פאן סינמטי</li>
-            <li><span class="dot" style="background:var(--grad-gold)"></span>Parallax — עומק תלת-מימדי מסטיל</li>
-            <li><span class="dot" style="background:var(--grad-gold)"></span>אנימציית מוצרים: ניצוצות, זוהר, חיים</li>
-            <li><span class="dot" style="background:var(--grad-gold)"></span>שדרוג ריילס / טיקטוק קיימים</li>
-          </ul>
-        </div>
-        <div class="s-split-img">
-          <div style="width:100%;height:100%;background:linear-gradient(145deg,#1a0a00,#080018);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;gap:24px">
-            <div class="orb amber" style="width:350px;height:350px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:5s;opacity:.4"></div>
-            <div style="position:relative;z-index:1;text-align:center">
-              <div style="font-size:5em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(245,158,11,.6))">⚡</div>
-              <div style="font-size:.5em;color:var(--a-hi);font-weight:700;margin-top:8px">Kling Effects</div>
-              <div style="font-size:.42em;color:var(--muted);margin-top:6px">סטיל → קליפ חי</div>
+      <section class="s-base" data-transition="slide">
+        <div class="bg bg-dots" style="opacity:.08"></div>
+        <div class="orb amber" style="width:600px;height:600px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.08;animation-duration:8s"></div>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:52px 120px 40px;gap:0;z-index:2;direction:rtl;overflow:hidden">
+          <!-- Title row -->
+          <div style="width:100%;flex-shrink:0;margin-bottom:32px;text-align:right">
+            <div class="chip amber" style="margin-bottom:.6em;display:inline-flex">⚡ Kling Effects</div>
+            <h2 style="font-size:2.1em !important;margin:0">After Effects<br>בלי After Effects</h2>
+          </div>
+          <!-- Main content: image left, text right -->
+          <div style="display:flex;align-items:flex-start;gap:48px;width:100%;flex:1;min-height:0">
+            <!-- Image column -->
+            <div style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:16px">
+              <!-- Mock "final frame" design -->
+              <div style="width:380px;height:380px;background:linear-gradient(135deg,#0d0025,#1a0050);border-radius:16px;border:1px solid rgba(245,158,11,.25);overflow:hidden;position:relative;box-shadow:0 12px 48px rgba(0,0,0,.6),0 0 0 1px rgba(245,158,11,.15);flex-shrink:0">
+                <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 40%,rgba(245,158,11,.12) 0%,transparent 70%)"></div>
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:28px 24px;background:linear-gradient(0deg,rgba(5,5,14,.95) 0%,transparent 100%)">
+                  <div style="font-size:.32em;color:var(--a-hi);letter-spacing:.2em;text-transform:uppercase;margin-bottom:.4em">SUMMER 2025</div>
+                  <div style="font-size:.62em;font-weight:900;color:white;line-height:1.1;margin-bottom:.3em">כי הקיץ הזה<br>לא מחכה</div>
+                  <div style="width:36px;height:2px;background:var(--grad-gold);border-radius:1px"></div>
+                </div>
+                <img src="assets/logo-42.png" style="position:absolute;top:18px;right:18px;height:22px;opacity:.6">
+              </div>
+              <!-- Prompt block -->
+              <div style="width:380px;background:rgba(5,5,14,.9);border:1px solid rgba(245,158,11,.3);border-radius:10px;padding:14px 18px;direction:ltr;text-align:left">
+                <div style="font-size:.35em;color:rgba(245,158,11,.5);font-family:var(--mono);letter-spacing:.08em;margin-bottom:.4em">פרומפט ›</div>
+                <div style="font-size:.38em;color:var(--a-hi);font-family:var(--mono);line-height:1.6">תעשה לי מזה כניסה יפה כאילו אתה אפטריסט כפרה</div>
+              </div>
+            </div>
+            <!-- Text column -->
+            <div style="flex:1;padding-top:8px">
+              <p style="font-size:.7em;line-height:1.75;color:rgba(240,240,248,.85)">
+                אם אפשר לתת ל-AI פריים התחלה ופריים סיום, אז למה שלא נוכל פשוט לתת לו את הפריים הסופי עם הכותרות והאלמנטים שאנחנו רוצים ונגיד לו איך אנחנו רוצים שהאפקט ייראה?
+              </p>
             </div>
           </div>
-          <span class="img-label" style="background:rgba(245,158,11,.15);border-color:rgba(245,158,11,.3);color:var(--a-hi)">⚡ Kling Effects</span>
-          <div class="img-cap">תמונת מוצר → קליפ עם חיים</div>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH04 — 🎬 DEMO: Kling Effects
+           CH04 — Kling Effects: וככה זה נראה (2 סרטונים)
       ══════════════════════════════════════════════════════ -->
-      <section class="s-video" data-transition="fade">
-        <div class="s-split-content" style="padding:80px 50px 80px 100px">
-          <div class="chip amber" style="margin-bottom:1em">🎬 &nbsp; הדגמה חיה</div>
-          <span class="eyebrow amber">Kling Effects · Motion</span>
-          <h2>מה לחפש<br>בהדגמה</h2>
-          <ul style="margin-top:.9em">
-            <li class="fragment"><span class="dot" style="background:var(--grad-gold)"></span>תמונת מוצר / סטיל סטטי כקלט</li>
-            <li class="fragment"><span class="dot" style="background:var(--grad-gold)"></span>האפקט שנבחר (שיער / ניצוצות / זוהר)</li>
-            <li class="fragment"><span class="dot" style="background:var(--grad-gold)"></span>שדרוג מיידי — לא יצירת וידאו חדש</li>
-            <li class="fragment"><span class="dot" style="background:var(--grad-gold)"></span>תוצאה: ריל שנראה כמו צילום מקצועי</li>
-          </ul>
-        </div>
-        <div class="s-video-pane">
-          <div class="bg bg-grid" style="opacity:.3"></div>
-          <div class="s-video-scanline"></div>
-          <!-- 🎬 להחליף: <iframe src="KLING_EFFECTS_DEMO" allowfullscreen></iframe> -->
-          <div class="s-video-thumb">
-            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(245,158,11,.7))">⚡</div>
-            <div class="s-video-play-btn" style="background:var(--grad-gold)">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <section class="s-base" data-transition="fade">
+        <div class="bg bg-dots" style="opacity:.08"></div>
+        <div class="orb amber" style="width:500px;height:500px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.07;animation-duration:7s"></div>
+        <div class="s-video-scanline" style="position:absolute;inset:0;z-index:3;pointer-events:none"></div>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:44px 80px 36px;gap:0;z-index:2">
+          <!-- Title -->
+          <div style="width:100%;text-align:center;flex-shrink:0;margin-bottom:28px">
+            <h2 style="font-size:2.4em !important;background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:scale-out .7s .05s ease both">וככה זה נראה</h2>
+          </div>
+          <!-- Two videos side by side -->
+          <div style="display:flex;align-items:flex-end;justify-content:center;gap:40px;flex:1;min-height:0">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:10px;flex:0 0 auto">
+              <video src="assets/demos/s-54a.mp4" autoplay muted loop playsinline style="height:600px;width:auto;object-fit:cover;border-radius:16px;box-shadow:0 12px 50px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.25)"></video>
             </div>
-            <div class="s-video-tag" style="color:var(--a-hi)">Kling Effects · Motion</div>
-            <div class="s-video-label">⬆️ להחליף בסרטון הדגמה אמיתי</div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:10px;flex:0 0 auto">
+              <video src="assets/demos/s-54b.mp4" autoplay muted loop playsinline style="height:600px;width:auto;object-fit:cover;border-radius:16px;box-shadow:0 12px 50px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.25)"></video>
+            </div>
           </div>
         </div>
       </section>
