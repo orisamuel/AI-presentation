@@ -2136,9 +2136,9 @@
         <div class="spark" style="bottom:20%;left:6%;color:#fcd34d;animation-delay:-2.5s;font-size:1.8em">✦</div>
         <div class="spark" style="top:28%;left:12%;color:#f59e0b;animation-delay:-4s">✧</div>
         <div style="position:absolute;top:50%;right:0;left:0;transform:translateY(-50%);display:grid;grid-template-columns:auto 1fr auto;gap:48px;align-items:center;padding:0 60px;direction:rtl;z-index:2">
-          <!-- Right: "before" portrait video -->
+          <!-- Right: "before" portrait video — visible immediately, plays on click 1 -->
           <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:12px">
-            <video src="assets/demos/s-51a.mp4" data-autoplay autoplay muted loop playsinline preload="auto" style="width:380px;height:676px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
+            <video id="vid-51a" src="assets/demos/s-51a.mp4" muted loop playsinline preload="auto" style="width:380px;height:676px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
             <div style="text-align:center;font-size:.4em;color:var(--a-hi);font-family:var(--mono)">לפני — עם הקפיצה</div>
           </div>
           <!-- Center: text -->
@@ -2151,12 +2151,15 @@
               מחיקת פריים אחד ב-CapCut בנקודת החיבור פותרת את זה.
             </p>
           </div>
-          <!-- Left: "after" portrait video -->
+          <!-- Left: "after" portrait video — visible immediately, plays on click 2 -->
           <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:12px">
-            <video src="assets/demos/s-51b.mp4" data-autoplay autoplay muted loop playsinline preload="auto" style="width:380px;height:676px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
+            <video id="vid-51b" src="assets/demos/s-51b.mp4" muted loop playsinline preload="auto" style="width:380px;height:676px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
             <div style="text-align:center;font-size:.4em;color:var(--a-hi);font-family:var(--mono)">אחרי — חלק</div>
           </div>
         </div>
+        <!-- Invisible play-trigger fragments -->
+        <div class="fragment vid-play-frag" data-fragment-index="0" data-vid-id="vid-51a" style="position:absolute;top:-1px;left:-1px;width:1px;height:1px;overflow:hidden;pointer-events:none"></div>
+        <div class="fragment vid-play-frag" data-fragment-index="1" data-vid-id="vid-51b" style="position:absolute;top:-1px;left:-1px;width:1px;height:1px;overflow:hidden;pointer-events:none"></div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
@@ -2222,13 +2225,17 @@
           <div style="width:100%;text-align:center;flex-shrink:0;margin-bottom:24px">
             <h2 style="font-size:2.2em !important;background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:scale-out .7s .05s ease both">וככה זה נראה</h2>
           </div>
-          <!-- Three videos side by side — tall and prominent -->
+          <!-- Three videos side by side — tall and prominent, each plays on a separate click -->
           <div style="display:flex;align-items:stretch;justify-content:center;gap:32px;flex:1;min-height:0">
-            <video src="assets/demos/s-54a.mp4" autoplay muted loop playsinline style="height:820px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
-            <video src="assets/demos/s-54b.mp4" autoplay muted loop playsinline style="height:820px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
-            <video src="assets/demos/s-54c.mp4" autoplay muted loop playsinline style="height:820px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
+            <video id="vid-54a" src="assets/demos/s-54a.mp4" muted loop playsinline preload="auto" style="height:820px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
+            <video id="vid-54b" src="assets/demos/s-54b.mp4" muted loop playsinline preload="auto" style="height:820px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
+            <video id="vid-54c" src="assets/demos/s-54c.mp4" muted loop playsinline preload="auto" style="height:820px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
           </div>
         </div>
+        <!-- Invisible play-trigger fragments -->
+        <div class="fragment vid-play-frag" data-fragment-index="0" data-vid-id="vid-54a" style="position:absolute;top:-1px;left:-1px;width:1px;height:1px;overflow:hidden;pointer-events:none"></div>
+        <div class="fragment vid-play-frag" data-fragment-index="1" data-vid-id="vid-54b" style="position:absolute;top:-1px;left:-1px;width:1px;height:1px;overflow:hidden;pointer-events:none"></div>
+        <div class="fragment vid-play-frag" data-fragment-index="2" data-vid-id="vid-54c" style="position:absolute;top:-1px;left:-1px;width:1px;height:1px;overflow:hidden;pointer-events:none"></div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
