@@ -346,10 +346,20 @@ function tryLoadAudio(container, src, label) {
 
 function handleSlideMedia(currentSlide, previousSlide) {
   if (previousSlide) {
-    previousSlide.querySelectorAll('video, audio').forEach(m => m.pause());
+    previousSlide.querySelectorAll('video, audio').forEach(m => {
+      m.pause();
+      m.currentTime = 0;
+    });
   }
   if (currentSlide) {
+    // Restart crawl animations (force reflow to reset)
+    currentSlide.querySelectorAll('.s59-crawl').forEach(el => {
+      el.style.animation = 'none';
+      el.offsetHeight; // trigger reflow
+      el.style.animation = '';
+    });
     currentSlide.querySelectorAll('video[data-autoplay], audio[data-autoplay]').forEach(m => {
+      m.currentTime = 0;
       m.play().catch(() => {});
     });
   }
