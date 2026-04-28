@@ -2458,17 +2458,21 @@
       <!-- ══════════════════════════════════════════════════════
            CH05 — SLIDE 65: שירים + Suno Audio-to-Audio
       ══════════════════════════════════════════════════════ -->
-      <section class="s-video" data-transition="slide" style="--v-cols:26% 74%">
-        <div class="s-split-content" style="padding:80px 40px 80px 80px">
-          <div class="chip amber" style="margin-bottom:1em">🎵 Suno · Audio-to-Audio</div>
-          <h2>ועכשיו בואו<br>נדבר על שירים?</h2>
-          <p style="margin-top:.8em;font-size:.88em;line-height:1.7">קודם כל — זכרו איך עוזרים ל‑AI לקרוא נכון עברית. אבל כמו בקריינות — <strong>לשיר ואז לתת ל‑AI לעשות קאבר</strong> זה לפעמים הרבה יותר מוצלח.</p>
-          <p style="font-size:.72em;color:var(--muted);margin-top:.6em">המודלים החדשים של Suno מסתדרים יופי טופי בעברית, אבל בואו נראה את זה כי כבר הכנתי 😄</p>
-        </div>
-        <div class="s-video-pane" data-no-advance="true">
-          <div class="bg bg-grid" style="opacity:.3"></div>
-          <div class="s-video-scanline"></div>
-          <video src="assets/demos/s-65.mp4" preload="auto" playsinline style="width:100%;height:auto;aspect-ratio:1520/720;display:block;max-height:100%"></video>
+      <section class="s-base" data-transition="slide">
+        <div class="bg bg-grid" style="opacity:.3"></div>
+        <div class="s-video-scanline"></div>
+        <div style="position:absolute;inset:0;display:flex;align-items:center">
+          <!-- text — right side in RTL (first in DOM) -->
+          <div style="flex:0 0 440px;padding:60px 70px 60px 50px;display:flex;flex-direction:column;justify-content:center;gap:16px">
+            <div class="chip amber" style="margin-bottom:.2em">🎵 Suno · Audio-to-Audio</div>
+            <h2>ועכשיו בואו<br>נדבר על שירים?</h2>
+            <p style="margin-top:.2em;font-size:.82em;line-height:1.7">קודם כל — זכרו איך עוזרים ל‑AI לקרוא נכון עברית. אבל כמו בקריינות — <strong>לשיר ואז לתת ל‑AI לעשות קאבר</strong> זה לפעמים הרבה יותר מוצלח.</p>
+            <p style="font-size:.68em;color:var(--muted)">המודלים החדשים של Suno מסתדרים יופי טופי בעברית, אבל בואו נראה את זה כי כבר הכנתי 😄</p>
+          </div>
+          <!-- video — left side in RTL (second in DOM), fills remaining width -->
+          <div style="flex:1;display:flex;align-items:center;justify-content:center;height:100%;overflow:hidden" data-no-advance="true">
+            <video src="assets/demos/s-65.mp4" preload="auto" playsinline style="width:100%;height:auto;display:block"></video>
+          </div>
         </div>
       </section>
 
