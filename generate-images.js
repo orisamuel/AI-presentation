@@ -2,7 +2,7 @@
 // Usage: node --env-file=../.env generate-images.js
 // Or from project root: node --env-file=.env generate-images.js
 
-import * as fal from '@fal-ai/client';
+import { fal } from '@fal-ai/client';
 import fs from 'fs';
 import path from 'path';
 
