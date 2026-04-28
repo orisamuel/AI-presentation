@@ -2725,10 +2725,10 @@
           </div>
 
           <!-- Col B — MIDDLE: Pipeline inputs — source video + audio -->
-          <div style="flex:0 0 22%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:32px 20px;border-left:1px solid rgba(255,255,255,.07)">
-            <!-- Source video — large, direct (no container box) -->
+          <div style="flex:0 0 26%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:28px 20px;border-left:1px solid rgba(255,255,255,.07)">
+            <!-- Source video — fills column width, capped height -->
             <video src="assets/demos/s-71.mp4" autoplay muted loop playsinline
-              style="width:120px;height:213px;object-fit:cover;border-radius:16px;display:block;box-shadow:0 8px 40px rgba(0,0,0,.55)"></video>
+              style="width:calc(100% - 16px);aspect-ratio:9/16;max-height:52%;object-fit:cover;border-radius:18px;display:block;box-shadow:0 0 40px rgba(6,182,212,.25),0 12px 48px rgba(0,0,0,.65);border:1.5px solid rgba(6,182,212,.3)"></video>
             <!-- Premium + ring (cyan) -->
             <div style="width:52px;height:52px;border-radius:50%;background:conic-gradient(from 0deg,#06b6d4,#7c3aed,#06b6d4);padding:2.5px;box-shadow:0 0 24px rgba(6,182,212,.7),0 0 48px rgba(124,58,237,.3);flex-shrink:0">
               <div style="width:100%;height:100%;border-radius:50%;background:#05050e;display:flex;align-items:center;justify-content:center">
