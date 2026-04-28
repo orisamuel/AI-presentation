@@ -2244,6 +2244,44 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
+           CH04 — SLIDE 55: עוד דוגמה? (תמונה → פרומפט → 2 סרטונים)
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-base" data-transition="fade">
+        <div class="bg bg-dots" style="opacity:.08"></div>
+        <div class="orb amber" style="width:500px;height:500px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.08;animation-duration:7s"></div>
+        <div class="s-video-scanline" style="position:absolute;inset:0;z-index:3;pointer-events:none"></div>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:44px 80px 36px;gap:0;z-index:2">
+          <!-- Title -->
+          <div style="width:100%;text-align:center;flex-shrink:0;margin-bottom:28px">
+            <h2 style="font-size:2.2em !important;background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:scale-out .7s .05s ease both">עוד דוגמה?</h2>
+          </div>
+          <!-- Content row: RTL — image on right, arrow+prompt in middle, two videos on left -->
+          <div style="display:flex;align-items:center;justify-content:center;gap:32px;flex:1;min-height:0;width:100%">
+            <!-- RIGHT: source portrait image (always visible) -->
+            <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center">
+              <img src="assets/demos/s-55.png" style="height:700px;width:auto;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);display:block;animation:float 6s ease-in-out infinite">
+            </div>
+            <!-- MIDDLE: arrow + prompt (fragment 0) -->
+            <div class="fragment" data-fragment-index="0" style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:14px">
+              <div style="font-size:3.2em;color:var(--a-hi);line-height:1;animation:float 3s ease-in-out infinite">←</div>
+              <div style="background:rgba(245,158,11,.1);border:1.5px solid rgba(245,158,11,.35);border-radius:14px;padding:18px 24px;max-width:210px;text-align:center">
+                <div style="font-size:.38em;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(252,211,77,.6);margin-bottom:8px">פרומפט:</div>
+                <div style="font-family:var(--mono);font-size:.48em;color:var(--a-hi);line-height:1.6;font-weight:600">תעשה לי אפקט אחי</div>
+              </div>
+            </div>
+            <!-- LEFT: two result portrait videos (fragment 1) -->
+            <div class="fragment" data-fragment-index="1" style="flex:0 0 auto;display:flex;align-items:center;gap:20px">
+              <video id="vid55a" src="assets/demos/s-55a.mp4" muted loop playsinline preload="auto" style="height:680px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
+              <video id="vid55b" src="assets/demos/s-55b.mp4" muted loop playsinline preload="auto" style="height:680px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
+            </div>
+          </div>
+        </div>
+        <!-- Invisible play-trigger fragments — both videos start on click 2 -->
+        <div class="fragment vid-play-frag" data-fragment-index="1" data-vid-id="vid55a" style="position:absolute;top:-1px;left:-1px;width:1px;height:1px;overflow:hidden;pointer-events:none"></div>
+        <div class="fragment vid-play-frag" data-fragment-index="1" data-vid-id="vid55b" style="position:absolute;top:-1px;left:-1px;width:1px;height:1px;overflow:hidden;pointer-events:none"></div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
            CH04 — GOLD TIP: אפטריסט
       ══════════════════════════════════════════════════════ -->
       <section class="s-gold" data-transition="convex" data-transition-speed="fast">
@@ -2263,7 +2301,7 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH05 — SLIDE 56: SECTION — AI יודע ליצור סאונד
+           CH05 — SLIDE 57: SECTION — AI יודע ליצור סאונד
       ══════════════════════════════════════════════════════ -->
       <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch05-sound" data-chapter-key="sound">
         <div class="bg bg-grid"></div>
@@ -2279,7 +2317,7 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH05 — SLIDE 57: שני הנתיבים — text to sound | sound to sound
+           CH05 — SLIDE 58: שני הנתיבים — text to sound | sound to sound
       ══════════════════════════════════════════════════════ -->
       <section class="s-base" data-transition="zoom" data-transition-speed="fast" data-chapter-key="sound">
         <div class="bg bg-grid"></div>
@@ -2308,7 +2346,7 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH05 — SLIDE 58: text to sound — כותרת חלק
+           CH05 — SLIDE 59: text to sound — כותרת חלק
       ══════════════════════════════════════════════════════ -->
       <section class="s-section" data-transition="slide" data-chapter-key="sound">
         <div class="bg bg-grid"></div>
@@ -2323,10 +2361,10 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH05 — SLIDE 59: לתת לAI לדבר — קריין גולל
+           CH05 — SLIDE 60: לתת לAI לדבר — קריין גולל
       ══════════════════════════════════════════════════════ -->
       <section class="s-base" data-transition="fade" data-chapter-key="sound">
-        <audio data-autoplay preload="auto" src="assets/demos/s-59.mp3"></audio>
+        <audio data-autoplay preload="auto" src="assets/demos/s-60.mp3"></audio>
         <div class="bg bg-grid" style="opacity:.3"></div>
         <div class="orb" style="width:500px;height:500px;top:30%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(139,92,246,.25) 0%,transparent 70%);animation-duration:9s"></div>
         <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;padding:56px 140px 40px;z-index:1">
@@ -2345,7 +2383,7 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH05 — SLIDE 60: טיפ זהב — ניקוד עברי לAI
+           CH05 — SLIDE 61: טיפ זהב — ניקוד עברי לAI
       ══════════════════════════════════════════════════════ -->
       <section class="s-gold" data-transition="convex" data-transition-speed="fast">
         <div class="s-gold-glow-bg"></div>
@@ -2378,7 +2416,7 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH05 — SLIDE 61: לייצר קול קבוע בElevenLabs + וידאו
+           CH05 — SLIDE 62: לייצר קול קבוע בElevenLabs + וידאו
       ══════════════════════════════════════════════════════ -->
       <section class="s-video" data-transition="slide" style="--v-cols:38% 62%">
         <div class="s-split-content" style="padding:80px 50px 80px 100px">
@@ -2393,21 +2431,21 @@
         <div class="s-video-pane" data-no-advance="true">
           <div class="bg bg-grid" style="opacity:.3"></div>
           <div class="s-video-scanline"></div>
-          <video class="v-169" src="assets/demos/s-61.mp4" preload="auto" playsinline></video>
+          <video class="v-169" src="assets/demos/s-62.mp4" preload="auto" playsinline></video>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH05 — SLIDE 62: אפקטים קוליים — לחצו לשמוע
+           CH05 — SLIDE 63: אפקטים קוליים — לחצו לשמוע
       ══════════════════════════════════════════════════════ -->
       <section class="s-base" data-transition="fade" data-chapter-key="sound">
         <div class="bg bg-dots" style="opacity:.2"></div>
         <div class="orb c" style="width:500px;height:500px;top:50%;right:-80px;transform:translateY(-50%);opacity:.18;animation-duration:7s"></div>
-        <audio id="sfx62a" src="assets/demos/s-62a.mp3" preload="auto"></audio>
-        <audio id="sfx62b" src="assets/demos/s-62b.mp3" preload="auto"></audio>
-        <audio id="sfx62c" src="assets/demos/s-62c.mp3" preload="auto"></audio>
-        <audio id="sfx62d" src="assets/demos/s-62d.mp3" preload="auto"></audio>
-        <audio id="sfx62e" src="assets/demos/s-62e.mp3" preload="auto"></audio>
+        <audio id="sfx63a" src="assets/demos/s-63a.mp3" preload="auto"></audio>
+        <audio id="sfx63b" src="assets/demos/s-63b.mp3" preload="auto"></audio>
+        <audio id="sfx63c" src="assets/demos/s-63c.mp3" preload="auto"></audio>
+        <audio id="sfx63d" src="assets/demos/s-63d.mp3" preload="auto"></audio>
+        <audio id="sfx63e" src="assets/demos/s-63e.mp3" preload="auto"></audio>
         <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 120px;gap:44px;z-index:1">
           <div style="text-align:center">
             <div class="chip" style="background:rgba(6,182,212,.12);border-color:rgba(6,182,212,.3);color:#67e8f9;margin-bottom:.8em">🔊 ElevenLabs · Sound Effects</div>
@@ -2415,17 +2453,17 @@
             <p style="font-size:.5em;color:var(--muted);margin-top:.4em">נכון, יש אחלה ספרייה בקאפקט — אבל הרבה יותר מגניב לייצר לבד</p>
           </div>
           <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
-            <button onclick="var a=document.getElementById('sfx62a');a.currentTime=0;a.play()" style="background:linear-gradient(135deg,rgba(6,182,212,.15),rgba(6,182,212,.06));border:1.5px solid rgba(6,182,212,.3);color:#67e8f9;border-radius:16px;padding:22px 30px;cursor:pointer;font-family:var(--font);font-size:.58em;font-weight:700;transition:all .2s;min-width:170px;display:flex;flex-direction:column;align-items:center;gap:10px" onmouseenter="this.style.borderColor='rgba(6,182,212,.7)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(6,182,212,.3)';this.style.transform='translateY(0)'"><span style="font-size:2em">🔊</span>אפקט 1</button>
-            <button onclick="var a=document.getElementById('sfx62b');a.currentTime=0;a.play()" style="background:linear-gradient(135deg,rgba(6,182,212,.15),rgba(6,182,212,.06));border:1.5px solid rgba(6,182,212,.3);color:#67e8f9;border-radius:16px;padding:22px 30px;cursor:pointer;font-family:var(--font);font-size:.58em;font-weight:700;transition:all .2s;min-width:170px;display:flex;flex-direction:column;align-items:center;gap:10px" onmouseenter="this.style.borderColor='rgba(6,182,212,.7)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(6,182,212,.3)';this.style.transform='translateY(0)'"><span style="font-size:2em">🔊</span>אפקט 2</button>
-            <button onclick="var a=document.getElementById('sfx62c');a.currentTime=0;a.play()" style="background:linear-gradient(135deg,rgba(6,182,212,.15),rgba(6,182,212,.06));border:1.5px solid rgba(6,182,212,.3);color:#67e8f9;border-radius:16px;padding:22px 30px;cursor:pointer;font-family:var(--font);font-size:.58em;font-weight:700;transition:all .2s;min-width:170px;display:flex;flex-direction:column;align-items:center;gap:10px" onmouseenter="this.style.borderColor='rgba(6,182,212,.7)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(6,182,212,.3)';this.style.transform='translateY(0)'"><span style="font-size:2em">🔊</span>אפקט 3</button>
-            <button onclick="var a=document.getElementById('sfx62d');a.currentTime=0;a.play()" style="background:linear-gradient(135deg,rgba(6,182,212,.15),rgba(6,182,212,.06));border:1.5px solid rgba(6,182,212,.3);color:#67e8f9;border-radius:16px;padding:22px 30px;cursor:pointer;font-family:var(--font);font-size:.58em;font-weight:700;transition:all .2s;min-width:170px;display:flex;flex-direction:column;align-items:center;gap:10px" onmouseenter="this.style.borderColor='rgba(6,182,212,.7)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(6,182,212,.3)';this.style.transform='translateY(0)'"><span style="font-size:2em">🔊</span>אפקט 4</button>
-            <button onclick="var a=document.getElementById('sfx62e');a.currentTime=0;a.play()" style="background:linear-gradient(135deg,rgba(6,182,212,.15),rgba(6,182,212,.06));border:1.5px solid rgba(6,182,212,.3);color:#67e8f9;border-radius:16px;padding:22px 30px;cursor:pointer;font-family:var(--font);font-size:.58em;font-weight:700;transition:all .2s;min-width:170px;display:flex;flex-direction:column;align-items:center;gap:10px" onmouseenter="this.style.borderColor='rgba(6,182,212,.7)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(6,182,212,.3)';this.style.transform='translateY(0)'"><span style="font-size:2em">🔊</span>אפקט 5</button>
+            <button onclick="var a=document.getElementById('sfx63a');a.currentTime=0;a.play()" style="background:linear-gradient(135deg,rgba(6,182,212,.15),rgba(6,182,212,.06));border:1.5px solid rgba(6,182,212,.3);color:#67e8f9;border-radius:16px;padding:22px 30px;cursor:pointer;font-family:var(--font);font-size:.58em;font-weight:700;transition:all .2s;min-width:170px;display:flex;flex-direction:column;align-items:center;gap:10px" onmouseenter="this.style.borderColor='rgba(6,182,212,.7)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(6,182,212,.3)';this.style.transform='translateY(0)'"><span style="font-size:2em">🔊</span>אפקט 1</button>
+            <button onclick="var a=document.getElementById('sfx63b');a.currentTime=0;a.play()" style="background:linear-gradient(135deg,rgba(6,182,212,.15),rgba(6,182,212,.06));border:1.5px solid rgba(6,182,212,.3);color:#67e8f9;border-radius:16px;padding:22px 30px;cursor:pointer;font-family:var(--font);font-size:.58em;font-weight:700;transition:all .2s;min-width:170px;display:flex;flex-direction:column;align-items:center;gap:10px" onmouseenter="this.style.borderColor='rgba(6,182,212,.7)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(6,182,212,.3)';this.style.transform='translateY(0)'"><span style="font-size:2em">🔊</span>אפקט 2</button>
+            <button onclick="var a=document.getElementById('sfx63c');a.currentTime=0;a.play()" style="background:linear-gradient(135deg,rgba(6,182,212,.15),rgba(6,182,212,.06));border:1.5px solid rgba(6,182,212,.3);color:#67e8f9;border-radius:16px;padding:22px 30px;cursor:pointer;font-family:var(--font);font-size:.58em;font-weight:700;transition:all .2s;min-width:170px;display:flex;flex-direction:column;align-items:center;gap:10px" onmouseenter="this.style.borderColor='rgba(6,182,212,.7)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(6,182,212,.3)';this.style.transform='translateY(0)'"><span style="font-size:2em">🔊</span>אפקט 3</button>
+            <button onclick="var a=document.getElementById('sfx63d');a.currentTime=0;a.play()" style="background:linear-gradient(135deg,rgba(6,182,212,.15),rgba(6,182,212,.06));border:1.5px solid rgba(6,182,212,.3);color:#67e8f9;border-radius:16px;padding:22px 30px;cursor:pointer;font-family:var(--font);font-size:.58em;font-weight:700;transition:all .2s;min-width:170px;display:flex;flex-direction:column;align-items:center;gap:10px" onmouseenter="this.style.borderColor='rgba(6,182,212,.7)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(6,182,212,.3)';this.style.transform='translateY(0)'"><span style="font-size:2em">🔊</span>אפקט 4</button>
+            <button onclick="var a=document.getElementById('sfx63e');a.currentTime=0;a.play()" style="background:linear-gradient(135deg,rgba(6,182,212,.15),rgba(6,182,212,.06));border:1.5px solid rgba(6,182,212,.3);color:#67e8f9;border-radius:16px;padding:22px 30px;cursor:pointer;font-family:var(--font);font-size:.58em;font-weight:700;transition:all .2s;min-width:170px;display:flex;flex-direction:column;align-items:center;gap:10px" onmouseenter="this.style.borderColor='rgba(6,182,212,.7)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(6,182,212,.3)';this.style.transform='translateY(0)'"><span style="font-size:2em">🔊</span>אפקט 5</button>
           </div>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH05 — SLIDE 63: sound to sound — כותרת חלק
+           CH05 — SLIDE 64: sound to sound — כותרת חלק
       ══════════════════════════════════════════════════════ -->
       <section class="s-section" data-transition="slide" data-chapter-key="sound">
         <div class="bg bg-grid"></div>
@@ -2440,7 +2478,7 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH05 — SLIDE 64: למה לא לסמוך על עצמכם? + וידאו ורטיקלי
+           CH05 — SLIDE 65: למה לא לסמוך על עצמכם? + וידאו ורטיקלי
       ══════════════════════════════════════════════════════ -->
       <section class="s-video video-portrait" data-transition="slide">
         <div class="s-split-content" style="padding:80px 50px 80px 100px">
@@ -2451,12 +2489,12 @@
         <div class="s-video-pane">
           <div class="bg bg-grid" style="opacity:.3"></div>
           <div class="s-video-scanline"></div>
-          <video class="v-916" src="assets/demos/s-64.mp4" preload="auto" playsinline></video>
+          <video class="v-916" src="assets/demos/s-65.mp4" preload="auto" playsinline></video>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH05 — SLIDE 65: שירים + Suno Audio-to-Audio
+           CH05 — SLIDE 66: שירים + Suno Audio-to-Audio
       ══════════════════════════════════════════════════════ -->
       <section class="s-base" data-transition="slide">
         <div class="bg bg-grid" style="opacity:.3"></div>
@@ -2471,13 +2509,13 @@
           </div>
           <!-- video — left side in RTL (second in DOM), fills remaining width -->
           <div style="flex:1;display:flex;align-items:center;justify-content:center;height:100%;overflow:hidden" data-no-advance="true">
-            <video src="assets/demos/s-65.mp4" preload="auto" playsinline style="width:100%;height:auto;display:block"></video>
+            <video src="assets/demos/s-66.mp4" preload="auto" playsinline style="width:100%;height:auto;display:block"></video>
           </div>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH05 — SLIDE 66: טיפ זהב — STS על וידאו + 2 קליפים
+           CH05 — SLIDE 67: טיפ זהב — STS על וידאו + 2 קליפים
       ══════════════════════════════════════════════════════ -->
       <section class="s-gold" data-transition="convex" data-transition-speed="fast">
         <div class="s-gold-glow-bg"></div>
@@ -2502,11 +2540,11 @@
           <div style="display:flex;justify-content:center;gap:32px;flex:1;min-height:0;align-items:center">
             <div style="border-radius:14px;overflow:hidden;position:relative;background:rgba(0,0,0,.3);border:1px solid rgba(244,63,94,.18);height:100%;aspect-ratio:9/16;max-height:100%" data-no-advance="true">
               <div style="position:absolute;top:10px;right:12px;z-index:2;font-size:.38em;font-weight:700;color:#f87171;background:rgba(0,0,0,.6);padding:4px 12px;border-radius:6px">לפני</div>
-              <video id="vid66a" src="assets/demos/s-66a.mp4" preload="auto" playsinline onclick="var b=document.getElementById('vid66b');b.pause();b.currentTime=0;this.paused?this.play():this.pause()" style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block"></video>
+              <video id="vid67a" src="assets/demos/s-67a.mp4" preload="auto" playsinline onclick="var b=document.getElementById('vid67b');b.pause();b.currentTime=0;this.paused?this.play():this.pause()" style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block"></video>
             </div>
             <div style="border-radius:14px;overflow:hidden;position:relative;background:rgba(0,0,0,.3);border:1px solid rgba(16,185,129,.18);height:100%;aspect-ratio:9/16;max-height:100%" data-no-advance="true">
               <div style="position:absolute;top:10px;right:12px;z-index:2;font-size:.38em;font-weight:700;color:#34d399;background:rgba(0,0,0,.6);padding:4px 12px;border-radius:6px">אחרי</div>
-              <video id="vid66b" src="assets/demos/s-66b.mp4" preload="auto" playsinline onclick="var a=document.getElementById('vid66a');a.pause();a.currentTime=0;this.paused?this.play():this.pause()" style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block"></video>
+              <video id="vid67b" src="assets/demos/s-67b.mp4" preload="auto" playsinline onclick="var a=document.getElementById('vid67a');a.pause();a.currentTime=0;this.paused?this.play():this.pause()" style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block"></video>
             </div>
           </div>
         </div>
