@@ -904,6 +904,14 @@
   /* MEDIA border-radius & shadow helpers */
   .media-rounded { border-radius:14px; overflow:hidden; }
   .media-shadow  { box-shadow:0 20px 60px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.06); }
+
+  /* Slide 59 — scrolling narration crawl */
+  .s59-crawl { animation: s59-crawl 52s linear paused forwards; }
+  .present .s59-crawl { animation-play-state: running; }
+  @keyframes s59-crawl {
+    from { transform: translateY(72%); }
+    to   { transform: translateY(-120%); }
+  }
   </style>
 </head>
 
@@ -2255,205 +2263,242 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH05 — SECTION: AI יודע ליצור סאונד
+           CH05 — SLIDE 57: AI יודע ליצור סאונד — שני הנתיבים
       ══════════════════════════════════════════════════════ -->
-      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch05-sound" data-chapter-key="sound">
+      <section class="s-base" data-transition="zoom" data-transition-speed="fast" id="ch05-sound" data-chapter-key="sound">
         <div class="bg bg-grid"></div>
-        <div class="orb" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(139,92,246,.45) 0%,rgba(16,185,129,.2) 45%,transparent 72%);animation-duration:7s"></div>
-        <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%);border-color:rgba(139,92,246,.12)"></div>
-        <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%)"></div>
+        <div class="orb" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(139,92,246,.3) 0%,rgba(6,182,212,.15) 50%,transparent 72%);animation-duration:8s"></div>
         <div class="s-section-ghost">05</div>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 100px;gap:32px;z-index:1">
+          <div style="text-align:center">
+            <span style="font-size:.42em;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--muted)">05 / 09</span>
+            <h2 style="margin-top:6px;font-size:2.2em;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent">AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> ליצור סאונד</h2>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;width:100%;max-width:1200px">
+            <div class="fragment" style="background:linear-gradient(135deg,rgba(139,92,246,.13),rgba(139,92,246,.04));border:1.5px solid rgba(139,92,246,.3);border-radius:24px;padding:52px 40px;display:flex;flex-direction:column;align-items:center;gap:18px;position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#7c3aed,#a855f7)"></div>
+              <div style="font-size:3.8em;filter:drop-shadow(0 0 24px rgba(139,92,246,.7))">📝</div>
+              <div style="font-family:var(--mono);font-size:1.6em;font-weight:700;color:#c4b5fd;letter-spacing:.04em">text to sound</div>
+              <div style="font-size:.48em;color:var(--muted);text-align:center;line-height:1.7">קריינות · מוזיקה · אפקטים<br><span style="color:#a78bfa;opacity:.8">ElevenLabs TTS · Suno · Google AI Studio</span></div>
+            </div>
+            <div class="fragment" style="background:linear-gradient(135deg,rgba(6,182,212,.13),rgba(6,182,212,.04));border:1.5px solid rgba(6,182,212,.3);border-radius:24px;padding:52px 40px;display:flex;flex-direction:column;align-items:center;gap:18px;position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#06b6d4,#22d3ee)"></div>
+              <div style="font-size:3.8em;filter:drop-shadow(0 0 24px rgba(6,182,212,.7))">🎤</div>
+              <div style="font-family:var(--mono);font-size:1.6em;font-weight:700;color:#67e8f9;letter-spacing:.04em">sound to sound</div>
+              <div style="font-size:.48em;color:var(--muted);text-align:center;line-height:1.7">voice changer · קאברים · דיבוב וידאו<br><span style="color:#22d3ee;opacity:.8">ElevenLabs STS · Suno Audio-to-Audio</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH05 — SLIDE 58: text to sound — כותרת חלק
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-section" data-transition="slide" data-chapter-key="sound">
+        <div class="bg bg-grid"></div>
+        <div class="orb" style="width:600px;height:600px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(139,92,246,.4) 0%,rgba(139,92,246,.1) 50%,transparent 72%);animation-duration:6s"></div>
+        <div class="s-section-ring r1" style="width:550px;height:550px;transform:translate(-50%,-50%);border-color:rgba(139,92,246,.15)"></div>
+        <div class="s-section-ring r2" style="width:880px;height:880px;transform:translate(-50%,-50%)"></div>
+        <div class="s-section-ghost" style="-webkit-text-fill-color:rgba(139,92,246,.08)">TTS</div>
         <div class="s-section-inner z1">
-          <span class="s-section-num">05 / 09</span>
-          <h2>AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> ליצור סאונד</h2>
-          <p class="s-section-desc">ElevenLabs · Suno · קול, מוזיקה ואפקטים<br>מדיבוב מקצועי עד שיר שלם — מפרומפט</p>
+          <div style="font-family:var(--mono);font-size:3.2em;font-weight:900;letter-spacing:.04em;background:linear-gradient(90deg,#a855f7,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.1">text to sound</div>
+          <p class="s-section-desc">קריינות · אפקטים קוליים · מוזיקה<br>מטקסט — לסאונד מקצועי</p>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH05 — ElevenLabs: קול שלא נשמע כמו AI
+           CH05 — SLIDE 59: לתת לAI לדבר — קריין גולל
       ══════════════════════════════════════════════════════ -->
-      <section class="s-text" data-transition="slide">
-        <div class="s-text-accent-col" style="background:linear-gradient(180deg,#8b5cf6,#10b981)"></div>
-        <div class="s-text-main z1">
-          <div class="hdr">
-            <div class="chip" style="margin-bottom:.8em;background:rgba(139,92,246,.15);border-color:rgba(139,92,246,.3);color:#a78bfa">🎙️ ElevenLabs</div>
-            <h2>קול שלא נשמע כמו AI</h2>
+      <section class="s-base" data-transition="fade" data-chapter-key="sound">
+        <audio data-autoplay preload="auto" src="assets/demos/s-59.mp3"></audio>
+        <div class="bg bg-grid" style="opacity:.3"></div>
+        <div class="orb" style="width:500px;height:500px;top:30%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(139,92,246,.25) 0%,transparent 70%);animation-duration:9s"></div>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;padding:60px 120px 40px;z-index:1">
+          <div style="text-align:center;margin-bottom:20px;flex-shrink:0">
+            <div class="chip" style="background:rgba(139,92,246,.15);border-color:rgba(139,92,246,.3);color:#a78bfa;margin-bottom:.7em">🎙️ &nbsp; AI Studio · NotebookLM · ElevenLabs</div>
+            <h2 style="font-size:2em;margin-bottom:.15em">לתת לAI לדבר</h2>
+            <p style="font-size:.52em;color:var(--muted);margin:0">במקום לקרוא — בואו פשוט נקשיב</p>
           </div>
-          <div class="waveform-wrap" style="margin:-.4em 0 1.2em">
-            <svg viewBox="0 0 400 48" preserveAspectRatio="none">
-              <polyline points="0,24 20,10 35,36 50,14 65,30 80,8 95,38 110,20 125,32 140,12 155,28 170,6 185,40 200,18 215,34 230,10 245,28 260,16 275,36 290,8 305,30 320,14 335,36 350,20 365,10 380,30 400,24"/>
-            </svg>
+          <div class="waveform-wrap" style="margin-bottom:16px;flex-shrink:0">
+            <svg viewBox="0 0 400 48" preserveAspectRatio="none"><polyline points="0,24 20,10 35,36 50,14 65,30 80,8 95,38 110,20 125,32 140,12 155,28 170,6 185,40 200,18 215,34 230,10 245,28 260,16 275,36 290,8 305,30 320,14 335,36 350,20 365,10 380,30 400,24"/></svg>
           </div>
-          <div class="s-text-blocks">
-            <div class="feat-card fragment" style="animation-delay:.05s">
-              <span class="fc-icon">🎙️</span>
-              <div class="fc-title">Text-to-Speech (TTS)</div>
-              <div class="fc-desc">כותבים טקסט ← מקבלים קריינות. <strong>בעברית.</strong> בוחרים קול, גיל, אינטונציה. 2 שניות לסקריפט שלם.</div>
+          <div style="flex:1;width:100%;max-width:1000px;overflow:hidden;position:relative;border-radius:16px">
+            <div style="position:absolute;top:0;left:0;right:0;height:70px;background:linear-gradient(to bottom,var(--bg),transparent);z-index:2;pointer-events:none"></div>
+            <div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,var(--bg),transparent);z-index:2;pointer-events:none"></div>
+            <div class="s59-crawl" style="padding:40px 20px;line-height:2.1;font-size:.65em;color:rgba(255,255,255,.88);text-align:center">
+              כיום יש מספר כלים שיודעים לעשות סאונד מטקסט בעברית, עם דיקציה די מרשימה ואפילו לצחקק&nbsp;<span style="color:#fcd34d;font-style:italic">[הקריין צוחק צחוק]</span>&nbsp;חחחח&nbsp;<span style="color:#fcd34d;font-style:italic">[צחוק]</span>. אפשר לעשות את זה באמצעות הכלים של גוגל, ב‑AI&nbsp;Studio או ב‑NotebookLM, ואם רוצים להשתמש בקול ספציפי וקבוע עדיף להשתמש ב‑ElevenLabs, ואז אפשר לייצר קול עם תכונות ספציפיות מפרומפט אחד. לא לדאוג, ממש עוד רגע נסביר איך עושים את זה! אגב, אני יודע אפילו להשתעל&nbsp;<span style="color:#fcd34d;font-style:italic">[הקריין משתעל שיעול]</span>
             </div>
-            <div class="feat-card c fragment" style="animation-delay:.12s">
-              <span class="fc-icon">🎤</span>
-              <div class="fc-title">Voice Changer (STS)</div>
-              <div class="fc-desc">מקליטים את עצמכם → ElevenLabs <strong>ממיר לקול אחר</strong> — בלי לכתוב מחדש. מושלם לדיבוב וידאו Veo/Kling בקול אחיד.</div>
-            </div>
-            <div class="feat-card fragment" style="animation-delay:.19s">
-              <span class="fc-icon">🇮🇱</span>
-              <div class="fc-title">עברית — עובד באמת</div>
-              <div class="fc-desc">ElevenLabs <strong>מבין עברית</strong> כולל ניקוד, ניואנסים ואינטונציה. מה שאחרים מייצרים בגנגנה — כאן נשמע אנושי.</div>
-            </div>
-            <div class="feat-card c fragment" style="animation-delay:.26s">
-              <span class="fc-icon">🔊</span>
-              <div class="fc-title">Sound Effects</div>
-              <div class="fc-desc">תיאור בטקסט → אפקט סאונד מותאם. "חיית ים מוזרה קורסת על רצפה מתכתית" — <strong>פשוט כתבו מה שאתם שומעים בראש.</strong></div>
-            </div>
-          </div>
-        </div>
-        <div class="s-text-ghost">11</div>
-      </section>
-
-      <!-- ══════════════════════════════════════════════════════
-           CH05 — 🎬 DEMO: ElevenLabs Voice Changer
-      ══════════════════════════════════════════════════════ -->
-      <section class="s-video" data-transition="fade">
-        <div class="s-split-content" style="padding:80px 50px 80px 100px">
-          <div class="chip" style="margin-bottom:1em;background:rgba(139,92,246,.15);border-color:rgba(139,92,246,.3);color:#a78bfa">🎬 &nbsp; הדגמה חיה</div>
-          <span class="eyebrow">ElevenLabs · Voice Changer</span>
-          <h2>הקול שלך —<br>בגרסה אחרת</h2>
-          <ul style="margin-top:.9em">
-            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#10b981)"></span>הקלטה קצרה בקול שלכם</li>
-            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#10b981)"></span>ElevenLabs ממיר לקול שנבחר</li>
-            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#10b981)"></span>האינטונציה שלכם — נשמרת</li>
-            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#10b981)"></span>מושלם לסינכרון על Veo/Kling</li>
-          </ul>
-        </div>
-        <div class="s-video-pane">
-          <div class="bg bg-grid" style="opacity:.3"></div>
-          <div class="s-video-scanline"></div>
-          <div class="s-video-thumb">
-            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(139,92,246,.7))">🎙️</div>
-            <div class="s-video-play-btn" style="background:linear-gradient(135deg,#8b5cf6,#10b981)">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <div class="s-video-tag" style="color:#a78bfa">ElevenLabs · STS · עברית</div>
-            <div class="s-video-label">⬆️ להחליף בהדגמת Voice Changer</div>
           </div>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH05 — TTS vs STS: השוואה לעברית
-      ══════════════════════════════════════════════════════ -->
-      <section class="s-compare" data-transition="concave">
-        <div class="bg bg-dots" style="opacity:.2"></div>
-        <div class="s-compare-vs">VS</div>
-        <div class="s-compare-col">
-          <div class="col-title v">📝 TTS — כתיבה לקול</div>
-          <ul>
-            <li><span class="rdot v"></span>כותבים טקסט מלא</li>
-            <li><span class="rdot v"></span>בוחרים קול + סגנון</li>
-            <li><span class="rdot v"></span>מהיר מאוד — 2 שניות</li>
-            <li><span class="rdot v"></span><strong style="color:var(--white)">עברית — לפעמים מבטא מוזר</strong></li>
-            <li><span class="rdot v"></span>מספיק לרוב השימושים</li>
-          </ul>
-        </div>
-        <div class="s-compare-col">
-          <div class="col-title c">🎤 STS — קול לקול</div>
-          <ul>
-            <li><span class="rdot c"></span>מקליטים בקול שלכם</li>
-            <li><span class="rdot c"></span>ElevenLabs ממיר לקול אחר</li>
-            <li><span class="rdot c"></span><strong style="color:var(--white)">האינטונציה שלכם — נשמרת</strong></li>
-            <li><span class="rdot c"></span>עברית מושלמת — כי אתם דוברים</li>
-            <li><span class="rdot c"></span>הפתרון לדיבוב Veo/Kling</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ══════════════════════════════════════════════════════
-           CH05 — Suno: מוזיקה + Audio-to-Audio
-      ══════════════════════════════════════════════════════ -->
-      <section class="s-text" data-transition="slide">
-        <div class="s-text-accent-col" style="background:linear-gradient(180deg,#f59e0b,#10b981)"></div>
-        <div class="s-text-main z1">
-          <div class="hdr">
-            <div class="chip amber" style="margin-bottom:.8em">🎵 Suno</div>
-            <h2>שיר שלם מפרומפט — כולל מילים</h2>
-          </div>
-          <div class="waveform-wrap amber" style="margin:-.4em 0 1.2em">
-            <svg viewBox="0 0 400 48" preserveAspectRatio="none">
-              <polyline points="0,24 15,8 28,38 42,16 56,32 70,6 84,42 98,18 112,30 126,10 140,36 154,14 168,28 182,4 196,44 210,22 224,36 238,12 252,30 266,8 280,40 294,20 308,34 322,10 336,28 350,16 364,38 378,12 400,24"/>
-            </svg>
-          </div>
-          <div class="s-text-blocks">
-            <div class="feat-card a fragment" style="animation-delay:.05s">
-              <span class="fc-icon">🎵</span>
-              <div class="fc-title">Text-to-Music</div>
-              <div class="fc-desc">מתיאור טקסטואלי → שיר מלא עם <strong>מוזיקה + שירה + מילים.</strong> "פופ עברי, אנרגטי, על קיץ בתל אביב" — 30 שניות ← שיר שלם.</div>
-            </div>
-            <div class="feat-card c fragment" style="animation-delay:.12s">
-              <span class="fc-icon">🔀</span>
-              <div class="fc-title">Audio-to-Audio</div>
-              <div class="fc-desc">מעלים אודיו קיים → Suno <strong>מחדש, מסגנן, מוסיף שכבות.</strong> קליפ ישן ← גרסה חדשה לגמרי. מבלי לאבד את הרגש המקורי.</div>
-            </div>
-            <div class="feat-card a fragment" style="animation-delay:.19s">
-              <span class="fc-icon">🎼</span>
-              <div class="fc-title">Covers ואינסטרומנטל</div>
-              <div class="fc-desc">קאברים לשירים ידועים, גרסאות אינסטרומנטל, <strong>סאונדטרקים לוידאו</strong> — כל מה שדרש פרודיוסר ואולפן.</div>
-            </div>
-            <div class="feat-card fragment" style="animation-delay:.26s;border-color:rgba(245,158,11,.2)">
-              <span class="fc-icon">⚠️</span>
-              <div class="fc-title">עברית — עדיין לא מושלם</div>
-              <div class="fc-desc">עברית ב-Suno עובדת, <strong>אבל עם מבטא זר.</strong> הטריק: כתבו מילים עם ניקוד + בקשו "Israeli Hebrew accent". תשמעו הבדל.</div>
-            </div>
-          </div>
-        </div>
-        <div class="s-text-ghost">♪</div>
-      </section>
-
-      <!-- ══════════════════════════════════════════════════════
-           CH05 — 🎬 DEMO: Suno Audio-to-Audio
-      ══════════════════════════════════════════════════════ -->
-      <section class="s-video" data-transition="fade">
-        <div class="s-split-content" style="padding:80px 50px 80px 100px">
-          <div class="chip amber" style="margin-bottom:1em">🎬 &nbsp; הדגמה חיה</div>
-          <span class="eyebrow amber">Suno · Audio-to-Audio</span>
-          <h2>תוכן ישן →<br>גרסה חדשה</h2>
-          <ul style="margin-top:.9em">
-            <li class="fragment"><span class="dot" style="background:var(--grad-gold)"></span>קליפ אודיו קיים כקלט</li>
-            <li class="fragment"><span class="dot" style="background:var(--grad-gold)"></span>הוראה: "שנה לז'אנר X, הוסף Y"</li>
-            <li class="fragment"><span class="dot" style="background:var(--grad-gold)"></span>Suno מחדש את הסאונד לגמרי</li>
-            <li class="fragment"><span class="dot" style="background:var(--grad-gold)"></span>שימוש: ריל בר-מצווה → אלבום</li>
-          </ul>
-        </div>
-        <div class="s-video-pane">
-          <div class="bg bg-grid" style="opacity:.3"></div>
-          <div class="s-video-scanline"></div>
-          <div class="s-video-thumb">
-            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(245,158,11,.7))">🎵</div>
-            <div class="s-video-play-btn" style="background:var(--grad-gold)">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <div class="s-video-tag" style="color:var(--a-hi)">Suno · Audio-to-Audio</div>
-            <div class="s-video-label">⬆️ להחליף בהדגמת Suno</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ══════════════════════════════════════════════════════
-           CH05 — GOLD TIP: STS על Veo = קול אחיד
+           CH05 — SLIDE 60: טיפ זהב — ניקוד עברי לAI
       ══════════════════════════════════════════════════════ -->
       <section class="s-gold" data-transition="convex" data-transition-speed="fast">
         <div class="s-gold-glow-bg"></div>
         <div class="s-gold-frame"></div>
         <div class="s-gold-corner tl"></div>
         <div class="s-gold-corner br"></div>
-        <div class="s-gold-inner">
-          <div class="s-gold-badge">✦ &nbsp; טיפ זהב · סאונד</div>
-          <h2>STS של ElevenLabs על Veo = קול אחיד</h2>
-          <p>
-            הבעיה: Veo 3 מייצר קול שונה בכל קליפ — אי אפשר לצרף קטעים עם אותה דמות מדברת.<br>
-            הפתרון: <strong>הקליטו פעם אחת</strong> את הדמות שלכם עם STS ב-ElevenLabs → מעכשיו כל הקטעים מדובבים באותו קול.<br>
-            תוצאה: <strong>5 קטעי Veo + דיבוב אחיד = פרסומת שלמה.</strong>
-          </p>
+        <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 100px;gap:28px">
+          <div style="text-align:center">
+            <div class="s-gold-badge" style="margin-bottom:.6em">✦ &nbsp; טיפ זהב · קריינות</div>
+            <h2 style="font-size:2em !important">איך גורמים לAI לדבר עם ניקוד כמו שצריך</h2>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;width:100%;max-width:1200px">
+            <div style="background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.18);border-radius:16px;padding:32px 26px;text-align:right">
+              <div style="font-size:2.2em;margin-bottom:12px">🔤</div>
+              <div style="font-size:.56em;font-weight:700;color:#fcd34d;margin-bottom:10px">1. הימנעו מדו-משמעויות</div>
+              <div style="font-size:.46em;color:rgba(255,255,255,.75);line-height:1.7">במקום ״אל דאגה״ (יקרא ״אֵל״) — תגידו ״לא לדאוג״. הוא כנראה לא יטעה.</div>
+            </div>
+            <div style="background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.18);border-radius:16px;padding:32px 26px;text-align:right">
+              <div style="font-size:2.2em;margin-bottom:12px">🔡</div>
+              <div style="font-size:.56em;font-weight:700;color:#fcd34d;margin-bottom:10px">2. ניקוד באנגלית</div>
+              <div style="font-size:.46em;color:rgba(255,255,255,.75);line-height:1.7">במקרים בודדים — השתמשו באותיות ניקוד באנגלית: <span style="font-family:var(--mono);color:#fbbf24">al</span> דאגה.</div>
+            </div>
+            <div style="background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.18);border-radius:16px;padding:32px 26px;text-align:right">
+              <div style="font-size:2.2em;margin-bottom:12px">◌ּ</div>
+              <div style="font-size:.56em;font-weight:700;color:#fcd34d;margin-bottom:10px">3. ניקוד עברי</div>
+              <div style="font-size:.46em;color:rgba(255,255,255,.75);line-height:1.7">נקדו בניקוד עברי מילים קשות. זה לא תמיד עובד, אבל הרבה פעמים כן.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH05 — SLIDE 61: לייצר קול קבוע בElevenLabs + וידאו
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-video" data-transition="slide" style="--v-cols:38% 62%">
+        <div class="s-split-content" style="padding:80px 50px 80px 100px">
+          <div class="chip" style="margin-bottom:1em;background:rgba(139,92,246,.15);border-color:rgba(139,92,246,.3);color:#a78bfa">🎙️ ElevenLabs · Voice Design</div>
+          <h2>לייצר קול קבוע<br>ב‑ElevenLabs</h2>
+          <p style="margin-top:.8em">הכי פשוט בעולם</p>
+          <ul style="margin-top:.9em">
+            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#a855f7)"></span>מתארים את הקול בפרומפט</li>
+            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#a855f7)"></span>גיל, מגדר, אינטונציה, אקצנט</li>
+            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#8b5cf6,#a855f7)"></span>שומרים — וזה הקול שלכם לתמיד</li>
+          </ul>
+        </div>
+        <div class="s-video-pane">
+          <div class="bg bg-grid" style="opacity:.3"></div>
+          <div class="s-video-scanline"></div>
+          <video class="v-169" src="assets/demos/s-61.mp4" preload="auto" playsinline></video>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH05 — SLIDE 62: אפקטים קוליים — לחצו לשמוע
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-base" data-transition="fade" data-chapter-key="sound">
+        <div class="bg bg-dots" style="opacity:.2"></div>
+        <div class="orb c" style="width:500px;height:500px;top:50%;right:-80px;transform:translateY(-50%);opacity:.18;animation-duration:7s"></div>
+        <audio id="sfx62a" src="assets/demos/s-62a.mp3" preload="auto"></audio>
+        <audio id="sfx62b" src="assets/demos/s-62b.mp3" preload="auto"></audio>
+        <audio id="sfx62c" src="assets/demos/s-62c.mp3" preload="auto"></audio>
+        <audio id="sfx62d" src="assets/demos/s-62d.mp3" preload="auto"></audio>
+        <audio id="sfx62e" src="assets/demos/s-62e.mp3" preload="auto"></audio>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 120px;gap:44px;z-index:1">
+          <div style="text-align:center">
+            <div class="chip" style="background:rgba(6,182,212,.12);border-color:rgba(6,182,212,.3);color:#67e8f9;margin-bottom:.8em">🔊 ElevenLabs · Sound Effects</div>
+            <h2 style="font-size:2em">אפקטים קוליים</h2>
+            <p style="font-size:.5em;color:var(--muted);margin-top:.4em">נכון, יש אחלה ספרייה בקאפקט — אבל הרבה יותר מגניב לייצר לבד</p>
+          </div>
+          <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
+            <button onclick="var a=document.getElementById('sfx62a');a.currentTime=0;a.play()" style="background:linear-gradient(135deg,rgba(6,182,212,.15),rgba(6,182,212,.06));border:1.5px solid rgba(6,182,212,.3);color:#67e8f9;border-radius:16px;padding:22px 30px;cursor:pointer;font-family:var(--font);font-size:.58em;font-weight:700;transition:all .2s;min-width:170px;display:flex;flex-direction:column;align-items:center;gap:10px" onmouseenter="this.style.borderColor='rgba(6,182,212,.7)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(6,182,212,.3)';this.style.transform='translateY(0)'"><span style="font-size:2em">🔊</span>אפקט 1</button>
+            <button onclick="var a=document.getElementById('sfx62b');a.currentTime=0;a.play()" style="background:linear-gradient(135deg,rgba(6,182,212,.15),rgba(6,182,212,.06));border:1.5px solid rgba(6,182,212,.3);color:#67e8f9;border-radius:16px;padding:22px 30px;cursor:pointer;font-family:var(--font);font-size:.58em;font-weight:700;transition:all .2s;min-width:170px;display:flex;flex-direction:column;align-items:center;gap:10px" onmouseenter="this.style.borderColor='rgba(6,182,212,.7)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(6,182,212,.3)';this.style.transform='translateY(0)'"><span style="font-size:2em">🔊</span>אפקט 2</button>
+            <button onclick="var a=document.getElementById('sfx62c');a.currentTime=0;a.play()" style="background:linear-gradient(135deg,rgba(6,182,212,.15),rgba(6,182,212,.06));border:1.5px solid rgba(6,182,212,.3);color:#67e8f9;border-radius:16px;padding:22px 30px;cursor:pointer;font-family:var(--font);font-size:.58em;font-weight:700;transition:all .2s;min-width:170px;display:flex;flex-direction:column;align-items:center;gap:10px" onmouseenter="this.style.borderColor='rgba(6,182,212,.7)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(6,182,212,.3)';this.style.transform='translateY(0)'"><span style="font-size:2em">🔊</span>אפקט 3</button>
+            <button onclick="var a=document.getElementById('sfx62d');a.currentTime=0;a.play()" style="background:linear-gradient(135deg,rgba(6,182,212,.15),rgba(6,182,212,.06));border:1.5px solid rgba(6,182,212,.3);color:#67e8f9;border-radius:16px;padding:22px 30px;cursor:pointer;font-family:var(--font);font-size:.58em;font-weight:700;transition:all .2s;min-width:170px;display:flex;flex-direction:column;align-items:center;gap:10px" onmouseenter="this.style.borderColor='rgba(6,182,212,.7)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(6,182,212,.3)';this.style.transform='translateY(0)'"><span style="font-size:2em">🔊</span>אפקט 4</button>
+            <button onclick="var a=document.getElementById('sfx62e');a.currentTime=0;a.play()" style="background:linear-gradient(135deg,rgba(6,182,212,.15),rgba(6,182,212,.06));border:1.5px solid rgba(6,182,212,.3);color:#67e8f9;border-radius:16px;padding:22px 30px;cursor:pointer;font-family:var(--font);font-size:.58em;font-weight:700;transition:all .2s;min-width:170px;display:flex;flex-direction:column;align-items:center;gap:10px" onmouseenter="this.style.borderColor='rgba(6,182,212,.7)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(6,182,212,.3)';this.style.transform='translateY(0)'"><span style="font-size:2em">🔊</span>אפקט 5</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH05 — SLIDE 63: sound to sound — כותרת חלק
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-section" data-transition="slide" data-chapter-key="sound">
+        <div class="bg bg-grid"></div>
+        <div class="orb c" style="width:600px;height:600px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(6,182,212,.4) 0%,rgba(6,182,212,.1) 50%,transparent 72%);animation-duration:6s"></div>
+        <div class="s-section-ring r1" style="width:550px;height:550px;transform:translate(-50%,-50%);border-color:rgba(6,182,212,.15)"></div>
+        <div class="s-section-ring r2" style="width:880px;height:880px;transform:translate(-50%,-50%);border-color:rgba(6,182,212,.07)"></div>
+        <div class="s-section-ghost" style="-webkit-text-fill-color:rgba(6,182,212,.07)">STS</div>
+        <div class="s-section-inner z1">
+          <div style="font-family:var(--mono);font-size:3.2em;font-weight:900;letter-spacing:.04em;background:linear-gradient(90deg,#06b6d4,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.1">sound to sound</div>
+          <p class="s-section-desc">קול שלכם → קול של AI<br>voice changer · קאברים · דיבוב וידאו</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH05 — SLIDE 64: למה לא לסמוך על עצמכם? + וידאו ורטיקלי
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-video video-portrait" data-transition="slide">
+        <div class="s-split-content" style="padding:80px 50px 80px 100px">
+          <div class="chip" style="margin-bottom:1em;background:rgba(6,182,212,.12);border-color:rgba(6,182,212,.3);color:#67e8f9">🎤 ElevenLabs · STS</div>
+          <h2>אבל למה שלא<br>תסמכו על עצמכם?</h2>
+          <p style="margin-top:.8em">כשאתם מקליטים את עצמכם, עם הטונציה הנכונה, הצלילים הנכונים, ואז משתמשים רק בקול של ה‑AI — התוצאה יכולה להיות מעולה</p>
+          <ul style="margin-top:.9em">
+            <li class="fragment"><span class="dot c"></span>אתם שולטים על הטמפו</li>
+            <li class="fragment"><span class="dot c"></span>האינטונציה שלכם — נשמרת</li>
+            <li class="fragment"><span class="dot c"></span>AI רק מחליף את הקול</li>
+          </ul>
+        </div>
+        <div class="s-video-pane">
+          <div class="bg bg-grid" style="opacity:.3"></div>
+          <div class="s-video-scanline"></div>
+          <video class="v-916" src="assets/demos/s-64.mp4" preload="auto" playsinline></video>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH05 — SLIDE 65: שירים + Suno Audio-to-Audio
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-video" data-transition="slide" style="--v-cols:35% 65%">
+        <div class="s-split-content" style="padding:80px 50px 80px 100px">
+          <div class="chip amber" style="margin-bottom:1em">🎵 Suno · Audio-to-Audio</div>
+          <h2>ועכשיו בואו<br>נדבר על שירים?</h2>
+          <p style="margin-top:.8em;font-size:.88em;line-height:1.7">קודם כל — זכרו איך עוזרים ל‑AI לקרוא נכון עברית. אבל כמו בקריינות — <strong>לשיר ואז לתת ל‑AI לעשות קאבר</strong> זה לפעמים הרבה יותר מוצלח.</p>
+          <p style="font-size:.72em;color:var(--muted);margin-top:.6em">המודלים החדשים של Suno מסתדרים יופי טופי בעברית, אבל בואו נראה את זה כי כבר הכנתי 😄</p>
+        </div>
+        <div class="s-video-pane">
+          <div class="bg bg-grid" style="opacity:.3"></div>
+          <div class="s-video-scanline"></div>
+          <video class="v-169" src="assets/demos/s-65.mp4" preload="auto" playsinline></video>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH05 — SLIDE 66: טיפ זהב — STS על וידאו + 2 קליפים
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-gold" data-transition="convex" data-transition-speed="fast">
+        <div class="s-gold-glow-bg"></div>
+        <div class="s-gold-frame"></div>
+        <div class="s-gold-corner tl"></div>
+        <div class="s-gold-corner br"></div>
+        <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;padding:44px 80px;gap:22px">
+          <div style="text-align:center;flex-shrink:0">
+            <div class="s-gold-badge" style="margin-bottom:.5em">✦ &nbsp; טיפ זהב · סאונד</div>
+            <h2 style="font-size:1.75em !important;margin-bottom:0 !important">STS של ElevenLabs על וידאו שיצרתם = קול אחיד</h2>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex-shrink:0">
+            <div style="background:rgba(244,63,94,.07);border:1px solid rgba(244,63,94,.2);border-radius:12px;padding:16px 22px">
+              <div style="font-size:.52em;font-weight:700;color:#f87171;margin-bottom:6px">⚠️ הבעיה</div>
+              <div style="font-size:.45em;color:rgba(255,255,255,.75);line-height:1.65">חלק ממודלי הוידאו מייצרים קול שונה בכל קליפ — אי אפשר לצרף קטעים עם אותה דמות מדברת.</div>
+            </div>
+            <div style="background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.2);border-radius:12px;padding:16px 22px">
+              <div style="font-size:.52em;font-weight:700;color:#34d399;margin-bottom:6px">✅ הפתרון</div>
+              <div style="font-size:.45em;color:rgba(255,255,255,.75);line-height:1.65">קחו את כל קטעי הסאונד ותעשו STS ב‑ElevenLabs — ואז לכל הקטעים יש אותו קול.</div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1;min-height:0">
+            <div style="border-radius:14px;overflow:hidden;position:relative;background:rgba(0,0,0,.3);border:1px solid rgba(244,63,94,.18)">
+              <div style="position:absolute;top:10px;right:12px;z-index:2;font-size:.38em;font-weight:700;color:#f87171;background:rgba(0,0,0,.6);padding:4px 12px;border-radius:6px">לפני</div>
+              <video class="v-169" src="assets/demos/s-66a.mp4" preload="auto" playsinline style="height:100%;width:100%;object-fit:cover"></video>
+            </div>
+            <div style="border-radius:14px;overflow:hidden;position:relative;background:rgba(0,0,0,.3);border:1px solid rgba(16,185,129,.18)">
+              <div style="position:absolute;top:10px;right:12px;z-index:2;font-size:.38em;font-weight:700;color:#34d399;background:rgba(0,0,0,.6);padding:4px 12px;border-radius:6px">אחרי</div>
+              <video class="v-169" src="assets/demos/s-66b.mp4" preload="auto" playsinline style="height:100%;width:100%;object-fit:cover"></video>
+            </div>
+          </div>
         </div>
       </section>
 
