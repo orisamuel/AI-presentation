@@ -2184,31 +2184,28 @@
            CH04 — KLING EFFECTS: After Effects בלי After Effects
       ══════════════════════════════════════════════════════ -->
       <section class="s-base" data-transition="slide">
-        <div class="bg bg-dots" style="opacity:.08"></div>
-        <div class="orb amber" style="width:600px;height:600px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.08;animation-duration:8s"></div>
-        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:52px 100px 40px;gap:0;z-index:2;direction:rtl;overflow:hidden">
-          <!-- Title row -->
-          <div style="width:100%;flex-shrink:0;margin-bottom:32px;text-align:right">
-            <h2 style="font-size:2.1em !important;margin:0">After Effects<br>בלי After Effects</h2>
-          </div>
-          <!-- Main content: image left, text right -->
-          <div style="display:flex;align-items:flex-start;gap:52px;width:100%;flex:1;min-height:0">
-            <!-- Image column -->
-            <div style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:16px">
-              <!-- Real image s-53.png -->
-              <img src="assets/demos/s-53.png" style="width:360px;border-radius:16px;box-shadow:0 12px 48px rgba(0,0,0,.6),0 0 0 1px rgba(245,158,11,.2);display:block">
-              <!-- Prompt block -->
-              <div style="width:360px;background:rgba(5,5,14,.9);border:1px solid rgba(245,158,11,.3);border-radius:10px;padding:16px 20px;direction:rtl;text-align:right">
-                <div style="font-size:.4em;color:rgba(245,158,11,.5);font-family:var(--mono);letter-spacing:.08em;margin-bottom:.5em">פרומפט ›</div>
-                <div style="font-size:.5em;color:var(--a-hi);font-family:var(--mono);line-height:1.7">תעשה לי מזה כניסה יפה כאילו אתה אפטריסט כפרה</div>
-              </div>
-            </div>
-            <!-- Text column -->
-            <div style="flex:1;padding-top:8px">
-              <p style="font-size:.7em;line-height:1.75;color:rgba(240,240,248,.85)">
+        <div class="bg bg-dots" style="opacity:.07"></div>
+        <div class="orb amber" style="width:700px;height:700px;top:50%;left:22%;transform:translate(-50%,-50%);opacity:.1;animation-duration:9s"></div>
+        <!-- Full-bleed split: content right, portrait image left -->
+        <div style="position:absolute;inset:0;display:flex;align-items:stretch;direction:rtl;z-index:2">
+          <!-- RIGHT: content column -->
+          <div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:60px 72px 60px 48px;gap:32px">
+            <div>
+              <h2 style="font-size:2.5em !important;line-height:1.15;margin-bottom:.65em">After Effects<br>בלי After Effects</h2>
+              <p style="font-size:.65em;line-height:1.85;color:rgba(240,240,248,.78)">
                 אם אפשר לתת ל-AI פריים התחלה ופריים סיום, אז למה שלא נוכל פשוט לתת לו את הפריים הסופי עם הכותרות והאלמנטים שאנחנו רוצים ונגיד לו איך אנחנו רוצים שהאפקט ייראה?
               </p>
             </div>
+            <!-- Prompt block — large, dramatic -->
+            <div style="background:rgba(5,5,14,.92);border:1.5px solid rgba(245,158,11,.38);border-radius:14px;padding:26px 32px;box-shadow:0 0 48px rgba(245,158,11,.1),0 8px 40px rgba(0,0,0,.45);direction:rtl">
+              <div style="font-size:.36em;color:rgba(245,158,11,.45);font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.8em">Kling Effects Prompt ›</div>
+              <div style="font-size:.65em;color:var(--a-hi);font-family:var(--mono);line-height:1.75;font-weight:500">תעשה לי מזה כניסה יפה<br>כאילו אתה אפטריסט כפרה</div>
+            </div>
+          </div>
+          <!-- LEFT: portrait image — hero visual -->
+          <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;padding:36px 56px 36px 40px;position:relative">
+            <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(245,158,11,.07) 0%,transparent 70%)"></div>
+            <img src="assets/demos/s-53.png" style="height:880px;width:auto;border-radius:20px;box-shadow:0 24px 80px rgba(0,0,0,.75),0 0 0 1px rgba(245,158,11,.18),0 0 60px rgba(245,158,11,.07);position:relative;z-index:1;display:block;animation:float 6s ease-in-out infinite">
           </div>
         </div>
       </section>
