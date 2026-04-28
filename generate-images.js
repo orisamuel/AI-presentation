@@ -60,6 +60,13 @@ const AMBIENT = {
     size:  'landscape_16_9',
   },
 
+  // Slide-specific fun visuals
+  's-69-lipsync.png': {
+    prompt: 'a fluffy golden retriever dog dramatically singing karaoke into a microphone, mouth wide open, very expressive funny face, cinematic dark moody background, dramatic spotlight, photorealistic, high detail',
+    model: 'fal-ai/flux/dev',
+    size: 'portrait_4_3',
+  },
+
   // Decorative / ambient for specific slides
   'ambient-ai-brain.png': {
     prompt: 'human brain made of glowing neural circuits, dark space background, violet cyan gradient, ultra HD, 16:9, no text',
