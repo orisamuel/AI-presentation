@@ -113,6 +113,14 @@ Reveal.on('fragmentshown', (event) => {
     const target = document.getElementById(event.fragment.getAttribute('data-vid-id'));
     if (target) { target.currentTime = 0; target.play().catch(() => {}); }
   }
+
+  // Auto-play muted videos nested inside a revealed fragment container
+  event.fragment.querySelectorAll('video[muted]').forEach(v => {
+    if (!v.hasAttribute('autoplay') && !v.hasAttribute('data-autoplay')) {
+      v.currentTime = 0;
+      v.play().catch(() => {});
+    }
+  });
 });
 
 Reveal.on('fragmenthidden', (event) => {
@@ -165,20 +173,20 @@ function prefetchAllVideos() {
 
 function setupVideoInteractions() {
   document.querySelectorAll('.reveal .slides video').forEach(video => {
-    // Videos with data-no-advance keep controls always visible (full-bleed demo)
-    if (video.closest('[data-no-advance]') || video.getAttribute('data-no-advance') !== null) return;
+    // Skip videos that manage their own interaction (have data-no-advance on themselves)
+    if (video.getAttribute('data-no-advance') !== null) return;
+
+    const isLoop = video.hasAttribute('autoplay') || video.hasAttribute('data-autoplay');
 
     // Remove controls — hidden by default
     video.removeAttribute('controls');
     video.setAttribute('tabindex', '-1');
 
-    // Reveal controls on hover
-    video.addEventListener('mouseenter', () => video.setAttribute('controls', ''));
-    video.addEventListener('mouseleave', () => video.removeAttribute('controls'));
-
-    // Click plays/pauses — only for non-autoplay (demo) videos
-    const isLoop = video.hasAttribute('autoplay') || video.hasAttribute('data-autoplay');
+    // Hover controls + click-to-play only for non-autoplay demo videos
     if (!isLoop) {
+      video.addEventListener('mouseenter', () => video.setAttribute('controls', ''));
+      video.addEventListener('mouseleave', () => video.removeAttribute('controls'));
+
       video.addEventListener('click', (e) => {
         e.stopPropagation();
         if (video.paused) video.play().catch(() => {});
