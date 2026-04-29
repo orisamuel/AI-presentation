@@ -2866,7 +2866,7 @@
         <div class="orb cyan" style="width:700px;height:700px;top:50%;left:22%;transform:translate(-50%,-50%);opacity:.13;animation-duration:9s"></div>
         <div class="orb" style="width:450px;height:450px;top:18%;left:82%;transform:translate(-50%,-50%);opacity:.1;animation-duration:7s;animation-delay:-4s"></div>
         <div class="bg bg-dots" style="opacity:.12"></div>
-        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:62px 100px 68px 80px;display:grid;grid-template-rows:auto 1fr auto;gap:24px">
+        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:62px 100px 68px 80px;display:grid;grid-template-rows:auto 1fr;gap:24px">
           <!-- Header -->
           <div>
             <span class="eyebrow">AI as Director &amp; Producer</span>
@@ -2929,10 +2929,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <!-- Bottom strip -->
-          <div style="display:flex;justify-content:center">
-            <div style="background:rgba(245,158,11,.09);border:1px solid rgba(245,158,11,.25);border-radius:8px;padding:9px 28px;font-size:.65em;color:var(--a-hi);font-weight:700;letter-spacing:.06em;text-transform:uppercase">✅ Approve each step before moving on</div>
           </div>
         </div>
       </section>
@@ -3013,7 +3009,7 @@
       ══════════════════════════════════════════════════════ -->
       <section class="s-base" data-transition="slide">
         <div class="orb" style="width:550px;height:550px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.08;animation-duration:10s"></div>
-        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:52px 100px 52px 80px;display:grid;grid-template-rows:auto 1fr auto;gap:20px">
+        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:40px 100px 40px 80px;display:grid;grid-template-rows:auto 1fr auto;gap:16px">
           <!-- Header -->
           <div>
             <span class="eyebrow">ChatGPT · Shot List</span>
@@ -3112,22 +3108,32 @@
               <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--a-hi);font-weight:600">המטרה: </span>לסגור את הסרט עם מסר אחד ברור.</div>
             </div>
           </div>
-          <!-- Storyboard strip: 3 cinematic key shots -->
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;height:88px;flex-shrink:0">
-            <div style="border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative">
+          <!-- Storyboard strip: 5 key shots at 16:9 -->
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;flex-shrink:0">
+            <div style="aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative">
               <img src="assets/demos/s-76-shot-a.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.85">
-              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,14,.7) 100%)"></div>
-              <div style="position:absolute;bottom:6px;right:8px;font-family:var(--mono);font-size:.36em;color:rgba(255,255,255,.7)">01 — Hero Establishing</div>
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,14,.72) 100%)"></div>
+              <div style="position:absolute;bottom:5px;right:7px;font-family:var(--mono);font-size:.33em;color:rgba(255,255,255,.7)">01 — Hero Establishing</div>
             </div>
-            <div style="border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative">
+            <div style="aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative">
+              <img src="assets/demos/s-76-shot-d.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.85">
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,14,.72) 100%)"></div>
+              <div style="position:absolute;bottom:5px;right:7px;font-family:var(--mono);font-size:.33em;color:rgba(255,255,255,.7)">04 — Guest Entry</div>
+            </div>
+            <div style="aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative">
               <img src="assets/demos/s-76-shot-b.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.85">
-              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,14,.7) 100%)"></div>
-              <div style="position:absolute;bottom:6px;right:8px;font-family:var(--mono);font-size:.36em;color:rgba(255,255,255,.7)">06 — Surface Shot</div>
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,14,.72) 100%)"></div>
+              <div style="position:absolute;bottom:5px;right:7px;font-family:var(--mono);font-size:.33em;color:rgba(255,255,255,.7)">06 — Surface Shot</div>
             </div>
-            <div style="border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative">
+            <div style="aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative">
               <img src="assets/demos/s-76-shot-c.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.85">
-              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,14,.7) 100%)"></div>
-              <div style="position:absolute;bottom:6px;right:8px;font-family:var(--mono);font-size:.36em;color:rgba(255,255,255,.7)">08 — Underwater Beauty</div>
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,14,.72) 100%)"></div>
+              <div style="position:absolute;bottom:5px;right:7px;font-family:var(--mono);font-size:.33em;color:rgba(255,255,255,.7)">08 — Underwater Beauty</div>
+            </div>
+            <div style="aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative">
+              <img src="assets/demos/s-76-shot-e.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.85">
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,14,.72) 100%)"></div>
+              <div style="position:absolute;bottom:5px;right:7px;font-family:var(--mono);font-size:.33em;color:rgba(255,255,255,.7)">10 — Final Hero Shot</div>
             </div>
           </div>
         </div>
@@ -3166,37 +3172,11 @@
                 <div style="font-size:.62em;color:rgba(255,255,255,.78);line-height:1.7">בכל שלב עוצרים, בודקים, מאשרים — ורק אז ממשיכים.<br>אם הקונספט לא מדויק, לא בונים עליו shot list.<br>אם השוט ליסט לא טוב, לא כותבים עליו prompts.<br>אם הפרומפטים לא מדויקים, לא מייצרים וידאו.</div>
               </div>
             </div>
-            <!-- Left: split screen — production sheet (top) + cinematic frame (bottom) -->
-            <div style="display:flex;flex-direction:column;gap:0;min-height:0">
-              <!-- Production sheet -->
-              <div style="background:rgba(5,5,14,.88);border:1px solid rgba(6,182,212,.2);border-radius:12px 12px 0 0;padding:12px 16px;flex:1;min-height:0;overflow:hidden;direction:ltr">
-                <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px">
-                  <span style="width:8px;height:8px;border-radius:50%;background:#f43f5e;display:inline-block;flex-shrink:0"></span>
-                  <span style="width:8px;height:8px;border-radius:50%;background:#f59e0b;display:inline-block;flex-shrink:0"></span>
-                  <span style="width:8px;height:8px;border-radius:50%;background:#10b981;display:inline-block;flex-shrink:0"></span>
-                  <span style="font-family:var(--mono);font-size:.44em;color:rgba(255,255,255,.3);margin-left:8px">hotel_production_brief.txt</span>
-                </div>
-                <div style="font-family:var(--mono);font-size:.46em;line-height:1.85">
-                  <div style="color:var(--c-hi)">// Shot 01 — Hero Establishing</div>
-                  <div style="color:rgba(255,255,255,.45)">PROMPT: "Ultra wide cinematic, luxury hotel pool</div>
-                  <div style="color:rgba(255,255,255,.45)">visually aligning with turquoise ocean..."</div>
-                  <div style="height:5px"></div>
-                  <div style="color:var(--c-hi)">// Shot 05 — Tracking to Water</div>
-                  <div style="color:rgba(255,255,255,.45)">PROMPT: "Smooth tracking shot, guests walking</div>
-                  <div style="color:rgba(255,255,255,.45)">from pool into crystal-clear sea..."</div>
-                  <div style="height:5px"></div>
-                  <div style="color:rgba(124,58,237,.75)">// Shot 08 — Underwater Beauty</div>
-                  <div style="color:rgba(255,255,255,.45)">PROMPT: "Underwater cinematic beauty shot,</div>
-                  <div style="color:rgba(255,255,255,.45)">sunlight rays, premium vacation feeling..."</div>
-                </div>
-              </div>
-              <!-- Cinematic frame -->
-              <div style="flex:1.3;min-height:0;border-radius:0 0 12px 12px;overflow:hidden;border:1px solid rgba(6,182,212,.2);border-top:none;position:relative">
-                <img src="assets/demos/s-77-cinematic.png" style="width:100%;height:100%;object-fit:cover;display:block">
-                <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,5,14,.45) 0%,transparent 30%)"></div>
-                <div style="position:absolute;bottom:10px;right:12px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);border:1px solid rgba(6,182,212,.3);border-radius:6px;padding:4px 10px;font-size:.54em;color:var(--c-hi);font-weight:600">Shot 08 · Underwater Beauty</div>
-                <div style="position:absolute;top:10px;right:10px;background:rgba(6,182,212,.15);backdrop-filter:blur(10px);border:1px solid rgba(6,182,212,.3);border-radius:20px;padding:5px 14px;font-size:.55em;color:var(--c-hi);font-weight:700">📦 Prompt Pack</div>
-              </div>
+            <!-- Left: Kling-generated video — Shot 01 -->
+            <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(6,182,212,.2);min-height:0;position:relative;flex:1">
+              <video src="assets/demos/s-77-shot01.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block"></video>
+              <div style="position:absolute;bottom:10px;right:12px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);border:1px solid rgba(6,182,212,.3);border-radius:6px;padding:4px 10px;font-size:.54em;color:var(--c-hi);font-weight:600">Shot 01 · Hero Establishing</div>
+              <div style="position:absolute;top:10px;right:10px;background:rgba(6,182,212,.15);backdrop-filter:blur(10px);border:1px solid rgba(6,182,212,.3);border-radius:20px;padding:5px 14px;font-size:.55em;color:var(--c-hi);font-weight:700">🎬 Kling AI</div>
             </div>
           </div>
           <!-- Bottom: Approve → Refine → Continue -->

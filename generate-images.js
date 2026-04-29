@@ -84,6 +84,16 @@ const AMBIENT = {
     model: 'fal-ai/flux/dev',
     size:  'landscape_16_9',
   },
+  's-76-shot-d.png': {
+    prompt: 'cinematic tracking shot, elegant couple walking from luxury hotel pool toward the turquoise sea, snorkeling gear in hand, warm golden sunlight, Mediterranean resort, premium travel commercial, photorealistic, motion blur suggestion, wide angle',
+    model: 'fal-ai/flux/dev',
+    size:  'landscape_16_9',
+  },
+  's-76-shot-e.png': {
+    prompt: 'stunning cinematic golden hour wide shot, luxury Mediterranean beachfront hotel with infinity pool merging seamlessly into turquoise sea, warm amber sunset light, hero final shot aesthetic, ultra wide, premium travel photography, photorealistic, no people',
+    model: 'fal-ai/flux/dev',
+    size:  'landscape_16_9',
+  },
 
   's-74-director.png': {
     prompt: 'cinematic dark film director workspace, storyboard sheets spread on dark polished table, professional cinema camera out of focus in background, moody violet cyan studio light, production notes and shot list papers, atmospheric dark premium aesthetic, photorealistic, no text, no people',
@@ -134,6 +144,17 @@ const WITH_RMBG = {
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
+// VIDEOS — generated via Kling
+// ─────────────────────────────────────────────────────────────────────────────
+const VIDEOS = {
+  's-77-shot01.mp4': {
+    prompt: 'Ultra wide cinematic shot of a luxury seaside hotel pool visually aligning with the turquoise ocean beyond, premium resort atmosphere, soft golden sunlight, elegant travel commercial aesthetic.',
+    duration: '5',
+    aspect_ratio: '16:9',
+  },
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
 // HELPERS
 // ─────────────────────────────────────────────────────────────────────────────
 async function downloadFile(url, destPath) {
@@ -171,6 +192,29 @@ async function generateAmbient() {
         },
       });
       const url = result.data.images[0].url;
+      await downloadFile(url, path.join(DEMOS_DIR, filename));
+      console.log(`  ✓  saved: ${filename}`);
+    } catch (err) {
+      console.error(`  ✗  ${filename}: ${err.message}`);
+    }
+  }
+}
+
+async function generateVideos() {
+  if (Object.keys(VIDEOS).length === 0) return;
+  console.log('\n🎬  Generating videos with Kling...\n');
+  for (const [filename, cfg] of Object.entries(VIDEOS)) {
+    if (shouldSkip(filename)) continue;
+    try {
+      console.log(`  ⟳  ${filename}`);
+      const result = await fal.subscribe('fal-ai/kling-video/v1.6/standard/text-to-video', {
+        input: {
+          prompt:       cfg.prompt,
+          duration:     cfg.duration ?? '5',
+          aspect_ratio: cfg.aspect_ratio ?? '16:9',
+        },
+      });
+      const url = result.data.video.url;
       await downloadFile(url, path.join(DEMOS_DIR, filename));
       console.log(`  ✓  saved: ${filename}`);
     } catch (err) {
@@ -220,6 +264,7 @@ console.log('🚀  fal.ai Asset Generator — AI Presentation');
 console.log(`📁  Output: ${DEMOS_DIR}\n`);
 
 await generateAmbient();
+await generateVideos();
 await generateWithBgRemoval();
 
 console.log('\n✅  Done!\n');
