@@ -67,6 +67,28 @@ const AMBIENT = {
     size: 'portrait_4_3',
   },
 
+  // ── CH07: AI כבמאי ──────────────────────────────────────────────────────────
+  's-74-director.png': {
+    prompt: 'cinematic dark film director workspace, storyboard sheets spread on dark polished table, professional cinema camera out of focus in background, moody violet cyan studio light, production notes and shot list papers, atmospheric dark premium aesthetic, photorealistic, no text, no people',
+    model: 'fal-ai/flux/dev',
+    size:  'landscape_16_9',
+  },
+  's-75-moodboard.png': {
+    prompt: 'luxury Mediterranean beachfront resort, stunning infinity pool seamlessly blending into crystal clear turquoise sea, golden hour warm sunlight, snorkeling gear on pool edge, lush tropical plants, premium travel photography, ultra HD, cinematic color grading, photorealistic, no people',
+    model: 'fal-ai/flux/dev',
+    size:  'landscape_16_9',
+  },
+  's-76-storyboard.png': {
+    prompt: '10 empty cinema storyboard panels arranged in a horizontal filmstrip row, dark dramatic surface, professional film production aesthetic, each panel has a clean dark frame with subtle number marking, cinematic mood lighting, elegant minimal design, no text, no drawings inside frames',
+    model: 'fal-ai/flux/dev',
+    size:  'landscape_16_9',
+  },
+  's-77-cinematic.png': {
+    prompt: 'stunning cinematic underwater shot looking up through crystal clear turquoise Mediterranean water, golden sun rays penetrating water surface creating light beams, luxury beachfront hotel visible as silhouette above the surface, dreamy surreal premium vacation feeling, photorealistic, ultra HD',
+    model: 'fal-ai/flux/dev',
+    size:  'portrait_4_3',
+  },
+
   // Decorative / ambient for specific slides
   'ambient-ai-brain.png': {
     prompt: 'human brain made of glowing neural circuits, dark space background, violet cyan gradient, ultra HD, 16:9, no text',
