@@ -68,6 +68,23 @@ const AMBIENT = {
   },
 
   // ── CH07: AI כבמאי ──────────────────────────────────────────────────────────
+  // ── CH07 Storyboard shots ──────────────────────────────────────────────────
+  's-76-shot-a.png': {
+    prompt: 'ultra wide cinematic establishing shot, luxury Mediterranean beachfront resort with stunning infinity pool seamlessly extending into crystal clear turquoise sea, golden hour warm sunlight, premium travel commercial style, photorealistic, no people, cinematic color grading, sharp detail',
+    model: 'fal-ai/flux/dev',
+    size:  'landscape_16_9',
+  },
+  's-76-shot-b.png': {
+    prompt: 'cinematic split level water shot at luxury beach resort, upper half brilliant blue sky and resort terrace edge, lower half crystal clear turquoise underwater view with light rays, perfectly centered horizontal water line, magical dreamy photography, photorealistic, no people',
+    model: 'fal-ai/flux/dev',
+    size:  'landscape_16_9',
+  },
+  's-76-shot-c.png': {
+    prompt: 'serene cinematic underwater beauty shot, two snorkelers swimming in crystal clear azure blue Mediterranean water, golden sunlight rays penetrating from above creating light beams, luxury resort silhouette visible through surface, dreamy vacation premium photography, photorealistic',
+    model: 'fal-ai/flux/dev',
+    size:  'landscape_16_9',
+  },
+
   's-74-director.png': {
     prompt: 'cinematic dark film director workspace, storyboard sheets spread on dark polished table, professional cinema camera out of focus in background, moody violet cyan studio light, production notes and shot list papers, atmospheric dark premium aesthetic, photorealistic, no text, no people',
     model: 'fal-ai/flux/dev',

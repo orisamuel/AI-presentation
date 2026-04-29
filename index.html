@@ -2884,13 +2884,13 @@
               <p style="font-size:.78em;margin:0;color:rgba(255,255,255,.7)">במקום לייצר שוטים אחד אחד, בונים את כל התהליך עם הבמאי והמפיק שלנו:</p>
               <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
                 <span style="background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:6px;padding:5px 14px;font-size:.66em;color:var(--v-hi);font-weight:600">קונספט</span>
-                <span style="color:rgba(255,255,255,.3);font-size:.8em">→</span>
+                <span style="color:rgba(255,255,255,.3);font-size:.8em">←</span>
                 <span style="background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.25);border-radius:6px;padding:5px 14px;font-size:.66em;color:var(--c-hi);font-weight:600">קריאייטיב</span>
-                <span style="color:rgba(255,255,255,.3);font-size:.8em">→</span>
+                <span style="color:rgba(255,255,255,.3);font-size:.8em">←</span>
                 <span style="background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);border-radius:6px;padding:5px 14px;font-size:.66em;color:var(--v-hi);font-weight:600">שוט ליסט</span>
-                <span style="color:rgba(255,255,255,.3);font-size:.8em">→</span>
+                <span style="color:rgba(255,255,255,.3);font-size:.8em">←</span>
                 <span style="background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.25);border-radius:6px;padding:5px 14px;font-size:.66em;color:var(--c-hi);font-weight:600">פרומפטים</span>
-                <span style="color:rgba(255,255,255,.3);font-size:.8em">→</span>
+                <span style="color:rgba(255,255,255,.3);font-size:.8em">←</span>
                 <span style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);border-radius:6px;padding:5px 14px;font-size:.66em;color:var(--a-hi);font-weight:600">תוצרים</span>
               </div>
               <div style="background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.22);border-radius:10px;padding:14px 18px;display:flex;gap:12px;align-items:flex-start">
@@ -2944,37 +2944,49 @@
         <div class="orb" style="width:600px;height:600px;top:60%;left:15%;transform:translate(-50%,-50%);opacity:.12;animation-duration:8s"></div>
         <div class="orb cyan" style="width:350px;height:350px;top:18%;left:80%;transform:translate(-50%,-50%);opacity:.1;animation-duration:6s;animation-delay:-3s"></div>
         <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:58px 100px 62px 80px;display:grid;grid-template-columns:55% 1fr;gap:50px;align-items:stretch">
-          <!-- Right: text content -->
-          <div style="display:flex;flex-direction:column;gap:15px">
+          <!-- Right: prompt → result flow -->
+          <div style="display:flex;flex-direction:column;gap:14px">
             <div>
               <span class="eyebrow">ChatGPT · Creative Brief</span>
               <h2 style="margin:8px 0 0;font-size:1.65em;line-height:1.15">איך זה עובד?</h2>
             </div>
-            <div style="background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.25);border-radius:10px;padding:14px 18px">
-              <div style="color:var(--v-hi);font-weight:700;font-size:.7em;margin-bottom:7px">💬 הפרומפט שלנו</div>
-              <div style="font-size:.74em;color:rgba(255,255,255,.82);line-height:1.6">הנה הקונספט שלי. תכתוב לי אותו בצורה מפורטת כדי שנוכל להתקדם להפקה, כולל כלים לשימוש.</div>
+            <!-- PROMPT input -->
+            <div style="background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.32);border-radius:12px;padding:16px 20px">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+                <span style="font-size:.6em;color:var(--v-hi);font-weight:700;display:flex;align-items:center;gap:6px"><span style="font-size:1.15em">💬</span> הפרומפט שלנו</span>
+                <span style="font-size:.5em;background:rgba(124,58,237,.2);border-radius:20px;padding:3px 12px;color:rgba(255,255,255,.4);font-family:var(--mono)">ChatGPT</span>
+              </div>
+              <div style="font-size:.78em;color:rgba(255,255,255,.9);line-height:1.65">הנה הקונספט שלי. תכתוב לי אותו בצורה מפורטת כדי שנוכל להתקדם להפקה, כולל כלים לשימוש.</div>
+              <div style="font-family:var(--mono);font-size:.5em;color:rgba(124,58,237,.5);margin-top:8px">▋</div>
             </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-              <div style="background:rgba(6,182,212,.07);border:1px solid rgba(6,182,212,.18);border-radius:10px;padding:12px 14px">
-                <div style="color:var(--c-hi);font-weight:700;font-size:.66em;margin-bottom:5px">המסר</div>
-                <div style="font-size:.64em;color:rgba(255,255,255,.8);line-height:1.55">הבריכה והים הם חוויה אחת רציפה.</div>
-              </div>
-              <div style="background:rgba(6,182,212,.07);border:1px solid rgba(6,182,212,.18);border-radius:10px;padding:12px 14px">
-                <div style="color:var(--c-hi);font-weight:700;font-size:.66em;margin-bottom:5px">התחושה</div>
-                <div style="font-size:.64em;color:rgba(255,255,255,.8);line-height:1.55">יוקרה, רוגע, חופש, קיץ, מים צלולים.</div>
-              </div>
-              <div style="background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.22);border-radius:10px;padding:12px 14px;grid-column:1 / -1">
-                <div style="color:var(--v-hi);font-weight:700;font-size:.66em;margin-bottom:5px">השפה הוויזואלית</div>
-                <div style="font-size:.64em;color:rgba(255,255,255,.8);line-height:1.55">פריימים נקיים, תנועות מצלמה חלקות, אור זהב, צבעי טורקיז, <em>premium travel film.</em></div>
-              </div>
+            <!-- Arrow separator -->
+            <div style="display:flex;align-items:center;gap:12px">
+              <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(16,185,129,.3),transparent)"></div>
+              <div style="background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);border-radius:20px;padding:5px 18px;font-size:.62em;color:#34d399;font-weight:600;white-space:nowrap">✅ ChatGPT מחזיר:</div>
+              <div style="flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(16,185,129,.3))"></div>
             </div>
-            <div style="background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.18);border-radius:10px;padding:13px 16px">
-              <div style="color:#34d399;font-weight:700;font-size:.66em;margin-bottom:9px">🛠️ ה-AI גם ממליץ על כלים</div>
-              <div style="display:flex;flex-direction:column;gap:6px">
-                <div style="display:flex;gap:10px;align-items:center"><span style="font-size:.6em;color:#34d399;min-width:110px;flex-shrink:0">Brief + Creative</span><span style="font-size:.6em;color:rgba(255,255,255,.65)">Gemini / ChatGPT</span></div>
-                <div style="display:flex;gap:10px;align-items:center"><span style="font-size:.6em;color:#34d399;min-width:110px;flex-shrink:0">Look &amp; Feel</span><span style="font-size:.6em;color:rgba(255,255,255,.65)">נאנו בננה / Imagen</span></div>
-                <div style="display:flex;gap:10px;align-items:center"><span style="font-size:.6em;color:#34d399;min-width:110px;flex-shrink:0">Cinematic shots</span><span style="font-size:.6em;color:rgba(255,255,255,.65)">Flow / Veo / Kling</span></div>
-                <div style="display:flex;gap:10px;align-items:center"><span style="font-size:.6em;color:#34d399;min-width:110px;flex-shrink:0">Control + Extend</span><span style="font-size:.6em;color:rgba(255,255,255,.65)">Runway</span></div>
+            <!-- OUTPUT box -->
+            <div style="background:rgba(5,5,14,.5);border:1px solid rgba(16,185,129,.2);border-radius:12px;padding:16px 20px;display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;gap:14px;align-items:flex-start;padding-bottom:9px;border-bottom:1px solid rgba(255,255,255,.05)">
+                <span style="font-weight:700;font-size:.62em;color:var(--c-hi);flex-shrink:0;min-width:95px;padding-top:2px">המסר</span>
+                <span style="font-size:.67em;color:rgba(255,255,255,.85);line-height:1.5">הבריכה והים הם חוויה אחת רציפה.</span>
+              </div>
+              <div style="display:flex;gap:14px;align-items:flex-start;padding-bottom:9px;border-bottom:1px solid rgba(255,255,255,.05)">
+                <span style="font-weight:700;font-size:.62em;color:var(--c-hi);flex-shrink:0;min-width:95px;padding-top:2px">התחושה</span>
+                <span style="font-size:.67em;color:rgba(255,255,255,.85);line-height:1.5">יוקרה, רוגע, חופש, קיץ, מים צלולים.</span>
+              </div>
+              <div style="display:flex;gap:14px;align-items:flex-start;padding-bottom:9px;border-bottom:1px solid rgba(255,255,255,.05)">
+                <span style="font-weight:700;font-size:.62em;color:var(--c-hi);flex-shrink:0;min-width:95px;padding-top:2px">השפה הוויזואלית</span>
+                <span style="font-size:.67em;color:rgba(255,255,255,.85);line-height:1.5">פריימים נקיים, תנועות מצלמה חלקות, אור זהב, צבעי טורקיז, premium travel film.</span>
+              </div>
+              <div style="padding-top:2px">
+                <div style="font-weight:700;font-size:.6em;color:#34d399;margin-bottom:9px">כלים מומלצים לשימוש</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px">
+                  <div style="font-size:.58em;color:rgba(255,255,255,.45);line-height:1.5">Brief + Creative<br><span style="color:rgba(255,255,255,.82)">Gemini / ChatGPT</span></div>
+                  <div style="font-size:.58em;color:rgba(255,255,255,.45);line-height:1.5">Look &amp; Feel<br><span style="color:rgba(255,255,255,.82)">נאנו בננה / Imagen</span></div>
+                  <div style="font-size:.58em;color:rgba(255,255,255,.45);line-height:1.5">Cinematic shots<br><span style="color:rgba(255,255,255,.82)">Flow / Veo / Kling</span></div>
+                  <div style="font-size:.58em;color:rgba(255,255,255,.45);line-height:1.5">Control + Extend<br><span style="color:rgba(255,255,255,.82)">Runway</span></div>
+                </div>
               </div>
             </div>
           </div>
@@ -3007,104 +3019,115 @@
             <span class="eyebrow">ChatGPT · Shot List</span>
             <h2 style="margin:8px 0 0;font-size:1.65em">השוט ליסט שה-AI בונה</h2>
           </div>
-          <!-- Shot grid: 2 columns interleaved (01,06 / 02,07 / ...) -->
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;align-content:start">
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 14px">
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.62em;font-weight:700;flex-shrink:0">01</span>
-                <span style="font-size:.67em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Hero Establishing</span>
-                <span style="background:rgba(124,58,237,.18);border-radius:4px;padding:2px 8px;font-size:.53em;color:var(--v-hi);flex-shrink:0">Wide</span>
+          <!-- Shot grid: 2 columns interleaved (01,06 / 02,07 / ...) with full text -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:start">
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
+              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">01</span>
+                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Hero Establishing</span>
+                <span style="background:rgba(124,58,237,.18);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--v-hi);flex-shrink:0">Wide</span>
               </div>
-              <div style="font-size:.57em;color:rgba(255,255,255,.5);line-height:1.4">מלון + בריכה + ים — פריים אחד. הבריכה נשפכת לים.</div>
+              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">שוט רחב מאוד של המלון, הבריכה והים באותו פריים.</div>
+              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>להבין מיד שהבריכה "נשפכת" ויזואלית אל הים.</div>
             </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 14px">
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.62em;font-weight:700;flex-shrink:0">06</span>
-                <span style="font-size:.67em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Surface Shot</span>
-                <span style="background:rgba(6,182,212,.15);border-radius:4px;padding:2px 8px;font-size:.53em;color:var(--c-hi);flex-shrink:0">Surface</span>
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
+              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">06</span>
+                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Surface Shot</span>
+                <span style="background:rgba(6,182,212,.15);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--c-hi);flex-shrink:0">Surface</span>
               </div>
-              <div style="font-size:.57em;color:rgba(255,255,255,.5);line-height:1.4">מצלמה בגובה פני המים, חצי מעל חצי מתחת.</div>
+              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">מצלמה בגובה פני המים, חצי מעל המים חצי מתחת.</div>
+              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>לחבר בין עולם המלון לעולם הצלילה.</div>
             </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 14px">
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.62em;font-weight:700;flex-shrink:0">02</span>
-                <span style="font-size:.67em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Pool Edge Detail</span>
-                <span style="background:rgba(124,58,237,.18);border-radius:4px;padding:2px 8px;font-size:.53em;color:var(--v-hi);flex-shrink:0">Close-up</span>
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
+              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">02</span>
+                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Pool Edge Detail</span>
+                <span style="background:rgba(124,58,237,.18);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--v-hi);flex-shrink:0">Close-up</span>
               </div>
-              <div style="font-size:.57em;color:rgba(255,255,255,.5);line-height:1.4">קלוז-אפ שפת בריכה, השתקפויות, אור שמש על המשטח.</div>
+              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">קלוז-אפ על שפת הבריכה, השתקפויות מים, תנועה עדינה, אור שמש על המשטח.</div>
+              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>לבסס יוקרה וחומריות.</div>
             </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 14px">
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.62em;font-weight:700;flex-shrink:0">07</span>
-                <span style="font-size:.67em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Underwater Entry</span>
-                <span style="background:rgba(6,182,212,.15);border-radius:4px;padding:2px 8px;font-size:.53em;color:var(--c-hi);flex-shrink:0">Underwater</span>
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
+              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">07</span>
+                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Underwater Entry</span>
+                <span style="background:rgba(6,182,212,.15);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--c-hi);flex-shrink:0">Underwater</span>
               </div>
-              <div style="font-size:.57em;color:rgba(255,255,255,.5);line-height:1.4">Transition לתת-מימי כשנכנסים עם שנורקלים.</div>
+              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">Cut / transition לצילום תת-מימי כשהם כבר עם שנורקלים.</div>
+              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>להראות שהמעבר מוביל מיד לחוויה אמיתית בים.</div>
             </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 14px">
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.62em;font-weight:700;flex-shrink:0">03</span>
-                <span style="font-size:.67em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Match Frame</span>
-                <span style="background:rgba(124,58,237,.18);border-radius:4px;padding:2px 8px;font-size:.53em;color:var(--v-hi);flex-shrink:0">Transition</span>
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
+              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">03</span>
+                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Match Frame Transition</span>
+                <span style="background:rgba(124,58,237,.18);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--v-hi);flex-shrink:0">Transition</span>
               </div>
-              <div style="font-size:.57em;color:rgba(255,255,255,.5);line-height:1.4">זווית נמוכה: בריכה ממשיכה לים — אין ניתוק.</div>
+              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">זווית נמוכה על פני המים, כך שהפריים מתחיל בבריכה וממשיך אל הים.</div>
+              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>להמחיש שאין כאן ניתוק — אלא רצף.</div>
             </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 14px">
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.62em;font-weight:700;flex-shrink:0">08</span>
-                <span style="font-size:.67em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Underwater Beauty</span>
-                <span style="background:rgba(6,182,212,.15);border-radius:4px;padding:2px 8px;font-size:.53em;color:var(--c-hi);flex-shrink:0">Underwater</span>
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
+              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">08</span>
+                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Underwater Beauty</span>
+                <span style="background:rgba(6,182,212,.15);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--c-hi);flex-shrink:0">Underwater</span>
               </div>
-              <div style="font-size:.57em;color:rgba(255,255,255,.5);line-height:1.4">שוט תת-מימי רגוע, קרני שמש, תחושת חופשה יוקרתית.</div>
+              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">שוט תת-מימי רגוע של שחייה במים צלולים, קרני שמש, תחושת חופשה יוקרתית.</div>
+              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>למכור את החוויה, לא רק את המקום.</div>
             </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 14px">
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.62em;font-weight:700;flex-shrink:0">04</span>
-                <span style="font-size:.67em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Guest Entry</span>
-                <span style="background:rgba(245,158,11,.15);border-radius:4px;padding:2px 8px;font-size:.53em;color:var(--a-hi);flex-shrink:0">Tracking</span>
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
+              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">04</span>
+                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Guest Entry</span>
+                <span style="background:rgba(245,158,11,.15);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--a-hi);flex-shrink:0">Tracking</span>
               </div>
-              <div style="font-size:.57em;color:rgba(255,255,255,.5);line-height:1.4">זוג עם שנורקלים מתקדמים מהבריכה לכיוון הים.</div>
+              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">זוג / אורחים מתקדמים מהבריכה לכיוון הים עם שנורקלים ביד.</div>
+              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>להפוך את היתרון לחוויה אנושית.</div>
             </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 14px">
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.62em;font-weight:700;flex-shrink:0">09</span>
-                <span style="font-size:.67em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Return to Surface</span>
-                <span style="background:rgba(6,182,212,.15);border-radius:4px;padding:2px 8px;font-size:.53em;color:var(--c-hi);flex-shrink:0">Surface</span>
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
+              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">09</span>
+                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Return to Surface</span>
+                <span style="background:rgba(6,182,212,.15);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--c-hi);flex-shrink:0">Surface</span>
               </div>
-              <div style="font-size:.57em;color:rgba(255,255,255,.5);line-height:1.4">יציאה עם מבט אל המלון ברקע — חוזרים הביתה.</div>
+              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">יציאה חזרה מעל המים עם מבט אל המלון ברקע.</div>
+              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>לקשור שוב בין הים למלון.</div>
             </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 14px">
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.62em;font-weight:700;flex-shrink:0">05</span>
-                <span style="font-size:.67em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Tracking to Water</span>
-                <span style="background:rgba(245,158,11,.15);border-radius:4px;padding:2px 8px;font-size:.53em;color:var(--a-hi);flex-shrink:0">Tracking</span>
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
+              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">05</span>
+                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Tracking to Water</span>
+                <span style="background:rgba(245,158,11,.15);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--a-hi);flex-shrink:0">Tracking</span>
               </div>
-              <div style="font-size:.57em;color:rgba(255,255,255,.5);line-height:1.4">מצלמה עוקבת מאחור כשנכנסים למים.</div>
+              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">מצלמה עוקבת מאחור כשהם נכנסים למים.</div>
+              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>להרגיש את המעבר בפועל, לא רק להבין אותו.</div>
             </div>
-            <div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:8px;padding:10px 14px">
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--a-hi);font-size:.62em;font-weight:700;flex-shrink:0">10</span>
-                <span style="font-size:.67em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Final Hero Shot</span>
-                <span style="background:rgba(245,158,11,.2);border-radius:4px;padding:2px 8px;font-size:.53em;color:var(--a-hi);flex-shrink:0">Hero</span>
+            <div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:8px;padding:9px 12px">
+              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
+                <span style="font-family:var(--mono);color:var(--a-hi);font-size:.6em;font-weight:700;flex-shrink:0">10</span>
+                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Final Hero Shot</span>
+                <span style="background:rgba(245,158,11,.2);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--a-hi);flex-shrink:0">Hero</span>
               </div>
-              <div style="font-size:.57em;color:rgba(255,255,255,.5);line-height:1.4">סיום רחב, גולדן האוור — מלון + בריכה + ים.</div>
+              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">שוט סיום רחב, אולי בגולדן האוור, שמחבר מלון + בריכה + ים לשוט אחד זכיר.</div>
+              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--a-hi);font-weight:600">המטרה: </span>לסגור את הסרט עם מסר אחד ברור.</div>
             </div>
           </div>
-          <!-- Storyboard strip -->
-          <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative;height:88px;flex-shrink:0">
-            <img src="assets/demos/s-76-storyboard.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.7" alt="Storyboard">
-            <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,14,.65) 0%,transparent 8%,transparent 92%,rgba(5,5,14,.65) 100%)"></div>
-            <div style="position:absolute;inset:0;display:flex;justify-content:space-around;align-items:flex-end;padding:0 60px 8px;direction:ltr">
-              <span style="font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.45)">01</span>
-              <span style="font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.45)">02</span>
-              <span style="font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.45)">03</span>
-              <span style="font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.45)">04</span>
-              <span style="font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.45)">05</span>
-              <span style="font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.45)">06</span>
-              <span style="font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.45)">07</span>
-              <span style="font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.45)">08</span>
-              <span style="font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.45)">09</span>
-              <span style="font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.45)">10</span>
+          <!-- Storyboard strip: 3 cinematic key shots -->
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;height:88px;flex-shrink:0">
+            <div style="border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative">
+              <img src="assets/demos/s-76-shot-a.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.85">
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,14,.7) 100%)"></div>
+              <div style="position:absolute;bottom:6px;right:8px;font-family:var(--mono);font-size:.36em;color:rgba(255,255,255,.7)">01 — Hero Establishing</div>
+            </div>
+            <div style="border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative">
+              <img src="assets/demos/s-76-shot-b.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.85">
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,14,.7) 100%)"></div>
+              <div style="position:absolute;bottom:6px;right:8px;font-family:var(--mono);font-size:.36em;color:rgba(255,255,255,.7)">06 — Surface Shot</div>
+            </div>
+            <div style="border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative">
+              <img src="assets/demos/s-76-shot-c.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.85">
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,14,.7) 100%)"></div>
+              <div style="position:absolute;bottom:6px;right:8px;font-family:var(--mono);font-size:.36em;color:rgba(255,255,255,.7)">08 — Underwater Beauty</div>
             </div>
           </div>
         </div>
@@ -3138,17 +3161,41 @@
                 <div style="font-family:var(--mono);font-size:.6em;color:var(--c-hi);font-weight:700;margin-bottom:6px">Shot 08 — Underwater Beauty</div>
                 <div style="font-size:.61em;color:rgba(255,255,255,.7);line-height:1.55;direction:ltr;text-align:left">"Underwater cinematic beauty shot of guests snorkeling in clear blue sea, luxury beachfront hotel visible, sunlight rays, calm motion, dreamy premium vacation feeling."</div>
               </div>
-              <div style="background:rgba(245,158,11,.07);border:2px solid rgba(245,158,11,.28);border-radius:10px;padding:12px 16px">
-                <div style="color:var(--a-hi);font-weight:700;font-size:.67em;margin-bottom:6px">⚠️ הערה חשובה בריבוע</div>
-                <div style="font-size:.61em;color:rgba(255,255,255,.7);line-height:1.6">בכל שלב עוצרים, בודקים, מאשרים — ורק אז ממשיכים.<br>אם הקונספט לא מדויק, לא בונים עליו shot list.<br>אם השוט ליסט לא טוב, לא כותבים עליו prompts.<br>אם הפרומפטים לא מדויקים, לא מייצרים וידאו.</div>
+              <div style="background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.3);border-radius:10px;padding:14px 18px 14px 14px;border-right:4px solid rgba(245,158,11,.65);display:flex;gap:12px;align-items:flex-start">
+                <span style="font-size:1.05em;flex-shrink:0;margin-top:1px">⚠️</span>
+                <div style="font-size:.62em;color:rgba(255,255,255,.78);line-height:1.7">בכל שלב עוצרים, בודקים, מאשרים — ורק אז ממשיכים.<br>אם הקונספט לא מדויק, לא בונים עליו shot list.<br>אם השוט ליסט לא טוב, לא כותבים עליו prompts.<br>אם הפרומפטים לא מדויקים, לא מייצרים וידאו.</div>
               </div>
             </div>
-            <!-- Left: cinematic image -->
-            <div style="display:flex;flex-direction:column;gap:0">
-              <div style="flex:1;min-height:0;border-radius:16px;overflow:hidden;border:1px solid rgba(6,182,212,.2);position:relative">
-                <img src="assets/demos/s-77-cinematic.png" style="width:100%;height:100%;object-fit:cover;display:block" alt="Cinematic frame">
-                <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(5,5,14,.75) 100%)"></div>
-                <div style="position:absolute;top:16px;right:16px;background:rgba(6,182,212,.15);backdrop-filter:blur(10px);border:1px solid rgba(6,182,212,.35);border-radius:20px;padding:7px 18px;font-size:.6em;color:var(--c-hi);font-weight:700">📦 Prompt Pack</div>
+            <!-- Left: split screen — production sheet (top) + cinematic frame (bottom) -->
+            <div style="display:flex;flex-direction:column;gap:0;min-height:0">
+              <!-- Production sheet -->
+              <div style="background:rgba(5,5,14,.88);border:1px solid rgba(6,182,212,.2);border-radius:12px 12px 0 0;padding:12px 16px;flex:1;min-height:0;overflow:hidden;direction:ltr">
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px">
+                  <span style="width:8px;height:8px;border-radius:50%;background:#f43f5e;display:inline-block;flex-shrink:0"></span>
+                  <span style="width:8px;height:8px;border-radius:50%;background:#f59e0b;display:inline-block;flex-shrink:0"></span>
+                  <span style="width:8px;height:8px;border-radius:50%;background:#10b981;display:inline-block;flex-shrink:0"></span>
+                  <span style="font-family:var(--mono);font-size:.44em;color:rgba(255,255,255,.3);margin-left:8px">hotel_production_brief.txt</span>
+                </div>
+                <div style="font-family:var(--mono);font-size:.46em;line-height:1.85">
+                  <div style="color:var(--c-hi)">// Shot 01 — Hero Establishing</div>
+                  <div style="color:rgba(255,255,255,.45)">PROMPT: "Ultra wide cinematic, luxury hotel pool</div>
+                  <div style="color:rgba(255,255,255,.45)">visually aligning with turquoise ocean..."</div>
+                  <div style="height:5px"></div>
+                  <div style="color:var(--c-hi)">// Shot 05 — Tracking to Water</div>
+                  <div style="color:rgba(255,255,255,.45)">PROMPT: "Smooth tracking shot, guests walking</div>
+                  <div style="color:rgba(255,255,255,.45)">from pool into crystal-clear sea..."</div>
+                  <div style="height:5px"></div>
+                  <div style="color:rgba(124,58,237,.75)">// Shot 08 — Underwater Beauty</div>
+                  <div style="color:rgba(255,255,255,.45)">PROMPT: "Underwater cinematic beauty shot,</div>
+                  <div style="color:rgba(255,255,255,.45)">sunlight rays, premium vacation feeling..."</div>
+                </div>
+              </div>
+              <!-- Cinematic frame -->
+              <div style="flex:1.3;min-height:0;border-radius:0 0 12px 12px;overflow:hidden;border:1px solid rgba(6,182,212,.2);border-top:none;position:relative">
+                <img src="assets/demos/s-77-cinematic.png" style="width:100%;height:100%;object-fit:cover;display:block">
+                <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,5,14,.45) 0%,transparent 30%)"></div>
+                <div style="position:absolute;bottom:10px;right:12px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);border:1px solid rgba(6,182,212,.3);border-radius:6px;padding:4px 10px;font-size:.54em;color:var(--c-hi);font-weight:600">Shot 08 · Underwater Beauty</div>
+                <div style="position:absolute;top:10px;right:10px;background:rgba(6,182,212,.15);backdrop-filter:blur(10px);border:1px solid rgba(6,182,212,.3);border-radius:20px;padding:5px 14px;font-size:.55em;color:var(--c-hi);font-weight:700">📦 Prompt Pack</div>
               </div>
             </div>
           </div>
