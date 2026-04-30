@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Heebo','Arial Hebrew',Arial,sans-serif;
+  background:#05050e;
+  color:#f0f0f8;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  user-select:none;
+  direction:rtl;
+}
+.screen{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px 14px;gap:12px;position:relative}
+.tag{font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);font-weight:600}
+.title{font-size:1.1rem;font-weight:800;text-align:center;line-height:1.2;color:#f0f0f8}
+.subtitle{font-size:.65rem;color:rgba(255,255,255,.45);text-align:center;line-height:1.4}
+.herb-wrap{
+  width:140px;height:140px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+.herb-wrap::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 80%,rgba(16,185,129,.12),transparent 70%);
+}
+.herb-svg{width:110px;height:110px}
+.question{font-size:.8rem;font-weight:700;text-align:center;color:rgba(255,255,255,.8)}
+.btns{display:flex;gap:10px;width:100%}
+.btn{
+  flex:1;padding:10px 6px;
+  border-radius:10px;
+  border:1.5px solid;
+  font-size:.72rem;font-weight:700;
+  cursor:pointer;transition:.15s;
+  font-family:inherit;
+  text-align:center;
+}
+.btn-c{background:rgba(124,58,237,.12);border-color:rgba(124,58,237,.35);color:#a78bfa}
+.btn-p{background:rgba(16,185,129,.12);border-color:rgba(16,185,129,.35);color:#6ee7b7}
+.btn:hover{transform:scale(1.03);filter:brightness(1.15)}
+.btn:active{transform:scale(.97)}
+.feedback{
+  padding:10px 16px;border-radius:10px;
+  font-size:.7rem;font-weight:600;text-align:center;line-height:1.4;
+  width:100%;
+}
+.feedback.correct{background:rgba(16,185,129,.18);border:1px solid rgba(16,185,129,.35);color:#6ee7b7}
+.feedback.wrong{background:rgba(244,63,94,.15);border:1px solid rgba(244,63,94,.3);color:#fca5a5}
+.progress{display:flex;gap:4px}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.15);transition:.3s}
+.dot.done{background:#7c3aed}
+.dot.current{background:#a78bfa;box-shadow:0 0 6px rgba(167,139,250,.6)}
+.next-btn{
+  width:100%;padding:10px;border-radius:10px;
+  background:linear-gradient(135deg,#7c3aed,#06b6d4);
+  border:none;color:#fff;font-size:.75rem;font-weight:700;
+  cursor:pointer;font-family:inherit;transition:.15s;
+}
+.next-btn:hover{opacity:.9;transform:scale(1.02)}
+/* Final screen */
+.result-screen{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;padding:20px 16px}
+.score-num{font-size:3rem;font-weight:900;background:linear-gradient(135deg,#7c3aed,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.score-label{font-size:.75rem;color:rgba(255,255,255,.5)}
+.verdict{font-size:.9rem;font-weight:700;color:#f0f0f8;line-height:1.4}
+.restart-btn{
+  padding:10px 24px;border-radius:10px;
+  background:rgba(124,58,237,.2);border:1px solid rgba(124,58,237,.4);
+  color:#a78bfa;font-size:.7rem;font-weight:700;
+  cursor:pointer;font-family:inherit;transition:.15s;margin-top:4px;
+}
+.restart-btn:hover{background:rgba(124,58,237,.35)}
+</style>
+</head>
+<body>
+<div class="screen" id="app"></div>
+<script>
+const questions=[
+  {
+    label:'עגול, שפה מסולסלת',
+    answer:'כ',
+    desc:'עלים רחבים, שפה גלית, גבעול עדין',
+    meme:'הריח מסגיר... אולי.',
+    svg:`<svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="55" cy="80" rx="4" ry="22" fill="#4a7c3f"/>
+      <path d="M55 72 C42 60 28 58 30 44 C32 32 46 28 55 38 C64 28 78 32 80 44 C82 58 68 60 55 72Z" fill="#52b34a"/>
+      <path d="M55 72 C44 64 34 62 36 52 C38 44 48 42 55 50 C62 42 72 44 74 52 C76 62 66 64 55 72Z" fill="#5dc74f"/>
+      <circle cx="40" cy="46" r="6" fill="#63d458" opacity=".6"/>
+      <circle cx="70" cy="46" r="6" fill="#63d458" opacity=".6"/>
+      <circle cx="55" cy="40" r="5" fill="#6fdf62" opacity=".5"/>
+    </svg>`
+  },
+  {
+    label:'דק, גבעול ארוך',
+    answer:'פ',
+    desc:'עלים מחולקים, טיפ מחודד, גבעול גלוי',
+    meme:'זה הפעם שכולם בטוחים בתשובה.',
+    svg:`<svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="52" y="55" width="4" height="40" rx="2" fill="#3d6b38"/>
+      <line x1="54" y1="72" x2="36" y2="60" stroke="#3d6b38" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="54" y1="65" x2="72" y2="56" stroke="#3d6b38" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M36 60 C28 56 22 48 26 42 C30 36 38 36 40 44 C42 38 46 32 54 32 C62 32 64 40 62 46 C66 38 72 36 76 42 C80 48 74 56 66 60Z" fill="#3d9e35"/>
+      <path d="M36 60 C30 56 26 50 28 46 C30 42 36 42 38 46" fill="#52b34a"/>
+      <path d="M72 60 C78 56 82 50 80 46 C78 42 72 42 70 46" fill="#52b34a"/>
+      <path d="M54 32 C50 26 44 24 44 30 C44 34 48 36 54 36" fill="#63c555"/>
+      <path d="M54 32 C58 26 64 24 64 30 C64 34 60 36 54 36" fill="#63c555"/>
+    </svg>`
+  },
+  {
+    label:'עלים עדינים, נוצתיים',
+    answer:'כ',
+    desc:'עלה עליון של הצמח — מחולק עדין',
+    meme:'זאת השאלה שמסכסכת בין חברים.',
+    svg:`<svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="52" y="60" width="3.5" height="36" rx="1.5" fill="#4a7c3f"/>
+      <g fill="none" stroke="#52b34a" stroke-width="1.8" stroke-linecap="round">
+        <path d="M53 68 C44 62 38 56 40 50"/>
+        <path d="M40 50 C38 44 42 40 46 44"/>
+        <path d="M40 50 C36 48 34 44 36 40"/>
+        <path d="M53 62 C62 56 68 50 66 44"/>
+        <path d="M66 44 C68 38 64 34 60 38"/>
+        <path d="M66 44 C70 42 72 38 70 34"/>
+        <path d="M53 56 C48 48 44 42 46 36"/>
+        <path d="M53 56 C58 48 62 42 60 36"/>
+      </g>
+      <circle cx="46" cy="44" r="3.5" fill="#63d458"/>
+      <circle cx="36" cy="40" r="3" fill="#63d458"/>
+      <circle cx="60" cy="38" r="3.5" fill="#63d458"/>
+      <circle cx="70" cy="34" r="3" fill="#63d458"/>
+      <circle cx="46" cy="36" r="3" fill="#6fdf62"/>
+      <circle cx="60" cy="36" r="3" fill="#6fdf62"/>
+    </svg>`
+  },
+  {
+    label:'מסולסל, צפוף',
+    answer:'פ',
+    desc:'מסולסל וצפוף — הגרסה הבריאה שנראית כמו עיצוב',
+    meme:'מי אמר שהמסולסלת תמיד פטרוזיליה?',
+    svg:`<svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="52" y="62" width="4" height="36" rx="2" fill="#3d6b38"/>
+      <circle cx="38" cy="52" r="10" fill="#3d9e35"/>
+      <circle cx="54" cy="44" r="11" fill="#42a839"/>
+      <circle cx="70" cy="52" r="10" fill="#3d9e35"/>
+      <circle cx="44" cy="40" r="8" fill="#52b34a"/>
+      <circle cx="64" cy="40" r="8" fill="#52b34a"/>
+      <circle cx="54" cy="36" r="7" fill="#5dc74f"/>
+      <circle cx="38" cy="58" r="7" fill="#4aad40" opacity=".7"/>
+      <circle cx="70" cy="58" r="7" fill="#4aad40" opacity=".7"/>
+    </svg>`
+  },
+  {
+    label:'מה זה בדיוק?',
+    answer:'כ',
+    desc:'עלים בסיסיים, קצת מסולסל, קצת עגול...',
+    meme:'הרגע הזה שאתם מריחים את המסך.',
+    svg:`<svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="52" y="65" width="4" height="30" rx="2" fill="#4a7c3f"/>
+      <path d="M55 65 C40 58 28 54 30 44 C32 36 44 34 52 44 C50 36 46 28 52 24 C56 20 62 24 62 32 C68 24 76 26 78 36 C80 46 68 52 55 60Z" fill="#52b34a"/>
+      <path d="M55 60 C42 54 32 52 34 44 C36 38 46 38 52 46" fill="#63d458"/>
+      <path d="M55 60 C68 54 78 52 76 44 C74 38 64 38 58 46" fill="#63d458"/>
+      <circle cx="52" cy="30" r="5" fill="#6fdf62" opacity=".7"/>
+      <ellipse cx="36" cy="46" rx="5" ry="4" fill="#6fdf62" opacity=".5" transform="rotate(-20 36 46)"/>
+      <ellipse cx="74" cy="46" rx="5" ry="4" fill="#6fdf62" opacity=".5" transform="rotate(20 74 46)"/>
+    </svg>`
+  }
+];
+
+let current=0,score=0,answered=false;
+
+function render(){
+  const app=document.getElementById('app');
+  if(current>=questions.length){showResult(app);return;}
+  const q=questions[current];
+  app.innerHTML=`
+    <div class="tag">Round ${current+1} / ${questions.length}</div>
+    <div class="progress">${questions.map((_,i)=>`<div class="dot ${i<current?'done':i===current?'current':''}"></div>`).join('')}</div>
+    <div class="herb-wrap">${q.svg}</div>
+    <div style="text-align:center">
+      <div class="question">כוסברה או פטרוזיליה?</div>
+      <div class="subtitle" style="margin-top:4px">${q.label}</div>
+    </div>
+    <div class="btns" id="btns">
+      <button class="btn btn-c" onclick="answer('כ')">🌿 כוסברה</button>
+      <button class="btn btn-p" onclick="answer('פ')">🌱 פטרוזיליה</button>
+    </div>
+    <div id="feedback" style="width:100%"></div>
+  `;
+}
+
+function answer(a){
+  if(answered)return;
+  answered=true;
+  const q=questions[current];
+  const correct=a===q.answer;
+  if(correct)score++;
+  const fb=document.getElementById('feedback');
+  const word=q.answer==='כ'?'כוסברה':'פטרוזיליה';
+  fb.innerHTML=`<div class="feedback ${correct?'correct':'wrong'}">
+    ${correct?'✅ נכון!':'❌ לא דיוק...'} זו <strong>${word}</strong><br>
+    <span style="font-size:.62rem;opacity:.7">${q.meme}</span>
+  </div>
+  <button class="next-btn" onclick="next()" style="margin-top:8px">${current<questions.length-1?'הבא →':'לתוצאה →'}</button>`;
+  document.getElementById('btns').style.opacity='.4';
+  document.getElementById('btns').style.pointerEvents='none';
+}
+
+function next(){answered=false;current++;render();}
+
+function showResult(app){
+  const pct=Math.round(score/questions.length*100);
+  let verdict,emoji;
+  if(score===questions.length){verdict='מושלם 🎯<br><small style="opacity:.6">כנראה גנן. או שסתם בישלת כבר פעם.</small>';emoji='🏆';}
+  else if(score>=3){verdict='לא רע בכלל...<br><small style="opacity:.6">לא מתים עליך בשוק, אבל לא מאשימים אותך.</small>';emoji='👀';}
+  else if(score>=2){verdict='זה בסדר.<br><small style="opacity:.6">הרוב הגדול מסתבך בדיוק כמוך.</small>';emoji='🤷';}
+  else{verdict='אתה בסכנה בסלט.<br><small style="opacity:.6">AI? כן. כוסברה? לא.</small>';emoji='😭';}
+
+  app.innerHTML=`<div class="result-screen">
+    <div style="font-size:2.5rem">${emoji}</div>
+    <div class="score-num">${score}/${questions.length}</div>
+    <div class="score-label">${pct}% הצלחה</div>
+    <div class="verdict">${verdict}</div>
+    <button class="restart-btn" onclick="restart()">שחק שוב</button>
+  </div>`;
+}
+
+function restart(){current=0;score=0;answered=false;render();}
+render();
+</script>
+</body>
+</html>

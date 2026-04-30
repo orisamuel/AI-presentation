@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Heebo','Arial Hebrew',Arial,sans-serif;
+  background:#05050e;
+  color:#f0f0f8;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  direction:rtl;
+}
+.screen{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;padding:16px 14px;gap:10px;position:relative}
+.brand{
+  display:flex;align-items:center;gap:6px;
+  font-size:.72rem;font-weight:800;letter-spacing:.05em;
+  color:#fff;
+}
+.brand-dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#22d3ee)}
+.tag{font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);font-weight:600}
+
+/* Upload state */
+.upload-zone{
+  width:100%;flex:1;max-height:200px;
+  border:1.5px dashed rgba(124,58,237,.4);
+  border-radius:14px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  background:rgba(124,58,237,.05);
+  cursor:pointer;transition:.2s;
+  position:relative;overflow:hidden;
+}
+.upload-zone:hover{border-color:rgba(124,58,237,.7);background:rgba(124,58,237,.1)}
+.upload-icon{font-size:2rem;opacity:.7}
+.upload-text{font-size:.72rem;color:rgba(255,255,255,.6);text-align:center;line-height:1.5}
+.upload-btn{
+  padding:9px 20px;border-radius:8px;
+  background:linear-gradient(135deg,#7c3aed,#06b6d4);
+  border:none;color:#fff;font-size:.7rem;font-weight:700;
+  cursor:pointer;font-family:inherit;transition:.15s;
+}
+.upload-btn:hover{opacity:.88;transform:scale(1.03)}
+
+/* Loading state */
+.loading-bar-wrap{width:90%;height:3px;background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden}
+.loading-bar{height:100%;background:linear-gradient(90deg,#7c3aed,#22d3ee);border-radius:3px;animation:load 2s ease-in-out forwards}
+@keyframes load{0%{width:0%}60%{width:70%}100%{width:100%}}
+.loading-text{font-size:.62rem;color:rgba(255,255,255,.5);text-align:center}
+
+/* Try-on state */
+.face-container{
+  position:relative;width:130px;height:150px;
+  flex-shrink:0;
+}
+.face-svg{width:130px;height:150px;position:absolute;top:0;left:0}
+.glasses-svg{
+  width:130px;height:150px;position:absolute;top:0;left:0;
+  transition:.35s ease;
+}
+
+.glasses-row{
+  display:flex;gap:6px;
+  overflow-x:auto;padding:4px 2px;
+  scrollbar-width:none;width:100%;justify-content:center;
+}
+.glasses-row::-webkit-scrollbar{display:none}
+.glasses-thumb{
+  width:52px;height:30px;
+  border-radius:6px;border:1.5px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.04);
+  cursor:pointer;transition:.15s;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;overflow:hidden;
+}
+.glasses-thumb.active{border-color:rgba(124,58,237,.7);background:rgba(124,58,237,.15)}
+.glasses-thumb:hover{border-color:rgba(124,58,237,.5);transform:scale(1.06)}
+.glasses-thumb svg{width:46px;height:26px}
+
+.action-row{display:flex;gap:8px;width:100%}
+.action-btn{
+  flex:1;padding:8px 6px;border-radius:8px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.05);
+  color:rgba(255,255,255,.7);
+  font-size:.62rem;font-weight:600;cursor:pointer;
+  font-family:inherit;transition:.15s;text-align:center;
+}
+.action-btn:hover{background:rgba(255,255,255,.1);color:#fff}
+.action-btn.primary{
+  background:linear-gradient(135deg,rgba(124,58,237,.3),rgba(6,182,212,.3));
+  border-color:rgba(124,58,237,.4);color:#c4b5fd;
+}
+.sparkles-text{
+  font-size:.58rem;color:rgba(255,255,255,.3);text-align:center;line-height:1.5;
+}
+</style>
+</head>
+<body>
+<div class="screen" id="app">
+  <div style="display:flex;align-items:center;justify-content:space-between;width:100%">
+    <div class="brand"><div class="brand-dot"></div>Sparkles</div>
+    <div class="tag">try-on</div>
+  </div>
+  <div id="main-content" style="width:100%;flex:1;display:flex;flex-direction:column;align-items:center;gap:10px">
+    <!-- injected by JS -->
+  </div>
+</div>
+
+<script>
+const faces=[
+  // neutral face SVG
+  `<svg viewBox="0 0 130 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- skin -->
+    <ellipse cx="65" cy="80" rx="44" ry="52" fill="#c68642"/>
+    <!-- hair -->
+    <ellipse cx="65" cy="40" rx="44" ry="26" fill="#3d2314"/>
+    <rect x="21" y="40" width="88" height="20" fill="#3d2314"/>
+    <rect x="21" y="58" width="5" height="16" rx="3" fill="#3d2314"/>
+    <rect x="104" y="58" width="5" height="16" rx="3" fill="#3d2314"/>
+    <!-- ears -->
+    <ellipse cx="21" cy="82" rx="5" ry="8" fill="#b87333"/>
+    <ellipse cx="109" cy="82" rx="5" ry="8" fill="#b87333"/>
+    <!-- eyes -->
+    <ellipse cx="48" cy="76" rx="7" ry="5" fill="white"/>
+    <ellipse cx="82" cy="76" rx="7" ry="5" fill="white"/>
+    <circle cx="48" cy="77" r="3.5" fill="#3d2314"/>
+    <circle cx="82" cy="77" r="3.5" fill="#3d2314"/>
+    <circle cx="49" cy="75" r="1.2" fill="white"/>
+    <circle cx="83" cy="75" r="1.2" fill="white"/>
+    <!-- eyebrows -->
+    <path d="M42 70 Q48 67 54 70" stroke="#3d2314" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+    <path d="M76 70 Q82 67 88 70" stroke="#3d2314" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+    <!-- nose -->
+    <path d="M65 82 L60 96 Q65 99 70 96Z" fill="#b87333" opacity=".6"/>
+    <!-- mouth -->
+    <path d="M54 108 Q65 115 76 108" stroke="#7a3a2a" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </svg>`
+];
+
+const glassesData=[
+  {
+    name:'Oversized',color:'#7c3aed',
+    svg:`<svg viewBox="0 0 130 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="18" y="68" width="40" height="22" rx="11" stroke="#7c3aed" stroke-width="3" fill="rgba(124,58,237,.18)"/>
+      <rect x="72" y="68" width="40" height="22" rx="11" stroke="#7c3aed" stroke-width="3" fill="rgba(124,58,237,.18)"/>
+      <line x1="58" y1="79" x2="72" y2="79" stroke="#7c3aed" stroke-width="2.5"/>
+      <line x1="18" y1="74" x2="10" y2="70" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="112" y1="74" x2="120" y2="70" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- sparkle dots -->
+      <circle cx="22" cy="69" r="2" fill="#a855f7"/>
+      <circle cx="112" cy="69" r="2" fill="#a855f7"/>
+    </svg>`,
+    thumb:`<svg viewBox="0 0 46 26" fill="none"><rect x="2" y="4" width="18" height="11" rx="5.5" stroke="#7c3aed" stroke-width="1.5" fill="rgba(124,58,237,.2)"/><rect x="26" y="4" width="18" height="11" rx="5.5" stroke="#7c3aed" stroke-width="1.5" fill="rgba(124,58,237,.2)"/><line x1="20" y1="9.5" x2="26" y2="9.5" stroke="#7c3aed" stroke-width="1.5"/></svg>`
+  },
+  {
+    name:'Cat-Eye',color:'#f43f5e',
+    svg:`<svg viewBox="0 0 130 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18 80 L20 68 L55 68 L57 74 L57 82 Q38 86 18 80Z" stroke="#f43f5e" stroke-width="2.5" fill="rgba(244,63,94,.15)" stroke-linejoin="round"/>
+      <path d="M73 74 L75 68 L110 68 L112 80 Q90 86 73 82Z" stroke="#f43f5e" stroke-width="2.5" fill="rgba(244,63,94,.15)" stroke-linejoin="round"/>
+      <line x1="57" y1="76" x2="73" y2="76" stroke="#f43f5e" stroke-width="2"/>
+      <line x1="18" y1="76" x2="10" y2="71" stroke="#f43f5e" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="112" y1="72" x2="120" y2="68" stroke="#f43f5e" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="56" cy="67" r="2.5" fill="#fb7185"/>
+      <circle cx="74" cy="67" r="2.5" fill="#fb7185"/>
+    </svg>`,
+    thumb:`<svg viewBox="0 0 46 26" fill="none"><path d="M2 14 L3 6 L20 6 L21 10 L21 15 Q12 18 2 14Z" stroke="#f43f5e" stroke-width="1.5" fill="rgba(244,63,94,.2)"/><path d="M25 10 L26 6 L43 6 L44 14 Q36 18 25 15Z" stroke="#f43f5e" stroke-width="1.5" fill="rgba(244,63,94,.2)"/><line x1="21" y1="12" x2="25" y2="12" stroke="#f43f5e" stroke-width="1.5"/></svg>`
+  },
+  {
+    name:'Round Retro',color:'#f59e0b',
+    svg:`<svg viewBox="0 0 130 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="38" cy="78" r="16" stroke="#f59e0b" stroke-width="3" fill="rgba(245,158,11,.15)"/>
+      <circle cx="92" cy="78" r="16" stroke="#f59e0b" stroke-width="3" fill="rgba(245,158,11,.15)"/>
+      <line x1="54" y1="78" x2="76" y2="78" stroke="#f59e0b" stroke-width="2.5"/>
+      <line x1="22" y1="74" x2="14" y2="69" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="108" y1="74" x2="116" y2="69" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- gradient tint -->
+      <circle cx="38" cy="78" r="14" fill="rgba(245,158,11,.08)"/>
+      <circle cx="92" cy="78" r="14" fill="rgba(245,158,11,.08)"/>
+      <!-- highlight -->
+      <path d="M28 70 Q32 66 38 68" stroke="rgba(255,255,255,.35)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+      <path d="M82 70 Q86 66 92 68" stroke="rgba(255,255,255,.35)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+    </svg>`,
+    thumb:`<svg viewBox="0 0 46 26" fill="none"><circle cx="13" cy="13" r="9" stroke="#f59e0b" stroke-width="1.5" fill="rgba(245,158,11,.18)"/><circle cx="33" cy="13" r="9" stroke="#f59e0b" stroke-width="1.5" fill="rgba(245,158,11,.18)"/><line x1="22" y1="13" x2="24" y2="13" stroke="#f59e0b" stroke-width="1.5"/></svg>`
+  },
+  {
+    name:'Shield',color:'#06b6d4',
+    svg:`<svg viewBox="0 0 130 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="15" y="65" width="44" height="26" rx="7" stroke="#06b6d4" stroke-width="2.8" fill="rgba(6,182,212,.18)"/>
+      <rect x="71" y="65" width="44" height="26" rx="7" stroke="#06b6d4" stroke-width="2.8" fill="rgba(6,182,212,.18)"/>
+      <line x1="59" y1="78" x2="71" y2="78" stroke="#06b6d4" stroke-width="2.5"/>
+      <line x1="15" y1="72" x2="7" y2="68" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="115" y1="72" x2="123" y2="68" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- gradient fill -->
+      <rect x="17" y="67" width="40" height="22" rx="6" fill="rgba(6,182,212,.08)"/>
+      <rect x="73" y="67" width="40" height="22" rx="6" fill="rgba(6,182,212,.08)"/>
+      <!-- scanline effect -->
+      <line x1="16" y1="72" x2="58" y2="72" stroke="rgba(6,182,212,.2)" stroke-width=".8"/>
+      <line x1="72" y1="72" x2="114" y2="72" stroke="rgba(6,182,212,.2)" stroke-width=".8"/>
+    </svg>`,
+    thumb:`<svg viewBox="0 0 46 26" fill="none"><rect x="1" y="5" width="20" height="14" rx="4" stroke="#06b6d4" stroke-width="1.5" fill="rgba(6,182,212,.2)"/><rect x="25" y="5" width="20" height="14" rx="4" stroke="#06b6d4" stroke-width="1.5" fill="rgba(6,182,212,.2)"/><line x1="21" y1="12" x2="25" y2="12" stroke="#06b6d4" stroke-width="1.5"/></svg>`
+  }
+];
+
+let state='upload'; // upload | loading | tryon
+let currentGlasses=0;
+let imgUploaded=false;
+
+function renderUpload(){
+  document.getElementById('main-content').innerHTML=`
+    <div style="font-size:.68rem;color:rgba(255,255,255,.6);text-align:center;line-height:1.5">
+      העלי תמונה ונראה איך<br>המשקפיים יראו עליך ✨
+    </div>
+    <div class="upload-zone" id="uz" onclick="startLoad()">
+      <div class="upload-icon">📸</div>
+      <div class="upload-text">לחצי כאן להעלאת תמונה<br><span style="font-size:.6rem;opacity:.5">jpg, png, webp</span></div>
+    </div>
+    <button class="upload-btn" onclick="startLoad()">בחר תמונה</button>
+    <div class="sparkles-text">4 סגנונות · AI placement · 0 שניות המתנה</div>
+  `;
+}
+
+function startLoad(){
+  state='loading';
+  document.getElementById('main-content').innerHTML=`
+    <div style="font-size:1.8rem">✨</div>
+    <div style="font-size:.75rem;font-weight:700">Sparkles AI מנתח...</div>
+    <div class="loading-bar-wrap"><div class="loading-bar"></div></div>
+    <div class="loading-text">מאתר נקודות עיגון לפנים<br>ממפה זוויות<br>מכייל גודל מסגרת</div>
+  `;
+  setTimeout(()=>{state='tryon';renderTryon();},2200);
+}
+
+function renderTryon(){
+  const mc=document.getElementById('main-content');
+  mc.innerHTML=`
+    <div class="face-container" id="fc">
+      ${faces[0]}
+      <div id="glasses-layer" class="glasses-svg">${glassesData[0].svg}</div>
+    </div>
+    <div style="font-size:.62rem;color:rgba(255,255,255,.4);text-align:center">
+      ${glassesData[currentGlasses].name} · <span style="color:${glassesData[currentGlasses].color}">${glassesData[currentGlasses].name}</span>
+    </div>
+    <div class="glasses-row" id="gr">
+      ${glassesData.map((g,i)=>`
+        <div class="glasses-thumb ${i===currentGlasses?'active':''}" onclick="selectGlasses(${i})" title="${g.name}">
+          ${g.thumb}
+        </div>
+      `).join('')}
+    </div>
+    <div class="action-row">
+      <button class="action-btn primary" onclick="nextGlasses()">זוג הבא →</button>
+      <button class="action-btn" onclick="resetToUpload()">תמונה אחרת</button>
+    </div>
+    <div class="sparkles-text">לחצי על מסגרת לבחירה</div>
+  `;
+}
+
+function selectGlasses(i){
+  currentGlasses=i;
+  const layer=document.getElementById('glasses-layer');
+  if(layer){
+    layer.style.opacity='0';
+    setTimeout(()=>{
+      layer.innerHTML=glassesData[i].svg.replace('<svg','<svg').split('<svg')[1];
+      layer.innerHTML='<svg'+layer.innerHTML;
+      // simpler: just set
+      layer.outerHTML=`<div id="glasses-layer" class="glasses-svg">${glassesData[i].svg}</div>`;
+    },150);
+    setTimeout(()=>{
+      const newLayer=document.getElementById('glasses-layer');
+      if(newLayer)newLayer.style.opacity='1';
+    },200);
+  }
+  // re-render thumbs
+  document.querySelectorAll('.glasses-thumb').forEach((el,idx)=>{
+    el.classList.toggle('active',idx===i);
+  });
+  const label=document.querySelector('#main-content > div:nth-child(2)');
+  if(label)label.innerHTML=`${glassesData[i].name} · <span style="color:${glassesData[i].color}">${glassesData[i].name}</span>`;
+  // Actually let's just re-render fully
+  renderTryon();
+}
+
+function nextGlasses(){
+  currentGlasses=(currentGlasses+1)%glassesData.length;
+  renderTryon();
+}
+
+function resetToUpload(){state='upload';currentGlasses=0;renderUpload();}
+
+renderUpload();
+</script>
+</body>
+</html>

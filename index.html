@@ -1323,7 +1323,7 @@
             <div class="ct">לנתח נתונים</div>
             <div class="cs">ChatGPT · Gemini</div>
           </div>
-          <div class="cap-item" style="animation-delay:.48s;cursor:pointer" data-goto="ch09-everything" data-no-advance="true">
+          <div class="cap-item" style="animation-delay:.48s;cursor:pointer" data-goto="ch09-code" data-no-advance="true">
             <div class="ci">💻</div>
             <div class="ct">לתכנת</div>
             <div class="cs">Claude · Copilot</div>
@@ -2310,7 +2310,7 @@
         <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%)"></div>
         <div class="s-section-ghost">05</div>
         <div class="s-section-inner z1">
-          <span class="s-section-num">05 / 09</span>
+          <span class="s-section-num">05 / 10</span>
           <h2>AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> ליצור סאונד</h2>
           <p class="s-section-desc">ElevenLabs · Suno · קול, מוזיקה ואפקטים<br>מדיבוב מקצועי עד שיר שלם — מפרומפט</p>
         </div>
@@ -2325,7 +2325,7 @@
         <div class="s-section-ghost">05</div>
         <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 100px;gap:32px;z-index:1">
           <div style="text-align:center">
-            <span style="font-size:.42em;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--muted)">05 / 09</span>
+            <span style="font-size:.42em;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--muted)">05 / 10</span>
             <h2 style="margin-top:6px;font-size:2.2em;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent">AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> ליצור סאונד</h2>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;width:100%;max-width:1200px">
@@ -2561,7 +2561,7 @@
         <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%)"></div>
         <div class="s-section-ghost">06</div>
         <div class="s-section-inner z1">
-          <span class="s-section-num">06 / 09</span>
+          <span class="s-section-num">06 / 10</span>
           <h2>AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> לחבר וידאו וסאונד</h2>
           <p class="s-section-desc">Hedra · ליפסינק · image + audio<br>תמונה + סאונד → דמות מדברת חיה</p>
         </div>
@@ -2853,7 +2853,7 @@
         <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%)"></div>
         <div class="s-section-ghost">07</div>
         <div class="s-section-inner z1">
-          <span class="s-section-num">07 / 09</span>
+          <span class="s-section-num">07 / 10</span>
           <h2>AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> לביים</h2>
           <p class="s-section-desc">ChatGPT כבמאי · Shot list · Storyboard<br>מרעיון לתסריט קולנועי — בפרומפט אחד</p>
         </div>
@@ -3009,131 +3009,121 @@
       ══════════════════════════════════════════════════════ -->
       <section class="s-base" data-transition="slide">
         <div class="orb" style="width:550px;height:550px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.08;animation-duration:10s"></div>
-        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:40px 100px 40px 80px;display:grid;grid-template-rows:auto 1fr auto;gap:16px">
+        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:36px 80px 28px 60px;display:grid;grid-template-rows:auto minmax(0,1fr) minmax(230px,32%);gap:14px">
           <!-- Header -->
           <div>
             <span class="eyebrow">ChatGPT · Shot List</span>
-            <h2 style="margin:8px 0 0;font-size:1.65em">השוט ליסט שה-AI בונה</h2>
+            <h2 style="margin:6px 0 0;font-size:1.5em">השוט ליסט שה-AI בונה</h2>
           </div>
-          <!-- Shot grid: 2 columns interleaved (01,06 / 02,07 / ...) with full text -->
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:start">
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
-              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">01</span>
-                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Hero Establishing</span>
-                <span style="background:rgba(124,58,237,.18);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--v-hi);flex-shrink:0">Wide</span>
+          <!-- Shot grid: 2 columns, compact cards (no המטרה line) -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;align-content:start;overflow:hidden">
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:7px 11px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.58em;font-weight:700;flex-shrink:0">01</span>
+                <span style="font-size:.62em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Hero Establishing</span>
+                <span style="background:rgba(124,58,237,.18);border-radius:4px;padding:2px 6px;font-size:.49em;color:var(--v-hi);flex-shrink:0">Wide</span>
               </div>
-              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">שוט רחב מאוד של המלון, הבריכה והים באותו פריים.</div>
-              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>להבין מיד שהבריכה "נשפכת" ויזואלית אל הים.</div>
+              <div style="font-size:.52em;color:rgba(255,255,255,.6);line-height:1.35;margin-top:3px">שוט רחב מאוד של המלון, הבריכה והים באותו פריים.</div>
             </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
-              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">06</span>
-                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Surface Shot</span>
-                <span style="background:rgba(6,182,212,.15);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--c-hi);flex-shrink:0">Surface</span>
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:7px 11px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.58em;font-weight:700;flex-shrink:0">06</span>
+                <span style="font-size:.62em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Surface Shot</span>
+                <span style="background:rgba(6,182,212,.15);border-radius:4px;padding:2px 6px;font-size:.49em;color:var(--c-hi);flex-shrink:0">Surface</span>
               </div>
-              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">מצלמה בגובה פני המים, חצי מעל המים חצי מתחת.</div>
-              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>לחבר בין עולם המלון לעולם הצלילה.</div>
+              <div style="font-size:.52em;color:rgba(255,255,255,.6);line-height:1.35;margin-top:3px">מצלמה בגובה פני המים, חצי מעל חצי מתחת.</div>
             </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
-              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">02</span>
-                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Pool Edge Detail</span>
-                <span style="background:rgba(124,58,237,.18);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--v-hi);flex-shrink:0">Close-up</span>
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:7px 11px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.58em;font-weight:700;flex-shrink:0">02</span>
+                <span style="font-size:.62em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Pool Edge Detail</span>
+                <span style="background:rgba(124,58,237,.18);border-radius:4px;padding:2px 6px;font-size:.49em;color:var(--v-hi);flex-shrink:0">Close-up</span>
               </div>
-              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">קלוז-אפ על שפת הבריכה, השתקפויות מים, תנועה עדינה, אור שמש על המשטח.</div>
-              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>לבסס יוקרה וחומריות.</div>
+              <div style="font-size:.52em;color:rgba(255,255,255,.6);line-height:1.35;margin-top:3px">קלוז-אפ על שפת הבריכה, השתקפויות מים, אור שמש.</div>
             </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
-              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">07</span>
-                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Underwater Entry</span>
-                <span style="background:rgba(6,182,212,.15);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--c-hi);flex-shrink:0">Underwater</span>
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:7px 11px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.58em;font-weight:700;flex-shrink:0">07</span>
+                <span style="font-size:.62em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Underwater Entry</span>
+                <span style="background:rgba(6,182,212,.15);border-radius:4px;padding:2px 6px;font-size:.49em;color:var(--c-hi);flex-shrink:0">Underwater</span>
               </div>
-              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">Cut / transition לצילום תת-מימי כשהם כבר עם שנורקלים.</div>
-              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>להראות שהמעבר מוביל מיד לחוויה אמיתית בים.</div>
+              <div style="font-size:.52em;color:rgba(255,255,255,.6);line-height:1.35;margin-top:3px">Cut לצילום תת-מימי עם שנורקלים.</div>
             </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
-              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">03</span>
-                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Match Frame Transition</span>
-                <span style="background:rgba(124,58,237,.18);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--v-hi);flex-shrink:0">Transition</span>
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:7px 11px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.58em;font-weight:700;flex-shrink:0">03</span>
+                <span style="font-size:.62em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Match Frame Transition</span>
+                <span style="background:rgba(124,58,237,.18);border-radius:4px;padding:2px 6px;font-size:.49em;color:var(--v-hi);flex-shrink:0">Transition</span>
               </div>
-              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">זווית נמוכה על פני המים, כך שהפריים מתחיל בבריכה וממשיך אל הים.</div>
-              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>להמחיש שאין כאן ניתוק — אלא רצף.</div>
+              <div style="font-size:.52em;color:rgba(255,255,255,.6);line-height:1.35;margin-top:3px">זווית נמוכה שמתחילה בבריכה וממשיכה אל הים.</div>
             </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
-              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">08</span>
-                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Underwater Beauty</span>
-                <span style="background:rgba(6,182,212,.15);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--c-hi);flex-shrink:0">Underwater</span>
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:7px 11px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.58em;font-weight:700;flex-shrink:0">08</span>
+                <span style="font-size:.62em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Underwater Beauty</span>
+                <span style="background:rgba(6,182,212,.15);border-radius:4px;padding:2px 6px;font-size:.49em;color:var(--c-hi);flex-shrink:0">Underwater</span>
               </div>
-              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">שוט תת-מימי רגוע של שחייה במים צלולים, קרני שמש, תחושת חופשה יוקרתית.</div>
-              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>למכור את החוויה, לא רק את המקום.</div>
+              <div style="font-size:.52em;color:rgba(255,255,255,.6);line-height:1.35;margin-top:3px">שוט תת-מימי רגוע, קרני שמש, תחושת יוקרה.</div>
             </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
-              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">04</span>
-                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Guest Entry</span>
-                <span style="background:rgba(245,158,11,.15);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--a-hi);flex-shrink:0">Tracking</span>
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:7px 11px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.58em;font-weight:700;flex-shrink:0">04</span>
+                <span style="font-size:.62em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Guest Entry</span>
+                <span style="background:rgba(245,158,11,.15);border-radius:4px;padding:2px 6px;font-size:.49em;color:var(--a-hi);flex-shrink:0">Tracking</span>
               </div>
-              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">זוג / אורחים מתקדמים מהבריכה לכיוון הים עם שנורקלים ביד.</div>
-              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>להפוך את היתרון לחוויה אנושית.</div>
+              <div style="font-size:.52em;color:rgba(255,255,255,.6);line-height:1.35;margin-top:3px">אורחים מהבריכה לכיוון הים עם שנורקלים ביד.</div>
             </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
-              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">09</span>
-                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Return to Surface</span>
-                <span style="background:rgba(6,182,212,.15);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--c-hi);flex-shrink:0">Surface</span>
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:7px 11px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.58em;font-weight:700;flex-shrink:0">09</span>
+                <span style="font-size:.62em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Return to Surface</span>
+                <span style="background:rgba(6,182,212,.15);border-radius:4px;padding:2px 6px;font-size:.49em;color:var(--c-hi);flex-shrink:0">Surface</span>
               </div>
-              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">יציאה חזרה מעל המים עם מבט אל המלון ברקע.</div>
-              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>לקשור שוב בין הים למלון.</div>
+              <div style="font-size:.52em;color:rgba(255,255,255,.6);line-height:1.35;margin-top:3px">יציאה מהמים עם מבט אל המלון ברקע.</div>
             </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 12px">
-              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.6em;font-weight:700;flex-shrink:0">05</span>
-                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Tracking to Water</span>
-                <span style="background:rgba(245,158,11,.15);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--a-hi);flex-shrink:0">Tracking</span>
+            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:7px 11px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-family:var(--mono);color:var(--c-hi);font-size:.58em;font-weight:700;flex-shrink:0">05</span>
+                <span style="font-size:.62em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Tracking to Water</span>
+                <span style="background:rgba(245,158,11,.15);border-radius:4px;padding:2px 6px;font-size:.49em;color:var(--a-hi);flex-shrink:0">Tracking</span>
               </div>
-              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">מצלמה עוקבת מאחור כשהם נכנסים למים.</div>
-              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--c-hi);font-weight:600">המטרה: </span>להרגיש את המעבר בפועל, לא רק להבין אותו.</div>
+              <div style="font-size:.52em;color:rgba(255,255,255,.6);line-height:1.35;margin-top:3px">מצלמה עוקבת מאחור כשנכנסים למים.</div>
             </div>
-            <div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:8px;padding:9px 12px">
-              <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
-                <span style="font-family:var(--mono);color:var(--a-hi);font-size:.6em;font-weight:700;flex-shrink:0">10</span>
-                <span style="font-size:.65em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Final Hero Shot</span>
-                <span style="background:rgba(245,158,11,.2);border-radius:4px;padding:2px 7px;font-size:.51em;color:var(--a-hi);flex-shrink:0">Hero</span>
+            <div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:8px;padding:7px 11px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-family:var(--mono);color:var(--a-hi);font-size:.58em;font-weight:700;flex-shrink:0">10</span>
+                <span style="font-size:.62em;font-weight:700;color:rgba(255,255,255,.9);flex:1">Final Hero Shot</span>
+                <span style="background:rgba(245,158,11,.2);border-radius:4px;padding:2px 6px;font-size:.49em;color:var(--a-hi);flex-shrink:0">Hero</span>
               </div>
-              <div style="font-size:.54em;color:rgba(255,255,255,.7);line-height:1.4">שוט סיום רחב, אולי בגולדן האוור, שמחבר מלון + בריכה + ים לשוט אחד זכיר.</div>
-              <div style="font-size:.51em;color:rgba(255,255,255,.4);line-height:1.35;margin-top:3px"><span style="color:var(--a-hi);font-weight:600">המטרה: </span>לסגור את הסרט עם מסר אחד ברור.</div>
+              <div style="font-size:.52em;color:rgba(255,255,255,.6);line-height:1.35;margin-top:3px">שוט סיום רחב בגולדן האוור — מלון, בריכה, ים.</div>
             </div>
           </div>
-          <!-- Storyboard strip: 5 key shots at 16:9 -->
-          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;flex-shrink:0">
-            <div style="aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative">
-              <img src="assets/demos/s-76-shot-a.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.85">
-              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,14,.72) 100%)"></div>
-              <div style="position:absolute;bottom:5px;right:7px;font-family:var(--mono);font-size:.33em;color:rgba(255,255,255,.7)">01 — Hero Establishing</div>
+          <!-- Storyboard strip: 5 key shots — fills the lower third -->
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;min-height:0">
+            <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.12);position:relative;height:100%">
+              <img src="assets/demos/s-76-shot-a.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9">
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(5,5,14,.8) 100%)"></div>
+              <div style="position:absolute;bottom:7px;right:9px;font-family:var(--mono);font-size:.34em;color:rgba(255,255,255,.8)">01 — Hero Establishing</div>
             </div>
-            <div style="aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative">
-              <img src="assets/demos/s-76-shot-d.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.85">
-              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,14,.72) 100%)"></div>
-              <div style="position:absolute;bottom:5px;right:7px;font-family:var(--mono);font-size:.33em;color:rgba(255,255,255,.7)">04 — Guest Entry</div>
+            <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.12);position:relative;height:100%">
+              <img src="assets/demos/s-76-shot-d.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9">
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(5,5,14,.8) 100%)"></div>
+              <div style="position:absolute;bottom:7px;right:9px;font-family:var(--mono);font-size:.34em;color:rgba(255,255,255,.8)">04 — Guest Entry</div>
             </div>
-            <div style="aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative">
-              <img src="assets/demos/s-76-shot-b.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.85">
-              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,14,.72) 100%)"></div>
-              <div style="position:absolute;bottom:5px;right:7px;font-family:var(--mono);font-size:.33em;color:rgba(255,255,255,.7)">06 — Surface Shot</div>
+            <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.12);position:relative;height:100%">
+              <img src="assets/demos/s-76-shot-b.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9">
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(5,5,14,.8) 100%)"></div>
+              <div style="position:absolute;bottom:7px;right:9px;font-family:var(--mono);font-size:.34em;color:rgba(255,255,255,.8)">06 — Surface Shot</div>
             </div>
-            <div style="aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative">
-              <img src="assets/demos/s-76-shot-c.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.85">
-              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,14,.72) 100%)"></div>
-              <div style="position:absolute;bottom:5px;right:7px;font-family:var(--mono);font-size:.33em;color:rgba(255,255,255,.7)">08 — Underwater Beauty</div>
+            <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.12);position:relative;height:100%">
+              <img src="assets/demos/s-76-shot-c.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9">
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(5,5,14,.8) 100%)"></div>
+              <div style="position:absolute;bottom:7px;right:9px;font-family:var(--mono);font-size:.34em;color:rgba(255,255,255,.8)">08 — Underwater Beauty</div>
             </div>
-            <div style="aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1);position:relative">
-              <img src="assets/demos/s-76-shot-e.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.85">
-              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,5,14,.72) 100%)"></div>
-              <div style="position:absolute;bottom:5px;right:7px;font-family:var(--mono);font-size:.33em;color:rgba(255,255,255,.7)">10 — Final Hero Shot</div>
+            <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(245,158,11,.2);position:relative;height:100%">
+              <img src="assets/demos/s-76-shot-e.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9">
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(5,5,14,.8) 100%)"></div>
+              <div style="position:absolute;bottom:7px;right:9px;font-family:var(--mono);font-size:.34em;color:var(--a-hi)">10 — Final Hero Shot</div>
             </div>
           </div>
         </div>
@@ -3145,42 +3135,51 @@
       <section class="s-base" data-transition="slide">
         <div class="orb cyan" style="width:500px;height:500px;top:28%;left:14%;transform:translate(-50%,-50%);opacity:.12;animation-duration:8s"></div>
         <div class="orb" style="width:400px;height:400px;top:72%;left:70%;transform:translate(-50%,-50%);opacity:.1;animation-duration:7s;animation-delay:-4s"></div>
-        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:52px 100px 72px 80px;display:grid;grid-template-rows:1fr auto;gap:20px">
-          <!-- Main: prompts (right) + image (left) -->
-          <div style="display:grid;grid-template-columns:55% 1fr;gap:44px;align-items:stretch">
-            <!-- Right: title + prompts + note -->
-            <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:48px 80px 60px 60px;display:grid;grid-template-rows:1fr auto;gap:20px">
+          <!-- Main: prompts (right) + video (left) -->
+          <div style="display:grid;grid-template-columns:54% 1fr;gap:36px;align-items:start">
+            <!-- Right: title + prompts -->
+            <div style="display:flex;flex-direction:column;gap:13px">
               <div>
                 <span class="eyebrow">ChatGPT · Prompt Pack</span>
                 <h2 style="margin:8px 0 0;font-size:1.65em;line-height:1.15">ואז מתחילים</h2>
               </div>
-              <p style="font-size:.75em;margin:0;color:rgba(255,255,255,.65)">אחרי שהקונספט, השפה והשוט ליסט מאושרים — ה-AI כותב לכל שוט פרומפט מוכן לכלי המתאים:</p>
-              <div style="background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);border-radius:10px;padding:12px 16px">
-                <div style="font-family:var(--mono);font-size:.6em;color:var(--v-hi);font-weight:700;margin-bottom:6px">Shot 01 — Establishing</div>
-                <div style="font-size:.61em;color:rgba(255,255,255,.7);line-height:1.55;direction:ltr;text-align:left">"Ultra wide cinematic shot of a luxury seaside hotel pool visually aligning with the turquoise ocean beyond, premium resort atmosphere, soft golden sunlight, elegant travel commercial aesthetic."</div>
+              <p style="font-size:.73em;margin:0;color:rgba(255,255,255,.65)">אחרי שהקונספט, השפה והשוט ליסט מאושרים — ה-AI כותב לכל שוט פרומפט מוכן לכלי המתאים:</p>
+              <div style="background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.2);border-radius:10px;padding:11px 15px">
+                <div style="font-family:var(--mono);font-size:.6em;color:var(--v-hi);font-weight:700;margin-bottom:5px">Shot 01 — Establishing</div>
+                <div style="font-size:.6em;color:rgba(255,255,255,.7);line-height:1.5;direction:ltr;text-align:left">"Ultra wide cinematic shot of a luxury seaside hotel pool visually aligning with the turquoise ocean beyond, premium resort atmosphere, soft golden sunlight, elegant travel commercial aesthetic."</div>
               </div>
-              <div style="background:rgba(6,182,212,.07);border:1px solid rgba(6,182,212,.18);border-radius:10px;padding:12px 16px">
-                <div style="font-family:var(--mono);font-size:.6em;color:var(--c-hi);font-weight:700;margin-bottom:6px">Shot 05 — Tracking to Water</div>
-                <div style="font-size:.61em;color:rgba(255,255,255,.7);line-height:1.55;direction:ltr;text-align:left">"Smooth tracking shot following guests walking from the pool area directly into the crystal-clear sea, snorkeling gear in hand, seamless transition, relaxed luxury, cinematic movement."</div>
+              <div style="background:rgba(6,182,212,.07);border:1px solid rgba(6,182,212,.18);border-radius:10px;padding:11px 15px">
+                <div style="font-family:var(--mono);font-size:.6em;color:var(--c-hi);font-weight:700;margin-bottom:5px">Shot 05 — Tracking to Water</div>
+                <div style="font-size:.6em;color:rgba(255,255,255,.7);line-height:1.5;direction:ltr;text-align:left">"Smooth tracking shot following guests walking from the pool area directly into the crystal-clear sea, snorkeling gear in hand, seamless transition, relaxed luxury, cinematic movement."</div>
               </div>
-              <div style="background:rgba(6,182,212,.07);border:1px solid rgba(6,182,212,.18);border-radius:10px;padding:12px 16px">
-                <div style="font-family:var(--mono);font-size:.6em;color:var(--c-hi);font-weight:700;margin-bottom:6px">Shot 08 — Underwater Beauty</div>
-                <div style="font-size:.61em;color:rgba(255,255,255,.7);line-height:1.55;direction:ltr;text-align:left">"Underwater cinematic beauty shot of guests snorkeling in clear blue sea, luxury beachfront hotel visible, sunlight rays, calm motion, dreamy premium vacation feeling."</div>
+              <div style="background:rgba(6,182,212,.07);border:1px solid rgba(6,182,212,.18);border-radius:10px;padding:11px 15px">
+                <div style="font-family:var(--mono);font-size:.6em;color:var(--c-hi);font-weight:700;margin-bottom:5px">Shot 08 — Underwater Beauty</div>
+                <div style="font-size:.6em;color:rgba(255,255,255,.7);line-height:1.5;direction:ltr;text-align:left">"Underwater cinematic beauty shot of guests snorkeling in clear blue sea, luxury beachfront hotel visible, sunlight rays, calm motion, dreamy premium vacation feeling."</div>
               </div>
-              <div style="background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.3);border-radius:10px;padding:14px 18px 14px 14px;border-right:4px solid rgba(245,158,11,.65);display:flex;gap:12px;align-items:flex-start">
-                <span style="font-size:1.05em;flex-shrink:0;margin-top:1px">⚠️</span>
-                <div style="font-size:.62em;color:rgba(255,255,255,.78);line-height:1.7">בכל שלב עוצרים, בודקים, מאשרים — ורק אז ממשיכים.<br>אם הקונספט לא מדויק, לא בונים עליו shot list.<br>אם השוט ליסט לא טוב, לא כותבים עליו prompts.<br>אם הפרומפטים לא מדויקים, לא מייצרים וידאו.</div>
+              <!-- Warning box — separated with generous margin -->
+              <div style="margin-top:12px;background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.3);border-radius:10px;padding:13px 16px 13px 13px;border-right:4px solid rgba(245,158,11,.65);display:flex;gap:11px;align-items:flex-start">
+                <span style="font-size:1em;flex-shrink:0;margin-top:1px">⚠️</span>
+                <div style="font-size:.61em;color:rgba(255,255,255,.78);line-height:1.7">בכל שלב עוצרים, בודקים, מאשרים — ורק אז ממשיכים.<br>אם הקונספט לא מדויק, לא בונים עליו shot list.<br>אם השוט ליסט לא טוב, לא כותבים עליו prompts.<br>אם הפרומפטים לא מדויקים, לא מייצרים וידאו.</div>
               </div>
             </div>
-            <!-- Left: Kling-generated video — Shot 01 -->
-            <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(6,182,212,.2);min-height:0;position:relative;flex:1">
-              <video src="assets/demos/s-77-shot01.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block"></video>
-              <div style="position:absolute;bottom:10px;right:12px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);border:1px solid rgba(6,182,212,.3);border-radius:6px;padding:4px 10px;font-size:.54em;color:var(--c-hi);font-weight:600">Shot 01 · Hero Establishing</div>
-              <div style="position:absolute;top:10px;right:10px;background:rgba(6,182,212,.15);backdrop-filter:blur(10px);border:1px solid rgba(6,182,212,.3);border-radius:20px;padding:5px 14px;font-size:.55em;color:var(--c-hi);font-weight:700">🎬 Kling AI</div>
+            <!-- Left: Kling-generated video Shot 01 at 16:9 -->
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <!-- 16:9 video container -->
+              <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid rgba(6,182,212,.25)">
+                <video src="assets/demos/s-77-shot01.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block"></video>
+                <div style="position:absolute;bottom:10px;right:12px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);border:1px solid rgba(6,182,212,.3);border-radius:6px;padding:4px 10px;font-size:.54em;color:var(--c-hi);font-weight:600">Shot 01 · Hero Establishing</div>
+                <div style="position:absolute;top:10px;right:10px;background:rgba(6,182,212,.15);backdrop-filter:blur(10px);border:1px solid rgba(6,182,212,.3);border-radius:20px;padding:5px 14px;font-size:.55em;color:var(--c-hi);font-weight:700">🎬 Kling AI</div>
+              </div>
+              <!-- Storyboard match label -->
+              <div style="display:flex;align-items:center;gap:8px;padding:7px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px">
+                <img src="assets/demos/s-76-shot-a.png" style="width:52px;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:4px;flex-shrink:0;opacity:.85">
+                <div style="font-family:var(--mono);font-size:.48em;color:rgba(255,255,255,.55);line-height:1.4">מבוסס על storyboard<br><span style="color:var(--c-hi)">Shot 01 · Hero Establishing</span></div>
+              </div>
             </div>
           </div>
           <!-- Bottom: Approve → Refine → Continue -->
-          <div style="display:flex;justify-content:center;gap:16px;align-items:center">
+          <div style="display:flex;justify-content:center;gap:16px;align-items:center;margin-bottom:4px">
             <div style="background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.28);border-radius:7px;padding:9px 24px;font-size:.65em;color:var(--v-hi);font-weight:600">✅ Approve</div>
             <span style="color:rgba(255,255,255,.3);font-size:.85em">→</span>
             <div style="background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.28);border-radius:7px;padding:9px 24px;font-size:.65em;color:var(--c-hi);font-weight:600">🔄 Refine</div>
@@ -3200,79 +3199,307 @@
         <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%)"></div>
         <div class="s-section-ghost">08</div>
         <div class="s-section-inner z1">
-          <span class="s-section-num">08 / 09</span>
+          <span class="s-section-num">08 / 10</span>
           <h2>AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> לנתח נתונים</h2>
           <p class="s-section-desc">ChatGPT · Gemini · גיליון אקסל → תובנות<br>מדוח ידני לניתוח שכולם מבינים — בשניות</p>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH08 — Data Analysis Overview
+           CH08 — S79: מעלים קובץ — ומתחילים לקרוא את הסיפור
       ══════════════════════════════════════════════════════ -->
-      <section class="s-text" data-transition="slide">
-        <div class="s-text-accent-col" style="background:linear-gradient(180deg,#10b981,#06b6d4)"></div>
-        <div class="s-text-main z1">
-          <div class="hdr">
-            <div class="chip" style="margin-bottom:.8em;background:rgba(16,185,129,.14);border-color:rgba(16,185,129,.3);color:#34d399">📊 ChatGPT · Data</div>
-            <h2>גיליון אקסל → תובנות קריאטיביות</h2>
+      <section class="s-base" data-transition="slide" data-chapter-key="data">
+        <div class="orb" style="width:600px;height:600px;top:55%;left:55%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(16,185,129,.28) 0%,rgba(6,182,212,.12) 50%,transparent 72%);opacity:.55;animation-duration:9s"></div>
+        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:38px 80px 32px 60px;display:grid;grid-template-rows:auto 1fr auto;gap:14px">
+          <!-- Header -->
+          <div>
+            <span class="eyebrow" style="color:#34d399">ChatGPT · Data Analysis — שלב 1</span>
+            <h2 style="margin:6px 0 4px;font-size:1.52em">מעלים קובץ — ומתחילים לקרוא את הסיפור</h2>
+            <p style="font-size:.68em;color:rgba(255,255,255,.55);margin:0">השלב הראשון פשוט להביא את החומר. קובץ אחד, או כמה קבצים מאותו עולם — למשל export של קמפיינים ב-Meta ו-TikTok.</p>
           </div>
-          <div class="s-text-blocks">
-            <div class="feat-card fragment" style="animation-delay:.05s;--feat-top:linear-gradient(90deg,#10b981,#06b6d4)">
-              <span class="fc-icon">📂</span>
-              <div class="fc-title">מעלים קובץ — מקבלים תובנות</div>
-              <div class="fc-desc">Excel / CSV / PDF ← ChatGPT <strong>מנתח, מסכם, מסביר</strong> בשפה שלכם. מספיק לשאול "מה מעניין כאן?"</div>
+          <!-- Two data tables side by side -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;min-height:0;overflow:hidden">
+            <!-- Meta table -->
+            <div style="display:flex;flex-direction:column;gap:6px;min-height:0">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="width:6px;height:6px;border-radius:50%;background:#34d399;flex-shrink:0"></div>
+                <span style="font-family:var(--mono);font-size:.52em;color:#34d399;font-weight:700">meta_campaigns_q2_2026.csv</span>
+                <span style="font-family:var(--mono);font-size:.46em;color:rgba(255,255,255,.3)">63 rows · 17 cols</span>
+              </div>
+              <div style="flex:1;overflow:auto;border:1px solid rgba(16,185,129,.15);border-radius:8px;min-height:0">
+                <table style="border-collapse:collapse;width:100%;font-family:var(--mono);font-size:.42em;direction:rtl">
+                  <thead>
+                    <tr style="background:rgba(16,185,129,.1);position:sticky;top:0">
+                      <th style="padding:5px 8px;text-align:right;border-bottom:1px solid rgba(16,185,129,.2);color:#34d399;font-weight:700;white-space:nowrap">Date</th>
+                      <th style="padding:5px 8px;text-align:right;border-bottom:1px solid rgba(16,185,129,.2);color:#34d399;font-weight:700;white-space:nowrap">Campaign</th>
+                      <th style="padding:5px 8px;text-align:right;border-bottom:1px solid rgba(16,185,129,.2);color:#34d399;font-weight:700;white-space:nowrap">Creative_Angle</th>
+                      <th style="padding:5px 8px;text-align:left;border-bottom:1px solid rgba(16,185,129,.2);color:#34d399;font-weight:700;white-space:nowrap">Impr.</th>
+                      <th style="padding:5px 8px;text-align:left;border-bottom:1px solid rgba(16,185,129,.2);color:var(--v-hi);font-weight:700;white-space:nowrap">Thumbstop%</th>
+                      <th style="padding:5px 8px;text-align:left;border-bottom:1px solid rgba(16,185,129,.2);color:var(--c-hi);font-weight:700;white-space:nowrap">Saves</th>
+                      <th style="padding:5px 8px;text-align:left;border-bottom:1px solid rgba(16,185,129,.2);color:#34d399;font-weight:700;white-space:nowrap">CTR%</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="background:rgba(16,185,129,.04)"><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-10</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Sea, Pool, Repeat</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Pool-to-Sea</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">31,949</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#a78bfa;text-align:left;font-weight:600">45.2%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--c-hi);text-align:left;font-weight:600">278</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">2.43%</td></tr>
+                    <tr><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-17</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Sea, Pool, Repeat</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Pool-to-Sea</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">90,554</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#a78bfa;text-align:left;font-weight:600">43.2%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--c-hi);text-align:left;font-weight:600">530</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">3.64%</td></tr>
+                    <tr style="background:rgba(16,185,129,.04)"><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-17</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Weekend Escape</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Pool-to-Sea</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">45,810</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#a78bfa;text-align:left;font-weight:600">42.0%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--c-hi);text-align:left;font-weight:600">303</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">2.76%</td></tr>
+                    <tr><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-10</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Summer Reset</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Morning Calm</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">37,268</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);text-align:left">26.1%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);text-align:left">111</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">2.25%</td></tr>
+                    <tr style="background:rgba(16,185,129,.04)"><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-03</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Room With A View</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Resort Beauty</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">31,037</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(244,63,94,.8);text-align:left">16.0%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(244,63,94,.8);text-align:left">69</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">1.41%</td></tr>
+                    <tr><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-17</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Snorkel Morning</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Snorkeling First Shot</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">35,617</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#a78bfa;text-align:left;font-weight:600">42.0%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);text-align:left">114</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">1.55%</td></tr>
+                    <tr style="background:rgba(16,185,129,.04)"><td style="padding:4px 8px;color:rgba(255,255,255,.5);white-space:nowrap">2026-04-07</td><td style="padding:4px 8px;color:rgba(255,255,255,.75);white-space:nowrap">Summer Reset</td><td style="padding:4px 8px;color:rgba(255,255,255,.75);white-space:nowrap">Couple Escape</td><td style="padding:4px 8px;color:rgba(255,255,255,.55);text-align:left">44,280</td><td style="padding:4px 8px;color:#a78bfa;text-align:left">36.8%</td><td style="padding:4px 8px;color:var(--c-hi);text-align:left">214</td><td style="padding:4px 8px;color:rgba(255,255,255,.55);text-align:left">2.38%</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div class="feat-card c fragment" style="animation-delay:.12s">
-              <span class="fc-icon">📈</span>
-              <div class="fc-title">גרפים וויז אוטומטיים</div>
-              <div class="fc-desc">בקשו "צור גרף" — ChatGPT <strong>מייצר גרפים קריאים,</strong> בוחר את הדרך הנכונה להציג כל נתון. לא Canva, לא Excel מסובך.</div>
+            <!-- TikTok table -->
+            <div style="display:flex;flex-direction:column;gap:6px;min-height:0">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="width:6px;height:6px;border-radius:50%;background:#22d3ee;flex-shrink:0"></div>
+                <span style="font-family:var(--mono);font-size:.52em;color:#22d3ee;font-weight:700">tiktok_campaigns_q2_2026.csv</span>
+                <span style="font-family:var(--mono);font-size:.46em;color:rgba(255,255,255,.3)">149 rows · 16 cols</span>
+              </div>
+              <div style="flex:1;overflow:auto;border:1px solid rgba(6,182,212,.15);border-radius:8px;min-height:0">
+                <table style="border-collapse:collapse;width:100%;font-family:var(--mono);font-size:.42em;direction:rtl">
+                  <thead>
+                    <tr style="background:rgba(6,182,212,.1);position:sticky;top:0">
+                      <th style="padding:5px 8px;text-align:right;border-bottom:1px solid rgba(6,182,212,.2);color:#22d3ee;font-weight:700;white-space:nowrap">Date</th>
+                      <th style="padding:5px 8px;text-align:right;border-bottom:1px solid rgba(6,182,212,.2);color:#22d3ee;font-weight:700;white-space:nowrap">Campaign</th>
+                      <th style="padding:5px 8px;text-align:right;border-bottom:1px solid rgba(6,182,212,.2);color:#22d3ee;font-weight:700;white-space:nowrap">Hook_Type</th>
+                      <th style="padding:5px 8px;text-align:right;border-bottom:1px solid rgba(6,182,212,.2);color:#22d3ee;font-weight:700;white-space:nowrap">Creator_Style</th>
+                      <th style="padding:5px 8px;text-align:left;border-bottom:1px solid rgba(6,182,212,.2);color:#22d3ee;font-weight:700;white-space:nowrap">Impr.</th>
+                      <th style="padding:5px 8px;text-align:left;border-bottom:1px solid rgba(6,182,212,.2);color:var(--v-hi);font-weight:700;white-space:nowrap">CTR%</th>
+                      <th style="padding:5px 8px;text-align:left;border-bottom:1px solid rgba(6,182,212,.2);color:var(--c-hi);font-weight:700;white-space:nowrap">Watch_Time</th>
+                      <th style="padding:5px 8px;text-align:left;border-bottom:1px solid rgba(6,182,212,.2);color:#34d399;font-weight:700;white-space:nowrap">Completion%</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="background:rgba(6,182,212,.04)"><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-05</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Summer Reset</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">POV Vacation</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.6);white-space:nowrap">UGC Creator</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">42,800</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#a78bfa;text-align:left;font-weight:600">6.2%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--c-hi);text-align:left">10.4s</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">44.2%</td></tr>
+                    <tr><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-12</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Weekend Escape</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Creator Intro</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.6);white-space:nowrap">UGC Creator</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">38,600</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#a78bfa;text-align:left;font-weight:600">5.8%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--c-hi);text-align:left">11.2s</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">47.8%</td></tr>
+                    <tr style="background:rgba(6,182,212,.04)"><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-19</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Sea, Pool, Repeat</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Pool-to-Sea</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.6);white-space:nowrap">Cinematic</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">29,400</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);text-align:left">3.8%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--c-hi);text-align:left;font-weight:600">15.6s</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#34d399;text-align:left;font-weight:600">52.1%</td></tr>
+                    <tr><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-05</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Room With A View</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Fast Reveal</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.6);white-space:nowrap">Selfie Walkthrough</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">45,200</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);text-align:left">4.1%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);text-align:left">7.8s</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">33.4%</td></tr>
+                    <tr style="background:rgba(16,185,129,.04)"><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-26</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Snorkel Morning</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Snorkeling First Shot</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.6);white-space:nowrap">Cinematic</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">31,800</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#a78bfa;text-align:left;font-weight:600">5.9%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--c-hi);text-align:left;font-weight:600">13.2s</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#34d399;text-align:left;font-weight:600">48.6%</td></tr>
+                    <tr><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-04-02</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Snorkel Morning</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Snorkeling First Shot</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.6);white-space:nowrap">Voiceover</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">28,400</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(244,63,94,.8);text-align:left">2.1%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(244,63,94,.8);text-align:left">6.1s</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(244,63,94,.8);text-align:left">22.4%</td></tr>
+                    <tr style="background:rgba(6,182,212,.04)"><td style="padding:4px 8px;color:rgba(255,255,255,.5);white-space:nowrap">2026-03-12</td><td style="padding:4px 8px;color:rgba(255,255,255,.75);white-space:nowrap">Sea, Pool, Repeat</td><td style="padding:4px 8px;color:rgba(255,255,255,.75);white-space:nowrap">Creator Intro</td><td style="padding:4px 8px;color:rgba(255,255,255,.6);white-space:nowrap">Cinematic</td><td style="padding:4px 8px;color:rgba(255,255,255,.55);text-align:left">36,100</td><td style="padding:4px 8px;color:rgba(255,255,255,.5);text-align:left">3.2%</td><td style="padding:4px 8px;color:var(--c-hi);text-align:left;font-weight:600">18.4s</td><td style="padding:4px 8px;color:#34d399;text-align:left;font-weight:600">64.8%</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div class="feat-card fragment" style="animation-delay:.19s;--feat-top:linear-gradient(90deg,#10b981,#06b6d4)">
-              <span class="fc-icon">💬</span>
-              <div class="fc-title">שאלות בשפה טבעית</div>
-              <div class="fc-desc">"מה הלקוח שהכי פחות קנה? מה ההוצאה הגדולה?" — <strong>שאלות בעברית פשוטה</strong> על גיליון עם אלפי שורות. תשובה ב-3 שניות.</div>
-            </div>
-            <div class="feat-card c fragment" style="animation-delay:.26s">
-              <span class="fc-icon">📋</span>
-              <div class="fc-title">דוח לקוח — כתוב מאליו</div>
-              <div class="fc-desc">ChatGPT יכול <strong>לכתוב את הדוח</strong> בשבילכם — נתון X עלה ב-Y%, מגמה, המלצה לחודש הבא. מExcel לPDF מוצג — 10 דקות.</div>
-            </div>
+          </div>
+          <!-- Footer tag -->
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px">
+            <div style="height:1px;flex:1;background:rgba(255,255,255,.06)"></div>
+            <span style="font-family:var(--mono);font-size:.5em;color:rgba(255,255,255,.3);letter-spacing:.1em">raw campaign data</span>
+            <div style="height:1px;flex:1;background:rgba(255,255,255,.06)"></div>
           </div>
         </div>
-        <div class="s-text-ghost">📊</div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH08 — 🎬 DEMO: Data Analysis
+           CH08 — S80: לשאול את השאלות הנכונות
       ══════════════════════════════════════════════════════ -->
-      <section class="s-video" data-transition="fade">
-        <div class="s-split-content" style="padding:80px 50px 80px 100px">
-          <div class="chip" style="margin-bottom:1em;background:rgba(16,185,129,.14);border-color:rgba(16,185,129,.3);color:#34d399">🎬 &nbsp; הדגמה חיה</div>
-          <span class="eyebrow">ChatGPT · Data Analysis</span>
-          <h2>Excel → תובנות<br>בשפה שלנו</h2>
-          <ul style="margin-top:.9em">
-            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>קובץ גיליון אמיתי כקלט</li>
-            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>שאלה בעברית פשוטה</li>
-            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>גרף + תובנות + המלצה</li>
-            <li class="fragment"><span class="dot" style="background:linear-gradient(90deg,#10b981,#06b6d4)"></span>מה שלקח שעה — לוקח שניות</li>
-          </ul>
+      <section class="s-base" data-transition="slide" data-chapter-key="data">
+        <div class="orb" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(16,185,129,.18) 0%,rgba(6,182,212,.08) 55%,transparent 72%);opacity:.6;animation-duration:11s"></div>
+        <!-- Data-art background: large faded editorial words -->
+        <div style="position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none">
+          <div style="position:absolute;top:8%;left:2%;font-size:10em;font-weight:900;color:rgba(16,185,129,.055);line-height:1;letter-spacing:-.05em;direction:ltr;font-family:'JetBrains Mono',monospace;transform:rotate(-4deg)">Pattern</div>
+          <div style="position:absolute;top:42%;left:36%;font-size:7.5em;font-weight:900;color:rgba(6,182,212,.05);line-height:1;letter-spacing:-.05em;direction:ltr;font-family:'JetBrains Mono',monospace;transform:rotate(2deg)">Outlier</div>
+          <div style="position:absolute;bottom:5%;right:2%;font-size:9em;font-weight:900;color:rgba(245,158,11,.045);line-height:1;letter-spacing:-.05em;direction:ltr;font-family:'JetBrains Mono',monospace;transform:rotate(-2deg)">Direction</div>
+          <!-- Subtle floating numbers/percentages -->
+          <div style="position:absolute;top:18%;right:10%;font-family:monospace;font-size:1.2em;color:rgba(255,255,255,.04);direction:ltr">45.1% · 31.3% · 36.7%</div>
+          <div style="position:absolute;top:32%;right:6%;font-family:monospace;font-size:.9em;color:rgba(255,255,255,.03);direction:ltr">CTR · CPC · Thumbstop</div>
+          <div style="position:absolute;bottom:28%;left:4%;font-family:monospace;font-size:1em;color:rgba(255,255,255,.035);direction:ltr">11.2s · 64.8% · 5.37%</div>
         </div>
-        <div class="s-video-pane">
-          <div class="bg bg-grid" style="opacity:.3"></div>
-          <div class="s-video-scanline"></div>
-          <div class="s-video-thumb">
-            <div style="font-size:3em;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 30px rgba(16,185,129,.7))">📊</div>
-            <div class="s-video-play-btn" style="background:linear-gradient(135deg,#10b981,#06b6d4)">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:48px 80px 48px 60px;display:flex;flex-direction:column;gap:20px">
+          <!-- Header -->
+          <div>
+            <span class="eyebrow" style="color:#34d399">ChatGPT · Data Analysis — שלב 2</span>
+            <h2 style="margin:6px 0 0;font-size:1.55em">לשאול את השאלות הנכונות</h2>
+          </div>
+          <p style="font-size:.72em;color:rgba(255,255,255,.6);margin:0;max-width:55%">ניתוח טוב לא מתחיל בפרומפט מבריק — הוא מתחיל בסדר נכון של חשיבה. כדאי לבקש מהצ'אט:</p>
+          <!-- Questions list -->
+          <div style="display:flex;flex-direction:column;gap:10px;max-width:58%">
+            <div style="display:flex;align-items:flex-start;gap:14px;padding:11px 16px;background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.14);border-radius:10px">
+              <div style="font-family:var(--mono);font-size:.55em;color:#34d399;font-weight:700;flex-shrink:0;margin-top:2px;background:rgba(16,185,129,.12);border-radius:4px;padding:2px 8px">01</div>
+              <div><div style="font-size:.68em;font-weight:700;color:rgba(255,255,255,.9)">למצוא דפוסים</div><div style="font-size:.58em;color:rgba(255,255,255,.5);margin-top:2px">מה חוזר שוב ושוב בנתונים</div></div>
             </div>
-            <div class="s-video-tag" style="color:#34d399">ChatGPT · Data Analysis</div>
-            <div class="s-video-label">⬆️ להחליף בהדגמת ניתוח נתונים</div>
+            <div style="display:flex;align-items:flex-start;gap:14px;padding:11px 16px;background:rgba(6,182,212,.06);border:1px solid rgba(6,182,212,.14);border-radius:10px">
+              <div style="font-family:var(--mono);font-size:.55em;color:var(--c-hi);font-weight:700;flex-shrink:0;margin-top:2px;background:rgba(6,182,212,.12);border-radius:4px;padding:2px 8px">02</div>
+              <div><div style="font-size:.68em;font-weight:700;color:rgba(255,255,255,.9)">לזהות חריגות</div><div style="font-size:.58em;color:rgba(255,255,255,.5);margin-top:2px">מה בולט לטובה או לרעה</div></div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:14px;padding:11px 16px;background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.14);border-radius:10px">
+              <div style="font-family:var(--mono);font-size:.55em;color:var(--v-hi);font-weight:700;flex-shrink:0;margin-top:2px;background:rgba(124,58,237,.12);border-radius:4px;padding:2px 8px">03</div>
+              <div><div style="font-size:.68em;font-weight:700;color:rgba(255,255,255,.9)">להפריד בין רעש לסיגנל</div><div style="font-size:.58em;color:rgba(255,255,255,.5);margin-top:2px">מה נראה מרשים, אבל לא באמת חשוב</div></div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:14px;padding:11px 16px;background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.14);border-radius:10px">
+              <div style="font-family:var(--mono);font-size:.55em;color:var(--a-hi);font-weight:700;flex-shrink:0;margin-top:2px;background:rgba(245,158,11,.12);border-radius:4px;padding:2px 8px">04</div>
+              <div><div style="font-size:.68em;font-weight:700;color:rgba(255,255,255,.9)">לחבר בין מדדים</div><div style="font-size:.58em;color:rgba(255,255,255,.5);margin-top:2px">לא להסתכל על כל מספר לבד — להבין קשרים</div></div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:14px;padding:11px 16px;background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.2);border-radius:10px;border-right:3px solid rgba(16,185,129,.5)">
+              <div style="font-family:var(--mono);font-size:.55em;color:#34d399;font-weight:700;flex-shrink:0;margin-top:2px;background:rgba(16,185,129,.12);border-radius:4px;padding:2px 8px">05</div>
+              <div><div style="font-size:.68em;font-weight:700;color:rgba(255,255,255,.9)">לסכם מסקנות ולהציע כיוון</div><div style="font-size:.58em;color:rgba(255,255,255,.5);margin-top:2px">לא רק מה קרה — אלא מה כדאי לבדוק, לשנות או לנסות הלאה</div></div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH09 — SECTION: AI יכול לעשות הכל
+           CH08 — S81: ומה חוזר בחזרה?
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-base" data-transition="slide" data-chapter-key="data">
+        <div class="orb" style="width:500px;height:500px;top:40%;left:30%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(16,185,129,.22) 0%,rgba(6,182,212,.1) 55%,transparent 72%);opacity:.55;animation-duration:10s"></div>
+        <div class="orb" style="width:400px;height:400px;top:65%;left:78%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(124,58,237,.2) 0%,transparent 70%);opacity:.4;animation-duration:8s;animation-delay:-4s"></div>
+        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:36px 80px 28px 60px;display:grid;grid-template-rows:auto 1fr auto;gap:14px">
+          <!-- Header -->
+          <div>
+            <span class="eyebrow" style="color:#34d399">ChatGPT · Data Analysis — תוצאה</span>
+            <h2 style="margin:6px 0 0;font-size:1.52em">ומה חוזר בחזרה?</h2>
+            <p style="font-size:.65em;color:rgba(255,255,255,.5);margin:4px 0 0">בסוף זה לא חייב להישאר תשובה טקסטואלית — אפשר לקבל גרפים, השוואות, וסיכום שנראה כבר כמו תחילת דוח.</p>
+          </div>
+          <!-- Two charts side by side -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;min-height:0">
+            <!-- Chart 1: Meta -->
+            <div style="display:flex;flex-direction:column;gap:8px;background:rgba(255,255,255,.03);border:1px solid rgba(16,185,129,.15);border-radius:12px;padding:14px;min-height:0">
+              <div>
+                <div style="font-size:.58em;font-weight:700;color:#34d399;margin-bottom:2px">📊 Meta — Creative Angle Performance</div>
+                <div style="font-size:.48em;color:rgba(255,255,255,.4)">Thumbstop Rate % · Saves (avg per campaign)</div>
+              </div>
+              <div style="flex:1;position:relative;min-height:0"><canvas id="chart-meta" style="width:100%;height:100%"></canvas></div>
+              <div style="font-family:var(--mono);font-size:.44em;color:rgba(255,255,255,.3);text-align:center;letter-spacing:.06em">what gets attention</div>
+            </div>
+            <!-- Chart 2: TikTok -->
+            <div style="display:flex;flex-direction:column;gap:8px;background:rgba(255,255,255,.03);border:1px solid rgba(6,182,212,.15);border-radius:12px;padding:14px;min-height:0">
+              <div>
+                <div style="font-size:.58em;font-weight:700;color:#22d3ee;margin-bottom:2px">📱 TikTok — Hook Type Retention</div>
+                <div style="font-size:.48em;color:rgba(255,255,255,.4)">Avg Watch Time (s) · Completion Rate %</div>
+              </div>
+              <div style="flex:1;position:relative;min-height:0"><canvas id="chart-tiktok" style="width:100%;height:100%"></canvas></div>
+              <div style="font-family:var(--mono);font-size:.44em;color:rgba(255,255,255,.3);text-align:center;letter-spacing:.06em">what holds attention</div>
+            </div>
+          </div>
+          <!-- Footer -->
+          <div style="display:flex;align-items:center;justify-content:center;gap:16px">
+            <div style="height:1px;flex:1;background:rgba(255,255,255,.06)"></div>
+            <span style="font-family:var(--mono);font-size:.52em;color:rgba(255,255,255,.35);letter-spacing:.08em">Data in</span>
+            <span style="color:rgba(16,185,129,.6);font-size:.9em">→</span>
+            <span style="font-family:var(--mono);font-size:.52em;color:#34d399;letter-spacing:.08em;font-weight:700">Insight out</span>
+            <div style="height:1px;flex:1;background:rgba(255,255,255,.06)"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH09 — SECTION: AI יודע לתכנת
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch09-code" data-chapter-key="code">
+        <div class="bg bg-grid"></div>
+        <div class="orb" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(124,58,237,.42) 0%,rgba(244,63,94,.18) 48%,transparent 72%);animation-duration:7s;opacity:.35"></div>
+        <div class="orb" style="width:380px;height:380px;top:72%;left:22%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(6,182,212,.3) 0%,transparent 70%);animation-duration:9s;animation-delay:-3s;opacity:.28"></div>
+        <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%);border-color:rgba(124,58,237,.1)"></div>
+        <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%);border-color:rgba(124,58,237,.07)"></div>
+        <div class="s-section-ghost" style="-webkit-text-stroke-color:rgba(124,58,237,.07)">&lt;/&gt;</div>
+        <div class="s-section-inner z1">
+          <span class="s-section-num">09 / 10</span>
+          <h2>AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> לתכנת</h2>
+          <p class="s-section-desc">לא רק טקסט וגרפים — גם ממשקים וכלים<br>מרעיון לאב-טיפוס ב-10 דקות</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH09 — S83: לפעמים רעיון קטן הוא פשוט אתר
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-base" data-transition="slide" data-chapter-key="code">
+        <div class="orb" style="width:550px;height:550px;top:45%;left:65%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(124,58,237,.25) 0%,rgba(6,182,212,.1) 55%,transparent 72%);opacity:.5;animation-duration:9s"></div>
+        <!-- Subtle interface-texture background -->
+        <div style="position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none">
+          <div style="position:absolute;top:20%;right:8%;width:320px;height:180px;border:1px solid rgba(124,58,237,.1);border-radius:12px;background:rgba(124,58,237,.04)"></div>
+          <div style="position:absolute;top:24%;right:12%;width:240px;height:10px;border-radius:5px;background:rgba(124,58,237,.08)"></div>
+          <div style="position:absolute;top:29%;right:12%;width:180px;height:8px;border-radius:4px;background:rgba(124,58,237,.05)"></div>
+          <div style="position:absolute;top:35%;right:12%;width:200px;height:8px;border-radius:4px;background:rgba(124,58,237,.05)"></div>
+          <div style="position:absolute;top:42%;right:12%;width:80px;height:26px;border-radius:6px;background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.2)"></div>
+          <div style="position:absolute;bottom:20%;left:8%;width:280px;height:200px;border:1px solid rgba(6,182,212,.1);border-radius:12px;background:rgba(6,182,212,.03)"></div>
+          <div style="position:absolute;bottom:24%;left:14%;width:200px;height:10px;border-radius:5px;background:rgba(6,182,212,.07)"></div>
+          <div style="position:absolute;bottom:30%;left:14%;width:150px;height:8px;border-radius:4px;background:rgba(6,182,212,.05)"></div>
+          <div style="position:absolute;bottom:60%;right:28%;font-family:var(--mono);font-size:1.1em;color:rgba(124,58,237,.12);direction:ltr">microsite</div>
+          <div style="position:absolute;top:55%;left:42%;font-family:var(--mono);font-size:.9em;color:rgba(6,182,212,.1);direction:ltr">tool</div>
+          <div style="position:absolute;bottom:32%;right:22%;font-family:var(--mono);font-size:1em;color:rgba(245,158,11,.09);direction:ltr">interaction</div>
+        </div>
+        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:52px 80px 52px 60px;display:flex;flex-direction:column;gap:22px;max-width:60%">
+          <div>
+            <span class="eyebrow" style="color:var(--v-hi)">Claude · Rapid Prototyping</span>
+            <h2 style="margin:8px 0 0;font-size:1.55em;line-height:1.2">לפעמים רעיון קטן<br>הוא פשוט אתר</h2>
+          </div>
+          <p style="font-size:.75em;color:rgba(255,255,255,.65);line-height:1.65;margin:0">לא כל דבר חייב להיות קמפיין גדול.<br>
+          לפעמים מה שצריך זה משהו קטן, חד,<br>
+          שעושה לאנשים חשק לגעת, לנסות, לשתף — או לחייך.<br><br>
+          חידון קטן. עמוד אינטראקטיבי. try-on שטותי.<br>
+          מיני-חוויה שאפשר לשלוח, להעלות, או להלביש על מהלך.</p>
+          <p style="font-size:.75em;color:rgba(255,255,255,.65);line-height:1.65;margin:0">זה בדיוק המקום שבו AI נהיה שימושי:<br>
+          כי אפשר לקחת רעיון, ולתת לו צורה כמעט מיד.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <div style="padding:7px 16px;border-radius:7px;background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.25);font-size:.62em;color:var(--v-hi);font-family:var(--mono)">microsite</div>
+            <div style="padding:7px 16px;border-radius:7px;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.22);font-size:.62em;color:var(--c-hi);font-family:var(--mono)">tool</div>
+            <div style="padding:7px 16px;border-radius:7px;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.22);font-size:.62em;color:var(--a-hi);font-family:var(--mono)">interaction</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH09 — S84: שני דברים שלא היינו בונים פעם
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-base" data-transition="slide" data-chapter-key="code">
+        <div class="orb" style="width:500px;height:500px;top:50%;left:35%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(124,58,237,.25) 0%,rgba(6,182,212,.1) 55%,transparent 72%);opacity:.45;animation-duration:10s"></div>
+        <div class="orb" style="width:350px;height:350px;top:35%;left:78%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(244,63,94,.2) 0%,transparent 70%);opacity:.35;animation-duration:8s;animation-delay:-3s"></div>
+        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:36px 80px 28px 60px;display:grid;grid-template-rows:auto 1fr auto;gap:14px">
+          <!-- Header -->
+          <div>
+            <span class="eyebrow" style="color:var(--v-hi)">Claude · Live Demos</span>
+            <h2 style="margin:6px 0 0;font-size:1.48em">שני דברים שלא היינו בונים פעם</h2>
+            <p style="font-size:.65em;color:rgba(255,255,255,.5);margin:4px 0 0">שתי דוגמאות קטנות, טיפשיות במידה הנכונה — אבל בדיוק מהסוג שאפשר פתאום להרים מהר.</p>
+          </div>
+          <!-- Two phone mockups -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;padding:0 40px">
+            <!-- Demo 1: Herb Quiz -->
+            <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+              <div style="font-family:var(--mono);font-size:.55em;color:var(--c-hi);letter-spacing:.1em;text-transform:uppercase;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.25);border-radius:5px;padding:3px 12px">quiz</div>
+              <div style="font-size:.68em;font-weight:700;color:rgba(255,255,255,.8);text-align:center">כוסברה או פטרוזיליה?</div>
+              <!-- Phone frame -->
+              <div style="width:100%;max-width:260px;background:#0a0a1a;border:2px solid rgba(124,58,237,.35);border-radius:32px;box-shadow:0 0 40px rgba(124,58,237,.15),0 20px 60px rgba(0,0,0,.5);overflow:hidden;position:relative">
+                <div style="height:18px;background:#0a0a1a;display:flex;align-items:center;justify-content:center">
+                  <div style="width:60px;height:4px;background:rgba(124,58,237,.4);border-radius:2px"></div>
+                </div>
+                <div style="aspect-ratio:9/17;position:relative;overflow:hidden">
+                  <iframe src="assets/demos/demo-herb-quiz.html" style="border:0;width:100%;height:100%;display:block" loading="lazy"></iframe>
+                </div>
+                <div style="height:16px;background:#0a0a1a;display:flex;align-items:center;justify-content:center">
+                  <div style="width:28px;height:4px;background:rgba(255,255,255,.15);border-radius:2px"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Demo 2: Glasses Try-On -->
+            <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+              <div style="font-family:var(--mono);font-size:.55em;color:var(--v-hi);letter-spacing:.1em;text-transform:uppercase;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.25);border-radius:5px;padding:3px 12px">try-on</div>
+              <div style="font-size:.68em;font-weight:700;color:rgba(255,255,255,.8);text-align:center">Sparkles Glasses Try-On</div>
+              <!-- Phone frame -->
+              <div style="width:100%;max-width:260px;background:#0a0a1a;border:2px solid rgba(124,58,237,.35);border-radius:32px;box-shadow:0 0 40px rgba(124,58,237,.15),0 20px 60px rgba(0,0,0,.5);overflow:hidden;position:relative">
+                <div style="height:18px;background:#0a0a1a;display:flex;align-items:center;justify-content:center">
+                  <div style="width:60px;height:4px;background:rgba(124,58,237,.4);border-radius:2px"></div>
+                </div>
+                <div style="aspect-ratio:9/17;position:relative;overflow:hidden">
+                  <iframe src="assets/demos/demo-glasses-tryon.html" style="border:0;width:100%;height:100%;display:block" loading="lazy"></iframe>
+                </div>
+                <div style="height:16px;background:#0a0a1a;display:flex;align-items:center;justify-content:center">
+                  <div style="width:28px;height:4px;background:rgba(255,255,255,.15);border-radius:2px"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Footer -->
+          <div style="text-align:center;font-family:var(--mono);font-size:.54em;color:rgba(255,255,255,.3);letter-spacing:.08em">small idea, real thing</div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           CH10 — SECTION: AI יכול לעשות הכל
       ══════════════════════════════════════════════════════ -->
       <section class="s-section" data-transition="zoom" data-transition-speed="fast" id="ch09-everything" data-chapter-key="everything">
         <div class="bg bg-grid"></div>
@@ -3280,9 +3507,9 @@
         <div class="orb cyan" style="width:400px;height:400px;top:28%;left:72%;transform:translate(-50%,-50%);animation-duration:7s;animation-delay:-3s;opacity:.28"></div>
         <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%)"></div>
         <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%)"></div>
-        <div class="s-section-ghost">09</div>
+        <div class="s-section-ghost">10</div>
         <div class="s-section-inner z1">
-          <span class="s-section-num">09 / 09</span>
+          <span class="s-section-num">10 / 10</span>
           <h2>AI יכול לעשות הכל</h2>
           <p class="s-section-desc">תניחו שה-AI יודע · עצרו להניח<br>הכלי הכי חזק — ההנחה שאפשרי</p>
         </div>
@@ -3388,6 +3615,7 @@
     <img src="assets/logo-42.png" alt="42 Creative" onerror="this.parentElement.innerHTML='<span class=&quot;logo-text&quot;>42</span>'">
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
@@ -3739,6 +3967,83 @@
   Reveal.on('slidechanged', (event) => {
     handleSlideMedia(event.currentSlide, event.previousSlide);
     applyChapterBg(getSlideChapterKey(event.currentSlide));
+    // Init Chart.js charts when S81 (data insights slide) becomes visible
+    if (event.currentSlide.querySelector('#chart-meta') && !event.currentSlide._chartsInited) {
+      event.currentSlide._chartsInited = true;
+      const darkFont = 'rgba(255,255,255,0.55)';
+      const gridLine = 'rgba(255,255,255,0.07)';
+      const metaAngles = ['Pool-to-Sea','Morning Calm','Couple Escape','Resort Beauty','Snorkeling\nFirst Shot'];
+      new Chart(document.getElementById('chart-meta'), {
+        type: 'bar',
+        data: {
+          labels: metaAngles,
+          datasets: [
+            {
+              label: 'Thumbstop %',
+              data: [45.1, 31.3, 36.7, 23.2, 35.6],
+              backgroundColor: 'rgba(124,58,237,0.75)',
+              borderColor: 'rgba(124,58,237,1)',
+              borderWidth: 1,
+              yAxisID: 'y',
+              borderRadius: 4,
+            },
+            {
+              label: 'Saves (avg)',
+              data: [290, 153, 219, 88, 191],
+              backgroundColor: 'rgba(6,182,212,0.65)',
+              borderColor: 'rgba(6,182,212,1)',
+              borderWidth: 1,
+              yAxisID: 'y2',
+              borderRadius: 4,
+            }
+          ]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false, animation: { duration: 800 },
+          plugins: { legend: { labels: { color: darkFont, font: { size: 11 } } }, tooltip: { mode: 'index' } },
+          scales: {
+            x: { ticks: { color: darkFont, font: { size: 10 } }, grid: { color: gridLine } },
+            y: { ticks: { color: 'rgba(124,58,237,0.9)', font: { size: 10 } }, grid: { color: gridLine }, title: { display: true, text: 'Thumbstop %', color: 'rgba(124,58,237,0.7)', font: { size: 10 } } },
+            y2: { position: 'right', ticks: { color: 'rgba(6,182,212,0.9)', font: { size: 10 } }, grid: { drawOnChartArea: false }, title: { display: true, text: 'Saves', color: 'rgba(6,182,212,0.7)', font: { size: 10 } } }
+          }
+        }
+      });
+      new Chart(document.getElementById('chart-tiktok'), {
+        type: 'bar',
+        data: {
+          labels: ['POV Vacation','Fast Reveal','Creator Intro','Pool-to-Sea','Snorkeling\nFirst Shot'],
+          datasets: [
+            {
+              label: 'Avg Watch Time (s)',
+              data: [11.2, 8.7, 11.8, 12.7, 10.1],
+              backgroundColor: 'rgba(16,185,129,0.75)',
+              borderColor: 'rgba(16,185,129,1)',
+              borderWidth: 1,
+              yAxisID: 'y',
+              borderRadius: 4,
+            },
+            {
+              label: 'Completion Rate %',
+              data: [45.5, 37.2, 45.9, 51.0, 33.9],
+              backgroundColor: 'rgba(245,158,11,0.65)',
+              borderColor: 'rgba(245,158,11,1)',
+              borderWidth: 1,
+              yAxisID: 'y2',
+              borderRadius: 4,
+            }
+          ]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false, animation: { duration: 800 },
+          plugins: { legend: { labels: { color: darkFont, font: { size: 11 } } }, tooltip: { mode: 'index' } },
+          scales: {
+            x: { ticks: { color: darkFont, font: { size: 10 } }, grid: { color: gridLine } },
+            y: { ticks: { color: 'rgba(16,185,129,0.9)', font: { size: 10 } }, grid: { color: gridLine }, title: { display: true, text: 'Watch Time (s)', color: 'rgba(16,185,129,0.7)', font: { size: 10 } } },
+            y2: { position: 'right', ticks: { color: 'rgba(245,158,11,0.9)', font: { size: 10 } }, grid: { drawOnChartArea: false }, title: { display: true, text: 'Completion %', color: 'rgba(245,158,11,0.7)', font: { size: 10 } } }
+          }
+        }
+      });
+    }
   });
   </script>
 </body>
