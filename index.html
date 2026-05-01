@@ -3185,12 +3185,19 @@
                 <div style="font-size:1.05em;color:rgba(16,185,129,.55);flex-shrink:0">↓</div>
                 <div style="font-family:var(--mono);font-size:.44em;color:rgba(255,255,255,.3);white-space:nowrap;flex-shrink:0">Prompt → Kling AI</div>
               </div>
-              <!-- Kling output image -->
+              <!-- Kling output: video (click to play/pause) -->
               <div style="flex:1;position:relative;border-radius:12px;overflow:hidden;border:1px solid rgba(124,58,237,.3);min-height:0">
-                <img src="assets/demos/s-77-output.png" style="width:100%;height:100%;object-fit:cover;display:block">
-                <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(5,5,14,.6) 100%)"></div>
-                <div style="position:absolute;top:10px;right:12px;background:rgba(124,58,237,.22);backdrop-filter:blur(10px);border:1px solid rgba(124,58,237,.4);border-radius:20px;padding:5px 14px;font-size:.54em;color:var(--v-hi);font-weight:700">🎬 Kling AI</div>
-                <div style="position:absolute;bottom:10px;right:12px;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:4px 10px;font-size:.51em;color:rgba(255,255,255,.8);font-weight:600">Shot 01 · Hero Establishing</div>
+                <video src="assets/demos/s-77-shot01.mp4" poster="assets/demos/s-77-output.png"
+                  data-no-advance="true" muted playsinline
+                  onclick="this.paused?this.play():this.pause();this.nextElementSibling.style.opacity=this.paused?'1':'0'"
+                  style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video>
+                <!-- Play overlay — fades out when playing -->
+                <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(5,5,14,.25);pointer-events:none;transition:opacity .3s">
+                  <div style="width:54px;height:54px;background:rgba(124,58,237,.55);backdrop-filter:blur(10px);border:2px solid rgba(124,58,237,.8);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px rgba(124,58,237,.4)"><span style="font-size:1.4em;margin-right:-3px">▶</span></div>
+                </div>
+                <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(5,5,14,.6) 100%);pointer-events:none"></div>
+                <div style="position:absolute;top:10px;right:12px;background:rgba(124,58,237,.22);backdrop-filter:blur(10px);border:1px solid rgba(124,58,237,.4);border-radius:20px;padding:5px 14px;font-size:.54em;color:var(--v-hi);font-weight:700;pointer-events:none">🎬 Kling AI</div>
+                <div style="position:absolute;bottom:10px;right:12px;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:4px 10px;font-size:.51em;color:rgba(255,255,255,.8);font-weight:600;pointer-events:none">Shot 01 · Hero Establishing</div>
               </div>
             </div>
           </div>
@@ -3230,73 +3237,111 @@
             <h2 style="margin:6px 0 4px;font-size:1.52em">מעלים קובץ — ומתחילים לקרוא את הסיפור</h2>
             <p style="font-size:.68em;color:rgba(255,255,255,.55);margin:0">השלב הראשון פשוט להביא את החומר. קובץ אחד, או כמה קבצים מאותו עולם — למשל export של קמפיינים ב-Meta ו-TikTok.</p>
           </div>
-          <!-- Two data tables side by side -->
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;min-height:0;overflow:hidden">
-            <!-- Meta table -->
-            <div style="display:flex;flex-direction:column;gap:6px;min-height:0">
-              <div style="display:flex;align-items:center;gap:8px">
-                <div style="width:6px;height:6px;border-radius:50%;background:#34d399;flex-shrink:0"></div>
-                <span style="font-family:var(--mono);font-size:.52em;color:#34d399;font-weight:700">meta_campaigns_q2_2026.csv</span>
-                <span style="font-family:var(--mono);font-size:.46em;color:rgba(255,255,255,.3)">63 rows · 17 cols</span>
+          <!-- Two spreadsheet tables side by side -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;min-height:0;overflow:hidden">
+
+            <!-- ── Meta spreadsheet ── -->
+            <div style="display:flex;flex-direction:column;min-height:0;border-radius:8px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.4)">
+              <!-- Title bar -->
+              <div style="background:#1a3a2a;border-bottom:1px solid rgba(16,185,129,.25);padding:5px 10px;display:flex;align-items:center;gap:8px;flex-shrink:0">
+                <span style="font-size:.55em;color:#34d399;font-weight:700;font-family:var(--mono)">📊 meta_campaigns_q2_2026.xlsx</span>
+                <span style="font-family:var(--mono);font-size:.44em;color:rgba(255,255,255,.28);margin-right:auto">63 rows · 17 cols</span>
               </div>
-              <div style="flex:1;overflow:auto;border:1px solid rgba(16,185,129,.15);border-radius:8px;min-height:0">
-                <table style="border-collapse:collapse;width:100%;font-family:var(--mono);font-size:.42em;direction:rtl">
+              <!-- Column-letter row (like Excel) -->
+              <div style="background:#1e2d1e;border-bottom:1px solid rgba(255,255,255,.1);display:grid;grid-template-columns:28px repeat(7,1fr);flex-shrink:0">
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.3);border-left:1px solid rgba(255,255,255,.07)"></div>
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.3);border-left:1px solid rgba(255,255,255,.07)">A</div>
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.3);border-left:1px solid rgba(255,255,255,.07)">B</div>
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.3);border-left:1px solid rgba(255,255,255,.07)">C</div>
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.3);border-left:1px solid rgba(255,255,255,.07)">D</div>
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:#a78bfa;font-weight:700;border-left:1px solid rgba(255,255,255,.07)">E</div>
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:var(--c-hi);font-weight:700;border-left:1px solid rgba(255,255,255,.07)">F</div>
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.3);border-left:1px solid rgba(255,255,255,.07)">G</div>
+              </div>
+              <!-- Table body -->
+              <div style="flex:1;overflow:auto;min-height:0">
+                <table style="border-collapse:collapse;width:100%;font-family:var(--mono);font-size:.41em">
                   <thead>
-                    <tr style="background:rgba(16,185,129,.1);position:sticky;top:0">
-                      <th style="padding:5px 8px;text-align:right;border-bottom:1px solid rgba(16,185,129,.2);color:#34d399;font-weight:700;white-space:nowrap">Date</th>
-                      <th style="padding:5px 8px;text-align:right;border-bottom:1px solid rgba(16,185,129,.2);color:#34d399;font-weight:700;white-space:nowrap">Campaign</th>
-                      <th style="padding:5px 8px;text-align:right;border-bottom:1px solid rgba(16,185,129,.2);color:#34d399;font-weight:700;white-space:nowrap">Creative_Angle</th>
-                      <th style="padding:5px 8px;text-align:left;border-bottom:1px solid rgba(16,185,129,.2);color:#34d399;font-weight:700;white-space:nowrap">Impr.</th>
-                      <th style="padding:5px 8px;text-align:left;border-bottom:1px solid rgba(16,185,129,.2);color:var(--v-hi);font-weight:700;white-space:nowrap">Thumbstop%</th>
-                      <th style="padding:5px 8px;text-align:left;border-bottom:1px solid rgba(16,185,129,.2);color:var(--c-hi);font-weight:700;white-space:nowrap">Saves</th>
-                      <th style="padding:5px 8px;text-align:left;border-bottom:1px solid rgba(16,185,129,.2);color:#34d399;font-weight:700;white-space:nowrap">CTR%</th>
+                    <tr style="background:#1c3b28;position:sticky;top:0;z-index:1">
+                      <th style="padding:4px 5px;width:28px;text-align:center;border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.35);font-weight:400;font-size:.85em"></th>
+                      <th style="padding:4px 7px;text-align:right;border:1px solid rgba(255,255,255,.08);color:#34d399;font-weight:700;white-space:nowrap">Date</th>
+                      <th style="padding:4px 7px;text-align:right;border:1px solid rgba(255,255,255,.08);color:#34d399;font-weight:700;white-space:nowrap">Campaign</th>
+                      <th style="padding:4px 7px;text-align:right;border:1px solid rgba(255,255,255,.08);color:#34d399;font-weight:700;white-space:nowrap">Creative_Angle</th>
+                      <th style="padding:4px 7px;text-align:right;border:1px solid rgba(255,255,255,.08);color:#34d399;font-weight:700;white-space:nowrap">Impr.</th>
+                      <th style="padding:4px 7px;text-align:right;border:1px solid rgba(255,255,255,.08);color:#a78bfa;font-weight:700;white-space:nowrap">Thumbstop%</th>
+                      <th style="padding:4px 7px;text-align:right;border:1px solid rgba(255,255,255,.08);color:var(--c-hi);font-weight:700;white-space:nowrap">Saves</th>
+                      <th style="padding:4px 7px;text-align:right;border:1px solid rgba(255,255,255,.08);color:#34d399;font-weight:700;white-space:nowrap">CTR%</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr style="background:rgba(16,185,129,.04)"><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-10</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Sea, Pool, Repeat</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Pool-to-Sea</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">31,949</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#a78bfa;text-align:left;font-weight:600">45.2%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--c-hi);text-align:left;font-weight:600">278</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">2.43%</td></tr>
-                    <tr><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-17</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Sea, Pool, Repeat</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Pool-to-Sea</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">90,554</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#a78bfa;text-align:left;font-weight:600">43.2%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--c-hi);text-align:left;font-weight:600">530</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">3.64%</td></tr>
-                    <tr style="background:rgba(16,185,129,.04)"><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-17</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Weekend Escape</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Pool-to-Sea</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">45,810</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#a78bfa;text-align:left;font-weight:600">42.0%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--c-hi);text-align:left;font-weight:600">303</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">2.76%</td></tr>
-                    <tr><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-10</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Summer Reset</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Morning Calm</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">37,268</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);text-align:left">26.1%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);text-align:left">111</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">2.25%</td></tr>
-                    <tr style="background:rgba(16,185,129,.04)"><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-03</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Room With A View</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Resort Beauty</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">31,037</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(244,63,94,.8);text-align:left">16.0%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(244,63,94,.8);text-align:left">69</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">1.41%</td></tr>
-                    <tr><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-17</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Snorkel Morning</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Snorkeling First Shot</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">35,617</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#a78bfa;text-align:left;font-weight:600">42.0%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);text-align:left">114</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">1.55%</td></tr>
-                    <tr style="background:rgba(16,185,129,.04)"><td style="padding:4px 8px;color:rgba(255,255,255,.5);white-space:nowrap">2026-04-07</td><td style="padding:4px 8px;color:rgba(255,255,255,.75);white-space:nowrap">Summer Reset</td><td style="padding:4px 8px;color:rgba(255,255,255,.75);white-space:nowrap">Couple Escape</td><td style="padding:4px 8px;color:rgba(255,255,255,.55);text-align:left">44,280</td><td style="padding:4px 8px;color:#a78bfa;text-align:left">36.8%</td><td style="padding:4px 8px;color:var(--c-hi);text-align:left">214</td><td style="padding:4px 8px;color:rgba(255,255,255,.55);text-align:left">2.38%</td></tr>
+                    <tr style="background:rgba(255,255,255,.03)"><td style="padding:3px 5px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.25);text-align:center;font-size:.85em">1</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5)">2026-03-10</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Sea, Pool, Repeat</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Pool-to-Sea</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">31,949</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:#a78bfa;text-align:right;font-weight:600">45.2%</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:var(--c-hi);text-align:right;font-weight:600">278</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">2.43%</td></tr>
+                    <tr><td style="padding:3px 5px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.25);text-align:center;font-size:.85em">2</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5)">2026-03-17</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Sea, Pool, Repeat</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Pool-to-Sea</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">90,554</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:#a78bfa;text-align:right;font-weight:600">43.2%</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:var(--c-hi);text-align:right;font-weight:600">530</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">3.64%</td></tr>
+                    <tr style="background:rgba(255,255,255,.03)"><td style="padding:3px 5px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.25);text-align:center;font-size:.85em">3</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5)">2026-03-17</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Weekend Escape</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Pool-to-Sea</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">45,810</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:#a78bfa;text-align:right;font-weight:600">42.0%</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:var(--c-hi);text-align:right;font-weight:600">303</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">2.76%</td></tr>
+                    <tr><td style="padding:3px 5px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.25);text-align:center;font-size:.85em">4</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5)">2026-03-10</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Summer Reset</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Morning Calm</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">37,268</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">26.1%</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">111</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">2.25%</td></tr>
+                    <tr style="background:rgba(255,255,255,.03)"><td style="padding:3px 5px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.25);text-align:center;font-size:.85em">5</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5)">2026-03-03</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Room With A View</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Resort Beauty</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">31,037</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(244,63,94,.8);text-align:right">16.0%</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(244,63,94,.8);text-align:right">69</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">1.41%</td></tr>
+                    <tr><td style="padding:3px 5px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.25);text-align:center;font-size:.85em">6</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5)">2026-03-17</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Snorkel Morning</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Snorkeling FS</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">35,617</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:#a78bfa;text-align:right;font-weight:600">42.0%</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">114</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">1.55%</td></tr>
+                    <tr style="background:rgba(255,255,255,.03)"><td style="padding:3px 5px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.25);text-align:center;font-size:.85em">7</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5)">2026-04-07</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Summer Reset</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Couple Escape</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">44,280</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:#a78bfa;text-align:right">36.8%</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:var(--c-hi);text-align:right">214</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">2.38%</td></tr>
                   </tbody>
                 </table>
               </div>
-            </div>
-            <!-- TikTok table -->
-            <div style="display:flex;flex-direction:column;gap:6px;min-height:0">
-              <div style="display:flex;align-items:center;gap:8px">
-                <div style="width:6px;height:6px;border-radius:50%;background:#22d3ee;flex-shrink:0"></div>
-                <span style="font-family:var(--mono);font-size:.52em;color:#22d3ee;font-weight:700">tiktok_campaigns_q2_2026.csv</span>
-                <span style="font-family:var(--mono);font-size:.46em;color:rgba(255,255,255,.3)">149 rows · 16 cols</span>
+              <!-- Sheet tab -->
+              <div style="background:#152a1e;border-top:1px solid rgba(255,255,255,.07);padding:3px 10px;display:flex;gap:8px;flex-shrink:0">
+                <span style="font-family:var(--mono);font-size:.38em;color:#34d399;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.2);border-radius:3px 3px 0 0;padding:2px 10px">Sheet1</span>
               </div>
-              <div style="flex:1;overflow:auto;border:1px solid rgba(6,182,212,.15);border-radius:8px;min-height:0">
-                <table style="border-collapse:collapse;width:100%;font-family:var(--mono);font-size:.42em;direction:rtl">
+            </div>
+
+            <!-- ── TikTok spreadsheet ── -->
+            <div style="display:flex;flex-direction:column;min-height:0;border-radius:8px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.4)">
+              <!-- Title bar -->
+              <div style="background:#0e2a35;border-bottom:1px solid rgba(6,182,212,.25);padding:5px 10px;display:flex;align-items:center;gap:8px;flex-shrink:0">
+                <span style="font-size:.55em;color:#22d3ee;font-weight:700;font-family:var(--mono)">📱 tiktok_campaigns_q2_2026.xlsx</span>
+                <span style="font-family:var(--mono);font-size:.44em;color:rgba(255,255,255,.28);margin-right:auto">149 rows · 16 cols</span>
+              </div>
+              <!-- Column-letter row -->
+              <div style="background:#0e2530;border-bottom:1px solid rgba(255,255,255,.1);display:grid;grid-template-columns:28px repeat(8,1fr);flex-shrink:0">
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.3);border-left:1px solid rgba(255,255,255,.07)"></div>
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.3);border-left:1px solid rgba(255,255,255,.07)">A</div>
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.3);border-left:1px solid rgba(255,255,255,.07)">B</div>
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.3);border-left:1px solid rgba(255,255,255,.07)">C</div>
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.3);border-left:1px solid rgba(255,255,255,.07)">D</div>
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:rgba(255,255,255,.3);border-left:1px solid rgba(255,255,255,.07)">E</div>
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:#a78bfa;font-weight:700;border-left:1px solid rgba(255,255,255,.07)">F</div>
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:var(--c-hi);font-weight:700;border-left:1px solid rgba(255,255,255,.07)">G</div>
+                <div style="padding:3px 4px;text-align:center;font-family:var(--mono);font-size:.38em;color:#34d399;font-weight:700;border-left:1px solid rgba(255,255,255,.07)">H</div>
+              </div>
+              <!-- Table body -->
+              <div style="flex:1;overflow:auto;min-height:0">
+                <table style="border-collapse:collapse;width:100%;font-family:var(--mono);font-size:.41em">
                   <thead>
-                    <tr style="background:rgba(6,182,212,.1);position:sticky;top:0">
-                      <th style="padding:5px 8px;text-align:right;border-bottom:1px solid rgba(6,182,212,.2);color:#22d3ee;font-weight:700;white-space:nowrap">Date</th>
-                      <th style="padding:5px 8px;text-align:right;border-bottom:1px solid rgba(6,182,212,.2);color:#22d3ee;font-weight:700;white-space:nowrap">Campaign</th>
-                      <th style="padding:5px 8px;text-align:right;border-bottom:1px solid rgba(6,182,212,.2);color:#22d3ee;font-weight:700;white-space:nowrap">Hook_Type</th>
-                      <th style="padding:5px 8px;text-align:right;border-bottom:1px solid rgba(6,182,212,.2);color:#22d3ee;font-weight:700;white-space:nowrap">Creator_Style</th>
-                      <th style="padding:5px 8px;text-align:left;border-bottom:1px solid rgba(6,182,212,.2);color:#22d3ee;font-weight:700;white-space:nowrap">Impr.</th>
-                      <th style="padding:5px 8px;text-align:left;border-bottom:1px solid rgba(6,182,212,.2);color:var(--v-hi);font-weight:700;white-space:nowrap">CTR%</th>
-                      <th style="padding:5px 8px;text-align:left;border-bottom:1px solid rgba(6,182,212,.2);color:var(--c-hi);font-weight:700;white-space:nowrap">Watch_Time</th>
-                      <th style="padding:5px 8px;text-align:left;border-bottom:1px solid rgba(6,182,212,.2);color:#34d399;font-weight:700;white-space:nowrap">Completion%</th>
+                    <tr style="background:#0e2535;position:sticky;top:0;z-index:1">
+                      <th style="padding:4px 5px;width:28px;text-align:center;border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.35);font-weight:400;font-size:.85em"></th>
+                      <th style="padding:4px 7px;text-align:right;border:1px solid rgba(255,255,255,.08);color:#22d3ee;font-weight:700;white-space:nowrap">Date</th>
+                      <th style="padding:4px 7px;text-align:right;border:1px solid rgba(255,255,255,.08);color:#22d3ee;font-weight:700;white-space:nowrap">Campaign</th>
+                      <th style="padding:4px 7px;text-align:right;border:1px solid rgba(255,255,255,.08);color:#22d3ee;font-weight:700;white-space:nowrap">Hook_Type</th>
+                      <th style="padding:4px 7px;text-align:right;border:1px solid rgba(255,255,255,.08);color:#22d3ee;font-weight:700;white-space:nowrap">Creator_Style</th>
+                      <th style="padding:4px 7px;text-align:right;border:1px solid rgba(255,255,255,.08);color:#22d3ee;font-weight:700;white-space:nowrap">Impr.</th>
+                      <th style="padding:4px 7px;text-align:right;border:1px solid rgba(255,255,255,.08);color:#a78bfa;font-weight:700;white-space:nowrap">CTR%</th>
+                      <th style="padding:4px 7px;text-align:right;border:1px solid rgba(255,255,255,.08);color:var(--c-hi);font-weight:700;white-space:nowrap">Watch_Time</th>
+                      <th style="padding:4px 7px;text-align:right;border:1px solid rgba(255,255,255,.08);color:#34d399;font-weight:700;white-space:nowrap">Completion%</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr style="background:rgba(6,182,212,.04)"><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-05</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Summer Reset</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">POV Vacation</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.6);white-space:nowrap">UGC Creator</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">42,800</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#a78bfa;text-align:left;font-weight:600">6.2%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--c-hi);text-align:left">10.4s</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">44.2%</td></tr>
-                    <tr><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-12</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Weekend Escape</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Creator Intro</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.6);white-space:nowrap">UGC Creator</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">38,600</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#a78bfa;text-align:left;font-weight:600">5.8%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--c-hi);text-align:left">11.2s</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">47.8%</td></tr>
-                    <tr style="background:rgba(6,182,212,.04)"><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-19</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Sea, Pool, Repeat</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Pool-to-Sea</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.6);white-space:nowrap">Cinematic</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">29,400</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);text-align:left">3.8%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--c-hi);text-align:left;font-weight:600">15.6s</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#34d399;text-align:left;font-weight:600">52.1%</td></tr>
-                    <tr><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-05</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Room With A View</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Fast Reveal</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.6);white-space:nowrap">Selfie Walkthrough</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">45,200</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);text-align:left">4.1%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);text-align:left">7.8s</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">33.4%</td></tr>
-                    <tr style="background:rgba(16,185,129,.04)"><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-03-26</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Snorkel Morning</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Snorkeling First Shot</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.6);white-space:nowrap">Cinematic</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">31,800</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#a78bfa;text-align:left;font-weight:600">5.9%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--c-hi);text-align:left;font-weight:600">13.2s</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:#34d399;text-align:left;font-weight:600">48.6%</td></tr>
-                    <tr><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.5);white-space:nowrap">2026-04-02</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Snorkel Morning</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);white-space:nowrap">Snorkeling First Shot</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.6);white-space:nowrap">Voiceover</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.55);text-align:left">28,400</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(244,63,94,.8);text-align:left">2.1%</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(244,63,94,.8);text-align:left">6.1s</td><td style="padding:4px 8px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(244,63,94,.8);text-align:left">22.4%</td></tr>
-                    <tr style="background:rgba(6,182,212,.04)"><td style="padding:4px 8px;color:rgba(255,255,255,.5);white-space:nowrap">2026-03-12</td><td style="padding:4px 8px;color:rgba(255,255,255,.75);white-space:nowrap">Sea, Pool, Repeat</td><td style="padding:4px 8px;color:rgba(255,255,255,.75);white-space:nowrap">Creator Intro</td><td style="padding:4px 8px;color:rgba(255,255,255,.6);white-space:nowrap">Cinematic</td><td style="padding:4px 8px;color:rgba(255,255,255,.55);text-align:left">36,100</td><td style="padding:4px 8px;color:rgba(255,255,255,.5);text-align:left">3.2%</td><td style="padding:4px 8px;color:var(--c-hi);text-align:left;font-weight:600">18.4s</td><td style="padding:4px 8px;color:#34d399;text-align:left;font-weight:600">64.8%</td></tr>
+                    <tr style="background:rgba(255,255,255,.03)"><td style="padding:3px 5px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.25);text-align:center;font-size:.85em">1</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5)">2026-03-05</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Summer Reset</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">POV Vacation</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.6)">UGC Creator</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.55);text-align:right">42,800</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:#a78bfa;text-align:right;font-weight:600">6.2%</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:var(--c-hi);text-align:right">10.4s</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.55);text-align:right">44.2%</td></tr>
+                    <tr><td style="padding:3px 5px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.25);text-align:center;font-size:.85em">2</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5)">2026-03-12</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Weekend Escape</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Creator Intro</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.6)">UGC Creator</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.55);text-align:right">38,600</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:#a78bfa;text-align:right;font-weight:600">5.8%</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:var(--c-hi);text-align:right">11.2s</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.55);text-align:right">47.8%</td></tr>
+                    <tr style="background:rgba(255,255,255,.03)"><td style="padding:3px 5px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.25);text-align:center;font-size:.85em">3</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5)">2026-03-19</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Sea, Pool, Repeat</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Pool-to-Sea</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.6)">Cinematic</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.55);text-align:right">29,400</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">3.8%</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:var(--c-hi);text-align:right;font-weight:600">15.6s</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:#34d399;text-align:right;font-weight:600">52.1%</td></tr>
+                    <tr><td style="padding:3px 5px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.25);text-align:center;font-size:.85em">4</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5)">2026-03-05</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Room With A View</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Fast Reveal</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.6)">Selfie Walkthrough</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.55);text-align:right">45,200</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">4.1%</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">7.8s</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.55);text-align:right">33.4%</td></tr>
+                    <tr style="background:rgba(255,255,255,.03)"><td style="padding:3px 5px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.25);text-align:center;font-size:.85em">5</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5)">2026-03-26</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Snorkel Morning</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Snorkeling FS</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.6)">Cinematic</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.55);text-align:right">31,800</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:#a78bfa;text-align:right;font-weight:600">5.9%</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:var(--c-hi);text-align:right;font-weight:600">13.2s</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:#34d399;text-align:right;font-weight:600">48.6%</td></tr>
+                    <tr><td style="padding:3px 5px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.25);text-align:center;font-size:.85em">6</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5)">2026-04-02</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Snorkel Morning</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Snorkeling FS</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.6)">Voiceover</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.55);text-align:right">28,400</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(244,63,94,.8);text-align:right">2.1%</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(244,63,94,.8);text-align:right">6.1s</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(244,63,94,.8);text-align:right">22.4%</td></tr>
+                    <tr style="background:rgba(255,255,255,.03)"><td style="padding:3px 5px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.25);text-align:center;font-size:.85em">7</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5)">2026-03-12</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Sea, Pool, Repeat</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)">Creator Intro</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.6)">Cinematic</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.55);text-align:right">36,100</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-align:right">3.2%</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:var(--c-hi);text-align:right;font-weight:600">18.4s</td><td style="padding:3px 7px;border:1px solid rgba(255,255,255,.06);color:#34d399;text-align:right;font-weight:600">64.8%</td></tr>
                   </tbody>
                 </table>
               </div>
+              <!-- Sheet tab -->
+              <div style="background:#0a1e2a;border-top:1px solid rgba(255,255,255,.07);padding:3px 10px;display:flex;gap:8px;flex-shrink:0">
+                <span style="font-family:var(--mono);font-size:.38em;color:#22d3ee;background:rgba(6,182,212,.12);border:1px solid rgba(6,182,212,.2);border-radius:3px 3px 0 0;padding:2px 10px">Sheet1</span>
+              </div>
             </div>
+
           </div>
           <!-- Footer tag -->
           <div style="display:flex;align-items:center;justify-content:center;gap:12px">
@@ -3407,7 +3452,14 @@
                 <div style="font-size:.43em;color:rgba(255,255,255,.32)">% עצירה ב-3 שניות · ממוצע לכל זווית קריאטיבית</div>
               </div>
               <div style="flex:1;min-height:0"><canvas id="chart-meta" style="width:100%;height:100%"></canvas></div>
-              <div style="font-family:var(--mono);font-size:.42em;color:rgba(255,255,255,.28);text-align:center;letter-spacing:.06em">what gets attention</div>
+              <!-- Hebrew chart legend -->
+              <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:2px">
+                <div style="display:flex;align-items:center;gap:4px"><div style="width:9px;height:9px;border-radius:2px;background:rgba(16,185,129,0.85);flex-shrink:0"></div><span style="font-size:.41em;color:rgba(255,255,255,.52)">מוביל</span></div>
+                <div style="display:flex;align-items:center;gap:4px"><div style="width:9px;height:9px;border-radius:2px;background:rgba(6,182,212,0.72);flex-shrink:0"></div><span style="font-size:.41em;color:rgba(255,255,255,.52)">טוב</span></div>
+                <div style="display:flex;align-items:center;gap:4px"><div style="width:9px;height:9px;border-radius:2px;background:rgba(245,158,11,0.72);flex-shrink:0"></div><span style="font-size:.41em;color:rgba(255,255,255,.52)">לא עקבי</span></div>
+                <div style="display:flex;align-items:center;gap:4px"><div style="width:9px;height:9px;border-radius:2px;background:rgba(244,63,94,0.7);flex-shrink:0"></div><span style="font-size:.41em;color:rgba(255,255,255,.52)">נמוך</span></div>
+              </div>
+              <div style="font-size:.41em;color:rgba(255,255,255,.32);text-align:center;line-height:1.5">כל עמודה = ממוצע כל הפוסטים מאותה זווית קריאטיבית.<br><span style="color:#34d399;font-weight:700">ירוק = כדאי להשקיע יותר.</span> אדום = לשקול לחדול.</div>
             </div>
             <!-- Col 3: TikTok hook performance table -->
             <div style="background:rgba(255,255,255,.02);border:1px solid rgba(6,182,212,.12);border-radius:10px;padding:13px;display:flex;flex-direction:column;gap:8px;min-height:0;overflow:hidden">
@@ -3533,57 +3585,63 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH09 — S84: שני דברים שלא היינו בונים פעם
+           CH09 — S84: דבר אחד שלא היינו בונים פעם
       ══════════════════════════════════════════════════════ -->
       <section class="s-base" data-transition="slide" data-chapter-key="code">
-        <div class="orb" style="width:500px;height:500px;top:50%;left:35%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(124,58,237,.25) 0%,rgba(6,182,212,.1) 55%,transparent 72%);opacity:.45;animation-duration:10s"></div>
-        <div class="orb" style="width:350px;height:350px;top:35%;left:78%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(244,63,94,.2) 0%,transparent 70%);opacity:.35;animation-duration:8s;animation-delay:-3s"></div>
-        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:36px 80px 28px 60px;display:grid;grid-template-rows:auto 1fr auto;gap:14px">
-          <!-- Header -->
-          <div>
-            <span class="eyebrow" style="color:var(--v-hi)">Claude · Live Demos</span>
-            <h2 style="margin:6px 0 0;font-size:1.48em">שני דברים שלא היינו בונים פעם</h2>
-            <p style="font-size:.65em;color:rgba(255,255,255,.5);margin:4px 0 0">שתי דוגמאות קטנות, טיפשיות במידה הנכונה — אבל בדיוק מהסוג שאפשר פתאום להרים מהר.</p>
-          </div>
-          <!-- Two phone mockups -->
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;padding:0 40px">
-            <!-- Demo 1: Herb Quiz -->
-            <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
-              <div style="font-family:var(--mono);font-size:.55em;color:var(--c-hi);letter-spacing:.1em;text-transform:uppercase;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.25);border-radius:5px;padding:3px 12px">quiz</div>
-              <div style="font-size:.68em;font-weight:700;color:rgba(255,255,255,.8);text-align:center">כוסברה או פטרוזיליה?</div>
-              <!-- Phone frame -->
-              <div style="width:100%;max-width:260px;background:#0a0a1a;border:2px solid rgba(124,58,237,.35);border-radius:32px;box-shadow:0 0 40px rgba(124,58,237,.15),0 20px 60px rgba(0,0,0,.5);overflow:hidden;position:relative">
-                <div style="height:18px;background:#0a0a1a;display:flex;align-items:center;justify-content:center">
-                  <div style="width:60px;height:4px;background:rgba(124,58,237,.4);border-radius:2px"></div>
+        <div class="orb" style="width:600px;height:600px;top:50%;left:30%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(124,58,237,.28) 0%,rgba(6,182,212,.1) 55%,transparent 72%);opacity:.45;animation-duration:10s"></div>
+        <div class="orb" style="width:380px;height:380px;top:30%;left:80%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(16,185,129,.18) 0%,transparent 70%);opacity:.35;animation-duration:9s;animation-delay:-4s"></div>
+        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:36px 80px 28px 60px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center">
+          <!-- Left: context & text -->
+          <div style="display:flex;flex-direction:column;gap:18px">
+            <div>
+              <span class="eyebrow" style="color:var(--v-hi)">Claude · Live Demo</span>
+              <h2 style="margin:8px 0 0;font-size:1.52em;line-height:1.15">דבר אחד שלא היינו בונים פעם</h2>
+              <p style="font-size:.64em;color:rgba(255,255,255,.48);margin:6px 0 0;line-height:1.55">רעיון קטן, טיפשי במידה הנכונה — מהסוג שאפשר פתאום להרים ב-10 דקות עם Claude.</p>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;gap:11px;align-items:flex-start">
+                <span style="font-size:.8em;flex-shrink:0;line-height:1.2">🌿</span>
+                <div>
+                  <div style="font-size:.59em;font-weight:700;color:rgba(255,255,255,.9)">כוסברה או פטרוזיליה?</div>
+                  <div style="font-size:.52em;color:rgba(255,255,255,.44);line-height:1.55;margin-top:3px">מיקרוסייט שמזמין לנחש — ומגלה שגם אנחנו לא באמת יודעים. ווב אפ שלם שנבנה מפרומפט אחד.</div>
                 </div>
-                <div style="aspect-ratio:9/17;position:relative;overflow:hidden">
-                  <iframe src="assets/demos/demo-herb-quiz.html" style="border:0;width:100%;height:100%;display:block" loading="lazy"></iframe>
+              </div>
+              <div style="display:flex;gap:11px;align-items:flex-start">
+                <span style="font-size:.8em;flex-shrink:0;line-height:1.2">⚡</span>
+                <div>
+                  <div style="font-size:.59em;font-weight:700;color:rgba(255,255,255,.9)">מה לקח לבנות אותו?</div>
+                  <div style="font-size:.52em;color:rgba(255,255,255,.44);line-height:1.55;margin-top:3px">עיצוב, אנימציה, לוגיקה וטקסט — הכל יחד, בבקשה אחת. זו בדיוק הנקודה.</div>
                 </div>
-                <div style="height:16px;background:#0a0a1a;display:flex;align-items:center;justify-content:center">
-                  <div style="width:28px;height:4px;background:rgba(255,255,255,.15);border-radius:2px"></div>
+              </div>
+              <div style="display:flex;gap:11px;align-items:flex-start">
+                <span style="font-size:.8em;flex-shrink:0;line-height:1.2">🎯</span>
+                <div>
+                  <div style="font-size:.59em;font-weight:700;color:rgba(255,255,255,.9)">למה זה חשוב?</div>
+                  <div style="font-size:.52em;color:rgba(255,255,255,.44);line-height:1.55;margin-top:3px">כי עכשיו אפשר לבנות "דוגמה חיה" לקמפיין לפני שמישהו אישר תקציב. זה משנה שיחות.</div>
                 </div>
               </div>
             </div>
-            <!-- Demo 2: Glasses Try-On -->
-            <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
-              <div style="font-family:var(--mono);font-size:.55em;color:var(--v-hi);letter-spacing:.1em;text-transform:uppercase;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.25);border-radius:5px;padding:3px 12px">try-on</div>
-              <div style="font-size:.68em;font-weight:700;color:rgba(255,255,255,.8);text-align:center">Sparkles Glasses Try-On</div>
-              <!-- Phone frame -->
-              <div style="width:100%;max-width:260px;background:#0a0a1a;border:2px solid rgba(124,58,237,.35);border-radius:32px;box-shadow:0 0 40px rgba(124,58,237,.15),0 20px 60px rgba(0,0,0,.5);overflow:hidden;position:relative">
-                <div style="height:18px;background:#0a0a1a;display:flex;align-items:center;justify-content:center">
-                  <div style="width:60px;height:4px;background:rgba(124,58,237,.4);border-radius:2px"></div>
-                </div>
-                <div style="aspect-ratio:9/17;position:relative;overflow:hidden">
-                  <iframe src="assets/demos/demo-glasses-tryon.html" style="border:0;width:100%;height:100%;display:block" loading="lazy"></iframe>
-                </div>
-                <div style="height:16px;background:#0a0a1a;display:flex;align-items:center;justify-content:center">
-                  <div style="width:28px;height:4px;background:rgba(255,255,255,.15);border-radius:2px"></div>
-                </div>
+            <div style="font-family:var(--mono);font-size:.46em;color:rgba(255,255,255,.22);letter-spacing:.08em;margin-top:2px">small idea · real product · 10 minutes</div>
+          </div>
+          <!-- Right: large phone mockup -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+            <div style="font-family:var(--mono);font-size:.52em;color:var(--c-hi);letter-spacing:.12em;text-transform:uppercase;background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.25);border-radius:6px;padding:4px 16px">quiz · live demo</div>
+            <!-- Phone frame — large -->
+            <div style="width:100%;max-width:340px;background:#0a0a1a;border:2.5px solid rgba(124,58,237,.5);border-radius:38px;box-shadow:0 0 70px rgba(124,58,237,.22),0 0 120px rgba(6,182,212,.08),0 28px 80px rgba(0,0,0,.65);overflow:hidden;position:relative">
+              <!-- Notch bar -->
+              <div style="height:22px;background:#0a0a1a;display:flex;align-items:center;justify-content:center">
+                <div style="width:64px;height:5px;background:rgba(124,58,237,.55);border-radius:3px"></div>
+              </div>
+              <!-- Screen -->
+              <div style="aspect-ratio:9/17;position:relative;overflow:hidden" data-no-advance="true">
+                <iframe src="assets/demos/demo-chaslet.html" style="border:0;width:100%;height:100%;display:block" loading="lazy" data-no-advance="true"></iframe>
+              </div>
+              <!-- Home indicator -->
+              <div style="height:20px;background:#0a0a1a;display:flex;align-items:center;justify-content:center">
+                <div style="width:32px;height:4px;background:rgba(255,255,255,.2);border-radius:2px"></div>
               </div>
             </div>
           </div>
-          <!-- Footer -->
-          <div style="text-align:center;font-family:var(--mono);font-size:.54em;color:rgba(255,255,255,.3);letter-spacing:.08em">small idea, real thing</div>
         </div>
       </section>
 
