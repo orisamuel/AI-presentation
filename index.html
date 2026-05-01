@@ -1957,6 +1957,70 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
+           CH03-30b — וכמובן הטרנזישנים!
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-base" data-transition="convex" data-transition-speed="fast">
+        <div class="s-statement-conic" style="opacity:.35;animation-duration:28s;animation-direction:reverse"></div>
+        <div class="ring ring-1" style="border-color:rgba(124,58,237,.1)"></div>
+        <div class="ring ring-2"></div>
+        <div class="orb" style="width:500px;height:500px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.12;animation-duration:8s"></div>
+        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:48px 80px 48px 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
+          <!-- Right col: title + text -->
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div>
+              <span class="eyebrow" style="color:var(--v-hi)">Start Frame → End Frame</span>
+              <h2 style="margin:10px 0 0;font-size:2em;line-height:1.15">וכמובן<br>הטרנזישנים!</h2>
+            </div>
+            <p style="font-size:.75em;line-height:1.8;color:rgba(255,255,255,.8)">
+              Start+End Frame היא הדרך הפשוטה לכל הסרטונים ה"מגניבים" של <strong style="color:var(--c-hi)">דברים שמשתנים ונהיים דברים אחרים</strong> —
+              פריים פתיחה + פריים סיום, ה-AI ממלא את הביניים.
+            </p>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:4px">
+              <div style="background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.3);border-radius:8px;padding:8px 18px;font-size:.58em;color:var(--v-hi);font-weight:700;font-family:var(--mono)">Start Frame</div>
+              <div style="display:flex;align-items:center;gap:6px">
+                <div style="width:28px;height:2px;background:linear-gradient(90deg,rgba(124,58,237,.6),var(--c-hi));border-radius:1px"></div>
+                <div style="font-size:.7em;color:var(--v-hi)">→</div>
+                <div style="width:28px;height:2px;background:linear-gradient(90deg,var(--v-hi),rgba(6,182,212,.6));border-radius:1px"></div>
+              </div>
+              <div style="background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.3);border-radius:8px;padding:8px 18px;font-size:.58em;color:var(--c-hi);font-weight:700;font-family:var(--mono)">End Frame</div>
+            </div>
+          </div>
+          <!-- Left col: animated start→end frame transition demo -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+            <div style="position:relative;width:100%;max-width:520px">
+              <!-- Two frames side by side with animated morphing indicator -->
+              <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;border-radius:16px;overflow:hidden;box-shadow:0 16px 60px rgba(0,0,0,.65)">
+                <!-- Start frame -->
+                <div style="position:relative;overflow:hidden">
+                  <img src="assets/demos/s-41-start.png" style="width:100%;height:200px;object-fit:cover;display:block">
+                  <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(124,58,237,.85));padding:8px;text-align:center">
+                    <span style="font-family:var(--mono);font-size:.42em;color:rgba(255,255,255,.9);font-weight:700;letter-spacing:.08em">START FRAME</span>
+                  </div>
+                </div>
+                <!-- Animated transition strip in center -->
+                <div style="width:44px;background:#0a0a1a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;overflow:hidden;position:relative">
+                  <div class="transition-sparks" style="position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(124,58,237,.3),rgba(6,182,212,.3),transparent);animation:breathe 2s ease-in-out infinite alternate"></div>
+                  <div style="font-size:1.1em;position:relative;z-index:1;animation:float 2s ease-in-out infinite">✨</div>
+                  <div style="width:2px;height:30px;background:linear-gradient(180deg,rgba(124,58,237,.8),rgba(6,182,212,.8));border-radius:1px;position:relative;z-index:1"></div>
+                  <div style="font-size:.85em;position:relative;z-index:1;color:var(--c-hi);font-weight:900">→</div>
+                </div>
+                <!-- End frame -->
+                <div style="position:relative;overflow:hidden">
+                  <img src="assets/demos/s-41-end.png" style="width:100%;height:200px;object-fit:cover;display:block">
+                  <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,182,212,.85));padding:8px;text-align:center">
+                    <span style="font-family:var(--mono);font-size:.42em;color:rgba(255,255,255,.9);font-weight:700;letter-spacing:.08em">END FRAME</span>
+                  </div>
+                </div>
+              </div>
+              <!-- AI fills the middle label -->
+              <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--violet),var(--cyan));border-radius:20px;padding:5px 16px;font-size:.5em;color:white;font-weight:700;white-space:nowrap;box-shadow:0 4px 20px rgba(124,58,237,.5)">🤖 AI ממלא את הביניים</div>
+            </div>
+            <div style="font-family:var(--mono);font-size:.44em;color:rgba(255,255,255,.28);text-align:center;letter-spacing:.05em">Suzuki Swift · Kling AI · Start+End Frame</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
            CH03-31 — ציטוט פתגם סיני + square video
       ══════════════════════════════════════════════════════ -->
       <section class="s-base" data-transition="zoom" data-transition-speed="slow" style="overflow:hidden">
@@ -1977,7 +2041,7 @@
           </div>
           <!-- Square looping video -->
           <div style="flex-shrink:0;animation:fade-up .8s .25s ease both">
-            <video src="assets/demos/s-41.mp4" data-autoplay autoplay muted loop playsinline style="width:480px;height:480px;object-fit:cover;border-radius:20px;box-shadow:0 20px 70px rgba(0,0,0,.7),0 0 0 1px rgba(6,182,212,.25)"></video>
+            <video src="assets/demos/s-42.mp4" data-autoplay autoplay muted loop playsinline style="width:480px;height:480px;object-fit:cover;border-radius:20px;box-shadow:0 20px 70px rgba(0,0,0,.7),0 0 0 1px rgba(6,182,212,.25)"></video>
           </div>
         </div>
       </section>
@@ -2003,7 +2067,7 @@
           </div>
           <div style="width:100%;max-width:980px;flex-shrink:0;position:relative;border-radius:14px;overflow:hidden;box-shadow:0 12px 50px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.25)">
             <div class="s-video-scanline" style="position:absolute;inset:0;z-index:1;pointer-events:none"></div>
-            <video src="assets/demos/s-42.mp4" data-autoplay autoplay muted loop playsinline style="width:100%;display:block;position:relative;z-index:2"></video>
+            <video src="assets/demos/s-43.mp4" data-autoplay autoplay muted loop playsinline style="width:100%;display:block;position:relative;z-index:2"></video>
           </div>
         </div>
       </section>
@@ -2036,7 +2100,7 @@
         <div class="s-video-pane">
           <div class="bg bg-dots" style="opacity:.2"></div>
           <div class="s-video-scanline"></div>
-          <video src="assets/demos/s-44.mp4" controls class="v-916" style="position:relative;z-index:2"></video>
+          <video src="assets/demos/s-45.mp4" controls class="v-916" style="position:relative;z-index:2"></video>
         </div>
       </section>
 
@@ -2051,7 +2115,7 @@
         <div class="s-video-pane">
           <div class="bg bg-dots" style="opacity:.2"></div>
           <div class="s-video-scanline"></div>
-          <video src="assets/demos/s-45.mp4" controls class="v-916" style="position:relative;z-index:2"></video>
+          <video src="assets/demos/s-46.mp4" controls class="v-916" style="position:relative;z-index:2"></video>
         </div>
       </section>
 
@@ -2065,14 +2129,14 @@
         <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:40px;padding:60px 100px;direction:rtl;z-index:2">
           <!-- Right: "before" portrait video -->
           <div style="display:flex;flex-direction:column;align-items:center;gap:12px;flex:0 0 auto">
-            <video src="assets/demos/s-44.mp4" autoplay muted loop playsinline style="height:760px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(6,182,212,.25)"></video>
+            <video src="assets/demos/s-45.mp4" autoplay muted loop playsinline style="height:760px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(6,182,212,.25)"></video>
             <div style="font-size:.42em;color:var(--muted);font-family:var(--mono)">לפני — הצילום שלכם</div>
           </div>
           <!-- Center arrow -->
           <div style="font-size:3em;color:var(--v-hi);text-shadow:0 0 24px rgba(124,58,237,.6);flex-shrink:0">→</div>
           <!-- Left: "after" portrait video -->
           <div style="display:flex;flex-direction:column;align-items:center;gap:12px;flex:0 0 auto">
-            <video src="assets/demos/s-45.mp4" autoplay muted loop playsinline style="height:760px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(124,58,237,.25)"></video>
+            <video src="assets/demos/s-46.mp4" autoplay muted loop playsinline style="height:760px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(124,58,237,.25)"></video>
             <div style="font-size:.42em;color:var(--v-hi);font-family:var(--mono)">אחרי — AI שינה הכל</div>
           </div>
         </div>
@@ -2106,7 +2170,7 @@
         <div class="s-video-pane">
           <div class="bg bg-dots" style="opacity:.2"></div>
           <div class="s-video-scanline"></div>
-          <video src="assets/demos/s-48.mp4" controls class="v-169" style="position:relative;z-index:2">
+          <video src="assets/demos/s-49.mp4" controls class="v-169" style="position:relative;z-index:2">
           </video>
         </div>
       </section>
@@ -2121,7 +2185,7 @@
         </div>
         <div class="s-video-pane">
           <div class="bg bg-dots" style="opacity:.2"></div>
-          <img src="assets/demos/s-49.png" style="width:100%;height:100%;object-fit:cover;position:relative;z-index:2;display:block">
+          <img src="assets/demos/s-50.png" style="width:100%;height:100%;object-fit:cover;position:relative;z-index:2;display:block">
         </div>
       </section>
 
@@ -2131,7 +2195,7 @@
       <section class="s-base" data-transition="fade" style="overflow:hidden">
         <div class="bg bg-dots" style="opacity:.08"></div>
         <div class="s-video-scanline" style="position:absolute;inset:0;z-index:2;pointer-events:none"></div>
-        <video src="assets/demos/s-50.mp4" controls playsinline data-no-advance style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1"></video>
+        <video src="assets/demos/s-51.mp4" controls playsinline data-no-advance style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1"></video>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
@@ -2146,7 +2210,7 @@
         <div style="position:absolute;top:50%;right:0;left:0;transform:translateY(-50%);display:grid;grid-template-columns:auto 1fr auto;gap:48px;align-items:center;padding:0 60px;direction:rtl;z-index:2">
           <!-- Right: "before" portrait video — visible immediately, plays on click 1 -->
           <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:12px">
-            <video id="vid-51a" src="assets/demos/s-51a.mp4" muted loop playsinline preload="auto" style="width:380px;height:676px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
+            <video id="vid-51a" src="assets/demos/s-52a.mp4" muted loop playsinline preload="auto" style="width:380px;height:676px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
             <div style="text-align:center;font-size:.4em;color:var(--a-hi);font-family:var(--mono)">לפני — עם הקפיצה</div>
           </div>
           <!-- Center: text -->
@@ -2161,7 +2225,7 @@
           </div>
           <!-- Left: "after" portrait video — visible immediately, plays on click 2 -->
           <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:12px">
-            <video id="vid-51b" src="assets/demos/s-51b.mp4" muted loop playsinline preload="auto" style="width:380px;height:676px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
+            <video id="vid-51b" src="assets/demos/s-52b.mp4" muted loop playsinline preload="auto" style="width:380px;height:676px;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(245,158,11,.3)"></video>
             <div style="text-align:center;font-size:.4em;color:var(--a-hi);font-family:var(--mono)">אחרי — חלק</div>
           </div>
         </div>
@@ -2213,7 +2277,7 @@
           <!-- LEFT: portrait image — hero visual -->
           <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;padding:36px 56px 36px 40px;position:relative">
             <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(245,158,11,.07) 0%,transparent 70%)"></div>
-            <img src="assets/demos/s-53.png" style="height:880px;width:auto;border-radius:20px;box-shadow:0 24px 80px rgba(0,0,0,.75),0 0 0 1px rgba(245,158,11,.18),0 0 60px rgba(245,158,11,.07);position:relative;z-index:1;display:block;animation:float 6s ease-in-out infinite">
+            <img src="assets/demos/s-54.png" style="height:880px;width:auto;border-radius:20px;box-shadow:0 24px 80px rgba(0,0,0,.75),0 0 0 1px rgba(245,158,11,.18),0 0 60px rgba(245,158,11,.07);position:relative;z-index:1;display:block;animation:float 6s ease-in-out infinite">
           </div>
         </div>
       </section>
@@ -2232,9 +2296,9 @@
           </div>
           <!-- Three videos side by side — tall and prominent, each plays on a separate click -->
           <div style="display:flex;align-items:stretch;justify-content:center;gap:32px;flex:1;min-height:0">
-            <video id="vid-54a" src="assets/demos/s-54a.mp4" muted loop playsinline preload="auto" style="height:820px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
-            <video id="vid-54b" src="assets/demos/s-54b.mp4" muted loop playsinline preload="auto" style="height:820px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
-            <video id="vid-54c" src="assets/demos/s-54c.mp4" muted loop playsinline preload="auto" style="height:820px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
+            <video id="vid-54a" src="assets/demos/s-55a.mp4" muted loop playsinline preload="auto" style="height:820px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
+            <video id="vid-54b" src="assets/demos/s-55b.mp4" muted loop playsinline preload="auto" style="height:820px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
+            <video id="vid-54c" src="assets/demos/s-55c.mp4" muted loop playsinline preload="auto" style="height:820px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
           </div>
         </div>
         <!-- Invisible play-trigger fragments -->
@@ -2259,7 +2323,7 @@
           <div style="display:flex;align-items:center;justify-content:center;gap:32px;flex:1;min-height:0;width:100%">
             <!-- RIGHT: source portrait image (always visible) -->
             <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:center">
-              <img src="assets/demos/s-55.png" style="height:700px;width:auto;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);display:block;animation:float 6s ease-in-out infinite">
+              <img src="assets/demos/s-56.png" style="height:700px;width:auto;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);display:block;animation:float 6s ease-in-out infinite">
             </div>
             <!-- MIDDLE: arrow + prompt (fragment 0) -->
             <div class="fragment" data-fragment-index="0" style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:14px">
@@ -2271,8 +2335,8 @@
             </div>
             <!-- LEFT: two result portrait videos (fragment 1) -->
             <div class="fragment" data-fragment-index="1" style="flex:0 0 auto;display:flex;align-items:center;gap:20px">
-              <video id="vid55a" src="assets/demos/s-55a.mp4" muted loop playsinline preload="auto" style="height:680px;width:auto;aspect-ratio:1108/1868;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
-              <video id="vid55b" src="assets/demos/s-55b.mp4" muted loop playsinline preload="auto" style="height:680px;width:auto;aspect-ratio:1108/1868;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
+              <video id="vid55a" src="assets/demos/s-56a.mp4" muted loop playsinline preload="auto" style="height:680px;width:auto;aspect-ratio:1108/1868;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
+              <video id="vid55b" src="assets/demos/s-56b.mp4" muted loop playsinline preload="auto" style="height:680px;width:auto;aspect-ratio:1108/1868;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.7),0 0 0 1px rgba(245,158,11,.3);flex-shrink:0"></video>
             </div>
           </div>
         </div>
@@ -2364,7 +2428,7 @@
            CH05 — SLIDE 60: לתת לAI לדבר — קריין גולל
       ══════════════════════════════════════════════════════ -->
       <section class="s-base" data-transition="fade" data-chapter-key="sound">
-        <audio data-autoplay preload="auto" src="assets/demos/s-60.mp3"></audio>
+        <audio data-autoplay preload="auto" src="assets/demos/s-61.mp3"></audio>
         <div class="bg bg-grid" style="opacity:.3"></div>
         <div class="orb" style="width:500px;height:500px;top:30%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(139,92,246,.25) 0%,transparent 70%);animation-duration:9s"></div>
         <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;padding:56px 140px 40px;z-index:1">
@@ -2431,7 +2495,7 @@
         <div class="s-video-pane" data-no-advance="true">
           <div class="bg bg-grid" style="opacity:.3"></div>
           <div class="s-video-scanline"></div>
-          <video src="assets/demos/s-62.mp4" preload="auto" playsinline style="aspect-ratio:1684/720;width:100%;height:auto;max-height:100%;object-fit:cover;display:block"></video>
+          <video src="assets/demos/s-63.mp4" preload="auto" playsinline style="aspect-ratio:1684/720;width:100%;height:auto;max-height:100%;object-fit:cover;display:block"></video>
         </div>
       </section>
 
@@ -2441,11 +2505,11 @@
       <section class="s-base" data-transition="fade" data-chapter-key="sound">
         <div class="bg bg-dots" style="opacity:.2"></div>
         <div class="orb c" style="width:500px;height:500px;top:50%;right:-80px;transform:translateY(-50%);opacity:.18;animation-duration:7s"></div>
-        <audio id="sfx63a" src="assets/demos/s-63a.mp3" preload="auto"></audio>
-        <audio id="sfx63b" src="assets/demos/s-63b.mp3" preload="auto"></audio>
-        <audio id="sfx63c" src="assets/demos/s-63c.mp3" preload="auto"></audio>
-        <audio id="sfx63d" src="assets/demos/s-63d.mp3" preload="auto"></audio>
-        <audio id="sfx63e" src="assets/demos/s-63e.mp3" preload="auto"></audio>
+        <audio id="sfx63a" src="assets/demos/s-64a.mp3" preload="auto"></audio>
+        <audio id="sfx63b" src="assets/demos/s-64b.mp3" preload="auto"></audio>
+        <audio id="sfx63c" src="assets/demos/s-64c.mp3" preload="auto"></audio>
+        <audio id="sfx63d" src="assets/demos/s-64d.mp3" preload="auto"></audio>
+        <audio id="sfx63e" src="assets/demos/s-64e.mp3" preload="auto"></audio>
         <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 120px;gap:44px;z-index:1">
           <div style="text-align:center">
             <div class="chip" style="background:rgba(6,182,212,.12);border-color:rgba(6,182,212,.3);color:#67e8f9;margin-bottom:.8em">🔊 ElevenLabs · Sound Effects</div>
@@ -2489,7 +2553,7 @@
         <div class="s-video-pane">
           <div class="bg bg-grid" style="opacity:.3"></div>
           <div class="s-video-scanline"></div>
-          <video class="v-916" src="assets/demos/s-65.mp4" preload="auto" playsinline></video>
+          <video class="v-916" src="assets/demos/s-66.mp4" preload="auto" playsinline></video>
         </div>
       </section>
 
@@ -2509,7 +2573,7 @@
           </div>
           <!-- video — left side in RTL (second in DOM), fills remaining width -->
           <div style="flex:1;display:flex;align-items:center;justify-content:center;height:100%;overflow:hidden" data-no-advance="true">
-            <video src="assets/demos/s-66.mp4" preload="auto" playsinline style="width:100%;height:auto;display:block"></video>
+            <video src="assets/demos/s-67.mp4" preload="auto" playsinline style="width:100%;height:auto;display:block"></video>
           </div>
         </div>
       </section>
@@ -2540,11 +2604,11 @@
           <div style="display:flex;justify-content:center;gap:32px;flex:1;min-height:0;align-items:center">
             <div style="border-radius:14px;overflow:hidden;position:relative;background:rgba(0,0,0,.3);border:1px solid rgba(244,63,94,.18);height:100%;aspect-ratio:9/16;max-height:100%" data-no-advance="true">
               <div style="position:absolute;top:10px;right:12px;z-index:2;font-size:.38em;font-weight:700;color:#f87171;background:rgba(0,0,0,.6);padding:4px 12px;border-radius:6px">לפני</div>
-              <video id="vid67a" src="assets/demos/s-67a.mp4" preload="auto" playsinline onclick="var b=document.getElementById('vid67b');b.pause();b.currentTime=0;this.paused?this.play():this.pause()" style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block"></video>
+              <video id="vid67a" src="assets/demos/s-68a.mp4" preload="auto" playsinline onclick="var b=document.getElementById('vid67b');b.pause();b.currentTime=0;this.paused?this.play():this.pause()" style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block"></video>
             </div>
             <div style="border-radius:14px;overflow:hidden;position:relative;background:rgba(0,0,0,.3);border:1px solid rgba(16,185,129,.18);height:100%;aspect-ratio:9/16;max-height:100%" data-no-advance="true">
               <div style="position:absolute;top:10px;right:12px;z-index:2;font-size:.38em;font-weight:700;color:#34d399;background:rgba(0,0,0,.6);padding:4px 12px;border-radius:6px">אחרי</div>
-              <video id="vid67b" src="assets/demos/s-67b.mp4" preload="auto" playsinline onclick="var a=document.getElementById('vid67a');a.pause();a.currentTime=0;this.paused?this.play():this.pause()" style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block"></video>
+              <video id="vid67b" src="assets/demos/s-68b.mp4" preload="auto" playsinline onclick="var a=document.getElementById('vid67a');a.pause();a.currentTime=0;this.paused?this.play():this.pause()" style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block"></video>
             </div>
           </div>
         </div>
@@ -2573,7 +2637,7 @@
       <section class="s-base" data-transition="slide">
         <div class="orb rose" style="width:600px;height:600px;top:35%;left:25%;transform:translate(-50%,-50%);opacity:.18;animation-duration:9s"></div>
         <div class="orb" style="width:400px;height:400px;top:65%;left:75%;transform:translate(-50%,-50%);opacity:.12;animation-duration:7s;animation-delay:-4s"></div>
-        <img src="assets/demos/s-69-lipsync.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6" />
+        <img src="assets/demos/s-70-lipsync.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6" />
         <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,5,14,.28) 0%,rgba(5,5,14,.72) 100%)"></div>
         <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 120px;gap:44px;direction:rtl">
           <div style="text-align:center">
@@ -2618,7 +2682,7 @@
           <div style="flex:0 0 22%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:16px;padding:28px 16px;border-left:1px solid rgba(255,255,255,.07)">
             <!-- Input image — fills column width, square -->
             <div style="width:calc(100% - 8px);aspect-ratio:1961/1536;border-radius:18px;overflow:hidden;box-shadow:0 0 36px rgba(124,58,237,.22),0 10px 44px rgba(0,0,0,.6);border:1.5px solid rgba(124,58,237,.3);flex-shrink:0">
-              <img src="assets/demos/s-70.png" style="width:100%;height:100%;object-fit:cover;display:block" />
+              <img src="assets/demos/s-71.png" style="width:100%;height:100%;object-fit:cover;display:block" />
             </div>
             <!-- Premium + ring -->
             <div style="width:48px;height:48px;border-radius:50%;background:conic-gradient(from 0deg,#7c3aed,#06b6d4,#7c3aed);padding:2.5px;box-shadow:0 0 24px rgba(124,58,237,.7),0 0 48px rgba(6,182,212,.3);flex-shrink:0">
@@ -2641,29 +2705,29 @@
                 </div>
               </div>
               <svg viewBox="0 0 110 44" preserveAspectRatio="none" style="width:100%;flex:1;display:block;min-height:0">
-                <defs><linearGradient id="wv-s70" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#06b6d4" stop-opacity="0.45"/><stop offset="100%" stop-color="#a855f7"/></linearGradient></defs>
-                <rect x="0" y="31" width="3" height="13" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="5" y="20" width="3" height="24" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="10" y="11" width="3" height="33" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="15" y="26" width="3" height="18" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="20" y="7" width="3" height="37" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="25" y="18" width="3" height="26" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="30" y="2" width="3" height="42" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="35" y="13" width="3" height="31" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="40" y="24" width="3" height="20" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="45" y="9" width="3" height="35" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="50" y="5" width="3" height="39" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="55" y="22" width="3" height="22" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="60" y="15" width="3" height="29" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="65" y="0" width="3" height="44" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="70" y="12" width="3" height="32" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="75" y="23" width="3" height="21" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="80" y="10" width="3" height="34" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="85" y="4" width="3" height="40" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="90" y="20" width="3" height="24" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="95" y="26" width="3" height="18" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="100" y="14" width="3" height="30" rx="1.5" fill="url(#wv-s70)"/>
-                <rect x="105" y="21" width="3" height="23" rx="1.5" fill="url(#wv-s70)"/>
+                <defs><linearGradient id="wv-s71" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#06b6d4" stop-opacity="0.45"/><stop offset="100%" stop-color="#a855f7"/></linearGradient></defs>
+                <rect x="0" y="31" width="3" height="13" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="5" y="20" width="3" height="24" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="10" y="11" width="3" height="33" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="15" y="26" width="3" height="18" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="20" y="7" width="3" height="37" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="25" y="18" width="3" height="26" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="30" y="2" width="3" height="42" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="35" y="13" width="3" height="31" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="40" y="24" width="3" height="20" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="45" y="9" width="3" height="35" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="50" y="5" width="3" height="39" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="55" y="22" width="3" height="22" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="60" y="15" width="3" height="29" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="65" y="0" width="3" height="44" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="70" y="12" width="3" height="32" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="75" y="23" width="3" height="21" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="80" y="10" width="3" height="34" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="85" y="4" width="3" height="40" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="90" y="20" width="3" height="24" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="95" y="26" width="3" height="18" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="100" y="14" width="3" height="30" rx="1.5" fill="url(#wv-s71)"/>
+                <rect x="105" y="21" width="3" height="23" rx="1.5" fill="url(#wv-s71)"/>
               </svg>
               <div style="display:flex;justify-content:space-between;margin-top:8px;direction:ltr">
                 <span style="font-size:.44em;color:rgba(255,255,255,.32);font-family:var(--mono)">0:00</span>
@@ -2676,13 +2740,13 @@
           <div style="flex:0 0 auto;display:flex;align-items:center;padding:0 16px">
             <svg viewBox="0 0 90 32" style="width:90px;height:32px;overflow:visible;filter:drop-shadow(0 0 8px rgba(168,85,247,.95)) drop-shadow(0 0 22px rgba(124,58,237,.55))">
               <defs>
-                <linearGradient id="ag-s70" x1="1" y1="0" x2="0" y2="0">
+                <linearGradient id="ag-s71" x1="1" y1="0" x2="0" y2="0">
                   <stop offset="0%" stop-color="#7c3aed" stop-opacity="0"/>
                   <stop offset="45%" stop-color="#9333ea" stop-opacity="0.8"/>
                   <stop offset="100%" stop-color="#ede9fe"/>
                 </linearGradient>
               </defs>
-              <line x1="90" y1="16" x2="28" y2="16" stroke="url(#ag-s70)" stroke-width="3" stroke-linecap="round"/>
+              <line x1="90" y1="16" x2="28" y2="16" stroke="url(#ag-s71)" stroke-width="3" stroke-linecap="round"/>
               <polygon points="32,6 8,16 32,26" fill="#ede9fe"/>
             </svg>
           </div>
@@ -2691,16 +2755,9 @@
           <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:22px;position:relative">
             <div class="orb" style="width:380px;height:380px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.08;pointer-events:none;animation-duration:10s"></div>
             <div style="width:100%;aspect-ratio:4/3;max-height:calc(100% - 44px);border-radius:22px;overflow:hidden;border:2px solid rgba(124,58,237,.55);box-shadow:0 0 60px rgba(124,58,237,.3),0 0 120px rgba(124,58,237,.12);position:relative;z-index:1">
-              <video id="vid-s70a" src="assets/demos/s-70a.mp4" preload="auto" playsinline data-no-advance="true"
+              <video id="vid-s71a" src="assets/demos/s-71a.mp4" preload="auto" playsinline data-no-advance="true"
                 style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block"
-                onclick="this.paused?this.play():this.pause()"
-                onplay="document.getElementById('pov-s70a').style.opacity='0'"
-                onpause="document.getElementById('pov-s70a').style.opacity='1'"></video>
-              <div id="pov-s70a" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.3);transition:opacity .3s;pointer-events:none">
-                <div style="width:76px;height:76px;border-radius:50%;background:rgba(124,58,237,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 0 48px rgba(124,58,237,.85),0 0 96px rgba(124,58,237,.3)">
-                  <svg viewBox="0 0 24 24" style="width:34px;height:34px;fill:white;margin-left:4px"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-              </div>
+                onclick="this.paused?this.play():this.pause()"></video>
             </div>
           </div>
         </div>
@@ -2727,7 +2784,7 @@
           <!-- Col B — MIDDLE: Pipeline inputs — source video + audio -->
           <div style="flex:0 0 22%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:16px;padding:28px 16px;border-left:1px solid rgba(255,255,255,.07)">
             <!-- Source video — fills column width, capped height -->
-            <video src="assets/demos/s-71.mp4" autoplay muted loop playsinline
+            <video src="assets/demos/s-72.mp4" autoplay muted loop playsinline
               style="width:calc(100% - 8px);aspect-ratio:9/16;max-height:52%;object-fit:cover;border-radius:18px;display:block;box-shadow:0 0 40px rgba(6,182,212,.25),0 12px 48px rgba(0,0,0,.65);border:1.5px solid rgba(6,182,212,.3);flex-shrink:0"></video>
             <!-- Premium + ring (cyan) -->
             <div style="width:52px;height:52px;border-radius:50%;background:conic-gradient(from 0deg,#06b6d4,#7c3aed,#06b6d4);padding:2.5px;box-shadow:0 0 24px rgba(6,182,212,.7),0 0 48px rgba(124,58,237,.3);flex-shrink:0">
@@ -2750,29 +2807,29 @@
                 </div>
               </div>
               <svg viewBox="0 0 110 44" preserveAspectRatio="none" style="width:100%;flex:1;display:block;min-height:0">
-                <defs><linearGradient id="wv-s71" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.45"/><stop offset="100%" stop-color="#22d3ee"/></linearGradient></defs>
-                <rect x="0" y="31" width="3" height="13" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="5" y="18" width="3" height="26" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="10" y="8" width="3" height="36" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="15" y="23" width="3" height="21" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="20" y="4" width="3" height="40" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="25" y="16" width="3" height="28" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="30" y="0" width="3" height="44" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="35" y="14" width="3" height="30" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="40" y="26" width="3" height="18" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="45" y="7" width="3" height="37" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="50" y="3" width="3" height="41" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="55" y="20" width="3" height="24" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="60" y="13" width="3" height="31" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="65" y="1" width="3" height="43" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="70" y="10" width="3" height="34" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="75" y="22" width="3" height="22" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="80" y="9" width="3" height="35" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="85" y="5" width="3" height="39" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="90" y="19" width="3" height="25" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="95" y="27" width="3" height="17" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="100" y="12" width="3" height="32" rx="1.5" fill="url(#wv-s71)"/>
-                <rect x="105" y="22" width="3" height="22" rx="1.5" fill="url(#wv-s71)"/>
+                <defs><linearGradient id="wv-s72" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.45"/><stop offset="100%" stop-color="#22d3ee"/></linearGradient></defs>
+                <rect x="0" y="31" width="3" height="13" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="5" y="18" width="3" height="26" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="10" y="8" width="3" height="36" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="15" y="23" width="3" height="21" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="20" y="4" width="3" height="40" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="25" y="16" width="3" height="28" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="30" y="0" width="3" height="44" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="35" y="14" width="3" height="30" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="40" y="26" width="3" height="18" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="45" y="7" width="3" height="37" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="50" y="3" width="3" height="41" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="55" y="20" width="3" height="24" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="60" y="13" width="3" height="31" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="65" y="1" width="3" height="43" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="70" y="10" width="3" height="34" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="75" y="22" width="3" height="22" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="80" y="9" width="3" height="35" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="85" y="5" width="3" height="39" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="90" y="19" width="3" height="25" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="95" y="27" width="3" height="17" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="100" y="12" width="3" height="32" rx="1.5" fill="url(#wv-s72)"/>
+                <rect x="105" y="22" width="3" height="22" rx="1.5" fill="url(#wv-s72)"/>
               </svg>
               <div style="display:flex;justify-content:space-between;margin-top:8px;direction:ltr">
                 <span style="font-size:.44em;color:rgba(255,255,255,.32);font-family:var(--mono)">0:00</span>
@@ -2785,13 +2842,13 @@
           <div style="flex:0 0 auto;display:flex;align-items:center;padding:0 16px">
             <svg viewBox="0 0 90 32" style="width:90px;height:32px;overflow:visible;filter:drop-shadow(0 0 8px rgba(34,211,238,.95)) drop-shadow(0 0 22px rgba(6,182,212,.55))">
               <defs>
-                <linearGradient id="ag-s71" x1="1" y1="0" x2="0" y2="0">
+                <linearGradient id="ag-s72" x1="1" y1="0" x2="0" y2="0">
                   <stop offset="0%" stop-color="#06b6d4" stop-opacity="0"/>
                   <stop offset="45%" stop-color="#06b6d4" stop-opacity="0.8"/>
                   <stop offset="100%" stop-color="#cffafe"/>
                 </linearGradient>
               </defs>
-              <line x1="90" y1="16" x2="28" y2="16" stroke="url(#ag-s71)" stroke-width="3" stroke-linecap="round"/>
+              <line x1="90" y1="16" x2="28" y2="16" stroke="url(#ag-s72)" stroke-width="3" stroke-linecap="round"/>
               <polygon points="32,6 8,16 32,26" fill="#cffafe"/>
             </svg>
           </div>
@@ -2800,16 +2857,9 @@
           <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:22px;position:relative">
             <div class="orb cyan" style="width:380px;height:380px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.07;pointer-events:none;animation-duration:9s"></div>
             <div style="height:calc(100% - 44px);aspect-ratio:9/16;border-radius:22px;overflow:hidden;border:2px solid rgba(6,182,212,.55);box-shadow:0 0 60px rgba(6,182,212,.28),0 0 120px rgba(6,182,212,.1);position:relative;z-index:1">
-              <video id="vid-s71a" src="assets/demos/s-71a.mp4" preload="auto" playsinline data-no-advance="true"
+              <video id="vid-s72a" src="assets/demos/s-72a.mp4" preload="auto" playsinline data-no-advance="true"
                 style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block"
-                onclick="this.paused?this.play():this.pause()"
-                onplay="document.getElementById('pov-s71a').style.opacity='0'"
-                onpause="document.getElementById('pov-s71a').style.opacity='1'"></video>
-              <div id="pov-s71a" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.3);transition:opacity .3s;pointer-events:none">
-                <div style="width:76px;height:76px;border-radius:50%;background:rgba(6,182,212,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 0 48px rgba(6,182,212,.8),0 0 96px rgba(6,182,212,.28)">
-                  <svg viewBox="0 0 24 24" style="width:34px;height:34px;fill:white;margin-left:4px"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-              </div>
+                onclick="this.paused?this.play():this.pause()"></video>
             </div>
           </div>
         </div>
@@ -2828,16 +2878,9 @@
           <div class="bg bg-grid" style="opacity:.2"></div>
           <div class="s-video-scanline"></div>
           <div style="height:90%;aspect-ratio:9/16;border-radius:18px;overflow:hidden;border:2px solid rgba(245,158,11,.4);box-shadow:0 0 50px rgba(245,158,11,.18),0 0 100px rgba(245,158,11,.07);position:relative">
-            <video id="vid-s72" src="assets/demos/s-72.mp4" preload="auto" playsinline data-no-advance="true"
+            <video id="vid-s73" src="assets/demos/s-73.mp4" preload="auto" playsinline data-no-advance="true"
               style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block"
-              onclick="this.paused?this.play():this.pause()"
-              onplay="document.getElementById('pov-s72').style.opacity='0'"
-              onpause="document.getElementById('pov-s72').style.opacity='1'"></video>
-            <div id="pov-s72" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.38);transition:opacity .3s;pointer-events:none">
-              <div style="width:64px;height:64px;border-radius:50%;background:rgba(245,158,11,.9);display:flex;align-items:center;justify-content:center;box-shadow:0 0 32px rgba(245,158,11,.6)">
-                <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:white;margin-left:3px"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
+              onclick="this.paused?this.play():this.pause()"></video>
           </div>
         </div>
       </section>
@@ -2989,7 +3032,7 @@
           <!-- Left: moodboard image -->
           <div style="display:flex;flex-direction:column;gap:12px">
             <div style="flex:1;min-height:0;border-radius:16px;overflow:hidden;border:1px solid rgba(6,182,212,.2);position:relative">
-              <img src="assets/demos/s-75-moodboard.png" style="width:100%;height:100%;object-fit:cover;display:block" alt="Hotel moodboard">
+              <img src="assets/demos/s-76-moodboard.png" style="width:100%;height:100%;object-fit:cover;display:block" alt="Hotel moodboard">
               <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(5,5,14,.8) 100%)"></div>
               <div style="position:absolute;top:14px;right:14px;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);border:1px solid rgba(6,182,212,.3);border-radius:6px;padding:5px 12px;font-size:.6em;color:var(--c-hi);font-weight:600">🏨 Moodboard</div>
             </div>
@@ -3101,27 +3144,27 @@
           <!-- Storyboard strip: 5 key shots — fills the lower third -->
           <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;min-height:0">
             <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.12);position:relative;height:100%">
-              <img src="assets/demos/s-76-shot-a.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9">
+              <img src="assets/demos/s-77-shot-a.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9">
               <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(5,5,14,.8) 100%)"></div>
               <div style="position:absolute;bottom:7px;right:9px;font-family:var(--mono);font-size:.34em;color:rgba(255,255,255,.8)">01 — Hero Establishing</div>
             </div>
             <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.12);position:relative;height:100%">
-              <img src="assets/demos/s-76-shot-d.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9">
+              <img src="assets/demos/s-77-shot-d.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9">
               <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(5,5,14,.8) 100%)"></div>
               <div style="position:absolute;bottom:7px;right:9px;font-family:var(--mono);font-size:.34em;color:rgba(255,255,255,.8)">04 — Guest Entry</div>
             </div>
             <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.12);position:relative;height:100%">
-              <img src="assets/demos/s-76-shot-b.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9">
+              <img src="assets/demos/s-77-shot-b.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9">
               <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(5,5,14,.8) 100%)"></div>
               <div style="position:absolute;bottom:7px;right:9px;font-family:var(--mono);font-size:.34em;color:rgba(255,255,255,.8)">06 — Surface Shot</div>
             </div>
             <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.12);position:relative;height:100%">
-              <img src="assets/demos/s-76-shot-c.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9">
+              <img src="assets/demos/s-77-shot-c.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9">
               <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(5,5,14,.8) 100%)"></div>
               <div style="position:absolute;bottom:7px;right:9px;font-family:var(--mono);font-size:.34em;color:rgba(255,255,255,.8)">08 — Underwater Beauty</div>
             </div>
             <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(245,158,11,.2);position:relative;height:100%">
-              <img src="assets/demos/s-76-shot-e.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9">
+              <img src="assets/demos/s-77-shot-e.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.9">
               <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(5,5,14,.8) 100%)"></div>
               <div style="position:absolute;bottom:7px;right:9px;font-family:var(--mono);font-size:.34em;color:var(--a-hi)">10 — Final Hero Shot</div>
             </div>
@@ -3176,7 +3219,7 @@
               <!-- Storyboard reference strip -->
               <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:7px 12px;flex-shrink:0">
                 <div style="flex:0 0 84px;height:47px;border-radius:5px;overflow:hidden;border:1px solid rgba(255,255,255,.12)">
-                  <img src="assets/demos/s-76-shot-a.png" style="width:100%;height:100%;object-fit:cover;display:block">
+                  <img src="assets/demos/s-77-shot-a.png" style="width:100%;height:100%;object-fit:cover;display:block">
                 </div>
                 <div style="flex:1">
                   <div style="font-family:var(--mono);font-size:.45em;color:rgba(255,255,255,.38);margin-bottom:2px">Storyboard · Shot 01</div>
@@ -3187,14 +3230,10 @@
               </div>
               <!-- Kling output: video (click to play/pause) -->
               <div style="flex:1;position:relative;border-radius:12px;overflow:hidden;border:1px solid rgba(124,58,237,.3);min-height:0">
-                <video src="assets/demos/s-77-shot01.mp4" poster="assets/demos/s-77-output.png"
+                <video src="assets/demos/s-78-shot01.mp4" poster="assets/demos/s-78-output.png"
                   data-no-advance="true" muted playsinline
-                  onclick="this.paused?this.play():this.pause();this.nextElementSibling.style.opacity=this.paused?'1':'0'"
+                  onclick="this.paused?this.play():this.pause()"
                   style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video>
-                <!-- Play overlay — fades out when playing -->
-                <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(5,5,14,.25);pointer-events:none;transition:opacity .3s">
-                  <div style="width:54px;height:54px;background:rgba(124,58,237,.55);backdrop-filter:blur(10px);border:2px solid rgba(124,58,237,.8);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px rgba(124,58,237,.4)"><span style="font-size:1.4em;margin-right:-3px">▶</span></div>
-                </div>
                 <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(5,5,14,.6) 100%);pointer-events:none"></div>
                 <div style="position:absolute;top:10px;right:12px;background:rgba(124,58,237,.22);backdrop-filter:blur(10px);border:1px solid rgba(124,58,237,.4);border-radius:20px;padding:5px 14px;font-size:.54em;color:var(--v-hi);font-weight:700;pointer-events:none">🎬 Kling AI</div>
                 <div style="position:absolute;bottom:10px;right:12px;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:4px 10px;font-size:.51em;color:rgba(255,255,255,.8);font-weight:600;pointer-events:none">Shot 01 · Hero Establishing</div>
@@ -3577,7 +3616,7 @@
           </div>
           <!-- Right: image -->
           <div style="position:relative;height:100%;max-height:440px;border-radius:16px;overflow:hidden;border:1px solid rgba(124,58,237,.25);box-shadow:0 0 60px rgba(124,58,237,.12)">
-            <img src="assets/demos/s-83-idea.png" style="width:100%;height:100%;object-fit:cover;display:block">
+            <img src="assets/demos/s-84-idea.png" style="width:100%;height:100%;object-fit:cover;display:block">
             <div style="position:absolute;inset:0;background:linear-gradient(225deg,transparent 50%,rgba(5,5,14,.65) 100%)"></div>
             <div style="position:absolute;bottom:16px;right:16px;font-family:var(--mono);font-size:.46em;color:rgba(255,255,255,.38);text-align:right;line-height:1.5">idea → prompt → Claude<br><span style="color:var(--v-hi)">prototype in minutes</span></div>
           </div>
@@ -3588,57 +3627,41 @@
            CH09 — S84: דבר אחד שלא היינו בונים פעם
       ══════════════════════════════════════════════════════ -->
       <section class="s-base" data-transition="slide" data-chapter-key="code">
-        <div class="orb" style="width:600px;height:600px;top:50%;left:30%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(124,58,237,.28) 0%,rgba(6,182,212,.1) 55%,transparent 72%);opacity:.45;animation-duration:10s"></div>
-        <div class="orb" style="width:380px;height:380px;top:30%;left:80%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(16,185,129,.18) 0%,transparent 70%);opacity:.35;animation-duration:9s;animation-delay:-4s"></div>
-        <div style="position:absolute;inset:0;z-index:1;direction:rtl;padding:36px 80px 28px 60px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center">
-          <!-- Left: context & text -->
-          <div style="display:flex;flex-direction:column;gap:18px">
-            <div>
-              <span class="eyebrow" style="color:var(--v-hi)">Claude · Live Demo</span>
-              <h2 style="margin:8px 0 0;font-size:1.52em;line-height:1.15">דבר אחד שלא היינו בונים פעם</h2>
-              <p style="font-size:.64em;color:rgba(255,255,255,.48);margin:6px 0 0;line-height:1.55">רעיון קטן, טיפשי במידה הנכונה — מהסוג שאפשר פתאום להרים ב-10 דקות עם Claude.</p>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:12px">
-              <div style="display:flex;gap:11px;align-items:flex-start">
-                <span style="font-size:.8em;flex-shrink:0;line-height:1.2">🌿</span>
-                <div>
-                  <div style="font-size:.59em;font-weight:700;color:rgba(255,255,255,.9)">כוסברה או פטרוזיליה?</div>
-                  <div style="font-size:.52em;color:rgba(255,255,255,.44);line-height:1.55;margin-top:3px">מיקרוסייט שמזמין לנחש — ומגלה שגם אנחנו לא באמת יודעים. ווב אפ שלם שנבנה מפרומפט אחד.</div>
-                </div>
-              </div>
-              <div style="display:flex;gap:11px;align-items:flex-start">
-                <span style="font-size:.8em;flex-shrink:0;line-height:1.2">⚡</span>
-                <div>
-                  <div style="font-size:.59em;font-weight:700;color:rgba(255,255,255,.9)">מה לקח לבנות אותו?</div>
-                  <div style="font-size:.52em;color:rgba(255,255,255,.44);line-height:1.55;margin-top:3px">עיצוב, אנימציה, לוגיקה וטקסט — הכל יחד, בבקשה אחת. זו בדיוק הנקודה.</div>
-                </div>
-              </div>
-              <div style="display:flex;gap:11px;align-items:flex-start">
-                <span style="font-size:.8em;flex-shrink:0;line-height:1.2">🎯</span>
-                <div>
-                  <div style="font-size:.59em;font-weight:700;color:rgba(255,255,255,.9)">למה זה חשוב?</div>
-                  <div style="font-size:.52em;color:rgba(255,255,255,.44);line-height:1.55;margin-top:3px">כי עכשיו אפשר לבנות "דוגמה חיה" לקמפיין לפני שמישהו אישר תקציב. זה משנה שיחות.</div>
-                </div>
-              </div>
-            </div>
-            <div style="font-family:var(--mono);font-size:.46em;color:rgba(255,255,255,.22);letter-spacing:.08em;margin-top:2px">small idea · real product · 10 minutes</div>
+        <div class="orb" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(124,58,237,.28) 0%,rgba(6,182,212,.1) 55%,transparent 72%);opacity:.4;animation-duration:10s"></div>
+        <div class="orb" style="width:350px;height:350px;top:20%;left:85%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(16,185,129,.18) 0%,transparent 70%);opacity:.3;animation-duration:9s;animation-delay:-4s"></div>
+        <div style="position:absolute;inset:0;z-index:1;direction:rtl;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:28px 60px">
+          <!-- Title only -->
+          <div style="text-align:center">
+            <span class="eyebrow" style="color:var(--v-hi)">Claude · Live Demo</span>
+            <h2 style="margin:8px 0 0;font-size:1.8em;line-height:1.1">דבר אחד שלא היינו בונים פעם</h2>
           </div>
-          <!-- Right: large phone mockup -->
-          <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
-            <div style="font-family:var(--mono);font-size:.52em;color:var(--c-hi);letter-spacing:.12em;text-transform:uppercase;background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.25);border-radius:6px;padding:4px 16px">quiz · live demo</div>
-            <!-- Phone frame — large -->
-            <div style="width:100%;max-width:340px;background:#0a0a1a;border:2.5px solid rgba(124,58,237,.5);border-radius:38px;box-shadow:0 0 70px rgba(124,58,237,.22),0 0 120px rgba(6,182,212,.08),0 28px 80px rgba(0,0,0,.65);overflow:hidden;position:relative">
-              <!-- Notch bar -->
-              <div style="height:22px;background:#0a0a1a;display:flex;align-items:center;justify-content:center">
-                <div style="width:64px;height:5px;background:rgba(124,58,237,.55);border-radius:3px"></div>
+          <!-- Big phone mockup — centered, much larger -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:10px;flex:1;min-height:0">
+            <div style="font-family:var(--mono);font-size:.5em;color:var(--c-hi);letter-spacing:.12em;text-transform:uppercase;background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.25);border-radius:6px;padding:4px 16px;flex-shrink:0">🌿 כוסברה או פטרוזיליה? · live demo</div>
+            <!-- Phone frame — realistic, much bigger -->
+            <div style="height:calc(100% - 36px);max-height:820px;aspect-ratio:9/19.5;background:linear-gradient(145deg,#1a1a2e,#0a0a1a);border:3px solid rgba(124,58,237,.6);border-radius:46px;box-shadow:0 0 80px rgba(124,58,237,.35),0 0 160px rgba(6,182,212,.12),0 40px 100px rgba(0,0,0,.75),inset 0 1px 1px rgba(255,255,255,.08);overflow:hidden;position:relative;flex-shrink:0;display:flex;flex-direction:column">
+              <!-- Dynamic island / camera -->
+              <div style="position:absolute;top:12px;left:50%;transform:translateX(-50%);width:100px;height:30px;background:#0a0a1a;border-radius:20px;z-index:10;border:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;gap:8px">
+                <div style="width:10px;height:10px;border-radius:50%;background:rgba(124,58,237,.4);border:1px solid rgba(124,58,237,.6)"></div>
+                <div style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.15)"></div>
               </div>
-              <!-- Screen -->
-              <div style="aspect-ratio:9/17;position:relative;overflow:hidden" data-no-advance="true">
-                <iframe src="assets/demos/demo-chaslet.html" style="border:0;width:100%;height:100%;display:block" loading="lazy" data-no-advance="true"></iframe>
+              <!-- Status bar -->
+              <div style="height:52px;background:#0a0a1a;display:flex;align-items:flex-end;justify-content:space-between;padding:0 18px 8px;flex-shrink:0">
+                <span style="font-size:.35em;color:rgba(255,255,255,.5);font-family:var(--mono)">9:41</span>
+                <div style="display:flex;gap:4px;align-items:center">
+                  <div style="width:4px;height:4px;background:rgba(255,255,255,.4);border-radius:50%"></div>
+                  <div style="width:4px;height:4px;background:rgba(255,255,255,.4);border-radius:50%"></div>
+                  <div style="width:4px;height:4px;background:rgba(255,255,255,.4);border-radius:50%"></div>
+                  <div style="width:16px;height:8px;background:rgba(255,255,255,.3);border-radius:2px;margin-right:2px"></div>
+                </div>
+              </div>
+              <!-- Screen with iframe -->
+              <div style="flex:1;position:relative;overflow:hidden;min-height:0" data-no-advance="true">
+                <iframe src="assets/demos/demo-chaslet.html" style="border:0;width:100%;height:100%;display:block;position:absolute;inset:0" loading="lazy" data-no-advance="true"></iframe>
               </div>
               <!-- Home indicator -->
-              <div style="height:20px;background:#0a0a1a;display:flex;align-items:center;justify-content:center">
-                <div style="width:32px;height:4px;background:rgba(255,255,255,.2);border-radius:2px"></div>
+              <div style="height:28px;background:#0a0a1a;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                <div style="width:120px;height:5px;background:rgba(255,255,255,.25);border-radius:3px"></div>
               </div>
             </div>
           </div>
@@ -3673,13 +3696,15 @@
         <div class="ring ring-3"></div>
         <div class="s-accent-h top"></div>
         <div class="s-accent-h bottom"></div>
-        <div class="s-statement-inner">
+        <div class="s-statement-inner" style="gap:.35em">
           <span class="eyebrow amber" style="animation:fade-up .6s ease both;font-size:.52em">לפני שאתם שואלים "האם AI יכול..."</span>
-          <span class="s-statement-word outline" style="font-size:4.5em !important;animation-delay:.05s">תניחו</span>
-          <span class="s-statement-word g" style="font-size:4.5em !important;animation-delay:.12s">שהתשובה כן</span>
-          <span class="s-statement-word" style="font-size:2.8em !important;animation-delay:.2s;color:rgba(240,240,248,.65)">
-            90% מהפעמים — כן, כבר.<br>
+          <span class="s-statement-word outline" style="font-size:3.8em !important;animation-delay:.05s">תניחו</span>
+          <span class="s-statement-word g" style="font-size:3.8em !important;animation-delay:.12s">שהתשובה היא כן</span>
+          <span class="s-statement-word" style="font-size:2.5em !important;animation-delay:.2s;color:rgba(240,240,248,.85)">
             <strong style="color:var(--white)">חפשו איך. לא אם.</strong>
+          </span>
+          <span class="s-statement-word" style="font-size:1.4em !important;animation-delay:.3s;color:rgba(240,240,248,.5);font-weight:400;line-height:1.5">
+            ותשתמשו ב-AI כדי שיסביר לכם<br>איך לעבוד עם AI
           </span>
         </div>
       </section>
@@ -3734,6 +3759,35 @@
           </div>
         </div>
         <div class="s-text-ghost">!</div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           S89 — כמה מילים על קלוד קוד
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" data-chapter-key="surprise">
+        <div class="bg bg-grid"></div>
+        <div class="orb" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:6s;opacity:.3"></div>
+        <div class="orb cyan" style="width:380px;height:380px;top:30%;left:72%;transform:translate(-50%,-50%);animation-duration:8s;animation-delay:-3s;opacity:.25"></div>
+        <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%);border-color:rgba(124,58,237,.1)"></div>
+        <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%)"></div>
+        <div class="s-section-ghost" style="-webkit-text-stroke-color:rgba(6,182,212,.06)">CC</div>
+        <div class="s-section-inner z1">
+          <h2>כמה מילים על קלוד קוד</h2>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════
+           S90 — בואו נדבר בכל זאת על מומחי הAI מההתחלה
+      ══════════════════════════════════════════════════════ -->
+      <section class="s-section" data-transition="zoom" data-transition-speed="fast" data-chapter-key="surprise">
+        <div class="bg bg-grid"></div>
+        <div class="orb" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(244,63,94,.35) 0%,rgba(245,158,11,.2) 45%,transparent 72%);animation-duration:6s;opacity:.4"></div>
+        <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%);border-color:rgba(244,63,94,.08)"></div>
+        <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%)"></div>
+        <div class="s-section-ghost" style="-webkit-text-stroke-color:rgba(245,158,11,.07)">?</div>
+        <div class="s-section-inner z1">
+          <h2>בואו נדבר בכל זאת<br>על מומחי ה-AI מההתחלה</h2>
+        </div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
