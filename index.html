@@ -1985,37 +1985,41 @@
               <div style="background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.3);border-radius:8px;padding:8px 18px;font-size:.58em;color:var(--c-hi);font-weight:700;font-family:var(--mono)">End Frame</div>
             </div>
           </div>
-          <!-- Left col: animated start→end frame transition demo -->
-          <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+          <!-- Left col: start frame → video result → end frame -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+            <!-- Two frames comparison -->
             <div style="position:relative;width:100%;max-width:520px">
-              <!-- Two frames side by side with animated morphing indicator -->
-              <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;border-radius:16px;overflow:hidden;box-shadow:0 16px 60px rgba(0,0,0,.65)">
+              <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;border-radius:12px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.6)">
                 <!-- Start frame -->
                 <div style="position:relative;overflow:hidden">
-                  <img src="assets/demos/s-41-start.png" style="width:100%;height:200px;object-fit:cover;display:block">
-                  <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(124,58,237,.85));padding:8px;text-align:center">
-                    <span style="font-family:var(--mono);font-size:.42em;color:rgba(255,255,255,.9);font-weight:700;letter-spacing:.08em">START FRAME</span>
+                  <img src="assets/demos/s-41-start.png" style="width:100%;height:155px;object-fit:cover;display:block">
+                  <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(124,58,237,.85));padding:6px;text-align:center">
+                    <span style="font-family:var(--mono);font-size:.4em;color:rgba(255,255,255,.9);font-weight:700;letter-spacing:.08em">START FRAME</span>
                   </div>
                 </div>
-                <!-- Animated transition strip in center -->
-                <div style="width:44px;background:#0a0a1a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;overflow:hidden;position:relative">
-                  <div class="transition-sparks" style="position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(124,58,237,.3),rgba(6,182,212,.3),transparent);animation:breathe 2s ease-in-out infinite alternate"></div>
-                  <div style="font-size:1.1em;position:relative;z-index:1;animation:float 2s ease-in-out infinite">✨</div>
-                  <div style="width:2px;height:30px;background:linear-gradient(180deg,rgba(124,58,237,.8),rgba(6,182,212,.8));border-radius:1px;position:relative;z-index:1"></div>
-                  <div style="font-size:.85em;position:relative;z-index:1;color:var(--c-hi);font-weight:900">→</div>
+                <!-- Animated transition strip -->
+                <div style="width:38px;background:#0a0a1a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;overflow:hidden;position:relative">
+                  <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(124,58,237,.3),rgba(6,182,212,.3),transparent);animation:breathe 2s ease-in-out infinite alternate"></div>
+                  <div style="font-size:.9em;position:relative;z-index:1;animation:float 2s ease-in-out infinite">✨</div>
+                  <div style="width:2px;height:24px;background:linear-gradient(180deg,rgba(124,58,237,.8),rgba(6,182,212,.8));border-radius:1px;position:relative;z-index:1"></div>
+                  <div style="font-size:.75em;position:relative;z-index:1;color:var(--c-hi);font-weight:900">→</div>
                 </div>
                 <!-- End frame -->
                 <div style="position:relative;overflow:hidden">
-                  <img src="assets/demos/s-41-end.png" style="width:100%;height:200px;object-fit:cover;display:block">
-                  <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,182,212,.85));padding:8px;text-align:center">
-                    <span style="font-family:var(--mono);font-size:.42em;color:rgba(255,255,255,.9);font-weight:700;letter-spacing:.08em">END FRAME</span>
+                  <img src="assets/demos/s-41-end.png" style="width:100%;height:155px;object-fit:cover;display:block">
+                  <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(6,182,212,.85));padding:6px;text-align:center">
+                    <span style="font-family:var(--mono);font-size:.4em;color:rgba(255,255,255,.9);font-weight:700;letter-spacing:.08em">END FRAME</span>
                   </div>
                 </div>
               </div>
-              <!-- AI fills the middle label -->
-              <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--violet),var(--cyan));border-radius:20px;padding:5px 16px;font-size:.5em;color:white;font-weight:700;white-space:nowrap;box-shadow:0 4px 20px rgba(124,58,237,.5)">🤖 AI ממלא את הביניים</div>
+              <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--violet),var(--cyan));border-radius:20px;padding:4px 14px;font-size:.46em;color:white;font-weight:700;white-space:nowrap;box-shadow:0 4px 20px rgba(124,58,237,.5)">🤖 AI ממלא את הביניים</div>
             </div>
-            <div style="font-family:var(--mono);font-size:.44em;color:rgba(255,255,255,.28);text-align:center;letter-spacing:.05em">Suzuki Swift · Kling AI · Start+End Frame</div>
+            <!-- Result: transition video -->
+            <div style="width:100%;max-width:520px;position:relative;border-radius:12px;overflow:hidden;border:1px solid rgba(6,182,212,.35);box-shadow:0 8px 40px rgba(0,0,0,.55)">
+              <video autoplay muted loop playsinline src="assets/demos/s-41-transition.mp4" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover"></video>
+              <div style="position:absolute;top:8px;right:10px;background:rgba(6,182,212,.15);backdrop-filter:blur(10px);border:1px solid rgba(6,182,212,.35);border-radius:16px;padding:3px 12px;font-size:.44em;color:var(--c-hi);font-weight:700">🎬 תוצאה · Kling AI</div>
+            </div>
+            <div style="font-family:var(--mono);font-size:.42em;color:rgba(255,255,255,.28);text-align:center;letter-spacing:.05em">Suzuki Swift · Kling AI · Start+End Frame</div>
           </div>
         </div>
       </section>
@@ -3629,17 +3633,11 @@
       <section class="s-base" data-transition="slide" data-chapter-key="code">
         <div class="orb" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(124,58,237,.28) 0%,rgba(6,182,212,.1) 55%,transparent 72%);opacity:.4;animation-duration:10s"></div>
         <div class="orb" style="width:350px;height:350px;top:20%;left:85%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(16,185,129,.18) 0%,transparent 70%);opacity:.3;animation-duration:9s;animation-delay:-4s"></div>
-        <div style="position:absolute;inset:0;z-index:1;direction:rtl;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:28px 60px">
-          <!-- Title only -->
-          <div style="text-align:center">
-            <span class="eyebrow" style="color:var(--v-hi)">Claude · Live Demo</span>
-            <h2 style="margin:8px 0 0;font-size:1.8em;line-height:1.1">דבר אחד שלא היינו בונים פעם</h2>
-          </div>
-          <!-- Big phone mockup — centered, much larger -->
-          <div style="display:flex;flex-direction:column;align-items:center;gap:10px;flex:1;min-height:0">
-            <div style="font-family:var(--mono);font-size:.5em;color:var(--c-hi);letter-spacing:.12em;text-transform:uppercase;background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.25);border-radius:6px;padding:4px 16px;flex-shrink:0">🌿 כוסברה או פטרוזיליה? · live demo</div>
-            <!-- Phone frame — realistic, much bigger -->
-            <div style="height:calc(100% - 36px);max-height:820px;aspect-ratio:9/19.5;background:linear-gradient(145deg,#1a1a2e,#0a0a1a);border:3px solid rgba(124,58,237,.6);border-radius:46px;box-shadow:0 0 80px rgba(124,58,237,.35),0 0 160px rgba(6,182,212,.12),0 40px 100px rgba(0,0,0,.75),inset 0 1px 1px rgba(255,255,255,.08);overflow:hidden;position:relative;flex-shrink:0;display:flex;flex-direction:column">
+        <div style="position:absolute;inset:0;z-index:1;direction:rtl;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 60px">
+          <!-- Phone mockup only — full height -->
+          <div style="display:flex;flex-direction:column;align-items:center;height:100%;min-height:0">
+            <!-- Phone frame — realistic, full height -->
+            <div style="height:100%;max-height:900px;aspect-ratio:9/19.5;background:linear-gradient(145deg,#1a1a2e,#0a0a1a);border:3px solid rgba(124,58,237,.6);border-radius:46px;box-shadow:0 0 80px rgba(124,58,237,.35),0 0 160px rgba(6,182,212,.12),0 40px 100px rgba(0,0,0,.75),inset 0 1px 1px rgba(255,255,255,.08);overflow:hidden;position:relative;flex-shrink:0;display:flex;flex-direction:column">
               <!-- Dynamic island / camera -->
               <div style="position:absolute;top:12px;left:50%;transform:translateX(-50%);width:100px;height:30px;background:#0a0a1a;border-radius:20px;z-index:10;border:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;gap:8px">
                 <div style="width:10px;height:10px;border-radius:50%;background:rgba(124,58,237,.4);border:1px solid rgba(124,58,237,.6)"></div>
