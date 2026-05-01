@@ -3,7 +3,7 @@
 > **כשעובדים על הפרויקט הזה — אל תשתמש בסקיל הגנרי של slides.** הפרויקט עובד עם Reveal.js, מערכת CSS ייעודית, ועקרונות עיצוב שונים לחלוטין מהתבנית הגנרית.
 
 ## Project overview
-Full-screen web presentation for **42 Creative's AI Workshop**. Single `index.html` with Reveal.js, Hebrew RTL, **89 slides**, ~1920×1080.  
+Full-screen web presentation for **42 Creative's AI Workshop**. Single `index.html` with Reveal.js, Hebrew RTL, ~1920×1080.  
 Covers 7 AI tools: Gemini, Kling, Hedra, ElevenLabs, Suno, CapCut, ChatGPT + Bonus (Claude Code).  
 **Visual bar is high** — live in front of a creative agency audience.
 
