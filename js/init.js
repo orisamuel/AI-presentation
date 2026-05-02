@@ -395,7 +395,7 @@ function handleSlideMedia(currentSlide, previousSlide) {
       el.offsetHeight; // trigger reflow
       el.style.animation = '';
     });
-    currentSlide.querySelectorAll('video[data-autoplay], audio[data-autoplay]').forEach(m => {
+    currentSlide.querySelectorAll('video[data-autoplay], audio[data-autoplay], video[autoplay][loop]').forEach(m => {
       m.currentTime = 0;
       m.play().catch(() => {});
     });

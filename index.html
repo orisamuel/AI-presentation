@@ -1640,7 +1640,7 @@
           <!-- CENTER text -->
           <div class="s-split-content" style="flex:1;padding:60px 56px;justify-content:center">
             <span class="eyebrow" style="color:var(--v-hi)">טיפ 1 מתוך 3</span>
-            <h2 style="font-size:1.15em;line-height:1.15">3 טיפים שיעזרו לכם ביצירת תמונות עם AI</h2>
+            <h2 style="font-size:.62em;font-weight:600;line-height:1.3;color:var(--muted)">3 טיפים שיעזרו לכם ביצירת תמונות עם AI</h2>
             <p>סמנו ישירות לג'ימיני על התמונה <strong>מה אתם רוצים בדיוק לשנות ואיך</strong>, או צרו עבורו "ראף" של התמונה שאתם רוצים — זה יעזור לו לדייק את הפרומפט משמעותית.</p>
           </div>
           <!-- LEFT image (last in RTL flex = leftmost) -->
@@ -1660,7 +1660,7 @@
         </div>
         <div class="s-split-content">
           <span class="eyebrow" style="color:var(--c-hi)">טיפ 2 מתוך 3</span>
-          <h2 style="font-size:1.15em;line-height:1.15">3 טיפים שיעזרו לכם ביצירת תמונות עם AI</h2>
+          <h2 style="font-size:.62em;font-weight:600;line-height:1.3;color:var(--muted)">3 טיפים שיעזרו לכם ביצירת תמונות עם AI</h2>
           <p>כשרוצים עקביות — בקשו <strong>תמונה אחת עם 4–6 ווריאציות בפריים אחד</strong> (פאנל). אחר כך Upscale כל וריאציה בנפרד. כולן מאותה מחשבה ויזואלית.</p>
         </div>
       </section>
@@ -1675,7 +1675,7 @@
         </div>
         <div class="s-split-content">
           <span class="eyebrow" style="color:#f87171">טיפ 3 מתוך 3</span>
-          <h2 style="font-size:1.15em;line-height:1.15">3 טיפים שיעזרו לכם ביצירת תמונות עם AI</h2>
+          <h2 style="font-size:.62em;font-weight:600;line-height:1.3;color:var(--muted)">3 טיפים שיעזרו לכם ביצירת תמונות עם AI</h2>
           <p>תורידו כבר את הכוכב המביך הזהההההההה<br><span style="color:rgba(240,240,248,.5);font-size:.85em">(אלא אם כן זה בשביל אסטרל כמובן)</span></p>
         </div>
       </section>
@@ -2103,8 +2103,8 @@
               </div>
             </div>
             <!-- Result: transition video -->
-            <div style="width:100%;max-width:520px;position:relative;border-radius:12px;overflow:hidden;border:1px solid rgba(6,182,212,.35);box-shadow:0 8px 40px rgba(0,0,0,.55)">
-              <video data-no-advance="true" autoplay muted loop playsinline controls src="assets/demos/s-41-transition.mp4" onclick="event.stopPropagation();this.paused?this.play():this.pause()" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;cursor:pointer"></video>
+            <div data-no-advance="true" style="width:100%;max-width:520px;position:relative;border-radius:12px;overflow:hidden;border:1px solid rgba(6,182,212,.35);box-shadow:0 8px 40px rgba(0,0,0,.55)">
+              <video src="assets/demos/s-41-transition.mp4" preload="auto" muted playsinline style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;cursor:pointer"></video>
               <div style="position:absolute;top:8px;right:10px;background:rgba(6,182,212,.15);backdrop-filter:blur(10px);border:1px solid rgba(6,182,212,.35);border-radius:16px;padding:3px 12px;font-size:.44em;color:var(--c-hi);font-weight:700">🎬 תוצאה · Kling AI</div>
             </div>
             <div style="font-family:var(--mono);font-size:.42em;color:rgba(255,255,255,.28);text-align:center;letter-spacing:.05em">Suzuki Swift · Kling AI · Start+End Frame</div>
@@ -2221,14 +2221,14 @@
         <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:40px;padding:60px 100px;direction:rtl;z-index:2">
           <!-- Right: "before" portrait video -->
           <div style="display:flex;flex-direction:column;align-items:center;gap:12px;flex:0 0 auto">
-            <video src="assets/demos/s-45.mp4" autoplay muted loop playsinline style="height:760px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(6,182,212,.25)"></video>
+            <video src="assets/demos/s-45.mp4" autoplay data-autoplay muted loop playsinline style="height:760px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(6,182,212,.25)"></video>
             <div style="font-size:.42em;color:var(--muted);font-family:var(--mono)">לפני — הצילום שלכם</div>
           </div>
           <!-- Center arrow (RTL: right→left visually) -->
           <div style="font-size:3em;color:var(--v-hi);text-shadow:0 0 24px rgba(124,58,237,.6);flex-shrink:0">←</div>
           <!-- Left: "after" portrait video -->
           <div style="display:flex;flex-direction:column;align-items:center;gap:12px;flex:0 0 auto">
-            <video src="assets/demos/s-46.mp4" autoplay muted loop playsinline style="height:760px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(124,58,237,.25)"></video>
+            <video src="assets/demos/s-46.mp4" autoplay data-autoplay muted loop playsinline style="height:760px;width:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;box-shadow:0 16px 60px rgba(0,0,0,.65),0 0 0 1px rgba(124,58,237,.25)"></video>
             <div style="font-size:.42em;color:var(--v-hi);font-family:var(--mono)">אחרי — AI שינה הכל</div>
           </div>
         </div>
@@ -2858,7 +2858,7 @@
           <!-- Col B — MIDDLE: Pipeline inputs — source video + audio -->
           <div style="flex:0 0 22%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:16px;padding:28px 16px;border-left:1px solid rgba(255,255,255,.07)">
             <!-- Source video — fills column width, capped height -->
-            <video src="assets/demos/s-72.mp4" autoplay muted loop playsinline
+            <video src="assets/demos/s-72.mp4" autoplay data-autoplay muted loop playsinline
               style="width:calc(100% - 8px);aspect-ratio:9/16;max-height:52%;object-fit:cover;border-radius:18px;display:block;box-shadow:0 0 40px rgba(6,182,212,.25),0 12px 48px rgba(0,0,0,.65);border:1.5px solid rgba(6,182,212,.3);flex-shrink:0"></video>
             <!-- Premium + ring (cyan) -->
             <div style="width:52px;height:52px;border-radius:50%;background:conic-gradient(from 0deg,#06b6d4,#7c3aed,#06b6d4);padding:2.5px;box-shadow:0 0 24px rgba(6,182,212,.7),0 0 48px rgba(124,58,237,.3);flex-shrink:0">
@@ -2930,10 +2930,9 @@
           <!-- Col C — LEFT: Large portrait output video -->
           <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:22px;position:relative">
             <div class="orb cyan" style="width:380px;height:380px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.07;pointer-events:none;animation-duration:9s"></div>
-            <div style="height:calc(100% - 44px);aspect-ratio:9/16;border-radius:22px;overflow:hidden;border:2px solid rgba(6,182,212,.55);box-shadow:0 0 60px rgba(6,182,212,.28),0 0 120px rgba(6,182,212,.1);position:relative;z-index:1">
-              <video id="vid-s72a" src="assets/demos/s-72a.mp4" preload="auto" playsinline autoplay muted loop data-no-advance="true"
-                style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block"
-                onclick="this.paused?this.play():this.pause()"></video>
+            <div data-no-advance="true" style="height:calc(100% - 44px);aspect-ratio:9/16;border-radius:22px;overflow:hidden;border:2px solid rgba(6,182,212,.55);box-shadow:0 0 60px rgba(6,182,212,.28),0 0 120px rgba(6,182,212,.1);position:relative;z-index:1">
+              <video id="vid-s72a" src="assets/demos/s-72a.mp4" preload="auto" muted playsinline
+                style="width:100%;height:100%;object-fit:cover;cursor:pointer;display:block"></video>
             </div>
           </div>
         </div>
@@ -3757,17 +3756,12 @@
       <!-- ══════════════════════════════════════════════════════
            SURPRISE — SECTION: הפתעה
       ══════════════════════════════════════════════════════ -->
-      <section class="s-section" data-transition="zoom" data-transition-speed="slow" id="ch-surprise" data-chapter-key="surprise">
-        <div class="bg bg-grid"></div>
-        <div class="orb" style="width:700px;height:700px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(244,63,94,.45) 0%,rgba(245,158,11,.25) 45%,transparent 72%);animation-duration:6s"></div>
-        <div class="s-section-ring r1" style="width:600px;height:600px;transform:translate(-50%,-50%);border-color:rgba(244,63,94,.1)"></div>
-        <div class="s-section-ring r2" style="width:950px;height:950px;transform:translate(-50%,-50%)"></div>
-        <div class="s-section-ghost" style="-webkit-text-stroke-color:rgba(245,158,11,.08)">?</div>
-        <div class="s-section-inner z1">
-          <span class="s-section-num">הפתעה</span>
-          <h2>AI <span class="g-m">יודע</span><span class="g-f">יודעת</span> להכין מצגת</h2>
-          <p class="s-section-desc">הפתעה שהבטחנו · מה שאתם רואים עכשיו<br>זה מה שה-AI עשה בשבילנו</p>
-        </div>
+      <section class="s-section-v3 ch-everything" data-transition="zoom" data-transition-speed="slow" id="ch-surprise" data-chapter-key="surprise" style="--ch-a:#e11d48">
+        <div class="s-sv3-bg">?</div>
+        <div class="s-sv3-num">הפתעה</div>
+        <div class="s-sv3-pre">AI <span class="g-m">יודע</span><span class="g-f">יודעת</span></div>
+        <div class="s-sv3-name">להכין מצגת</div>
+        <div class="s-sv3-line"></div>
       </section>
 
       <!-- ══════════════════════════════════════════════════════
