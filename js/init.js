@@ -95,7 +95,36 @@ Reveal.on('ready', () => {
 
   // C. Left-arrow triggers play on unstarted demo videos
   setupDemoVideoArrowPlay();
+
+  // D. Reveal counter only when mouse hovers near bottom of viewport
+  setupCounterHoverReveal();
 });
+
+// ============================================================
+// setupCounterHoverReveal()
+// Hide the slide counter unless the cursor is near the bottom
+// of the viewport (within ~80px). Adds/removes body.reveal-counter.
+// ============================================================
+function setupCounterHoverReveal() {
+  const THRESHOLD_PX = 90;
+  let hideTimer = null;
+  document.addEventListener('mousemove', (e) => {
+    const distFromBottom = window.innerHeight - e.clientY;
+    if (distFromBottom <= THRESHOLD_PX) {
+      document.body.classList.add('reveal-counter');
+      if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
+    } else if (document.body.classList.contains('reveal-counter')) {
+      if (hideTimer) clearTimeout(hideTimer);
+      hideTimer = setTimeout(() => {
+        document.body.classList.remove('reveal-counter');
+        hideTimer = null;
+      }, 400);
+    }
+  }, { passive: true });
+  document.addEventListener('mouseleave', () => {
+    document.body.classList.remove('reveal-counter');
+  });
+}
 
 Reveal.on('slidechanged', (event) => {
   handleSlideMedia(event.currentSlide, event.previousSlide);
