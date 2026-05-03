@@ -98,6 +98,9 @@ Reveal.on('ready', () => {
 
   // D. Reveal counter only when mouse hovers near bottom of viewport
   setupCounterHoverReveal();
+
+  // E. Font picker panel (toggle with F key)
+  setupFontPicker();
 });
 
 // ============================================================
@@ -123,6 +126,32 @@ function setupCounterHoverReveal() {
   }, { passive: true });
   document.addEventListener('mouseleave', () => {
     document.body.classList.remove('reveal-counter');
+  });
+}
+
+// ============================================================
+// setupFontPicker()
+// Toggle panel with F key. Click a button to swap --font.
+// ============================================================
+function setupFontPicker() {
+  const panel = document.getElementById('font-picker');
+  if (!panel) return;
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'f' || e.key === 'F' || e.key === 'א') {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      panel.classList.toggle('open');
+    }
+  });
+
+  panel.querySelectorAll('button[data-font]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const fontVal = btn.getAttribute('data-font');
+      document.documentElement.style.setProperty('--font', fontVal);
+      panel.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
   });
 }
 

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;600;700;900&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;600;700;900&family=Rubik:wght@300;400;500;600;700;900&family=Assistant:wght@300;400;600;700;800&family=Varela+Round&family=Noto+Sans+Hebrew:wght@300;400;500;600;700;900&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
   /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -86,6 +86,31 @@
   }
   .reveal .slides > section::before,
   .reveal .slides > section::after { content:none !important; display:none !important; }
+
+  /* ── Font picker panel (hidden, toggle with F key) ── */
+  #font-picker {
+    position:fixed; top:50%; right:0; transform:translateY(-50%) translateX(100%);
+    z-index:999; background:rgba(8,6,22,.92); backdrop-filter:blur(16px);
+    border:1px solid rgba(124,58,237,.3); border-right:none;
+    border-radius:16px 0 0 16px; padding:18px 22px;
+    display:flex; flex-direction:column; gap:6px;
+    transition:transform .3s ease; font-family:var(--font);
+    box-shadow:-8px 0 40px rgba(0,0,0,.5);
+  }
+  #font-picker.open { transform:translateY(-50%) translateX(0); }
+  #font-picker .fp-title {
+    font-size:11px; font-weight:700; color:var(--muted); letter-spacing:.15em;
+    text-transform:uppercase; margin-bottom:6px; text-align:center;
+    font-family:var(--mono);
+  }
+  #font-picker button {
+    background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.1);
+    border-radius:8px; padding:8px 18px; color:var(--white);
+    font-size:15px; cursor:pointer; transition:all .2s ease;
+    text-align:right; direction:rtl; white-space:nowrap;
+  }
+  #font-picker button:hover { background:rgba(124,58,237,.2); border-color:rgba(124,58,237,.5); }
+  #font-picker button.active { background:rgba(124,58,237,.3); border-color:var(--v-hi); color:var(--v-hi); }
 
   /* Typography */
   .reveal h1,.reveal h2,.reveal h3 { font-family:var(--font) !important; margin:0; padding:0; border:none !important; }
@@ -1092,6 +1117,17 @@
   <!-- Global animated background — fills full viewport including letterbox areas -->
   <canvas id="bg-canvas"></canvas>
 
+  <!-- Font picker (press F to toggle) -->
+  <div id="font-picker">
+    <div class="fp-title">פונט</div>
+    <button data-font="'Heebo','Arial Hebrew',sans-serif" class="active" style="font-family:'Heebo'">Heebo — אבגד הוזח</button>
+    <button data-font="'Rubik','Arial Hebrew',sans-serif" style="font-family:'Rubik'">Rubik — אבגד הוזח</button>
+    <button data-font="'Assistant','Arial Hebrew',sans-serif" style="font-family:'Assistant'">Assistant — אבגד הוזח</button>
+    <button data-font="'Varela Round','Arial Hebrew',sans-serif" style="font-family:'Varela Round'">Varela Round — אבגד הוזח</button>
+    <button data-font="'Noto Sans Hebrew','Arial Hebrew',sans-serif" style="font-family:'Noto Sans Hebrew'">Noto Sans — אבגד הוזח</button>
+    <button data-font="'Frank Ruhl Libre','David Libre',serif" style="font-family:'Frank Ruhl Libre'">Frank Ruhl — אבגד הוזח</button>
+  </div>
+
   <div class="reveal">
     <div class="slides">
 
@@ -1799,7 +1835,7 @@
       <section class="s-video" data-transition="slide" style="--v-cols:32% 68%">
         <div class="s-split-content" style="padding:80px 56px 80px 56px;justify-content:center">
           <div class="chip cyan" style="margin-bottom:.9em;align-self:flex-start">📝 Text to Video</div>
-          <h2 style="font-size:1.75em !important">אם לא חשוב לכם הפרטים הספציפיים שיופיעו בוידאו, אלא רק התוכן ברמה הכללית, הכי פשוט. רק להגיד מה אתם רוצים ולקבל</h2>
+          <h2 style="font-size:1.3em !important">אם לא חשוב לכם הפרטים הספציפיים שיופיעו בוידאו, אלא רק התוכן ברמה הכללית, הכי פשוט. רק להגיד מה אתם רוצים ולקבל</h2>
           <p style="font-size:.65em;color:rgba(240,240,248,.6)">הי הנה וידאו של חתול נוסע על אופניים!</p>
         </div>
         <div class="s-video-pane">
