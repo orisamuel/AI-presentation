@@ -1528,23 +1528,27 @@
       <!-- ══════════════════════════════════════════════════════
            CH01-C-PRE — ככה זה נראה בלי gem
       ══════════════════════════════════════════════════════ -->
-      <section class="s-base" data-transition="slide" style="display:block !important;position:relative;width:100%;height:100%;background:transparent !important;overflow:hidden">
-        <!-- Vertical screenshot: pinned full-height to the LEFT edge -->
-        <div style="position:absolute;top:0;left:0;height:100%;width:auto;z-index:2;overflow:hidden">
-          <img src="assets/demos/s-15.png"
-               style="height:100%;width:auto;display:block;box-shadow:8px 0 40px rgba(0,0,0,.5);animation:fade-in .8s .3s ease both">
-        </div>
-        <!-- Gradient: fades image into text area -->
-        <div style="position:absolute;top:0;left:0;width:55%;height:100%;background:linear-gradient(to right,transparent 45%,rgba(5,5,14,.85) 100%);z-index:3;pointer-events:none"></div>
+      <section class="s-base" data-transition="slide">
         <!-- Decorative orb -->
-        <div class="orb" style="position:absolute;width:500px;height:500px;top:50%;left:20%;transform:translate(-50%,-50%);opacity:.08;animation-duration:9s;z-index:1"></div>
-        <!-- Text panel: right 58% -->
-        <div style="position:absolute;top:0;right:0;width:58%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:60px 80px 60px 40px;direction:rtl;text-align:right;z-index:4">
-          <span class="eyebrow amber" style="margin-bottom:.8em;display:block">🤖 Gemini — בלי Gem</span>
-          <h2 style="font-size:2.2em !important;color:var(--white) !important;line-height:1.15 !important;margin-bottom:.8em !important">ככה זה נראה<br>בלי gem</h2>
-          <p style="font-size:.72em;color:rgba(240,240,248,.7);line-height:1.75">ביקשנו מ-Gemini פוסט לחסלט על מרתון ירושלים.<br><strong style="color:var(--white)">הוא ענה. אבל מי זה?</strong></p>
-          <div style="margin-top:1.4em;padding:14px 18px;background:rgba(244,63,94,.07);border:1px solid rgba(244,63,94,.2);border-radius:10px;font-size:.6em;color:rgba(244,63,94,.8);line-height:1.6">
-            ❌ אין טון<br>❌ אין סגנון של המותג<br>❌ כל שיחה = מאפס
+        <div class="orb" style="position:absolute;width:620px;height:620px;top:50%;left:32%;transform:translate(-50%,-50%);opacity:.1;animation-duration:9s;z-index:1"></div>
+
+        <!-- 42/58 grid: text on the right (RTL first), image framed on the left -->
+        <div style="position:absolute;inset:0;display:grid;grid-template-columns:42% 58%;align-items:center;direction:rtl;z-index:2">
+
+          <!-- Text panel (right in RTL) -->
+          <div style="padding:80px 90px 80px 40px;text-align:right">
+            <span class="eyebrow amber" style="margin-bottom:.8em;display:block">🤖 Gemini — בלי Gem</span>
+            <h2 style="font-size:2.2em !important;color:var(--white) !important;line-height:1.15 !important;margin-bottom:.8em !important">ככה זה נראה<br>בלי gem</h2>
+            <p style="font-size:.72em;color:rgba(240,240,248,.7);line-height:1.75">ביקשנו מ-Gemini פוסט לחסלט על מרתון ירושלים.<br><strong style="color:var(--white)">הוא ענה. אבל מי זה?</strong></p>
+            <div style="margin-top:1.4em;padding:14px 18px;background:rgba(244,63,94,.07);border:1px solid rgba(244,63,94,.2);border-radius:10px;font-size:.6em;color:rgba(244,63,94,.8);line-height:1.6">
+              ❌ אין טון<br>❌ אין סגנון של המותג<br>❌ כל שיחה = מאפס
+            </div>
+          </div>
+
+          <!-- Image panel (left in RTL): centered with breathing room, soft glow, no gradient overlay -->
+          <div style="display:flex;align-items:center;justify-content:center;padding:60px 80px">
+            <img src="assets/demos/s-15.png"
+                 style="max-height:88vh;width:auto;display:block;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 70px rgba(124,58,237,.2);animation:fade-in .8s .3s ease both">
           </div>
         </div>
       </section>
@@ -1592,22 +1596,57 @@
       </section>
 
       <!-- ══════════════════════════════════════════════════════
-           CH01 — GOLD TIP: GEMS PER CLIENT
+           CH01 — WARNING: זה לא עוד AI גנרי, זה כתיבה אמיתית
       ══════════════════════════════════════════════════════ -->
-      <section class="s-gold" data-transition="convex" data-transition-speed="fast">
-        <div class="s-gold-glow-bg"></div>
-        <div class="s-gold-frame"></div>
-        <div class="spark" style="top:18%;right:12%;color:#fcd34d;animation-delay:0s">✦</div>
-        <div class="spark" style="bottom:22%;left:10%;color:#fcd34d;animation-delay:-2s;font-size:2em">✦</div>
-        <div class="spark" style="top:25%;left:18%;color:#f59e0b;animation-delay:-4s;font-size:1em">✧</div>
-        <div class="spark" style="bottom:28%;right:16%;color:#fcd34d;animation-delay:-1s">✧</div>
-        <div class="s-gold-inner">
-          <div class="s-gold-badge">✦ &nbsp; טיפ זהב</div>
-          <h2>בנו Gem אחד לכל לקוח</h2>
-          <p>העלו: 10 דוגמאות כתיבה + "ספר מותג" של סגנון הכתיבה, סוג התכנים וכו'<br>
-            מעכשיו — כל פרומפט כתיבה עם אותו Gem = שפה אחידה אוטומטית.<br>
-            <strong>זה לא קסם. זה תשתית.</strong> ותשתית טובה שווה יותר מכל פרומפט חכם.
+      <section class="s-base" data-transition="convex" data-transition-speed="fast">
+        <!-- Background: floating em-dashes — the classic AI tell -->
+        <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1">
+          <div style="position:absolute;top:7%;right:11%;font-size:9em;color:rgba(252,211,77,.07);font-weight:300;line-height:1;animation:float 14s ease-in-out infinite">—</div>
+          <div style="position:absolute;top:22%;left:7%;font-size:6em;color:rgba(244,63,94,.06);line-height:1;animation:float-r 18s ease-in-out infinite">—</div>
+          <div style="position:absolute;bottom:14%;right:18%;font-size:7em;color:rgba(124,58,237,.08);line-height:1;animation:float 16s ease-in-out infinite reverse">—</div>
+          <div style="position:absolute;bottom:6%;left:22%;font-size:10em;color:rgba(252,211,77,.05);line-height:1;animation:float-r 20s ease-in-out infinite">—</div>
+          <div style="position:absolute;top:48%;left:50%;transform:translate(-50%,-50%);font-size:18em;color:rgba(124,58,237,.03);line-height:1;animation:breathe-s 9s ease-in-out infinite alternate">—</div>
+          <!-- AI scan-line sweep -->
+          <div style="position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(244,63,94,.6),transparent);box-shadow:0 0 24px rgba(244,63,94,.5);animation:scanline 4.5s ease-in-out infinite"></div>
+        </div>
+
+        <!-- Decorative orb -->
+        <div class="orb" style="position:absolute;width:760px;height:760px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.07;z-index:1"></div>
+
+        <!-- Content stack -->
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;direction:rtl;text-align:center;padding:70px 120px;z-index:3">
+
+          <!-- Detection badge -->
+          <div style="display:inline-flex;align-items:center;gap:10px;padding:9px 20px;background:rgba(244,63,94,.12);border:1px solid rgba(244,63,94,.4);border-radius:999px;font-size:.5em;color:#fda4af;font-weight:700;letter-spacing:.06em;margin-bottom:1.4em;animation:fade-in .8s .15s ease both">
+            <span style="width:9px;height:9px;border-radius:50%;background:#f43f5e;box-shadow:0 0 14px #f43f5e;animation:breathe-s 1.6s ease-in-out infinite alternate"></span>
+            זוהו דפוסי AI
+          </div>
+
+          <!-- Main meta-ironic title -->
+          <h2 style="font-size:2.1em !important;line-height:1.2 !important;color:var(--white) !important;margin:0 0 .35em 0 !important;max-width:18ch;animation:fade-up .9s .25s ease both">
+            <span style="position:relative;display:inline-block">
+              זה לא עוד AI גנרי
+              <span style="position:absolute;bottom:-8px;right:0;left:0;height:3px;background:linear-gradient(90deg,transparent,#f43f5e 25%,#f43f5e 75%,transparent);border-radius:2px;opacity:0;animation:fade-in .8s 1.4s ease forwards"></span>
+            </span>,
+            <span style="position:relative;display:inline-block">
+              זה כתיבה אמיתית
+              <span style="position:absolute;bottom:-8px;right:0;left:0;height:3px;background:linear-gradient(90deg,transparent,#f43f5e 25%,#f43f5e 75%,transparent);border-radius:2px;opacity:0;animation:fade-in .8s 1.7s ease forwards"></span>
+            </span>
+          </h2>
+
+          <!-- Annotation pointing at the title -->
+          <div style="margin-top:1.3em;padding:10px 22px;background:rgba(244,63,94,.08);border:1px dashed rgba(244,63,94,.35);border-radius:10px;font-size:.5em;color:rgba(252,165,165,.9);letter-spacing:.03em;opacity:0;animation:fade-up .8s 2s ease forwards">
+            ↑ הכותרת הזו עצמה היא דפוס AI קלאסי: <strong style="color:#fda4af">"זה לא X, זה Y"</strong>
+          </div>
+
+          <!-- Body text -->
+          <p style="font-size:.66em;color:rgba(240,240,248,.82);line-height:1.85;max-width:60ch;margin-top:2em;opacity:0;animation:fade-up .9s 2.4s ease forwards">
+            נכון הכותרת כאן? זה הכי AI שיש בעולם.<br>
+            אם פעם היה מספיק לשים לב ל<strong style="color:#fcd34d">מקפים ארוכים</strong>, היום יש לאט לאט כל מיני צורות וסגנונות שה-AI מפתח.<br>
+            תהיו עם יד על הדופק, ושימו לב שלא יוצא לכם AI גנרי.<br>
+            <span style="color:rgba(244,63,94,.9);font-weight:600">ולא — זה שהוא אומר שזה לא גנרי, לא הופך את זה ללא גנרי.</span>
           </p>
+
         </div>
       </section>
 
