@@ -138,7 +138,7 @@ function setupFontPicker() {
   if (!panel) return;
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'f' || e.key === 'F' || e.key === 'א') {
+    if (e.key === 't' || e.key === 'T' || e.key === 'א') {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
       panel.classList.toggle('open');
     }
