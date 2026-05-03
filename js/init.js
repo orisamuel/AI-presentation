@@ -149,6 +149,13 @@ function setupFontPicker() {
       e.stopPropagation();
       const fontVal = btn.getAttribute('data-font');
       document.documentElement.style.setProperty('--font', fontVal);
+      let sheet = document.getElementById('font-override');
+      if (!sheet) {
+        sheet = document.createElement('style');
+        sheet.id = 'font-override';
+        document.head.appendChild(sheet);
+      }
+      sheet.textContent = `.reveal p, .reveal li, .reveal td, .reveal th, .reveal blockquote, .reveal .fc-desc, .reveal .tblock-body { font-family: ${fontVal} !important; }`;
       panel.querySelectorAll('button').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
     });
